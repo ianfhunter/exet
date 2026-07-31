@@ -80,6 +80,18 @@ function ExetRevManager() {
 
   /* Id for previews */
   this.previewId = `exet-preview-${Math.random().toString(36).substring(2, 8)}`;
+
+  /**
+   * Throttled mirror of localStorage keys to the light Exet save server.
+   * Dirty puts/deletes are flushed together via POST /api/storage/batch.
+   */
+  this.serverDirtyPuts = {};
+  this.serverDirtyDeletes = {};
+  this.serverSyncTimer = null;
+  this.serverSyncLagMS = 2000;
+  this.serverSyncInFlight = false;
+  this.serverSyncStatus = '';
+  this.serverSyncAvailable = null;
 };
 
 ExetRevManager.prototype.skippableKey = function(id) {
@@ -327,11 +339,9 @@ ExetRevManager.prototype.choosePuzRev = function(params) {
       this.idChoices.className = 'xet-choices';
       this.revChoices.className = 'xet-choices';
       if (types == 'all') {
-        window.localStorage.removeItem(this.idChoice);
-        window.localStorage.removeItem(
-            this.keyPrefUnpref(this.idChoice, true));
-        window.localStorage.removeItem(
-            this.keyPrefUnpref(this.idChoice, false));
+        this.removeLocal(this.idChoice);
+        this.removeLocal(this.keyPrefUnpref(this.idChoice, true));
+        this.removeLocal(this.keyPrefUnpref(this.idChoice, false));
         this.idChoice = '';
       } else {
         this.storedRevs.revs = newRevsNotAll;
@@ -479,17 +489,305 @@ ExetRevManager.prototype.chooseRev = function() {
   }
 };
 
+ExetRevManager.prototype.serverBaseUrl = function() {
+  if (typeof exetConfig === 'undefined' ||
+      typeof exetConfig.puzServerUrl !== 'string') {
+    return '';
+  }
+  return exetConfig.puzServerUrl.trim().replace(/\/+$/, '');
+}
+
+ExetRevManager.prototype.serverApiUrl = function(path) {
+  return this.serverBaseUrl() + path;
+}
+
+/**
+ * Keys that should be mirrored to the save server: crossword revision
+ * stores, app state (SPECIAL_KEY*), and pref/unpref sidecars. Skip Exolve
+ * player state and ephemeral capacity-probe keys.
+ */
+ExetRevManager.prototype.isServerSyncKey = function(id) {
+  if (!id || typeof id !== 'string') {
+    return false;
+  }
+  if (id.startsWith('xlvstate:') || id == '42-xlvp-player-state') {
+    return false;
+  }
+  if (id.startsWith('42-exet-cap-42')) {
+    return false;
+  }
+  return true;
+}
+
+ExetRevManager.prototype.shouldAutoSyncToServer = function() {
+  if (typeof exetConfig !== 'undefined' &&
+      exetConfig.storageServerAutoSync === false) {
+    return false;
+  }
+  if (typeof exetState === 'object' && exetState &&
+      exetState.hasOwnProperty('storageServerAutoSync')) {
+    return !!exetState.storageServerAutoSync;
+  }
+  // Default on when config does not disable it.
+  return true;
+}
+
+ExetRevManager.prototype.setServerSyncStatus = function(msg) {
+  this.serverSyncStatus = msg || '';
+  const elt = document.getElementById('xet-storage-server-status');
+  if (elt) {
+    elt.textContent = this.serverSyncStatus;
+  }
+}
+
+ExetRevManager.prototype.queueServerPut = function(k, v) {
+  if (!this.shouldAutoSyncToServer() || !this.isServerSyncKey(k)) {
+    return;
+  }
+  delete this.serverDirtyDeletes[k];
+  this.serverDirtyPuts[k] = v;
+  this.scheduleServerFlush();
+}
+
+ExetRevManager.prototype.queueServerDelete = function(k) {
+  if (!this.shouldAutoSyncToServer() || !this.isServerSyncKey(k)) {
+    return;
+  }
+  delete this.serverDirtyPuts[k];
+  this.serverDirtyDeletes[k] = true;
+  this.scheduleServerFlush();
+}
+
+ExetRevManager.prototype.scheduleServerFlush = function() {
+  if (this.serverSyncTimer) {
+    clearTimeout(this.serverSyncTimer);
+  }
+  this.serverSyncTimer = setTimeout(() => {
+    this.serverSyncTimer = null;
+    this.flushServerSync();
+  }, this.serverSyncLagMS);
+}
+
+ExetRevManager.prototype.flushServerSync = async function() {
+  if (this.serverSyncInFlight) {
+    this.scheduleServerFlush();
+    return;
+  }
+  const putKeys = Object.keys(this.serverDirtyPuts);
+  const deleteKeys = Object.keys(this.serverDirtyDeletes);
+  if (putKeys.length == 0 && deleteKeys.length == 0) {
+    return;
+  }
+  const put = this.serverDirtyPuts;
+  const del = deleteKeys;
+  this.serverDirtyPuts = {};
+  this.serverDirtyDeletes = {};
+  this.serverSyncInFlight = true;
+  this.setServerSyncStatus('Syncing ' + (putKeys.length + del.length) +
+                           ' localStorage change(s) to server...');
+  try {
+    const res = await fetch(this.serverApiUrl('/api/storage/batch'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ put: put, delete: del }),
+    });
+    let data = null;
+    try {
+      data = await res.json();
+    } catch (err) {
+      data = null;
+    }
+    if (!res.ok) {
+      const errMsg = (data && data.error) ? data.error : ('HTTP ' + res.status);
+      throw new Error(errMsg);
+    }
+    this.serverSyncAvailable = true;
+    this.setServerSyncStatus(
+        'Synced to server' +
+        (data && data.updatedAt ? (' at ' +
+         new Date(data.updatedAt).toLocaleString()) : '') +
+        ' (' + (data.keyCount || 0) + ' keys).');
+  } catch (err) {
+    this.serverSyncAvailable = false;
+    // Re-queue so a later flush can retry.
+    for (const k of putKeys) {
+      if (!this.serverDirtyPuts.hasOwnProperty(k) &&
+          !this.serverDirtyDeletes.hasOwnProperty(k)) {
+        this.serverDirtyPuts[k] = put[k];
+      }
+    }
+    for (const k of del) {
+      if (!this.serverDirtyPuts.hasOwnProperty(k)) {
+        this.serverDirtyDeletes[k] = true;
+      }
+    }
+    this.setServerSyncStatus(
+        'Server sync unavailable (' + (err.message || err) + '). ' +
+        'Changes stay in this browser; retry via Storage menu.');
+    console.log('flushServerSync error:', err);
+  } finally {
+    this.serverSyncInFlight = false;
+  }
+}
+
+ExetRevManager.prototype.collectSyncableStorage = function() {
+  const items = {};
+  for (let idx = 0; idx < window.localStorage.length; idx++) {
+    const id = window.localStorage.key(idx);
+    if (!this.isServerSyncKey(id)) {
+      continue;
+    }
+    const value = window.localStorage.getItem(id);
+    if (value !== null) {
+      items[id] = value;
+    }
+  }
+  return items;
+}
+
+ExetRevManager.prototype.pushStorageToServer = async function() {
+  // Flush any pending autosync first so we don't race.
+  if (this.serverSyncTimer) {
+    clearTimeout(this.serverSyncTimer);
+    this.serverSyncTimer = null;
+  }
+  await this.flushServerSync();
+  const items = this.collectSyncableStorage();
+  this.setServerSyncStatus('Pushing full localStorage mirror (' +
+                           Object.keys(items).length + ' keys)...');
+  try {
+    const res = await fetch(this.serverApiUrl('/api/storage'), {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: items }),
+    });
+    let data = null;
+    try {
+      data = await res.json();
+    } catch (err) {
+      data = null;
+    }
+    if (!res.ok) {
+      throw new Error((data && data.error) || ('HTTP ' + res.status));
+    }
+    this.serverSyncAvailable = true;
+    this.serverDirtyPuts = {};
+    this.serverDirtyDeletes = {};
+    this.setServerSyncStatus(
+        'Pushed ' + (data.keyCount || Object.keys(items).length) +
+        ' keys to server' +
+        (data.updatedAt ? (' at ' + new Date(data.updatedAt).toLocaleString()) :
+                          '') + '.');
+    alert(this.serverSyncStatus);
+  } catch (err) {
+    this.serverSyncAvailable = false;
+    this.setServerSyncStatus('Push failed: ' + (err.message || err));
+    alert(this.serverSyncStatus +
+          '\nStart the server with docker compose up (or node server/server.js).');
+    console.log('pushStorageToServer error:', err);
+  }
+}
+
+ExetRevManager.prototype.pullStorageFromServer = async function() {
+  if (!confirm(
+      'Replace this browser\'s Exet localStorage with the server mirror?\n\n' +
+      'Crossword revisions, preferred/disallowed fills, and Exet settings ' +
+      'stored here will be overwritten by the server copy. ' +
+      'Exolve player keys (if any) are left untouched.')) {
+    return;
+  }
+  this.setServerSyncStatus('Pulling localStorage mirror from server...');
+  try {
+    const res = await fetch(this.serverApiUrl('/api/storage'));
+    let data = null;
+    try {
+      data = await res.json();
+    } catch (err) {
+      data = null;
+    }
+    if (!res.ok) {
+      throw new Error((data && data.error) || ('HTTP ' + res.status));
+    }
+    const items = (data && data.items && typeof data.items === 'object') ?
+        data.items : {};
+    const incomingKeys = Object.keys(items);
+
+    // Remove syncable keys that are not present on the server.
+    const toRemove = [];
+    for (let idx = 0; idx < window.localStorage.length; idx++) {
+      const id = window.localStorage.key(idx);
+      if (this.isServerSyncKey(id) && !items.hasOwnProperty(id)) {
+        toRemove.push(id);
+      }
+    }
+    for (const id of toRemove) {
+      window.localStorage.removeItem(id);
+    }
+    for (const id of incomingKeys) {
+      if (!this.isServerSyncKey(id) || typeof items[id] !== 'string') {
+        continue;
+      }
+      window.localStorage.setItem(id, items[id]);
+    }
+    this.serverDirtyPuts = {};
+    this.serverDirtyDeletes = {};
+    this.serverSyncAvailable = true;
+    this.setServerSyncStatus(
+        'Restored ' + incomingKeys.length + ' keys from server' +
+        (data.updatedAt ? (' (updated ' +
+         new Date(data.updatedAt).toLocaleString() + ')') : '') +
+        '. Reloading...');
+    alert(this.serverSyncStatus);
+    location.reload();
+  } catch (err) {
+    this.serverSyncAvailable = false;
+    this.setServerSyncStatus('Pull failed: ' + (err.message || err));
+    alert(this.serverSyncStatus +
+          '\nStart the server with docker compose up (or node server/server.js).');
+    console.log('pullStorageFromServer error:', err);
+  }
+}
+
+ExetRevManager.prototype.probeServerSync = async function() {
+  try {
+    const res = await fetch(this.serverApiUrl('/api/health'));
+    if (!res.ok) {
+      throw new Error('HTTP ' + res.status);
+    }
+    const data = await res.json();
+    this.serverSyncAvailable = true;
+    const n = (data.storage && data.storage.keyCount) || 0;
+    this.setServerSyncStatus(
+        'Save server reachable' +
+        (n ? (' (' + n + ' mirrored localStorage keys)') : '') + '.');
+    return true;
+  } catch (err) {
+    this.serverSyncAvailable = false;
+    this.setServerSyncStatus(
+        'Save server not reachable; localStorage stays browser-only.');
+    return false;
+  }
+}
+
 ExetRevManager.prototype.saveLocal = function(k, v) {
   try {
     window.localStorage.setItem(k, v);
   } catch (err) {
-    this.checkStorage();
+    if (typeof exet !== 'undefined' && exet) {
+      exet.checkStorage();
+    }
     alert('No available local storage left. Please use the ' +
           '"Manage local storage" menu option to free up some space.');
     console.log('Could not save value of length ' + v.length + ' for key: ' + k)
     return false;
   }
+  this.queueServerPut(k, v);
   return true;
+}
+
+ExetRevManager.prototype.removeLocal = function(k) {
+  window.localStorage.removeItem(k);
+  this.queueServerDelete(k);
 }
 
 ExetRevManager.prototype.keyPrefUnpref = function(id, isPref) {
@@ -544,7 +842,7 @@ ExetRevManager.prototype.savePrefUnpref = function(id, revs, doGC=false) {
     }
     if (changed) {
       if (Object.keys(data).length == 0) {
-        window.localStorage.removeItem(key);
+        this.removeLocal(key);
       } else {
         this.saveLocal(key, JSON.stringify(data));
       }

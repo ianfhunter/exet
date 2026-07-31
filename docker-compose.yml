@@ -6,14 +6,16 @@ services:
     environment:
       PORT: "3080"
       SAVE_DIR: /data/puzzles
+      STORAGE_PATH: /data/localStorage.json
       STATIC_DIR: /static
       MAX_PUZ_BYTES: "2097152"
+      MAX_STORAGE_BYTES: "20971520"
     volumes:
       # Serve the Exet app (checkout root) as static files
       - .:/static:ro
-      # Persist uploaded .puz files
-      - exet-puz-data:/data/puzzles
+      # Persist .puz uploads and the localStorage mirror
+      - exet-data:/data
     restart: unless-stopped
 
 volumes:
-  exet-puz-data:
+  exet-data:

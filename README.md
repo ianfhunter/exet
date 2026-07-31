@@ -1059,11 +1059,13 @@ prefix "[DRAFT] " is shown in the downloaded/printed versions of the crossword
 (as noted earlier, you can clear the `[DRAFT]` marker from the current clue
 by clicking on it, when it is being edited above the grid).
 
-### Saving .puz files to a server
+### Saving .puz files and localStorage to a server
 
-Exet can optionally save `.puz` files to a small companion server (instead of
-only downloading them to the browser). This is off by default unless you run
-the backend.
+Exet can optionally talk to a small companion server that:
+
+- Saves `.puz` exports on disk
+- Mirrors browser `localStorage` (crossword revisions, preferred/disallowed
+  fills, and Exet settings), so work is not trapped in one browser profile
 
 1. From the repository root, start the stack:
 
@@ -1080,18 +1082,24 @@ the backend.
 2. Open Exet at `http://localhost:3080/exet.html` (the server also serves the
    static app files).
 
-3. Use **Save → Save PUZ to server**, or **Open → Open PUZ from server...**.
+3. Use:
+   - **Save → Save PUZ to server** / **Open → Open PUZ from server...**
+   - **Storage → Auto-sync localStorage changes to server** (on by default)
+   - **Storage → Push local storage to server** / **Restore local storage from server**
 
-The API is:
+The API includes:
 
 - `POST /api/puz` with raw `.puz` bytes and an `X-Filename` header
 - `GET /api/puz` to list saved files
 - `GET /api/puz/<name>` / `DELETE /api/puz/<name>`
+- `GET` / `PUT /api/storage` for a full localStorage mirror
+- `POST /api/storage/batch` for incremental put/delete sync
 
-Files are stored under `saved-puzzles/` locally, or in the `exet-puz-data`
-Docker volume. Configure a non-same-origin server URL with
+Data is stored under `saved-puzzles/` and `saved-storage/` locally, or in the
+`exet-data` Docker volume. Configure a non-same-origin server URL with
 `exetConfig.puzServerUrl` in `exet.html` (and the language-specific HTML
-files) if needed.
+files) if needed. Toggle the default auto-sync with
+`exetConfig.storageServerAutoSync`.
 
 ### Going back to older versions
 

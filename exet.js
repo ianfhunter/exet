@@ -1270,6 +1270,28 @@ Exet.prototype.makeExetTab = function() {
             Take only the latest revision per crossword
           </div>
           <hr>
+          <div class="xet-dropdown-div">
+            <b>Save server (localStorage mirror):</b>
+            <div>
+              <input id="xet-storage-server-autosync"
+                     name="xet-storage-server-autosync"
+                     type="checkbox">
+              </input>
+              Auto-sync localStorage changes to server
+            </div>
+            <div id="xet-storage-server-status" class="xet-puz-server-status">
+            </div>
+          </div>
+          <div class="xet-dropdown-item"
+              onclick="exetRevManager.pushStorageToServer()"
+              title="Upload all Exet localStorage (revisions, prefs, settings) to the save server">
+            Push local storage to server
+          </div>
+          <div class="xet-dropdown-item"
+              onclick="exetRevManager.pullStorageFromServer()"
+              title="Replace this browser's Exet localStorage with the server mirror, then reload">
+            Restore local storage from server
+          </div>
           <hr>
         </div>
       </li>
@@ -1634,6 +1656,27 @@ Exet.prototype.makeExetTab = function() {
     exetModals.showModal(exet.revChooser);
     e.stopPropagation();
   });
+
+  const autoSync = document.getElementById('xet-storage-server-autosync');
+  if (autoSync) {
+    autoSync.checked = exetRevManager.shouldAutoSyncToServer();
+    autoSync.addEventListener('change', e => {
+      exetState.storageServerAutoSync = autoSync.checked ? true : false;
+      exetRevManager.saveLocal(
+          exetRevManager.SPECIAL_KEY, JSON.stringify(exetState));
+      if (exetState.storageServerAutoSync) {
+        exetRevManager.setServerSyncStatus(
+            'Auto-sync on; pushing current localStorage...');
+        exetRevManager.pushStorageToServer();
+      } else {
+        exetRevManager.setServerSyncStatus('Auto-sync off.');
+      }
+      e.stopPropagation();
+    });
+    // Keep the Storage menu open when toggling the checkbox.
+    autoSync.addEventListener('click', e => e.stopPropagation());
+  }
+  exetRevManager.probeServerSync();
 
   // Saving options
   const exolveUrl = document.getElementById("xet-xlv-url-prefix")
@@ -7943,6 +7986,14 @@ function exetLoadState() {
   }
   if (!exetState.hasOwnProperty('lastBackup')) {
     exetState.lastBackup = Date.now();
+  }
+  if (!exetState.hasOwnProperty('storageServerAutoSync')) {
+    if (typeof exetConfig !== 'undefined' &&
+        exetConfig.hasOwnProperty('storageServerAutoSync')) {
+      exetState.storageServerAutoSync = !!exetConfig.storageServerAutoSync;
+    } else {
+      exetState.storageServerAutoSync = true;
+    }
   }
 }
 

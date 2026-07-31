@@ -113,11 +113,15 @@ exetConfig = {
     },
   ],
   /**
-   * Optional URL of the light .puz save server (see docker-compose.yml).
+   * Optional URL of the light save server (see docker-compose.yml).
    * Leave empty to use the same origin (recommended when serving Exet via
    * docker compose). Example for a separate host: "http://localhost:3080".
+   * When reachable, Exet can mirror localStorage (revisions/settings) and
+   * save .puz files to the server.
    */
   puzServerUrl: "",
+  /** Default for auto-syncing localStorage to the save server. */
+  storageServerAutoSync: true,
   listsLinks: [
     {name: "Crossword Unclued's anagram indicators",
      url: "https://www.crosswordunclued.com/2008/09/anagram-indicators.html"},
