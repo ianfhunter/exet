@@ -1,0 +1,19 @@
+services:
+  exet:
+    build: ./server
+    ports:
+      - "3080:3080"
+    environment:
+      PORT: "3080"
+      SAVE_DIR: /data/puzzles
+      STATIC_DIR: /static
+      MAX_PUZ_BYTES: "2097152"
+    volumes:
+      # Serve the Exet app (checkout root) as static files
+      - .:/static:ro
+      # Persist uploaded .puz files
+      - exet-puz-data:/data/puzzles
+    restart: unless-stopped
+
+volumes:
+  exet-puz-data:

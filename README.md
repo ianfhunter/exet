@@ -2,7 +2,7 @@
 
 ## A web app for crossword construction
 
-#### Version: Exet v1.07.1, July 28, 2026
+#### Version: Exet v1.07.3, July 31, 2026
 
 #### Author: Viresh Ratnakar
 
@@ -1008,6 +1008,10 @@ following, \<title\> in a filename stands for the puzzle title.
   Note also that when exporting the crossword in the .puz format, any rich
   formatting in clues will get stripped out as the .puz format does not support
   it (.puz does not support annotations either).
+- **Save PUZ to server (exet-\<title\>.puz)**: Save the current crossword as a
+  .puz file on the optional light backend (see
+  [Saving .puz files to a server](#saving-puz-files-to-a-server) below). Same
+  .puz format limitations as the download option.
 - **Download IPUZ file (exet-\<title\>.ipuz)**: Download a .ipuz file. Note that
   .puz does not support many crossword features (afaik). The software will alert
   you if it is not able to provide a .ipuz download.
@@ -1055,10 +1059,45 @@ prefix "[DRAFT] " is shown in the downloaded/printed versions of the crossword
 (as noted earlier, you can clear the `[DRAFT]` marker from the current clue
 by clicking on it, when it is being edited above the grid).
 
+### Saving .puz files to a server
+
+Exet can optionally save `.puz` files to a small companion server (instead of
+only downloading them to the browser). This is off by default unless you run
+the backend.
+
+1. From the repository root, start the stack:
+
+   ```bash
+   docker compose up --build
+   ```
+
+   Or without Docker:
+
+   ```bash
+   node server/server.js
+   ```
+
+2. Open Exet at `http://localhost:3080/exet.html` (the server also serves the
+   static app files).
+
+3. Use **Save → Save PUZ to server**, or **Open → Open PUZ from server...**.
+
+The API is:
+
+- `POST /api/puz` with raw `.puz` bytes and an `X-Filename` header
+- `GET /api/puz` to list saved files
+- `GET /api/puz/<name>` / `DELETE /api/puz/<name>`
+
+Files are stored under `saved-puzzles/` locally, or in the `exet-puz-data`
+Docker volume. Configure a non-same-origin server URL with
+`exetConfig.puzServerUrl` in `exet.html` (and the language-specific HTML
+files) if needed.
+
 ### Going back to older versions
 
 The "Open" menu lets you pick any old revision of any crossword. It also shows
-a preview of the puzzle revision that you select.
+a preview of the puzzle revision that you select. Use **Open PUZ from server...**
+to load a `.puz` previously saved with the light backend.
 
 ### Storage
 

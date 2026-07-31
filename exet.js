@@ -999,6 +999,10 @@ Exet.prototype.makeExetTab = function() {
             Open Exolve or .puz or .ipuz file: <input id="xet-file"
                 onchange="exetLoadFile();" type="file"></input>
           </div>
+          <div class="xet-dropdown-item" id="xet-open-puz-from-server"
+              title="Open a .puz file previously saved to the Exet server">
+            Open PUZ from server...
+          </div>
         </div>
       </li>
       <li class="xet-dropdown">
@@ -1186,6 +1190,12 @@ Exet.prototype.makeExetTab = function() {
           <div class="xet-dropdown-item" onclick="exet.downloadDotPuz()">
               Download PUZ file<br>
               (exet-<span class="xet-filetitle"></span>.puz)
+          </div>
+          <div class="xet-dropdown-item" onclick="exet.saveDotPuzToServer()"
+              title="Save the current crossword as a .puz file on the Exet server (requires the light backend / docker compose)">
+              Save PUZ to server<br>
+              (exet-<span class="xet-filetitle"></span>.puz)
+              <div id="xet-puz-server-status" class="xet-puz-server-status"></div>
           </div>
           <div class="xet-dropdown-item" onclick="exet.downloadIPuz()">
               Download IPUZ file<br>
@@ -1702,6 +1712,14 @@ Exet.prototype.makeExetTab = function() {
     this.showExostPanel();
     e.stopPropagation();
   });
+
+  const openPuzFromServer = document.getElementById("xet-open-puz-from-server");
+  if (openPuzFromServer) {
+    openPuzFromServer.addEventListener('click', e => {
+      this.showPuzServerOpenPanel();
+      e.stopPropagation();
+    });
+  }
 
   this.tweakColourNina = document.getElementById("xet-tweak-colour-nina")
   this.tweakColourNina.style.left = "100%";
@@ -3415,6 +3433,7 @@ Exet.prototype.updateSavePanel = function() {
   }
   w.innerHTML = warnings;
   w.style.display = warnings ? '' : 'none';
+  this.setPuzServerStatus('');
 }
 
 /**
@@ -3550,6 +3569,157 @@ Exet.prototype.downloadDotPuz = function() {
   const fileName = "exet-" + this.fileTitle() + ".puz";
   this.puz.fileDownload(dotPuz, "application/x-crossword", fileName);
   exetModals.hide()
+}
+
+/**
+ * Base URL for the light .puz save server. Empty means same origin.
+ */
+Exet.prototype.puzServerBase = function() {
+  if (typeof exetConfig === 'undefined' ||
+      typeof exetConfig.puzServerUrl !== 'string') {
+    return '';
+  }
+  return exetConfig.puzServerUrl.trim().replace(/\/+$/, '');
+}
+
+Exet.prototype.puzServerApiUrl = function(path) {
+  return this.puzServerBase() + path;
+}
+
+Exet.prototype.setPuzServerStatus = function(msg, isError=false) {
+  const elt = document.getElementById('xet-puz-server-status');
+  if (!elt) return;
+  elt.textContent = msg || '';
+  elt.className = 'xet-puz-server-status' + (isError ? ' xet-red' : ' xet-green');
+}
+
+Exet.prototype.saveDotPuzToServer = async function() {
+  const dotPuz = exolveToPuz(this.puz);
+  if (!dotPuz) {
+    this.setPuzServerStatus('Could not create .puz for this crossword.', true);
+    return;
+  }
+  const fileName = "exet-" + this.fileTitle() + ".puz";
+  this.setPuzServerStatus('Saving ' + fileName + '...');
+  try {
+    const res = await fetch(this.puzServerApiUrl('/api/puz'), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-crossword',
+        'X-Filename': fileName,
+      },
+      body: dotPuz,
+    });
+    let data = null;
+    try {
+      data = await res.json();
+    } catch (err) {
+      data = null;
+    }
+    if (!res.ok) {
+      const errMsg = (data && data.error) ? data.error :
+          ('HTTP ' + res.status);
+      this.setPuzServerStatus('Save failed: ' + errMsg, true);
+      return;
+    }
+    const action = (data && data.overwritten) ? 'Updated' : 'Saved';
+    this.setPuzServerStatus(
+        action + ' on server as ' + ((data && data.name) || fileName));
+  } catch (err) {
+    this.setPuzServerStatus(
+        'Save failed: cannot reach puz server. ' +
+        'Start it with docker compose up (or node server/server.js).',
+        true);
+    console.log('saveDotPuzToServer error:', err);
+  }
+}
+
+Exet.prototype.showPuzServerOpenPanel = async function() {
+  if (!this.puzServerOpenState) {
+    this.puzServerOpenState = {};
+    this.puzServerOpenState.panel = document.createElement('div');
+    this.puzServerOpenState.panel.className = 'xet-puz-server-panel';
+    this.puzServerOpenState.panel.style.display = 'none';
+    this.puzServerOpenState.panel.innerHTML = `
+      <div style="margin-bottom:8px">
+        <b>Open PUZ from server</b>
+        <button class="xlv-small-button" style="float:right"
+            onclick="exetModals.hide()">Close</button>
+      </div>
+      <div id="xet-puz-server-list-status" class="xet-puz-server-status"></div>
+      <div id="xet-puz-server-list" class="xet-puz-server-list"></div>
+    `;
+    this.frame.appendChild(this.puzServerOpenState.panel);
+    this.puzServerOpenState.list =
+        document.getElementById('xet-puz-server-list');
+    this.puzServerOpenState.status =
+        document.getElementById('xet-puz-server-list-status');
+  }
+  this.puzServerOpenState.status.textContent = 'Loading...';
+  this.puzServerOpenState.status.className = 'xet-puz-server-status';
+  this.puzServerOpenState.list.innerHTML = '';
+  exetModals.showModal(this.puzServerOpenState.panel);
+  try {
+    const res = await fetch(this.puzServerApiUrl('/api/puz'));
+    if (!res.ok) {
+      throw new Error('HTTP ' + res.status);
+    }
+    const data = await res.json();
+    const files = (data && data.files) ? data.files : [];
+    if (!files.length) {
+      this.puzServerOpenState.status.textContent =
+          'No .puz files saved on the server yet.';
+      return;
+    }
+    this.puzServerOpenState.status.textContent =
+        files.length + ' file' + (files.length == 1 ? '' : 's') + ':';
+    for (const f of files) {
+      const row = document.createElement('div');
+      row.className = 'xet-puz-server-list-item';
+      const when = f.mtime ? new Date(f.mtime).toLocaleString() : '';
+      const kb = f.size ? (Math.round(f.size / 102.4) / 10) + ' KB' : '';
+      row.innerHTML =
+          `<button class="xlv-small-button">Open</button> ` +
+          `<span class="xet-puz-server-fname"></span> ` +
+          `<span class="xet-puz-server-meta"></span>`;
+      row.querySelector('.xet-puz-server-fname').textContent = f.name;
+      row.querySelector('.xet-puz-server-meta').textContent =
+          [kb, when].filter(Boolean).join(' · ');
+      row.querySelector('button').addEventListener('click', () => {
+        this.openPuzFromServer(f.name);
+      });
+      this.puzServerOpenState.list.appendChild(row);
+    }
+  } catch (err) {
+    this.puzServerOpenState.status.textContent =
+        'Cannot reach puz server. Start it with docker compose up ' +
+        '(or node server/server.js).';
+    this.puzServerOpenState.status.className =
+        'xet-puz-server-status xet-red';
+    console.log('showPuzServerOpenPanel error:', err);
+  }
+}
+
+Exet.prototype.openPuzFromServer = async function(name) {
+  if (!this.puzServerOpenState) return;
+  this.puzServerOpenState.status.textContent = 'Opening ' + name + '...';
+  this.puzServerOpenState.status.className = 'xet-puz-server-status';
+  try {
+    const res = await fetch(
+        this.puzServerApiUrl('/api/puz/' + encodeURIComponent(name)));
+    if (!res.ok) {
+      throw new Error('HTTP ' + res.status);
+    }
+    const buffer = await res.arrayBuffer();
+    exetModals.hide();
+    exetLoadFromBuffer(buffer, name);
+  } catch (err) {
+    this.puzServerOpenState.status.textContent =
+        'Failed to open ' + name + ': ' + (err.message || err);
+    this.puzServerOpenState.status.className =
+        'xet-puz-server-status xet-red';
+    console.log('openPuzFromServer error:', err);
+  }
 }
 
 Exet.prototype.downloadIPuz = function() {
@@ -7662,86 +7832,90 @@ function exetBlank3D(w3d, h3d, d3d, id='') {
   return exetBlank(w3d, h3d * d3d, h3d, id);
 }
 
+function exetLoadFromBuffer(buffer, fileName) {
+  exet.exolveFile = fileName || 'crossword';
+  const utf8decoder = new TextDecoder();
+  const decodedBuffer = utf8decoder.decode(buffer);
+  let exolve = decodedBuffer;
+  let start = exolve.indexOf('exolve-begin');
+  if (start < 0) {
+    /* Try parsing as .puz */
+    exolve = exolveFromPuz(buffer, exet.exolveFile);
+    start = exolve.indexOf('exolve-begin');
+  }
+  if (start < 0) {
+    /* Try parsing as .ipuz */
+    try {
+      const ipuz = JSON.parse(decodedBuffer);
+      exolve = exolveFromIpuz(ipuz, exet.exolveFile);
+    } catch (err) {
+    }
+    start = exolve.indexOf('exolve-begin');
+  }
+  let end = exolve.indexOf('exolve-end');
+  if (start < 0 || end < 0 || start >= end) {
+    alert('Invalid Exolve/.puz/.ipuz specifications');
+    return;
+  }
+  end += 'exolve-end'.length;
+  exet.prefix = exolve.substring(0, start).trim();
+  exet.suffix = exolve.substring(end).trim();
+  exet.exolveOtherSec = '';
+  let specs = exolve.substring(start, end);
+  exet.setPreflex([]);
+  exet.setUnpreflex([]);
+  exet.setMinPop(0);  // Do not presume: there may be filled entries!
+  exet.noProperNouns = false;
+  exet.region = '';
+  exet.asymOK = false;
+  exet.tryReversals = false;
+  exet.lightRegexps = {};
+  exet.compileLightRegexps();
+  exet.makeExolve(specs);
+  if (!exet.puz) {
+    alert('Could not load Exolve puzzle from file, reverting to a new blank puzzle');
+      exetBlank(exetConfig.defaultDimension, exetConfig.defaultDimension);
+    return;
+  }
+  exet.requireEnums = exet.puz.allCluesHaveEnums;
+  exet.startNav();
+  let stored = window.localStorage.getItem(exet.puz.id);
+  if (stored) {
+    stored = JSON.parse(stored);
+    if (stored.revs.length > 0) {
+      const lastRev = stored.revs[stored.revs.length - 1];
+      exetRevManager.retrievePrefUnpref(lastRev);
+      if (exetLexicon.scoresSummary &&
+          lastRev.hasOwnProperty('lexId') &&
+          lastRev.hasOwnProperty('minscore') &&
+          exetLexicon.id == lastRev.lexId) {
+        exet.setMinScore(lastRev.minscore);
+      } else {
+        exet.setMinPop(lastRev.minpop || 0);
+      }
+      exet.noProperNouns = lastRev.noProperNouns || false;
+      exet.asymOK = lastRev.asymOK || false;
+      exet.region = lastRev.region || '';
+      exet.tryReversals = lastRev.tryReversals || false;
+      exet.lightRegexps = lastRev.lightRegexps || {};
+      exet.compileLightRegexps();
+      exet.resetViability();
+      exet.renderPreflex();
+    }
+  } else {
+    if (exet.puz.layers3d > 1) {
+      exet.tryReversals = true;
+    }
+  }
+  exetRevManager.throttledSaveRev(
+      exetRevManager.REV_LOADED_FROM_FILE, exet.exolveFile);
+}
+
 function exetLoadFile() {
-  let fr = new FileReader(); 
-  fr.onload = function(){ 
-    const buffer = fr.result;
-    const utf8decoder = new TextDecoder();
-    const decodedBuffer = utf8decoder.decode(buffer);
-    let exolve = decodedBuffer;
-    let start = exolve.indexOf('exolve-begin');
-    if (start < 0) {
-      /* Try parsing as .puz */
-      exolve = exolveFromPuz(buffer, exet.exolveFile);
-      start = exolve.indexOf('exolve-begin');
-    }
-    if (start < 0) {
-      /* Try parsing as .ipuz */
-      try {
-        const ipuz = JSON.parse(decodedBuffer);
-        exolve = exolveFromIpuz(ipuz, exet.exolveFile);
-      } catch (err) {
-      }
-      start = exolve.indexOf('exolve-begin');
-    }
-    let end = exolve.indexOf('exolve-end');
-    if (start < 0 || end < 0 || start >= end) {
-      alert('Invalid Exolve/.puz/.ipuz specifications');
-      return;
-    }
-    end += 'exolve-end'.length;
-    exet.prefix = exolve.substring(0, start).trim();
-    exet.suffix = exolve.substring(end).trim();
-    exet.exolveOtherSec = '';
-    let specs = exolve.substring(start, end);
-    exet.setPreflex([]);
-    exet.setUnpreflex([]);
-    exet.setMinPop(0);  // Do not presume: there may be filled entries!
-    exet.noProperNouns = false;
-    exet.region = '';
-    exet.asymOK = false;
-    exet.tryReversals = false;
-    exet.lightRegexps = {};
-    exet.compileLightRegexps();
-    exet.makeExolve(specs);
-    if (!exet.puz) {
-      alert('Could not load Exolve puzzle from file, reverting to a new blank puzzle');
-        exetBlank(exetConfig.defaultDimension, exetConfig.defaultDimension);
-      return;
-    }
-    exet.requireEnums = exet.puz.allCluesHaveEnums;
-    exet.startNav();
-    let stored = window.localStorage.getItem(exet.puz.id);
-    if (stored) {
-      stored = JSON.parse(stored);
-      if (stored.revs.length > 0) {
-        const lastRev = stored.revs[stored.revs.length - 1];
-        exetRevManager.retrievePrefUnpref(lastRev);
-        if (exetLexicon.scoresSummary &&
-            lastRev.hasOwnProperty('lexId') &&
-            lastRev.hasOwnProperty('minscore') &&
-            exetLexicon.id == lastRev.lexId) {
-          exet.setMinScore(lastRev.minscore);
-        } else {
-          exet.setMinPop(lastRev.minpop || 0);
-        }
-        exet.noProperNouns = lastRev.noProperNouns || false;
-        exet.asymOK = lastRev.asymOK || false;
-        exet.region = lastRev.region || '';
-        exet.tryReversals = lastRev.tryReversals || false;
-        exet.lightRegexps = lastRev.lightRegexps || {};
-        exet.compileLightRegexps();
-        exet.resetViability();
-        exet.renderPreflex();
-      }
-    } else {
-      if (exet.puz.layers3d > 1) {
-        exet.tryReversals = true;
-      }
-    }
-    exetRevManager.throttledSaveRev(
-        exetRevManager.REV_LOADED_FROM_FILE, exet.exolveFile);
-  } 
+  let fr = new FileReader();
+  fr.onload = function() {
+    exetLoadFromBuffer(fr.result, exet.exolveFile);
+  };
   let f = document.getElementById('xet-file').files[0];
   exet.exolveFile = f.name;
   fr.readAsArrayBuffer(f);
