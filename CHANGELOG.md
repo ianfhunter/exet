@@ -1,5 +1,13 @@
 # Changelog
 
+### Exet v1.07.3, July 31, 2026
+
+- Add "Save PUZ to server" / "Open PUZ from server" options, backed by a
+  light Node.js server (`server/`) and `docker-compose.yml`.
+- Mirror browser localStorage (crossword revisions, preferred/disallowed
+  fills, and Exet settings) to the same server, with Storage-menu push/
+  restore and optional auto-sync.
+
 ### Exet v1.07.2, July 31, 2026
 
 - Merriam-Webster also does not allow embedding in iframes any more.

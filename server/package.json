@@ -1,0 +1,13 @@
+{
+  "name": "exet-puz-server",
+  "version": "1.0.0",
+  "description": "Light backend for saving Exet .puz files to disk",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

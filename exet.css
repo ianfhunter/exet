@@ -760,6 +760,40 @@ body {
   font-size: 70%;
   font-style: italic;
 }
+.xet-puz-server-status {
+  font-size: 70%;
+  font-style: italic;
+  margin-top: 4px;
+  white-space: normal;
+}
+.xet-puz-server-panel {
+  position: absolute;
+  left: 0;
+  top: 54px;
+  z-index: 2;
+  background-color: white;
+  border: 1px solid green;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  max-width: 520px;
+  padding: 12px;
+}
+.xet-puz-server-list {
+  max-height: 320px;
+  overflow: auto;
+  margin-top: 8px;
+}
+.xet-puz-server-list-item {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+}
+.xet-puz-server-fname {
+  font-weight: bold;
+}
+.xet-puz-server-meta {
+  color: #666;
+  font-size: 90%;
+}
 #xet-frame .xet-fills-heading .xlv-small-button {
   background-color: ghostwhite;
 }
