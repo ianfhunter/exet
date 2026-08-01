@@ -178,8 +178,9 @@ function Exet() {
      <i>Edit &gt; Add/Edit special sections: &gt; Other Exolve sections</i>.`,
     `You can specify up to ${this.MAX_PREFLEX} desired words to fill, using
      the <span style="color:green">"Set preferred fills"</span> button near
-     the bottom. These words will be prioritized in autofill as well
-     as in the suggested fills list.`,
+     the bottom (type/paste them, or load from a local text file). These
+     words will be prioritized in autofill as well as in the suggested
+     fills list.`,
     `In a cryptic clue, you can specify a part of the clue to be the definition
      part using Ctrl-d after selecting it. This part gets underlined when
      the solution is revealed.`,
@@ -1356,6 +1357,12 @@ Exet.prototype.makeExetTab = function() {
             (processing...)
           </span>
         </div>
+        <div class="xet-smaller-text" style="margin:4px 0">
+          Load from text file (one word/phrase per line):
+          <input id="xet-preflex-file" type="file"
+              accept=".txt,text/plain"
+              onchange="exet.loadPreflexFile()"></input>
+        </div>
         <div class="xet-choices-box xet-mid-tall-box">
           <div style="height:100ch;width:30ch" id="xet-preflex-input"
             contenteditable="true" class="xet-preflex-entry"
@@ -1367,6 +1374,12 @@ Exet.prototype.makeExetTab = function() {
           id="xet-unpreflex-editor" style="display:none">
         <div>
            List of words/phrases that you do not want as fills:
+        </div>
+        <div class="xet-smaller-text" style="margin:4px 0">
+          Load from text file (one word/phrase per line):
+          <input id="xet-unpreflex-file" type="file"
+              accept=".txt,text/plain"
+              onchange="exet.loadUnpreflexFile()"></input>
         </div>
         <div class="xet-choices-box xet-mid-tall-box">
           <textarea rows="100" cols="25" id="xet-unpreflex-input"
@@ -7073,6 +7086,48 @@ Exet.prototype.setPreflex = function(preflex) {
     this.preflexByLen[len].push(p);
     this.preflexSet[p] = ptext;
   }
+}
+
+/**
+ * Read a local text file (client-side only) and pass its contents to
+ * applyText. Clears the file input afterward so the same file can be
+ * re-selected. Strips a leading UTF-8 BOM if present.
+ */
+Exet.prototype.loadTextListFile = function(fileInput, applyText) {
+  const f = fileInput.files && fileInput.files[0];
+  if (!f) {
+    return;
+  }
+  const fr = new FileReader();
+  fr.onload = function() {
+    let text = fr.result || '';
+    if (text.charCodeAt(0) === 0xFEFF) {
+      text = text.substring(1);
+    }
+    applyText(text);
+    fileInput.value = '';
+  };
+  fr.onerror = function() {
+    alert('Could not read the file');
+    fileInput.value = '';
+  };
+  fr.readAsText(f);
+}
+
+Exet.prototype.loadPreflexFile = function() {
+  const fileInput = document.getElementById('xet-preflex-file');
+  this.loadTextListFile(fileInput, (text) => {
+    this.preflexInput.innerText = text;
+    this.startUpdatePreflex();
+  });
+}
+
+Exet.prototype.loadUnpreflexFile = function() {
+  const fileInput = document.getElementById('xet-unpreflex-file');
+  this.loadTextListFile(fileInput, (text) => {
+    this.unpreflexInput.value = text;
+    this.updateUnpreflex();
+  });
 }
 
 Exet.prototype.throttledUpdatePreflex = function() {
