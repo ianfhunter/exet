@@ -2,7 +2,7 @@
 
 ## A web app for crossword construction
 
-#### Version: Exet v1.07.1, July 28, 2026
+#### Version: Exet v1.07.3, August 1, 2026
 
 #### Author: Viresh Ratnakar
 
@@ -209,10 +209,11 @@ path primarily because of the substantial additional complexity (without
 commensurate pay-off, in my opinion).
 
 You can use the "preferred fills" feature as a substitute for full custom
-word lists: just load your custom word list as the list of preferred fills,
-and then set the minimum popularty threshold to 100% (which will prevent
-any words outside the preferred fills list from getting suggested or used
-in autofill). The only limitation is that you're limited to 50,000 words
+word lists: just load your custom word list as the list of preferred fills
+(you can paste it in, or load it from a local text file—one word/phrase per
+line), and then set the minimum popularty threshold to 100% (which will
+prevent any words outside the preferred fills list from getting suggested or
+used in autofill). The only limitation is that you're limited to 50,000 words
 (which is probably sufficient for most users).
 
 Just like "Nediger List", I can add support for loading other word lists by
@@ -488,6 +489,10 @@ they do not meet the minimum popularity threshold).
 
 Similarly, you can provide a set of words that you do *not* want to appear
 in the crossword, by clicking on the "Set fill exclusions" button.
+
+In either panel, you can type or paste the list, or load it from a local text
+file (one word/phrase per line) using the file picker shown above the list.
+The file is read entirely in the browser; nothing is uploaded to a server.
 
 If a line begins with '#" in the text entered in these panels, then it will be
 ignored.

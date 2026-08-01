@@ -1,5 +1,11 @@
 # Changelog
 
+### Exet v1.07.3, August 1, 2026
+
+- Allow loading preferred fills and fill exclusions from a local text file
+  (one word/phrase per line). The file is read in the browser with
+  `FileReader`; nothing is uploaded to a server.
+
 ### Exet v1.07.2, July 31, 2026
 
 - Merriam-Webster also does not allow embedding in iframes any more.
