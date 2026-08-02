@@ -1,0 +1,5 @@
+﻿
+# Wordlist source archives (too large for git)
+wordlists/*.zip
+wordlists/**/*.zip
+tools/__pycache__/
