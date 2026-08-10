@@ -2,4 +2,7 @@
 # Wordlist source archives (too large for git)
 wordlists/*.zip
 wordlists/**/*.zip
+wordlists/_sources/
+wordlists/built/million-union-*.js
+wordlists/built/combolist-*.js
 tools/__pycache__/

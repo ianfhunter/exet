@@ -54,6 +54,9 @@ DISPLAY_NAMES = {
     "spreadthewordlist": "Spread the Wordlist",
     "ettulist": "Ettu List",
     "crossword_wordlist": "Crossword Wordlist",
+    "combolist": "ComboList",
+    "million_union": "ComboList",  # legacy stem
+    "xwordlist": "Crossword Nexus",
 }
 
 
@@ -274,15 +277,30 @@ def all_wild(key: str) -> bool:
 
 
 def add_key_counts(normalized: str, count: int, counts: dict[str, int]) -> None:
+    """Count wildized pattern keys.
+
+    Short keys (len <= 7): full 2^n power set (same as Lufz).
+    Longer keys: exact key + progressive right-to-left wildcards only.
+    That matches Exet's documented fallback lookup and avoids 2^10 blowups
+    on million-entry lists (which otherwise thrash multi-GB dicts).
+    """
     key = lex_key(normalized)
-    parts = list(key)  # single-char parts
+    parts = list(key)
     n = min(len(parts), WILDIZE_ALL_BEYOND)
-    limit = 1 << n
-    for pattern in range(limit):
-        variant = parts[:]
-        for i in range(n):
-            if pattern & (1 << i):
-                variant[i] = "?"
+    if n <= 7:
+        limit = 1 << n
+        for pattern in range(limit):
+            variant = parts[:]
+            for i in range(n):
+                if pattern & (1 << i):
+                    variant[i] = "?"
+            counts["".join(variant)] += count
+        return
+    # Progressive trailing wildcards (exact, then ??? from the right).
+    counts["".join(parts)] += count
+    variant = parts[:]
+    for i in range(n - 1, -1, -1):
+        variant[i] = "?"
         counts["".join(variant)] += count
 
 
@@ -295,13 +313,26 @@ def add_keys(
     key = lex_key(normalized)
     parts = list(key)
     n = min(len(parts), WILDIZE_ALL_BEYOND)
-    limit = 1 << n
-    for pattern in range(limit):
-        variant = parts[:]
-        for i in range(n):
-            if pattern & (1 << i):
-                variant[i] = "?"
-        key_variant = "".join(variant)
+    if n <= 7:
+        limit = 1 << n
+        for pattern in range(limit):
+            variant = parts[:]
+            for i in range(n):
+                if pattern & (1 << i):
+                    variant[i] = "?"
+            key_variant = "".join(variant)
+            if key_variant not in indexing_keys:
+                continue
+            bucket = index[key_variant]
+            for li in lex_indices:
+                bucket.add(li)
+        return
+    candidates = ["".join(parts)]
+    variant = parts[:]
+    for i in range(n - 1, -1, -1):
+        variant[i] = "?"
+        candidates.append("".join(variant))
+    for key_variant in candidates:
         if key_variant not in indexing_keys:
             continue
         bucket = index[key_variant]
@@ -312,12 +343,18 @@ def add_keys(
 def build_indices(phrase_infos: list[PhraseInfo]):
     t0 = time.time()
     counts: dict[str, int] = defaultdict(int)
+    n_infos = len(phrase_infos)
+    report_every = 50000 if n_infos > 500000 else 20000
     for i, info in enumerate(phrase_infos):
         if not info.normalized:
             continue
         add_key_counts(info.normalized, len(info.forms), counts)
-        if i and i % 20000 == 0:
-            print(f"  key counts @ {i}/{len(phrase_infos)}", flush=True)
+        if i and i % report_every == 0:
+            print(
+                f"  key counts @ {i}/{n_infos} ({len(counts):,} keys, "
+                f"{time.time() - t0:.0f}s)",
+                flush=True,
+            )
     print(f"  pre-filter keys: {len(counts)} ({time.time() - t0:.1f}s)", flush=True)
 
     indexing_keys = {
@@ -338,8 +375,8 @@ def build_indices(phrase_infos: list[PhraseInfo]):
         agm_key = "".join(sorted(info.normalized))
         shard = index_shard(agm_key, AGM_INDEX_SHARDS)
         agm[shard].extend(lex_indices)
-        if i and i % 20000 == 0:
-            print(f"  index build @ {i}/{len(phrase_infos)}", flush=True)
+        if i and i % report_every == 0:
+            print(f"  index build @ {i}/{n_infos} ({time.time() - t1:.0f}s)", flush=True)
     print(f"  index built ({time.time() - t1:.1f}s)", flush=True)
 
     # Sort each index bucket (required for indexLimit early-exit)
@@ -441,25 +478,43 @@ def discover_sources(wordlists_dir: Path) -> list[Path]:
     return [by_stem[k] for k in sorted(by_stem)]
 
 
+def load_existing_manifest(manifest: Path) -> dict:
+    if not manifest.is_file():
+        return {}
+    text = manifest.read_text(encoding="utf-8")
+    m = re.search(
+        r"Object\.assign\(\s*exetConfig\.lexicons\s*,\s*(\{.*\})\s*\)\s*;",
+        text,
+        re.S,
+    )
+    if not m:
+        return {}
+    try:
+        return json.loads(m.group(1))
+    except json.JSONDecodeError:
+        return {}
+
+
 def write_manifest(
     out_dir: Path,
     wordlists_dir: Path,
     entries: list[tuple[str, list[str]]],
+    merge: bool = False,
 ) -> Path:
-    """entries: (display_name, list of paths relative to exet/)."""
+    """entries: (display_name, list of filenames in out_dir)."""
     # Paths in exetConfig are relative to exet.html
     try:
         rel_out = out_dir.resolve().relative_to(wordlists_dir.parent.resolve())
     except ValueError:
         rel_out = out_dir
 
-    lexicons = {}
+    manifest = out_dir / "lexicons-manifest.js"
+    lexicons = load_existing_manifest(manifest) if merge else {}
     for name, files in entries:
         lexicons[name] = [
             str(Path(rel_out) / f).replace("\\", "/") for f in files
         ]
 
-    manifest = out_dir / "lexicons-manifest.js"
     payload = json.dumps(lexicons, ensure_ascii=False, indent=2)
     manifest.write_text(
         "/** Auto-generated by tools/import-wordlists.py — do not edit. */\n"
@@ -585,7 +640,8 @@ def main(argv: list[str] | None = None) -> int:
         display, files = import_one(path, out_dir)
         entries.append((display, files))
 
-    write_manifest(out_dir, wordlists_dir, entries)
+    # --only should extend the existing menu, not wipe other imported lists.
+    write_manifest(out_dir, wordlists_dir, entries, merge=bool(args.only))
     if not args.no_html_patch:
         try:
             rel_manifest = (
