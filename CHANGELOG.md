@@ -1,10 +1,27 @@
 # Changelog
 
-### Exet v1.07.3, August 1, 2026
+### Exet v1.07.5, August 2, 2026
+
+- Add Open English Wordnet as a Research source.
+- Fix: 1.07.4 was from a PR that had not merged 1.07.3.
+- The nutrimatic zoom from 1.07.4 (0.55) was too aggressive: it often made
+  results too small to read (if they were not high-scoring phrases). Change
+  it to 0.75.
+
+### Exet v1.07.4, August 2, 2026
 
 - Improve appearance of Nutrimatic results used by Hidden, Alternations, and
   the Nutrimatic web-fill source by scaling those iframes down (Nutrimatic's
   score-based fonts are otherwise huge). Purely client-side; no proxy/server.
+
+### Exet v1.07.3, August 2, 2026
+
+- When the top clue overlaps title/setter/preamble, we blur the latter.
+  However, this was done too aggressively. With this release, we make it
+  less likely that they get blurred.
+- And when they do get blurred, we now do a slow transition, so that the
+  use can see what's happening. We also leave the end-state slightly more
+  visible.
 
 ### Exet v1.07.2, July 31, 2026
 

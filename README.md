@@ -2,7 +2,7 @@
 
 ## A web app for crossword construction
 
-#### Version: Exet v1.07.3, August 1, 2026
+#### Version: Exet v1.07.5, August 2, 2026
 
 #### Author: Viresh Ratnakar
 
@@ -811,6 +811,7 @@ by using reputed online resources, conveniently linking directly to the
 word/phrase in the current light:
 
 - **Wiktionary**: [en.wiktionary.org](https://en.wiktionary.org)
+- **Open English WordNet**: [en-word.net](https://en-word.net)
 - **Onelook**: [onelook.com](https://onelook.com)
 - **DictionaryAPI**: [api.dictionaryapi.dev](https://api.dictionaryapi.dev)
 - **Etymonline**: [www.etymonline.com](https://www.etymonline.com)
