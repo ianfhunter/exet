@@ -3,6 +3,7 @@
 wordlists/*.zip
 wordlists/**/*.zip
 wordlists/_sources/
+lists/_sources/
 wordlists/built/million-union-*.js
 wordlists/built/combolist-*.js
 tools/__pycache__/
