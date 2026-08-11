@@ -16,5 +16,10 @@ Object.assign(exetConfig.lexicons, {
     "wordlists/built/spreadthewordlist-part-1.js",
     "wordlists/built/spreadthewordlist-part-2.js",
     "wordlists/built/spreadthewordlist-stems.js"
+  ],
+  "ComboList": [
+    "wordlists/built/combolist-part-1.js",
+    "wordlists/built/combolist-part-2.js",
+    "wordlists/built/combolist-stems.js"
   ]
 });
