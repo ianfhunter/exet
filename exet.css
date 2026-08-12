@@ -874,6 +874,11 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
+.xet-consecutive-unch-mark {
+  fill: red;
+  font-weight: bold;
+  pointer-events: none;
+}
 /*
  * Nutrimatic sizes each result with a large score-based font-size. We mark
  * those iframes and enlarge their CSS box, then zoom them down so the panel

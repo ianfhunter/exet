@@ -727,6 +727,7 @@ Exet.prototype.setPuzzle = function(puz) {
       }
     }
   }
+  this.updateConsecutiveUnchMarks();
 
   // Display word list info
   const status = document.getElementById(`${this.puz.prefix}-status`);
@@ -6508,6 +6509,41 @@ Exet.prototype.refineLightChoices = function(fillState, limit=0) {
 
 Exet.prototype.findDeadendsByCell = function(fillState) {
   return this.refineLightChoices(fillState, this.sweepMaxChoices);
+}
+
+Exet.prototype.updateConsecutiveUnchMarks = function() {
+  if (!this.puz) {
+    return;
+  }
+  const puz = this.puz;
+  for (let i = 0; i < puz.gridHeight; i++) {
+    for (let j = 0; j < puz.gridWidth; j++) {
+      const gridCell = puz.grid[i][j];
+      if (gridCell.unchMark) {
+        gridCell.unchMark.remove();
+        gridCell.unchMark = null;
+      }
+    }
+  }
+  const analysis = new ExetAnalysis(
+      puz.grid, puz.gridWidth, puz.gridHeight, puz.layers3d);
+  for (const cell of analysis.consecutiveUnchCells()) {
+    const i = cell[0];
+    const j = cell[1];
+    const gridCell = puz.grid[i][j];
+    if (!gridCell.isLight || !gridCell.cellGroup) {
+      continue;
+    }
+    const mark = puz.addCellText(i, j, '&#10071;', 12, 10, false, true);
+    if (!mark) {
+      continue;
+    }
+    mark.classList.add('xet-consecutive-unch-mark');
+    const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+    title.textContent = 'Consecutive unch';
+    mark.appendChild(title);
+    gridCell.unchMark = mark;
+  }
 }
 
 Exet.prototype.updateViablots = function() {
