@@ -108,6 +108,7 @@ function Exet() {
   this.region = '';
   this.asymOK = false;
   this.tryReversals = false;
+  this.rebusIntraCellNavDone = false;
   this.lightRegexps = {};
   this.lightRegexpsC = {};
   this.minpop = 0;
@@ -4039,6 +4040,14 @@ Exet.prototype.navDarkness = function(row, col, ev=null) {
 }
 
 Exet.prototype.arrowNav = function(key) {
+  if (this.rebusIntraCellNavDone) {
+    this.rebusIntraCellNavDone = false;
+    return true;
+  }
+  if (this.shouldStayInRebusCellForArrow(key)) {
+    this.puz.enableMultiLetterEntry();
+    return true;
+  }
   let row = this.puz.currRow
   let col = this.puz.currCol
   let useSaved = false
@@ -4072,6 +4081,52 @@ Exet.prototype.arrowNav = function(key) {
   }
   this.navDarkness(row, col)
   return true
+}
+
+/** True if the caret can still move within the current rebus cell text. */
+Exet.prototype.shouldStayInRebusCellForArrow = function(key) {
+  if (!this.puz || !this.puz.hasRebusCells) {
+    return false;
+  }
+  if (key != 37 && key != 39) {
+    return false;
+  }
+  const gridCell = this.puz.currCell();
+  if (!gridCell || !gridCell.isLight || gridCell.noRebus || gridCell.prefill) {
+    return false;
+  }
+  const inp = this.puz.gridInput;
+  const text = inp.value;
+  if (text.length <= 1) {
+    return false;
+  }
+  const start = inp.selectionStart;
+  const end = inp.selectionEnd;
+  if (start == null || end == null) {
+    return false;
+  }
+  if (key == 37) {
+    return start > 0;
+  }
+  return end < text.length;
+}
+
+Exet.prototype.moveRebusCellCaret = function(key) {
+  const inp = this.puz.gridInput;
+  const start = inp.selectionStart;
+  const end = inp.selectionEnd;
+  if (start == null || end == null || start != end) {
+    return false;
+  }
+  if (key == 37 && start > 0) {
+    inp.setSelectionRange(start - 1, start - 1);
+    return true;
+  }
+  if (key == 39 && start < inp.value.length) {
+    inp.setSelectionRange(start + 1, start + 1);
+    return true;
+  }
+  return false;
 }
 
 Exet.prototype.scrollCluesIfNeeded = function() {
@@ -5345,11 +5400,22 @@ Exet.prototype.handleRebusGridKeyDown = function(e) {
   if (!this.puz || !this.puz.hasRebusCells) {
     return;
   }
-  if (e.code !== 'Slash' && e.key !== '/') {
-    return;
-  }
   const gridCell = this.puz.currCell();
   if (!gridCell || !gridCell.isLight || gridCell.noRebus || gridCell.prefill) {
+    return;
+  }
+  const key = e.keyCode || e.which;
+  const inp = this.puz.gridInput;
+
+  if ((key == 37 || key == 39) && inp.value.length > 1 &&
+      this.moveRebusCellCaret(key)) {
+    e.preventDefault();
+    this.rebusIntraCellNavDone = true;
+    this.puz.enableMultiLetterEntry();
+    return;
+  }
+
+  if (e.code !== 'Slash' && e.key !== '/') {
     return;
   }
   this.ensureRebusAllowChars(this.puz);
