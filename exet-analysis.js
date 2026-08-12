@@ -303,13 +303,11 @@ class ExetAnalysis {
   }
   
   /**
-   * Returns true if the grid is OK as a chequered, UK-style grid:
-   * - No consecitive unches
-   * - No lights shorter than 4 (only if checkSpanLen is passed as true)
-   * - No short lights with more unches than checked cells (only if
-   *   checkUnchFrac is passed as true)
+   * For each light cell, return how many directions (across/down) it is
+   * checked in: 0 for blocked, 1 for an unch, 2 for fully checked.
+   * @return {!Array<!Array<number>>}
    */
-  chequeredOK(checkSpanLen=true, checkUnchFrac=true) {
+  computeCrossers() {
     const crossers = new Array(this.h);
     for (let i = 0; i < this.h; i++) {
       crossers[i] = new Array(this.w);
@@ -330,6 +328,46 @@ class ExetAnalysis {
              !this.grid[i][j].hasBarUnder)) {
           crossers[i][j]++;
         }
+      }
+    }
+    return crossers;
+  }
+
+  /**
+   * Return [row, col] pairs for light cells that participate in consecutive
+   * unches (UK-style grid analysis).
+   * @return {!Array<!Array<number>>}
+   */
+  consecutiveUnchCells() {
+    const crossers = this.computeCrossers();
+    const cells = [];
+    for (let i = 0; i < this.h; i++) {
+      for (let j = 0; j < this.w; j++) {
+        if (crossers[i][j] != 1) {
+          continue;
+        }
+        if ((j > 0 && crossers[i][j-1] == 1 &&
+             !this.grid[i][j-1].hasBarAfter) ||
+            (i > 0 && crossers[i-1][j] == 1 &&
+             !this.grid[i-1][j].hasBarUnder)) {
+          cells.push([i, j]);
+        }
+      }
+    }
+    return cells;
+  }
+
+  /**
+   * Returns true if the grid is OK as a chequered, UK-style grid:
+   * - No consecitive unches
+   * - No lights shorter than 4 (only if checkSpanLen is passed as true)
+   * - No short lights with more unches than checked cells (only if
+   *   checkUnchFrac is passed as true)
+   */
+  chequeredOK(checkSpanLen=true, checkUnchFrac=true) {
+    const crossers = this.computeCrossers();
+    for (let i = 0; i < this.h; i++) {
+      for (let j = 0; j < this.w; j++) {
         if (crossers[i][j] == 1 &&
             ((j > 0 && crossers[i][j-1] == 1 &&
               !this.grid[i][j-1].hasBarAfter) ||

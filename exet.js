@@ -734,6 +734,7 @@ Exet.prototype.setPuzzle = function(puz) {
       }
     }
   }
+  this.updateConsecutiveUnchMarks();
 
   // Display word list info
   const status = document.getElementById(`${this.puz.prefix}-status`);
@@ -4319,10 +4320,6 @@ Exet.prototype.navDarkness = function(row, col, ev=null) {
 }
 
 Exet.prototype.arrowNav = function(key) {
-  if (this.rebusIntraCellNavDone) {
-    this.rebusIntraCellNavDone = false;
-    return true;
-  }
   if (this.shouldStayInRebusCellForArrow(key)) {
     this.puz.enableMultiLetterEntry();
     return true;
@@ -4406,6 +4403,26 @@ Exet.prototype.moveRebusCellCaret = function(key) {
     return true;
   }
   return false;
+}
+
+/** True if Backspace will clear all text in the rebus grid input. */
+Exet.prototype.willBackspaceEmptyRebusInput = function() {
+  const inp = this.puz.gridInput;
+  const val = inp.value;
+  const start = inp.selectionStart;
+  const end = inp.selectionEnd;
+  if (start == null || end == null) {
+    return val.length <= 1;
+  }
+  if (start != end) {
+    return val.slice(0, start) + val.slice(end) == '';
+  }
+  if (start == 0) {
+    return false;
+  }
+  return val.length == 1;
+}
+
 /**
  * Home (36) / End (35): jump to the start/end of the current row (Across)
  * or column (Down). The boundary is the grid edge or the first black cell
@@ -4561,6 +4578,10 @@ Exet.prototype.replaceHandlers = function() {
   this.puz.handleKeyUpInner = (function() {
     exet.hkuiSaved = exet.puz.handleKeyUpInner;
     return function(key, shift=false) {
+      if (exet.rebusIntraCellNavDone) {
+        exet.rebusIntraCellNavDone = false;
+        return true;
+      }
       if (key >= 37 && key <= 40) {
         return exet.arrowNav(key);
       }
@@ -5744,6 +5765,16 @@ Exet.prototype.handleRebusGridKeyDown = function(e) {
   if ((key == 37 || key == 39) && inp.value.length > 1 &&
       this.moveRebusCellCaret(key)) {
     e.preventDefault();
+    this.rebusIntraCellNavDone = true;
+    this.puz.enableMultiLetterEntry();
+    return;
+  }
+
+  if (key == 8 && this.willBackspaceEmptyRebusInput()) {
+    /**
+     * Clearing the last rebus letter leaves the cell empty; suppress the
+     * keyup retreat so a second Backspace is needed to leave the cell.
+     */
     this.rebusIntraCellNavDone = true;
     this.puz.enableMultiLetterEntry();
     return;
@@ -7147,6 +7178,41 @@ Exet.prototype.refineLightChoices = function(fillState, limit=0) {
 
 Exet.prototype.findDeadendsByCell = function(fillState) {
   return this.refineLightChoices(fillState, this.sweepMaxChoices);
+}
+
+Exet.prototype.updateConsecutiveUnchMarks = function() {
+  if (!this.puz) {
+    return;
+  }
+  const puz = this.puz;
+  for (let i = 0; i < puz.gridHeight; i++) {
+    for (let j = 0; j < puz.gridWidth; j++) {
+      const gridCell = puz.grid[i][j];
+      if (gridCell.unchMark) {
+        gridCell.unchMark.remove();
+        gridCell.unchMark = null;
+      }
+    }
+  }
+  const analysis = new ExetAnalysis(
+      puz.grid, puz.gridWidth, puz.gridHeight, puz.layers3d);
+  for (const cell of analysis.consecutiveUnchCells()) {
+    const i = cell[0];
+    const j = cell[1];
+    const gridCell = puz.grid[i][j];
+    if (!gridCell.isLight || !gridCell.cellGroup) {
+      continue;
+    }
+    const mark = puz.addCellText(i, j, '&#10071;', 12, 10, false, true);
+    if (!mark) {
+      continue;
+    }
+    mark.classList.add('xet-consecutive-unch-mark');
+    const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+    title.textContent = 'Consecutive unch';
+    mark.appendChild(title);
+    gridCell.unchMark = mark;
+  }
 }
 
 Exet.prototype.updateViablots = function() {
