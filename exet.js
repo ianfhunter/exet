@@ -492,6 +492,10 @@ Exet.prototype.setPuzzle = function(puz) {
     this.exolveOtherSec = this.exolveOtherSec + puz.specLines[l] + '\n';
   }
   this.exolveOtherSec = this.exolveOtherSec.trim();
+  if (puz.hasRebusCells) {
+    this.syncRebusOptionInOtherSec(true);
+    this.ensureRebusAllowChars(puz);
+  }
 
   if (gridFillChanges) {
     this.updatePuzzle(exetRevManager.REV_GRIDFILL_CHANGE)
@@ -529,6 +533,8 @@ Exet.prototype.setPuzzle = function(puz) {
   // No more updatePuzzle() calls below inside this function: we're
   // satisfied with what we have and do not need to tweak it.
 
+  puz.gridInput.addEventListener(
+      'keydown', this.handleRebusGridKeyDown.bind(this), true);
   puz.gridInput.addEventListener('keydown', this.handleKeyDown.bind(this));
   puz.gridInput.addEventListener('input', this.throttledGridInput.bind(this));
 
@@ -796,9 +802,71 @@ Exet.prototype.syncRebusCheckbox = function() {
   cb.disabled = this.puz && this.puz.langMaxCharCodes > 1;
 }
 
+/** Extra allow-chars merged into the spec when rebus cells are enabled. */
+Exet.prototype.REBUS_EXTRA_ALLOW_CHARS = '/';
+
+Exet.prototype.mergeAllowChars = function(existing, toAdd) {
+  const chars = new Set(existing.split(''));
+  for (const c of toAdd) {
+    if (c) {
+      chars.add(c);
+    }
+  }
+  return Array.from(chars).join('');
+}
+
+Exet.prototype.stripAllowChars = function(existing, toRemove) {
+  const remove = new Set(toRemove.split(''));
+  return existing.split('').filter(c => !remove.has(c)).join('');
+}
+
+Exet.prototype.ensureRebusAllowChars = function(puz) {
+  if (!puz || !puz.hasRebusCells) {
+    return;
+  }
+  if (!puz.allowChars) {
+    puz.allowChars = {};
+  }
+  for (const c of this.REBUS_EXTRA_ALLOW_CHARS) {
+    puz.allowChars[c] = true;
+  }
+}
+
+Exet.prototype.processRebusExolveOptions = function(opts, enabled, state) {
+  const out = [];
+  for (const opt of opts) {
+    if (opt == 'rebus-cells') {
+      continue;
+    }
+    if (opt.startsWith('allow-chars:')) {
+      state.allowCharsHandled = true;
+      let chars = opt.substring('allow-chars:'.length);
+      if (enabled) {
+        chars = this.mergeAllowChars(chars, this.REBUS_EXTRA_ALLOW_CHARS);
+      } else {
+        chars = this.stripAllowChars(chars, this.REBUS_EXTRA_ALLOW_CHARS);
+      }
+      if (chars.length > 0) {
+        out.push('allow-chars:' + chars);
+      }
+      continue;
+    }
+    out.push(opt);
+  }
+  if (enabled && !state.rebusHandled) {
+    out.unshift('rebus-cells');
+    state.rebusHandled = true;
+  }
+  if (enabled && !state.allowCharsHandled) {
+    out.push('allow-chars:' + this.REBUS_EXTRA_ALLOW_CHARS);
+    state.allowCharsHandled = true;
+  }
+  return out;
+}
+
 Exet.prototype.syncRebusOptionInOtherSec = function(enabled) {
   const lines = [];
-  let rebusHandled = false;
+  const state = {rebusHandled: false, allowCharsHandled: false};
   for (const line of this.exolveOtherSec.split('\n')) {
     const t = line.trim();
     if (!t.startsWith('exolve-option:')) {
@@ -808,17 +876,17 @@ Exet.prototype.syncRebusOptionInOtherSec = function(enabled) {
       continue;
     }
     let opts = t.substring('exolve-option:'.length).trim().split(/\s+/);
-    opts = opts.filter(o => o != 'rebus-cells');
-    if (enabled && !rebusHandled) {
-      opts.unshift('rebus-cells');
-      rebusHandled = true;
-    }
+    opts = this.processRebusExolveOptions(opts, enabled, state);
     if (opts.length > 0) {
       lines.push('  exolve-option: ' + opts.join(' '));
     }
   }
-  if (enabled && !rebusHandled) {
-    lines.unshift('  exolve-option: rebus-cells');
+  if (enabled && !state.rebusHandled) {
+    const opts = this.processRebusExolveOptions([], enabled,
+        {rebusHandled: false, allowCharsHandled: false});
+    lines.unshift('  exolve-option: ' + opts.join(' '));
+  } else if (enabled && !state.allowCharsHandled) {
+    lines.push('  exolve-option: allow-chars:' + this.REBUS_EXTRA_ALLOW_CHARS);
   }
   this.exolveOtherSec = lines.join('\n').trim();
 }
@@ -840,6 +908,7 @@ Exet.prototype.setRebusCells = function(enabled) {
     }
     this.puz.hasRebusCells = true;
     this.puz.multiLetter = true;
+    this.ensureRebusAllowChars(this.puz);
   } else {
     for (let i = 0; i < this.puz.gridHeight; i++) {
       for (let j = 0; j < this.puz.gridWidth; j++) {
@@ -1235,8 +1304,9 @@ Exet.prototype.makeExetTab = function() {
               </div>
               <div style="padding:10px"
                   title="Allow multiple letters in a cell (Shift or double-click ` +
-                  `to enter). Autofill is disabled; grid-fill is disabled only ` +
-                  `for entries that contain a rebus cell.">
+                  `to enter). Slash (/) is allowed in rebus cells; Shift+slash works. ` +
+                  `Autofill is disabled; grid-fill is disabled only for entries ` +
+                  `that contain a rebus cell.">
                 <input id="xet-rebus-cells" name="xet-rebus-cells"
                   value="rebus-cells" type="checkbox">
                 </input>
@@ -5271,6 +5341,34 @@ Exet.prototype.automagicBlocks = function(noTarget=true) {
 }
 
 // Can be called with e as an event or as a key directly
+Exet.prototype.handleRebusGridKeyDown = function(e) {
+  if (!this.puz || !this.puz.hasRebusCells) {
+    return;
+  }
+  if (e.code !== 'Slash' && e.key !== '/') {
+    return;
+  }
+  const gridCell = this.puz.currCell();
+  if (!gridCell || !gridCell.isLight || gridCell.noRebus || gridCell.prefill) {
+    return;
+  }
+  this.ensureRebusAllowChars(this.puz);
+  /**
+   * Shift+/ on US (and many UK) keyboards produces "?", which is not in
+   * allow-chars. Intercept the slash key so rebus entries like SWORD/MAGIC work
+   * even while Shift is held for multi-letter entry.
+   */
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  this.puz.lastKeyHadShift = true;
+  this.puz.enableMultiLetterEntry();
+  const curr = (gridCell.currLetter != '0' && gridCell.currLetter != '?') ?
+      this.puz.stateToDisplayChar(gridCell.currLetter) : '';
+  this.puz.gridInput.value = curr + '/';
+  this.puz.handleGridInput();
+  this.handleGridInput();
+}
+
 Exet.prototype.handleKeyDown = function(e) {
   let key = e.key || e;
   if (key == '=') {
