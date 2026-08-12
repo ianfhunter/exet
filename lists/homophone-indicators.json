@@ -1,0 +1,6972 @@
+{
+  "type": "homophone",
+  "title": "Homophone indicators",
+  "built": "2026-08-12",
+  "count": 782,
+  "sources": [
+    "clue-clinic",
+    "crossword-unclued",
+    "cryptics-georgeho",
+    "cryptipedia",
+    "curated-extras",
+    "daily-cryptic",
+    "solve-the-crossword",
+    "unscramblerer",
+    "wordsup"
+  ],
+  "entries": [
+    {
+      "indicator": "a report on",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "according",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "according to announcement",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "according to careless whisper",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "according to hearsay",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "according to report",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "according to reports",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "according to speaker",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "according to the gossip",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "according to the listener",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "acoustic",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "addressed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "admitting",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "advertised",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "after audition",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "after hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "after listening to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "after performance",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "aired",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "all told",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "allegedly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "aloud",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "solve-the-crossword",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "amplifying call",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "announce",
+      "sources": [
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "announced",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "solve-the-crossword",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "announcement",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "announcement of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "announcing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "apparently",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "appreciated by the audience",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "approximated in speech",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "are heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "articulate",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "articulated",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "as",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as advertised on the radio",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as announced",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as discussed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as has been said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as one might say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as one says",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as pronounced",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as quoted",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as reported",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as reported on the radio",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as satnav says",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as some might say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as some say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as some would tell it",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as sound",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as spoken",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as stated",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "as that sounds",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as the saying goes",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as they say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as told",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as we hear",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as we may hear it",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as we say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as you can hear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as you may say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as you might say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "as you say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "asked",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "asked for",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "asking",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at the auditors",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "audible",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "audibly",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "audibly received",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "audience",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "audience (for the) (in the)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "audio",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "audio version",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "audiobook confuses",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "audited",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "auditing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "audition",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "auditioned",
+      "sources": [
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "auditor",
+      "sources": [
+        "crossword-unclued",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "auditor's",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "aural",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "aurally",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "barked",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "barked out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "be broadcast",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "be heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "be listened to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "be reported",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "becoming audible",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being announced",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being broadcast",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being discussed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being expressed audibly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being picked up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being presented",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being read aloud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being read out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being reported",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being spoken",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being talked about",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being vocal",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "being voiced",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "broadcast",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "solve-the-crossword",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "broadcasting",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "broadcasts",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "brought into hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by all accounts",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by audience",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by ear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by gossip",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by mouth",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by phone",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by radio",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by sound",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by sound of it",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by speech",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by the ear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by the ears",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by the mouth",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by the sound",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by the sound of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by the sound of it",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "daily-cryptic",
+        "solve-the-crossword",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "by word of mouth",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "call",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "call(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "called",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "called for",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "called out",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "calling",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "calling out",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "calls",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "can be heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "casually announced",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "catch",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "catching",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "caught",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "cecil",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "chatty",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cited",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "citing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "claimed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "comes across as",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "coming across as",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "communicated orally",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "conversation",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "conversational",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "conveyed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "conveyed in conversation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "conveyed orally",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "could be heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "could be said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "could one say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "could sound right for",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cry of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "crying",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "declaimed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "declare",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "declared",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "curated-extras",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "declared by speaker",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "declares",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "declaring",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "delivered",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "delivered by",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "delivered for the audience",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "delivery",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "delivery of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "demanded by drunkard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "described",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "detected",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "detected by auditors",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "dictate",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "dictated",
+      "sources": [
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "dictator's",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "dictator’s",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "did you hear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "did you say",
+      "sources": [
+        "cryptics-georgeho",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "discerned",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "discuss",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "discuss(es)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "discussed",
+      "sources": [
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "discussed loudly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "discussing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "divulge",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "do we hear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "does that sound like",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "echo",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "echo(es)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "echoing",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "emitted",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "enunciated",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "enunciating",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "escaping from trap",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "evident to listener",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "evidently",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "evocation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "evoked",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "exclaim",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "express",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "expressed",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "expression of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "familiarly voiced",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "featured in report",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for a listener",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for a sound",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for a speaker",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for an audience",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for announcement",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for audience",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "for audit",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for audition",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for auditor",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for auditors",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "for broadcast",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for dictator",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for discussing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for discussion",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for eavesdroppers",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "for hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for listener",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "for listeners",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for oral presentation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for people to listen to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for reading out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for recital",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for report",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for speakers",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for speaking out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for speech",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for the audience",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "solve-the-crossword",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for the auditor",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for the ear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for the ears",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for the hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for the listener",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for the mic",
+      "sources": [
+        "curated-extras",
+        "solve-the-crossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for the radio",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for those in earshot",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "for those in hearing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "for those listening",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for us to hear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for vocalizing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from a speaker",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from recitation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from report",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from the audience",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from the sound of it",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from the soundtrack",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from what we are told",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from what we hear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "gathered",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "get",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "getting broadcast",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "getting picked up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "getting quotation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "getting reported",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "give voice to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "given a hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "given an airing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "given audibly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "given mention",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "given report",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "given voice",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "giving the audience",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "going through the ear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "gossiping",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hailed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "having picked up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "having reported",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hear",
+      "sources": [
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "hear of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hear* (we)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heard",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "daily-cryptic",
+        "solve-the-crossword",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "heard about",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heard by many",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heard in",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heard of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heard pronouncement of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heard to be",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hearer's",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hearing",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "hearing of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hears",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hearsay",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "homophone",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "i gather",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "i hear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "i heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "i say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "i tell you",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "if audible",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "if heard on the radio",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in a lecture",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in a manner of speaking",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in a podcast",
+      "sources": [
+        "curated-extras",
+        "solve-the-crossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in a voice",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in announcement",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in articulation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in audience",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in audio",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in audition",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "in auditorium",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in broadcast",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in broadcasting",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in commentary",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in conference",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in conversation",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "in dialect",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in discussion",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "in discussions",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in my ear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in need of articulation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in oral exam",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in proclamation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in pronouncing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in pronunciation",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in radio interview",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in recital",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in recording",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "in report",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "in report of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in song",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in sound",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in sound only",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in soundcheck",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in speaking",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in speech",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "daily-cryptic",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "in talk",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in talks",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in the audience",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in the auditorium",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in the ear",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in the ears",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in the mouth",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in the news",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in the sound",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in vocal performance",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in voice",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in your ear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "indicators",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "informed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is announced",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is audible",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is being mentioned",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is discussed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is given a hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is listened to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is reported",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is rumoured",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is sounded",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is spoken",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is suggested",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is this a misspelling",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is told",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it has been said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it has to be said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it is said",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it must be said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it says",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it sounds",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it's",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it's heard",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it's reported",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "it's said",
+      "sources": [
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "lecture",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "lectured",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "like",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "listen",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "listen to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "listened",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "listened to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "listener",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "listener's",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "listening",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "listening to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "loud",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "loudly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "loudly demanding",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "made audible",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "made out",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "makes itself heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "makes sound of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "making noises",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "many heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "may be announced",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "may be heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "may be said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mention",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "mention of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mentioned",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mentioned aloud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mentioned on the radio",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mentioned out loud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mentioning",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "might you say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "misheard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "moaning",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mouth",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mumbled",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "murmuring",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "must be heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "named by some",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "narrated",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "needing to be heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "news of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "noise",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "noise coming from",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "noisily",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "noisy",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "nominated",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "of",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "of broadcasters",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "of conversation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "of speaking",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "of speech",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "of the audience",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "off the record",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "offered out loud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on a podcast",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on air",
+      "sources": [
+        "cryptics-georgeho",
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on hearsay evidence",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on phone",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on radio",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on record",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "on stage",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on tape",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on telephone",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on television",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on the air",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "solve-the-crossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on the airwaves",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on the ear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on the phone",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on the radio",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "solve-the-crossword",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "on the radio sounds like",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on the telephone",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "on the tongue",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on traffic news",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "once spoken",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "one hears",
+      "sources": [
+        "cryptics-georgeho",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "one might pick up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "one might say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oral",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "orally",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "daily-cryptic",
+        "solve-the-crossword",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "orally transmitted",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ordered",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "out loud",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "solve-the-crossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "outspoken",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "outspokenly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "over the airwaves",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "over the phone",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "overheard",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "solve-the-crossword",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "overhearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "people say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "perceived as",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "phonetically",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "pick up",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "picked up",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "picked up by the ears",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "picked up from",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "picked up on the mike",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "picking up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "picks",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "podcaster’s",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "posed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "poured out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "presented in radio feature",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "proclaim",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "proclaimed",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "proclamation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "profess",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "professed",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "project",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "pronounce",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "pronounce as",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "pronounced",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "pronounced for some",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "pronouncedly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "pronouncement",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "pronouncing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "purportedly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "put into speech",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "quotation of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "quote",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "quoted",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "radio",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rambling",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "read aloud",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "read out",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "read out loud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "received",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "recital",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "recitation of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "recite",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "recited",
+      "sources": [
+        "cryptics-georgeho",
+        "curated-extras",
+        "solve-the-crossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "recited aloud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "reciting",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "recorded",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "recording",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "recording of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "recount",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "recounted",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regional broadcast",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "register",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "released from trap",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "remark",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "report",
+      "sources": [
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "report about",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "report of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "report(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "reported",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "reported by",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "reported to be",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "reportedly",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "daily-cryptic",
+        "solve-the-crossword",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "reportedly getting",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "reporter",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "reporter's",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "reporting",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "reports",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "reputedly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "resonating",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "resounded",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "resounding",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "roared",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "roaring",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "roughly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "roughly suggests",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rumored",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "rumour",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rumour has it",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rumour of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rumoured",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "said",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "said (it's)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "said to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "said to be",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "said to make",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "say",
+      "sources": [
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "say(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "saying",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "should be announced",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "should be heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "shout",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "shouted",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "shouted out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "shouting",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "shouts",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sing(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "singing",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "slang",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "slurred",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "so",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "so it's said",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "so it’s said",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "so people say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "so some picked up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "so the saying goes",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "so they say",
+      "sources": [
+        "cryptics-georgeho",
+        "curated-extras",
+        "solve-the-crossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "so to speak",
+      "sources": [
+        "cryptics-georgeho",
+        "curated-extras",
+        "solve-the-crossword",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "so we hear",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "so-called",
+      "sources": [
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "some might say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "some say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "some would say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sonically",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sound",
+      "sources": [
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "sound from",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sound made by",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sound of",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "sound(s) like",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sounded",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "sounded like",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sounding",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "sounding like",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "soundly",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "sounds",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "sounds as if",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sounds here",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sounds like",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "daily-cryptic",
+        "solve-the-crossword",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "sounds like him",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spat out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "speak",
+      "sources": [
+        "crossword-unclued",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "speak up",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "speaker",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "speaker's",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "speaking",
+      "sources": [
+        "crossword-unclued",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "speaking aloud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "speaking out loud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "speaks of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "speech",
+      "sources": [
+        "crossword-unclued",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "speech (in)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "speech of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spoke",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spoke of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spoken",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "solve-the-crossword",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "spoken (is) (of)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spoken aloud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spoken as",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spoken of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spoken out loud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spouted",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "state",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "stated",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "stated aloud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "statement",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "stridently",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "suggested",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sung",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "taken",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "talk about",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "talk of a",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "talked (of)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "talked about",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "talked of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "talking",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "tell(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "telling",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "that could produce sound",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "that said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "the",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "the sound",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "the sound of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "the statement",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "they",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "they said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "they say",
+      "sources": [
+        "cryptics-georgeho",
+        "daily-cryptic",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "they sound like",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "through a labyrinth",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "through a loudspeaker",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "through audio detection",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "through hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "through listening",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "through speech",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "through the earpiece",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "through the ears",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "through the sound",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to an auditor",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to audience",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to auditor",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be announced",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be broadcast",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be delivered",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be discussed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be in audio version",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be picked up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be reported",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be said",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be sounded",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to caller",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to catch it",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to dictate",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to discuss",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to hear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to leak",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to listen to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to listeners",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to pick up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to relate",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to report",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to speak",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to state",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to talk about",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to tell",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to the audience",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to the auditor",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to the ear",
+      "sources": [
+        "cryptics-georgeho",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to the ears",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to the listener",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "solve-the-crossword",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to those listening",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to voice",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "told",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "told to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "transmitted",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "under discussion",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "understandably",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "up to the ear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "upon hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "used in speech",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "using sound from",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "utter",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "utterance of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "uttered",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "curated-extras",
+        "solve-the-crossword"
+      ],
+      "categories": [],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "utterly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "vaguely overheard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "verbal",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "verbal output",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "verbally",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "verbally proposed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "version of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "via intercom",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "via the mouth",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "via the phone",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "vocal",
+      "sources": [
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vocalised",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vocalising",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vocalization of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "vocalized",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vocalizing",
+      "sources": [
+        "cryptics-georgeho",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vocally",
+      "sources": [
+        "cryptics-georgeho",
+        "cryptipedia",
+        "curated-extras",
+        "solve-the-crossword",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vocally imitated",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "vociferously",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "voice",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators",
+        "most common homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "voiced",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptics-georgeho",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": [
+        "standard"
+      ]
+    },
+    {
+      "indicator": "voiced by",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "voicing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "volubly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "vulgarly mentioned",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "was discussed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "we",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "we are told",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "we gather",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "we hear",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "daily-cryptic",
+        "solve-the-crossword",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "we hear vaguely",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "we heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "we listened to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "we say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "we're told",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "weighed",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "weighing",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "weighs",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "what sounds like",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "what sounds like vegetables",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "what you might catch",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "what you might pick up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "what's said",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when audited",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when broadcast",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when conversing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when delivered",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when heard",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when in discussion",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when it comes to hearing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when landing on the ear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when listening",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when mentioned in dispatches",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when on the radio",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when overheard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when picked up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when rambling",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when read aloud",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when reporting",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when speaking",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when spoken",
+      "sources": [
+        "cryptics-georgeho",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when talking",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when told",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "when you hear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "while talking",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "whisper",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of homophone indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "whisper(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "whispered",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "will be heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "will be listened to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "with an accent",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "with an ear",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "with resonance of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "word of mouth",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "would be heard",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "would you say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "yelled",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "yelling",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "you announce",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "you may ask",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "you may pick up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "you might pick up",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "you might say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "you say",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    }
+  ]
+}

@@ -1,0 +1,581 @@
+10
+100
+1000
+5
+50
+50%
+500
+a piece of
+abbreviations of
+across faces (of)
+alpha
+alpha and omega in
+alternate
+alternate letters
+alternately
+apex
+article
+at first
+at heart
+at intervals (regular)
+at last
+at odd moments
+at odds
+at start of
+at the beginning
+at the edges
+at the end
+at the extremes
+at the front
+at the outset
+at the start
+away
+axis
+back
+back from/of/off
+backside of
+banks
+base
+basically
+bee
+beginner
+beginner in
+beginners
+beginning
+beginning and end of
+beginning in/of/to
+beginning to
+beginning to end
+beginning(s)
+beginnings
+beginnings of
+behind
+belly of
+bend
+big end of
+bit of
+blob
+bonnet
+borders
+borders of
+both sides of
+bottom
+boundary for/from/of
+bounds of
+bravo
+butt of
+butts
+by
+by all conclusions
+canine letter
+cap from/of
+capital
+capital of
+capital(s)
+capitals of
+case
+case for/of
+case of
+casing
+casing of
+caved
+central (characters) exposed
+central ingredient of
+centre for/of
+centre of
+centre(s) in the
+centre(s)/center(s) in the
+centrepiece of
+century
+certificate
+character facing
+charlie
+chiefly
+chump
+circular letter
+cleared
+cleared out
+close
+close of/to
+close to
+closer to
+closing letters
+closure of
+clothing for/from/on
+co-ordinate
+coat
+coat of
+coating
+conclude
+conclusion of/to
+conclusion to
+confines of
+core
+core of
+cored
+cover from/of
+covering from/of
+cross
+crown
+crowns (the)
+crust from/of
+crux of
+cue
+curve
+dash of
+debut
+debuts of
+dee
+delta
+depleted
+discharged
+disheartened
+drained
+drop
+drop of
+duck
+earliest
+early sign of
+early signs of
+eastern border
+echo
+edges
+edges of
+edging on/to
+egg
+ego
+element of
+emma
+emptied
+empty
+end
+end for/in/of/to
+end of
+end(s) of
+end(s) with
+ending
+ending in/of
+ending with
+ending(s)
+ends
+ends of
+entrance
+environs of
+essential character of
+essential ingredient of
+essentially
+evacuated
+even
+even(s)
+evenly
+evens
+eventually
+every
+every fourth letter
+every now and then
+every other
+every other (part)
+every second
+every second letter
+every so often
+every third letter
+ex
+excavated
+exhausted
+exterior of
+extracting
+extreme
+extreme of
+extremely
+extremes
+extremes of
+extremities of
+face of
+factor
+far side of
+fifth
+fifty
+filleted
+final
+final bit from/of/off
+final letters
+final signs
+finale
+finale of/to
+finally
+finish
+finish of/off/to
+finishing touch for
+first
+first and last letters
+first apearing
+first bits of
+first class
+first in/of/to
+first letter
+first letter (capital)
+first letters
+first of
+first of all
+first pair of
+first person
+first show of
+first sign of
+first signs
+first two letters
+firstly
+five
+five hundred
+flanks of
+focus of
+for
+for starters
+fore
+foremost in/of
+fourth letters
+foxtrot
+fringe
+fringe of
+fringe(s)
+fringes of
+from the outset
+from the start
+front
+front of
+fronting (those)
+fundamentally
+gee
+get even (with)
+glimpse of
+golf
+gutless
+gutted
+half (of)
+half concealed
+half of
+half-cut
+head
+head for/from/of/off
+head(s)
+head(s) for
+head(s) of
+heading
+heading (up)
+heading for/to
+heads
+heads of
+heads to
+heart
+heart of
+heartless
+hearts of
+heel of
+hem
+hint of
+hollow
+honour
+horseshoe
+hotel
+hull from/of
+hundred
+ignore the odds
+in conclusion
+in entrances
+in front of
+in the end
+inane
+inaugural
+incipient
+indeed
+india
+initial
+initial(s)
+initially
+initials
+initials of
+initiate
+initiated (by)
+initiation of/in/to
+innards
+inside
+insiders
+insides of
+intermittent
+intermittently
+introduction
+introduction from/to
+introduction(s) to
+intros (in)
+irrational
+jacket
+jay
+juliet
+junction
+kay
+kilo
+kiss
+lacking
+last
+last bit of
+last drop of
+last from/in/of/to
+last letter
+last shred of
+lastly
+latest
+latest in/of
+lead
+lead character in
+lead from/to
+lead(s)
+lead(s) to
+leader
+leader in/of
+leader(s) in/of
+leaders
+leaders of
+leading
+leading characters
+leading letters
+leads
+leads (in)
+left
+left extremity of
+letters
+lima
+limit of/to
+limits of/to
+lists of
+losses
+loud
+love
+maiden
+mainly
+marches from/off
+middle (in)
+middle letter
+middle letter(s)
+middle of
+mike
+minimum of
+mostly
+mouth
+nether
+nil
+nip of
+no. 1 for/in
+nose
+not
+not half
+notch
+nothing
+november
+now and again
+now and then
+nucleus
+occasional
+occasionally
+odd
+odd pieces
+odd positions
+oddly
+oddly enough
+oddly ignored * (evens only)
+odds
+odds are non-existent
+of
+off
+off and on
+on a regular basis
+on and off
+on vacation
+one
+one half of
+onset
+onset (of)
+onset of
+opener
+opener for
+opening
+opening for/in/of
+opening letters
+opening(s)
+origin
+origin in/of
+origin(s)
+original
+originally
+origins of
+oscar
+other
+out
+outer wear
+outside
+outside of
+outsiders
+outsiders in
+outskirts of
+overture from/to
+overtures (to)
+papa
+patterns
+pee
+peeled
+pen
+per
+periodically
+periodically (found)
+piece of
+pinch of
+point
+pole
+posh
+preface to
+primarily
+prime
+prime elements
+principal
+principal character in
+principal characters
+principally
+principle of
+programming language
+prow
+quebec
+rear in/of
+regular
+regularly
+regularly ignored
+right
+right(s)
+rind from/of
+romeo
+root(s)
+round
+scrap of
+second
+second class
+second half
+second letter
+second letters
+second rate
+seconds
+see
+selecting from
+self
+shape of console
+shell from/of
+shred of
+sides
+sides of
+sierra
+skin of
+skinned
+skirts of/on
+slice of
+snap of
+soft
+softly
+some
+sometimes
+source
+source of
+sources
+sources of
+spot of
+spymaster
+squares (numbers)
+start
+start of/off/to
+start(s)
+start(s) to
+starter
+starter of
+starter(s)
+starters
+starting (to)
+starts of
+starts off
+starts to
+stern of
+stripped
+stuffing
+suggestion of
+suspicion of
+tail
+tail of
+tails
+tails of
+take(s) leads
+taking drops
+taking faces
+taking final(s)
+taking from
+taking leads
+tango
+taste of
+tee
+ten
+tenth
+term of
+terminal
+terminal to
+terminus
+terminus of
+third letters
+thirds
+thousand
+time to time (from)
+times
+tip
+tip from/of/off
+tips
+tips from/of
+to begin with
+ton
+top
+top grade
+top of
+top(s) of
+toppings of
+topside of
+touch of
+trace of
+train of
+tunnelled
+turn
+turned out
+ultimate in
+ultimately
+uniform
+unknown
+unplaced
+upper class
+vacant
+vacated
+vacuous
+variable
+victor
+void
+voided
+vote
+western border
+what gets … going
+what gets … started
+what winds up
+what’s behind
+whiskey
+wings of
+without filling
+without stopping
+without stuffing
+wrapper
+wrapper for/from/of/on
+wrappers
+wrapping for/from/of/on
+wrong answer
+yankee
+yes
+zero
+zip
+zulu

@@ -1,0 +1,2536 @@
+{
+  "type": "alternation",
+  "title": "Alternation indicators",
+  "built": "2026-08-12",
+  "count": 304,
+  "sources": [
+    "clue-clinic",
+    "cryptics-georgeho",
+    "cryptipedia",
+    "curated-extras",
+    "wordsup"
+  ],
+  "entries": [
+    {
+      "indicator": "abnormal",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "after odd losses",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "after regular excisions",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternate",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternate bits of",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "alternate letters"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "alternate characters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternate letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternate parts of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "alternate letters"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "alternately",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [
+        "alternate letters"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "alternating",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternating letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternative",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternatively",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternatives",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "an even distribution of fruit",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "an occasional",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "appearing alternately",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "appearing intermittently",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "appearing regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "appearing regularly in",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "applied evenly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "are oddly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at intervals",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at odds",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at regular intervals",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "bits",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "bits regularly detached",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "bubbling up",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "bypassing the odd",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "changing sides",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "characters",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "characters regularly seen",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "coming up",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "confused x with y",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "consistently",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "crossing out every other letter",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cut evenly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cycling",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ditching regulars",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "dropping every second",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "dropping odds",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "even",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "even bits of",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "even letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "even letters from",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "even ones",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "even pieces of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "evenly",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "evenly applied",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "evens out",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every alternate",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every now and again",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "every now and then",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "every other",
+      "sources": [
+        "cryptics-georgeho",
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every other character",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every other element",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every other letter",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every other one",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every other one blocked off",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every other piece",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "alternate letters"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "every second",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every so often",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "exceptionally",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "exchange clothes",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first and third",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "frequently",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from time to time",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "getting nothing even",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "getting oddly dismissed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "going off",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "having a change of heart",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "having a heart transplant",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "having odd cancellations",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "having vanquished the odds",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ignore the odds",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ignoring odds",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ignoring regulars",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ignoring the odds",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in a regular fashion",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in an odd way",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in odd places",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in places",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in regular instalments",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "intermittently",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "irregularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is regularly not available",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is regularly showing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "just over half",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "just the regulars",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "lacking",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leaving every other piece",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "alternate letters"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "lose elements regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "losing regulars",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "making x y",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mislaying the odds",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "missing every other",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "missing every other letter",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "missing in odd places",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "missing odd",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "most prominently",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "not even",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "not odd",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "not oddly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "not regularly found",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "nothing even",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "nothing odd",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "nothing odd in that",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "nothing odd there",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "now and again",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "now and then",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "observed regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "occasional",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "occasionally",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "occasionally clipped",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "occasionally needed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "occasionally read",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "occasionally swiped",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "occasionally used",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "occurring intermittently",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd bits",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd bits cut out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd bits dropping off",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd bits of",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd characters",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd characters in",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd couple",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd items",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd letters from",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "odd ones",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd ones out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd ones seen among",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd parts",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd parts having run away",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd pieces",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd pieces of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "odd positions",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly abandoned",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly blanked out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly chosen",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "oddly cut",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly deficient",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly disappears",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly dismissing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly disregarded",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly dropped",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly enough",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly erased",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly going missing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly ignored",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly invisible",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly lacking",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly mislaid",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly missed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly missing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly neglected",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly overlooked",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly prohibited",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly rejected",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly removed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly shunned",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly unavailable",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odds",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odds cut",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odds dropped",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odds incidental",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odds of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "off and on",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "on a regular basis",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on and off",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on occasion",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on regular occasions",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "only now and then",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "option",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "parts",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "patchy",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "periodic",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "periodically",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "periodically displayed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "periodically visited",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "prime bits of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "prime elements",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "prime selection from",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regardless of the odds",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular",
+      "sources": [
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular characters",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular chunks of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular expulsions",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular helpings of",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular intervals",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular letters from",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular losses",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular parts",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular pieces",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular selection",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular treatment",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular visits to",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly absent",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly allowed to go out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly apparent",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly avoided",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly citing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly clipping",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly consuming",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly culled",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly discarded",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly dismissed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly displayed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly distributed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly dropped",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly drops off",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly employed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly exhibited",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly exposed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly failed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly featured in",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly forgotten",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly found",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly ignored",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "regularly interrupted",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly lacking",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly logging",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly missed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly missing",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly needed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly observed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly offers",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly picked",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly provided",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly pruned",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly quoted",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly removed",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly scrapped",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly seen",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly seen at",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly seen in",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly selected",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly shunned",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly spotted",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly substituting",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly taken",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly taking out",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly throughout",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly use",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly used",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly visited",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly visiting",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly wiping",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regulars",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regulars in",
+      "sources": [
+        "clue-clinic",
+        "cryptics-georgeho"
+      ],
+      "categories": [
+        "alternate letters"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "releases odd items",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "removing every other",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rid of odd characters",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rising",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "score regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "second and fourth",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "seconds out",
+      "sources": [
+        "clue-clinic",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "seen intermittently",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "seen now and again",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "seen regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "selected letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "selections",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "served regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "skipping regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "starts to change",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "strike only odd characters",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "suppressing every other",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "swapping tops",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taken every so often",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taken regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taking odd selection",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taking regular breaks",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taking turns",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "the odd bit",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "things",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to be chosen alternately",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to the bottom",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to the top",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "took regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "torn",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "trim the odds",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "unconnected characters",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "uneven",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "uneven bits",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "unevenly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "used in alternation",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "used regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "viewed regularly",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "wanting seconds",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "with odd exceptions",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "with odd stripes",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "with regular absentees",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "with regular filleting",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "without",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "without even parts",
+      "sources": [
+        "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "x becoming y",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "x to y",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "y for x",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "y in place of x",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "y, not x",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    }
+  ]
+}

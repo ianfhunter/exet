@@ -1,0 +1,646 @@
+{
+  "type": "abbreviation-indicators",
+  "title": "Abbreviation indicators",
+  "blurb": "Signal words that the answer (or part of it) should be abbreviated, shortened, or informal — e.g. briefly, for short, informally.",
+  "built": "2026-08-12",
+  "count": 89,
+  "sources": [
+    "curated",
+    "solve-the-crossword"
+  ],
+  "entries": [
+    {
+      "indicator": "abbr",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "abbr.",
+      "sources": [
+        "curated",
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "abbrev",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "abbreviated",
+      "sources": [
+        "curated",
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "abbreviation",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "acronym",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "american clue conventions",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as a symbol",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as an acronym",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "brief",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "briefly",
+      "sources": [
+        "curated",
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "casual",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "casually",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "clipped",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "coded",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "colloquial",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "colloquially",
+      "sources": [
+        "curated",
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "compact",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "compacted",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "condensed",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "contracted",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "cue shortened",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "datemodified",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "default",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "false",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "familiar",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "familiarly",
+      "sources": [
+        "curated",
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "for short",
+      "sources": [
+        "curated",
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "googlebot",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "guides",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "headline",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "home",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "icon",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in abbreviated form",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in abbreviated style",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in brief",
+      "sources": [
+        "curated",
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in code",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in compact form",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in contracted form",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in short",
+      "sources": [
+        "curated",
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in short hand",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in shortened form",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in shorthand",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in slang",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in summary",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in telegraphic form",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "informal",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "informal version",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "informally",
+      "sources": [
+        "curated",
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "initialism",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "initials",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "inits",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "inits.",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "item",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "itemlistelement",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "main-content",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "manifest",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "mobile-site-menu",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "name",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "nickname",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "nicknamed",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "none",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "open site menu",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "page",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "popular name",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "popularly",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "position",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "primary",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "round",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "short form",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "shortened",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "shortened form",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "shorthand",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "shortly",
+      "sources": [
+        "curated",
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "slang",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "slang term",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "slangily",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "so to abbreviate",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "solve the crossword",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "solver settings",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "summarized",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "switch to dark mode",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "symbolically",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "telegraphic",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "telegraphically",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "to abbreviate",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "true",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "truncated",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "url",
+      "sources": [
+        "solve-the-crossword"
+      ],
+      "notes": []
+    }
+  ]
+}

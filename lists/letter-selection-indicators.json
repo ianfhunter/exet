@@ -1,0 +1,5039 @@
+{
+  "type": "letter-selection",
+  "title": "Letter-selection indicators",
+  "built": "2026-08-12",
+  "count": 581,
+  "sources": [
+    "clue-clinic",
+    "crossword-unclued",
+    "cryptipedia",
+    "curated-extras",
+    "unscramblerer",
+    "wordsup"
+  ],
+  "entries": [
+    {
+      "indicator": "10",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "100",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "1000",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "5",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "50",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "50%",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "500",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "a piece of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "abbreviations of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "across faces (of)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alpha",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alpha and omega in",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternate",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternate letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "alternately",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "apex",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "article",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at first",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at heart",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at intervals (regular)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at last",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at odd moments",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at odds",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at start of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at the beginning",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at the edges",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at the end",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at the extremes",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at the front",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at the outset",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "at the start",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "away",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "axis",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "back",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "back from/of/off",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "backside of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "banks",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "base",
+      "sources": [
+        "clue-clinic",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "basically",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "bee",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "beginner",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "beginner in",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "beginners",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "beginning",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "beginning and end of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "beginning in/of/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "beginning to",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "beginning to end",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "beginning(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "beginnings",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "beginnings of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "behind",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "belly of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "bend",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "big end of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "bit of",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "blob",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "bonnet",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "borders",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "borders of",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "both sides of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "bottom",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "boundary for/from/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "bounds of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "bravo",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "butt of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "butts",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "by all conclusions",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "canine letter",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cap from/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "capital",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "capital of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "capital(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "capitals of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "case",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "case for/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "case of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "casing",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "casing of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "caved",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "central (characters) exposed",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "central ingredient of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "centre for/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "centre of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "centre(s) in the",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "centre(s)/center(s) in the",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "centrepiece of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "century",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "certificate",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "character facing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "charlie",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "chiefly",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "chump",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "circular letter",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cleared",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cleared out",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "close",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "close of/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "close to",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "closer to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "closing letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "closure of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "clothing for/from/on",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "co-ordinate",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "coat",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "coat of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "coating",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "conclude",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "conclusion of/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "conclusion to",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "confines of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "core",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "core of",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cored",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "cover from/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "covering from/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cross",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "crown",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "crowns (the)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "crust from/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "crux of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cue",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "curve",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "dash of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "debut",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "debuts of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "dee",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "delta",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "depleted",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "discharged",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "disheartened",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "drained",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "drop",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "drop of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "duck",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "earliest",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "early sign of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "early signs of",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "eastern border",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "echo",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "edges",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "edges of",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "edging on/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "egg",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ego",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "element of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "emma",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "emptied",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "empty",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "end",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "end for/in/of/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "end of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "end(s) of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "end(s) with",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ending",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "ending in/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ending with",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ending(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ends",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ends of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "entrance",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "environs of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "essential character of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "essential ingredient of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "essentially",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "evacuated",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "even",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "even(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "evenly",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "evens",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "eventually",
+      "sources": [
+        "cryptipedia",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every fourth letter",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every now and then",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every other",
+      "sources": [
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every other (part)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every second",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every second letter",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every so often",
+      "sources": [
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "every third letter",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ex",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "excavated",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "exhausted",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "exterior of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "extracting",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "extreme",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "extreme of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "extremely",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "extremes",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "extremes of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "extremities of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "face of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "factor",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "far side of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "fifth",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "fifty",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "filleted",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "final",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "final bit from/of/off",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "final letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "final signs",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "finale",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "finale of/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "finally",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "curated-extras",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "finish",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "finish of/off/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "finishing touch for",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "first and last letters",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "first apearing",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first bits of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first class",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first in/of/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first letter",
+      "sources": [
+        "clue-clinic",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "first letter (capital)",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "first letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first of all",
+      "sources": [
+        "cryptipedia",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first pair of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first person",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "first show of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first sign of",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first signs",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "first two letters",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "firstly",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "five",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "five hundred",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "flanks of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "focus of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for starters",
+      "sources": [
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "fore",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "foremost in/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "fourth letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "foxtrot",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "fringe",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "fringe of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "fringe(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "fringes of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from the outset",
+      "sources": [
+        "cryptipedia",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "from the start",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "front",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "front of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "fronting (those)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "fundamentally",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "gee",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "get even (with)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "glimpse of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "golf",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "gutless",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "gutted",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "half (of)",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "half concealed",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "half of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "half-cut",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "head",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "head for/from/of/off",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "head(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "head(s) for",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "head(s) of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heading",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "heading (up)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heading for/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heads",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heads of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heads to",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heart",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heart of",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heartless",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "hearts of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heel of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hem",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hint of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hollow",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "honour",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "horseshoe",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hotel",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hull from/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hundred",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ignore the odds",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in conclusion",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in entrances",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in front of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in the end",
+      "sources": [
+        "cryptipedia",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "inane",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "inaugural",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "incipient",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "indeed",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "india",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "initial",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "initial(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "initially",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "cryptipedia",
+        "curated-extras",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "initials",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "initials of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "initiate",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "initiated (by)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "initiation of/in/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "innards",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "inside",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "insiders",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "insides of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "intermittent",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "intermittently",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "introduction",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "introduction from/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "introduction(s) to",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "intros (in)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "irrational",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "jacket",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "jay",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "juliet",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "junction",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "kay",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "kilo",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "kiss",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "lacking",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "last",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "last bit of",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "last drop of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "last from/in/of/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "last letter",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "last shred of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "lastly",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "curated-extras",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "latest",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "latest in/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "lead",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "lead character in",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "lead from/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "lead(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "lead(s) to",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leader",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "leader in/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leader(s) in/of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leaders",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leaders of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leading",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leading characters",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leading letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leads",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leads (in)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "left",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "left extremity of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "letters",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "lima",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "limit of/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "limits of/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "lists of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "losses",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "loud",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "love",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "maiden",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mainly",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "marches from/off",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "middle (in)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "middle letter",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "middle letter(s)",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "middle of",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mike",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "minimum of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mostly",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "mouth",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "nether",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "nil",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "nip of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "no. 1 for/in",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "nose",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "not",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "not half",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "notch",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "nothing",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "november",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "now and again",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "now and then",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "nucleus",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "occasional",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "occasionally",
+      "sources": [
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd pieces",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odd positions",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly enough",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oddly ignored * (evens only)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odds",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "odds are non-existent",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "of",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "off",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "off and on",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on a regular basis",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on and off",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "on vacation",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "one",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "one half of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "onset",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "onset (of)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "onset of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "opener",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "opener for",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "opening",
+      "sources": [
+        "curated-extras",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "opening for/in/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "opening letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "opening(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "origin",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "origin in/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "origin(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "original",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "originally",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "origins of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "oscar",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "other",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "out",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "outer wear",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "outside",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "outside of",
+      "sources": [
+        "cryptipedia",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "outsiders",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "outsiders in",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "outskirts of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "overture from/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "overtures (to)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "papa",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "patterns",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "pee",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "peeled",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "pen",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "per",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "periodically",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "periodically (found)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "piece of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "pinch of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "point",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "pole",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "posh",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "preface to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "primarily",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "curated-extras",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "prime",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "prime elements",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "principal",
+      "sources": [
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "principal character in",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "principal characters",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "principally",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "curated-extras",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "principle of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "programming language",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "prow",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "quebec",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rear in/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regular",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly",
+      "sources": [
+        "crossword-unclued",
+        "cryptipedia",
+        "curated-extras",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "regularly ignored",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "right",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "right(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rind from/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "romeo",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "root(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "round",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "scrap of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "second",
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "second class",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "second half",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "second letter",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "second letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "second rate",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "seconds",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "see",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "selecting from",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "self",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "shape of console",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "shell from/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "shred of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sides",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "sides of",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sierra",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "skin of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "skinned",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "skirts of/on",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "slice of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "snap of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "soft",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "softly",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "some",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sometimes",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "source",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "source of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sources",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sources of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spot of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "spymaster",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "squares (numbers)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "start",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "start of/off/to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "start(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "start(s) to",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "starter",
+      "sources": [
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "starter of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "starter(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "starters",
+      "sources": [
+        "crossword-unclued",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "starting (to)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "starts of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "starts off",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "starts to",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "stern of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "stripped",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "stuffing",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "suggestion of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "suspicion of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tail",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "tail of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tails",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tails of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "take(s) leads",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taking drops",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taking faces",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taking final(s)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taking from",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taking leads",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tango",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taste of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tee",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ten",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tenth",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "term of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "terminal",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "terminal to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "terminus",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "terminus of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "third letters",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "thirds",
+      "sources": [
+        "crossword-unclued"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "thousand",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "time to time (from)",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "times",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "tip",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tip from/of/off",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tips",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tips from/of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "to begin with",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ton",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "top",
+      "sources": [
+        "cryptipedia",
+        "unscramblerer",
+        "wordsup"
+      ],
+      "categories": [
+        "list of 21 first letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "top grade",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "top of",
+      "sources": [
+        "clue-clinic",
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "top(s) of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "toppings of",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "topside of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "touch of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "trace of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "train of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tunnelled",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "turn",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "turned out",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ultimate in",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ultimately",
+      "sources": [
+        "clue-clinic",
+        "cryptipedia",
+        "curated-extras",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 52 last letter selection indicators",
+        "most common selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "uniform",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "unknown",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "unplaced",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "upper class",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "vacant",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vacated",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vacuous",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "variable",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "victor",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "void",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "voided",
+      "sources": [
+        "clue-clinic",
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vote",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "western border",
+      "sources": [
+        "wordsup"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "what gets … going",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "what gets … started",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "what winds up",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "what’s behind",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "whiskey",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "wings of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "without filling",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "without stopping",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "without stuffing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "wrapper",
+      "sources": [
+        "cryptipedia"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "wrapper for/from/of/on",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "wrappers",
+      "sources": [
+        "unscramblerer"
+      ],
+      "categories": [
+        "list of 24 first and last letter selection indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "wrapping for/from/of/on",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "wrong answer",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "yankee",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "yes",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "zero",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "zip",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "zulu",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [],
+      "notes": []
+    }
+  ]
+}
