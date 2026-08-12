@@ -155,6 +155,9 @@ function Exet() {
   this.throttledCharadeTimer = null;
   this.viabilityUpdateTimer = null;
   this.throttledLightRegexpTimer = null;
+  /** headword (lower) -> expansions[], from lists/abbreviations.json */
+  this.abbrevMap = null;
+  this.abbrevLoadPromise = null;
   this.inputLagMS = 400;
   this.longInputLagMS = 2000;
   this.sweepMS = 500;
@@ -200,7 +203,8 @@ function Exet() {
      using
      <i>Edit &gt; Add/Edit special sections: &gt; Preamble</i>.`,
     `Wordplay tabs such as "Charades" and "Anagrams" show candidate wordplays
-     for the currently selected entry. However, you can edit the fodder text
+     for the currently selected entry. In Charades, words with dotted underlines
+     show cryptic abbreviation expansions on hover. You can edit the fodder text
      directly in the tab to experiment with alternatives.`,
     `Saving the crossword as HTML (Exolve format) with solutions included
      can be done using the keyboard shortcut Ctrl-s (Cmd-s on Mac). Exet
@@ -2914,6 +2918,162 @@ Exet.prototype.getAllSplits = function(fodder, k) {
   return splits;
 }
 
+/**
+ * Load offline cryptic abbreviations for charade hover hints.
+ */
+Exet.prototype.buildAbbrevByLetter = function() {
+  this.abbrevByLetter = new Map();
+  if (!this.abbrevMap) {
+    return;
+  }
+  for (const [hwLower, exps] of this.abbrevMap) {
+    for (const exp of exps) {
+      if (exp.length == 1 && /[A-Za-z]/.test(exp)) {
+        const letter = exp.toLowerCase();
+        let headwords = this.abbrevByLetter.get(letter);
+        if (!headwords) {
+          headwords = [];
+          this.abbrevByLetter.set(letter, headwords);
+        }
+        headwords.push(hwLower);
+      }
+    }
+  }
+}
+
+Exet.prototype.initAbbrevMap = function() {
+  if (this.abbrevMap) {
+    return;
+  }
+  if (typeof exetAbbrevLookup !== 'object' || !exetAbbrevLookup) {
+    return;
+  }
+  this.abbrevMap = new Map();
+  for (const hw in exetAbbrevLookup) {
+    if (Object.prototype.hasOwnProperty.call(exetAbbrevLookup, hw)) {
+      this.abbrevMap.set(hw.toLowerCase(), exetAbbrevLookup[hw]);
+    }
+  }
+  this.buildAbbrevByLetter();
+}
+
+Exet.prototype.loadAbbreviations = function() {
+  this.initAbbrevMap();
+  if (this.abbrevMap) {
+    return Promise.resolve();
+  }
+  if (this.abbrevLoadPromise) {
+    return this.abbrevLoadPromise;
+  }
+  this.abbrevLoadPromise = fetch('lists/abbreviations.json')
+    .then(resp => {
+      if (!resp.ok) {
+        throw new Error('abbreviations.json HTTP ' + resp.status);
+      }
+      return resp.json();
+    })
+    .then(data => {
+      const map = new Map();
+      for (const entry of (data.entries || [])) {
+        map.set(entry.headword.toLowerCase(), entry.expansions);
+      }
+      this.abbrevMap = map;
+      this.buildAbbrevByLetter();
+      if (this.charadeFodder && this.charades && this.charades.innerHTML) {
+        const paramElt = document.getElementById('xet-charades-param');
+        if (paramElt) {
+          this.updateCharades(paramElt.value);
+        }
+      }
+    })
+    .catch(err => {
+      console.warn('Exet: could not load abbreviations list', err);
+      this.abbrevMap = new Map();
+    });
+  return this.abbrevLoadPromise;
+}
+
+Exet.prototype.getAbbrevTooltip = function(word) {
+  if (!this.abbrevMap || !word) {
+    return '';
+  }
+  const exps = this.abbrevMap.get(word.toLowerCase());
+  if (!exps || exps.length == 0) {
+    return '';
+  }
+  return exps.join(', ');
+}
+
+Exet.prototype.getAbbrevLetterTooltip = function(letter) {
+  if (!this.abbrevByLetter || !letter) {
+    return '';
+  }
+  const headwords = this.abbrevByLetter.get(letter.toLowerCase());
+  if (!headwords || headwords.length == 0) {
+    return '';
+  }
+  const max = 30;
+  let tip = headwords.slice(0, max).join(', ');
+  if (headwords.length > max) {
+    tip += ', …';
+  }
+  return tip;
+}
+
+Exet.prototype.escapeAttr = function(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+                  .replace(/</g, '&lt;');
+}
+
+Exet.prototype.wrapAbbrevDisplayHtml = function(html, rawWord) {
+  const tip = this.getAbbrevTooltip(rawWord);
+  if (!tip) {
+    return html;
+  }
+  return '<span class="xet-charade-word xet-abbrev-hint" title="' +
+         this.escapeAttr(tip) + '">' + html + '</span>';
+}
+
+Exet.prototype.annotateAbbrevInHtml = function(html) {
+  if (!this.abbrevMap) {
+    return html;
+  }
+  const exet = this;
+  return html.replace(
+      /<span class="(xet-green|xet-darkgreen)">([a-zA-Z]+)<\/span>/g,
+      function(match, cls, letters) {
+        let tip = '';
+        if (letters.length == 1) {
+          tip = exet.getAbbrevLetterTooltip(letters) ||
+                exet.getAbbrevTooltip(letters);
+        } else {
+          tip = exet.getAbbrevTooltip(letters);
+        }
+        if (!tip) {
+          return match;
+        }
+        return '<span class="xet-charade-word xet-abbrev-hint" title="' +
+               exet.escapeAttr(tip) + '"><span class="' + cls + '">' +
+               letters + '</span></span>';
+      });
+}
+
+Exet.prototype.formatCharadeChoices = function(part, anagramWords) {
+  const display = exetLexicon.displayAnagrams(part, anagramWords);
+  if (display.length == 0) {
+    return '';
+  }
+  const wrapped = display.map((disp) => {
+    return this.annotateAbbrevInHtml(disp);
+  });
+  let text = wrapped.join(', ');
+  if (display.length > 1) {
+    text = '<span class="xet-blue">[</span>' + text +
+           '<span class="xet-blue">]</span>';
+  }
+  return text;
+}
+
 Exet.prototype.pushCharadeCandidate = function(elements) {
   if (!elements || elements.length == 0) {
     return
@@ -2989,6 +3149,7 @@ Exet.prototype.maybeTrimLongFodder = function(fodderArr, name) {
 }
 
 Exet.prototype.updateCharades = function(fodder) {
+  this.loadAbbreviations();
   if (this.throttledCharadeTimer) {
     clearTimeout(this.throttledCharadeTimer);
   }
@@ -3019,7 +3180,7 @@ Exet.prototype.addDeletionCharades = function() {
       diffAnagsStr = '<span class="xet-blue">[</span>' + diffAnagsStr +
                      '<span class="xet-blue">]</span>';
     }
-    minuses.push(diffAnagsStr);
+    minuses.push(this.annotateAbbrevInHtml(diffAnagsStr));
     /**
      * High score to put all deletions on top of other charades, for
      * convenience. Shorter deletions are shown first.
@@ -3028,7 +3189,8 @@ Exet.prototype.addDeletionCharades = function() {
   }
   for (let i = 0; i < words.length; i++) {
     const charadeStruct = {
-      charade: '<span class="xet-blue">*</span>(' + words[i] +
+      charade: '<span class="xet-blue">*</span>(' +
+               this.wrapAbbrevDisplayHtml(this.escapeHtml(words[i]), words[i]) +
                ' <span class="xet-blue">minus</span> ' +
                minuses[i] + ')',
       score: scores[i],
@@ -3055,16 +3217,11 @@ Exet.prototype.updateCharadesPartial = function(work=100, sleep=50) {
       for (let part of split) {
         let possible = '';
         let score = 0;
-        const choices = exetLexicon.displayAnagrams(
-            part, exetLexicon.getAnagrams(part, 6, false));
-        if (choices.length > 0) {
-          possible = choices.join(', ');
+        const anagramIndices = exetLexicon.getAnagrams(part, 6, false);
+        if (anagramIndices.length > 0) {
+          possible = this.formatCharadeChoices(part, anagramIndices);
           const partLetters = exetLexicon.lettersOf(part);
           score = partLetters.length;
-          if (choices.length > 1) {
-            possible = '<span class="xet-blue">[</span>' + possible +
-                       '<span class="xet-blue">]</span>';
-          }
         }
         viable.push({possible: possible, score: score});
       }
@@ -3094,15 +3251,10 @@ Exet.prototype.updateCharadesPartial = function(work=100, sleep=50) {
             continue;
           }
           const container = split[c1] + (split[c2]);
-          const choices = exetLexicon.displayAnagrams(
-              container, exetLexicon.getAnagrams(container, 5, true));
-          if (choices.length > 0) {
-            let possible = choices.join(', ');
+          const containerIndices = exetLexicon.getAnagrams(container, 5, true);
+          if (containerIndices.length > 0) {
+            const possible = this.formatCharadeChoices(container, containerIndices);
             const containerParts = exetLexicon.lettersOf(container);
-            if (choices.length > 1) {
-              possible = '<span class="xet-blue">[</span>' + possible +
-                         '<span class="xet-blue">]</span>';
-            }
             let vcopy = viable.slice();
             vcopy[c1] = {};
             vcopy[c1].possible = possible;
@@ -3319,6 +3471,131 @@ Exet.prototype.updateSounds = function(fodder) {
   }
   html = html + '</table>'
   this.sounds.innerHTML = html;
+}
+
+/**
+ * Lazily load the client-side WordNet synonym data (exet-wordnet.js).
+ * No server is involved; the file is fetched as a static script.
+ */
+Exet.prototype.ensureWordNet = function(callback) {
+  if (typeof exetWordNet == 'object' && exetWordNet && exetWordNet.lookUp) {
+    callback();
+    return;
+  }
+  if (!this.wordNetCallbacks_) {
+    this.wordNetCallbacks_ = [];
+  }
+  this.wordNetCallbacks_.push(callback);
+  if (this.wordNetLoading_) {
+    return;
+  }
+  this.wordNetLoading_ = true;
+  const script = document.createElement('script');
+  script.src = 'exet-wordnet.js?v1.07';
+  script.onload = () => {
+    this.wordNetLoading_ = false;
+    const cbs = this.wordNetCallbacks_ || [];
+    this.wordNetCallbacks_ = [];
+    for (let i = 0; i < cbs.length; i++) {
+      cbs[i]();
+    }
+  };
+  script.onerror = () => {
+    this.wordNetLoading_ = false;
+    this.wordNetCallbacks_ = [];
+    // Allow a later tab click to retry loading.
+    if (this.tabs && this.tabs.synonyms && this.tabs.synonyms.sections) {
+      for (let i = 0; i < this.tabs.synonyms.sections.length; i++) {
+        this.tabs.synonyms.sections[i].param = null;
+      }
+    }
+    const box = document.getElementById('xet-synonyms-box');
+    if (box) {
+      box.innerHTML = '<div class="xet-red">Failed to load WordNet data ' +
+                      '(exet-wordnet.js).</div>';
+    }
+  };
+  document.head.appendChild(script);
+}
+
+Exet.prototype.escapeHtml = function(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                  .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+/**
+ * Render WordNet synonym sets for the current (or edited) answer.
+ */
+Exet.prototype.updateSynonyms = function(fodder) {
+  const box = document.getElementById('xet-synonyms-box');
+  if (!box) {
+    return;
+  }
+  const word = (fodder || '').trim();
+  if (!word) {
+    box.innerHTML = '<div class="xet-small">Fill or select a light to look ' +
+                    'up WordNet synonyms.</div>';
+    return;
+  }
+  if (/[?]/.test(word)) {
+    box.innerHTML = '<div class="xet-small">Complete the answer (no ? ' +
+                    'wildcards) to look up synonyms.</div>';
+    return;
+  }
+  const ready = (typeof exetWordNet == 'object' && exetWordNet &&
+                 exetWordNet.lookUp);
+  if (!ready) {
+    box.innerHTML = '<div class="xet-small">Loading WordNet…</div>';
+  }
+  const requested = word;
+  this.ensureWordNet(() => {
+    // Avoid clobbering a newer lookup if the user typed while loading.
+    const section = this.tabs.synonyms && this.tabs.synonyms.sections &&
+                    this.tabs.synonyms.sections[0];
+    if (section && section.paramInput &&
+        section.paramInput.value.trim() != requested) {
+      return;
+    }
+    this.renderWordNetSynonyms(box, requested);
+  });
+}
+
+Exet.prototype.renderWordNetSynonyms = function(box, word) {
+  if (typeof exetWordNet != 'object' || !exetWordNet || !exetWordNet.lookUp) {
+    box.innerHTML = '<div class="xet-red">WordNet data is unavailable.</div>';
+    return;
+  }
+  const results = exetWordNet.lookUp(word);
+  const matched = results.length ? results[0].lemma : exetWordNet.normalize(word);
+  let html = `<div class="xet-small" style="margin-bottom:8px">
+      WordNet ${this.escapeHtml(exetWordNet.version || '')} · matched
+      <span class="xet-blue">${this.escapeHtml(matched)}</span>
+    </div>`;
+  if (!results.length) {
+    html += '<div class="xet-small">No WordNet entry found.</div>';
+    box.innerHTML = html;
+    return;
+  }
+  html += '<table class="xet-wordnet-synonyms xet-gray-bordered-rows">';
+  for (let i = 0; i < results.length; i++) {
+    const r = results[i];
+    const syns = r.synonyms.length ?
+        r.synonyms.map(s => this.escapeHtml(s)).join(', ') :
+        '<i class="xet-small">(no other lemmas in this synset)</i>';
+    html += `
+      <tr>
+        <td class="xet-wordnet-pos">${this.escapeHtml(r.posLabel)}</td>
+        <td>
+          <div class="xet-bold">${syns}</div>
+          <div class="xet-small xet-wordnet-gloss">${this.escapeHtml(r.gloss)}</div>
+        </td>
+      </tr>`;
+  }
+  html += '</table>';
+  html += `<div class="xet-small" style="margin-top:10px">
+      Data: Princeton WordNet (see About for license).
+    </div>`;
+  box.innerHTML = html;
 }
 
 Exet.prototype.updateCA = function() {
@@ -3542,7 +3819,7 @@ Exet.prototype.populateFrame = function() {
   for (const id in this.tabs) {
     const tab = this.tabs[id];
     tab.button = document.getElementById(`xet-${id}`);
-    tab.button.title = tab.hover;
+    tab.button.title = tab.display + (tab.hover ? ': ' + tab.hover : '');
     const handler = this.handleTabClick.bind(this, id);
     tab.button.addEventListener('click', handler);
     tab.frame = document.getElementById(`xet-${id}-frame`);
@@ -3990,6 +4267,8 @@ Exet.prototype.handleTabClick = function(id) {
       this.updateSounds(wordParam);
     } else if (section.id == 'xet-containments') {
       this.updateContainments(wordParam);
+    } else if (section.id == 'xet-synonyms') {
+      this.updateSynonyms(wordParam);
     } else if (section.id == 'xet-companag') {
       if (newLight) {
         this.caAnagram.value = '';
@@ -4127,6 +4406,46 @@ Exet.prototype.moveRebusCellCaret = function(key) {
     return true;
   }
   return false;
+/**
+ * Home (36) / End (35): jump to the start/end of the current row (Across)
+ * or column (Down). The boundary is the grid edge or the first black cell
+ * that would be reached in that direction.
+ */
+Exet.prototype.homeEndNav = function(key) {
+  const puz = this.puz;
+  if (!puz.currCellIsValid()) {
+    return false;
+  }
+  puz.usingGnav = true;
+  let row = puz.currRow;
+  let col = puz.currCol;
+  const toStart = (key == 36);
+  let dr = 0;
+  let dc = 0;
+  if (puz.currDir == 'D') {
+    dr = toStart ? -1 : 1;
+  } else if (puz.currDir == 'Z' && puz.layers3d > 1) {
+    dr = (toStart ? -1 : 1) * puz.h3dLayer;
+  } else {
+    // Across and other directions: move within the row.
+    dc = toStart ? -1 : 1;
+  }
+  const canPass = (r, c) => {
+    const cell = puz.grid[r][c];
+    return cell.isLight || cell.isDgmless;
+  };
+  let nextRow = row + dr;
+  let nextCol = col + dc;
+  while (puz.rcValid(nextRow, nextCol) && canPass(nextRow, nextCol)) {
+    row = nextRow;
+    col = nextCol;
+    nextRow += dr;
+    nextCol += dc;
+  }
+  if (row != puz.currRow || col != puz.currCol) {
+    puz.activateCell(row, col);
+  }
+  return true;
 }
 
 Exet.prototype.scrollCluesIfNeeded = function() {
@@ -4244,6 +4563,9 @@ Exet.prototype.replaceHandlers = function() {
     return function(key, shift=false) {
       if (key >= 37 && key <= 40) {
         return exet.arrowNav(key);
+      }
+      if (key == 35 || key == 36) {
+        return exet.homeEndNav(key);
       }
       return exet.hkuiSaved.apply(exet.puz, arguments);
     };
@@ -4422,23 +4744,35 @@ Exet.prototype.resizeRHS = function() {
     .xet-frame {
       width: ${frameW}px;
     }
+    .xet-tab {
+      width: ${frameW}px;
+    }
     .xet-tab-content {
       height: ${500 + extraH}px;
       width: ${frameW}px;
+    }
+  `;
+  const tabCount = Math.max(1, Object.keys(this.tabs).length);
+  const tabSlotW = Math.floor((frameW - 8) / tabCount);
+  let maxLabelLen = 0;
+  for (const id in this.tabs) {
+    const len = (this.tabs[id].display || '').length;
+    if (len > maxLabelLen) {
+      maxLabelLen = len;
+    }
+  }
+  /** ~0.52em per character keeps longest label on one line. */
+  const tabFont = Math.min(14, Math.max(8,
+      Math.floor((tabSlotW - 6) / (maxLabelLen * 0.52))));
+  style += `
+    .xet-tab button {
+      font-size: ${tabFont}px;
     }
   `;
   if (frameW < 860) {
     style += `
       .xet-analysis {
         right: 0;
-      }
-      .xet-tab button {
-        font-size: 11px;
-        width: 70px;
-      }
-      .xet-tab button:hover {
-        font-size: 12px;
-        width: 80px;
       }
     `;
   }
@@ -5437,6 +5771,14 @@ Exet.prototype.handleRebusGridKeyDown = function(e) {
 
 Exet.prototype.handleKeyDown = function(e) {
   let key = e.key || e;
+  // Prevent the browser from scrolling on Home/End; navigation is handled
+  // on keyup via homeEndNav().
+  if (key == 'Home' || key == 'End') {
+    if (e && e.preventDefault) {
+      e.preventDefault();
+    }
+    return;
+  }
   if (key == '=') {
     this.acceptAll();
     return;
@@ -7782,6 +8124,7 @@ Exet.prototype.periodicChecks = function() {
 }
 
 Exet.prototype.finishSetup = function() {
+  this.loadAbbreviations();
   this.versionText = '';
   this.periodicChecks();
   /** Check every 10 minutes */

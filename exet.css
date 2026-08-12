@@ -62,33 +62,40 @@ body {
   font-weight: 500;
 }
 .xet-tab {
-  height: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  min-height: 50px;
   border: 4px solid #ddd;
   border-bottom: 0;
   background-color: #ddd;
   border-radius: 10px 10px 0 0;
-  overflow: auto;
+  overflow: hidden;
 }
 .xet-tab button {
   font-size: 14px;
-  width: 105px;
-  height: 100%;
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  min-height: 42px;
   background-color: inherit;
-  float: left;
+  float: none;
   outline: none;
   cursor: pointer;
   padding: 2px 4px;
-  transition: 0.3s;
+  transition: background-color 0.3s;
   font-weight: bold;
   border-radius: 10px 10px 0 0;
   border: 1px solid silver;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 .xet-tab button:hover {
   background-color: #f0f0f0;
-  font-size: 14px;
   border-bottom: 0;
   cursor: pointer;
-  width: 105px;
 }
 .xet-tab button.active {
   background-color: white;
@@ -362,6 +369,25 @@ body {
 }
 .xet-gray-bordered-rows td {  
   border-bottom: 1px solid gray;
+}
+.xet-wordnet-synonyms {
+  border-collapse: collapse;
+  width: 100%;
+}
+.xet-wordnet-synonyms td {
+  vertical-align: top;
+  padding: 6px 8px 6px 0;
+}
+.xet-wordnet-pos {
+  color: blue;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 12px !important;
+  width: 3.5em;
+}
+.xet-wordnet-gloss {
+  margin-top: 2px;
+  color: #444;
 }
 .xet-choices-box {  
   border: 1px solid gray;
@@ -673,6 +699,16 @@ body {
 .xet-wordplay-choices td {
   vertical-align: top;
   padding: 3px 0;
+}
+.xet-charade-word.xet-abbrev-hint {
+  border-bottom: 1px dotted #c60;
+  cursor: help;
+  background: #fff8e6;
+  border-radius: 2px;
+}
+.xet-charade-word.xet-abbrev-hint .xet-green,
+.xet-charade-word.xet-abbrev-hint .xet-darkgreen {
+  background: #fff8e6;
 }
 .xet-sweeping-box {
   display: inline-block;

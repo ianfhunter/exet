@@ -660,7 +660,9 @@ the box if the Escape key does not work).
 The clue for the entry in the current light is shown above the grid and can be
 edited in place right there. You can navigate through the clues using standard
 controls such as clicking on a cell or a clue, using the arrow keys, or
-using the tab and shift-tab keys.
+using the tab and shift-tab keys. Within the current light's row (Across) or
+column (Down), the Home and End keys jump to the start or end of that run of
+cells — bounded by the grid edge or the first black cell in that direction.
 
 When you create a new crossword, all clues are set to be in "draft" mode and
 are shown with a distinctive `[DRAFT]` marker. You should clear this marker
@@ -838,6 +840,10 @@ at [**Fodder** (fodder.ing)](https://fodder.ing).
 We also provide a link to **crosswordtracker.com** (a good database of mostly
 non-cryptic-crossword clues) for looking up published definitions. This too opens
 in a new tab.
+
+The **Synonyms** tab looks up Princeton WordNet synonym sets for the current
+answer. Incomplete lights that still contain `?` are skipped
+until filled.
 
 For cryptic crosswords, there are some additional tabs that setters may find
 useful. In all of these (other than "Lists"), the wordplay candidates are shown
