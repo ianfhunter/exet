@@ -108,6 +108,7 @@ function Exet() {
   this.region = '';
   this.asymOK = false;
   this.tryReversals = false;
+  this.rebusIntraCellNavDone = false;
   this.lightRegexps = {};
   this.lightRegexpsC = {};
   this.minpop = 0;
@@ -384,10 +385,6 @@ Exet.prototype.setPuzzle = function(puz) {
     alert('Nodir clues not yet supported');
     return;
   }
-  if (puz.hasRebusCells) {
-    alert('Rebus cells are not supported');
-    return;
-  }
   if (puz.offNumClueIndices.length > 0) {
     alert('Non-numeric clues not yet supported');
     return;
@@ -425,9 +422,9 @@ Exet.prototype.setPuzzle = function(puz) {
         gridFillChanges = true;
       }
       if (gridCell.solution != '?' &&
-          !exetLexicon.letterSet[gridCell.solution]) {
+          !this.isValidGridCellSolution(puz, gridCell.solution)) {
         alert('Entry ' + gridCell.solution + ' in grid[' + i + '][' + j +
-              '] is not present in the lexicon. Marking the cell as unfilled.');
+              '] is not valid. Marking the cell as unfilled.');
         gridCell.solution = '?';
         gridFillChanges = true;
       }
@@ -500,6 +497,10 @@ Exet.prototype.setPuzzle = function(puz) {
     this.exolveOtherSec = this.exolveOtherSec + puz.specLines[l] + '\n';
   }
   this.exolveOtherSec = this.exolveOtherSec.trim();
+  if (puz.hasRebusCells) {
+    this.syncRebusOptionInOtherSec(true);
+    this.ensureRebusAllowChars(puz);
+  }
 
   if (gridFillChanges) {
     this.updatePuzzle(exetRevManager.REV_GRIDFILL_CHANGE)
@@ -537,6 +538,8 @@ Exet.prototype.setPuzzle = function(puz) {
   // No more updatePuzzle() calls below inside this function: we're
   // satisfied with what we have and do not need to tweak it.
 
+  puz.gridInput.addEventListener(
+      'keydown', this.handleRebusGridKeyDown.bind(this), true);
   puz.gridInput.addEventListener('keydown', this.handleKeyDown.bind(this));
   puz.gridInput.addEventListener('input', this.throttledGridInput.bind(this));
 
@@ -766,6 +769,176 @@ Exet.prototype.setPuzzle = function(puz) {
 
   this.updateSweepInd();
   this.reposition();
+  this.syncRebusCheckbox();
+}
+
+Exet.prototype.isValidGridCellSolution = function(puz, solution) {
+  if (solution == '?' || solution == '0') {
+    return true;
+  }
+  if (puz.hasRebusCells) {
+    return puz.isValidStateChar(solution);
+  }
+  return exetLexicon.letterSet[solution];
+}
+
+/** True if any cell in this light contains a multi-letter rebus entry. */
+Exet.prototype.lightHasRebusContent = function(ci) {
+  if (!this.puz || !this.puz.hasRebusCells || !ci) {
+    return false;
+  }
+  const cells = this.puz.getAllCells(ci);
+  for (const cell of cells) {
+    const gridCell = this.puz.grid[cell[0]][cell[1]];
+    const letter = gridCell.currLetter;
+    if (letter != '?' && letter != '0' && letter.length > 1) {
+      return true;
+    }
+  }
+  return false;
+}
+
+Exet.prototype.syncRebusCheckbox = function() {
+  const cb = document.getElementById('xet-rebus-cells');
+  if (!cb) {
+    return;
+  }
+  cb.checked = this.puz && this.puz.hasRebusCells;
+  cb.disabled = this.puz && this.puz.langMaxCharCodes > 1;
+}
+
+/** Extra allow-chars merged into the spec when rebus cells are enabled. */
+Exet.prototype.REBUS_EXTRA_ALLOW_CHARS = '/';
+
+Exet.prototype.mergeAllowChars = function(existing, toAdd) {
+  const chars = new Set(existing.split(''));
+  for (const c of toAdd) {
+    if (c) {
+      chars.add(c);
+    }
+  }
+  return Array.from(chars).join('');
+}
+
+Exet.prototype.stripAllowChars = function(existing, toRemove) {
+  const remove = new Set(toRemove.split(''));
+  return existing.split('').filter(c => !remove.has(c)).join('');
+}
+
+Exet.prototype.ensureRebusAllowChars = function(puz) {
+  if (!puz || !puz.hasRebusCells) {
+    return;
+  }
+  if (!puz.allowChars) {
+    puz.allowChars = {};
+  }
+  for (const c of this.REBUS_EXTRA_ALLOW_CHARS) {
+    puz.allowChars[c] = true;
+  }
+}
+
+Exet.prototype.processRebusExolveOptions = function(opts, enabled, state) {
+  const out = [];
+  for (const opt of opts) {
+    if (opt == 'rebus-cells') {
+      continue;
+    }
+    if (opt.startsWith('allow-chars:')) {
+      state.allowCharsHandled = true;
+      let chars = opt.substring('allow-chars:'.length);
+      if (enabled) {
+        chars = this.mergeAllowChars(chars, this.REBUS_EXTRA_ALLOW_CHARS);
+      } else {
+        chars = this.stripAllowChars(chars, this.REBUS_EXTRA_ALLOW_CHARS);
+      }
+      if (chars.length > 0) {
+        out.push('allow-chars:' + chars);
+      }
+      continue;
+    }
+    out.push(opt);
+  }
+  if (enabled && !state.rebusHandled) {
+    out.unshift('rebus-cells');
+    state.rebusHandled = true;
+  }
+  if (enabled && !state.allowCharsHandled) {
+    out.push('allow-chars:' + this.REBUS_EXTRA_ALLOW_CHARS);
+    state.allowCharsHandled = true;
+  }
+  return out;
+}
+
+Exet.prototype.syncRebusOptionInOtherSec = function(enabled) {
+  const lines = [];
+  const state = {rebusHandled: false, allowCharsHandled: false};
+  for (const line of this.exolveOtherSec.split('\n')) {
+    const t = line.trim();
+    if (!t.startsWith('exolve-option:')) {
+      if (t) {
+        lines.push(line);
+      }
+      continue;
+    }
+    let opts = t.substring('exolve-option:'.length).trim().split(/\s+/);
+    opts = this.processRebusExolveOptions(opts, enabled, state);
+    if (opts.length > 0) {
+      lines.push('  exolve-option: ' + opts.join(' '));
+    }
+  }
+  if (enabled && !state.rebusHandled) {
+    const opts = this.processRebusExolveOptions([], enabled,
+        {rebusHandled: false, allowCharsHandled: false});
+    lines.unshift('  exolve-option: ' + opts.join(' '));
+  } else if (enabled && !state.allowCharsHandled) {
+    lines.push('  exolve-option: allow-chars:' + this.REBUS_EXTRA_ALLOW_CHARS);
+  }
+  this.exolveOtherSec = lines.join('\n').trim();
+}
+
+Exet.prototype.setRebusCells = function(enabled) {
+  if (!this.puz) {
+    return;
+  }
+  if (enabled) {
+    if (this.puz.langMaxCharCodes > 1) {
+      alert('Rebus cells cannot be used when the language has max-char-codes > 1.');
+      this.syncRebusCheckbox();
+      return;
+    }
+    if (this.puz.hasDgmlessCells) {
+      alert('Rebus cells cannot be used with diagramless cells.');
+      this.syncRebusCheckbox();
+      return;
+    }
+    this.puz.hasRebusCells = true;
+    this.puz.multiLetter = true;
+    this.ensureRebusAllowChars(this.puz);
+  } else {
+    for (let i = 0; i < this.puz.gridHeight; i++) {
+      for (let j = 0; j < this.puz.gridWidth; j++) {
+        const gridCell = this.puz.grid[i][j];
+        if (!gridCell.isLight) {
+          continue;
+        }
+        const letter = gridCell.currLetter;
+        if (letter != '?' && letter != '0' && letter.length > 1) {
+          alert('Cannot turn off rebus cells while some cells contain ' +
+                'multiple letters.');
+          this.syncRebusCheckbox();
+          return;
+        }
+      }
+    }
+    this.puz.hasRebusCells = false;
+    this.puz.multiLetter = (this.puz.langMaxCharCodes > 1);
+  }
+  if (this.puz.adjustRebusFonts) {
+    this.puz.adjustRebusFonts();
+  }
+  this.syncRebusOptionInOtherSec(enabled);
+  this.autofill.reset('Aborted');
+  this.updatePuzzle(exetRevManager.REV_OPTIONS_CHANGE);
 }
 
 Exet.prototype.populateSpellingsRegionMenu = function() {
@@ -1133,6 +1306,16 @@ Exet.prototype.makeExetTab = function() {
                   value="asymmetric" type="checkbox">
                 </input>
                 <i>Allow asymmetry</i>
+              </div>
+              <div style="padding:10px"
+                  title="Allow multiple letters in a cell (Shift or double-click ` +
+                  `to enter). Slash (/) is allowed in rebus cells; Shift+slash works. ` +
+                  `Autofill is disabled; grid-fill is disabled only for entries ` +
+                  `that contain a rebus cell.">
+                <input id="xet-rebus-cells" name="xet-rebus-cells"
+                  value="rebus-cells" type="checkbox">
+                </input>
+                <i>Use rebus cells</i>
               </div>
             </div>
           </div>
@@ -1656,6 +1839,11 @@ Exet.prototype.makeExetTab = function() {
   asymOKButton.addEventListener('change', e => {
     exet.asymOK = asymOKButton.checked ? true : false;
     exetRevManager.throttledSaveRev(exetRevManager.REV_OPTIONS_CHANGE);
+  });
+
+  const rebusCellsButton = document.getElementById("xet-rebus-cells")
+  rebusCellsButton.addEventListener('change', e => {
+    exet.setRebusCells(rebusCellsButton.checked);
   });
 
   const preamble = document.getElementById("xet-preamble")
@@ -2449,7 +2637,7 @@ Exet.prototype.loadIframe = function(iframe, url, urlElt) {
   urlElt.innerText = trimmedUrl;
   urlElt.insertAdjacentHTML(
       'beforeend',
-      ' <span class="xet-iframe-loading">Loading...</span>');
+      ' <span class="xet-iframe-loading">Loading</span>');
   urlElt.href = url;
   /* Nutrimatic uses huge score-based fonts; shrink those iframes via CSS.
    * Cross-origin pages can't be rewritten into a bullet list without a proxy. */
@@ -4131,6 +4319,14 @@ Exet.prototype.navDarkness = function(row, col, ev=null) {
 }
 
 Exet.prototype.arrowNav = function(key) {
+  if (this.rebusIntraCellNavDone) {
+    this.rebusIntraCellNavDone = false;
+    return true;
+  }
+  if (this.shouldStayInRebusCellForArrow(key)) {
+    this.puz.enableMultiLetterEntry();
+    return true;
+  }
   let row = this.puz.currRow
   let col = this.puz.currCol
   let useSaved = false
@@ -4166,6 +4362,50 @@ Exet.prototype.arrowNav = function(key) {
   return true
 }
 
+/** True if the caret can still move within the current rebus cell text. */
+Exet.prototype.shouldStayInRebusCellForArrow = function(key) {
+  if (!this.puz || !this.puz.hasRebusCells) {
+    return false;
+  }
+  if (key != 37 && key != 39) {
+    return false;
+  }
+  const gridCell = this.puz.currCell();
+  if (!gridCell || !gridCell.isLight || gridCell.noRebus || gridCell.prefill) {
+    return false;
+  }
+  const inp = this.puz.gridInput;
+  const text = inp.value;
+  if (text.length <= 1) {
+    return false;
+  }
+  const start = inp.selectionStart;
+  const end = inp.selectionEnd;
+  if (start == null || end == null) {
+    return false;
+  }
+  if (key == 37) {
+    return start > 0;
+  }
+  return end < text.length;
+}
+
+Exet.prototype.moveRebusCellCaret = function(key) {
+  const inp = this.puz.gridInput;
+  const start = inp.selectionStart;
+  const end = inp.selectionEnd;
+  if (start == null || end == null || start != end) {
+    return false;
+  }
+  if (key == 37 && start > 0) {
+    inp.setSelectionRange(start - 1, start - 1);
+    return true;
+  }
+  if (key == 39 && start < inp.value.length) {
+    inp.setSelectionRange(start + 1, start + 1);
+    return true;
+  }
+  return false;
 /**
  * Home (36) / End (35): jump to the start/end of the current row (Across)
  * or column (Down). The boundary is the grid edge or the first black cell
@@ -5490,6 +5730,45 @@ Exet.prototype.automagicBlocks = function(noTarget=true) {
 }
 
 // Can be called with e as an event or as a key directly
+Exet.prototype.handleRebusGridKeyDown = function(e) {
+  if (!this.puz || !this.puz.hasRebusCells) {
+    return;
+  }
+  const gridCell = this.puz.currCell();
+  if (!gridCell || !gridCell.isLight || gridCell.noRebus || gridCell.prefill) {
+    return;
+  }
+  const key = e.keyCode || e.which;
+  const inp = this.puz.gridInput;
+
+  if ((key == 37 || key == 39) && inp.value.length > 1 &&
+      this.moveRebusCellCaret(key)) {
+    e.preventDefault();
+    this.rebusIntraCellNavDone = true;
+    this.puz.enableMultiLetterEntry();
+    return;
+  }
+
+  if (e.code !== 'Slash' && e.key !== '/') {
+    return;
+  }
+  this.ensureRebusAllowChars(this.puz);
+  /**
+   * Shift+/ on US (and many UK) keyboards produces "?", which is not in
+   * allow-chars. Intercept the slash key so rebus entries like SWORD/MAGIC work
+   * even while Shift is held for multi-letter entry.
+   */
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  this.puz.lastKeyHadShift = true;
+  this.puz.enableMultiLetterEntry();
+  const curr = (gridCell.currLetter != '0' && gridCell.currLetter != '?') ?
+      this.puz.stateToDisplayChar(gridCell.currLetter) : '';
+  this.puz.gridInput.value = curr + '/';
+  this.puz.handleGridInput();
+  this.handleGridInput();
+}
+
 Exet.prototype.handleKeyDown = function(e) {
   let key = e.key || e;
   // Prevent the browser from scrolling on Home/End; navigation is handled
@@ -6505,6 +6784,7 @@ Exet.prototype.getGrid = function(solved=true) {
   if (!this.puz) {
     return '';
   }
+  const useRebus = this.puz.hasRebusCells;
   const ENTRY_WIDTH = 3 + this.puz.langMaxCharCodes;
   let grid = '';
   for (let i = 0; i < this.puz.gridHeight; i++) {
@@ -6513,17 +6793,29 @@ Exet.prototype.getGrid = function(solved=true) {
       let gridCell = this.puz.grid[i][j]
       let entry = '.';
       if (gridCell.isLight) {
-        entry = (gridCell.currLetter != '0' ?
+        let letter = (gridCell.currLetter != '0' ?
                ((solved || gridCell.prefill) ?
                      gridCell.currLetter : '0') : '?');
+        if (letter != '?' && letter != '0') {
+          entry = this.puz.stateToDisplayChar(letter);
+        } else {
+          entry = letter;
+        }
         if (gridCell.hasCircle) entry += '@';
         if (gridCell.prefill) entry += '!';
         entry += (gridCell.hasBarAfter && gridCell.hasBarUnder ?
                               '+' : (gridCell.hasBarAfter ?
                               '|' : (gridCell.hasBarUnder ? '_' : '')));
       }
-      while (entry.length < ENTRY_WIDTH) entry += ' ';
-      gridRow += entry;
+      if (useRebus) {
+        gridRow += entry;
+        if (j < this.puz.gridWidth - 1) {
+          gridRow += ' ';
+        }
+      } else {
+        while (entry.length < ENTRY_WIDTH) entry += ' ';
+        gridRow += entry;
+      }
     }
     grid = grid + '\n' + gridRow;
   }
@@ -6768,6 +7060,9 @@ Exet.prototype.refineLightChoices = function(fillState, limit=0) {
     const theClue = fillState.clues[ci];
     if (theClue.parentClueIndex ||
         !theClue.solution || theClue.solution.indexOf('?') < 0) {
+      continue;
+    }
+    if (this.lightHasRebusContent(ci)) {
       continue;
     }
     const cells = this.puz.getAllCells(ci);
@@ -7302,6 +7597,9 @@ Exet.prototype.fillLight = function(idx, ci='', revType=null) {
   if (!ci) {
     return;
   }
+  if (this.lightHasRebusContent(ci)) {
+    return;
+  }
   let solution = exetLexicon.getLex(idx);
   let theClue = this.puz.clues[ci];
   let cells = this.puz.getAllCells(ci);
@@ -7624,6 +7922,12 @@ Exet.prototype.choiceDisplayHTML = function(choice) {
 Exet.prototype.updateFillChoices = function() {
   let ci = this.currClueIndex();
   if (!ci) {
+    return;
+  }
+  if (this.lightHasRebusContent(ci)) {
+    this.lChoices.innerHTML =
+        '<tr><td><i>Grid-fill disabled for this entry (contains a rebus cell)</i></td></tr>';
+    this.lRejects.innerHTML = '';
     return;
   }
   const gridClue = this.puz.clues[ci];
