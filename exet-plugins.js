@@ -3,10 +3,8 @@
  *
  * Discovers plugins under plugins/<group>/<id>/ via directory listing when the
  * HTTP server provides it, or plugins/_registry.json as fallback (needed for
- * GitHub Pages and similar static hosts).
- *
- * Regenerate the registry after adding a group:
- *   node scripts/update-plugin-registry.mjs
+ * GitHub Pages and similar static hosts). Plugin authors update the registry
+ * manually when adding groups or plugins.
  *
  * Plugin ids are qualified as <group>/<id>. Enabled ids persist in
  * exetState.enabledPlugins.
@@ -40,7 +38,7 @@
 
 const EXET_PLUGINS_REGISTRY_URL = 'plugins/_registry.json';
 const EXET_REGISTRY_SKIP = new Set([
-  'README.md', 'manifest.json', '_registry.json', '.gitkeep',
+  'README.md', 'manifest.json', '_registry.json',
 ]);
 
 class ExetPlugins {
