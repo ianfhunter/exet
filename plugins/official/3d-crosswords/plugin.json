@@ -1,0 +1,9 @@
+{
+  "id": "3d-crosswords",
+  "name": "3-D crosswords",
+  "description": "Create and edit layered 3-D crosswords (across, away, down, up, back, towards).",
+  "requires": {
+    "puzzleProperty": "layers3d",
+    "minValue": 2
+  }
+}

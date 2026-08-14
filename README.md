@@ -282,9 +282,10 @@ The "New" menu allows you to start with several "new grid" options:
 After creating a grid, you can customize it by manually adding/removing
 blocks/bars, or by letting the software "automagically" add blocks.
 
-You can also create a 3-D grid from the "New" menu. In a 3-D grid, there are
-multiple "layers," with "down" clues running through the layers and "across"
-and "away" clues within the layers. See the
+You can also create a 3-D grid from the "Open" menu once the **3-D
+crosswords** plugin is enabled (see [Plugins](#plugins) below). In a 3-D grid,
+there are multiple "layers," with "down" clues running through the layers and
+"across" and "away" clues within the layers. See the
 [Exolve documentation](https://github.com/viresh-ratnakar/exolve/blob/master/README.md)
 for details on 3-D crosswords.
 
@@ -1378,6 +1379,89 @@ Clicking on the "Tips" button in the Exet tab shows you one useful tip at a
 time, and lets you cycle through the available tips or jump to a random one.
 Occasionally, a tip may get proactively surfaced, if the software deems it
 to be very relevant to some recent action that you took.
+
+### Plugins
+
+Exet allows users to extend the base software with 3rd party plugins. Support
+for these plugins must go to the plugin authors themselves — only issues and
+feature requests for the plugin *infrastructure* are handled by the core
+software. You can find plugins in external locations. In the future we might
+consider allowing plugin authors to register their plugins in a type of
+"store" dialogue.
+
+#### Plugin groups
+
+Plugin groups live under `exet/plugins/<group>/`. The group name is the
+directory name (typically the repository name).
+
+**official** — bundled with Exet (includes 3-D crosswords).
+
+**ians_exet_plugins** — included as a git submodule. After cloning Exet:
+
+```bash
+git submodule update --init plugins/ians_exet_plugins
+```
+
+To add another third-party group manually:
+
+```bash
+git clone git@github.com:someone/their_plugins.git plugins/their_plugins
+```
+
+Then regenerate `plugins/_registry.json` (see below).
+
+Open Exet, go to **Edit → Plugins**, enable the plugins you want, and reload.
+
+#### Layout
+
+```
+plugins/
+  _registry.json                # lists groups/plugins for static hosts
+  official/                     # bundled official plugins
+    3d-crosswords/
+      plugin.json
+      plugin.js
+  ians_exet_plugins/            # git submodule
+    rebus/
+      plugin.json
+      plugin.js
+```
+
+Each `plugin.json` may declare when a puzzle requires that plugin:
+
+```json
+"requires": { "puzzleProperty": "hasRebusCells" }
+```
+
+or, for numeric properties such as 3-D layer count:
+
+```json
+"requires": { "puzzleProperty": "layers3d", "minValue": 2 }
+```
+
+The **official** group's **3-D crosswords** plugin adds **Open → New 3-D
+grid**. The **ians_exet_plugins** submodule provides rebus cells and other
+third-party features.
+
+#### Plugin API
+
+Plugins register with `exetPlugins.register({ id, setup(api) { ... } })`.
+Inside `setup`, use:
+
+- **`api.on(event, handler)`** — lifecycle and navigation events (`exet:init`,
+  `puzzle:set`, `puzzle:set:done`, `arrowNav:before`, `grid:spec:before`)
+- **`api.addFilter(name, handler)`** — transform/validate pipelines
+  (`gridCell.solution.valid`, `gridCell.entry`, `gridFill.skipLight`,
+  `gridFill.disabledMessage`)
+- **`api.registerMenuItem(menuId, { order, html })`** — inject dropdown items
+  (e.g. `menuId: 'open'`)
+- **`api.onInput(target, event, handler, opts)`** — grid/clue input handlers
+
+Full API reference: `.notes/exet-plugins.md`. New extension points are added as
+new event or filter names on this bus — plugin authors should not need new
+one-off hook methods in core.
+
+Exet must be served over HTTP (not `file://`).
 
 ## Notes and acknowledgements
 

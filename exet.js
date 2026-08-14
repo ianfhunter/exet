@@ -211,11 +211,11 @@ function Exet() {
      shown for a light (for example, forcing a palindrome, or a specific
      substring) using the "Regexp constraint" option in the hamburger menu above
      the current clue.`,
-    `You can create a <i>3-D</i> crossword using
-     <i>Open &gt; New 3-D grid:</i>. You can also reverse some lights with
-     <i>Edit &gt; Reverse current light</i>. You can let autofill suggest
-     reversals using the "Try reversals: [ ]" option on the main Exet tab.
-     Reversed lights are often seen in 3-D crosswords.`,
+    `Enable the <i>3-D crosswords</i> plugin (<i>Edit &gt; Plugins</i>) to
+     create layered 3-D grids from <i>Open &gt; New 3-D grid</i>. You can also
+     reverse some lights with <i>Edit &gt; Reverse current light</i>. You can
+     let autofill suggest reversals using the "Try reversals: [ ]" option on
+     the main Exet tab. Reversed lights are often seen in 3-D crosswords.`,
     `For some wordplay suggestions (anagrams, charades, containments), if the
      fodder is too long (longer than ${this.MAX_FODDER_LENGTH}), then we trim
      it down and indicate this trimming by showing it in red and showing
@@ -380,8 +380,11 @@ Exet.prototype.setPuzzle = function(puz) {
     alert('Nodir clues not yet supported');
     return;
   }
-  if (puz.hasRebusCells) {
-    alert('Rebus cells are not supported');
+  const missingPlugins = exetPlugins.missingPluginsForPuzzle(puz);
+  if (missingPlugins.length > 0) {
+    alert('This puzzle requires plugin(s) that are not enabled:\n' +
+          missingPlugins.map(p => '• ' + p.name).join('\n') +
+          '\n\nEnable them in Edit → Plugins and reload.');
     return;
   }
   if (puz.offNumClueIndices.length > 0) {
@@ -421,9 +424,9 @@ Exet.prototype.setPuzzle = function(puz) {
         gridFillChanges = true;
       }
       if (gridCell.solution != '?' &&
-          !exetLexicon.letterSet[gridCell.solution]) {
+          !exetPlugins.isValidGridCellSolution(this, puz, gridCell.solution)) {
         alert('Entry ' + gridCell.solution + ' in grid[' + i + '][' + j +
-              '] is not present in the lexicon. Marking the cell as unfilled.');
+              '] is not valid. Marking the cell as unfilled.');
         gridCell.solution = '?';
         gridFillChanges = true;
       }
@@ -496,6 +499,7 @@ Exet.prototype.setPuzzle = function(puz) {
     this.exolveOtherSec = this.exolveOtherSec + puz.specLines[l] + '\n';
   }
   this.exolveOtherSec = this.exolveOtherSec.trim();
+  exetPlugins.emit('puzzle:set', {exet: this, puz});
 
   if (gridFillChanges) {
     this.updatePuzzle(exetRevManager.REV_GRIDFILL_CHANGE)
@@ -762,6 +766,8 @@ Exet.prototype.setPuzzle = function(puz) {
 
   this.updateSweepInd();
   this.reposition();
+  exetPlugins.emit('puzzle:set:done', {exet: this, puz});
+  exetPlugins.attachInputHandlers(this, puz);
 }
 
 Exet.prototype.populateSpellingsRegionMenu = function() {
@@ -942,49 +948,7 @@ Exet.prototype.makeExetTab = function() {
           </div>
           <hr>
           <hr>
-          <div class="xet-dropdown-item">
-            New 3-D grid:
-            <div class="xet-dropdown-submenu">
-              <div style="padding:4px;text-align:center">
-                <div>
-                  <label for="xet-3d-w">Width:</label>
-                  <input id="xet-3d-w" name="xet-3d-w" value="7"
-                    type="text" size="3" maxlength="3" placeholder="W">
-                  </input>
-                  &times;
-                  <label for="xet-3d-h">Height:</label>
-                  <input id="xet-3d-h" name="xet-3d-h" value="5"
-                    type="text" size="3" maxlength="3" placeholder="H">
-                  </input>
-                </div>
-                <br>
-                <div>
-                  &times;
-                  <label for="xet-3d-d">Depth:</label>
-                  <input id="xet-3d-d" name="xet-3d-d" value="5"
-                    type="text" size="3" maxlength="3" placeholder="D">
-                  </input>
-                </div>
-                <br>
-                <div>
-                  Unique ID:
-                  <input id="xet-3d-id" name="xet-3d-id"
-                    value="xet-${Math.random().toString(36).substring(2, 8)}"
-                    title="Please change to a meaningful alphanumeric id (beginning with a letter) to identify easily later"
-                    type="text" size="15" maxlength="30" placeholder="alphanumeric unique id">
-                  </input>
-                </div>
-              </div>
-              <hr/>
-              <div class="xet-dropdown-subitem"
-                  onclick="exetBlank3D(document.getElementById('xet-3d-w').value, ` +
-                    `document.getElementById('xet-3d-h').value, ` +
-                    `document.getElementById('xet-3d-d').value, ` +
-                    `document.getElementById('xet-3d-id').value);">
-                Create new 3-D grid!
-              </div>
-            </div>
-          </div>
+          ${exetPlugins.getMenuItemsHTML('open', this)}
         </div>
       </li>
       <li class="xet-dropdown">
@@ -1130,6 +1094,13 @@ Exet.prototype.makeExetTab = function() {
                 </input>
                 <i>Allow asymmetry</i>
               </div>
+            </div>
+          </div>
+
+          <div class="xet-dropdown-item">
+            Plugins:
+            <div class="xet-dropdown-submenu" id="xet-plugins">
+              ${exetPlugins.getMenuHTML()}
             </div>
           </div>
 
@@ -1742,6 +1713,7 @@ Exet.prototype.makeExetTab = function() {
     }
     exetRevManager.saveLocal(exetRevManager.SPECIAL_KEY, JSON.stringify(exetState));
   });
+  exetPlugins.bindMenu(this);
 
   // Pull in the clues.
   this.cluesPanel = document.getElementById("xet-clues");
@@ -3912,6 +3884,11 @@ Exet.prototype.navDarkness = function(row, col, ev=null) {
 }
 
 Exet.prototype.arrowNav = function(key) {
+  const navCtx = {exet: this, key, nav: 'continue'};
+  exetPlugins.emit('arrowNav:before', navCtx);
+  if (navCtx.nav === 'skip-default') {
+    return true;
+  }
   let row = this.puz.currRow
   let col = this.puz.currCol
   let useSaved = false
@@ -6238,25 +6215,26 @@ Exet.prototype.getGrid = function(solved=true) {
   if (!this.puz) {
     return '';
   }
+  const useVariableWidth = exetPlugins.useVariableWidthGrid(this, this.puz);
   const ENTRY_WIDTH = 3 + this.puz.langMaxCharCodes;
   let grid = '';
   for (let i = 0; i < this.puz.gridHeight; i++) {
     let gridRow = '    ';
     for (let j = 0; j < this.puz.gridWidth; j++) {
-      let gridCell = this.puz.grid[i][j]
-      let entry = '.';
-      if (gridCell.isLight) {
-        entry = (gridCell.currLetter != '0' ?
-               ((solved || gridCell.prefill) ?
-                     gridCell.currLetter : '0') : '?');
-        if (gridCell.hasCircle) entry += '@';
-        if (gridCell.prefill) entry += '!';
-        entry += (gridCell.hasBarAfter && gridCell.hasBarUnder ?
-                              '+' : (gridCell.hasBarAfter ?
-                              '|' : (gridCell.hasBarUnder ? '_' : '')));
+      let gridCell = this.puz.grid[i][j];
+      let entry = exetPlugins.formatGridCellEntry(
+          this, this.puz, gridCell, solved);
+      if (useVariableWidth) {
+        gridRow += entry;
+        if (j < this.puz.gridWidth - 1) {
+          gridRow += ' ';
+        }
+      } else {
+        while (entry.length < ENTRY_WIDTH) {
+          entry += ' ';
+        }
+        gridRow += entry;
       }
-      while (entry.length < ENTRY_WIDTH) entry += ' ';
-      gridRow += entry;
     }
     grid = grid + '\n' + gridRow;
   }
@@ -6501,6 +6479,9 @@ Exet.prototype.refineLightChoices = function(fillState, limit=0) {
     const theClue = fillState.clues[ci];
     if (theClue.parentClueIndex ||
         !theClue.solution || theClue.solution.indexOf('?') < 0) {
+      continue;
+    }
+    if (exetPlugins.shouldSkipFillForLight(this, ci)) {
       continue;
     }
     const cells = this.puz.getAllCells(ci);
@@ -7035,6 +7016,9 @@ Exet.prototype.fillLight = function(idx, ci='', revType=null) {
   if (!ci) {
     return;
   }
+  if (exetPlugins.shouldSkipFillForLight(this, ci)) {
+    return;
+  }
   let solution = exetLexicon.getLex(idx);
   let theClue = this.puz.clues[ci];
   let cells = this.puz.getAllCells(ci);
@@ -7357,6 +7341,12 @@ Exet.prototype.choiceDisplayHTML = function(choice) {
 Exet.prototype.updateFillChoices = function() {
   let ci = this.currClueIndex();
   if (!ci) {
+    return;
+  }
+  const fillMsg = exetPlugins.fillLightDisabledMessage(this, ci);
+  if (fillMsg) {
+    this.lChoices.innerHTML = '<tr><td><i>' + fillMsg + '</i></td></tr>';
+    this.lRejects.innerHTML = '';
     return;
   }
   const gridClue = this.puz.clues[ci];
@@ -7754,15 +7744,6 @@ function exetBlank(w, h, layers3d=1, id='', automagic=false,
   exetRevManager.throttledSaveRev(exetRevManager.REV_CREATED_BLANK);
 }
 
-function exetBlank3D(w3d, h3d, d3d, id='') {
-  if (w3d <= 0 || h3d <= 0 || d3d <= 0 ||
-      w3d % 2 != 1 || h3d % 2 != 1 || d3d % 2 != 1) {
-    alert("All dimensions in 3-D crosswords should be positive odd numbers");
-    return
-  }
-  return exetBlank(w3d, h3d * d3d, h3d, id);
-}
-
 function exetLoadFile() {
   let fr = new FileReader(); 
   fr.onload = function(){ 
@@ -7871,6 +7852,10 @@ function exetLoadState() {
   if (!exetState.hasOwnProperty('lastBackup')) {
     exetState.lastBackup = Date.now();
   }
+  if (!exetState.hasOwnProperty('enabledPlugins')) {
+    exetState.enabledPlugins = [];
+  }
+  exetMigratePluginIds();
 }
 
 function exetLoadLexicon(lexiconName=null) {
@@ -7982,6 +7967,7 @@ function exetFailedToLoadLexicon() {
  */
 function exetInit() {
   exet = new Exet();
+  exetPlugins.emit('exet:init', {exet});
 
   if (exetState.lastId) {
     let saved = window.localStorage.getItem(exetState.lastId);
@@ -8004,13 +7990,18 @@ function exetInit() {
   exet.finishSetup()
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   exetRevManager = new ExetRevManager();
   exetModals = new ExetModals();
   if (!window.localStorage) {
     throw "localStorage is not available!"
   }
   exetLoadState();
+  try {
+    await exetPluginsBootstrap();
+  } catch (err) {
+    console.warn('Exet plugin load error:', err);
+  }
 
   if (exetConfig.lexicons) {
     /** Config-specified-files way of loading exetLexicon */

@@ -1,0 +1,3 @@
+[submodule "plugins/ians_exet_plugins"]
+	path = plugins/ians_exet_plugins
+	url = git@github.com:ianfhunter/ians_exet_plugins.git
