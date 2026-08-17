@@ -27,6 +27,27 @@ https://github.com/viresh-ratnakar/exet
 Current version: v1.05.1, May 22, 2026
 */
 
+function xetSpinnerHtml(msg) {
+  return '<div class="xet-loading-block"><div class="loader"></div>' +
+         (msg ? `<div class="xet-loading-msg">${msg}</div>` : '') +
+         '</div>';
+}
+
+function xetSpinnerInlineHtml(msg) {
+  return '<span class="xet-loading-inline"><span class="loader loader-inline"></span>' +
+         (msg ? `<span class="xet-loading-msg">${msg}</span>` : '') +
+         '</span>';
+}
+
+/** Run fn after the next paint so spinners can start animating first. */
+function xetAfterPaint(fn) {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      setTimeout(fn, 0);
+    });
+  });
+}
+
 function ExetModals() {
   this.modal = null;
   document.addEventListener('click', this.handleClick.bind(this));
@@ -49,7 +70,7 @@ function ExetModals() {
 };
 
 ExetModals.prototype.freezeUI = function(msg) {
-  this.uiFreezerMsg.innerHTML = msg;
+  this.uiFreezerMsg.innerHTML = xetSpinnerHtml(msg);
   this.uiFreezer.style.display = '';
 }
 
@@ -99,6 +120,8 @@ function Exet() {
   this.preflexSet = {};
   this.preflexHash = null;
   this.preflexUsed = new Set;
+  this.themeWords = [];
+  this.themeGenerateAbort = false;
   this.unpreflex = [];
   this.unpreflexSet = {};
   this.unpreflexHash = null;
@@ -191,7 +214,7 @@ function Exet() {
      can type a topic word that describes the clue surface that you're
      trying to craft (in the blank provided near the top-right corner), and
      hit Enter, to highlight all words that might be related to that topic.`,
-    `The "Analysis" button shows useful information about the grid, the
+    `The "Analysis" tab shows useful information about the grid, the
      grid-fill, and the clues. You can use it to check for issues such
      as: grids that are not fully connected, consecutive unchecked cells,
      too many long clues, too many uncommon entries, etc.`,
@@ -552,6 +575,12 @@ Exet.prototype.setPuzzle = function(puz) {
       url: "",
     },
     {
+      id: "theme",
+      display: "Theme",
+      hover: "Generate themed word lists for preferred fills (WebLLM)",
+      sections: [],
+    },
+    {
       id: "research",
       display: "Research",
       hover: "Research tools for the current word and clue",
@@ -593,6 +622,12 @@ Exet.prototype.setPuzzle = function(puz) {
       id: "magpie",
       display: "Magpie",
       hover: "Build a Magpie annotation interactively",
+      sections: [],
+    },
+    {
+      id: "analysis",
+      display: "Analysis",
+      hover: "Analyses of the crossword (grid, grid-fill, clues)",
       sections: [],
     },
   ];
@@ -1330,12 +1365,6 @@ Exet.prototype.makeExetTab = function() {
         </div>
       </li>
       <li class="xet-dropdown">
-        <div class="xet-dropbtn" title="Click to see analyses of the ` +
-            `crossword (grid, grid-fill, clues)">Analysis</div>
-        <div class="xet-dropdown-content xet-analysis" id="xet-analysis">
-        </div>
-      </li>
-      <li class="xet-dropdown">
         <div class="xet-dropbtn" title="Click to save, with some formatting options">Save</div>
         <div class="xet-dropdown-content" id="xet-save">
           <div class="xet-dropdown-div">
@@ -1548,9 +1577,7 @@ Exet.prototype.makeExetTab = function() {
         <div>
           List of preferred words/phrases (up to ${this.MAX_PREFLEX}):
           <span class="xet-processing" style="display:none"
-              id="xet-preflex-processing">
-            (processing...)
-          </span>
+              id="xet-preflex-processing">${xetSpinnerInlineHtml('Processing…')}</span>
         </div>
         <div class="xet-choices-box xet-mid-tall-box">
           <div style="height:100ch;width:30ch" id="xet-preflex-input"
@@ -1676,9 +1703,7 @@ Exet.prototype.makeExetTab = function() {
   for (let i = 0; i < menuButtons.length; i++) {
     let menuPanel = menuButtons[i].nextElementSibling;
     menuButtons[i].addEventListener('click', e => {
-      if (menuPanel.id && menuPanel.id == "xet-analysis") {
-        exet.updateAnalysis(menuPanel);
-      } else if (menuPanel.id && menuPanel.id == "xet-save") {
+      if (menuPanel.id && menuPanel.id == "xet-save") {
         exet.updateSavePanel(menuPanel);
       }
       exetModals.showModal(menuPanel);
@@ -2681,6 +2706,387 @@ Exet.prototype.indsTabNav = function() {
     return;
   }
   this.loadIframe(this.indsIframe, url, this.indsUrl);
+}
+
+Exet.prototype.makeThemeTab = function() {
+  const themeTab = this.tabs['theme'];
+  if (!themeTab || !themeTab.content) {
+    return;
+  }
+
+  let categoryHtml = '';
+  for (const id in exetThemeLlm.CATEGORIES) {
+    const label = id.charAt(0).toUpperCase() + id.slice(1);
+    const checked = exetThemeLlm.DEFAULT_CATEGORIES.includes(id) ?
+        ' checked' : '';
+    categoryHtml += `
+      <label class="xet-theme-category">
+        <input type="checkbox" class="xet-theme-category-cb"
+            value="${id}"${checked}> ${label}
+      </label>`;
+  }
+
+  themeTab.content.innerHTML = `
+    <div class="xet-theme-tab">
+      <div class="xet-theme-controls">
+        <div class="xet-theme-row">
+          <label for="xet-theme-input"><b>Theme</b> (up to 100 chars):</label><br>
+          <input id="xet-theme-input" class="xlv-answer" type="text"
+              maxlength="100" size="50"
+              placeholder="e.g. Olympic sports, 1980s pop music">
+        </div>
+        <div class="xet-theme-row">
+          <label for="xet-theme-length"><b>Length</b> (letters):</label>
+          <input id="xet-theme-length" class="xlv-answer" type="number"
+              min="2" max="21" value="5" size="3">
+          <label class="xet-theme-any-label">
+            <input id="xet-theme-any-length" type="checkbox"> Any
+          </label>
+        </div>
+        <div class="xet-theme-row">
+          <b>Include:</b>
+          <div id="xet-theme-categories" class="xet-theme-categories">
+            ${categoryHtml}
+          </div>
+        </div>
+        <div class="xet-theme-row">
+          <button id="xet-theme-generate" class="xlv-small-button">Generate</button>
+          <button id="xet-theme-stop" class="xlv-small-button xet-theme-stop"
+              style="display:none">STOP</button>
+          <label class="xet-theme-infinite-label">
+            <input id="xet-theme-infinite" type="checkbox"> Infinite mode
+          </label>
+          <span id="xet-theme-status" class="xet-theme-status"></span>
+        </div>
+        <div class="xet-theme-caveat xet-smaller-text">
+          Uses WebLLM in your browser (WebGPU required). First run downloads
+          a ~700&nbsp;MB model. Generated words can be transferred to
+          preferred fills on the Exet tab.
+        </div>
+      </div>
+      <div id="xet-theme-results" class="xet-theme-results" style="display:none">
+        <div class="xet-theme-results-header">
+          <span id="xet-theme-count">0 words</span>
+          <button id="xet-theme-transfer" class="xlv-small-button"
+              title="Append this list to preferred fills">TRANSFER</button>
+        </div>
+        <div id="xet-theme-word-list"
+            class="xet-theme-word-list xet-in-tab-scrollable"></div>
+      </div>
+    </div>
+  `;
+
+  this.themeInput = document.getElementById('xet-theme-input');
+  this.themeLengthInput = document.getElementById('xet-theme-length');
+  this.themeAnyLengthInput = document.getElementById('xet-theme-any-length');
+  this.themeCategoriesPanel = document.getElementById('xet-theme-categories');
+  this.themeCategoryInputs = this.themeCategoriesPanel.querySelectorAll(
+      '.xet-theme-category-cb');
+  this.themeGenerateBtn = document.getElementById('xet-theme-generate');
+  this.themeStopBtn = document.getElementById('xet-theme-stop');
+  this.themeInfiniteInput = document.getElementById('xet-theme-infinite');
+  this.themeStatus = document.getElementById('xet-theme-status');
+  this.themeResults = document.getElementById('xet-theme-results');
+  this.themeCount = document.getElementById('xet-theme-count');
+  this.themeTransferBtn = document.getElementById('xet-theme-transfer');
+  this.themeWordList = document.getElementById('xet-theme-word-list');
+
+  this.themeAnyLengthInput.addEventListener('change', () => {
+    this.themeLengthInput.disabled = this.themeAnyLengthInput.checked;
+  });
+  this.themeGenerateBtn.addEventListener('click', () => {
+    this.generateThemeWords();
+  });
+  this.themeStopBtn.addEventListener('click', () => {
+    this.stopThemeGeneration();
+  });
+  this.themeTransferBtn.addEventListener('click', () => {
+    this.transferThemeWords();
+  });
+  this.themeWordList.addEventListener('click', (e) => {
+    const btn = e.target.closest('.xet-theme-delete');
+    if (!btn) {
+      return;
+    }
+    const idx = parseInt(btn.dataset.index, 10);
+    if (!isNaN(idx)) {
+      this.deleteThemeWord(idx);
+    }
+  });
+}
+
+Exet.prototype.getThemeCategories = function() {
+  const selected = [];
+  if (!this.themeCategoryInputs) {
+    return selected;
+  }
+  for (const cb of this.themeCategoryInputs) {
+    if (cb.checked) {
+      selected.push(cb.value);
+    }
+  }
+  return selected;
+}
+
+Exet.prototype.setThemeStatus = function(msg, isError) {
+  if (!this.themeStatus) {
+    return;
+  }
+  this.themeStatus.innerHTML = msg || '';
+  this.themeStatus.className = isError ? 'xet-theme-status xet-red' :
+      'xet-theme-status';
+}
+
+Exet.prototype.stopThemeGeneration = function() {
+  this.themeGenerateAbort = true;
+  if (this.themeStopBtn) {
+    this.themeStopBtn.disabled = true;
+  }
+}
+
+Exet.prototype.themeProgressHandler = function(report) {
+  if (typeof report === 'string') {
+    this.setThemeStatus(xetSpinnerInlineHtml(report), false);
+    return;
+  }
+  if (report && report.text) {
+    this.setThemeStatus(xetSpinnerInlineHtml(report.text), false);
+    return;
+  }
+  if (report && report.progress !== undefined) {
+    const pct = Math.round(report.progress * 100);
+    const label = report.text || 'Loading model…';
+    this.setThemeStatus(
+        xetSpinnerInlineHtml(`${label} (${pct}%)`), false);
+  }
+}
+
+Exet.prototype.appendThemeWords = function(words, seen) {
+  for (const w of words) {
+    const key = w.toLowerCase();
+    if (seen[key]) {
+      continue;
+    }
+    seen[key] = true;
+    this.themeWords.push(w);
+  }
+  this.renderThemeWordList();
+  if (this.themeWordList && words.length > 0) {
+    this.themeWordList.scrollTop = this.themeWordList.scrollHeight;
+  }
+}
+
+Exet.prototype.setThemeGenerating = function(active, infinite) {
+  if (!this.themeGenerateBtn) {
+    return;
+  }
+  this.themeGenerateBtn.disabled = active;
+  this.themeInput.disabled = active;
+  this.themeLengthInput.disabled = active || this.themeAnyLengthInput.checked;
+  this.themeAnyLengthInput.disabled = active;
+  if (this.themeInfiniteInput) {
+    this.themeInfiniteInput.disabled = active;
+  }
+  if (this.themeCategoryInputs) {
+    for (const cb of this.themeCategoryInputs) {
+      cb.disabled = active;
+    }
+  }
+  if (this.themeStopBtn) {
+    this.themeStopBtn.style.display = (active && infinite) ? '' : 'none';
+    this.themeStopBtn.disabled = false;
+  }
+  if (this.themeTransferBtn) {
+    this.themeTransferBtn.disabled = active;
+  }
+}
+
+Exet.prototype.renderThemeWordList = function() {
+  if (!this.themeWordList) {
+    return;
+  }
+  const n = this.themeWords.length;
+  if (this.themeCount) {
+    this.themeCount.textContent = n + (n === 1 ? ' word' : ' words');
+  }
+  if (this.themeResults) {
+    this.themeResults.style.display = n > 0 ? '' : 'none';
+  }
+  if (n === 0) {
+    this.themeWordList.innerHTML = '';
+    return;
+  }
+  let html = '';
+  for (let i = 0; i < n; i++) {
+    const w = this.themeWords[i];
+    html += `
+      <div class="xet-theme-word-row">
+        <span class="xet-theme-word">${this.escapeHtml(w)}</span>
+        <button class="xlv-small-button xet-theme-delete" data-index="${i}"
+            title="Remove from list">&times;</button>
+      </div>`;
+  }
+  this.themeWordList.innerHTML = html;
+}
+
+Exet.prototype.deleteThemeWord = function(index) {
+  if (index < 0 || index >= this.themeWords.length) {
+    return;
+  }
+  this.themeWords.splice(index, 1);
+  this.renderThemeWordList();
+}
+
+Exet.prototype.transferThemeWords = function() {
+  if (!this.themeWords.length || !this.preflexInput) {
+    return;
+  }
+  const existing = this.preflexInput.innerText.trim();
+  const newLines = this.themeWords.join('\n');
+  const combined = existing ? existing + '\n' + newLines : newLines;
+  this.preflexInput.innerText = combined;
+  this.startUpdatePreflex();
+  const n = this.themeWords.length;
+  this.setThemeStatus(
+      `Transferred ${n} word${n === 1 ? '' : 's'} to preferred fills.`, false);
+}
+
+Exet.prototype.generateThemeWords = async function() {
+  if (typeof exetThemeLlm === 'undefined') {
+    this.setThemeStatus('Theme generator not loaded.', true);
+    return;
+  }
+  if (exetLexicon.language !== 'en' || exetLexicon.script !== 'Latin') {
+    this.setThemeStatus(
+        'Theme generation is only supported for English/Latin lexicons.', true);
+    return;
+  }
+
+  const theme = this.themeInput.value.trim();
+  if (!theme) {
+    this.setThemeStatus('Please enter a theme.', true);
+    return;
+  }
+
+  const anyLength = this.themeAnyLengthInput.checked;
+  const length = parseInt(this.themeLengthInput.value, 10);
+  if (!anyLength && (isNaN(length) || length < 2 || length > 21)) {
+    this.setThemeStatus('Length must be between 2 and 21, or choose Any.', true);
+    return;
+  }
+
+  const categories = this.getThemeCategories();
+  if (!categories.length) {
+    this.setThemeStatus('Select at least one category to include.', true);
+    return;
+  }
+
+  if (!(await exetThemeLlm.hasWebGPU())) {
+    this.setThemeStatus(
+        'WebGPU is not available in this browser. Try Chrome or Edge.', true);
+    return;
+  }
+
+  const infinite = this.themeInfiniteInput && this.themeInfiniteInput.checked;
+  this.themeGenerateAbort = false;
+  this.themeWords = [];
+  this.renderThemeWordList();
+
+  this.setThemeGenerating(true, infinite);
+  this.setThemeStatus(xetSpinnerInlineHtml('Checking model…'), false);
+
+  const seen = {};
+  let messages = [{
+    role: 'user',
+    content: exetThemeLlm.buildPrompt(theme, length, anyLength, categories),
+  }];
+  let round = 0;
+  let totalRaw = 0;
+  let totalSkipped = 0;
+
+  try {
+    while (!this.themeGenerateAbort) {
+      round++;
+      const statusLabel = infinite ?
+          `Round ${round}: generating…` : 'Generating word list…';
+      if (round > 1) {
+        this.setThemeStatus(xetSpinnerInlineHtml(statusLabel), false);
+      }
+
+      const result = await exetThemeLlm.chatRound(
+          messages,
+          length,
+          anyLength,
+          seen,
+          (report) => this.themeProgressHandler(report));
+
+      if (result.empty && !result.content.trim()) {
+        if (round === 1) {
+          throw new Error('The model returned no text.');
+        }
+        break;
+      }
+
+      totalRaw += result.rawCount;
+      totalSkipped += result.skipped;
+      this.appendThemeWords(result.kept, seen);
+
+      if (infinite) {
+        this.setThemeStatus(
+            xetSpinnerInlineHtml(
+                `Round ${round}: +${result.kept.length} new` +
+                ` (${this.themeWords.length} total)…`),
+            false);
+      }
+
+      if (result.kept.length === 0) {
+        break;
+      }
+
+      if (!infinite) {
+        break;
+      }
+
+      messages = result.messages;
+    }
+
+    const n = this.themeWords.length;
+    if (this.themeGenerateAbort) {
+      this.setThemeStatus(
+          `Stopped. ${n} word${n === 1 ? '' : 's'} collected.`, false);
+    } else if (infinite) {
+      this.setThemeStatus(
+          round > 1 && n > 0 ?
+              `Finished after ${round} rounds: ${n} unique word` +
+              `${n === 1 ? '' : 's'} (no new entries).` :
+              `Collected ${n} word${n === 1 ? '' : 's'} in ${round} round` +
+              `${round === 1 ? '' : 's'}.`,
+          n === 0);
+    } else {
+      this.setThemeStatus(
+          `Kept ${n} of ${totalRaw} lines` +
+          (totalSkipped ? ` (${totalSkipped} filtered out)` : '') + '.',
+          n === 0);
+    }
+  } catch (err) {
+    console.error('Theme generation failed:', err);
+    this.setThemeStatus(
+        'Generation failed: ' + (err.message || String(err)), true);
+  } finally {
+    this.setThemeGenerating(false, false);
+    this.themeLengthInput.disabled = this.themeAnyLengthInput.checked;
+  }
+}
+
+Exet.prototype.makeAnalysisTab = function() {
+  const analysisTab = this.tabs['analysis'];
+  if (!analysisTab || !analysisTab.content) {
+    return;
+  }
+  analysisTab.content.innerHTML = `
+    <div id="xet-analysis-panel" class="xet-analysis xet-in-tab-scrollable"></div>
+  `;
+  this.analysisPanel = document.getElementById('xet-analysis-panel');
 }
 
 Exet.prototype.makeIndsTab = function() {
@@ -3755,12 +4161,19 @@ Exet.prototype.populateCompanag = function() {
 }
 
 Exet.prototype.populateFrame = function() {
-  let frameHTML = '';
-  frameHTML = frameHTML + '<div class="xet-tab">';
-  for (const id in this.tabs) {
-    const tab = this.tabs[id];
-    frameHTML = frameHTML +
-        `<button id="xet-${id}">${tab.display}</button>`;
+  const tabIds = Object.keys(this.tabs);
+  const row1Count = Math.ceil(tabIds.length / 2);
+  let frameHTML = '<div class="xet-tab-bar">';
+  for (let row = 0; row < 2; row++) {
+    frameHTML += `<div class="xet-tab xet-tab-row-${row + 1}">`;
+    const start = row === 0 ? 0 : row1Count;
+    const end = row === 0 ? row1Count : tabIds.length;
+    for (let i = start; i < end; i++) {
+      const id = tabIds[i];
+      const tab = this.tabs[id];
+      frameHTML += `<button id="xet-${id}">${tab.display}</button>`;
+    }
+    frameHTML += '</div>';
   }
   frameHTML += '</div>';
 
@@ -3861,6 +4274,8 @@ Exet.prototype.populateFrame = function() {
   }
 
   this.makeExetTab();
+  this.makeThemeTab();
+  this.makeAnalysisTab();
   this.makeIndsTab();
   this.makeResearchTab();
   this.makeMagpieTab();
@@ -4242,6 +4657,10 @@ Exet.prototype.handleTabClick = function(id) {
   }
   if (id == "magpie") {
     this.updateMagpieTab();
+    return;
+  }
+  if (id == "analysis") {
+    this.updateAnalysis(this.analysisPanel);
     return;
   }
   for (let i = 0; i < tab.sections.length; i++) {
@@ -4776,34 +5195,18 @@ Exet.prototype.resizeRHS = function() {
     .xet-frame {
       width: ${frameW}px;
     }
-    .xet-tab {
+    .xet-tab-bar {
       width: ${frameW}px;
     }
     .xet-tab-content {
       height: ${500 + extraH}px;
       width: ${frameW}px;
-    }
-  `;
-  const tabCount = Math.max(1, Object.keys(this.tabs).length);
-  const tabSlotW = Math.floor((frameW - 8) / tabCount);
-  let maxLabelLen = 0;
-  for (const id in this.tabs) {
-    const len = (this.tabs[id].display || '').length;
-    if (len > maxLabelLen) {
-      maxLabelLen = len;
-    }
-  }
-  /** ~0.52em per character keeps longest label on one line. */
-  const tabFont = Math.min(14, Math.max(8,
-      Math.floor((tabSlotW - 6) / (maxLabelLen * 0.52))));
-  style += `
-    .xet-tab button {
-      font-size: ${tabFont}px;
+      overflow-y: auto;
     }
   `;
   if (frameW < 860) {
     style += `
-      .xet-analysis {
+      .xet-about {
         right: 0;
       }
     `;
@@ -8251,7 +8654,7 @@ Exet.prototype.changeLexicon = function() {
   exetModals.freezeUI(
       'Changing the word list from ' +
       exetState.lexicon + ' to ' + lopts.value + ', please wait...');
-  exetLoadLexicon(lopts.value);
+  xetAfterPaint(() => exetLoadLexicon(lopts.value));
 }
 
 function exetFromHistory(exetRev) {
@@ -8568,7 +8971,7 @@ function exetLoadLexicon(lexiconName=null) {
   Promise.all(loadPromises)
     .then(() => {
       // All lexicon parts have loaded and cleaned up their DOM nodes
-      exetLoadedLexicon();
+      xetAfterPaint(exetLoadedLexicon);
     })
     .catch(error => {
       exetFailedToLoadLexicon();

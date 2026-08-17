@@ -6,8 +6,89 @@
  * See the full license notice in exet.js.
  */
 
+:root {
+  --xet-bg: #fafafa;
+  --xet-surface: #ffffff;
+  --xet-border: #d4d4d4;
+  --xet-border-subtle: #ebebeb;
+  --xet-text: #1a1a1a;
+  --xet-text-muted: #666666;
+  --xet-accent: #2563a8;
+  --xet-accent-muted: #e8f0fa;
+  --xet-success: #2d6a4f;
+  --xet-success-bg: #eef6f1;
+  --xet-success-hover: #d4ebe0;
+  --xet-choices-hover: #90ee90;
+  --xet-choices-chosen-hover: #c0ffc0;
+  --xet-danger: #b91c1c;
+  --xet-warning-bg: #fefce8;
+  --xet-hover: #f3f4f6;
+  --xet-row-even: #f5f5f5;
+  --xet-row-odd: #fefefe;
+  --xet-header-bg: #ececec;
+  --xet-radius: 4px;
+  --xet-radius-tab: 6px 6px 0 0;
+  --xet-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --xet-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
 body {
-  margin: 8px;
+  background: var(--xet-bg);
+  color: var(--xet-text);
+  margin: 12px;
+}
+#xet-loading {
+  color: var(--xet-text-muted);
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  padding-top: 100px;
+  text-align: center;
+}
+#xet-loading h3 {
+  color: var(--xet-text);
+}
+.loader {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 4px solid var(--xet-border-subtle);
+  border-top-color: var(--xet-accent);
+  animation: xet-loader-spin 0.8s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+}
+.loader-inline {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#xet-loading .loader {
+  margin: 0 auto 24px;
+}
+.xet-loading-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.xet-loading-block .loader {
+  margin: 0 auto;
+}
+.xet-loading-block .xet-loading-msg {
+  margin-top: 16px;
+}
+.xet-loading-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
+}
+@keyframes xet-loader-spin {
+  to { transform: translateZ(0) rotate(360deg); }
 }
 #xet-xlv-frame .xlv-grid-panel,
 #xet-xlv-frame .xlv-clues-panel {
@@ -21,7 +102,7 @@ body {
 .xet-frame {
   margin: 0;
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 14px;
   position: relative;
 }
@@ -50,27 +131,45 @@ body {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .xet-ui-freezer-msg {
-  background-color: #ffffff;
-  padding: 24px 48px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  color: #red;
+  background-color: var(--xet-surface);
+  padding: 32px 48px;
+  border-radius: var(--xet-radius);
+  box-shadow: var(--xet-shadow-lg);
+  color: var(--xet-text);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  text-align: center;
   font-size: 16px;
   font-weight: 500;
 }
-.xet-tab {
+.xet-ui-freezer-msg .loader {
+  margin: 0 auto 16px;
+}
+.xet-ui-freezer-msg .xet-loading-msg {
+  font-weight: normal;
+  line-height: 1.4;
+  max-width: 36em;
+}
+.xet-tab-bar {
+  background-color: var(--xet-border-subtle);
+  border: 1px solid var(--xet-border);
+  border-bottom: 0;
+  border-radius: var(--xet-radius-tab);
+  overflow: hidden;
+}
+.xet-tab-bar .xet-tab {
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;
-  min-height: 50px;
-  border: 4px solid #ddd;
-  border-bottom: 0;
-  background-color: #ddd;
-  border-radius: 10px 10px 0 0;
+  min-height: 42px;
+  border: 0;
+  border-radius: 0;
+  background-color: inherit;
   overflow: hidden;
+}
+.xet-tab-bar .xet-tab-row-1 {
+  border-bottom: 1px solid var(--xet-border);
 }
 .xet-tab button {
   font-size: 14px;
@@ -82,34 +181,40 @@ body {
   float: none;
   outline: none;
   cursor: pointer;
-  padding: 2px 4px;
-  transition: background-color 0.3s;
+  padding: 2px 8px;
+  transition: background-color 0.15s ease, color 0.15s ease;
   font-weight: bold;
-  border-radius: 10px 10px 0 0;
-  border: 1px solid silver;
+  border-radius: 0;
+  border: 1px solid transparent;
+  color: var(--xet-text-muted);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.2;
 }
 .xet-tab button:hover {
-  background-color: #f0f0f0;
+  background-color: var(--xet-hover);
   border-bottom: 0;
+  color: var(--xet-text);
   cursor: pointer;
 }
 .xet-tab button.active {
-  background-color: white;
+  background-color: var(--xet-surface);
   border-bottom: 0;
+  color: var(--xet-text);
 }
 .xet-tab-content {
+  background-color: var(--xet-surface);
   display: none;
   padding: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--xet-border);
   border-top: none;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 .xet-iframe-loading {
   float: right;
-  color: red;
+  color: var(--xet-danger);
   cursor: wait;
 }
 .xet-iframe-loading::after {
@@ -158,37 +263,37 @@ body {
   overflow: auto;
 }
 .xet-draft > td:first-child {
-  color: gray;
+  color: var(--xet-text-muted);
 }
 .xet-draft-marker,
 .xet-done-marker {
   font-size: 12px;
-  font-family: monospace;
-  color: gray;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  color: var(--xet-text-muted);
 }
 .xet-done-marker {
   text-decoration: line-through;
-  text-decoration-color: dodgerblue;
+  text-decoration-color: var(--xet-accent);
 }
 .xet-clue-stat {
   cursor: pointer;
   padding: 2px;
-  border: 1px solid white;
+  border: 1px solid transparent;
 }
 .xet-clue-stat:hover {
-  border: 1px solid dodgerblue;
-  background: mistyrose;
+  border: 1px solid var(--xet-accent);
+  background: var(--xet-accent-muted);
 }
 .xet-anno {
-  font-family: monospace;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 14px;
-  color: darkgreen;
+  color: var(--xet-success);
 }
 .xlv-curr-clue-label {
   cursor: pointer;
 }
 .xlv-curr-clue {
-  font-family: monospace;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-weight: normal;
   font-size: 14px;
   padding: 2px 2px 4px 2px;
@@ -199,8 +304,8 @@ body {
   overflow-y: auto;
 }
 .xet-clue-menu {
-  border: 1px solid lightgray;
-  background-color: white;
+  border: 1px solid var(--xet-border);
+  background-color: var(--xet-surface);
   display: none;
   left: 0;
   position: absolute;
@@ -208,15 +313,16 @@ body {
   width: 200px;
   top: 100%;
   z-index: 3;
+  box-shadow: var(--xet-shadow-lg);
 }
 .xet-clue-menu-item {
-  border: 1px solid silver;
+  border: 1px solid var(--xet-border-subtle);
   font-size: 12px;
   font-weight: normal;
   padding: 4px;
 }
 .xet-clue-menu-item:hover {
-  background-color: whitesmoke;
+  background-color: var(--xet-hover);
   font-weight: bold;
 }
 .xet-curr-clue .xlv-curr-clue-label {
@@ -227,8 +333,8 @@ body {
   z-index: 1;
 }
 #xet-nextprev-span .xlv-small-button {
-  color: dodgerblue !important;
-  border: 1px solid lightgray;
+  color: var(--xet-accent) !important;
+  border: 1px solid var(--xet-border);
   vertical-align: text-top;
 }
 #xet-unlink {
@@ -239,13 +345,13 @@ body {
   position: absolute;
   top: -18px;
   left: 0;
-  background-color: white;
+  background-color: var(--xet-surface);
 }
 .xet-above-clue-panel {
   box-sizing: border-box;
-  color: dodgerblue;
-  border: 1px solid dodgerblue;
-  font-family: monospace;
+  color: var(--xet-accent);
+  border: 1px solid var(--xet-accent);
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 12px;
   padding: 2px 4px 0 4px;
   z-index: 2;
@@ -259,7 +365,7 @@ body {
 .xet-blur *,
 .xet-blur {
   color: #c0c0c0 !important;
-  outline-color: lightgray !important;
+  outline-color: var(--xet-border) !important;
   transition: all 3s ease-in-out 0.1s;
 }
 .xet-format {
@@ -267,11 +373,11 @@ body {
   top: -28px;
   right: 0;
   z-index: 2;
-  background-color: white;
+  background-color: var(--xet-surface);
 }
 .xet-format-label {
   margin: 0;
-  color: dodgerblue;
+  color: var(--xet-accent);
   padding: 4px;
 }
 .xet-format-option .xlv-small-button,
@@ -283,19 +389,19 @@ body {
 }
 .xet-format-option .xlv-small-button > *:not(.xet-format-panel),
 .xet-format-option-active .xlv-small-button > *:not(.xet-format-panel) {
-  color: gray;
+  color: var(--xet-text-muted);
   text-decoration-thickness: 1px;
 }
 .xet-format-option .xlv-small-button:hover > *:not(.xet-format-panel),
 .xet-format-option-active .xlv-small-button:hover > *:not(.xet-format-panel) {
-  color: dodgerblue;
+  color: var(--xet-accent);
   text-decoration-thickness: 1.5px;
 }
 #xet-format .xet-format-option-active .xlv-small-button {
-  background-color: #e1e1e1;
+  background-color: var(--xet-border-subtle);
 }
 #xet-format .xet-format-option-active .xlv-small-button:hover {
-  background-color: lightsalmon;
+  background-color: var(--xet-hover);
 }
 .xet-format-option-active .xlv-small-button:hover .xet-format-panel,
 .xet-format-option .xlv-small-button:hover .xet-format-panel {
@@ -307,46 +413,46 @@ body {
   display: block;
   text-align: left;
   position: absolute;
-  background-color: white;
+  background-color: var(--xet-surface);
   z-index: 2;
   left: 100%;
   top: 4px;
-  border: 1px solid dodgerblue;
+  border: 1px solid var(--xet-accent);
   box-sizing: border-box;
   font-size: 12px;
-  color: black;
+  color: var(--xet-text);
   display: none;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: var(--xet-shadow-lg);
   width: 280px;
 }
 .xet-format-preview {
   margin: 8px 8px;
 }
 .xet-format-selection {
-  background-color: #3399FF;
+  background-color: var(--xet-accent);
   color: white;
 }
 .xet-small-action {
   text-align: right;
-  font-family: monospace;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 10px;
   font-style: italic;
 }
 .xet-red {
-  color: red;
+  color: var(--xet-danger);
 }
 .xet-green {
-  color: green;
+  color: var(--xet-success);
 }
 .xet-darkgreen {
-  color: darkgreen;
+  color: var(--xet-success);
 }
 .xet-blue {
-  color: blue;
+  color: var(--xet-accent);
   text-decoration: none;
 }
 .xet-small {
-  font-family: monospace;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 10px;
 }
 .xet-bold {
@@ -362,13 +468,41 @@ body {
   flex-flow: column wrap;
   align-items: flex-start;
 }
+/* Keep Exet tab's main areas in fixed left/right columns */
+.xet-tab-content > .xet-controls-col {
+  flex-flow: column nowrap;
+  align-items: stretch;
+  width: 100%;
+}
+.xet-controls-row.xet-high-tall-box {
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.xet-controls-col.xet-panel-left,
+.xet-controls-col.xet-panel-right {
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+.xet-fill-settings > .xet-controls-col {
+  flex-flow: column nowrap;
+  width: 100%;
+}
+.xet-panel-right #xet-fill-settings {
+  flex-shrink: 0;
+  width: 100%;
+}
+.xet-panel-right #xet-clues {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+}
 .xet-in-tab-scrollable {
   border: 0;
   margin: 12px 0 0 0;
   overflow: auto;
 }
-.xet-gray-bordered-rows td {  
-  border-bottom: 1px solid gray;
+.xet-gray-bordered-rows td {
+  border-bottom: 1px solid var(--xet-border);
 }
 .xet-wordnet-synonyms {
   border-collapse: collapse;
@@ -379,7 +513,7 @@ body {
   padding: 6px 8px 6px 0;
 }
 .xet-wordnet-pos {
-  color: blue;
+  color: var(--xet-accent);
   font-weight: bold;
   white-space: nowrap;
   padding-right: 12px !important;
@@ -387,10 +521,10 @@ body {
 }
 .xet-wordnet-gloss {
   margin-top: 2px;
-  color: #444;
+  color: var(--xet-text-muted);
 }
-.xet-choices-box {  
-  border: 1px solid gray;
+.xet-choices-box {
+  border: 1px solid var(--xet-border);
   border-collapse: collapse;
   box-sizing: border-box;
   overflow: auto;
@@ -413,45 +547,45 @@ body {
   right: 20px;
   top: 36px;
 }
-.xet-choices {  
+.xet-choices {
   table-layout: auto;
   margin: 0;
   padding: 0;
   width: 100%;
-  color: #333;
-  border: 1px solid gray;
+  color: var(--xet-text);
+  border: 1px solid var(--xet-border);
   border-collapse: collapse;
-  border-spacing: 0; 
-  font-family: monospace;
+  border-spacing: 0;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 12px;
 }
 .xet-choices td, .xet-choices th {
   border: 0;
-  border-right: 1px solid gray;
-  border-left: 1px solid gray;
+  border-right: 1px solid var(--xet-border);
+  border-left: 1px solid var(--xet-border);
   padding: 8px;
 }
-.xet-choices th {  
-  background: #DFDFDF;
+.xet-choices th {
+  background: var(--xet-header-bg);
   font-weight: bold;
 }
-.xet-choices td {  
-  background: #FAFAFA;
+.xet-choices td {
+  background: var(--xet-row-odd);
   text-align: left;
   cursor: pointer;
 }
-.xet-choices tr:nth-child(even) td { background: #F1F1F1; }   
-.xet-choices tr:nth-child(odd) td { background: #FEFEFE; }  
+.xet-choices tr:nth-child(even) td { background: var(--xet-row-even); }
+.xet-choices tr:nth-child(odd) td { background: var(--xet-row-odd); }
 .xet-choices tr:not(.xet-chosen):hover td {
-  background: lightgreen;
+  background: var(--xet-choices-hover);
 }
 .xet-choices tr.xet-chosen:hover td {
-  background: #c0ffc0;
+  background: var(--xet-choices-chosen-hover);
 }
-#xet-light-rejects tr:nth-child(odd) td { background: #f1cfff; }
-#xet-light-rejects tr:nth-child(even) td { background: #e8c6f6; }
+#xet-light-rejects tr:nth-child(odd) td { background: #f3eef8; }
+#xet-light-rejects tr:nth-child(even) td { background: #ebe4f4; }
 #xet-light-rejects tr:hover td {
-  background: lightblue;
+  background: var(--xet-accent-muted);
 }
 .xet-fills-heading {
   min-height: 22px;
@@ -460,8 +594,8 @@ body {
   width: 100%;
   margin: 0 0 8px;
   padding: 4px;
-  border: 1px solid gray;
-  font-family: monospace;
+  border: 1px solid var(--xet-border);
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 12px;
   box-sizing: border-box;
 }
@@ -481,7 +615,7 @@ body {
   font-style: italic;
 }
 .xet-processing {
-  color: red;
+  color: var(--xet-danger);
   cursor: wait;
 }
 .xet-menu {
@@ -504,13 +638,13 @@ body {
   margin: 0;
   font-size: 14px;
   font-weight: bold;
-  border-radius: 10px 10px 0 0;
+  border-radius: var(--xet-radius-tab);
   border: 1px solid transparent;
 }
 .xet-dropdown:hover .xet-dropbtn {
-  background-color: #ddd;
+  background-color: var(--xet-hover);
   cursor: pointer;
-  border: 1px solid gray;
+  border: 1px solid var(--xet-border);
 }
 .xet-menu li.xet-dropdown {
   display: inline-block;
@@ -519,12 +653,12 @@ body {
 .xet-dropdown-submenu {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: var(--xet-surface);
   min-width: 275px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: var(--xet-shadow-lg);
   z-index: 1;
   margin: 0;
-  border: 1px solid gray;
+  border: 1px solid var(--xet-border);
 }
 .xet-dropdown-submenu {
   bottom: 0;
@@ -546,7 +680,7 @@ body {
   font-size: 10px;
 }
 .xet-dropdown-submenu textarea {
-  background-color: #e9e9e9;
+  background-color: var(--xet-border-subtle);
 }
 .xet-dropdown-div {
   line-height: 1.5;
@@ -561,22 +695,23 @@ body {
   position: relative;
 }
 .xet-dropdown-content .xet-dropdown-item:nth-child(odd) {
-  background: #F1F1F1;
-}   
+  background: var(--xet-row-even);
+}
 .xet-dropdown-content .xet-dropdown-item:nth-child(even) {
-  background: #FEFEFE;
-}  
+  background: var(--xet-row-odd);
+}
 .xet-dropdown-content .xet-dropdown-item:hover {
-  background-color: lightgreen;
+  background-color: var(--xet-hover);
   cursor: pointer;
 }
 .xet-dropdown-submenu .xet-dropdown-subitem:nth-child(odd) {
-  background: #F1F1F1; }   
+  background: var(--xet-row-even);
+}
 .xet-dropdown-submenu .xet-dropdown-subitem:nth-child(even) {
-  background: #FEFEFE;
-}  
+  background: var(--xet-row-odd);
+}
 .xet-dropdown-submenu .xet-dropdown-subitem:hover {
-  background-color: #a1ffa1;
+  background-color: var(--xet-success-bg);
   cursor: pointer;
 }
 .xet-dropdown-item:hover .xet-dropdown-submenu {
@@ -587,7 +722,8 @@ body {
   width: 100%;
 }
 .xet-analysis {
-  width: 700px;
+  width: 100%;
+  box-sizing: border-box;
   overflow: auto;
   padding: 6px 6px 6px 16px;
   background-size: 20px 20px;
@@ -599,7 +735,7 @@ body {
   margin-top: 14px;
 }
 .xet-plotbar {
-  background: dodgerblue;
+  background: var(--xet-accent);
   height: 16px;
   margin: 2px;
 }
@@ -608,51 +744,58 @@ body {
   padding: 4px;
 }
 #xet-tips.xet-tips .xlv-small-button:hover {
-  background-color: lightyellow;
+  background-color: var(--xet-warning-bg);
 }
 .xet-tip {
-  background-color: lightyellow;
+  background-color: var(--xet-warning-bg);
   margin: 0 4px 4px;
   padding: 12px 6px;
   text-align: left;
   width: 420px;
-  border: 1px solid gray;
+  border: 1px solid var(--xet-border);
 }
 .xet-tips {
   text-align: right;
 }
 .xet-frame .xlv-clues {
   font-size: 16px;
-  font-family: serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
   line-height: normal;
   box-sizing: border-box;
 }
+#xet-clues .xlv-clues-flex {
+  flex-flow: row wrap;
+}
+#xet-clues .xlv-clues-panel {
+  flex: 1 1 0;
+  min-width: 0;
+}
 .xet-rev-chooser {
   position: absolute;
   z-index: 1;
-  background-color: white;
-  border: 1px solid gray;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: var(--xet-surface);
+  border: 1px solid var(--xet-border);
+  box-shadow: var(--xet-shadow-lg);
   font-size: 12px;
 }
 .xet-chosen {
   font-weight: bold;
-  color: darkgreen;
+  color: var(--xet-success);
 }
 .xet-editable {
-  outline: 1px solid lightgreen;
+  outline: 1px solid var(--xet-success-bg);
   padding: 4px;
   line-height: 1.8;
 }
 .xet-editable[contenteditable] {
-  outline: 1px solid lightgreen;
+  outline: 1px solid var(--xet-success);
 }
 .xet-action {
-  color: dodgerblue;
+  color: var(--xet-accent);
   display: inline-block;
   font-weight: normal;
-  font-family: serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   font-style: italic;
   margin: 4px 0;
@@ -670,8 +813,8 @@ body {
   overflow: auto;
 }
 .xet-companag-text {
-  color: blue;
-  font-family: monospace;
+  color: var(--xet-accent);
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 12px;
 }
 .xet-section td {
@@ -682,7 +825,7 @@ body {
   padding-right: 4px;
 }
 .xet-table-midline td:not(:first-child) {
-  border-left: 1px solid gray;
+  border-left: 1px solid var(--xet-border);
   padding: 2px 4px 2px 6px;
 }
 .xet-table-midline td {
@@ -746,7 +889,7 @@ body {
   animation-iteration-count: infinite;
 }
 .xet-preflex-entry {
-  color: green;
+  color: var(--xet-success);
 }
 .xet-unpreflex-entry {
   color: chocolate;
@@ -778,7 +921,7 @@ body {
   height: 25px;
 }
 .xet-colour-nina:hover .xet-colour-nina-radio {
-  background: whitesmoke;
+  background: var(--xet-hover);
 }
 .xet-colour-sample {
   width: 25px;
@@ -788,10 +931,10 @@ body {
   font-size: x-small;
   font-style: italic;
   font-weight: normal;
-  color: gray;
+  color: var(--xet-text-muted);
 }
 .xet-web-fills-caveat:hover {
-  color: black;
+  color: var(--xet-text);
 }
 .xet-web-fills-iframe {
   border: 0;
@@ -806,11 +949,11 @@ body {
   left: 0;
   padding: 8px;
   z-index: 2;
-  border: 1px solid green;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border: 1px solid var(--xet-success);
+  box-shadow: var(--xet-shadow-lg);
 }
 .xet-xst-panel {
-  background-color: white;
+  background-color: var(--xet-surface);
   max-width: 560px;
   padding: 12px;
   top: 54px;
@@ -820,19 +963,20 @@ body {
   font-style: italic;
 }
 #xet-frame .xet-fills-heading .xlv-small-button {
-  background-color: ghostwhite;
+  background-color: var(--xet-surface);
 }
 #xet-frame .xet-fills-heading .xlv-small-button:hover {
-  background-color: lavender;
+  background-color: var(--xet-hover);
 }
 .xet-web-fills-panel {
-  background-color: lavender;
+  background-color: var(--xet-surface);
+  border-left: 3px solid var(--xet-success);
   font-size: 12px;
   text-align: left;
   top: 30px;
 }
 .xet-text-editor {
-  background-color: white;
+  background-color: var(--xet-surface);
   font-size: 12px;
   top: 0;
 }
@@ -842,7 +986,7 @@ body {
   padding: 0 0 6px 0;
   outline: none;
   background-image:
-    repeating-linear-gradient(to bottom, white, white 13px, lightgray 14px);
+    repeating-linear-gradient(to bottom, white, white 13px, var(--xet-border) 14px);
   white-space: break-spaces;
 }
 #xet-unpreflex-editor {
@@ -857,7 +1001,7 @@ body {
 }
 #xet-outdated-message,
 #xet-outdated {
-  color: red;
+  color: var(--xet-danger);
   font-weight: bold;
 }
 #xet-minlex {
@@ -867,10 +1011,10 @@ body {
   padding: 2px 15px;
 }
 .xet-pink-button {
-  background-color: salmon !important;
+  background-color: #e8927c !important;
 }
 .xet-pink-button:hover {
-  background-color: red !important;
+  background-color: var(--xet-danger) !important;
 }
 .xet-long-button {
   margin: 2px 0;
@@ -885,7 +1029,7 @@ body {
 }
 .xet-anag-help {
   box-sizing: border-box;
-  color: blue;
+  color: var(--xet-accent);
   max-width: 150px;
   font-size: small;
   outline: 1px gray;
@@ -898,7 +1042,7 @@ body {
   padding-inline-start: 10px;
 }
 .xet-cah {
-  background-color: white;
+  background-color: var(--xet-surface);
   font-weight: bold;
   padding: 0 0 4px 0;
   position: sticky;
@@ -906,7 +1050,7 @@ body {
 }
 .xet-through-cut-cell,
 .xet-through-cut:hover {
-  color: red;
+  color: var(--xet-danger);
   cursor: pointer;
   font-weight: bold;
 }
@@ -927,11 +1071,32 @@ body {
   zoom: 0.75;
 }
 
+/* Scoped Exolve control overrides within Exet */
+.xet-frame .xlv-small-button {
+  border-color: var(--xet-border);
+  border-radius: var(--xet-radius);
+}
+.xet-frame .xlv-small-button:hover {
+  background-color: var(--xet-hover);
+}
+.xet-frame button:focus-visible,
+.xet-frame a:focus-visible,
+.xet-frame .xlv-small-button:focus-visible,
+.xet-frame .xlv-button:focus-visible {
+  outline: 2px solid var(--xet-accent);
+  outline-offset: 2px;
+}
+.xet-tab button:focus-visible {
+  outline: 2px solid var(--xet-accent);
+  outline-offset: -2px;
+}
+
 /* Magpie annotation builder tab */
 .xet-magpie {
   max-width: none;
   width: 100%;
   font-size: 14px;
+  padding-bottom: 12px;
 }
 .xet-magpie-auto {
   display: flex;
@@ -1227,4 +1392,79 @@ body {
   border: 1px dashed #ccc;
   border-radius: 6px;
   margin-top: 12px;
+}
+
+.xet-theme-tab {
+  max-width: 640px;
+}
+.xet-theme-controls {
+  margin-bottom: 12px;
+}
+.xet-theme-row {
+  margin: 10px 0;
+}
+.xet-theme-any-label {
+  margin-left: 12px;
+  font-weight: normal;
+}
+.xet-theme-infinite-label {
+  margin-left: 12px;
+  font-weight: normal;
+}
+.xet-theme-stop {
+  margin-left: 6px;
+  color: chocolate;
+  font-weight: bold;
+}
+.xet-theme-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 6px;
+}
+.xet-theme-category {
+  font-weight: normal;
+  white-space: nowrap;
+}
+.xet-theme-status {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.xet-theme-caveat {
+  margin-top: 12px;
+  color: var(--xet-text-muted);
+  line-height: 1.4;
+}
+.xet-theme-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0 6px 0;
+  font-weight: bold;
+}
+.xet-theme-word-list {
+  max-height: 50vh;
+  border: 1px solid var(--xet-border);
+  border-radius: 4px;
+  padding: 4px 0;
+}
+.xet-theme-word-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 8px;
+  gap: 8px;
+}
+.xet-theme-word-row:hover {
+  background: var(--xet-hover-bg, rgba(0, 0, 0, 0.04));
+}
+.xet-theme-word {
+  flex: 1;
+  font-family: monospace;
+}
+.xet-theme-delete {
+  flex-shrink: 0;
+  min-width: 1.8em;
+  padding: 0 4px !important;
+  color: chocolate;
 }

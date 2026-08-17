@@ -354,7 +354,11 @@ Exet.prototype.magpieFormatSelectionItem = function(st, item) {
   if (item.kind == 'group') {
     return this.magpieFormatGroup(this.magpieFindGroup(st, item.id), st);
   }
-  return this.magpieFormatPart(st.parts[item.index]);
+  const part = st.parts[item.index];
+  if (!part) {
+    return '';
+  }
+  return this.magpieFormatPart(part);
 };
 
 Exet.prototype.magpieCharadeTokens = function(st) {
@@ -444,14 +448,14 @@ Exet.prototype.magpieMigrateState = function(st) {
   }
   if (st.composite && st.composite.customOuter) {
     st.composite = null;
+  } else if (st.composite && st.composite.type == 'subtract') {
+    st.composite = null;
   } else if (st.composite && typeof st.composite.a == 'number') {
     st.composite = {
       type: st.composite.type,
       a: {kind: 'part', index: st.composite.a},
       b: {kind: 'part', index: st.composite.b},
     };
-  } else if (st.composite && st.composite.type == 'subtract') {
-    st.composite = null;
   }
   for (const part of st.parts || []) {
     delete part.deletions;
@@ -531,6 +535,33 @@ Exet.prototype.magpieResetSplits = function() {
   this.magpieRender();
 };
 
+Exet.prototype.magpieInheritPartProps = function(np, oldParts) {
+  let exact = null;
+  const contained = [];
+  for (const op of oldParts) {
+    if (op.start == np.start && op.end == np.end) {
+      exact = op;
+      break;
+    }
+    if (op.start >= np.start && op.end <= np.end) {
+      contained.push(op);
+    }
+  }
+  if (exact) {
+    np.fodder = exact.fodder;
+    np.op = exact.op;
+    return;
+  }
+  const withOps = contained.filter(p => p.op);
+  if (withOps.length == 0) {
+    return;
+  }
+  const firstOp = withOps[0].op;
+  if (withOps.length == 1 || withOps.every(p => p.op == firstOp)) {
+    np.op = firstOp;
+  }
+};
+
 Exet.prototype.magpieToggleSplit = function(index) {
   const st = this.magpieGetState();
   if (!st || index <= 0 || index >= st.answer.length) {
@@ -546,14 +577,7 @@ Exet.prototype.magpieToggleSplit = function(index) {
   const oldParts = st.parts;
   st.parts = this.magpieBuildParts(st.answer, st.splits);
   for (let i = 0; i < st.parts.length; i++) {
-    const np = st.parts[i];
-    for (const op of oldParts) {
-      if (op.start == np.start && op.end == np.end) {
-        np.fodder = op.fodder;
-        np.op = op.op;
-        break;
-      }
-    }
+    this.magpieInheritPartProps(st.parts[i], oldParts);
   }
   st.composite = null;
   st.groups = [];
@@ -715,8 +739,7 @@ Exet.prototype.magpieFormatPart = function(part) {
   return text;
 };
 
-Exet.prototype.magpiePreviewText = function() {
-  const st = this.magpieGetState();
+Exet.prototype.magpiePreviewFromState = function(st) {
   if (!st) {
     return '';
   }
@@ -747,6 +770,10 @@ Exet.prototype.magpiePreviewText = function() {
     inner += ', &lit';
   }
   return '[' + inner + ']';
+};
+
+Exet.prototype.magpiePreviewText = function() {
+  return this.magpiePreviewFromState(this.magpieGetState());
 };
 
 Exet.prototype.magpieRender = function() {
