@@ -1,0 +1,494 @@
+[definition-linkers] 'm
+[definition-linkers] 're
+[definition-linkers] 's
+[definition-linkers] am
+[definition-linkers] appeared
+[definition-linkers] appearing
+[definition-linkers] appears
+[definition-linkers] are
+[definition-linkers] be
+[definition-linkers] became
+[definition-linkers] becomes
+[definition-linkers] becoming
+[definition-linkers] been
+[definition-linkers] being
+[definition-linkers] called
+[definition-linkers] came
+[definition-linkers] comes
+[definition-linkers] coming
+[definition-linkers] considered
+[definition-linkers] deemed
+[definition-linkers] denoted
+[definition-linkers] denotes
+[definition-linkers] denoting
+[definition-linkers] dubbed
+[definition-linkers] gets
+[definition-linkers] getting
+[definition-linkers] goes
+[definition-linkers] going
+[definition-linkers] got
+[definition-linkers] here's
+[definition-linkers] i.e.
+[definition-linkers] ie
+[definition-linkers] is
+[definition-linkers] labeled
+[definition-linkers] labelled
+[definition-linkers] made
+[definition-linkers] makes
+[definition-linkers] making
+[definition-linkers] meaning
+[definition-linkers] means
+[definition-linkers] meant
+[definition-linkers] named
+[definition-linkers] namely
+[definition-linkers] proved
+[definition-linkers] proves
+[definition-linkers] proving
+[definition-linkers] represented
+[definition-linkers] representing
+[definition-linkers] represents
+[definition-linkers] said
+[definition-linkers] say
+[definition-linkers] says
+[definition-linkers] seemed
+[definition-linkers] seeming
+[definition-linkers] seems
+[definition-linkers] signified
+[definition-linkers] signifies
+[definition-linkers] signifying
+[definition-linkers] termed
+[definition-linkers] that's
+[definition-linkers] there's
+[definition-linkers] turned
+[definition-linkers] turning
+[definition-linkers] turns
+[definition-linkers] viz
+[definition-linkers] was
+[definition-linkers] went
+[definition-linkers] were
+[definition-linkers] what's
+[definition-linkers] amounted to
+[definition-linkers] amounting to
+[definition-linkers] amounts to
+[definition-linkers] can be
+[definition-linkers] could be
+[definition-linkers] counted as
+[definition-linkers] counting as
+[definition-linkers] counts as
+[definition-linkers] defined as
+[definition-linkers] described as
+[definition-linkers] here is
+[definition-linkers] here was
+[definition-linkers] here were
+[definition-linkers] known as
+[definition-linkers] looked like
+[definition-linkers] looking like
+[definition-linkers] looks like
+[definition-linkers] may be
+[definition-linkers] might be
+[definition-linkers] must be
+[definition-linkers] or rather
+[definition-linkers] passed for
+[definition-linkers] passes for
+[definition-linkers] passing for
+[definition-linkers] regarded as
+[definition-linkers] seen as
+[definition-linkers] served as
+[definition-linkers] serves as
+[definition-linkers] serving as
+[definition-linkers] shall be
+[definition-linkers] should be
+[definition-linkers] sounded like
+[definition-linkers] sounding like
+[definition-linkers] sounds like
+[definition-linkers] standing for
+[definition-linkers] stands for
+[definition-linkers] stood for
+[definition-linkers] taken as
+[definition-linkers] that is
+[definition-linkers] that was
+[definition-linkers] there are
+[definition-linkers] there is
+[definition-linkers] there were
+[definition-linkers] this is
+[definition-linkers] this was
+[definition-linkers] to wit
+[definition-linkers] understood as
+[definition-linkers] what are
+[definition-linkers] what is
+[definition-linkers] what was
+[definition-linkers] what were
+[definition-linkers] will be
+[definition-linkers] worked as
+[definition-linkers] working as
+[definition-linkers] works as
+[definition-linkers] would be
+[definition-linkers] appeared to be
+[definition-linkers] appears to be
+[definition-linkers] had to be
+[definition-linkers] has to be
+[definition-linkers] in other words
+[definition-linkers] needed to be
+[definition-linkers] needs to be
+[definition-linkers] seemed to be
+[definition-linkers] seems to be
+[definition-linkers] that would be
+[definition-linkers] this would be
+[definition-linkers] thought of as
+[neutral-glue] a
+[neutral-glue] about
+[neutral-glue] above
+[neutral-glue] across
+[neutral-glue] after
+[neutral-glue] again
+[neutral-glue] against
+[neutral-glue] all
+[neutral-glue] also
+[neutral-glue] although
+[neutral-glue] always
+[neutral-glue] amid
+[neutral-glue] among
+[neutral-glue] an
+[neutral-glue] and
+[neutral-glue] another
+[neutral-glue] any
+[neutral-glue] around
+[neutral-glue] as
+[neutral-glue] at
+[neutral-glue] bad
+[neutral-glue] because
+[neutral-glue] before
+[neutral-glue] below
+[neutral-glue] besides
+[neutral-glue] between
+[neutral-glue] big
+[neutral-glue] both
+[neutral-glue] but
+[neutral-glue] by
+[neutral-glue] during
+[neutral-glue] each
+[neutral-glue] either
+[neutral-glue] even
+[neutral-glue] ever
+[neutral-glue] every
+[neutral-glue] except
+[neutral-glue] few
+[neutral-glue] first
+[neutral-glue] for
+[neutral-glue] from
+[neutral-glue] given
+[neutral-glue] good
+[neutral-glue] great
+[neutral-glue] having
+[neutral-glue] here
+[neutral-glue] high
+[neutral-glue] how
+[neutral-glue] if
+[neutral-glue] in
+[neutral-glue] including
+[neutral-glue] inside
+[neutral-glue] into
+[neutral-glue] just
+[neutral-glue] large
+[neutral-glue] last
+[neutral-glue] less
+[neutral-glue] like
+[neutral-glue] little
+[neutral-glue] long
+[neutral-glue] low
+[neutral-glue] many
+[neutral-glue] more
+[neutral-glue] most
+[neutral-glue] much
+[neutral-glue] near
+[neutral-glue] never
+[neutral-glue] new
+[neutral-glue] next
+[neutral-glue] no
+[neutral-glue] nor
+[neutral-glue] not
+[neutral-glue] now
+[neutral-glue] of
+[neutral-glue] often
+[neutral-glue] old
+[neutral-glue] on
+[neutral-glue] once
+[neutral-glue] one
+[neutral-glue] ones
+[neutral-glue] only
+[neutral-glue] onto
+[neutral-glue] or
+[neutral-glue] other
+[neutral-glue] others
+[neutral-glue] outside
+[neutral-glue] over
+[neutral-glue] previous
+[neutral-glue] quite
+[neutral-glue] rather
+[neutral-glue] same
+[neutral-glue] second
+[neutral-glue] several
+[neutral-glue] short
+[neutral-glue] since
+[neutral-glue] small
+[neutral-glue] so
+[neutral-glue] some
+[neutral-glue] sometimes
+[neutral-glue] still
+[neutral-glue] such
+[neutral-glue] than
+[neutral-glue] that
+[neutral-glue] the
+[neutral-glue] then
+[neutral-glue] there
+[neutral-glue] these
+[neutral-glue] third
+[neutral-glue] this
+[neutral-glue] those
+[neutral-glue] though
+[neutral-glue] through
+[neutral-glue] throughout
+[neutral-glue] to
+[neutral-glue] too
+[neutral-glue] under
+[neutral-glue] unless
+[neutral-glue] unlike
+[neutral-glue] until
+[neutral-glue] upon
+[neutral-glue] very
+[neutral-glue] what
+[neutral-glue] whatever
+[neutral-glue] when
+[neutral-glue] where
+[neutral-glue] which
+[neutral-glue] while
+[neutral-glue] who
+[neutral-glue] whoever
+[neutral-glue] whom
+[neutral-glue] whose
+[neutral-glue] why
+[neutral-glue] with
+[neutral-glue] without
+[neutral-glue] yet
+[neutral-glue] young
+[neutral-glue] able to
+[neutral-glue] according to
+[neutral-glue] along with
+[neutral-glue] associated with
+[neutral-glue] at a
+[neutral-glue] at an
+[neutral-glue] at the
+[neutral-glue] away from
+[neutral-glue] back to
+[neutral-glue] being a
+[neutral-glue] being some
+[neutral-glue] being the
+[neutral-glue] bit of
+[neutral-glue] bound to
+[neutral-glue] characteristic of
+[neutral-glue] close to
+[neutral-glue] coming to
+[neutral-glue] common in
+[neutral-glue] concerned with
+[neutral-glue] connected with
+[neutral-glue] dealing with
+[neutral-glue] down to
+[neutral-glue] due to
+[neutral-glue] famous for
+[neutral-glue] far from
+[neutral-glue] followed by
+[neutral-glue] for a
+[neutral-glue] for an
+[neutral-glue] for the
+[neutral-glue] form of
+[neutral-glue] found among
+[neutral-glue] found at
+[neutral-glue] found by
+[neutral-glue] found in
+[neutral-glue] found on
+[neutral-glue] from a
+[neutral-glue] from an
+[neutral-glue] from the
+[neutral-glue] given a
+[neutral-glue] given some
+[neutral-glue] given the
+[neutral-glue] going to
+[neutral-glue] group of
+[neutral-glue] in a
+[neutral-glue] in an
+[neutral-glue] in the
+[neutral-glue] instead of
+[neutral-glue] involved in
+[neutral-glue] involved with
+[neutral-glue] kind of
+[neutral-glue] known at
+[neutral-glue] known by
+[neutral-glue] known for
+[neutral-glue] known in
+[neutral-glue] leading to
+[neutral-glue] less than
+[neutral-glue] likely to
+[neutral-glue] linked to
+[neutral-glue] lot of
+[neutral-glue] made by
+[neutral-glue] made for
+[neutral-glue] made from
+[neutral-glue] made in
+[neutral-glue] made of
+[neutral-glue] man who
+[neutral-glue] more than
+[neutral-glue] next to
+[neutral-glue] noted for
+[neutral-glue] number of
+[neutral-glue] of a
+[neutral-glue] of an
+[neutral-glue] of the
+[neutral-glue] off of
+[neutral-glue] on a
+[neutral-glue] on an
+[neutral-glue] on the
+[neutral-glue] one that
+[neutral-glue] one who
+[neutral-glue] out of
+[neutral-glue] owing to
+[neutral-glue] pair of
+[neutral-glue] part of
+[neutral-glue] people who
+[neutral-glue] piece of
+[neutral-glue] place to
+[neutral-glue] popular in
+[neutral-glue] preceded by
+[neutral-glue] rather than
+[neutral-glue] ready to
+[neutral-glue] related to
+[neutral-glue] renowned for
+[neutral-glue] responsible for
+[neutral-glue] resulting in
+[neutral-glue] return to
+[neutral-glue] returning to
+[neutral-glue] seen among
+[neutral-glue] seen at
+[neutral-glue] seen by
+[neutral-glue] seen in
+[neutral-glue] seen on
+[neutral-glue] set of
+[neutral-glue] sort of
+[neutral-glue] thanks to
+[neutral-glue] thing that
+[neutral-glue] those that
+[neutral-glue] those who
+[neutral-glue] time to
+[neutral-glue] to a
+[neutral-glue] to an
+[neutral-glue] to the
+[neutral-glue] together with
+[neutral-glue] type of
+[neutral-glue] typical of
+[neutral-glue] up to
+[neutral-glue] used as
+[neutral-glue] used by
+[neutral-glue] used for
+[neutral-glue] used in
+[neutral-glue] used to
+[neutral-glue] way to
+[neutral-glue] woman who
+[neutral-glue] as far as
+[neutral-glue] as opposed to
+[neutral-glue] as well as
+[neutral-glue] by means of
+[neutral-glue] by way of
+[neutral-glue] in case of
+[neutral-glue] in light of
+[neutral-glue] in place of
+[neutral-glue] in spite of
+[neutral-glue] in view of
+[neutral-glue] on account of
+[ambiguous] about
+[ambiguous] actually
+[ambiguous] allegedly
+[ambiguous] apparently
+[ambiguous] appropriately
+[ambiguous] approximately
+[ambiguous] aptly
+[ambiguous] arguably
+[ambiguous] around
+[ambiguous] basically
+[ambiguous] certainly
+[ambiguous] clearly
+[ambiguous] conceivably
+[ambiguous] critically
+[ambiguous] curiously
+[ambiguous] debatably
+[ambiguous] definitely
+[ambiguous] essentially
+[ambiguous] evidently
+[ambiguous] fairly
+[ambiguous] figuratively
+[ambiguous] fittingly
+[ambiguous] importantly
+[ambiguous] indeed
+[ambiguous] interestingly
+[ambiguous] ironically
+[ambiguous] literally
+[ambiguous] maybe
+[ambiguous] notably
+[ambiguous] obviously
+[ambiguous] oddly
+[ambiguous] ostensibly
+[ambiguous] partially
+[ambiguous] partly
+[ambiguous] perhaps
+[ambiguous] plausibly
+[ambiguous] possibly
+[ambiguous] practically
+[ambiguous] presumably
+[ambiguous] pretty
+[ambiguous] probably
+[ambiguous] quite
+[ambiguous] rather
+[ambiguous] really
+[ambiguous] remarkably
+[ambiguous] reportedly
+[ambiguous] roughly
+[ambiguous] seemingly
+[ambiguous] significantly
+[ambiguous] somehow
+[ambiguous] somewhat
+[ambiguous] strangely
+[ambiguous] supposedly
+[ambiguous] surely
+[ambiguous] truly
+[ambiguous] very
+[ambiguous] virtually
+[ambiguous] critics say
+[ambiguous] experts say
+[ambiguous] it appears
+[ambiguous] it looks
+[ambiguous] it seems
+[ambiguous] it sounds
+[ambiguous] many say
+[ambiguous] one hears
+[ambiguous] some say
+[ambiguous] they say
+[ambiguous] we hear
+[ambiguous] as it happens
+[ambiguous] as it were
+[ambiguous] believed to be
+[ambiguous] in a sense
+[ambiguous] in a way
+[ambiguous] in some way
+[ambiguous] known to be
+[ambiguous] legend has it
+[ambiguous] more or less
+[ambiguous] reported to be
+[ambiguous] rumor has it
+[ambiguous] rumored to be
+[ambiguous] rumour has it
+[ambiguous] rumoured to be
+[ambiguous] said to be
+[ambiguous] so to speak
+[ambiguous] supposed to be
+[ambiguous] thought to be
+[ambiguous] tradition has it
+[ambiguous] word has it
+[ambiguous] as it turns out

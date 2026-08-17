@@ -1,0 +1,632 @@
+{
+  "type": "spoonerism",
+  "title": "Spoonerism indicators",
+  "blurb": "Signal that adjacent word sounds should be swapped (Spoonerised) to form the answer — e.g. Spooner's, after Spooner, swapping tops.",
+  "built": "2026-08-17",
+  "count": 88,
+  "sources": [
+    "cryptipedia",
+    "curated"
+  ],
+  "entries": [
+    {
+      "indicator": "a spoonerism",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "a spoonerism of",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "according to spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "after spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as misheard by spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as spooner had it",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as spooner might say",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as spooner might speak",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as spooner said",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as spooner spoke",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as spooner would have it",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as spooner would hear it",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as spooner would say",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "as spooner would speak",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "by spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "confused by spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "courtesy of spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "from spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "if spooner had spoken",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "if spooner spoke",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "if spooner were speaking",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in spooner's manner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in spooner's mouth",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in spooner's style",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in spooner's words",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "in the style of spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "mixing up spooner's",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "muddled by spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "on spooner's lips",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "per spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "rev spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "rev spooner's",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "rev. spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "rev. spooner's",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "reverend spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "reverend spooner's",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "slip of spooner's tongue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "slip of the tongue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner fashion",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner gives us",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner had it",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner has it",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner might say",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner said",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner style",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner tells us",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner would say",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's",
+      "sources": [
+        "cryptipedia",
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's confusion",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's error",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's linguistic slip",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's mistake",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's mix-up",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's reading",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's slip",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's switch",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's take",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's tale",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's transposition",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's twist",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's twist on",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's verbal slip",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner's version",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner-style",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spooner-wise",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerian",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerian mix-up",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerian slip",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerised",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerised form of",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerised version of",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerism",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerism of",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerized",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerized form of",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "spoonerized version of",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "starts to change",
+      "sources": [
+        "cryptipedia",
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "swapped by spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "swapping tops",
+      "sources": [
+        "cryptipedia",
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "switched by spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "the rev spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "the rev spooner's",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "the rev. spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "the rev. spooner's",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "transposed by spooner",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "verbal slip",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "with spooner's twist",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    }
+  ]
+}

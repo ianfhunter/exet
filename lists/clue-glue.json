@@ -1,0 +1,4162 @@
+{
+  "type": "clue-glue",
+  "title": "Clue glue words",
+  "blurb": "Words and phrases that help cryptic clues read smoothly. They are not wordplay indicators — though some ambiguous entries can occasionally double as weak signals.",
+  "built": "2026-08-17",
+  "count": 494,
+  "sources": [
+    "curated"
+  ],
+  "categories": [
+    {
+      "slug": "definition-linkers",
+      "title": "Definition linkers",
+      "blurb": "Words and phrases that join the definition to the wordplay without signaling an operation — e.g. is, means, becomes.",
+      "css_class": "cat-linker"
+    },
+    {
+      "slug": "neutral-glue",
+      "title": "Neutral glue",
+      "blurb": "Articles, prepositions, relatives, conjunctions, and common frames that usually make a clue read smoothly rather than indicate wordplay.",
+      "css_class": "cat-neutral"
+    },
+    {
+      "slug": "ambiguous",
+      "title": "Ambiguous softeners",
+      "blurb": "Hedge words often used as filler but sometimes weak indicators (perhaps, maybe, reportedly). Context decides.",
+      "css_class": "cat-ambiguous"
+    }
+  ],
+  "entries": [
+    {
+      "phrase": "'m",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "'re",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "'s",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "am",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "appeared",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "appearing",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "appears",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "are",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "became",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "becomes",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "becoming",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "been",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "being",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "called",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "came",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "comes",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "coming",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "considered",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "deemed",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "denoted",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "denotes",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "denoting",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "dubbed",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "gets",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "getting",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "goes",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "going",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "got",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "here's",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "i.e.",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "ie",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "is",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "labeled",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "labelled",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "made",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "makes",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "making",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "meaning",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "means",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "meant",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "named",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "namely",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "proved",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "proves",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "proving",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "represented",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "representing",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "represents",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "said",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "say",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "says",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seemed",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seeming",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seems",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "signified",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "signifies",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "signifying",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "termed",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "that's",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "there's",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "turned",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "turning",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "turns",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "viz",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "was",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "went",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "were",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "what's",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "amounted to",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "amounting to",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "amounts to",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "can be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "could be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "counted as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "counting as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "counts as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "defined as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "described as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "here is",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "here was",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "here were",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "known as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "looked like",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "looking like",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "looks like",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "may be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "might be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "must be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "or rather",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "passed for",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "passes for",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "passing for",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "regarded as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seen as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "served as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "serves as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "serving as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "shall be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "should be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "sounded like",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "sounding like",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "sounds like",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "standing for",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "stands for",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "stood for",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "taken as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "that is",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "that was",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "there are",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "there is",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "there were",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "this is",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "this was",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "to wit",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "understood as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "what are",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "what is",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "what was",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "what were",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "will be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "worked as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "working as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "works as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "would be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "appeared to be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "appears to be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "had to be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "has to be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "in other words",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "needed to be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "needs to be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seemed to be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seems to be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "that would be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "this would be",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "thought of as",
+      "category": "definition-linkers",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "a",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "about",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "above",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "across",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "after",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "again",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "against",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "all",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "also",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "although",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "always",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "amid",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "among",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "an",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "and",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "another",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "any",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "around",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "as",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "at",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "bad",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "because",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "before",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "below",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "besides",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "between",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "big",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "both",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "but",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "by",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "during",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "each",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "either",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "even",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "ever",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "every",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "except",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "few",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "first",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "for",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "from",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "given",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "good",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "great",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "having",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "here",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "high",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "how",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "if",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "in",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "including",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "inside",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "into",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "just",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "large",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "last",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "less",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "like",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "little",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "long",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "low",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "many",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "more",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "most",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "much",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "near",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "never",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "new",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "next",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "no",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "nor",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "not",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "now",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "often",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "old",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "on",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "once",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "one",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "ones",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "only",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "onto",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "or",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "other",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "others",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "outside",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "over",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "previous",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "quite",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "rather",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "same",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "second",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "several",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "short",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "since",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "small",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "so",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "some",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "sometimes",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "still",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "such",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "than",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "that",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "the",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "then",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "there",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "these",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "third",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "this",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "those",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "though",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "through",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "throughout",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "too",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "under",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "unless",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "unlike",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "until",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "upon",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "very",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "what",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "whatever",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "when",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "where",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "which",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "while",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "who",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "whoever",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "whom",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "whose",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "why",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "with",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "without",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "yet",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "young",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "able to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "according to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "along with",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "associated with",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "at a",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "at an",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "at the",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "away from",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "back to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "being a",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "being some",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "being the",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "bit of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "bound to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "characteristic of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "close to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "coming to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "common in",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "concerned with",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "connected with",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "dealing with",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "down to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "due to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "famous for",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "far from",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "followed by",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "for a",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "for an",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "for the",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "form of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "found among",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "found at",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "found by",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "found in",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "found on",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "from a",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "from an",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "from the",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "given a",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "given some",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "given the",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "going to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "group of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "in a",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "in an",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "in the",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "instead of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "involved in",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "involved with",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "kind of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "known at",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "known by",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "known for",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "known in",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "leading to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "less than",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "likely to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "linked to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "lot of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "made by",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "made for",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "made from",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "made in",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "made of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "man who",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "more than",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "next to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "noted for",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "number of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "of a",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "of an",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "of the",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "off of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "on a",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "on an",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "on the",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "one that",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "one who",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "out of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "owing to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "pair of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "part of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "people who",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "piece of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "place to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "popular in",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "preceded by",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "rather than",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "ready to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "related to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "renowned for",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "responsible for",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "resulting in",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "return to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "returning to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seen among",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seen at",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seen by",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seen in",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "seen on",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "set of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "sort of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "thanks to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "thing that",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "those that",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "those who",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "time to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "to a",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "to an",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "to the",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "together with",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "type of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "typical of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "up to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "used as",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "used by",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "used for",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "used in",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "used to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "way to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "woman who",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "as far as",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "as opposed to",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "as well as",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "by means of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "by way of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "in case of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "in light of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "in place of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "in spite of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "in view of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "on account of",
+      "category": "neutral-glue",
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "phrase": "about",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "actually",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "allegedly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "apparently",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "appropriately",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "approximately",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "aptly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "arguably",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "around",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "basically",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "certainly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "clearly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "conceivably",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "critically",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "curiously",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "debatably",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "definitely",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "essentially",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "evidently",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "fairly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "figuratively",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "fittingly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "importantly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "indeed",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "interestingly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "ironically",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "literally",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "maybe",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "notably",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "obviously",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "oddly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "ostensibly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "partially",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "partly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "perhaps",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "plausibly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "possibly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "practically",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "presumably",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "pretty",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "probably",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "quite",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "rather",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "really",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "remarkably",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "reportedly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "roughly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "seemingly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "significantly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "somehow",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "somewhat",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "strangely",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "supposedly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "surely",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "truly",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "very",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "virtually",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "critics say",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "experts say",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "it appears",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "it looks",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "it seems",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "it sounds",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "many say",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "one hears",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "some say",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "they say",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "we hear",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "as it happens",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "as it were",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "believed to be",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "in a sense",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "in a way",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "in some way",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "known to be",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "legend has it",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "more or less",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "reported to be",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "rumor has it",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "rumored to be",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "rumour has it",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "rumoured to be",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "said to be",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "so to speak",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "supposed to be",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "thought to be",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "tradition has it",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "word has it",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    },
+    {
+      "phrase": "as it turns out",
+      "category": "ambiguous",
+      "sources": [
+        "curated"
+      ],
+      "notes": [
+        "May also weakly indicate wordplay in some contexts."
+      ]
+    }
+  ]
+}

@@ -589,6 +589,12 @@ Exet.prototype.setPuzzle = function(puz) {
          title: "&#x1F56A; Homophones~ and &#x1F50A; Spoonerisms&lrhar;"},
       ]
     },
+    {
+      id: "magpie",
+      display: "Magpie",
+      hover: "Build a Magpie annotation interactively",
+      sections: [],
+    },
   ];
   const lastFewTabs = [
     {
@@ -3857,6 +3863,7 @@ Exet.prototype.populateFrame = function() {
   this.makeExetTab();
   this.makeIndsTab();
   this.makeResearchTab();
+  this.makeMagpieTab();
   this.makeWebFillsPanel();
 }
 
@@ -4231,6 +4238,10 @@ Exet.prototype.handleTabClick = function(id) {
   if (id == "research") {
     tab.words = this.makeWordParam(words);
     this.researchTabNav();
+    return;
+  }
+  if (id == "magpie") {
+    this.updateMagpieTab();
     return;
   }
   for (let i = 0; i < tab.sections.length; i++) {
@@ -8505,6 +8516,9 @@ function exetLoadState() {
   }
   if (!exetState.hasOwnProperty('spellcheck')) {
     exetState.spellcheck = false;
+  }
+  if (!exetState.hasOwnProperty('magpieAutoPopulate')) {
+    exetState.magpieAutoPopulate = false;
   }
   if (!exetState.hasOwnProperty('lastBackup')) {
     exetState.lastBackup = Date.now();

@@ -926,3 +926,305 @@ body {
   height: calc(440px / 0.75);
   zoom: 0.75;
 }
+
+/* Magpie annotation builder tab */
+.xet-magpie {
+  max-width: none;
+  width: 100%;
+  font-size: 14px;
+}
+.xet-magpie-auto {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+.xet-magpie-help {
+  margin: 8px 0 12px;
+  color: #444;
+  line-height: 1.4;
+}
+.xet-magpie-label {
+  font-weight: bold;
+  margin: 10px 0 4px;
+  font-size: 13px;
+}
+.xet-magpie-modes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.xet-magpie-modes-label {
+  font-weight: bold;
+  font-size: 13px;
+  margin-right: 4px;
+}
+.xet-magpie-mode-btn.xet-magpie-mode-active {
+  background: #4a90d9 !important;
+  color: #fff !important;
+  border-color: #357abd !important;
+}
+.xet-magpie-answer-block {
+  width: 100%;
+  text-align: center;
+}
+.xet-magpie-answer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+.xet-magpie-mode-select .xet-magpie-chunk {
+  cursor: pointer;
+}
+.xet-magpie-mode-split .xet-magpie-chunk {
+  cursor: default;
+}
+.xet-magpie-chunk {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 3px 2px;
+  margin-top: 12px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background: transparent;
+}
+.xet-magpie-order-badge {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 14px;
+  height: 14px;
+  padding: 0 3px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  text-align: center;
+  color: #fff;
+  background: #4a90d9;
+  border-radius: 7px;
+  pointer-events: none;
+  z-index: 2;
+}
+.xet-magpie-chunk-selected {
+  outline: 2px solid #4a90d9;
+  outline-offset: 1px;
+  background: #e8f2fc;
+}
+.xet-magpie-group-c0 { box-shadow: inset 0 0 0 2px #9b59b6; background: #f8f2fb; }
+.xet-magpie-group-c1 { box-shadow: inset 0 0 0 2px #e67e22; background: #fef6ef; }
+.xet-magpie-group-c2 { box-shadow: inset 0 0 0 2px #16a085; background: #eefaf7; }
+.xet-magpie-group-c3 { box-shadow: inset 0 0 0 2px #c0392b; background: #fdf0ee; }
+.xet-magpie-group-c4 { box-shadow: inset 0 0 0 2px #2980b9; background: #eef5fb; }
+.xet-magpie-group-c5 { box-shadow: inset 0 0 0 2px #8e44ad; background: #f7f0fa; }
+.xet-magpie-grouping {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 8px 10px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.xet-magpie-grouping-label {
+  font-weight: bold;
+  font-size: 13px;
+  margin-right: 4px;
+}
+.xet-magpie-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.1em;
+  min-height: 1.6em;
+  padding: 0 2px;
+  text-align: center;
+  cursor: inherit;
+}
+.xet-magpie-letter-space {
+  opacity: 0.35;
+}
+.xet-magpie-slot {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6px;
+  min-height: 1.6em;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.xet-magpie-slot::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -7px;
+  right: -7px;
+}
+.xet-magpie-gutter {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #4a90d9;
+  background: #fff;
+  border: 1px solid #4a90d9;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.85);
+  transition: opacity 0.1s ease, transform 0.1s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.xet-magpie-slot:hover .xet-magpie-gutter,
+.xet-magpie-gutter:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+.xet-magpie-gutter:hover {
+  background: #e8f2fc;
+}
+.xet-magpie-gutter-on {
+  opacity: 1;
+  pointer-events: auto;
+  width: 14px;
+  height: 14px;
+  font-size: 11px;
+  line-height: 12px;
+  color: #fff;
+  background: #28a745;
+  border-color: #1e7e34;
+  transform: none;
+  box-shadow: none;
+}
+.xet-magpie-gutter-on:hover {
+  background: #218838;
+  border-color: #1c7430;
+}
+.xet-magpie-op-section {
+  margin-bottom: 12px;
+}
+.xet-magpie-op-heading {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+.xet-magpie-ops {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.xet-magpie-field-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.xet-magpie-hidden-row {
+  font-family: monospace;
+  font-size: 15px;
+}
+.xet-magpie-word-input {
+  width: 7em;
+  max-width: 100%;
+  padding: 4px 8px;
+  font-family: monospace;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.xet-magpie-field-label {
+  font-size: 13px;
+  color: #555;
+}
+.xet-magpie-field-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+}
+.xet-magpie-field-paren {
+  font-size: 16px;
+  color: #666;
+  user-select: none;
+}
+.xet-magpie-hidden-answer {
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 2px 4px;
+  background: #fffde7;
+  border-radius: 3px;
+}
+.xet-magpie-op-sep {
+  color: #ccc;
+  margin: 0 2px;
+}
+.xet-magpie-op-active {
+  background: #4a90d9 !important;
+  color: white !important;
+}
+.xet-magpie-preview {
+  font-family: monospace;
+  font-size: 16px;
+  padding: 10px;
+  background: #fffde7;
+  border: 1px solid #e6db55;
+  border-radius: 6px;
+  min-height: 1.5em;
+}
+.xet-magpie-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.xet-magpie-empty {
+  padding: 24px;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  border: 1px dashed #ccc;
+  border-radius: 6px;
+  margin-top: 12px;
+}
