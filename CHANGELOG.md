@@ -1,5 +1,44 @@
 # Changelog
 
+### Exet v1.08, August 15, 2026
+
+- Wrap anagram wordplay chunks in `xet-nowrap` spans that discourage splitting
+  them at line breaks.
+- Use CSS vars to responsively resize tab buttons (width, font-size, padding,
+  with and without hovering). This was sorely needed as we have a lot of tabs
+  now.
+- Reorganize tabs: move anagrammed deletions to the Anagrams tab (cleaving them
+  away from Charades, where they didn't really belong).
+- Move Containers into their own tab, cleaving them away from Anagrams.
+- Render Containments in a better way, using comma-separated entries rather than
+  one-line-per entry. This now creates a wider table, better utilizing the
+  full available width.
+- Throttle handler response to resizing, adding a `throttledReposition()`
+  function that calls `reposition()` after accumulating over 400ms.
+- Add all clueclinic pages to the indicator Lists. Note that xlufz now
+  allow-lists these, so we can also highlight entries related to any theme.
+- Add a "group:" optional field to indicator list entries, to group the
+  now rather long menu using optgroups.
+- Organize the indicator lists better. My (subjective, but good, IMO!)
+  preferred lists are at the top.
+- We had some code in `reposition()` that would compare `this.puz.viewportDim`
+  with `this.puz.getViewportDim()` and if the difference was more than 25
+  and the original grid had been scaled down (< 31), then we would call
+  `updatePuzzle()` to scale up the grid to use the bigger space that's now
+  available. However, this was buggy, esp. on mobile, as
+  `this.puz.getViewportDim()` would always return a bigger number as it used
+  the window's rendereed width, which used Exet elements too. So, moved this
+  check to use the same post-exet-rendering width as the comparison point
+  (rather than `this.puz.viewportDim`). Also made this resizing happen at
+  most once. The main use case is that Chrome sometimes restarts the window
+  in a minimal state, which makes Exet start with a very small grid. When
+  that window is resized to normal, the grid expands (but as a one-time thing
+  only).
+
+### Exet v1.07.6, August 11, 2026
+- Add tab for Acrostics and Terminal Acrostics via Nutrimatics
+- e.g. "Empress Xian established the (EXET) foremost (acrostic indicator) crossword application (definition)"
+
 ### Exet v1.07.5, August 2, 2026
 
 - Add Open English Wordnet as a Research source.

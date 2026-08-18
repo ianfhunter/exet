@@ -24,7 +24,7 @@ SOFTWARE.
 The latest code and documentation for Exet can be found at:
 https://github.com/viresh-ratnakar/exet
 
-Current version: v1.05.1, May 22, 2026
+Current version: v1.08, August 15, 2026
 */
 
 function xetSpinnerHtml(msg) {
@@ -111,7 +111,7 @@ ExetModals.prototype.hide = function() {
 }
 
 function Exet() {
-  this.version = 'v1.04.2, April 11, 2026';
+  this.version = 'v1.08, August 15, 2026';
   this.puz = null;
   this.prefix = '';
   this.suffix = '';
@@ -176,6 +176,7 @@ function Exet() {
   this.throttledClueTimer = null;
   this.throttledMetadataTimer = null;
   this.throttledCharadeTimer = null;
+  this.throttledRepositionTimer = null;
   this.viabilityUpdateTimer = null;
   this.throttledLightRegexpTimer = null;
   /** headword (lower) -> expansions[], from lists/abbreviations.json */
@@ -587,27 +588,36 @@ Exet.prototype.setPuzzle = function(puz) {
       sections: [],
     },
     {
-      id: "wordplay1",
-      display: "Anagrams/()",
-      hover: "Anagrams, composite anagrams, containments",
+      id: "anagrams",
+      display: "Anagrams",
+      hover: "Anagrams, composite/extended anagrams, anagrammed deletions",
       sections: [
         {id: "xet-companag", maker: this.makeCAParam,
          title: "Anagrams, composite/extended anagrams",},
-        {id: "xet-containments", maker: this.makeCharadeParam,
-         title: "Containments"},
+        {id: "xet-anagdel", maker: this.makeCharadeParam,
+         title: "Anagrammed deletions"},
       ],
     },
     {
-      id: "wordplay2",
-      display: "Charades/-",
-      hover: "Charades, anagrammed deletions",
+      id: "containers",
+      display: "Containers",
+      hover: "Containments and insertions",
+      sections: [
+        {id: "xet-containments", maker: this.makeCharadeParam,
+         title: "Containments and insertions"},
+      ],
+    },
+    {
+      id: "charades",
+      display: "Charades",
+      hover: "Charades",
       sections: [
         {id: "xet-charades", maker: this.makeCharadeParam,
-         title: "Charades, anagrammed deletions"},
+         title: "Charades"},
       ],
     },
     {
-      id: "wordplay3",
+      id: "edits-and-sounds",
       display: "Edits, Sounds",
       hover: "Edits (small substitutions, insertions, deletions), " +
              "Homophones, Spoonerisms",
@@ -3106,13 +3116,38 @@ Exet.prototype.makeIndsTab = function() {
   <div>
   <select name="xet-inds-select" id="xet-inds-select"
     onchange="exet.indsTabNav()">`
-  for (let ind of inds) {
+  let groupName = "";
+  for (const ind of inds) {
     if (ind.name == "separator") {
       html += this.MENU_SEPARATOR;
       continue;
     }
+    let closeGroup = false;
+    let openGroup = false;
+    if (ind.group) {
+      if (ind.group != groupName) {
+        closeGroup = true;
+        openGroup = true;
+        groupName = ind.group;
+      }
+    } else if (groupName) {
+      closeGroup = true;
+      groupName = "";
+    }
+    if (closeGroup) {
+      html += `
+    </optgroup>`;
+    }
+    if (openGroup) {
+      html += `
+    <optgroup label="${groupName}">`;
+    }
     html += `
     <option value="${ind.url}">${ind.name}</option>`
+  }
+  if (groupName) {
+    html += `
+    </optgroup>`;
   }
   html += '</select>';
   html += `
@@ -3541,6 +3576,8 @@ Exet.prototype.useLongFodder = function(name, section) {
     this.updateCharades(section.param);
   } else if (section.id == 'xet-containments') {
     this.updateContainments(section.param);
+  } else if (section.id == 'xet-anagdel') {
+    this.updateAnagdel(section.param);
   } else if (name == 'xet-companag') {
     this.updateCA();
   }
@@ -3571,53 +3608,54 @@ Exet.prototype.updateCharades = function(fodder) {
   this.charadeParts = 2;  /* 1-part is already seen in Anagrams */
   this.charadeSplits = null;
   this.charadeSplitIndex = 0;
-  this.charadeDeletionsAdded = false;
   this.charadeFodder = exetLexicon.lettersOf(fodder);
   this.maybeTrimLongFodder(this.charadeFodder, 'xet-charades');
   this.charadeMax = Math.min(this.charadeFodder.length, 4);
   this.updateCharadesPartial();
 }
 
-Exet.prototype.addDeletionCharades = function() {
+/**
+ * Populates the "Anagrammed deletions" section (peer to Anagrams on the
+ * Anagrams), showing candidates of the form A* - B*.
+ */
+Exet.prototype.updateAnagdel = function(fodder) {
+  const fodderLetters = exetLexicon.lettersOf(fodder);
+  this.maybeTrimLongFodder(fodderLetters, 'xet-anagdel');
   const wordsMinuses = exetLexicon.getSupersetAnagrams(
-      this.charadeFodder, 1000, 6, 2);
-  const words = [];
-  const minuses = [];
-  const scores = [];
+      fodderLetters, 1000, 6, 2);
+  const candidates = [];
   for (const wm of wordsMinuses) {
     const word = exetLexicon.lexicon[wm[0]];
-    words.push(word);
     const dispDiffAnags = exetLexicon.displayAnagrams(wm[1], wm[2]);
     let diffAnagsStr = dispDiffAnags.join(', ');
     if (dispDiffAnags.length > 1) {
       diffAnagsStr = '<span class="xet-blue">[</span>' + diffAnagsStr +
                      '<span class="xet-blue">]</span>';
     }
-    minuses.push(this.annotateAbbrevInHtml(diffAnagsStr));
-    /**
-     * High score to put all deletions on top of other charades, for
-     * convenience. Shorter deletions are shown first.
-     */
-    scores.push(100 - wm[1].length);
-  }
-  for (let i = 0; i < words.length; i++) {
-    const charadeStruct = {
+    diffAnagsStr = this.annotateAbbrevInHtml(diffAnagsStr);
+    candidates.push({
       charade: '<span class="xet-blue">*</span>(' +
-               this.wrapAbbrevDisplayHtml(this.escapeHtml(words[i]), words[i]) +
+               this.wrapAbbrevDisplayHtml(this.escapeHtml(word), word) +
                ' <span class="xet-blue">minus</span> ' +
-               minuses[i] + ')',
-      score: scores[i],
-    }
-    this.charadeCandidates.push(charadeStruct);
+               diffAnagsStr + ')',
+      /* Shorter deletions are shown first. */
+      score: 100 - wm[1].length,
+    });
   }
-  this.charadeDeletionsAdded = true;
+  candidates.sort((a, b) => b.score - a.score);
+  let html = '<table class="xet-wordplay-choices xet-gray-bordered-rows">'
+  for (const candidate of candidates) {
+    html = html + `
+      <tr>
+        <td>${candidate.charade}</td>
+      </tr>`;
+  }
+  html = html + '</table>';
+  this.anagdel.innerHTML = html;
 }
 
 Exet.prototype.updateCharadesPartial = function(work=100, sleep=50) {
   const startTS = Date.now()
-  if (!this.charadeDeletionsAdded) {
-    this.addDeletionCharades();
-  }
   while (this.charadeParts <= this.charadeMax) {
     if (!this.charadeSplits) {
       this.charadeSplits = this.getAllSplits(
@@ -4079,22 +4117,10 @@ Exet.prototype.updateContainments = function(fodder) {
       html += '\n<tr><td colspan="3"><hr></td></tr>';
     }
     num++;
-    const min = Math.min(outerAnagrams.length, innerAnagrams.length);
-    const max = Math.max(outerAnagrams.length, innerAnagrams.length);
-    for (let i = 0; i < min; i++) {
-      html += `
-        <tr><td>${outerAnagrams[i]}</td>
-        <td>${(i == 0) ? '<span class="xet-blue">around</span>' : ''}</td>
-        <td>${innerAnagrams[i]}</td></tr>`;
-    }
-    for (let i = min; i < outerAnagrams.length; i++) {
-      html += `
-        <tr><td>${outerAnagrams[i]}</td><td></td><td></td></tr>`;
-    }
-    for (let i = min; i < innerAnagrams.length; i++) {
-      html += `
-        <tr><td></td><td></td><td>${innerAnagrams[i]}</td></tr>`;
-    }
+    html += `
+      <tr><td>${outerAnagrams.join(', ')}</td>
+      <td><span class="xet-blue">around</span></td>
+      <td>${innerAnagrams.join(', ')}</td></tr>`;
   }
   html += '</table>';
   this.containments.innerHTML = html;
@@ -4160,6 +4186,16 @@ Exet.prototype.populateCompanag = function() {
   this.caExtra = document.getElementById('xet-ca-extra');
 }
 
+Exet.prototype.urlSectionHtml = function(id, section, i, sectionClass) {
+  const titleHover = section.hover ? `title="${section.hover} "` : '';
+  return `
+    <div ${titleHover}class="xet-bold">${section.title || ''}</div>
+    <a href="" target="_blank" id="xet-${id}-url-${i}"
+        class="xet-blue xet-small"></a><br>
+    <iframe class="xet-iframe ${sectionClass}" id="xet-${id}-content-${i}">
+    </iframe>`;
+}
+
 Exet.prototype.populateFrame = function() {
   const tabIds = Object.keys(this.tabs);
   const row1Count = Math.ceil(tabIds.length / 2);
@@ -4181,21 +4217,31 @@ Exet.prototype.populateFrame = function() {
     const tab = this.tabs[id];
     frameHTML += `<div class="xet-tab-content" id="xet-${id}-frame">`;
     if (tab.sections.length > 0) {
-      console.assert(tab.sections.length <= 2);
-      const sectionClass = tab.sections.length > 1 ? 'xet-half-section' : 'xet-section';
-      frameHTML += `<div id="xet-${id}-sections"><table class="xet-sections"><tr>`;
-      for (let i = 0; i < tab.sections.length; i++) {
-        const section = tab.sections[i];
+      const layout = tab.layout || (tab.sections.length > 1 ? '2col' : '1col');
+      if (layout == '1+2') {
+        console.assert(tab.sections.length == 3);
+        frameHTML += `<div id="xet-${id}-sections"><table class="xet-sections"><tr>`;
         frameHTML += '<td class="xet-td">';
-        const titleHover = section.hover ? `title="${section.hover} "` : '';
-        if (section.url) {
-          frameHTML += `
-            <div ${titleHover}class="xet-bold">${section.title || ''}</div>
-            <a href="" target="_blank" id="xet-${id}-url-${i}"
-                class="xet-blue xet-small"></a><br>
-            <iframe class="xet-iframe ${sectionClass}" id="xet-${id}-content-${i}">
-            </iframe>`;
-        } else {
+        frameHTML += this.urlSectionHtml(id, tab.sections[0], 0, 'xet-half-section');
+        frameHTML += '</td><td class="xet-td">';
+        frameHTML += this.urlSectionHtml(id, tab.sections[1], 1, 'xet-quarter-section');
+        frameHTML += this.urlSectionHtml(id, tab.sections[2], 2, 'xet-quarter-section');
+        frameHTML += '</td>';
+        frameHTML += `
+        </tr>
+        </table>
+        </div>`;
+      } else {
+        console.assert(tab.sections.length <= 2);
+        const sectionClass = tab.sections.length > 1 ? 'xet-half-section' : 'xet-section';
+        frameHTML += `<div id="xet-${id}-sections"><table class="xet-sections"><tr>`;
+        for (let i = 0; i < tab.sections.length; i++) {
+          const section = tab.sections[i];
+          frameHTML += '<td class="xet-td">';
+          const titleHover = section.hover ? `title="${section.hover} "` : '';
+          if (section.url) {
+            frameHTML += this.urlSectionHtml(id, section, i, sectionClass);
+          } else {
           const paramHtml = `
             <br>
             <input id="${section.id}-param" class="xlv-answer"
@@ -4214,13 +4260,14 @@ Exet.prototype.populateFrame = function() {
                 class="xet-in-tab-scrollable ${sectionClass}">
               </div>
             </div>`;
+          }
+          frameHTML += '</td>';
         }
-        frameHTML += '</td>';
-      }
-      frameHTML += `
+        frameHTML += `
         </tr>
         </table>
         </div>`;
+      }
     } else {
       frameHTML += `
         <div id="xet-${id}-content"></div>`;
@@ -4233,6 +4280,7 @@ Exet.prototype.populateFrame = function() {
   this.edits = document.getElementById('xet-edits-box');
   this.sounds = document.getElementById('xet-sounds-box');
   this.containments = document.getElementById('xet-containments-box');
+  this.anagdel = document.getElementById('xet-anagdel-box');
 
   this.populateCompanag();
 
@@ -4555,6 +4603,39 @@ Exet.prototype.nutrRevHiddenParam = function(s) {
          '"' + sL[last] + 'A"A*';
 }
 
+/** Nutrimatic-specific maker: first letters of successive words */
+Exet.prototype.nutrAcrosticParam = function(s) {
+  const sL = exetLexicon.lcLettersOf(s);
+  if (sL.length < 1) return s;
+  return '"' + sL.map(c => c + 'A*').join('%20') + '"';
+}
+
+/** Nutrimatic-specific maker: last letters of successive words (telestichs) */
+Exet.prototype.nutrTelestichParam = function(s) {
+  const sL = exetLexicon.lcLettersOf(s);
+  if (sL.length < 1) return s;
+  return '"' + sL.map(c => 'A*' + c).join('%20') + '"';
+}
+
+/** 
+ * Nutrimatic-specific maker: first+last letters of successive words.
+ * Odd-length answers end with a one-letter word for the leftover letter.
+ */
+Exet.prototype.nutrBothEndsParam = function(s) {
+  const sL = exetLexicon.lcLettersOf(s);
+  if (sL.length < 2) return s;
+  const parts = [];
+  let i = 0;
+  while (i + 1 < sL.length) {
+    parts.push(sL[i] + 'A*' + sL[i + 1]);
+    i += 2;
+  }
+  if (i < sL.length) {
+    parts.push(sL[i]);
+  }
+  return '"' + parts.join('%20') + '"';
+}
+
 /** Nutrimatic-specific maker for finding grid-fills */
 Exet.prototype.nutrFillParam = function(s) {
   return s.toLowerCase().replace(/\?/g, 'A');
@@ -4581,6 +4662,12 @@ Exet.prototype.getNamedMaker = function(name) {
     return this.nutrAlternationParam;
   } else if (name == 'Nutrimatic-RevAlternation') {
     return this.nutrRevAlternationParam;
+  } else if (name == 'Nutrimatic-Acrostic') {
+    return this.nutrAcrosticParam;
+  } else if (name == 'Nutrimatic-Telestich') {
+    return this.nutrTelestichParam;
+  } else if (name == 'Nutrimatic-BothEnds' || name == 'Nutrimatic-Terminals') {
+    return this.nutrBothEndsParam;
   } else if (name == 'Nutrimatic-Fill') {
     return this.nutrFillParam;
   } else if (name == 'Qat-Fill') {
@@ -4700,6 +4787,8 @@ Exet.prototype.handleTabClick = function(id) {
       this.updateContainments(wordParam);
     } else if (section.id == 'xet-synonyms') {
       this.updateSynonyms(wordParam);
+    } else if (section.id == 'xet-anagdel') {
+      this.updateAnagdel(wordParam);
     } else if (section.id == 'xet-companag') {
       if (newLight) {
         this.caAnagram.value = '';
@@ -5149,11 +5238,16 @@ Exet.prototype.resizeRHS = function() {
   const sectionW = frameW - 16;
   const halfSectionW = Math.floor(sectionW / 2) - 16;
   const sectionH = 410 + extraH;
+  /* Per-section title + url link; budget into 1+2 right-column stack height. */
+  const nutriSectionChrome = 40;
+  const quarterSectionH =
+      Math.floor((sectionH - nutriSectionChrome) / 2);
   /* Compensate zoom so Nutrimatic iframes keep the same on-page footprint. */
   const nutriZoom = 0.75;
   const nutriSectionW = Math.floor(sectionW / nutriZoom);
   const nutriHalfSectionW = Math.floor(halfSectionW / nutriZoom);
   const nutriSectionH = Math.floor(sectionH / nutriZoom);
+  const nutriQuarterSectionH = Math.floor(quarterSectionH / nutriZoom);
   const cluesW = frameW - 320;
   this.fillSettings.style.width = '' + cluesW + 'px';
   let style = `
@@ -5168,8 +5262,12 @@ Exet.prototype.resizeRHS = function() {
       height: ${450 + extraH}px;
     }
     .xet-half-section,
+    .xet-quarter-section,
     .xet-section {
       height: ${sectionH}px;
+    }
+    .xet-quarter-section {
+      height: ${quarterSectionH}px;
     }
     #xet-light-choices-box,
     .xet-clues-panel,
@@ -5182,6 +5280,9 @@ Exet.prototype.resizeRHS = function() {
     .xet-half-section {
       width: ${halfSectionW}px;
     }
+    .xet-quarter-section {
+      width: ${halfSectionW}px;
+    }
     .xet-nutrimatic-iframe.xet-section {
       width: ${nutriSectionW}px;
       height: ${nutriSectionH}px;
@@ -5190,6 +5291,11 @@ Exet.prototype.resizeRHS = function() {
     .xet-nutrimatic-iframe.xet-half-section {
       width: ${nutriHalfSectionW}px;
       height: ${nutriSectionH}px;
+      zoom: ${nutriZoom};
+    }
+    .xet-nutrimatic-iframe.xet-quarter-section {
+      width: ${nutriHalfSectionW}px;
+      height: ${nutriQuarterSectionH}px;
       zoom: ${nutriZoom};
     }
     .xet-frame {
@@ -5211,22 +5317,33 @@ Exet.prototype.resizeRHS = function() {
       }
     `;
   }
+  /** Resize tab buttons — tabs span two rows, so size from the fuller row. */
+  const tabIds = Object.keys(this.tabs);
+  const row1Count = Math.ceil(tabIds.length / 2);
+  const row2Count = tabIds.length - row1Count;
+  const maxTabsInRow = Math.max(row1Count, row2Count, 1);
+  const tabtnWidth = Math.max(48, Math.floor(frameW / maxTabsInRow));
+  const tabtnFontSize = Math.max(10, Math.min(14, Math.floor(tabtnWidth / 8)));
+  const tabtnHpad = Math.max(4, Math.floor(tabtnWidth / 20));
+  const root = document.documentElement;
+  root.style.setProperty('--tabtn-font-size', '' + tabtnFontSize + 'px');
+  root.style.setProperty('--tabtn-pad', '2px ' + tabtnHpad + 'px');
+
   this.customStyles.innerHTML = style;
   this.puz.equalizeClueWidths(cluesW);
 }
 
-Exet.prototype.reposition = function() {
-  if (this.puz.squareDim < 31 &&
-      (this.puz.getViewportDim() - this.puz.viewportDim > 25)) {
-    /**
-     * The window is substantially bigger than when we created the grid. Let's
-     * just force a redraw (we don't use Exolve's resizing because that would
-     * create a new puz.grid and we would have to take care of re-adding
-     * viablots and forcedLetters * to the reborn gridCell.cellGroup fields.
-     */
-    this.updatePuzzle();  /** revType = default 0 won't actually save */
-    return;
+Exet.prototype.throttledReposition = function() {
+  if (this.throttledRepositionTimer) {
+    clearTimeout(this.throttledRepositionTimer);
   }
+  this.throttledRepositionTimer = setTimeout(() => {
+    this.reposition();
+    this.throttledRepositionTimer = null;
+  }, this.inputLagMS);
+}
+
+Exet.prototype.reposition = function() {
   const elts = [this.xetTitle, this.xetTitleCTA,
                 this.xetSetter, this.xetSetterCTA, this.preamble];
   for (const elt of elts) {
@@ -5264,6 +5381,25 @@ Exet.prototype.reposition = function() {
     }
   }
   this.resizeRHS();
+
+  const vpd = this.puz.getViewportDim();
+  if (this.puz.squareDim < this.puz.DEFAULT_CELL_DIM &&
+      !this.alreadyResized && this.lastViewportDim &&
+      (vpd - this.lastViewportDim > 25)) {
+    /**
+     * The window is substantially bigger than when we created the grid. Let's
+     * just force a redraw (we don't use Exolve's resizing because that would
+     * create a new puz.grid and we would have to take care of re-adding
+     * viablots and forcedLetters to the reborn gridCell.cellGroup fields.
+     *
+     * We only do this once, mainly for the common scenario of Chrome
+     * restarting with a minimized window.
+     */
+    this.alreadyResized = true;
+    this.updatePuzzle();  /** revType = default 0 won't actually save */
+    return;
+  }
+  this.lastViewportDim = vpd;
 }
 
 Exet.prototype.lastTagOpener = function(s) {
@@ -5738,7 +5874,6 @@ Exet.prototype.makeClueEditable = function() {
   this.puz.currClue.appendChild(nextprevSpan);
   nextprevSpan.innerHTML = `
       <button id="xet-clue-menu-button"
-          style="padding: 1px 4px"
           title="Click to see more options for ${this.puz.clueLabelDisp(theClue)}."
           class="xlv-small-button xlv-nextprev">&#9776;<div
             id="xet-clue-menu" class="xet-clue-menu">
@@ -5764,11 +5899,11 @@ Exet.prototype.makeClueEditable = function() {
       <button id="xet-prev"
         class="xlv-small-button xet-nextprev"
         title="${this.puz.textLabels['curr-clue-prev.hover']}"
-          >${this.puz.textLabels['curr-clue-prev']}</button>
+          >&#8249;</button>
       <button id="xet-next"
         class="xlv-small-button xlv-nextprev"
         title="${this.puz.textLabels['curr-clue-next.hover']}"
-          >${this.puz.textLabels['curr-clue-next']}</button>
+          >&#8250;</button>
       `;
   this.clueMenuButton = document.getElementById('xet-clue-menu-button');
   this.clueMenu = document.getElementById('xet-clue-menu');
@@ -8610,8 +8745,9 @@ Exet.prototype.finishSetup = function() {
   /** Check every 10 minutes */
   setInterval(this.periodicChecks.bind(this), 10 * 60 * 1000);
 
-  window.addEventListener('scroll', this.reposition.bind(this));
-  window.addEventListener('resize', this.reposition.bind(this));
+  const reposHandler = this.throttledReposition.bind(this);
+  window.addEventListener('scroll', reposHandler);
+  window.addEventListener('resize', reposHandler);
 
   const formatRevealer = this.maybeShowFormat.bind(this);
   document.addEventListener('selectionchange', formatRevealer);

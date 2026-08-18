@@ -2,7 +2,7 @@
 
 ## A web app for crossword construction
 
-#### Version: Exet v1.07.5, August 2, 2026
+#### Version: Exet v1.08, August 15, 2026
 
 #### Author: Viresh Ratnakar
 
@@ -904,6 +904,12 @@ top in each tab. These tabs are:
 - **Alternations**: Uses [nutrimatic.org](https://nutrimatic.org) to show
   "alternation" and "reversed alternation" wordplays for the entry in the
   current light.
+- **Acrostics**: Uses [nutrimatic.org](https://nutrimatic.org) to show
+  "acrostic" (initials of successive words), "tail acrostic" (final letters
+  of successive words, aka telestichs), and "both ends" (first and last
+  letters of successive words) wordplays for the entry in the current light.
+  For odd-length both-ends answers, the leftover letter is a one-letter word
+  at the end of the query (you can move it if you prefer it elsewhere).
 
   <details>
     <summary>

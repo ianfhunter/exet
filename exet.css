@@ -156,7 +156,7 @@ body {
   border: 1px solid var(--xet-border);
   border-bottom: 0;
   border-radius: var(--xet-radius-tab);
-  overflow: hidden;
+  overflow: visible;
 }
 .xet-tab-bar .xet-tab {
   display: flex;
@@ -166,13 +166,16 @@ body {
   border: 0;
   border-radius: 0;
   background-color: inherit;
-  overflow: hidden;
+  overflow: visible;
 }
 .xet-tab-bar .xet-tab-row-1 {
   border-bottom: 1px solid var(--xet-border);
 }
+:root {
+  --tabtn-font-size: 13px;
+  --tabtn-pad: 2px 8px;
+}
 .xet-tab button {
-  font-size: 14px;
   flex: 1 1 0;
   min-width: 0;
   width: auto;
@@ -181,8 +184,10 @@ body {
   float: none;
   outline: none;
   cursor: pointer;
-  padding: 2px 8px;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  padding: var(--tabtn-pad);
+  transition: background-color 0.15s ease, color 0.15s ease,
+    box-shadow 0.12s ease;
+  font-size: var(--tabtn-font-size);
   font-weight: bold;
   border-radius: 0;
   border: 1px solid transparent;
@@ -197,6 +202,9 @@ body {
   border-bottom: 0;
   color: var(--xet-text);
   cursor: pointer;
+  box-shadow: var(--xet-shadow);
+  z-index: 2;
+  position: relative;
 }
 .xet-tab button.active {
   background-color: var(--xet-surface);
@@ -258,6 +266,7 @@ body {
   padding: 4px;
 }
 .xet-half-section,
+.xet-quarter-section,
 .xet-section {
   border: 0;
   overflow: auto;
@@ -302,6 +311,7 @@ body {
 .xet-curr-clue {
   min-height: 80px;
   overflow-y: auto;
+  padding-top: 8px;
 }
 .xet-clue-menu {
   border: 1px solid var(--xet-border);
@@ -330,24 +340,65 @@ body {
   margin: 0 3px 0 0;
 }
 #xet-nextprev-span {
+  position: absolute;
+  top: -34px;
+  left: 0;
   z-index: 1;
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  border: 1px solid var(--xet-border);
+  border-radius: var(--xet-radius);
+  box-shadow: var(--xet-shadow);
+  background-color: var(--xet-surface);
+  overflow: hidden;
 }
 #xet-nextprev-span .xlv-small-button {
   color: var(--xet-accent) !important;
-  border: 1px solid var(--xet-border);
+  background-color: var(--xet-surface);
+  border: none;
+  border-right: 1px solid var(--xet-border-subtle);
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
   vertical-align: text-top;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+#xet-nextprev-span .xlv-small-button:last-child {
+  border-right: none;
+}
+#xet-nextprev-span .xlv-small-button:hover {
+  background-color: var(--xet-accent-muted);
+  color: var(--xet-accent) !important;
+}
+#xet-clue-menu-button {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  padding: 0 5px !important;
+}
+#xet-prev,
+#xet-next {
+  font-size: 16px;
+  padding: 0 7px !important;
 }
 #xet-unlink {
   padding: 4px;
 }
-#xet-nextprev-span,
 .xet-above-clue-panel {
   position: absolute;
   top: -18px;
   left: 0;
   background-color: var(--xet-surface);
-}
-.xet-above-clue-panel {
   box-sizing: border-box;
   color: var(--xet-accent);
   border: 1px solid var(--xet-accent);
@@ -450,6 +501,9 @@ body {
 .xet-blue {
   color: var(--xet-accent);
   text-decoration: none;
+}
+.xet-nowrap {
+  white-space: nowrap;
 }
 .xet-small {
   font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
