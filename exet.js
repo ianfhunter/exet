@@ -4049,6 +4049,208 @@ Exet.prototype.renderWordNetSynonyms = function(box, word) {
   box.innerHTML = html;
 }
 
+/**
+ * Lazily load prior-clues core, manifest, and data parts.
+ */
+Exet.prototype.ensurePriorClues = function(callback) {
+  if (typeof exetPriorClues == 'object' && exetPriorClues && exetPriorClues.ready) {
+    callback();
+    return;
+  }
+  if (!this.priorCluesCallbacks_) {
+    this.priorCluesCallbacks_ = [];
+  }
+  this.priorCluesCallbacks_.push(callback);
+  if (this.priorCluesLoading_) {
+    return;
+  }
+  this.priorCluesLoading_ = true;
+
+  const finishOk = () => {
+    this.priorCluesLoading_ = false;
+    const cbs = this.priorCluesCallbacks_ || [];
+    this.priorCluesCallbacks_ = [];
+    for (let i = 0; i < cbs.length; i++) {
+      cbs[i]();
+    }
+  };
+
+  const finishErr = (msg) => {
+    this.priorCluesLoading_ = false;
+    this.priorCluesCallbacks_ = [];
+    if (this.tabs && this.tabs['prior-clues'] && this.tabs['prior-clues'].sections) {
+      for (let i = 0; i < this.tabs['prior-clues'].sections.length; i++) {
+        this.tabs['prior-clues'].sections[i].param = null;
+      }
+    }
+    const box = document.getElementById('xet-prior-clues-box');
+    if (box) {
+      box.innerHTML = '<div class="xet-red">' + msg + '</div>';
+    }
+  };
+
+  const loadScript = (src) => new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error('Failed to load ' + src));
+    document.head.appendChild(script);
+  });
+
+  const loadParts = (parts, idx) => {
+    if (idx >= parts.length) {
+      exetPriorClues.finalize();
+      finishOk();
+      return;
+    }
+    loadScript(parts[idx] + '?v1.08').then(() => {
+      loadParts(parts, idx + 1);
+    }).catch((e) => {
+      finishErr('Failed to load prior-clues data: ' + e.message);
+    });
+  };
+
+  const start = () => {
+    if (typeof exetPriorCluesManifest != 'object' || !exetPriorCluesManifest ||
+        !exetPriorCluesManifest.parts || !exetPriorCluesManifest.parts.length) {
+      finishErr('Missing prior-clues manifest (wordlists/built/prior-clues-manifest.js). ' +
+                'Run tools/build-prior-clues-index.py');
+      return;
+    }
+    loadParts(exetPriorCluesManifest.parts, 0);
+  };
+
+  if (typeof exetPriorClues == 'object' && exetPriorClues && exetPriorClues.loadPart) {
+    loadScript('wordlists/built/prior-clues-manifest.js?v1.08').then(start).catch((e) => {
+      finishErr('Failed to load prior-clues manifest: ' + e.message);
+    });
+    return;
+  }
+
+  loadScript('exet-prior-clues.js?v1.08').then(() => {
+    return loadScript('wordlists/built/prior-clues-manifest.js?v1.08');
+  }).then(start).catch((e) => {
+    finishErr('Failed to load prior-clues core: ' + e.message);
+  });
+};
+
+Exet.prototype.updatePriorClues = function(fodder) {
+  const box = document.getElementById('xet-prior-clues-box');
+  if (!box) {
+    return;
+  }
+  const word = (fodder || '').trim();
+  if (!word) {
+    box.innerHTML = '<div class="xet-small">Fill or select a light to look up ' +
+                    'published clues.</div>';
+    return;
+  }
+  if (/[?]/.test(word)) {
+    box.innerHTML = '<div class="xet-small">Complete the answer (no ? ' +
+                    'wildcards) to look up published clues.</div>';
+    return;
+  }
+  const ready = (typeof exetPriorClues == 'object' && exetPriorClues &&
+                 exetPriorClues.ready);
+  const loadingMsg = ready ?
+      'Looking up published clues…' :
+      'Loading published-clue index…';
+  box.innerHTML = xetSpinnerHtml(loadingMsg);
+  const requested = word;
+  const render = () => {
+    const section = this.tabs['prior-clues'] && this.tabs['prior-clues'].sections &&
+                    this.tabs['prior-clues'].sections[0];
+    if (section && section.paramInput &&
+        section.paramInput.value.trim() != requested) {
+      return;
+    }
+    if (!this.priorCluesRenderGen_) {
+      this.priorCluesRenderGen_ = 0;
+    }
+    const gen = ++this.priorCluesRenderGen_;
+    xetAfterPaint(() => {
+      if (gen != this.priorCluesRenderGen_) {
+        return;
+      }
+      this.renderPriorClues(box, requested);
+    });
+  };
+  if (ready) {
+    render();
+    return;
+  }
+  this.ensurePriorClues(render);
+};
+
+Exet.prototype.renderPriorClues = function(box, word) {
+  if (typeof exetPriorClues != 'object' || !exetPriorClues || !exetPriorClues.ready) {
+    box.innerHTML = '<div class="xet-red">Prior-clues data is unavailable.</div>';
+    return;
+  }
+  const key = exetPriorClues.answerKey(word);
+  const results = exetPriorClues.lookUp(word);
+  const stats = exetPriorClues.stats || {};
+  let html = `<div class="xet-small xet-prior-clues-header">
+      <span class="xet-blue">${this.escapeHtml(key || word)}</span>`;
+  if (results.length) {
+    html += ` · ${results.length} clue${results.length == 1 ? '' : 's'}`;
+  }
+  html += '</div>';
+  if (!results.length) {
+    html += '<div class="xet-small">No published clues found for this answer in ' +
+            'the offline index.</div>';
+    if (stats.sample) {
+      html += `<div class="xet-small xet-prior-clues-sample-note">
+          Sample index only (try CREATED, PIANO, or SHARE). Build the full index:
+          <code>python tools/fetch-prior-clues-data.py</code> then
+          <code>python tools/build-prior-clues-index.py</code>.
+        </div>`;
+    }
+    box.innerHTML = html;
+    return;
+  }
+  html += `<table class="xet-prior-clues xet-gray-bordered-rows">
+      <thead><tr>
+        <th>Clue</th>
+        <th>Source</th>
+        <th>Def</th>
+      </tr></thead><tbody>`;
+  for (let i = 0; i < results.length; i++) {
+    const r = results[i];
+    const kindLabel = r.kind == 'cryptic' ? 'Cryptic' :
+        (r.kind == 'xd' ? 'xd' : '');
+    const sourceCell = r.label ?
+        `<span class="xet-prior-clues-kind">${this.escapeHtml(kindLabel)}</span> ` +
+        this.escapeHtml(r.label) :
+        this.escapeHtml(r.source || '');
+    const defCell = r.definition ?
+        this.escapeHtml(r.definition) : '<span class="xet-small">—</span>';
+    html += `
+      <tr>
+        <td class="xet-prior-clues-clue">${this.escapeHtml(r.clue)}</td>
+        <td class="xet-prior-clues-source xet-small">${sourceCell}</td>
+        <td class="xet-prior-clues-def xet-small">${defCell}</td>
+      </tr>`;
+  }
+  html += '</tbody></table>';
+  if (stats.sample) {
+    html += `<div class="xet-small xet-prior-clues-sample-note">
+        Sample index — build the full database with
+        <code>tools/fetch-prior-clues-data.py</code> and
+        <code>tools/build-prior-clues-index.py</code>.
+      </div>`;
+  } else {
+    html += `<div class="xet-small xet-prior-clues-attrib">
+        Cryptic clues: <a href="https://cryptics.georgeho.org/" target="_blank"
+        rel="noopener">cryptics.georgeho.org</a> (ODbL).
+        xd clues: <a href="https://xd.saul.pw/data" target="_blank"
+        rel="noopener">xd.saul.pw</a>.
+        ${stats.answers ? (stats.answers + ' answers indexed.') : ''}
+      </div>`;
+  }
+  box.innerHTML = html;
+};
+
 Exet.prototype.updateCA = function() {
   const fodderLetters = exetLexicon.lettersOf(this.caFodder.value);
   this.maybeTrimLongFodder(fodderLetters, 'xet-companag');
@@ -4787,6 +4989,8 @@ Exet.prototype.handleTabClick = function(id) {
       this.updateContainments(wordParam);
     } else if (section.id == 'xet-synonyms') {
       this.updateSynonyms(wordParam);
+    } else if (section.id == 'xet-prior-clues') {
+      this.updatePriorClues(wordParam);
     } else if (section.id == 'xet-anagdel') {
       this.updateAnagdel(wordParam);
     } else if (section.id == 'xet-companag') {

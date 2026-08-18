@@ -48,6 +48,17 @@ Score policy: crossword lists keep native scores (max on overlap);
 xd published-answer frequency adds a small boost; OpenList defaults to 15;
 general dict pad defaults to 5.
 
+## Prior clues index
+
+Offline published-clue lookup (`Prior clues` tab) is built separately:
+
+```bash
+python tools/fetch-prior-clues-data.py
+python tools/build-prior-clues-index.py
+```
+
+See `.notes/prior-clues-build.md`.
+
 Notes:
 
 - `.txt` is preferred over `.dict` when both share a stem.

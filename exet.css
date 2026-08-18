@@ -577,6 +577,60 @@ body {
   margin-top: 2px;
   color: var(--xet-text-muted);
 }
+.xet-prior-clues {
+  border-collapse: collapse;
+  width: 100%;
+}
+.xet-prior-clues th {
+  text-align: left;
+  font-size: 0.85em;
+  color: var(--xet-text-muted);
+  border-bottom: 1px solid var(--xet-border);
+  padding: 4px 8px 4px 0;
+}
+.xet-prior-clues td {
+  vertical-align: top;
+  padding: 6px 8px 6px 0;
+}
+.xet-prior-clues-clue {
+  line-height: 1.35;
+}
+.xet-prior-clues-source {
+  color: var(--xet-text-muted);
+  max-width: 14em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.35;
+}
+.xet-prior-clues-def {
+  color: var(--xet-accent);
+  max-width: 10em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.35;
+}
+#xet-prior-clues-box .xet-loading-block {
+  padding: 24px 8px;
+}
+.xet-prior-clues-kind {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.85;
+}
+.xet-prior-clues-header {
+  margin-bottom: 8px;
+}
+.xet-prior-clues-sample-note,
+.xet-prior-clues-attrib {
+  margin-top: 10px;
+  color: var(--xet-text-muted);
+}
+.xet-prior-clues-sample-note code {
+  font-size: 0.9em;
+}
 .xet-choices-box {
   border: 1px solid var(--xet-border);
   border-collapse: collapse;
