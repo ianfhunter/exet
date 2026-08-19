@@ -25,10 +25,19 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout branch
+      - name: Checkout content branch
         uses: actions/checkout@v4
         with:
           ref: ${{ inputs.branch }}
+          path: content
+
+      - name: Checkout deploy scripts
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          sparse-checkout: |
+            .github/scripts
+          sparse-checkout-cone-mode: false
 
       - name: Stage site files
         run: |
@@ -37,7 +46,7 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             --exclude='_site' \
-            ./ _site/
+            content/ _site/
           touch _site/.nojekyll
 
       - name: Point Exolve assets at the official repository
