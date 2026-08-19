@@ -887,6 +887,17 @@ body {
   box-shadow: var(--xet-shadow-lg);
   font-size: 12px;
 }
+#xet-ipuz-files-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  max-width: min(92vw, 760px);
+  max-height: 85vh;
+  overflow: auto;
+  padding: 12px 16px;
+}
 .xet-chosen {
   font-weight: bold;
   color: var(--xet-success);

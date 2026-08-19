@@ -322,11 +322,12 @@ function exetLexiconInit() {
     const lexIndices = this.getLexChoices(s, 1);
     if (lexIndices.length == 0) return s;
     const stemGroup = this.stemGroup(lexIndices[0]);
-    return this.lexicon[stemGroup[0]];
+    const stem = this.getLex(stemGroup[0]);
+    return stem || s;
   }
   exetLexicon.stemFromIndex = function(idx) {
     const stemGroup = this.stemGroup(idx);
-    return this.lexicon[stemGroup[0]];
+    return this.getLex(stemGroup[0]);
   }
 
   exetLexicon.letterRarity = function(c) {

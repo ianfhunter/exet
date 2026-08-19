@@ -1226,6 +1226,10 @@ Exet.prototype.makeExetTab = function() {
           <div class="xet-dropdown-item" id="xet-show-rev-chooser">
             Go back to a specific revision of the current puzzle
           </div>
+          <div class="xet-dropdown-item" id="xet-open-ipuz-files"
+              style="display:none">
+            Open from ipuz_files (GitHub)…
+          </div>
           <div class="xet-dropdown-item">
             Open Exolve or .puz or .ipuz file: <input id="xet-file"
                 onchange="exetLoadFile();" type="file"></input>
@@ -1425,6 +1429,10 @@ Exet.prototype.makeExetTab = function() {
           <div class="xet-dropdown-item" onclick="exet.downloadIPuz()">
               Download IPUZ file<br>
               (exet-<span class="xet-filetitle"></span>.ipuz)
+          </div>
+          <div class="xet-dropdown-item" id="xet-save-ipuz-files"
+              style="display:none">
+            Save to ipuz_files (GitHub)…
           </div>
           <div class="xet-dropdown-item">
             Download grid image SVG file...
@@ -4053,6 +4061,10 @@ Exet.prototype.renderWordNetSynonyms = function(box, word) {
  * Lazily load prior-clues core, manifest, and data parts.
  */
 Exet.prototype.ensurePriorClues = function(callback) {
+  if (typeof exetDataServer !== 'undefined' && exetDataServer.enabled) {
+    callback();
+    return;
+  }
   if (typeof exetPriorClues == 'object' && exetPriorClues && exetPriorClues.ready) {
     callback();
     return;
@@ -4150,8 +4162,9 @@ Exet.prototype.updatePriorClues = function(fodder) {
                     'wildcards) to look up published clues.</div>';
     return;
   }
-  const ready = (typeof exetPriorClues == 'object' && exetPriorClues &&
-                 exetPriorClues.ready);
+  const serverReady = typeof exetDataServer !== 'undefined' && exetDataServer.enabled;
+  const ready = serverReady ||
+      (typeof exetPriorClues == 'object' && exetPriorClues && exetPriorClues.ready);
   const loadingMsg = ready ?
       'Looking up published clues…' :
       'Loading published-clue index…';
@@ -4183,6 +4196,15 @@ Exet.prototype.updatePriorClues = function(fodder) {
 };
 
 Exet.prototype.renderPriorClues = function(box, word) {
+  if (typeof exetDataServer !== 'undefined' && exetDataServer.enabled) {
+    exetDataServer.fetchPriorClues(word).then((data) => {
+      this.renderPriorCluesFromApi(box, word, data);
+    }).catch((e) => {
+      box.innerHTML = '<div class="xet-red">Prior-clues lookup failed: ' +
+                      this.escapeHtml(e.message || String(e)) + '</div>';
+    });
+    return;
+  }
   if (typeof exetPriorClues != 'object' || !exetPriorClues || !exetPriorClues.ready) {
     box.innerHTML = '<div class="xet-red">Prior-clues data is unavailable.</div>';
     return;
@@ -4227,7 +4249,7 @@ Exet.prototype.renderPriorClues = function(box, word) {
         this.escapeHtml(r.definition) : '<span class="xet-small">—</span>';
     html += `
       <tr>
-        <td class="xet-prior-clues-clue">${this.escapeHtml(r.clue)}</td>
+        <td class="xet-prior-clues-clue">${this.escapeHtml(r.clue || '')}</td>
         <td class="xet-prior-clues-source xet-small">${sourceCell}</td>
         <td class="xet-prior-clues-def xet-small">${defCell}</td>
       </tr>`;
@@ -4248,6 +4270,56 @@ Exet.prototype.renderPriorClues = function(box, word) {
         ${stats.answers ? (stats.answers + ' answers indexed.') : ''}
       </div>`;
   }
+  box.innerHTML = html;
+};
+
+Exet.prototype.renderPriorCluesFromApi = function(box, word, data) {
+  const key = (data && data.answer) ?
+      data.answer :
+      String(word || '').replace(/[^A-Za-z]/g, '').toUpperCase();
+  const results = (data && data.clues) ? data.clues : [];
+  let html = `<div class="xet-small xet-prior-clues-header">
+      <span class="xet-blue">${this.escapeHtml(key || word)}</span>`;
+  if (results.length) {
+    html += ` · ${results.length} clue${results.length == 1 ? '' : 's'}`;
+  }
+  html += '</div>';
+  if (!results.length) {
+    html += '<div class="xet-small">No published clues found for this answer.</div>';
+    box.innerHTML = html;
+    return;
+  }
+  html += `<table class="xet-prior-clues xet-gray-bordered-rows">
+      <thead><tr>
+        <th>Clue</th>
+        <th>Source</th>
+        <th>Def</th>
+      </tr></thead><tbody>`;
+  for (let i = 0; i < results.length; i++) {
+    const r = results[i];
+    const kindLabel = r.kind == 'cryptic' ? 'Cryptic' :
+        (r.kind == 'xd' ? 'xd' : '');
+    const sourceCell = r.label ?
+        `<span class="xet-prior-clues-kind">${this.escapeHtml(kindLabel)}</span> ` +
+        this.escapeHtml(r.label) :
+        this.escapeHtml(r.source || '');
+    const defCell = r.definition ?
+        this.escapeHtml(r.definition) : '<span class="xet-small">—</span>';
+    html += `
+      <tr>
+        <td class="xet-prior-clues-clue">${this.escapeHtml(r.clue || '')}</td>
+        <td class="xet-prior-clues-source xet-small">${sourceCell}</td>
+        <td class="xet-prior-clues-def xet-small">${defCell}</td>
+      </tr>`;
+  }
+  html += '</tbody></table>';
+  html += `<div class="xet-small xet-prior-clues-attrib">
+      Via SQLite API. Cryptic clues:
+      <a href="https://cryptics.georgeho.org/" target="_blank"
+      rel="noopener">cryptics.georgeho.org</a> (ODbL).
+      xd clues: <a href="https://xd.saul.pw/data" target="_blank"
+      rel="noopener">xd.saul.pw</a>.
+    </div>`;
   box.innerHTML = html;
 };
 
@@ -8965,6 +9037,10 @@ Exet.prototype.finishSetup = function() {
       exet.download(true);
     }
   });
+
+  if (typeof exetPuzzleFiles !== 'undefined') {
+    exetPuzzleFiles.init();
+  }
 }
 
 Exet.prototype.maybeLexiconOptions = function() {
@@ -9155,86 +9231,136 @@ function exetBlank3D(w3d, h3d, d3d, id='') {
   return exetBlank(w3d, h3d * d3d, h3d, id);
 }
 
-function exetLoadFile() {
-  let fr = new FileReader(); 
-  fr.onload = function(){ 
-    const buffer = fr.result;
-    const utf8decoder = new TextDecoder();
-    const decodedBuffer = utf8decoder.decode(buffer);
-    let exolve = decodedBuffer;
-    let start = exolve.indexOf('exolve-begin');
-    if (start < 0) {
-      /* Try parsing as .puz */
-      exolve = exolveFromPuz(buffer, exet.exolveFile);
-      start = exolve.indexOf('exolve-begin');
+function exetLoadFromJson(obj, sourceName) {
+  if (obj && obj.format === 'exet-json' && obj.rev) {
+    if (obj.preflex) {
+      exet.setPreflex(obj.preflex);
     }
-    if (start < 0) {
-      /* Try parsing as .ipuz */
-      try {
-        const ipuz = JSON.parse(decodedBuffer);
-        exolve = exolveFromIpuz(ipuz, exet.exolveFile);
-      } catch (err) {
-      }
-      start = exolve.indexOf('exolve-begin');
+    if (obj.unpreflex) {
+      exet.setUnpreflex(obj.unpreflex);
     }
-    let end = exolve.indexOf('exolve-end');
-    if (start < 0 || end < 0 || start >= end) {
-      alert('Invalid Exolve/.puz/.ipuz specifications');
-      return;
-    }
-    end += 'exolve-end'.length;
-    exet.prefix = exolve.substring(0, start).trim();
-    exet.suffix = exolve.substring(end).trim();
-    exet.exolveOtherSec = '';
-    let specs = exolve.substring(start, end);
-    exet.setPreflex([]);
-    exet.setUnpreflex([]);
-    exet.setMinPop(0);  // Do not presume: there may be filled entries!
-    exet.noProperNouns = false;
-    exet.region = '';
-    exet.asymOK = false;
-    exet.tryReversals = false;
-    exet.lightRegexps = {};
-    exet.compileLightRegexps();
-    exet.makeExolve(specs);
-    if (!exet.puz) {
-      alert('Could not load Exolve puzzle from file, reverting to a new blank puzzle');
-        exetBlank(exetConfig.defaultDimension, exetConfig.defaultDimension);
-      return;
-    }
-    exet.requireEnums = exet.puz.allCluesHaveEnums;
-    exet.startNav();
-    let stored = window.localStorage.getItem(exet.puz.id);
-    if (stored) {
-      stored = JSON.parse(stored);
-      if (stored.revs.length > 0) {
-        const lastRev = stored.revs[stored.revs.length - 1];
-        exetRevManager.retrievePrefUnpref(lastRev);
-        if (exetLexicon.scoresSummary &&
-            lastRev.hasOwnProperty('lexId') &&
-            lastRev.hasOwnProperty('minscore') &&
-            exetLexicon.id == lastRev.lexId) {
-          exet.setMinScore(lastRev.minscore);
-        } else {
-          exet.setMinPop(lastRev.minpop || 0);
-        }
-        exet.noProperNouns = lastRev.noProperNouns || false;
-        exet.asymOK = lastRev.asymOK || false;
-        exet.region = lastRev.region || '';
-        exet.tryReversals = lastRev.tryReversals || false;
-        exet.lightRegexps = lastRev.lightRegexps || {};
-        exet.compileLightRegexps();
-        exet.resetViability();
-        exet.renderPreflex();
-      }
-    } else {
-      if (exet.puz.layers3d > 1) {
-        exet.tryReversals = true;
-      }
-    }
+    exetFromHistory(obj.rev);
+    exet.exolveFile = sourceName || 'exet-json';
     exetRevManager.throttledSaveRev(
         exetRevManager.REV_LOADED_FROM_FILE, exet.exolveFile);
-  } 
+    return true;
+  }
+  if (obj && obj.revs && obj.revs.length > 0) {
+    exetFromHistory(obj.revs[obj.revs.length - 1]);
+    exet.exolveFile = sourceName || 'exet-json-backup';
+    exetRevManager.throttledSaveRev(
+        exetRevManager.REV_LOADED_FROM_FILE, exet.exolveFile);
+    return true;
+  }
+  return false;
+}
+
+function exetLoadFromBytes(buffer, sourceName) {
+  if (buffer instanceof ArrayBuffer) {
+    buffer = new Uint8Array(buffer);
+  }
+  const utf8decoder = new TextDecoder();
+  const decodedBuffer = utf8decoder.decode(buffer);
+  const lowerName = (sourceName || '').toLowerCase();
+
+  if (lowerName.endsWith('.json')) {
+    try {
+      const obj = JSON.parse(decodedBuffer);
+      if (exetLoadFromJson(obj, sourceName)) {
+        return;
+      }
+    } catch (err) {
+    }
+  }
+
+  let exolve = decodedBuffer;
+  let start = exolve.indexOf('exolve-begin');
+  if (start < 0) {
+    const puzBuffer = buffer instanceof ArrayBuffer ? buffer :
+        buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
+    exolve = exolveFromPuz(puzBuffer, sourceName || '');
+    start = exolve.indexOf('exolve-begin');
+  }
+  if (start < 0) {
+    try {
+      const ipuz = JSON.parse(decodedBuffer);
+      if (!exetLoadFromJson(ipuz, sourceName)) {
+        exolve = exolveFromIpuz(ipuz, sourceName || '');
+      } else {
+        return;
+      }
+    } catch (err) {
+    }
+    start = exolve.indexOf('exolve-begin');
+  }
+  let end = exolve.indexOf('exolve-end');
+  if (start < 0 || end < 0 || start >= end) {
+    alert('Invalid Exolve/.puz/.ipuz/.json specifications');
+    return;
+  }
+  end += 'exolve-end'.length;
+  exet.prefix = exolve.substring(0, start).trim();
+  exet.suffix = exolve.substring(end).trim();
+  exet.exolveOtherSec = '';
+  let specs = exolve.substring(start, end);
+  exet.setPreflex([]);
+  exet.setUnpreflex([]);
+  exet.setMinPop(0);
+  exet.noProperNouns = false;
+  exet.region = '';
+  exet.asymOK = false;
+  exet.tryReversals = false;
+  exet.lightRegexps = {};
+  exet.compileLightRegexps();
+  exet.makeExolve(specs);
+  if (!exet.puz) {
+    alert('Could not load puzzle from file, reverting to a new blank puzzle');
+    exetBlank(exetConfig.defaultDimension, exetConfig.defaultDimension);
+    return;
+  }
+  exet.requireEnums = exet.puz.allCluesHaveEnums;
+  exet.startNav();
+  let stored = window.localStorage.getItem(exet.puz.id);
+  if (stored) {
+    stored = JSON.parse(stored);
+    if (stored.revs.length > 0) {
+      const lastRev = stored.revs[stored.revs.length - 1];
+      exetRevManager.retrievePrefUnpref(lastRev);
+      if (exetLexicon.scoresSummary &&
+          lastRev.hasOwnProperty('lexId') &&
+          lastRev.hasOwnProperty('minscore') &&
+          exetLexicon.id == lastRev.lexId) {
+        exet.setMinScore(lastRev.minscore);
+      } else {
+        exet.setMinPop(lastRev.minpop || 0);
+      }
+      exet.noProperNouns = lastRev.noProperNouns || false;
+      exet.asymOK = lastRev.asymOK || false;
+      exet.region = lastRev.region || '';
+      exet.tryReversals = lastRev.tryReversals || false;
+      exet.lightRegexps = lastRev.lightRegexps || {};
+      exet.compileLightRegexps();
+      exet.resetViability();
+      exet.renderPreflex();
+    }
+  } else {
+    if (exet.puz.layers3d > 1) {
+      exet.tryReversals = true;
+    }
+  }
+  exet.exolveFile = sourceName || '';
+  exetRevManager.throttledSaveRev(
+      exetRevManager.REV_LOADED_FROM_FILE, exet.exolveFile);
+}
+
+function exetLoadFile() {
+  let fr = new FileReader();
+  fr.onload = function() {
+    if (typeof exetPuzzleFiles !== 'undefined') {
+      exetPuzzleFiles.clearLoadedSource();
+    }
+    exetLoadFromBytes(fr.result, exet.exolveFile);
+  };
   let f = document.getElementById('xet-file').files[0];
   exet.exolveFile = f.name;
   fr.readAsArrayBuffer(f);
@@ -9277,6 +9403,16 @@ function exetLoadLexicon(lexiconName=null) {
     lexiconName = exetState.lexicon ?? '';
     if (!exetConfig.lexicons.hasOwnProperty(lexiconName)) {
       lexiconName = lexiconNames[0];
+    }
+  }
+  if (typeof exetDataServer !== 'undefined' && exetDataServer.enabled) {
+    const serverMeta = exetDataServer.serverLexicon(lexiconName);
+    if (serverMeta) {
+      console.log('Loading lexicon from SQLite API: ' + lexiconName);
+      exetLexiconSaved = (typeof exetLexicon == "object" && exetLexicon) ?
+        exetLexicon : null;
+      exetDataServer.loadServerLexicon(lexiconName, serverMeta);
+      return;
     }
   }
   const lexiconFiles = exetConfig.lexicons[lexiconName];
@@ -9325,6 +9461,10 @@ function exetLoadedLexicon() {
     console.log(err);
     exetFailedToLoadLexicon();
     return;
+  }
+  if (typeof exetDataServer !== 'undefined' && exetDataServer.enabled &&
+      exetLexicon && exetLexicon.serverSlug) {
+    exetDataServer.applyServerLexicon();
   }
   exetLexiconSaved = null;
   exetState.lexicon = exetLexiconNewName;
@@ -9406,6 +9546,10 @@ document.addEventListener('DOMContentLoaded', () => {
     throw "localStorage is not available!"
   }
   exetLoadState();
+
+  if (typeof exetDataServer !== 'undefined') {
+    exetDataServer.probe();
+  }
 
   if (exetConfig.lexicons) {
     /** Config-specified-files way of loading exetLexicon */

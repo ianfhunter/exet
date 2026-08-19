@@ -1,0 +1,3 @@
+[submodule "ipuz_files"]
+	path = ipuz_files
+	url = git@github.com:ianfhunter/ipuz_files.git
