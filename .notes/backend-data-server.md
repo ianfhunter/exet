@@ -91,18 +91,20 @@ http://127.0.0.1:8000/api/synonyms?word=share
 When Exet is served from this backend (`http://127.0.0.1:8000/`), `exet-data-server.js`
 probes `/health` and automatically:
 
-- **Prior clues** — fetches `/api/prior-clues/{answer}` (no multi‑MB JS index)
+- **Prior clues** — fetches `/api/prior-clues/{answer}` (no JS shards)
+- **Synonyms (WordNet)** — fetches `/api/synonyms?word=…` (no `exet-wordnet.js` download)
 - **Lexicons** — any word list present in SQLite loads instantly; fill/anagram
   lookups go to `/api/lexicons/{slug}/…` instead of downloading `*-part-*.js`
 
 Lexicons not in the database (e.g. Lufz/Nediger if not built) still load from JS files.
+Without the backend, WordNet falls back to lazy-loading `exet-wordnet.js`; prior clues
+show a message to start the server.
 
-Set `exetConfig.dataServer = false` in `exet.html` to disable.
+Set `exetConfig.dataServer = false` in `exet.html` to disable API mode.
 
 ## Not included yet
 
 - Autofill / theme LLM / cloud storage
-- WordNet tab via API (still uses `exet-wordnet.js` when opened)
 - Auth
 
 Build logic lives under `backend/build/`; lookup mirrors `exet-lexicon.js` and

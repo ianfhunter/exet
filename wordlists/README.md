@@ -50,14 +50,15 @@ general dict pad defaults to 5.
 
 ## Prior clues index
 
-Offline published-clue lookup (`Prior clues` tab) is built separately:
+Published-clue lookup (**Prior clues** tab) uses the SQLite backend. Fetch
+source data, then build the database:
 
 ```bash
 python tools/fetch-prior-clues-data.py
-python tools/build-prior-clues-index.py
+python backend/build/build_all.py --skip-lexicon --skip-wordnet
 ```
 
-See `.notes/prior-clues-build.md`.
+Run Exet via `backend/start_server.ps1`. See `.notes/prior-clues-build.md`.
 
 Notes:
 

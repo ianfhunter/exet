@@ -1,14 +1,9 @@
-# Prior clues (offline lookup)
+# Prior clues (SQLite backend)
 
 Exet tab **Prior clues** shows published crossword clues for the current
-answer from a local index (`exet-prior-clues.js`).
+answer via the SQLite backend (`/api/prior-clues/{answer}`).
 
-## Quick start (sample)
-
-The repo includes a small sample index (answers `CREATED`, `PIANO`, `SHARE`).
-Open Exet, fill a light, click **Prior clues**.
-
-## Full index
+## Setup
 
 1. Download source data (~250 MB total):
 
@@ -20,20 +15,35 @@ Open Exet, fill a light, click **Prior clues**.
    - `wordlists/_sources/georgeho-data.db` — cryptics.georgeho.org (~187 MB)
    - `wordlists/xd-clues.zip` — xd.saul.pw clue corpus (~67 MB)
 
-2. Build the lookup file:
+2. Build the SQLite database (includes prior clues):
 
-   ```bash
-   python tools/build-prior-clues-index.py
+   ```powershell
+   backend\.venv\Scripts\python backend\build\build_all.py --skip-lexicon --skip-wordnet
    ```
 
-   Writes sharded data under wordlists/built/ and
-   wordlists/built/prior-clues-manifest.js. The small core loader is
-   exet-prior-clues.js (committed separately).
+   Or build everything:
 
-Options:
+   ```powershell
+   backend\.venv\Scripts\python backend\build\build_all.py
+   ```
+
+3. Run Exet via the backend:
+
+   ```powershell
+   .\backend\start_server.ps1
+   ```
+
+   Open `http://127.0.0.1:8000/`.
+
+## Legacy JS index (optional)
+
+`tools/build-prior-clues-index.py` can still emit sharded JS for offline
+static hosting, but the repo no longer commits those files. Use the SQLite
+backend instead.
+
+Options for the legacy builder:
 
 - `--max-per-answer N` — optional cap (default: **0** = all unique clues per answer)
-- `--out path/to/exet-prior-clues.js`
 
 ## Attributions
 
@@ -43,6 +53,6 @@ Options:
 ## Implementation
 
 - Tab config: `exet.html` → `exetConfig.extraTabs` → `prior-clues`
-- UI: `exet.js` → `updatePriorClues`, `renderPriorClues`
-- Index builder: `tools/build-prior-clues-index.py`
-- Lazy-loaded script: `exet-prior-clues.js` (same pattern as WordNet)
+- UI: `exet.js` → `updatePriorClues`, `renderPriorCluesFromApi`
+- Build: `backend/build/prior_clues.py`
+- API: `GET /api/prior-clues/{answer}`

@@ -3937,10 +3937,13 @@ Exet.prototype.updateSounds = function(fodder) {
 }
 
 /**
- * Lazily load the client-side WordNet synonym data (exet-wordnet.js).
- * No server is involved; the file is fetched as a static script.
+ * Lazily load WordNet data (SQLite API when enabled, else exet-wordnet.js).
  */
 Exet.prototype.ensureWordNet = function(callback) {
+  if (typeof exetDataServer !== 'undefined' && exetDataServer.enabled) {
+    callback();
+    return;
+  }
   if (typeof exetWordNet == 'object' && exetWordNet && exetWordNet.lookUp) {
     callback();
     return;
@@ -4005,10 +4008,11 @@ Exet.prototype.updateSynonyms = function(fodder) {
                     'wildcards) to look up synonyms.</div>';
     return;
   }
-  const ready = (typeof exetWordNet == 'object' && exetWordNet &&
-                 exetWordNet.lookUp);
+  const serverReady = typeof exetDataServer !== 'undefined' && exetDataServer.enabled;
+  const ready = serverReady ||
+      (typeof exetWordNet == 'object' && exetWordNet && exetWordNet.lookUp);
   if (!ready) {
-    box.innerHTML = '<div class="xet-small">Loading WordNet…</div>';
+    box.innerHTML = xetSpinnerHtml('Loading WordNet…');
   }
   const requested = word;
   this.ensureWordNet(() => {
@@ -4023,21 +4027,17 @@ Exet.prototype.updateSynonyms = function(fodder) {
   });
 }
 
-Exet.prototype.renderWordNetSynonyms = function(box, word) {
-  if (typeof exetWordNet != 'object' || !exetWordNet || !exetWordNet.lookUp) {
-    box.innerHTML = '<div class="xet-red">WordNet data is unavailable.</div>';
-    return;
-  }
-  const results = exetWordNet.lookUp(word);
-  const matched = results.length ? results[0].lemma : exetWordNet.normalize(word);
+Exet.prototype.renderWordNetSynonymsHtml = function(word, results, versionLabel) {
+  const matched = results.length ? results[0].lemma :
+      (typeof exetWordNet == 'object' && exetWordNet && exetWordNet.normalize ?
+          exetWordNet.normalize(word) : String(word).toLowerCase());
   let html = `<div class="xet-small" style="margin-bottom:8px">
-      WordNet ${this.escapeHtml(exetWordNet.version || '')} · matched
+      WordNet ${this.escapeHtml(versionLabel || '')} · matched
       <span class="xet-blue">${this.escapeHtml(matched)}</span>
     </div>`;
   if (!results.length) {
     html += '<div class="xet-small">No WordNet entry found.</div>';
-    box.innerHTML = html;
-    return;
+    return html;
   }
   html += '<table class="xet-wordnet-synonyms xet-gray-bordered-rows">';
   for (let i = 0; i < results.length; i++) {
@@ -4058,96 +4058,58 @@ Exet.prototype.renderWordNetSynonyms = function(box, word) {
   html += `<div class="xet-small" style="margin-top:10px">
       Data: Princeton WordNet (see About for license).
     </div>`;
-  box.innerHTML = html;
+  return html;
+}
+
+Exet.prototype.renderWordNetSynonymsFromApi = function(box, word, data) {
+  const results = (data && data.synsets) ? data.synsets : [];
+  box.innerHTML = this.renderWordNetSynonymsHtml(word, results, '3.1 (SQLite API)');
+}
+
+Exet.prototype.renderWordNetSynonyms = function(box, word) {
+  if (typeof exetDataServer !== 'undefined' && exetDataServer.enabled) {
+    exetDataServer.fetchSynonyms(word).then((data) => {
+      this.renderWordNetSynonymsFromApi(box, word, data);
+    }).catch((e) => {
+      box.innerHTML = '<div class="xet-red">WordNet lookup failed: ' +
+                      this.escapeHtml(e.message || String(e)) + '</div>';
+    });
+    return;
+  }
+  if (typeof exetWordNet != 'object' || !exetWordNet || !exetWordNet.lookUp) {
+    box.innerHTML = '<div class="xet-red">WordNet data is unavailable.</div>';
+    return;
+  }
+  const results = exetWordNet.lookUp(word);
+  box.innerHTML = this.renderWordNetSynonymsHtml(
+      word, results, exetWordNet.version || '');
 }
 
 /**
- * Lazily load prior-clues core, manifest, and data parts.
+ * Prior clues require the SQLite backend (no JS shard fallback).
  */
+Exet.prototype.priorCluesBackendMessage = function() {
+  return 'Prior clues require the Exet backend. Run ' +
+      '<code>backend/start_server.ps1</code> and open ' +
+      '<code>http://127.0.0.1:8000/</code>. Build the database with ' +
+      '<code>python backend/build/build_all.py</code> after ' +
+      '<code>python tools/fetch-prior-clues-data.py</code>.';
+};
+
 Exet.prototype.ensurePriorClues = function(callback) {
   if (typeof exetDataServer !== 'undefined' && exetDataServer.enabled) {
     callback();
     return;
   }
-  if (typeof exetPriorClues == 'object' && exetPriorClues && exetPriorClues.ready) {
-    callback();
-    return;
+  const box = document.getElementById('xet-prior-clues-box');
+  if (box) {
+    box.innerHTML = '<div class="xet-red">' + this.priorCluesBackendMessage() + '</div>';
   }
-  if (!this.priorCluesCallbacks_) {
-    this.priorCluesCallbacks_ = [];
+  if (this.tabs && this.tabs['prior-clues'] && this.tabs['prior-clues'].sections) {
+    for (let i = 0; i < this.tabs['prior-clues'].sections.length; i++) {
+      this.tabs['prior-clues'].sections[i].param = null;
+    }
   }
-  this.priorCluesCallbacks_.push(callback);
-  if (this.priorCluesLoading_) {
-    return;
-  }
-  this.priorCluesLoading_ = true;
-
-  const finishOk = () => {
-    this.priorCluesLoading_ = false;
-    const cbs = this.priorCluesCallbacks_ || [];
-    this.priorCluesCallbacks_ = [];
-    for (let i = 0; i < cbs.length; i++) {
-      cbs[i]();
-    }
-  };
-
-  const finishErr = (msg) => {
-    this.priorCluesLoading_ = false;
-    this.priorCluesCallbacks_ = [];
-    if (this.tabs && this.tabs['prior-clues'] && this.tabs['prior-clues'].sections) {
-      for (let i = 0; i < this.tabs['prior-clues'].sections.length; i++) {
-        this.tabs['prior-clues'].sections[i].param = null;
-      }
-    }
-    const box = document.getElementById('xet-prior-clues-box');
-    if (box) {
-      box.innerHTML = '<div class="xet-red">' + msg + '</div>';
-    }
-  };
-
-  const loadScript = (src) => new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = src;
-    script.onload = () => resolve();
-    script.onerror = () => reject(new Error('Failed to load ' + src));
-    document.head.appendChild(script);
-  });
-
-  const loadParts = (parts, idx) => {
-    if (idx >= parts.length) {
-      exetPriorClues.finalize();
-      finishOk();
-      return;
-    }
-    loadScript(parts[idx] + '?v1.08').then(() => {
-      loadParts(parts, idx + 1);
-    }).catch((e) => {
-      finishErr('Failed to load prior-clues data: ' + e.message);
-    });
-  };
-
-  const start = () => {
-    if (typeof exetPriorCluesManifest != 'object' || !exetPriorCluesManifest ||
-        !exetPriorCluesManifest.parts || !exetPriorCluesManifest.parts.length) {
-      finishErr('Missing prior-clues manifest (wordlists/built/prior-clues-manifest.js). ' +
-                'Run tools/build-prior-clues-index.py');
-      return;
-    }
-    loadParts(exetPriorCluesManifest.parts, 0);
-  };
-
-  if (typeof exetPriorClues == 'object' && exetPriorClues && exetPriorClues.loadPart) {
-    loadScript('wordlists/built/prior-clues-manifest.js?v1.08').then(start).catch((e) => {
-      finishErr('Failed to load prior-clues manifest: ' + e.message);
-    });
-    return;
-  }
-
-  loadScript('exet-prior-clues.js?v1.08').then(() => {
-    return loadScript('wordlists/built/prior-clues-manifest.js?v1.08');
-  }).then(start).catch((e) => {
-    finishErr('Failed to load prior-clues core: ' + e.message);
-  });
 };
 
 Exet.prototype.updatePriorClues = function(fodder) {
@@ -4167,11 +4129,9 @@ Exet.prototype.updatePriorClues = function(fodder) {
     return;
   }
   const serverReady = typeof exetDataServer !== 'undefined' && exetDataServer.enabled;
-  const ready = serverReady ||
-      (typeof exetPriorClues == 'object' && exetPriorClues && exetPriorClues.ready);
-  const loadingMsg = ready ?
+  const loadingMsg = serverReady ?
       'Looking up published clues…' :
-      'Loading published-clue index…';
+      'Checking backend…';
   box.innerHTML = xetSpinnerHtml(loadingMsg);
   const requested = word;
   const render = () => {
@@ -4192,7 +4152,7 @@ Exet.prototype.updatePriorClues = function(fodder) {
       this.renderPriorClues(box, requested);
     });
   };
-  if (ready) {
+  if (serverReady) {
     render();
     return;
   }
@@ -4209,72 +4169,7 @@ Exet.prototype.renderPriorClues = function(box, word) {
     });
     return;
   }
-  if (typeof exetPriorClues != 'object' || !exetPriorClues || !exetPriorClues.ready) {
-    box.innerHTML = '<div class="xet-red">Prior-clues data is unavailable.</div>';
-    return;
-  }
-  const key = exetPriorClues.answerKey(word);
-  const results = exetPriorClues.lookUp(word);
-  const stats = exetPriorClues.stats || {};
-  let html = `<div class="xet-small xet-prior-clues-header">
-      <span class="xet-blue">${this.escapeHtml(key || word)}</span>`;
-  if (results.length) {
-    html += ` · ${results.length} clue${results.length == 1 ? '' : 's'}`;
-  }
-  html += '</div>';
-  if (!results.length) {
-    html += '<div class="xet-small">No published clues found for this answer in ' +
-            'the offline index.</div>';
-    if (stats.sample) {
-      html += `<div class="xet-small xet-prior-clues-sample-note">
-          Sample index only (try CREATED, PIANO, or SHARE). Build the full index:
-          <code>python tools/fetch-prior-clues-data.py</code> then
-          <code>python tools/build-prior-clues-index.py</code>.
-        </div>`;
-    }
-    box.innerHTML = html;
-    return;
-  }
-  html += `<table class="xet-prior-clues xet-gray-bordered-rows">
-      <thead><tr>
-        <th>Clue</th>
-        <th>Source</th>
-        <th>Def</th>
-      </tr></thead><tbody>`;
-  for (let i = 0; i < results.length; i++) {
-    const r = results[i];
-    const kindLabel = r.kind == 'cryptic' ? 'Cryptic' :
-        (r.kind == 'xd' ? 'xd' : '');
-    const sourceCell = r.label ?
-        `<span class="xet-prior-clues-kind">${this.escapeHtml(kindLabel)}</span> ` +
-        this.escapeHtml(r.label) :
-        this.escapeHtml(r.source || '');
-    const defCell = r.definition ?
-        this.escapeHtml(r.definition) : '<span class="xet-small">—</span>';
-    html += `
-      <tr>
-        <td class="xet-prior-clues-clue">${this.escapeHtml(r.clue || '')}</td>
-        <td class="xet-prior-clues-source xet-small">${sourceCell}</td>
-        <td class="xet-prior-clues-def xet-small">${defCell}</td>
-      </tr>`;
-  }
-  html += '</tbody></table>';
-  if (stats.sample) {
-    html += `<div class="xet-small xet-prior-clues-sample-note">
-        Sample index — build the full database with
-        <code>tools/fetch-prior-clues-data.py</code> and
-        <code>tools/build-prior-clues-index.py</code>.
-      </div>`;
-  } else {
-    html += `<div class="xet-small xet-prior-clues-attrib">
-        Cryptic clues: <a href="https://cryptics.georgeho.org/" target="_blank"
-        rel="noopener">cryptics.georgeho.org</a> (ODbL).
-        xd clues: <a href="https://xd.saul.pw/data" target="_blank"
-        rel="noopener">xd.saul.pw</a>.
-        ${stats.answers ? (stats.answers + ' answers indexed.') : ''}
-      </div>`;
-  }
-  box.innerHTML = html;
+  box.innerHTML = '<div class="xet-red">' + this.priorCluesBackendMessage() + '</div>';
 };
 
 Exet.prototype.renderPriorCluesFromApi = function(box, word, data) {

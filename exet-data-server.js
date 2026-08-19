@@ -55,7 +55,8 @@ const exetDataServer = (function() {
       }
       console.log('Exet data server enabled (' +
           (data.lexicons || []).length + ' lexicons, ' +
-          (health.prior_clues || 0) + ' prior-clue rows)');
+          (health.prior_clues || 0) + ' prior-clue rows, ' +
+          (health.wordnet_synsets || 0) + ' WordNet synsets)');
       return true;
     } catch (e) {
       enabled = false;
@@ -230,6 +231,10 @@ const exetDataServer = (function() {
     return fetchJson('/api/prior-clues/' + encodeURIComponent(key) + '?limit=500');
   }
 
+  function fetchSynonyms(word) {
+    return fetchJson('/api/synonyms?word=' + encodeURIComponent(String(word || '').trim()));
+  }
+
   return {
     probe: probe,
     get enabled() {
@@ -239,6 +244,7 @@ const exetDataServer = (function() {
     loadServerLexicon: loadServerLexicon,
     applyServerLexicon: applyServerLexicon,
     fetchPriorClues: fetchPriorClues,
+    fetchSynonyms: fetchSynonyms,
     syncGet: syncGet,
   };
 })();

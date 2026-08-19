@@ -6,6 +6,8 @@ wordlists/_sources/
 lists/_sources/
 wordlists/built/million-union-*.js
 wordlists/built/combolist-*.js
+wordlists/built/prior-clues-part-*.js
+wordlists/built/prior-clues-manifest.js
 tools/__pycache__/
 backend/.venv/
 backend/data/*.sqlite

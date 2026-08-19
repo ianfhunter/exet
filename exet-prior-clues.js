@@ -1,7 +1,7 @@
 /**
  * Offline published-clue lookup for Exet (answer → prior clues).
- * Core loader — data parts are in wordlists/built/prior-clues-part-*.js
- * (see wordlists/built/prior-clues-manifest.js).
+ * Legacy client loader — the SQLite backend is used when available.
+ * Data parts were previously in wordlists/built/prior-clues-part-*.js.
  *
  * Cryptic data: cryptics.georgeho.org (ODbL v1.0).
  * xd data: xd.saul.pw / Saul Pwanson crossword clue corpus.
