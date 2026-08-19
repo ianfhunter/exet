@@ -365,26 +365,47 @@ const exetPuzzleFiles = (function() {
     renderSaveForm();
   }
 
-  function wireMenus() {
+  function updateMenuVisibility() {
     const openBtn = document.getElementById('xet-open-ipuz-files');
     const saveBtn = document.getElementById('xet-save-ipuz-files');
     if (openBtn) {
       openBtn.style.display = enabled ? '' : 'none';
-      openBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showOpen();
-      });
     }
     if (saveBtn) {
       saveBtn.style.display = enabled ? '' : 'none';
-      saveBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showSave();
-      });
     }
   }
 
+  function wireMenus() {
+    updateMenuVisibility();
+  }
+
+  function ensureMenuDelegation() {
+    if (ensureMenuDelegation.done) {
+      return;
+    }
+    ensureMenuDelegation.done = true;
+    document.addEventListener('click', (e) => {
+      const openBtn = e.target.closest('#xet-open-ipuz-files');
+      if (openBtn) {
+        e.stopPropagation();
+        showOpen();
+        return;
+      }
+      const saveBtn = e.target.closest('#xet-save-ipuz-files');
+      if (saveBtn) {
+        e.stopPropagation();
+        showSave();
+      }
+    });
+  }
+
+  function refreshMenus() {
+    wireMenus();
+  }
+
   function init() {
+    ensureMenuDelegation();
     probe().then(() => wireMenus());
   }
 
@@ -394,6 +415,7 @@ const exetPuzzleFiles = (function() {
     isEnabled,
     showOpen,
     showSave,
+    refreshMenus,
     clearLoadedSource,
   };
 })();

@@ -1989,6 +1989,10 @@ Exet.prototype.makeExetTab = function() {
   this.cluesPanel = document.getElementById("xet-clues");
   this.cluesPanel.appendChild(document.getElementById(
         `${this.puz.prefix}-clues`))
+
+  if (typeof exetPuzzleFiles !== 'undefined') {
+    exetPuzzleFiles.refreshMenus();
+  }
 }
 
 Exet.prototype.stripInputLF = function(inp) {
