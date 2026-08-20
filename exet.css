@@ -298,6 +298,46 @@ body {
   font-size: 14px;
   color: var(--xet-success);
 }
+.xet-anno-row {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+  max-width: 100%;
+}
+.xet-anno-lock {
+  flex: 0 0 auto;
+  border: 1px solid var(--xet-border);
+  background: var(--xet-surface);
+  cursor: pointer;
+  padding: 2px 4px;
+  line-height: 1;
+  font-size: 18px;
+  border-radius: 3px;
+  margin-top: 4px;
+}
+.xet-anno-lock:hover {
+  border-color: var(--xet-accent);
+  background: var(--xet-accent-muted);
+}
+.xet-anno-lock-locked {
+  border-color: var(--xet-accent);
+  background: var(--xet-accent-muted);
+}
+.xet-anno-locked {
+  outline-color: var(--xet-border);
+  opacity: 0.88;
+  cursor: default;
+}
+@keyframes xet-lock-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-14deg); }
+  40% { transform: rotate(14deg); }
+  60% { transform: rotate(-8deg); }
+  80% { transform: rotate(8deg); }
+}
+.xet-anno-lock-wiggle {
+  animation: xet-lock-wiggle 0.45s ease-in-out;
+}
 .xlv-curr-clue-label {
   cursor: pointer;
 }

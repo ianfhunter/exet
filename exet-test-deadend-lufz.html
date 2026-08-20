@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Exet test: dead-end sweep suite</title>
+<style>
+  body { font-family: monospace; margin: 1.5rem; max-width: 58rem; }
+  h2 { margin-top: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 0.25rem; }
+  .pass { color: #060; font-weight: bold; }
+  .fail { color: #900; font-weight: bold; }
+  .note { color: #555; }
+  pre { background: #f4f4f4; padding: 1rem; overflow: auto; white-space: pre-wrap; font-size: 0.9rem; }
+  table.grid { border-collapse: collapse; margin: 1rem 0; }
+  table.grid td {
+    border: 1px solid #999;
+    width: 2.5rem; height: 2.5rem;
+    text-align: center; vertical-align: middle;
+  }
+  table.diff { border-collapse: collapse; margin: 1rem 0; width: 100%; font-size: 0.85rem; }
+  table.diff th, table.diff td { border: 1px solid #ccc; padding: 0.35rem 0.5rem; text-align: left; }
+  table.diff th { background: #eee; }
+  tr.weak-only { background: #ffe0e0; }
+  #verdict { font-size: 1.1rem; margin: 1rem 0; padding: 0.75rem; background: #f9f9f9; border: 1px solid #ddd; }
+</style>
+
+<link rel="stylesheet" type="text/css" href="exolve-m.css"/>
+<link rel="stylesheet" type="text/css" href="exet.css"/>
+
+<script>
+/** Boot with toy lexicon first; Lufz loaded after Part 1. */
+exetConfig = {
+  language: "en",
+  script: "Latin",
+  defaultDimension: 4,
+  defaultPopularity: 0,
+  researchTools: [],
+  extraTabs: [],
+  listsLinks: [],
+};
+</script>
+
+<script src="exolve-m.js"></script>
+<script src="exet-analysis.js"></script>
+<script src="exet-storage.js"></script>
+<script src="exet-plugins.js"></script>
+<script src="lexicon-deadend-test.js"></script>
+<script src="exet-autofill.js"></script>
+<script src="exet-lexicon.js"></script>
+<script src="exet.js"></script>
+
+</head>
+<body>
+
+<div id="xet-loading"><h3>Loading…</h3></div>
+<div id="xet-xlv-frame" style="display:none"></div>
+<div id="xet-temp" style="display:none"></div>
+
+<h1>Dead-end sweep test suite</h1>
+<p>
+  Three-part test for change #1 (strong clue trial via
+  <code>refineLightChoices</code>).
+</p>
+
+<div id="verdict">Running…</div>
+
+<table class="grid" id="grid-diagram"></table>
+
+<h2>Part 1 — Toy lexicon (mechanism proof)</h2>
+<pre id="part1">…</pre>
+
+<h2>Part 2 — Lufz clue-sweep isolation (<code>skipGridSweep</code>)</h2>
+<pre id="part2">Waiting for Lufz…</pre>
+<table class="diff" id="clue-diff" style="display:none">
+  <thead><tr><th>Word</th><th>Row</th><th>Before</th><th>After</th></tr></thead>
+  <tbody id="clue-diff-body"></tbody>
+</table>
+
+<h2>Part 3 — Lufz live editor (grid sweep first)</h2>
+<pre id="part3">Waiting for Lufz…</pre>
+
+<script>
+const X_GRID = {
+  title: '4×4, X at (3,1)',
+  exolve: `
+exolve-begin
+exolve-id: deadend-suite-x
+exolve-width: 4
+exolve-height: 4
+exolve-grid:
+    ? ? ? ?
+    ? ? ? ?
+    ? ? ? ?
+    ? X ? ?
+exolve-end`,
+  diagram: [
+    ['?', '?', '?', '?'],
+    ['?', '?', '?', '?'],
+    ['?', '?', '?', '?'],
+    ['?', 'X', '?', '?'],
+  ],
+};
+
+function renderGrid(cells) {
+  const table = document.getElementById('grid-diagram');
+  let html = '';
+  for (const row of cells) {
+    html += '<tr>';
+    for (const ch of row) html += `<td>${ch}</td>`;
+    html += '</tr>';
+  }
+  table.innerHTML = html;
+}
+
+function setupPuzzle(exet) {
+  exet.minpop = 0;
+  exet.indexMinPop = exetLexicon.startLen;
+  exet.noProperNouns = false;
+  exet.noStemDupes = false;
+  exet.tryReversals = false;
+}
+
+function findAcrossRowClue(exet, row) {
+  for (const ci in exet.fillState.clues) {
+    const clue = exet.fillState.clues[ci];
+    if (clue.parentClueIndex || clue.dir !== 'A') continue;
+    if (clue.solution !== '????') continue;
+    const cells = exet.puz.getAllCells(ci);
+    if (cells.length && cells[0][0] === row) return ci;
+  }
+  return null;
+}
+
+function trialChoice(exet, fillState, ci, lchoice) {
+  const cells = exet.puz.getAllCells(ci);
+  const key = exetLexicon.lexkey(exetLexicon.getLex(lchoice));
+  if (lchoice < 0) key.reverse();
+  const temp = new ExetFillState(fillState);
+  for (let i = 0; i < cells.length; i++) {
+    const [r, c] = cells[i];
+    temp.grid[r][c].cChoices = {};
+    temp.grid[r][c].cChoices[key[i]] = true;
+  }
+  return temp;
+}
+
+function weakKeeps(exet, temp) {
+  return !exet.someClueTurnsNonViable(temp);
+}
+
+function strongKeeps(exet, temp) {
+  for (let s = 0; s < 2 && temp.viable; s++) {
+    exet.refineLightChoices(temp, exet.sweepMaxChoices);
+  }
+  return temp.viable;
+}
+
+function compareTrial(exet, fillState, ci, lchoice) {
+  const wKeep = weakKeeps(exet, trialChoice(exet, fillState, ci, lchoice));
+  const sKeep = strongKeeps(exet, trialChoice(exet, fillState, ci, lchoice));
+  return { wKeep, sKeep };
+}
+
+function runGridSweepToFixpoint(exet) {
+  let n = 0, ch;
+  do { ch = exet.findDeadendsByCell(exet.fillState); n += ch; } while (ch > 0);
+  return n;
+}
+
+/** Part 1: 12-word toy lexicon, CART must be weak-KEEP / strong-REJECT. */
+function runPart1(exet) {
+  const lines = [];
+  let pass = false;
+
+  exet.makeExolve(`
+exolve-begin
+exolve-id: deadend-toy
+exolve-width: 4
+exolve-height: 4
+exolve-grid:
+    ? ? ? ?
+    ? ? ? ?
+    ? ? ? ?
+    ? X ? ?
+exolve-end`);
+  setupPuzzle(exet);
+  exet.resetViability();
+
+  const ci = findAcrossRowClue(exet, 1);
+  const cart = exetLexicon.lexicon.indexOf('CART');
+  const { wKeep, sKeep } = compareTrial(exet, exet.fillState, ci, cart);
+
+  lines.push('Grid: 4×4, X at (3,1). Across row 1, trial word CART.');
+  lines.push(`  weak (someClueTurnsNonViable):  ${wKeep ? 'KEEP' : 'REJECT'}`);
+  lines.push(`  strong (refineLightChoices):   ${sKeep ? 'KEEP' : 'REJECT'}`);
+  lines.push('');
+  if (wKeep && !sKeep) {
+    lines.push('PASS — toy lexicon shows the clue-sweep gap.');
+    pass = true;
+  } else {
+    lines.push('FAIL — expected weak KEEP, strong REJECT.');
+  }
+
+  document.getElementById('part1').textContent = lines.join('\n');
+  document.getElementById('part1').className = pass ? 'pass' : 'fail';
+  return pass;
+}
+
+/**
+ * Part 2: Lufz, NO grid sweep — scan across rows 0–2 for weak-only trials.
+ * This is what skipGridSweep=1 tests in the live editor.
+ */
+function runPart2(exet) {
+  const lines = [];
+  exet.makeExolve(X_GRID.exolve);
+  setupPuzzle(exet);
+  exet.resetViability();
+  if (exet.viabilityUpdateTimer) {
+    clearTimeout(exet.viabilityUpdateTimer);
+    exet.viabilityUpdateTimer = null;
+  }
+
+  const weakOnly = [];
+  const scanLimit = 300;
+  for (const row of [0, 1, 2]) {
+    const ci = findAcrossRowClue(exet, row);
+    if (!ci) continue;
+    const choices = exet.fillState.clues[ci].lChoices.slice(0, scanLimit);
+    for (const lc of choices) {
+      const { wKeep, sKeep } = compareTrial(exet, exet.fillState, ci, lc);
+      if (wKeep && !sKeep) {
+        weakOnly.push({
+          word: exetLexicon.lexicon[Math.abs(lc)],
+          row,
+        });
+      }
+    }
+  }
+
+  lines.push(`Scanned up to ${scanLimit} lChoices × rows 0–2 (no grid sweep).`);
+  lines.push(`Weak-only (before KEEP, after REJECT): ${weakOnly.length}`);
+  lines.push('');
+  if (weakOnly.length > 0) {
+    lines.push('Sample gaps:');
+    for (const g of weakOnly.slice(0, 8)) {
+      lines.push(`  ${g.word}  (across row ${g.row})`);
+    }
+    if (weakOnly.length > 8) lines.push(`  … and ${weakOnly.length - 8} more`);
+    lines.push('');
+    lines.push('PASS — Lufz has real clue-sweep gaps when grid sweep is off.');
+  } else {
+    lines.push('FAIL — expected at least one weak-only word.');
+  }
+
+  const pass = weakOnly.length > 0;
+  document.getElementById('part2').textContent = lines.join('\n');
+  document.getElementById('part2').className = pass ? 'pass' : 'fail';
+
+  if (weakOnly.length > 0) {
+    const table = document.getElementById('clue-diff');
+    const body = document.getElementById('clue-diff-body');
+    table.style.display = '';
+    body.innerHTML = '';
+    for (const g of weakOnly.slice(0, 30)) {
+      const tr = document.createElement('tr');
+      tr.className = 'weak-only';
+      tr.innerHTML = `<td>${g.word}</td><td>${g.row}</td><td>KEEP</td><td>REJECT</td>`;
+      body.appendChild(tr);
+    }
+  }
+  return pass;
+}
+
+/**
+ * Part 3: Lufz WITH grid sweep — expect 0 gaps on this grid.
+ * If a letter survives grid propagation at crossing pos R, a ???X witness
+ * word exists, so the narrowed pattern cannot be empty.
+ */
+function runPart3(exet) {
+  const lines = [];
+  exet.makeExolve(X_GRID.exolve);
+  setupPuzzle(exet);
+  exet.resetViability();
+  if (exet.viabilityUpdateTimer) {
+    clearTimeout(exet.viabilityUpdateTimer);
+    exet.viabilityUpdateTimer = null;
+  }
+
+  const preLen = exet.fillState.clues[findAcrossRowClue(exet, 0)]?.lChoices.length;
+  const gridPrunes = runGridSweepToFixpoint(exet);
+  const ci = findAcrossRowClue(exet, 0);
+  const postLen = exet.fillState.clues[ci]?.lChoices.length;
+
+  let weakOnly = 0;
+  const scan = exet.fillState.clues[ci].lChoices.slice(0, exet.shownLightChoices);
+  for (const lc of scan) {
+    const { wKeep, sKeep } = compareTrial(exet, exet.fillState, ci, lc);
+    if (wKeep && !sKeep) weakOnly++;
+  }
+
+  lines.push(`Grid sweep pruned ${gridPrunes} choice(s).`);
+  lines.push(`Row-0 across: ${preLen} → ${postLen} lChoices.`);
+  lines.push(`Weak-only among ${scan.length} post-grid words: ${weakOnly}`);
+  lines.push('');
+  lines.push('Expected 0 — grid sweep already applies refineLightChoices globally.');
+  lines.push('Change #1 on this grid is redundant in normal editing.');
+  lines.push('');
+  const pass = weakOnly === 0;
+  lines.push(pass ? 'PASS (0 gaps — as expected for this grid).' : 'UNEXPECTED gaps remain after grid sweep.');
+
+  document.getElementById('part3').textContent = lines.join('\n');
+  document.getElementById('part3').className = pass ? 'pass' : 'fail';
+  return pass;
+}
+
+function loadLufz() {
+  exetConfig.lexicons = {
+    "Lufz": ["lufz-en-lexicon.js", "lufz-en-lexicon-stems.js"],
+  };
+  exetLoadLexicon('Lufz');
+}
+
+function runSuite(exet) {
+  renderGrid(X_GRID.diagram);
+  const p1 = runPart1(exet);
+  document.getElementById('verdict').textContent = 'Part 1 done. Loading Lufz…';
+
+  loadLufz();
+  const wait = setInterval(() => {
+    if (exetLexicon.id && exetLexicon.id.indexOf('Lufz') >= 0) {
+      clearInterval(wait);
+      try {
+        const p2 = runPart2(exet);
+        const p3 = runPart3(exet);
+        const allPass = p1 && p2 && p3;
+        const v = document.getElementById('verdict');
+        v.textContent = allPass
+          ? 'OVERALL PASS — mechanism proven (Part 1), Lufz gaps found with skipGridSweep (Part 2), live grid behaves as expected (Part 3).'
+          : `OVERALL FAIL — Part 1: ${p1 ? 'pass' : 'FAIL'}, Part 2: ${p2 ? 'pass' : 'FAIL'}, Part 3: ${p3 ? 'pass' : 'FAIL'}`;
+        v.className = allPass ? 'pass' : 'fail';
+      } catch (err) {
+        document.getElementById('verdict').textContent = 'ERROR: ' + err.message;
+        document.getElementById('verdict').className = 'fail';
+      }
+    }
+  }, 300);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const wait = setInterval(() => {
+    if (typeof exet !== 'undefined' && exet && exetLexicon && exetLexicon.id === 'deadend-test') {
+      clearInterval(wait);
+      try {
+        runSuite(exet);
+      } catch (err) {
+        document.getElementById('verdict').textContent = 'ERROR: ' + err.message + '\n' + err.stack;
+        document.getElementById('verdict').className = 'fail';
+      }
+    }
+  }, 100);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Exet test: dead-end sweep vs refineLightChoices</title>
+<style>
+  body { font-family: monospace; margin: 1.5rem; max-width: 52rem; }
+  .pass { color: #060; font-weight: bold; }
+  .fail { color: #900; font-weight: bold; }
+  pre { background: #f4f4f4; padding: 1rem; overflow: auto; }
+  table.grid { border-collapse: collapse; margin: 1rem 0; }
+  table.grid td {
+    border: 1px solid #999;
+    width: 2.5rem; height: 2.5rem;
+    text-align: center; vertical-align: middle;
+  }
+  table.grid td.block { background: #333; }
+</style>
+
+<link rel="stylesheet" type="text/css" href="exolve-m.css"/>
+<link rel="stylesheet" type="text/css" href="exet.css"/>
+
+<script>
+exetConfig = {
+  language: "en",
+  script: "Latin",
+  maxCharCodes: 1,
+  defaultDimension: 4,
+  defaultPopularity: 0,
+  researchTools: [],
+  extraTabs: [],
+  listsLinks: [],
+};
+</script>
+
+<script src="exolve-m.js"></script>
+<script src="exet-analysis.js"></script>
+<script src="exet-storage.js"></script>
+<script src="exet-plugins.js"></script>
+<script src="lexicon-deadend-test.js"></script>
+<script src="exet-autofill.js"></script>
+<script src="exet-lexicon.js"></script>
+<script src="exet.js"></script>
+
+</head>
+<body>
+
+<div id="xet-loading" style="display:none"></div>
+<div id="xet-xlv-frame" style="display:none"></div>
+<div id="xet-temp" style="display:none"></div>
+
+<h1>Dead-end sweep test (change #1)</h1>
+
+<p>
+  This page checks whether trialing <strong>CART</strong> for across <code>????</code>
+  is wrongly kept by <code>someClueTurnsNonViable()</code> but rejected by
+  <code>refineLightChoices()</code>.
+</p>
+
+<table class="grid" id="grid-diagram"></table>
+
+<pre id="results">Running...</pre>
+
+<script>
+/**
+ * Build the 4×4 test grid and run the trial-word check once Exet is ready.
+ */
+function renderGridDiagram() {
+  const cells = [
+    ['?', '?', '?', '?'],
+    ['?', '?', '?', '?'],
+    ['?', '?', '?', '?'],
+    ['?', 'X', '?', '?'],
+  ];
+  const table = document.getElementById('grid-diagram');
+  let html = '';
+  for (const row of cells) {
+    html += '<tr>';
+    for (const ch of row) {
+      html += `<td>${ch}</td>`;
+    }
+    html += '</tr>';
+  }
+  table.innerHTML = html;
+}
+
+function findClueByPattern(fillState, pattern) {
+  for (const ci in fillState.clues) {
+    const clue = fillState.clues[ci];
+    if (clue.parentClueIndex) continue;
+    if (clue.solution === pattern) return ci;
+  }
+  return null;
+}
+
+function trialWord(exet, fillState, ci, word) {
+  const cells = exet.puz.getAllCells(ci);
+  const key = exetLexicon.lexkey(word);
+  if (key.length !== cells.length) {
+    throw new Error(`Word ${word} length ${key.length} != ${cells.length}`);
+  }
+  const temp = new ExetFillState(fillState);
+  for (let i = 0; i < cells.length; i++) {
+    const [row, col] = cells[i];
+    const cell = temp.grid[row][col];
+    cell.cChoices = {};
+    cell.cChoices[key[i]] = true;
+    if (cell.solution === '?') {
+      cell.currLetter = key[i];
+    }
+  }
+  return temp;
+}
+
+function runDeadendTest(exet) {
+  const out = document.getElementById('results');
+  const lines = [];
+
+  exet.makeExolve(`
+exolve-begin
+exolve-id: deadend-refine-test
+exolve-width: 4
+exolve-height: 4
+exolve-grid:
+    ? ? ? ?
+    ? ? ? ?
+    ? ? ? ?
+    ? X ? ?
+exolve-end`);
+
+  if (!exet.puz) {
+    out.textContent = 'FAIL: could not create puzzle';
+    out.className = 'fail';
+    return;
+  }
+
+  exet.minpop = 0;
+  exet.indexMinPop = exetLexicon.startLen;
+  exet.noProperNouns = false;
+  exet.noStemDupes = false;
+  exet.tryReversals = false;
+  exet.resetViability();
+
+  const acrossCi = findClueByPattern(exet.fillState, '????');
+  const downCi = findClueByPattern(exet.fillState, '???X');
+
+  if (!acrossCi || !downCi) {
+    lines.push('FAIL: could not find expected clues');
+    lines.push('Clues found:');
+    for (const ci in exet.fillState.clues) {
+      const c = exet.fillState.clues[ci];
+      if (!c.parentClueIndex) {
+        lines.push(`  ${ci}: ${c.solution}`);
+      }
+    }
+    out.textContent = lines.join('\n');
+    out.className = 'fail';
+    return;
+  }
+
+  const across = exet.fillState.clues[acrossCi];
+  const down = exet.fillState.clues[downCi];
+  const cartIdx = exetLexicon.lexicon.indexOf('CART');
+
+  lines.push(`Across ${acrossCi}: pattern ${across.solution}`);
+  lines.push(`  lChoices (${across.lChoices.length}): ${
+    across.lChoices.map(i => exetLexicon.lexicon[Math.abs(i)]).join(', ')}`);
+  lines.push(`Down ${downCi}: pattern ${down.solution}`);
+  lines.push(`  lChoices (${down.lChoices.length}): ${
+    down.lChoices.map(i => exetLexicon.lexicon[Math.abs(i)]).join(', ')}`);
+  lines.push('');
+  lines.push('Trial word: CART (forces down ???X to become ?A?X — no matches)');
+  lines.push('');
+
+  if (down.lChoices.length <= exet.sweepMaxChoicesSmall) {
+    lines.push(`NOTE: down has only ${down.lChoices.length} choices (need >4 ` +
+               `for the asymmetry); test may not demonstrate the bug.`);
+  }
+
+  const tempWeak = trialWord(exet, exet.fillState, acrossCi, 'CART');
+  const weakKeeps = !exet.someClueTurnsNonViable(tempWeak);
+
+  const tempStrong = trialWord(exet, exet.fillState, acrossCi, 'CART');
+  for (let s = 0; s < 2 && tempStrong.viable; s++) {
+    exet.refineLightChoices(tempStrong, exet.sweepMaxChoices);
+  }
+  const strongKeeps = tempStrong.viable;
+
+  lines.push(`someClueTurnsNonViable(): ${weakKeeps ? 'KEEP CART' : 'REJECT CART'}`);
+  lines.push(`refineLightChoices():    ${strongKeeps ? 'KEEP CART' : 'REJECT CART'}`);
+  lines.push('');
+
+  const demonstratesGap = weakKeeps && !strongKeeps;
+  if (demonstratesGap) {
+    lines.push('PASS: weak check keeps CART, strong check rejects it.');
+    lines.push('This is exactly what change #1 fixes in findDeadendsByClue().');
+    out.className = 'pass';
+  } else if (!weakKeeps && !strongKeeps) {
+    lines.push('INCONCLUSIVE: both reject CART (someClueTurnsNonViable already strict enough here).');
+    out.className = '';
+  } else if (weakKeeps && strongKeeps) {
+    lines.push('FAIL: both keep CART — neither check detected the crossing conflict.');
+    out.className = 'fail';
+  } else {
+    lines.push('UNEXPECTED: strong keeps but weak rejects.');
+    out.className = 'fail';
+  }
+
+  out.textContent = lines.join('\n');
+}
+
+renderGridDiagram();
+
+/** Wait for exet.js boot, then replace the blank grid with our test puzzle. */
+document.addEventListener('DOMContentLoaded', () => {
+  const wait = setInterval(() => {
+    if (typeof exet !== 'undefined' && exet && exet.puz && exet.fillState) {
+      clearInterval(wait);
+      try {
+        runDeadendTest(exet);
+      } catch (err) {
+        const out = document.getElementById('results');
+        out.textContent = 'ERROR: ' + err.message + '\n' + err.stack;
+        out.className = 'fail';
+      }
+    }
+  }, 50);
+});
+</script>
+
+</body>
+</html>

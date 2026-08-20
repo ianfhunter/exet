@@ -89,6 +89,7 @@ CLUE_CATEGORIES: list[tuple[str, str, str, str]] = [
     ("time", "Time & dates", "#f5f5f5", "#d8d8d8"),
     ("money", "Money & currency", "#fff6e6", "#f0d090"),
     ("sport", "Sport & games", "#e8fff0", "#b4e8c8"),
+    ("chess", "Chess", "#f5f0e8", "#d8cbb0"),
     ("general", "General", "#f7f7f7", "#e0e0e0"),
 ]
 CLUE_CATEGORY_SLUGS = [slug for slug, *_ in CLUE_CATEGORIES]
@@ -134,6 +135,178 @@ _ROMAN_WORDS = frozenset(
     """.split()
 )
 
+# ICAO/NATO phonetic alphabet (cryptic crosswords: word -> initial letter).
+NATO_PHONETIC: list[tuple[str, str]] = [
+    ("alfa", "A"),
+    ("alpha", "A"),
+    ("bravo", "B"),
+    ("charlie", "C"),
+    ("delta", "D"),
+    ("echo", "E"),
+    ("foxtrot", "F"),
+    ("golf", "G"),
+    ("hotel", "H"),
+    ("india", "I"),
+    ("juliet", "J"),
+    ("juliett", "J"),
+    ("kilo", "K"),
+    ("lima", "L"),
+    ("mike", "M"),
+    ("november", "N"),
+    ("oscar", "O"),
+    ("papa", "P"),
+    ("quebec", "Q"),
+    ("romeo", "R"),
+    ("sierra", "S"),
+    ("tango", "T"),
+    ("uniform", "U"),
+    ("victor", "V"),
+    ("whiskey", "W"),
+    ("whisky", "W"),
+    ("xray", "X"),
+    ("x-ray", "X"),
+    ("yankee", "Y"),
+    ("zulu", "Z"),
+]
+
+_NUMBER_WORDS: dict[str, int] = {
+    "zero": 0,
+    "one": 1,
+    "two": 2,
+    "three": 3,
+    "four": 4,
+    "five": 5,
+    "six": 6,
+    "seven": 7,
+    "eight": 8,
+    "nine": 9,
+    "ten": 10,
+    "eleven": 11,
+    "twelve": 12,
+    "thirteen": 13,
+    "fourteen": 14,
+    "fifteen": 15,
+    "sixteen": 16,
+    "seventeen": 17,
+    "eighteen": 18,
+    "nineteen": 19,
+    "twenty": 20,
+    "thirty": 30,
+    "forty": 40,
+    "fifty": 50,
+    "sixty": 60,
+    "seventy": 70,
+    "eighty": 80,
+    "ninety": 90,
+    "hundred": 100,
+    "thousand": 1000,
+    "grand": 1000,
+}
+
+_TENS = ("twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety")
+_UNITS = (
+    "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+)
+_MULTIPLIERS = ("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+
+
+def int_to_roman(value: int) -> str:
+    if value <= 0 or value > 3999:
+        raise ValueError(value)
+    numerals = [
+        (1000, "M"), (900, "CM"), (500, "D"), (400, "CD"),
+        (100, "C"), (90, "XC"), (50, "L"), (40, "XL"),
+        (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I"),
+    ]
+    out: list[str] = []
+    n = value
+    for amount, symbol in numerals:
+        while n >= amount:
+            out.append(symbol)
+            n -= amount
+    return "".join(out)
+
+
+def parse_number_phrase(phrase: str) -> int | None:
+    """Parse common English number phrases used in cryptic Roman-numeral clues."""
+    phrase = re.sub(r"\s+", " ", html_lib.unescape(phrase.strip())).lower()
+    if not phrase:
+        return None
+    if phrase in _NUMBER_WORDS:
+        return _NUMBER_WORDS[phrase]
+
+    m = re.fullmatch(rf"({'|'.join(_MULTIPLIERS)}) hundred and ([a-z ]+)", phrase)
+    if m:
+        tail = parse_number_phrase(m.group(2))
+        if tail is not None and 0 < tail < 100:
+            return _NUMBER_WORDS[m.group(1)] * 100 + tail
+
+    m = re.fullmatch(r"hundred and ([a-z ]+)", phrase)
+    if m:
+        tail = parse_number_phrase(m.group(1))
+        if tail is not None and 0 < tail < 100:
+            return 100 + tail
+
+    m = re.fullmatch(r"one hundred and ([a-z ]+)", phrase)
+    if m:
+        tail = parse_number_phrase(m.group(1))
+        if tail is not None and 0 < tail < 100:
+            return 100 + tail
+
+    m = re.fullmatch(rf"({'|'.join(_TENS)}) ({'|'.join(_UNITS)})", phrase)
+    if m:
+        return _NUMBER_WORDS[m.group(1)] + _NUMBER_WORDS[m.group(2)]
+
+    m = re.fullmatch(rf"({'|'.join(_MULTIPLIERS)}) hundred(?: and ({'|'.join(_UNITS)}))?", phrase)
+    if m:
+        total = _NUMBER_WORDS[m.group(1)] * 100
+        if m.group(2):
+            total += _NUMBER_WORDS[m.group(2)]
+        return total
+
+    m = re.fullmatch(r"one thousand five hundred", phrase)
+    if m:
+        return 1500
+
+    return None
+
+
+def build_roman_clue_index() -> dict[str, str]:
+    """Validated clue phrase -> Roman abbreviation."""
+    phrases = [
+        "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+        "ten", "eleven", "twelve", "twenty", "thirty", "forty", "fifty",
+        "sixty", "seventy", "eighty", "ninety", "hundred", "thousand", "grand",
+        "five hundred", "five hundred and one", "two hundred", "three hundred",
+        "four hundred", "hundred and one", "hundred and fifty", "hundred and sixty",
+        "fifty one", "one hundred and fifty", "two hundred and fifty",
+        "one thousand five hundred",
+    ]
+    for tens in _TENS:
+        for unit in _UNITS:
+            phrases.append(f"{tens} {unit}")
+    for mult in _MULTIPLIERS:
+        phrases.append(f"{mult} hundred")
+        for unit in _UNITS:
+            phrases.append(f"{mult} hundred and {unit}")
+    phrases.extend(["hundred and one", "hundred and fifty", "hundred and sixty"])
+
+    index: dict[str, str] = {}
+    for phrase in phrases:
+        value = parse_number_phrase(phrase)
+        if value is None or value <= 0 or value > 3999:
+            continue
+        index[re.sub(r"\s+", " ", phrase.strip()).lower()] = int_to_roman(value)
+    return index
+
+
+def _norm_clue_phrase(phrase: str) -> str:
+    return re.sub(r"\s+", " ", html_lib.unescape(phrase.strip())).lower()
+
+
+ROMAN_CLUE_ABBREV: dict[str, str] = build_roman_clue_index()
+NATO_PHONETIC_WORDS = frozenset(_norm_clue_phrase(word) for word, _letter in NATO_PHONETIC)
+
 _MUSIC_WORDS = frozenset(
     """
     alto bass chord do fa key la mi note piano re sharp sol soh te ti
@@ -163,7 +336,7 @@ _SCIENCE_WORDS = frozenset(
 
 _CHURCH_WORDS = frozenset(
     """
-    abbey altar angel apostle archbishop bishop canon cathedral chapel
+    abbey altar angel apostle archbishop canon cathedral chapel
     chaplain choir church clergy cleric communion convent crucifix
     divine ecclesiastical faith gospel holy mass minister monastery
     monk nun parish pastor prayer priest religion religious reverend
@@ -220,10 +393,35 @@ _SPORT_WORDS = frozenset(
     """.split()
 )
 
+# Single-word piece names and chess-only phrases (exact match, not token scan).
+_CHESS_PIECES = frozenset(
+    """
+    bishop king queen knight rook pawn chess
+    """.split()
+)
+
+_CHESS_PHRASES = frozenset(
+    {
+        "chess piece",
+        "chess pieces",
+        "chessman",
+        "chessmen",
+        "chess board",
+        "chessboard",
+        "chess grandmaster",
+        "chess master",
+        "checkmate",
+        "stalemate",
+        "castling",
+        "gambit",
+        "white square",
+        "black square",
+    }
+)
+
 _CATEGORY_RULES: list[tuple[str, frozenset[str]]] = [
     ("chemicals", _CHEMICAL_WORDS),
     ("geography", _GEOGRAPHY_WORDS),
-    ("roman-numerals", _ROMAN_WORDS),
     ("music", _MUSIC_WORDS),
     ("military", _MILITARY_WORDS),
     ("science", _SCIENCE_WORDS),
@@ -247,6 +445,7 @@ _WIKI_CATEGORY_HINTS: list[tuple[str, tuple[str, ...]]] = [
     ("military", ("nato phonetic", "phonetic alphabet")),
     ("science", ("electric current", "genetic code")),
     ("money", ("penny", "denarius", "cent")),
+    ("chess", ("chess", "chess piece")),
 ]
 
 
@@ -358,10 +557,18 @@ def classify_clue_word(clue_word: str, hint: str | None = None) -> str:
     text = norm_headword(clue_word)
     if not text:
         return "general"
+    if text in ROMAN_CLUE_ABBREV:
+        return "roman-numerals"
+    if text in _CHESS_PHRASES or text in _CHESS_PIECES:
+        return "chess"
+    if re.search(r"\bchess\b", text):
+        return "chess"
     tokens = re.findall(r"[a-z0-9]+", text)
     for slug, words in _CATEGORY_RULES:
         if text in words or any(t in words for t in tokens):
             return slug
+    if text in NATO_PHONETIC_WORDS:
+        return "military"
     if re.search(r"\b(element|oxide|isotope|radium|uranium)\b", text):
         return "chemicals"
     if re.search(r"\b(states?|province|republic|kingdom|capital)\b", text):
@@ -372,7 +579,7 @@ def classify_clue_word(clue_word: str, hint: str | None = None) -> str:
         return "church"
     if re.search(r"\b(army|navy|regiment|soldier|sailor|air force)\b", text):
         return "military"
-    if re.search(r"\b(lord|lady|sir|dame|honour|honor|knight)\b", text):
+    if re.search(r"\b(lord|lady|sir|dame|honour|honor|knighthood)\b", text):
         return "honours"
     if re.search(r"\b(latin|french|greek|grammar|adjective|adverb)\b", text):
         return "language"
@@ -404,7 +611,7 @@ def invert_abbrev_entries(entries: list[dict]) -> list[dict]:
         return buckets[key]
 
     def add_clue(row: dict, clue_word: str, category_hint: str | None = None) -> None:
-        clue_word = norm_space(clue_word)
+        clue_word = norm_headword(clue_word)
         if not clue_word:
             return
         cat = classify_clue_word(clue_word, category_hint)
@@ -721,6 +928,44 @@ def build_abbreviation_indicators() -> dict[str, dict]:
     return store
 
 
+def sanitize_roman_numerals(store: dict[str, dict]) -> int:
+    """Drop scraped number-phrase mappings that are not valid Roman numerals."""
+    removed = 0
+    for entry in store.values():
+        headword = entry["headword"]
+        for expansion in list(entry["expansions"]):
+            clue: str | None = None
+            abbrev: str | None = None
+            if is_abbrev_form(headword) and not is_abbrev_like(expansion):
+                abbrev, clue = headword, expansion
+            elif is_abbrev_like(expansion) and not is_abbrev_form(headword):
+                abbrev, clue = expansion, headword
+            if not clue or not abbrev:
+                continue
+            value = parse_number_phrase(clue)
+            if value is None or value <= 0 or value > 3999:
+                continue
+            expected = int_to_roman(value)
+            if abbrev_merge_key(abbrev) != abbrev_merge_key(expected):
+                entry["expansions"].discard(expansion)
+                removed += 1
+    return removed
+
+
+def apply_curated_extras(store: dict[str, dict]) -> int:
+    """Add validated Roman numerals and the full NATO phonetic alphabet."""
+    added = 0
+    for clue, abbrev in ROMAN_CLUE_ABBREV.items():
+        added += add_abbrev(
+            store, clue, abbrev, "curated", category="roman-numerals"
+        )
+    for word, letter in NATO_PHONETIC:
+        added += add_abbrev(
+            store, word, letter, "curated", category="military"
+        )
+    return added
+
+
 def build_abbreviations() -> dict[str, dict]:
     store: dict[str, dict] = {}
     steps = [
@@ -730,6 +975,8 @@ def build_abbreviations() -> dict[str, dict]:
         ("longair", scrape_longair),
         ("wikipedia", scrape_wikipedia_abbrev),
         ("cryptipedia", scrape_cryptipedia_abbrev),
+        ("sanitize-roman", lambda s: sanitize_roman_numerals(s)),
+        ("curated-extras", apply_curated_extras),
     ]
     print("\n=== Abbreviations (clue word -> expansion) ===", flush=True)
     for name, fn in steps:

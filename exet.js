@@ -4516,15 +4516,27 @@ Exet.prototype.updateSavePanel = function() {
   }
   const w = document.getElementById('xet-save-warnings');
   let warnings = '';
-  const info = this.getLightInfos()['All'];
-  const numUnfilled = info.lights - info.ischild - info.filled;
+  let numUnfilled = 0;
+  let numDraft = 0;
+  for (const ci in this.puz.clues) {
+    const theClue = this.puz.clues[ci];
+    if (theClue.parentClueIndex) {
+      continue;
+    }
+    if (!(theClue.solution && theClue.solution.indexOf('?') < 0)) {
+      numUnfilled++;
+    }
+    const depunctClue = exetLexicon.depunct(theClue.clue, true /* forDeduping */);
+    if (!depunctClue || this.isDraftClue(theClue.clue)) {
+      numDraft++;
+    }
+  }
   if (numUnfilled == 1) {
     warnings += 'There is 1 unfilled entry!<br>';
   } else if (numUnfilled > 1) {
     warnings += 'There are ' + numUnfilled +
                 ' unfilled entries!<br>';
   }
-  const numDraft = info.lights - info.ischild - info.set;
   if (numDraft == 1) {
     warnings += `There is 1 clue marked ${this.DRAFT}!<br>`;
   } else if (numDraft > 1) {
@@ -5333,6 +5345,44 @@ Exet.prototype.setDraftToggler = function() {
   }
 }
 
+Exet.prototype.isAnnoLocked = function() {
+  return !!this.annoLocked;
+}
+
+Exet.prototype.toggleAnnoLock = function() {
+  this.setAnnoLock(!this.annoLocked, true);
+}
+
+Exet.prototype.setAnnoLock = function(locked, wiggle) {
+  this.annoLocked = !!locked;
+  const theClue = this.currClue();
+  if (theClue) {
+    theClue.annoLocked = this.annoLocked;
+  }
+  const xetAnno = document.getElementById('xet-anno');
+  const lockBtn = document.getElementById('xet-anno-lock');
+  if (!xetAnno || !lockBtn) {
+    return;
+  }
+  xetAnno.contentEditable = !this.annoLocked;
+  xetAnno.classList.toggle('xet-anno-locked', this.annoLocked);
+  lockBtn.classList.toggle('xet-anno-lock-locked', this.annoLocked);
+  lockBtn.title = this.annoLocked ?
+      'Annotation locked — click to unlock and edit' :
+      'Annotation unlocked — click to lock against Magpie overrides';
+  lockBtn.setAttribute('aria-label', lockBtn.title);
+  lockBtn.textContent = this.annoLocked ? '🔒' : '🔓';
+  if (wiggle) {
+    lockBtn.classList.remove('xet-anno-lock-wiggle');
+    void lockBtn.offsetWidth;
+    lockBtn.classList.add('xet-anno-lock-wiggle');
+  }
+  if (this.magpieApplyBtn) {
+    this.magpieApplyBtn.title = this.annoLocked ?
+        'Optional anno is locked — unlock it before applying' : '';
+  }
+}
+
 Exet.prototype.isInTag = function(prefix, suffix, open, close) {
   let px = prefix.lastIndexOf(open)
   if (px < 0 || prefix.lastIndexOf(close) > px) return null
@@ -6127,13 +6177,33 @@ Exet.prototype.makeClueEditable = function() {
       optional anno:&nbsp;</span>`;
   this.xetCurrClue.appendChild(spacer);
 
+  const annoRow = document.createElement('span');
+  annoRow.className = 'xet-anno-row';
+
+  const annoLock = document.createElement('button');
+  annoLock.type = 'button';
+  annoLock.id = 'xet-anno-lock';
+  annoLock.className = 'xet-anno-lock';
+  annoLock.addEventListener('click', e => {
+    e.stopPropagation();
+    this.toggleAnnoLock();
+  });
+  annoLock.addEventListener('animationend', () => {
+    annoLock.classList.remove('xet-anno-lock-wiggle');
+  });
+
   const xetAnno = document.createElement('span');
   xetAnno.className = 'xet-anno xet-editable';
   xetAnno.id = 'xet-anno';
   xetAnno.contentEditable = true;
   xetAnno.spellcheck = exetState.spellcheck;
   xetAnno.innerText = theClue.anno;
-  this.xetCurrClue.appendChild(xetAnno);
+
+  annoRow.appendChild(annoLock);
+  annoRow.appendChild(xetAnno);
+  this.xetCurrClue.appendChild(annoRow);
+  this.annoLocked = !!theClue.annoLocked;
+  this.setAnnoLock(this.annoLocked, false);
   xetAnno.addEventListener('input', handler);
 
   this.makeLinkingPanel();

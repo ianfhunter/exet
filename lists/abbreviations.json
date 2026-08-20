@@ -2,11 +2,12 @@
   "type": "abbreviations",
   "title": "Cryptic abbreviations",
   "blurb": "Clue words and phrases that commonly abbreviate to letters or short forms in cryptic crosswords (bits-and-pieces).",
-  "built": "2026-08-12",
-  "count": 3698,
+  "built": "2026-08-20",
+  "count": 3898,
   "sources": [
     "clue-clinic",
     "cryptipedia",
+    "curated",
     "longair",
     "mhl-yaml",
     "wikipedia"
@@ -145,7 +146,6 @@
         "card",
         "champion",
         "expert",
-        "one",
         "pilot",
         "service",
         "winner"
@@ -261,6 +261,32 @@
       "sources": [
         "clue-clinic",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "alfa",
+      "expansions": [
+        "A"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "alpha",
+      "expansions": [
+        "A",
+        "Greek letter",
+        "beginning",
+        "first character",
+        "first letter"
+      ],
+      "sources": [
+        "curated",
+        "longair",
+        "mhl-yaml"
       ],
       "notes": []
     },
@@ -687,7 +713,6 @@
         "second class",
         "second letter",
         "soft",
-        "three hundred",
         "three thousand",
         "vitamin"
       ],
@@ -1510,12 +1535,10 @@
         "bomb",
         "effect",
         "examination",
-        "fifty",
         "film",
         "first character",
         "first class",
         "first letter",
-        "five hundred",
         "five thousand",
         "good",
         "high class",
@@ -1524,7 +1547,6 @@
         "level",
         "midday",
         "note",
-        "one",
         "paper",
         "per",
         "road",
@@ -1748,6 +1770,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "curated",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1779,7 +1802,6 @@
         "spot marked",
         "ten",
         "ten thousand",
-        "thousand",
         "times",
         "unknown",
         "vitamin",
@@ -2393,8 +2415,7 @@
       "headword": "bis",
       "expansions": [
         "again",
-        "twice",
-        "two"
+        "twice"
       ],
       "sources": [
         "longair",
@@ -2515,14 +2536,12 @@
         "Germany",
         "agent",
         "clef",
-        "four hundred",
         "gamma",
         "gamut",
         "gee",
         "girl",
         "gram",
         "gramme",
-        "grand",
         "gravity",
         "guinea",
         "gulf",
@@ -2533,7 +2552,6 @@
         "string",
         "strings",
         "suit",
-        "thousand",
         "violin string",
         "violin strings",
         "weight"
@@ -3090,7 +3108,6 @@
         "level",
         "measure",
         "moth",
-        "one hundred and fifty",
         "one hundred and fifty thousand",
         "track",
         "unknown",
@@ -4296,7 +4313,6 @@
         "are",
         "arithmetic",
         "castle",
-        "eighty",
         "eighty thousand",
         "hand",
         "king",
@@ -4400,7 +4416,6 @@
         "disc",
         "duck",
         "egg",
-        "eleven",
         "eleven thousand",
         "empty",
         "examination",
@@ -4592,7 +4607,6 @@
         "articles - English",
         "before",
         "if",
-        "one",
         "un"
       ],
       "sources": [
@@ -4854,7 +4868,6 @@
         "quarter",
         "saint",
         "second",
-        "seven",
         "seven thousand",
         "shilling",
         "side",
@@ -4900,12 +4913,10 @@
         "earth",
         "east",
         "eastern",
-        "eight",
         "eight thousand",
         "energy",
         "epsilon",
         "eta",
-        "five",
         "five thousand",
         "key",
         "layer",
@@ -4917,7 +4928,6 @@
         "point",
         "quarter",
         "string",
-        "two hundred and fifty",
         "two hundred and fifty thousand",
         "universal set",
         "vacant",
@@ -5366,7 +5376,6 @@
         "neutral",
         "new",
         "newton",
-        "ninety",
         "ninety thousand",
         "nitrogen",
         "noon",
@@ -5656,6 +5665,16 @@
       "notes": []
     },
     {
+      "headword": "bravo",
+      "expansions": [
+        "B"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "breadth",
       "expansions": [
         "B"
@@ -5851,7 +5870,6 @@
         "cross",
         "crossed",
         "half dry",
-        "hundred and sixty",
         "hundred and sixty thousand",
         "junction",
         "model",
@@ -5984,7 +6002,6 @@
         "last character",
         "last letter",
         "omega",
-        "seven",
         "seven thousand",
         "sound of sleep",
         "unknown",
@@ -6454,20 +6471,6 @@
       "notes": []
     },
     {
-      "headword": "alpha",
-      "expansions": [
-        "Greek letter",
-        "beginning",
-        "first character",
-        "first letter"
-      ],
-      "sources": [
-        "longair",
-        "mhl-yaml"
-      ],
-      "notes": []
-    },
-    {
       "headword": "je",
       "expansions": [
         "I",
@@ -6871,10 +6874,7 @@
         "knight",
         "monarch",
         "potassium",
-        "thousand",
-        "twenty",
         "twenty thousand",
-        "two hundred and fifty",
         "vitamin"
       ],
       "sources": [
@@ -7092,10 +7092,8 @@
         "cue",
         "electrical charge",
         "farthing",
-        "five hundred",
         "five hundred thousand",
         "koppa",
-        "ninety",
         "ninety thousand",
         "quality",
         "queen",
@@ -7158,7 +7156,6 @@
         "hydrant",
         "hydrogen",
         "tap",
-        "two hundred",
         "two hundred thousand",
         "vitamin"
       ],
@@ -8379,6 +8376,7 @@
         "C"
       ],
       "sources": [
+        "curated",
         "wikipedia"
       ],
       "notes": []
@@ -8583,10 +8581,10 @@
     {
       "headword": "hundred",
       "expansions": [
-        "C",
-        "TON"
+        "C"
       ],
       "sources": [
+        "curated",
         "wikipedia"
       ],
       "notes": []
@@ -8621,7 +8619,8 @@
         "C"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "curated"
       ],
       "notes": []
     },
@@ -9378,6 +9377,216 @@
       "notes": []
     },
     {
+      "headword": "two hundred",
+      "expansions": [
+        "CC"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "three hundred",
+      "expansions": [
+        "CCC"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "three hundred and one",
+      "expansions": [
+        "CCCI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "three hundred and two",
+      "expansions": [
+        "CCCII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "three hundred and three",
+      "expansions": [
+        "CCCIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "three hundred and four",
+      "expansions": [
+        "CCCIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "three hundred and nine",
+      "expansions": [
+        "CCCIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "three hundred and five",
+      "expansions": [
+        "CCCV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "three hundred and six",
+      "expansions": [
+        "CCCVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "three hundred and seven",
+      "expansions": [
+        "CCCVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "three hundred and eight",
+      "expansions": [
+        "CCCVIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "two hundred and one",
+      "expansions": [
+        "CCI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "two hundred and two",
+      "expansions": [
+        "CCII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "two hundred and three",
+      "expansions": [
+        "CCIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "two hundred and four",
+      "expansions": [
+        "CCIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "two hundred and nine",
+      "expansions": [
+        "CCIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "two hundred and fifty",
+      "expansions": [
+        "CCL"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "two hundred and five",
+      "expansions": [
+        "CCV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "two hundred and six",
+      "expansions": [
+        "CCVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "two hundred and seven",
+      "expansions": [
+        "CCVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "two hundred and eight",
+      "expansions": [
+        "CCVIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "cadmium",
       "expansions": [
         "CD"
@@ -9487,12 +9696,72 @@
       "notes": []
     },
     {
+      "headword": "four hundred",
+      "expansions": [
+        "CD"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "french diplomatic corps",
       "expansions": [
         "CD"
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "four hundred and one",
+      "expansions": [
+        "CDI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "four hundred and two",
+      "expansions": [
+        "CDII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "four hundred and three",
+      "expansions": [
+        "CDIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "four hundred and four",
+      "expansions": [
+        "CDIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "four hundred and nine",
+      "expansions": [
+        "CDIX"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -9524,6 +9793,46 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "four hundred and five",
+      "expansions": [
+        "CDV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "four hundred and six",
+      "expansions": [
+        "CDVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "four hundred and seven",
+      "expansions": [
+        "CDVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "four hundred and eight",
+      "expansions": [
+        "CDVIII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -9663,7 +9972,6 @@
         "Kelt",
         "Portugal",
         "copper",
-        "four hundred",
         "four hundred thousand",
         "page",
         "park",
@@ -10491,12 +10799,32 @@
       "notes": []
     },
     {
+      "headword": "hundred and one",
+      "expansions": [
+        "CI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "ivory coast",
       "expansions": [
         "CI"
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "one hundred and one",
+      "expansions": [
+        "CI"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -10565,6 +10893,26 @@
       ],
       "sources": [
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "one hundred and two",
+      "expansions": [
+        "CII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "one hundred and three",
+      "expansions": [
+        "CIII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -10658,6 +11006,16 @@
       "notes": []
     },
     {
+      "headword": "one hundred and four",
+      "expansions": [
+        "CIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "cs",
       "expansions": [
         "Civil Service",
@@ -10668,6 +11026,16 @@
       "sources": [
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "one hundred and nine",
+      "expansions": [
+        "CIX"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -10713,6 +11081,26 @@
       "sources": [
         "clue-clinic",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "hundred and fifty",
+      "expansions": [
+        "CL"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "one hundred and fifty",
+      "expansions": [
+        "CL"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -10770,7 +11158,6 @@
         "foot",
         "force",
         "forte",
-        "forty",
         "frequency",
         "gas",
         "hole",
@@ -10829,6 +11216,16 @@
       "notes": []
     },
     {
+      "headword": "hundred and sixty",
+      "expansions": [
+        "CLX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "by reason of death",
       "expansions": [
         "CM"
@@ -10875,6 +11272,106 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine hundred",
+      "expansions": [
+        "CM"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine hundred and one",
+      "expansions": [
+        "CMI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine hundred and two",
+      "expansions": [
+        "CMII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine hundred and three",
+      "expansions": [
+        "CMIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine hundred and four",
+      "expansions": [
+        "CMIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine hundred and nine",
+      "expansions": [
+        "CMIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine hundred and five",
+      "expansions": [
+        "CMV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine hundred and six",
+      "expansions": [
+        "CMVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine hundred and seven",
+      "expansions": [
+        "CMVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine hundred and eight",
+      "expansions": [
+        "CMVIII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -11247,9 +11744,11 @@
     {
       "headword": "two",
       "expansions": [
+        "II",
         "company"
       ],
       "sources": [
+        "curated",
         "longair",
         "mhl-yaml"
       ],
@@ -11499,7 +11998,6 @@
         "duke",
         "electrical flux",
         "five hundred",
-        "four",
         "four thousand",
         "hundreds",
         "key",
@@ -12032,7 +12530,6 @@
         "cry of triumph",
         "joyful cry",
         "maiden",
-        "ten",
         "triumphant cry"
       ],
       "sources": [
@@ -12294,12 +12791,52 @@
       "notes": []
     },
     {
+      "headword": "one hundred and five",
+      "expansions": [
+        "CV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "resume",
       "expansions": [
         "CV"
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "one hundred and six",
+      "expansions": [
+        "CVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "one hundred and seven",
+      "expansions": [
+        "CVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "one hundred and eight",
+      "expansions": [
+        "CVIII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -12429,6 +12966,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "delta",
+      "expansions": [
+        "D"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -12615,6 +13162,7 @@
         "D"
       ],
       "sources": [
+        "curated",
         "wikipedia"
       ],
       "notes": []
@@ -12936,6 +13484,216 @@
       "notes": []
     },
     {
+      "headword": "six hundred",
+      "expansions": [
+        "DC"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven hundred",
+      "expansions": [
+        "DCC"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eight hundred",
+      "expansions": [
+        "DCCC"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eight hundred and one",
+      "expansions": [
+        "DCCCI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eight hundred and two",
+      "expansions": [
+        "DCCCII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eight hundred and three",
+      "expansions": [
+        "DCCCIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eight hundred and four",
+      "expansions": [
+        "DCCCIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eight hundred and nine",
+      "expansions": [
+        "DCCCIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eight hundred and five",
+      "expansions": [
+        "DCCCV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eight hundred and six",
+      "expansions": [
+        "DCCCVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eight hundred and seven",
+      "expansions": [
+        "DCCCVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eight hundred and eight",
+      "expansions": [
+        "DCCCVIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven hundred and one",
+      "expansions": [
+        "DCCI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven hundred and two",
+      "expansions": [
+        "DCCII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven hundred and three",
+      "expansions": [
+        "DCCIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven hundred and four",
+      "expansions": [
+        "DCCIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven hundred and nine",
+      "expansions": [
+        "DCCIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven hundred and five",
+      "expansions": [
+        "DCCV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven hundred and six",
+      "expansions": [
+        "DCCVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven hundred and seven",
+      "expansions": [
+        "DCCVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven hundred and eight",
+      "expansions": [
+        "DCCVIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "doctor of surgery",
       "expansions": [
         "DCH",
@@ -12943,6 +13701,96 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "six hundred and one",
+      "expansions": [
+        "DCI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "six hundred and two",
+      "expansions": [
+        "DCII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "six hundred and three",
+      "expansions": [
+        "DCIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "six hundred and four",
+      "expansions": [
+        "DCIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "six hundred and nine",
+      "expansions": [
+        "DCIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "six hundred and five",
+      "expansions": [
+        "DCV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "six hundred and six",
+      "expansions": [
+        "DCVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "six hundred and seven",
+      "expansions": [
+        "DCVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "six hundred and eight",
+      "expansions": [
+        "DCVIII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -13530,6 +14378,16 @@
       "notes": []
     },
     {
+      "headword": "five hundred and one",
+      "expansions": [
+        "DI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "inspector",
       "expansions": [
         "DI"
@@ -13584,6 +14442,26 @@
       "sources": [
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "five hundred and two",
+      "expansions": [
+        "DII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "five hundred and three",
+      "expansions": [
+        "DIII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -13722,6 +14600,26 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "five hundred and four",
+      "expansions": [
+        "DIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "five hundred and nine",
+      "expansions": [
+        "DIX"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -14017,7 +14915,6 @@
       "headword": "bi",
       "expansions": [
         "double",
-        "two",
         "vitamin"
       ],
       "sources": [
@@ -14031,8 +14928,7 @@
       "expansions": [
         "double",
         "five hundred and one",
-        "princess",
-        "two"
+        "princess"
       ],
       "sources": [
         "longair",
@@ -14359,12 +15255,52 @@
       "notes": []
     },
     {
+      "headword": "five hundred and five",
+      "expansions": [
+        "DV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "god willing",
       "expansions": [
         "DV"
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "five hundred and six",
+      "expansions": [
+        "DVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "five hundred and seven",
+      "expansions": [
+        "DVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "five hundred and eight",
+      "expansions": [
+        "DVIII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -14536,6 +15472,7 @@
         "E"
       ],
       "sources": [
+        "curated",
         "wikipedia"
       ],
       "notes": []
@@ -15041,9 +15978,11 @@
     {
       "headword": "twelve",
       "expansions": [
+        "XII",
         "eec"
       ],
       "sources": [
+        "curated",
         "longair",
         "mhl-yaml"
       ],
@@ -15115,21 +16054,7 @@
         "price",
         "priest",
         "prince",
-        "public relations",
-        "two"
-      ],
-      "sources": [
-        "longair",
-        "mhl-yaml"
-      ],
-      "notes": []
-    },
-    {
-      "headword": "ii",
-      "expansions": [
-        "eleven",
-        "eyes",
-        "two"
+        "public relations"
       ],
       "sources": [
         "longair",
@@ -16382,6 +17307,18 @@
       "notes": []
     },
     {
+      "headword": "ii",
+      "expansions": [
+        "eyes",
+        "two"
+      ],
+      "sources": [
+        "longair",
+        "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
       "headword": "stye",
       "expansions": [
         "eyesore"
@@ -16560,6 +17497,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "foxtrot",
+      "expansions": [
+        "F"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -16809,7 +17756,6 @@
         "T",
         "fashion",
         "fashionable people",
-        "hundred",
         "large amount",
         "weight"
       ],
@@ -18396,6 +19342,16 @@
       "notes": []
     },
     {
+      "headword": "golf",
+      "expansions": [
+        "G"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "good",
       "expansions": [
         "G",
@@ -18455,19 +19411,6 @@
       "notes": []
     },
     {
-      "headword": "grand",
-      "expansions": [
-        "G",
-        "K",
-        "M"
-      ],
-      "sources": [
-        "clue-clinic",
-        "wikipedia"
-      ],
-      "notes": []
-    },
-    {
       "headword": "gravity",
       "expansions": [
         "G"
@@ -18483,18 +19426,6 @@
         "G",
         "GG",
         "H"
-      ],
-      "sources": [
-        "wikipedia"
-      ],
-      "notes": []
-    },
-    {
-      "headword": "thousand",
-      "expansions": [
-        "G",
-        "M",
-        "or K"
       ],
       "sources": [
         "wikipedia"
@@ -19924,6 +20855,16 @@
       "notes": []
     },
     {
+      "headword": "hotel",
+      "expansions": [
+        "H"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "hour",
       "expansions": [
         "H",
@@ -20295,7 +21236,6 @@
         "judge",
         "justice",
         "knave",
-        "one",
         "pen",
         "square root of -1"
       ],
@@ -21075,20 +22015,6 @@
       "notes": []
     },
     {
-      "headword": "ic",
-      "expansions": [
-        "I see",
-        "hundred",
-        "in charge",
-        "ninety nine"
-      ],
-      "sources": [
-        "longair",
-        "mhl-yaml"
-      ],
-      "notes": []
-    },
-    {
       "headword": "lakh",
       "expansions": [
         "hundred thousand"
@@ -21148,8 +22074,7 @@
     {
       "headword": "ane",
       "expansions": [
-        "I",
-        "one"
+        "I"
       ],
       "sources": [
         "longair",
@@ -21191,6 +22116,18 @@
       "sources": [
         "clue-clinic",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "india",
+      "expansions": [
+        "I",
+        "IND"
+      ],
+      "sources": [
+        "clue-clinic",
+        "curated"
       ],
       "notes": []
     },
@@ -21288,6 +22225,18 @@
       "headword": "ive",
       "expansions": [
         "I have"
+      ],
+      "sources": [
+        "longair",
+        "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ic",
+      "expansions": [
+        "I see",
+        "in charge"
       ],
       "sources": [
         "longair",
@@ -21562,13 +22511,12 @@
       "notes": []
     },
     {
-      "headword": "eleven",
+      "headword": "three",
       "expansions": [
-        "II",
-        "or XI"
+        "III"
       ],
       "sources": [
-        "wikipedia"
+        "curated"
       ],
       "notes": []
     },
@@ -21843,16 +22791,6 @@
       "notes": []
     },
     {
-      "headword": "india",
-      "expansions": [
-        "IND"
-      ],
-      "sources": [
-        "clue-clinic"
-      ],
-      "notes": []
-    },
-    {
       "headword": "indian",
       "expansions": [
         "IND"
@@ -22080,7 +23018,6 @@
         "United Nations",
         "international",
         "number one",
-        "one",
         "peacekeepers"
       ],
       "sources": [
@@ -22151,6 +23088,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "curated",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -22602,6 +23540,7 @@
         "rowing boat"
       ],
       "sources": [
+        "curated",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -22645,6 +23584,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nine",
+      "expansions": [
+        "IX"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -22699,6 +23648,26 @@
       "sources": [
         "clue-clinic",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "juliet",
+      "expansions": [
+        "J"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "juliett",
+      "expansions": [
+        "J"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -22976,6 +23945,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "curated",
         "wikipedia"
       ],
       "notes": []
@@ -23477,11 +24447,11 @@
     {
       "headword": "fifty",
       "expansions": [
-        "L",
-        "L)"
+        "L"
       ],
       "sources": [
         "clue-clinic",
+        "curated",
         "wikipedia"
       ],
       "notes": []
@@ -23638,6 +24608,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "lima",
+      "expansions": [
+        "L"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -24478,6 +25458,16 @@
       "notes": []
     },
     {
+      "headword": "fifty one",
+      "expansions": [
+        "LI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "light infantry",
       "expansions": [
         "LI"
@@ -24562,6 +25552,26 @@
         "longair",
         "mhl-yaml",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "fifty two",
+      "expansions": [
+        "LII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "fifty three",
+      "expansions": [
+        "LIII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -24757,6 +25767,26 @@
       "sources": [
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "fifty four",
+      "expansions": [
+        "LIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "fifty nine",
+      "expansions": [
+        "LIX"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -25170,6 +26200,16 @@
       "notes": []
     },
     {
+      "headword": "fifty five",
+      "expansions": [
+        "LV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "latvia",
       "expansions": [
         "LV"
@@ -25186,6 +26226,36 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "fifty six",
+      "expansions": [
+        "LVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "fifty seven",
+      "expansions": [
+        "LVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "fifty eight",
+      "expansions": [
+        "LVIII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -25231,11 +26301,323 @@
       "notes": []
     },
     {
+      "headword": "sixty",
+      "expansions": [
+        "LX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "sixty one",
+      "expansions": [
+        "LXI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "sixty two",
+      "expansions": [
+        "LXII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "sixty three",
+      "expansions": [
+        "LXIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "sixty four",
+      "expansions": [
+        "LXIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "sixty nine",
+      "expansions": [
+        "LXIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "sixty five",
+      "expansions": [
+        "LXV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "sixty six",
+      "expansions": [
+        "LXVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "sixty seven",
+      "expansions": [
+        "LXVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "sixty eight",
+      "expansions": [
+        "LXVIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seventy",
+      "expansions": [
+        "LXX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seventy one",
+      "expansions": [
+        "LXXI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seventy two",
+      "expansions": [
+        "LXXII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seventy three",
+      "expansions": [
+        "LXXIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seventy four",
+      "expansions": [
+        "LXXIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seventy nine",
+      "expansions": [
+        "LXXIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seventy five",
+      "expansions": [
+        "LXXV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seventy six",
+      "expansions": [
+        "LXXVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seventy seven",
+      "expansions": [
+        "LXXVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seventy eight",
+      "expansions": [
+        "LXXVIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eighty",
+      "expansions": [
+        "LXXX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eighty one",
+      "expansions": [
+        "LXXXI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eighty two",
+      "expansions": [
+        "LXXXII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eighty three",
+      "expansions": [
+        "LXXXIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eighty four",
+      "expansions": [
+        "LXXXIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eighty nine",
+      "expansions": [
+        "LXXXIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eighty five",
+      "expansions": [
+        "LXXXV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eighty six",
+      "expansions": [
+        "LXXXVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eighty seven",
+      "expansions": [
+        "LXXXVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "eighty eight",
+      "expansions": [
+        "LXXXVIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "frenchman",
       "expansions": [
         "M"
       ],
       "sources": [
+        "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "grand",
+      "expansions": [
+        "M"
+      ],
+      "sources": [
+        "clue-clinic",
+        "curated",
         "wikipedia"
       ],
       "notes": []
@@ -25372,6 +26754,16 @@
       "notes": []
     },
     {
+      "headword": "mike",
+      "expansions": [
+        "M"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "mile",
       "expansions": [
         "M",
@@ -25501,6 +26893,18 @@
       ],
       "sources": [
         "clue-clinic",
+        "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thousand",
+      "expansions": [
+        "M",
+        "or K"
+      ],
+      "sources": [
+        "curated",
         "wikipedia"
       ],
       "notes": []
@@ -26046,6 +27450,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "one thousand five hundred",
+      "expansions": [
+        "MD"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -27805,6 +29219,18 @@
       "notes": []
     },
     {
+      "headword": "november",
+      "expansions": [
+        "N",
+        "NOV"
+      ],
+      "sources": [
+        "clue-clinic",
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "nuclear",
       "expansions": [
         "N",
@@ -29026,16 +30452,6 @@
       "notes": []
     },
     {
-      "headword": "november",
-      "expansions": [
-        "NOV"
-      ],
-      "sources": [
-        "clue-clinic"
-      ],
-      "notes": []
-    },
-    {
       "headword": "anon",
       "expansions": [
         "now"
@@ -29569,6 +30985,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "oscar",
+      "expansions": [
+        "O"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -30826,6 +32252,18 @@
       "notes": []
     },
     {
+      "headword": "eleven",
+      "expansions": [
+        "XI",
+        "or XI"
+      ],
+      "sources": [
+        "curated",
+        "wikipedia"
+      ],
+      "notes": []
+    },
+    {
       "headword": "lso",
       "expansions": [
         "orchestra"
@@ -31161,6 +32599,16 @@
       "sources": [
         "clue-clinic",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "papa",
+      "expansions": [
+        "P"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -33398,7 +34846,8 @@
         "QUE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "curated"
       ],
       "notes": []
     },
@@ -33703,6 +35152,16 @@
       "sources": [
         "clue-clinic",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "romeo",
+      "expansions": [
+        "R"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -35018,9 +36477,11 @@
     {
       "headword": "eight",
       "expansions": [
+        "VIII",
         "rowing boat"
       ],
       "sources": [
+        "curated",
         "longair",
         "mhl-yaml"
       ],
@@ -35371,6 +36832,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "sierra",
+      "expansions": [
+        "S"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -37908,6 +39379,16 @@
       "notes": []
     },
     {
+      "headword": "tango",
+      "expansions": [
+        "T"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "tare",
       "expansions": [
         "T"
@@ -38440,9 +39921,19 @@
       "notes": []
     },
     {
+      "headword": "tid",
+      "expansions": [
+        "three times a day"
+      ],
+      "sources": [
+        "longair",
+        "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
       "headword": "ter",
       "expansions": [
-        "three",
         "thrice",
         "triple"
       ],
@@ -38455,20 +39946,8 @@
     {
       "headword": "tri",
       "expansions": [
-        "three",
         "thrice",
         "triple"
-      ],
-      "sources": [
-        "longair",
-        "mhl-yaml"
-      ],
-      "notes": []
-    },
-    {
-      "headword": "tid",
-      "expansions": [
-        "three times a day"
       ],
       "sources": [
         "longair",
@@ -39228,6 +40707,16 @@
       "notes": []
     },
     {
+      "headword": "uniform",
+      "expansions": [
+        "U"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "unionist",
       "expansions": [
         "U"
@@ -39605,6 +41094,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "curated",
         "wikipedia"
       ],
       "notes": []
@@ -39689,6 +41179,16 @@
       "sources": [
         "clue-clinic",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "victor",
+      "expansions": [
+        "V"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -39892,6 +41392,16 @@
       "notes": []
     },
     {
+      "headword": "six",
+      "expansions": [
+        "VI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "ve",
       "expansions": [
         "victory"
@@ -39910,6 +41420,16 @@
       "sources": [
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "seven",
+      "expansions": [
+        "VII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -40164,6 +41684,26 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "whiskey",
+      "expansions": [
+        "W"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "whisky",
+      "expansions": [
+        "W"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -40839,6 +42379,126 @@
       "notes": []
     },
     {
+      "headword": "x-ray",
+      "expansions": [
+        "X"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "xray",
+      "expansions": [
+        "X"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ninety",
+      "expansions": [
+        "XC"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ninety one",
+      "expansions": [
+        "XCI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ninety two",
+      "expansions": [
+        "XCII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ninety three",
+      "expansions": [
+        "XCIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ninety four",
+      "expansions": [
+        "XCIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ninety nine",
+      "expansions": [
+        "XCIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ninety five",
+      "expansions": [
+        "XCV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ninety six",
+      "expansions": [
+        "XCVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ninety seven",
+      "expansions": [
+        "XCVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ninety eight",
+      "expansions": [
+        "XCVIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "ex dividend",
       "expansions": [
         "XD"
@@ -40880,12 +42540,312 @@
       "notes": []
     },
     {
+      "headword": "forty",
+      "expansions": [
+        "XL"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "forty one",
+      "expansions": [
+        "XLI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "forty two",
+      "expansions": [
+        "XLII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "forty three",
+      "expansions": [
+        "XLIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "forty four",
+      "expansions": [
+        "XLIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "forty nine",
+      "expansions": [
+        "XLIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "forty five",
+      "expansions": [
+        "XLV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "forty six",
+      "expansions": [
+        "XLVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "forty seven",
+      "expansions": [
+        "XLVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "forty eight",
+      "expansions": [
+        "XLVIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "christmas",
       "expansions": [
         "XM"
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "twenty",
+      "expansions": [
+        "XX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "twenty one",
+      "expansions": [
+        "XXI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "twenty two",
+      "expansions": [
+        "XXII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "twenty three",
+      "expansions": [
+        "XXIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "twenty four",
+      "expansions": [
+        "XXIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "twenty nine",
+      "expansions": [
+        "XXIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "twenty five",
+      "expansions": [
+        "XXV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "twenty six",
+      "expansions": [
+        "XXVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "twenty seven",
+      "expansions": [
+        "XXVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "twenty eight",
+      "expansions": [
+        "XXVIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thirty",
+      "expansions": [
+        "XXX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thirty one",
+      "expansions": [
+        "XXXI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thirty two",
+      "expansions": [
+        "XXXII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thirty three",
+      "expansions": [
+        "XXXIII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thirty four",
+      "expansions": [
+        "XXXIV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thirty nine",
+      "expansions": [
+        "XXXIX"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thirty five",
+      "expansions": [
+        "XXXV"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thirty six",
+      "expansions": [
+        "XXXVI"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thirty seven",
+      "expansions": [
+        "XXXVII"
+      ],
+      "sources": [
+        "curated"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thirty eight",
+      "expansions": [
+        "XXXVIII"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -40906,6 +42866,16 @@
       ],
       "sources": [
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "yankee",
+      "expansions": [
+        "Y"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },
@@ -41205,6 +43175,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "zulu",
+      "expansions": [
+        "Z"
+      ],
+      "sources": [
+        "curated"
       ],
       "notes": []
     },

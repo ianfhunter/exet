@@ -60,6 +60,17 @@ Exet.prototype.makeMagpieTab = function() {
           </div>
         </div>
         <div class="xet-magpie-op-section">
+          <div class="xet-magpie-op-heading">Acrostics</div>
+          <div class="xet-magpie-ops">
+            <button type="button" class="xlv-small-button" data-magpie-op="acrostic-first"
+                title="First letters of successive words">First letters</button>
+            <button type="button" class="xlv-small-button" data-magpie-op="acrostic-last"
+                title="Last letters of successive words (telestich)">Last letters</button>
+            <button type="button" class="xlv-small-button" data-magpie-op="acrostic-outside"
+                title="First and last letters of successive words">Outside letters</button>
+          </div>
+        </div>
+        <div class="xet-magpie-op-section">
           <div class="xet-magpie-op-heading">Containers</div>
           <div class="xet-magpie-ops">
             <button type="button" class="xlv-small-button" data-magpie-op="in">in</button>
@@ -154,6 +165,7 @@ Exet.prototype.makeMagpieTab = function() {
   this.magpieHiddenBefore = document.getElementById('xet-magpie-hidden-before');
   this.magpieHiddenAfter = document.getElementById('xet-magpie-hidden-after');
   this.magpieHiddenAnswer = document.getElementById('xet-magpie-hidden-answer');
+  this.magpieApplyBtn = document.getElementById('xet-magpie-apply');
   for (const input of [
     this.magpieSubtractA, this.magpieSubtractB,
     this.magpieHiddenBefore, this.magpieHiddenAfter,
@@ -177,6 +189,7 @@ Exet.prototype.magpieOnFieldInput = function() {
   if (st.subtractA.trim() || st.subtractB.trim() ||
       st.hiddenBefore.trim() || st.hiddenAfter.trim()) {
     st.composite = null;
+    st.acrostic = null;
   }
   this.magpieRefreshPreview();
 };
@@ -396,7 +409,36 @@ Exet.prototype.magpieDefaultState = function(answer) {
     hiddenAfter: '',
     twoDefs: false,
     andLit: false,
+    acrostic: null,
   };
+};
+
+Exet.prototype.magpieAcrosticSuffix = function(kind) {
+  if (kind == 'first') {
+    return 'from first letters';
+  }
+  if (kind == 'last') {
+    return 'from last letters';
+  }
+  if (kind == 'outside') {
+    return 'from outside letters';
+  }
+  return '';
+};
+
+Exet.prototype.magpieSetAcrostic = function(st, kind) {
+  if (!st) {
+    return;
+  }
+  if (st.acrostic == kind) {
+    st.acrostic = null;
+  } else {
+    st.acrostic = kind;
+    st.composite = null;
+    st.twoDefs = false;
+    st.andLit = false;
+    this.magpieClearFieldInputs(st);
+  }
 };
 
 Exet.prototype.magpieBuildParts = function(answer, splits) {
@@ -475,6 +517,9 @@ Exet.prototype.magpieMigrateState = function(st) {
   if (st.hiddenAfter == null) {
     st.hiddenAfter = '';
   }
+  if (st.acrostic === undefined) {
+    st.acrostic = null;
+  }
 };
 
 Exet.prototype.magpieGetState = function() {
@@ -531,6 +576,7 @@ Exet.prototype.magpieResetSplits = function() {
   st.composite = null;
   st.twoDefs = false;
   st.andLit = false;
+  st.acrostic = null;
   this.magpieClearFieldInputs(st);
   this.magpieRender();
 };
@@ -646,6 +692,7 @@ Exet.prototype.magpieApplyOp = function(op) {
     if (st.twoDefs) {
       st.andLit = false;
       st.composite = null;
+      st.acrostic = null;
     }
     this.magpieRender();
     return;
@@ -654,7 +701,23 @@ Exet.prototype.magpieApplyOp = function(op) {
     st.andLit = !st.andLit;
     if (st.andLit) {
       st.twoDefs = false;
+      st.acrostic = null;
     }
+    this.magpieRender();
+    return;
+  }
+  if (op == 'acrostic-first') {
+    this.magpieSetAcrostic(st, 'first');
+    this.magpieRender();
+    return;
+  }
+  if (op == 'acrostic-last') {
+    this.magpieSetAcrostic(st, 'last');
+    this.magpieRender();
+    return;
+  }
+  if (op == 'acrostic-outside') {
+    this.magpieSetAcrostic(st, 'outside');
     this.magpieRender();
     return;
   }
@@ -693,6 +756,7 @@ Exet.prototype.magpieApplyOp = function(op) {
     st.composite = {type: op, a: st.selected[0], b: st.selected[1]};
     this.magpieClearFieldInputs(st);
     st.twoDefs = false;
+    st.acrostic = null;
     this.magpieRender();
     return;
   }
@@ -710,6 +774,7 @@ Exet.prototype.magpieApplyOp = function(op) {
       group.op = op;
       st.composite = null;
       st.twoDefs = false;
+      st.acrostic = null;
     }
     this.magpieRender();
     return;
@@ -721,6 +786,7 @@ Exet.prototype.magpieApplyOp = function(op) {
     part.op = op;
     st.composite = null;
     st.twoDefs = false;
+    st.acrostic = null;
   }
   this.magpieRender();
 };
@@ -745,6 +811,11 @@ Exet.prototype.magpiePreviewFromState = function(st) {
   }
   if (st.twoDefs) {
     return '[2 defs]';
+  }
+  const acrosticSuffix = this.magpieAcrosticSuffix(st.acrostic);
+  if (acrosticSuffix) {
+    const inner = this.magpieCharadeTokens(st).join(' + ');
+    return '[' + inner + '] ' + acrosticSuffix;
   }
   let inner = '';
   const hiddenBefore = (st.hiddenBefore || '').trim();
@@ -845,12 +916,30 @@ Exet.prototype.magpieRender = function() {
   for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-op="andlit"]')) {
     btn.classList.toggle('xet-magpie-op-active', st.andLit);
   }
+  for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-op="acrostic-first"]')) {
+    btn.classList.toggle('xet-magpie-op-active', st.acrostic == 'first');
+  }
+  for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-op="acrostic-last"]')) {
+    btn.classList.toggle('xet-magpie-op-active', st.acrostic == 'last');
+  }
+  for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-op="acrostic-outside"]')) {
+    btn.classList.toggle('xet-magpie-op-active', st.acrostic == 'outside');
+  }
+
+  const annoLocked = exet.isAnnoLocked();
+  if (this.magpieApplyBtn) {
+    this.magpieApplyBtn.title = annoLocked ?
+        'Optional anno is locked — unlock it before applying' : '';
+  }
 
   this.magpieMaybeAutoApply();
 };
 
 Exet.prototype.magpieMaybeAutoApply = function() {
   if (!exetState.magpieAutoPopulate) {
+    return;
+  }
+  if (exet.isAnnoLocked()) {
     return;
   }
   const preview = this.magpiePreviewText();
@@ -871,6 +960,11 @@ Exet.prototype.magpieMaybeAutoApply = function() {
 Exet.prototype.magpieApplyToAnno = function() {
   const preview = this.magpiePreviewText();
   if (!preview) {
+    return;
+  }
+  if (exet.isAnnoLocked()) {
+    alert('Cannot apply: the optional annotation is locked. ' +
+        'Click 🔓 to unlock it first.');
     return;
   }
   const anno = document.getElementById('xet-anno');
