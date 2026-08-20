@@ -71,6 +71,13 @@ Exet.prototype.makeMagpieTab = function() {
           </div>
         </div>
         <div class="xet-magpie-op-section">
+          <div class="xet-magpie-op-heading">Hidden words</div>
+          <div class="xet-magpie-ops">
+            <button type="button" class="xlv-small-button" data-magpie-op="hidden-inside"
+                title="Answer hidden inside clue text">Inside text</button>
+          </div>
+        </div>
+        <div class="xet-magpie-op-section">
           <div class="xet-magpie-op-heading">Containers</div>
           <div class="xet-magpie-ops">
             <button type="button" class="xlv-small-button" data-magpie-op="in">in</button>
@@ -109,8 +116,13 @@ Exet.prototype.makeMagpieTab = function() {
         </div>
         <div class="xet-magpie-op-section">
           <div class="xet-magpie-op-heading">Clue type</div>
-          <div class="xet-magpie-ops">
-            <button type="button" class="xlv-small-button" data-magpie-op="2defs">2 defs</button>
+          <div class="xet-magpie-ops xet-magpie-defs-row">
+            <button type="button" class="xlv-small-button" id="xet-magpie-defs-btn"
+                data-magpie-op="2defs">2 defs</button>
+            <button type="button" class="xlv-small-button xet-magpie-step-btn"
+                data-magpie-op="defs-minus" title="Fewer definitions">−</button>
+            <button type="button" class="xlv-small-button xet-magpie-step-btn"
+                data-magpie-op="defs-plus" title="More definitions">+</button>
             <button type="button" class="xlv-small-button" data-magpie-op="andlit">&amp;lit</button>
           </div>
         </div>
@@ -121,6 +133,8 @@ Exet.prototype.makeMagpieTab = function() {
             Apply to optional anno →</button>
           <button type="button" class="xlv-small-button" id="xet-magpie-copy">
             Copy preview</button>
+          <button type="button" class="xlv-small-button" id="xet-magpie-next-empty-anno">
+            Next empty anno →</button>
         </div>
       </div>
     </div>`;
@@ -147,6 +161,8 @@ Exet.prototype.makeMagpieTab = function() {
       'click', () => this.magpieApplyToAnno());
   document.getElementById('xet-magpie-copy').addEventListener(
       'click', () => this.magpieCopyPreview());
+  document.getElementById('xet-magpie-next-empty-anno').addEventListener(
+      'click', () => this.magpieGoToNextEmptyAnno());
 
   for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-mode]')) {
     btn.addEventListener('click', () => {
@@ -166,6 +182,7 @@ Exet.prototype.makeMagpieTab = function() {
   this.magpieHiddenAfter = document.getElementById('xet-magpie-hidden-after');
   this.magpieHiddenAnswer = document.getElementById('xet-magpie-hidden-answer');
   this.magpieApplyBtn = document.getElementById('xet-magpie-apply');
+  this.magpieDefsBtn = document.getElementById('xet-magpie-defs-btn');
   for (const input of [
     this.magpieSubtractA, this.magpieSubtractB,
     this.magpieHiddenBefore, this.magpieHiddenAfter,
@@ -190,6 +207,7 @@ Exet.prototype.magpieOnFieldInput = function() {
       st.hiddenBefore.trim() || st.hiddenAfter.trim()) {
     st.composite = null;
     st.acrostic = null;
+    st.hiddenInside = false;
   }
   this.magpieRefreshPreview();
 };
@@ -407,10 +425,20 @@ Exet.prototype.magpieDefaultState = function(answer) {
     subtractAnagram: false,
     hiddenBefore: '',
     hiddenAfter: '',
-    twoDefs: false,
+    defsCount: 0,
     andLit: false,
     acrostic: null,
+    hiddenInside: false,
   };
+};
+
+Exet.prototype.magpieClearClueTypes = function(st) {
+  st.composite = null;
+  st.defsCount = 0;
+  st.andLit = false;
+  st.acrostic = null;
+  st.hiddenInside = false;
+  this.magpieClearFieldInputs(st);
 };
 
 Exet.prototype.magpieAcrosticSuffix = function(kind) {
@@ -434,11 +462,44 @@ Exet.prototype.magpieSetAcrostic = function(st, kind) {
     st.acrostic = null;
   } else {
     st.acrostic = kind;
+    st.hiddenInside = false;
     st.composite = null;
-    st.twoDefs = false;
+    st.defsCount = 0;
     st.andLit = false;
     this.magpieClearFieldInputs(st);
   }
+};
+
+Exet.prototype.magpieSetHiddenInside = function(st) {
+  if (!st) {
+    return;
+  }
+  st.hiddenInside = !st.hiddenInside;
+  if (st.hiddenInside) {
+    st.acrostic = null;
+    st.composite = null;
+    st.defsCount = 0;
+    st.andLit = false;
+    this.magpieClearFieldInputs(st);
+  }
+};
+
+Exet.prototype.magpieSetDefsCount = function(st, count) {
+  if (!st) {
+    return;
+  }
+  st.defsCount = Math.max(0, count);
+  if (st.defsCount >= 2) {
+    st.andLit = false;
+    st.composite = null;
+    st.acrostic = null;
+    st.hiddenInside = false;
+    this.magpieClearFieldInputs(st);
+  }
+};
+
+Exet.prototype.magpieDefsLabel = function(count) {
+  return count + ' defs';
 };
 
 Exet.prototype.magpieBuildParts = function(answer, splits) {
@@ -520,6 +581,13 @@ Exet.prototype.magpieMigrateState = function(st) {
   if (st.acrostic === undefined) {
     st.acrostic = null;
   }
+  if (st.hiddenInside === undefined) {
+    st.hiddenInside = false;
+  }
+  if (st.defsCount == null) {
+    st.defsCount = st.twoDefs ? 2 : 0;
+  }
+  delete st.twoDefs;
 };
 
 Exet.prototype.magpieGetState = function() {
@@ -574,9 +642,10 @@ Exet.prototype.magpieResetSplits = function() {
   st.nextGroupId = 0;
   st.selected = [];
   st.composite = null;
-  st.twoDefs = false;
+  st.defsCount = 0;
   st.andLit = false;
   st.acrostic = null;
+  st.hiddenInside = false;
   this.magpieClearFieldInputs(st);
   this.magpieRender();
 };
@@ -688,11 +757,28 @@ Exet.prototype.magpieApplyOp = function(op) {
     return;
   }
   if (op == '2defs') {
-    st.twoDefs = !st.twoDefs;
-    if (st.twoDefs) {
-      st.andLit = false;
-      st.composite = null;
-      st.acrostic = null;
+    if (st.defsCount >= 2) {
+      st.defsCount = 0;
+    } else {
+      this.magpieSetDefsCount(st, 2);
+    }
+    this.magpieRender();
+    return;
+  }
+  if (op == 'defs-plus') {
+    if (st.defsCount >= 2) {
+      this.magpieSetDefsCount(st, st.defsCount + 1);
+    } else {
+      this.magpieSetDefsCount(st, 2);
+    }
+    this.magpieRender();
+    return;
+  }
+  if (op == 'defs-minus') {
+    if (st.defsCount > 2) {
+      this.magpieSetDefsCount(st, st.defsCount - 1);
+    } else if (st.defsCount == 2) {
+      st.defsCount = 0;
     }
     this.magpieRender();
     return;
@@ -700,9 +786,15 @@ Exet.prototype.magpieApplyOp = function(op) {
   if (op == 'andlit') {
     st.andLit = !st.andLit;
     if (st.andLit) {
-      st.twoDefs = false;
+      st.defsCount = 0;
       st.acrostic = null;
+      st.hiddenInside = false;
     }
+    this.magpieRender();
+    return;
+  }
+  if (op == 'hidden-inside') {
+    this.magpieSetHiddenInside(st);
     this.magpieRender();
     return;
   }
@@ -755,8 +847,9 @@ Exet.prototype.magpieApplyOp = function(op) {
     }
     st.composite = {type: op, a: st.selected[0], b: st.selected[1]};
     this.magpieClearFieldInputs(st);
-    st.twoDefs = false;
+    st.defsCount = 0;
     st.acrostic = null;
+    st.hiddenInside = false;
     this.magpieRender();
     return;
   }
@@ -773,8 +866,9 @@ Exet.prototype.magpieApplyOp = function(op) {
     } else if (op == 'anagram' || op == 'reverse' || op == 'homophone') {
       group.op = op;
       st.composite = null;
-      st.twoDefs = false;
+      st.defsCount = 0;
       st.acrostic = null;
+      st.hiddenInside = false;
     }
     this.magpieRender();
     return;
@@ -785,8 +879,9 @@ Exet.prototype.magpieApplyOp = function(op) {
   } else if (op == 'anagram' || op == 'reverse' || op == 'homophone') {
     part.op = op;
     st.composite = null;
-    st.twoDefs = false;
+    st.defsCount = 0;
     st.acrostic = null;
+    st.hiddenInside = false;
   }
   this.magpieRender();
 };
@@ -809,13 +904,17 @@ Exet.prototype.magpiePreviewFromState = function(st) {
   if (!st) {
     return '';
   }
-  if (st.twoDefs) {
-    return '[2 defs]';
+  if (st.defsCount >= 2) {
+    return '[' + this.magpieDefsLabel(st.defsCount) + ']';
   }
   const acrosticSuffix = this.magpieAcrosticSuffix(st.acrostic);
   if (acrosticSuffix) {
     const inner = this.magpieCharadeTokens(st).join(' + ');
     return '[' + inner + '] ' + acrosticSuffix;
+  }
+  if (st.hiddenInside) {
+    const inner = this.magpieCharadeTokens(st).join(' + ');
+    return '[' + inner + '] inside text';
   }
   let inner = '';
   const hiddenBefore = (st.hiddenBefore || '').trim();
@@ -910,11 +1009,22 @@ Exet.prototype.magpieRender = function() {
   this.magpieSyncFieldInputs(st);
   this.magpiePreview.textContent = this.magpiePreviewText();
 
-  for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-op="2defs"]')) {
-    btn.classList.toggle('xet-magpie-op-active', st.twoDefs);
+  if (this.magpieDefsBtn) {
+    this.magpieDefsBtn.textContent = st.defsCount >= 2 ?
+        this.magpieDefsLabel(st.defsCount) : '2 defs';
+    this.magpieDefsBtn.classList.toggle('xet-magpie-op-active', st.defsCount >= 2);
+  }
+  for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-op="defs-minus"]')) {
+    btn.disabled = st.defsCount < 2;
+  }
+  for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-op="defs-plus"]')) {
+    btn.disabled = false;
   }
   for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-op="andlit"]')) {
     btn.classList.toggle('xet-magpie-op-active', st.andLit);
+  }
+  for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-op="hidden-inside"]')) {
+    btn.classList.toggle('xet-magpie-op-active', st.hiddenInside);
   }
   for (const btn of this.magpieRoot.querySelectorAll('[data-magpie-op="acrostic-first"]')) {
     btn.classList.toggle('xet-magpie-op-active', st.acrostic == 'first');
@@ -986,4 +1096,38 @@ Exet.prototype.magpieCopyPreview = function() {
   navigator.clipboard.writeText(preview).catch(() => {
     window.prompt('Copy Magpie preview:', preview);
   });
+};
+
+Exet.prototype.magpieClueHasEmptyAnno = function(clueIndex) {
+  const parentIndex = this.puz.clueOrParentIndex(clueIndex);
+  const clue = this.puz.clues[parentIndex];
+  if (!clue || !clue.clue) {
+    return false;
+  }
+  return !(clue.anno || '').trim();
+};
+
+Exet.prototype.magpieGoToNextEmptyAnno = function() {
+  const start = this.currClueIndex();
+  if (!start || !this.puz.clues[start]) {
+    return;
+  }
+  let ci = start;
+  const seen = new Set();
+  while (true) {
+    ci = this.puz.clues[ci].next;
+    if (!ci || seen.has(ci)) {
+      break;
+    }
+    seen.add(ci);
+    if (this.magpieClueHasEmptyAnno(ci)) {
+      this.puz.cnavTo(ci, false);
+      this.puz.refocus();
+      if (this.currTab == 'magpie') {
+        this.updateMagpieTab();
+      }
+      return;
+    }
+  }
+  alert('No more clues without annotations.');
 };

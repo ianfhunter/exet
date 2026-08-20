@@ -1464,6 +1464,9 @@ Exet.prototype.makeExetTab = function() {
               </div>
             </div>
           </div>
+          <div class="xet-dropdown-item" onclick="exet.copyAllCluesAndAnswers()">
+            Copy all clues and answers &#128203;
+          </div>
           <hr>
           <div id="xet-xst-show-panel" class="xet-dropdown-item">
             Upload for hosting at Exost
@@ -4691,6 +4694,31 @@ Exet.prototype.downloadIPuz = function() {
   const fileName = "exet-" + this.fileTitle() + ".ipuz";
   this.puz.fileDownload(ipuz, "application/x-crossword", fileName);
   exetModals.hide()
+}
+
+Exet.prototype.copyAllCluesAndAnswers = function() {
+  if (!this.puz) {
+    return;
+  }
+  const lines = [];
+  for (const ci of this.puz.allClueIndices) {
+    const theClue = this.puz.clues[ci];
+    if (!theClue || theClue.parentClueIndex || !theClue.clue) {
+      continue;
+    }
+    const clue = theClue.clue.replace(/\s+/g, ' ').trim();
+    const answer = (theClue.solution || '').trim();
+    const anno = (theClue.anno || '').trim();
+    lines.push(clue + ': ' + answer + ': ' + anno);
+  }
+  const text = lines.join('\n');
+  navigator.clipboard.writeText(text).then(() => {
+    exetModals.hide();
+    alert('Copied ' + lines.length + ' clues to clipboard.');
+  }).catch(() => {
+    exetModals.hide();
+    window.prompt('Copy all clues and answers:', text);
+  });
 }
 
 /**

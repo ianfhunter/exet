@@ -298,8 +298,36 @@ assertEqual(proto.magpieReverseText('BOB'), 'BOB', 'reverse palindrome');
 // --- Clue types & priority ---
 {
   const {exet, st} = makeHarness('WORD');
-  st.twoDefs = true;
+  st.defsCount = 2;
   assertEqual(preview(exet, st), '[2 defs]', 'two defs');
+}
+
+{
+  const {exet, st} = makeHarness('WORD');
+  st.defsCount = 3;
+  assertEqual(preview(exet, st), '[3 defs]', 'three defs');
+}
+
+{
+  const {exet, st} = makeHarness('ANIME');
+  st.hiddenInside = true;
+  assertEqual(preview(exet, st), '[ANIME] inside text', 'hidden inside text');
+}
+
+{
+  const {exet, st} = makeHarness('ANIME');
+  splitState(exet, st, 'ANIME', [1, 2, 3, 4]);
+  st.hiddenInside = true;
+  assertEqual(
+      preview(exet, st), '[A + N + I + M + E] inside text', 'hidden inside split');
+}
+
+{
+  const {exet, st} = makeHarness('ANIME');
+  st.acrostic = 'first';
+  st.hiddenInside = true;
+  assertEqual(
+      preview(exet, st), '[ANIME] from first letters', 'acrostic beats hidden inside');
 }
 
 {
@@ -321,7 +349,7 @@ assertEqual(proto.magpieReverseText('BOB'), 'BOB', 'reverse palindrome');
 
 {
   const {exet, st} = makeHarness('WORD');
-  st.twoDefs = true;
+  st.defsCount = 2;
   st.andLit = true;
   st.hiddenBefore = 'X';
   st.hiddenAfter = 'Y';
@@ -431,7 +459,17 @@ assertEqual(proto.magpieReverseText('BOB'), 'BOB', 'reverse palindrome');
   exet.magpieApplyOp('2defs');
   assertEqual(st.composite, null, '2defs clears composite');
   exet.magpieApplyOp('2defs');
-  assertEqual(st.twoDefs, false, '2defs toggles off');
+  assertEqual(st.defsCount, 0, '2defs toggles off');
+}
+
+{
+  const {exet, st} = makeHarness('WORD');
+  exet.magpieApplyOp('defs-plus');
+  assertEqual(st.defsCount, 2, 'defs plus from off defaults to 2');
+  exet.magpieApplyOp('defs-plus');
+  assertEqual(st.defsCount, 3, 'defs plus increments');
+  exet.magpieApplyOp('defs-minus');
+  assertEqual(st.defsCount, 2, 'defs minus decrements');
 }
 
 {
@@ -439,6 +477,14 @@ assertEqual(proto.magpieReverseText('BOB'), 'BOB', 'reverse palindrome');
   exet.magpieApplyOp('andlit');
   exet.magpieApplyOp('2defs');
   assertEqual(st.andLit, false, '2defs clears andlit');
+}
+
+{
+  const {exet, st} = makeHarness('WORD');
+  exet.magpieApplyOp('hidden-inside');
+  assertEqual(st.hiddenInside, true, 'hidden inside toggles on');
+  exet.magpieApplyOp('hidden-inside');
+  assertEqual(st.hiddenInside, false, 'hidden inside toggles off');
 }
 
 // --- Selection edge cases ---
