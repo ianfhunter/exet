@@ -6143,29 +6143,31 @@ Exet.prototype.makeClueEditable = function() {
   }
   this.puz.currClue.appendChild(nextprevSpan);
   nextprevSpan.innerHTML = `
-      <button id="xet-clue-menu-button"
-          title="Click to see more options for ${this.puz.clueLabelDisp(theClue)}."
-          class="xlv-small-button xlv-nextprev">&#9776;<div
-            id="xet-clue-menu" class="xet-clue-menu">
-        <div class="xet-clue-menu-item" id="xet-clue-menu-linking"
-          title="Click to create or break a linked group of clues. Also accessible by clicking the clue number to the left of 'Edit clue: ...'.">
-        Link/Unlink
+      <span class="xet-clue-menu-wrap">
+        <button id="xet-clue-menu-button"
+            title="Click to see more options for ${this.puz.clueLabelDisp(theClue)}."
+            class="xlv-small-button xlv-nextprev">&#9776;</button>
+        <div id="xet-clue-menu" class="xet-clue-menu">
+          <div class="xet-clue-menu-item" id="xet-clue-menu-linking"
+              title="Click to create or break a linked group of clues. Also accessible by clicking the clue number to the left of 'Edit clue: ...'.">
+          Link/Unlink
+          </div>
+          <div class="xet-clue-menu-item" id="xet-clue-menu-regexp"
+              title="Click to add or edit a regexp constraint on the grid-fill in this light.">
+          &#128279; Regexp constraint
+          </div>
+          <div class="xet-clue-menu-item" id="xet-clue-menu-clear"
+            onclick="exet.puz.clearCurr()"
+            title="Click to clear the current light (will not ask for confirmation).">
+          Clear (Ctrl-q)
+          </div>
+          <div class="xet-clue-menu-item" id="xet-clue-menu-reverse"
+            onclick="exet.reverseLight()"
+            title="Click to reverse the current light (will ask for confirmation). Will also break any linked groups this light is a part of.">
+          Reverse
+          </div>
         </div>
-        <div class="xet-clue-menu-item" id="xet-clue-menu-regexp"
-          title="Click to add or edit a regexp constraint on the grid-fill in this light.">
-        &#128279; Regexp constraint
-        </div>
-        <div class="xet-clue-menu-item" id="xet-clue-menu-clear"
-          onclick="exet.puz.clearCurr()"
-          title="Click to clear the current light (will not ask for confirmation).">
-        Clear (Ctrl-q)
-        </div>
-        <div class="xet-clue-menu-item" id="xet-clue-menu-reverse"
-          onclick="exet.reverseLight()"
-          title="Click to reverse the current light (will ask for confirmation). Will also break any linked groups this light is a part of.">
-        Reverse
-        </div>
-      </div></button>
+      </span>
       <button id="xet-prev"
         class="xlv-small-button xet-nextprev"
         title="${this.puz.textLabels['curr-clue-prev.hover']}"
@@ -6182,7 +6184,11 @@ Exet.prototype.makeClueEditable = function() {
   this.clueMenuButton = document.getElementById('xet-clue-menu-button');
   this.clueMenu = document.getElementById('xet-clue-menu');
   this.clueMenuButton.addEventListener('click', e => {
-    exetModals.showModal(this.clueMenu);
+    if (exetModals.modal === this.clueMenu) {
+      exetModals.hide();
+    } else {
+      exetModals.showModal(this.clueMenu);
+    }
     e.stopPropagation();
   });
   this.prevButton = document.getElementById('xet-prev');
