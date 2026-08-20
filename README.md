@@ -2,7 +2,7 @@
 
 ## A web app for crossword construction
 
-#### Version: Exet v1.08, August 15, 2026
+#### Version: Exet v1.08.1, August 19, 2026
 
 #### Author: Viresh Ratnakar
 
@@ -306,9 +306,10 @@ autofilling it, and adding/modifying crossword features such as ninas:
 - Autofill
   - _Leads to an autofill options panel._
 - Accept autofilled entries (=)
+- Jump to most constrained light (!)
 - Mark grid cell:
   - Toggle encircling (@)
-  - Toggle marking prefilled (!)
+  - Toggle marking prefilled (0)
   - Toggle nina ($)
   - Toggle colouring (^)
   - Clear all markings!
@@ -458,6 +459,16 @@ lexicon source to find a word/phrase that works. Instead of filling in lots
 of large purple viablots, only a few are coloured in a stand-out fashion, and
 the rest are coloured in a non-distracting, near-transparent manner.
 
+To jump quickly to the most constrained unfilled light, press **!** 
+(or click the **!** button next to the previous/next-clue buttons above the
+current clue). Unfilled lights are sorted by how few viable fill suggestions
+remain—lights with no viable fills (shown with a purple background in the
+suggestions list) come first—and focus moves to the top of that list. If you
+press **!** again within two seconds while still on a light you reached this
+way, focus moves to the next light in the list (successively less constrained),
+wrapping around to the most constrained again after the last entry. Navigating
+to a different light manually resets this cycling.
+
 The grid-fill suggestions shown for a light take into account a limited
 amount of look-ahead. What that means is that the software evaluates
 each candidate suggestion for a light (that matches its crossing letters)
@@ -502,8 +513,13 @@ fill suggestions or used in autofill.
 
 #### Light-specific menu
 Just above the editable version of the current clue (shown above the grid),
-there are three buttons shown. The first one has a hamburger menu (&#9776;)
-and the other two are for navigating to the previous and next clues.
+there are four buttons shown. The first one has a hamburger menu (&#9776;)
+and the other three are for navigating to the previous clue, the next clue,
+and the most constrained unfilled light (!, keyboard shortcut **!**).
+
+The **!** button (or **!** while in the grid) jumps focus to the most constrained
+unfilled light—see above for how constraint is measured. Pressing **!**
+again within two seconds cycles to the next most constrained light.
 
 The hamburger menu provides convenient access to a few features that are
 available from other places (linking/unlinking, clearing, reversing). It

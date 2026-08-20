@@ -1,5 +1,11 @@
 # Changelog
 
+### Exet v1.08.1, August 19, 2026
+
+- Changes from ianfhunter: add support for jumping through most constrained
+  unfilled lights. Use keyboard shortcut "!" for this (changing the prefilled-
+  shortcut to "0")
+
 ### Exet v1.08, August 15, 2026
 
 - Wrap anagram wordplay chunks in `xet-nowrap` spans that discourage splitting
