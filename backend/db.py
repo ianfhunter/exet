@@ -85,7 +85,9 @@ def ensure_data_dir() -> None:
 
 def connect(db_path=DB_PATH) -> sqlite3.Connection:
     ensure_data_dir()
-    conn = sqlite3.connect(db_path)
+    # FastAPI runs sync dependencies in a thread pool; enter/exit may use
+    # different worker threads, so connections must not be thread-bound.
+    conn = sqlite3.connect(db_path, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
     return conn
