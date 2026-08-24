@@ -823,9 +823,8 @@ Exet.prototype.setPuzzle = function(puz) {
 
   this.markClueEnds();  /** Needed for some autofill options */
   this.fillState = new ExetFillState(this.puz);
-  this.resetViability();
-
   this.autofill = new ExetAutofill();
+  this.resetViability();
 
   this.updateSweepInd();
   this.reposition();
