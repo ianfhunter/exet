@@ -23,17 +23,19 @@ To build / refresh the merged list:
 
 ```bash
 python tools/extract-exet-lexicons.py      # Nediger + Lufz -> _sources/
-python tools/fetch-extra-wordlists.py      # Broda / ECND / queer (best-effort)
+python tools/fetch-extra-wordlists.py      # Broda / STC / ECND / queer (best-effort)
 python tools/fetch-recommended-packs.py    # nzfeng / geo / maiamcc packs
 python tools/build-million-union.py        # merge + xd-clues frequency boost
 python tools/import-wordlists.py --only combolist
 ```
 
+Topic pack inventory: run `python tools/fetch-topic-packs-catalog.py` → `.notes/topic-packs-catalog.md`.
+
 Sources (when present under `wordlists/` / `_sources/`):
 
 - Nediger List, Lufz English
 - Crossword Nexus collaborative list (MIT)
-- Peter Broda wordlist
+- Peter Broda wordlist, Solve The Crossword (STC) scored list
 - Spread the Wordlist, Matt’s list (CC BY-NC-SA), Chris Jones, Ettu
 - nzfeng curated core / contemporary / idioms
 - Expanded Crossword Name Database, maiamcc specialty dicts (queer, celebs, …)

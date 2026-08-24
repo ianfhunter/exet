@@ -14,6 +14,7 @@ answer via the SQLite backend (`/api/prior-clues/{answer}`).
    This fetches into:
    - `wordlists/_sources/georgeho-data.db` — cryptics.georgeho.org (~187 MB)
    - `wordlists/xd-clues.zip` — xd.saul.pw clue corpus (~67 MB)
+   - `wordlists/_sources/ginsberg-cluedata` — Matt Ginsberg Cluer DB (~210 MB zip)
 
 2. Build the SQLite database (includes prior clues):
 
@@ -49,6 +50,7 @@ Options for the legacy builder:
 
 - Cryptic clues: [cryptics.georgeho.org](https://cryptics.georgeho.org/) (ODbL v1.0)
 - xd clues: [xd.saul.pw](https://xd.saul.pw/data)
+- Ginsberg clues: [tiwwdty.com/clue](https://tiwwdty.com/clue/) (Matt Ginsberg Cluer DB)
 
 ## Implementation
 

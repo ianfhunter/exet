@@ -5,6 +5,7 @@
  *
  * Cryptic data: cryptics.georgeho.org (ODbL v1.0).
  * xd data: xd.saul.pw / Saul Pwanson crossword clue corpus.
+ * Ginsberg data: Matt Ginsberg Cluer DB (tiwwdty.com/clue).
  */
 exetPriorClues = (function() {
   const CLUES = [];
@@ -45,6 +46,18 @@ exetPriorClues = (function() {
         source: pub,
         date: year,
         label: pub + (year ? (' ' + year) : ''),
+        definition: '',
+      };
+    }
+    if (kind === 'b') {
+      const pub = parts[1] || '';
+      const year = parts[2] || '';
+      const label = pub + (year ? (' ' + year) : '');
+      return {
+        kind: 'ginsberg',
+        source: pub,
+        date: year,
+        label: label.trim() || 'Ginsberg/Cluer',
         definition: '',
       };
     }

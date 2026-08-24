@@ -38,6 +38,17 @@ def parse_meta(meta_str: str) -> dict:
             "label": pub + (f" {year}" if year else ""),
             "definition": "",
         }
+    if kind == "b":
+        pub = parts[1] if len(parts) > 1 else ""
+        year = parts[2] if len(parts) > 2 else ""
+        label = pub + (f" {year}" if year else "")
+        return {
+            "kind": "ginsberg",
+            "source": pub,
+            "date": year,
+            "label": label.strip() or "Ginsberg/Cluer",
+            "definition": "",
+        }
     return {
         "kind": "",
         "source": "",

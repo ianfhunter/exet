@@ -183,6 +183,8 @@ function Exet() {
   this.abbrevMap = null;
   this.abbrevLoadPromise = null;
   this.inputLagMS = 400;
+  /** Wait for grid editing to pause before rebuilding fill suggestions. */
+  this.gridFillDebounceMS = 800;
   this.longInputLagMS = 2000;
   this.sweepMS = 500;
 
@@ -4211,7 +4213,8 @@ Exet.prototype.renderPriorCluesFromApi = function(box, word, data) {
   for (let i = 0; i < results.length; i++) {
     const r = results[i];
     const kindLabel = r.kind == 'cryptic' ? 'Cryptic' :
-        (r.kind == 'xd' ? 'xd' : '');
+        (r.kind == 'xd' ? 'xd' :
+            (r.kind == 'ginsberg' ? 'Ginsberg' : ''));
     const sourceCell = r.label ?
         `<span class="xet-prior-clues-kind">${this.escapeHtml(kindLabel)}</span> ` +
         this.escapeHtml(r.label) :
@@ -4232,6 +4235,9 @@ Exet.prototype.renderPriorCluesFromApi = function(box, word, data) {
       rel="noopener">cryptics.georgeho.org</a> (ODbL).
       xd clues: <a href="https://xd.saul.pw/data" target="_blank"
       rel="noopener">xd.saul.pw</a>.
+      Ginsberg clues: Matt Ginsberg Cluer DB
+      (<a href="https://tiwwdty.com/clue/" target="_blank"
+      rel="noopener">tiwwdty.com/clue</a>).
     </div>`;
   box.innerHTML = html;
 };
@@ -6739,14 +6745,24 @@ Exet.prototype.handleKeyDown = function(e) {
   this.updatePuzzle(revType);
 }
 
+Exet.prototype.cancelDeadendSweep = function() {
+  if (this.viabilityUpdateTimer) {
+    clearTimeout(this.viabilityUpdateTimer);
+    this.viabilityUpdateTimer = null;
+  }
+  this.updateSweepInd();
+}
+
 Exet.prototype.throttledGridInput = function(e) {
   if (this.throttledGridTimer) {
     clearTimeout(this.throttledGridTimer);
   }
+  /** Abort any in-progress pruning from a prior grid state. */
+  this.cancelDeadendSweep();
   this.throttledGridTimer = setTimeout(() => {
     this.handleGridInput();
     this.throttledGridTimer = null;
-  }, this.inputLagMS);
+  }, this.gridFillDebounceMS);
 }
 
 // Thie will be called after Exolve's handleGridInput has done its thing.
@@ -8333,10 +8349,7 @@ Exet.prototype.findDeadendsByClue = function() {
 }
 
 Exet.prototype.startDeadendSweep = function(ci='') {
-  if (this.viabilityUpdateTimer) {
-    clearTimeout(this.viabilityUpdateTimer);
-  }
-  this.viabilityUpdateTimer = null;
+  this.cancelDeadendSweep();
   if (!this.puz || this.puz.numCellsFilled >= this.puz.numCellsToFill) {
     return;
   }

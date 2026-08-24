@@ -10,7 +10,7 @@ Score policy (higher = preferred in Exet):
 
 Usage:
   python tools/extract-exet-lexicons.py   # Nediger + Lufz -> _sources/
-  python tools/fetch-extra-wordlists.py   # Broda / ECND / UKACD / queer
+  python tools/fetch-extra-wordlists.py   # Broda / ECND / UKACD / STC / queer
   python tools/build-million-union.py
   python tools/import-wordlists.py --only combolist
 """
@@ -52,7 +52,8 @@ SOURCES = [
     ("wordlists/_sources/nediger.txt", 0, 50.0),
     ("wordlists/_sources/lufz-en.txt", 1, 50.0),
     ("wordlists/_sources/xwordlist.dict", 2, 40.0),  # Crossword Nexus (MIT)
-    ("wordlists/_sources/broda.txt", 3, 40.0),
+    ("wordlists/_sources/broda.txt", 3, 42.0),  # Peter Broda wordlist
+    ("wordlists/_sources/stc-wordlist.dict", 3, 42.0),  # Solve The Crossword
     ("wordlists/spreadthewordlist.txt", 4, 40.0),
     ("wordlists/_sources/matts_wordlist.txt", 5, 35.0),  # CC BY-NC-SA
     ("wordlists/crossword_wordlist.txt", 6, 35.0),  # Chris Jones

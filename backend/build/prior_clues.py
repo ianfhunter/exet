@@ -1,4 +1,4 @@
-"""Build prior_clues table from georgeho SQLite + xd-clues.zip."""
+"""Build prior_clues table from georgeho SQLite + xd-clues.zip + Ginsberg cluedata."""
 
 from __future__ import annotations
 
@@ -28,6 +28,7 @@ def build_prior_clues(
 
     gh_rows = builder.ingest_georgeho(sources_dir / "georgeho-data.db", store, meta_map)
     xd_rows = builder.ingest_xd(xd_zip, store, meta_map)
+    gb_rows = builder.ingest_ginsberg(sources_dir / "ginsberg-cluedata", store, meta_map)
 
     if not store:
         print(
@@ -68,6 +69,7 @@ def build_prior_clues(
         "unique_clues": len(clues),
         "georgeho_rows": gh_rows,
         "xd_rows": xd_rows,
+        "ginsberg_rows": gb_rows,
         "max_per_answer": max_per_answer or None,
         "built_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }

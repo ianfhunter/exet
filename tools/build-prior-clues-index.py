@@ -4,6 +4,7 @@
 Sources (best-effort, any combination):
   - wordlists/_sources/georgeho-data.db  (cryptics.georgeho.org SQLite, ~187 MB)
   - wordlists/xd-clues.zip               (xd.saul.pw clue corpus, ~67 MB)
+  - wordlists/_sources/ginsberg-cluedata (Matt Ginsberg Cluer DB, from tiwwdty.com)
 
 Fetch sources first:
   python tools/fetch-prior-clues-data.py
@@ -21,6 +22,7 @@ import io
 import json
 import re
 import sqlite3
+import struct
 import sys
 import time
 import zipfile
@@ -154,6 +156,65 @@ def ingest_xd(zip_path: Path, store: AnswerStore, meta_map: ClueMeta) -> int:
                 if n % 1_000_000 == 0:
                     print(f"  xd rows={n:,} answers={len(store):,}", flush=True)
     print(f"  xd done rows={n:,} answers={len(store):,}", flush=True)
+    return n
+
+
+def ingest_ginsberg(cluedata_path: Path, store: AnswerStore, meta_map: ClueMeta) -> int:
+    """Ingest Matt Ginsberg Cluer binary (same format Crosshare uses)."""
+    if not cluedata_path.is_file():
+        print(f"MISSING {cluedata_path} — skip ginsberg", flush=True)
+        return 0
+    print(f"Reading Ginsberg cluedata {cluedata_path.name} ...", flush=True)
+    words: list[str] = []
+    clues: list[str] = []
+    n = 0
+    with cluedata_path.open("rb") as f:
+        numwords = struct.unpack("<I", f.read(4))[0]
+        for _ in range(numwords):
+            length = struct.unpack("<B", f.read(1))[0]
+            raw = struct.unpack(f"<{length}s", f.read(length))[0]
+            words.append(raw.decode("ascii", errors="replace"))
+
+        numclues = struct.unpack("<I", f.read(4))[0]
+        for _ in range(numclues):
+            length = struct.unpack("<B", f.read(1))[0]
+            raw = struct.unpack(f"<{length}s", f.read(length))[0]
+            clues.append(raw.decode("latin-1", errors="replace"))
+            numtraps = struct.unpack("<I", f.read(4))[0]
+            if numtraps:
+                f.read(4 * numtraps)
+
+        word_idx = struct.unpack("<I", f.read(4))[0]
+        while True:
+            freq = struct.unpack("<h", f.read(2))[0]
+            _diff = struct.unpack("<h", f.read(2))[0]
+            yr = struct.unpack("<h", f.read(2))[0]
+            _th = struct.unpack("<b", f.read(1))[0]
+            pnum = struct.unpack("<b", f.read(1))[0]
+            cnum = struct.unpack("<I", f.read(4))[0]
+            if word_idx >= len(words) or cnum >= len(clues):
+                break
+            answer = words[word_idx]
+            clue = clues[cnum]
+            pub = "NYT" if pnum == 8 else (f"pub{pnum}" if pnum else "Ginsberg")
+            year = str(yr) if yr > 0 else ""
+            meta = f"b|{pub}|{year}|{max(freq, 1)}"
+            # Weight by published frequency for ranking within an answer
+            key = letter_key(answer)
+            clue_clean = clean_clue(clue)
+            if key and len(key) >= 2 and len(key) <= 75 and clue_clean:
+                bucket = store.setdefault(key, {})
+                bucket[clue_clean] = bucket.get(clue_clean, 0) + max(freq, 1)
+                if clue_clean not in meta_map:
+                    meta_map[clue_clean] = meta
+                n += 1
+            try:
+                word_idx = struct.unpack("<I", f.read(4))[0]
+            except struct.error:
+                break
+            if n and n % 500_000 == 0:
+                print(f"  ginsberg rows={n:,} answers={len(store):,}", flush=True)
+    print(f"  ginsberg done rows={n:,} answers={len(store):,}", flush=True)
     return n
 
 
@@ -307,6 +368,7 @@ def main(argv: list[str] | None = None) -> int:
 
     gh_rows = ingest_georgeho(sources_dir / "georgeho-data.db", store, meta_map)
     xd_rows = ingest_xd(exet_dir / "wordlists" / "xd-clues.zip", store, meta_map)
+    gb_rows = ingest_ginsberg(sources_dir / "ginsberg-cluedata", store, meta_map)
 
     if not store:
         print(
@@ -322,6 +384,7 @@ def main(argv: list[str] | None = None) -> int:
         "uniqueClues": len(clues),
         "georgehoRows": gh_rows,
         "xdRows": xd_rows,
+        "ginsbergRows": gb_rows,
         "maxPerAnswer": args.max_per_answer or None,
     }
     write_parts(exet_dir, clues, meta, index, stats)

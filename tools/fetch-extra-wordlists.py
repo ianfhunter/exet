@@ -119,6 +119,8 @@ def try_broda() -> None:
                 candidates.append(href)
     candidates.extend(
         [
+            "https://peterbroda.me/crosswords/wordlist/lists/peter-broda-wordlist__gridtext__scored__july-25-2023.txt",
+            "http://www.peterbroda.me/crosswords/wordlist/lists/peter-broda-wordlist__gridtext__scored__july-25-2023.txt",
             "https://peterbroda.me/crosswords/wordlist/Wordlist.txt",
             "https://peterbroda.me/crosswords/wordlist/wordlist.txt",
             "https://peterbroda.me/crosswords/wordlist/broda.txt",
@@ -176,6 +178,35 @@ def main() -> int:
             break
 
     try_broda()
+
+    # Solve The Crossword scored wordlist (withdrawn from solvethecrossword.com
+    # as of 2024 — fetch legacy URLs if you have a local copy, place it at
+    # wordlists/_sources/stc-wordlist.dict manually)
+    print("STC …", flush=True)
+    dest = OUT / "stc-wordlist.dict"
+    if dest.is_file() and dest.stat().st_size > 10_000:
+        lines = sum(1 for _ in dest.open(encoding="utf-8", errors="replace"))
+        print(f"  STC already present ({lines:,} lines)", flush=True)
+    else:
+        for url in (
+            "https://solvethecrossword.com/stc-wordlist.dict",
+            "https://solvethecrossword.com/constructors/stc-wordlist.dict",
+            "https://solvethecrossword.com/downloads/stc-wordlist.dict",
+        ):
+            if fetch(url, dest):
+                sample = dest.read_text(encoding="utf-8", errors="replace")[:400]
+                if "<html" not in sample.lower():
+                    lines = sum(1 for _ in dest.open(encoding="utf-8", errors="replace"))
+                    print(f"  STC OK ({lines:,} lines)", flush=True)
+                    break
+                dest.unlink(missing_ok=True)
+        else:
+            print(
+                "  STC unavailable (official download withdrawn) — "
+                "drop a local stc-wordlist.dict into _sources/ if you have one",
+                flush=True,
+            )
+
     print("done", flush=True)
     return 0
 
