@@ -58,9 +58,27 @@ def status() -> dict:
         return {"ok": False, "path": str(IPUZ_FILES_DIR), "error": str(exc)}
 
 
+def _is_ancestor(ancestor: str, descendant: str) -> bool:
+    result = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", ancestor, descendant],
+        cwd=IPUZ_FILES_DIR,
+        capture_output=True,
+    )
+    return result.returncode == 0
+
+
 def sync() -> dict:
+    branch = _run_git("rev-parse", "--abbrev-ref", "HEAD")
+    remote_ref = f"origin/{branch}"
     before = _run_git("rev-parse", "HEAD")
-    _run_git("pull", "--ff-only")
+
+    _run_git("fetch", "origin", branch)
+
+    if _is_ancestor("HEAD", remote_ref):
+        _run_git("merge", "--ff-only", remote_ref)
+    elif not _is_ancestor(remote_ref, "HEAD"):
+        _run_git("rebase", remote_ref)
+
     after = _run_git("rev-parse", "HEAD")
     return {
         "ok": True,
@@ -137,6 +155,8 @@ def save_file(kind: str, name: str, content_base64: str) -> dict:
         raise PuzzleGitError(f"Invalid base64 content: {exc}") from exc
     if not content:
         raise PuzzleGitError("Empty file content")
+
+    sync()
 
     folder = IPUZ_FILES_DIR / kind
     folder.mkdir(parents=True, exist_ok=True)
