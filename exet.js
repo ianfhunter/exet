@@ -799,11 +799,17 @@ Exet.prototype.setPuzzle = function(puz) {
   const status = document.getElementById(`${this.puz.prefix}-status`);
   status.insertAdjacentHTML(
       'afterbegin',
-      `<div style="padding-bottom:2px">
+      `<div style="padding-bottom:2px" class="xet-word-list-row">
          <b>Word list</b> (${exetLexicon.language}/${exetLexicon.script}):
-         ${this.maybeLexiconOptions()} <span id="xet-lexicon-id">${exetLexicon.id}</span>
+         ${this.lexiconControlsHtml()} <span id="xet-lexicon-id">${exetLexicon.id}</span>
        </div>`);
   this.lexiconId = document.getElementById('xet-lexicon-id');
+  this.disableAutofillToggle = document.getElementById('xet-disable-autofill');
+  if (this.disableAutofillToggle) {
+    this.disableAutofillToggle.checked = !!exetState.disableAutofill;
+    this.disableAutofillToggle.addEventListener(
+        'change', this.handleDisableAutofillChange.bind(this));
+  }
   // Make the puzzle ID visible. But in a div, saving vspace.
   const idPara = document.getElementById(this.puz.prefix + '-id');
   if (idPara) {
@@ -8349,6 +8355,9 @@ Exet.prototype.findDeadendsByClue = function() {
 
 Exet.prototype.startDeadendSweep = function(ci='') {
   this.cancelDeadendSweep();
+  if (exetState.disableAutofill) {
+    return;
+  }
   if (!this.puz || this.puz.numCellsFilled >= this.puz.numCellsToFill) {
     return;
   }
@@ -9167,6 +9176,29 @@ Exet.prototype.maybeLexiconOptions = function() {
   return html;
 }
 
+Exet.prototype.lexiconControlsHtml = function() {
+  const checked = exetState.disableAutofill ? ' checked' : '';
+  return `${this.maybeLexiconOptions()}
+    <label class="xet-disable-autofill-label"
+        title="Skip background viability sweeps that prune fill suggestions; useful for very large word lists">
+      <input type="checkbox" id="xet-disable-autofill"${checked}>
+      Disable auto-fill (for large lists)
+    </label>`;
+}
+
+Exet.prototype.handleDisableAutofillChange = function() {
+  exetState.disableAutofill = !!this.disableAutofillToggle.checked;
+  exetRevManager.saveLocal(exetRevManager.SPECIAL_KEY, JSON.stringify(exetState));
+  if (exetState.disableAutofill) {
+    this.cancelDeadendSweep();
+    if (this.autofill) {
+      this.autofill.reset('Aborted');
+    }
+  } else {
+    this.startDeadendSweep();
+  }
+}
+
 Exet.prototype.changeLexicon = function() {
   const lopts = document.getElementById("xet-lexicon-select");
   if (lopts.value == exetState.lexicon) {
@@ -9500,6 +9532,9 @@ function exetLoadState() {
   }
   if (!exetState.hasOwnProperty('lastBackup')) {
     exetState.lastBackup = Date.now();
+  }
+  if (!exetState.hasOwnProperty('disableAutofill')) {
+    exetState.disableAutofill = false;
   }
 }
 
