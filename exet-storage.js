@@ -483,7 +483,7 @@ ExetRevManager.prototype.saveLocal = function(k, v) {
   try {
     window.localStorage.setItem(k, v);
   } catch (err) {
-    this.checkStorage();
+    exet.checkStorage();
     alert('No available local storage left. Please use the ' +
           '"Manage local storage" menu option to free up some space.');
     console.log('Could not save value of length ' + v.length + ' for key: ' + k)
