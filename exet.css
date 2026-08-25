@@ -94,6 +94,10 @@ body {
 #xet-xlv-frame .xlv-clues-panel {
   margin: 0;
 }
+#xet-xlv-frame .xlv-grid-panel {
+  position: relative;
+  z-index: 0;
+}
 [contenteditable="true"]:active,
 [contenteditable="true"]:focus{
   border:none;
@@ -105,6 +109,7 @@ body {
   font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 14px;
   position: relative;
+  z-index: 1;
 }
 .xet-controls-col {
   padding: 4px;
@@ -781,7 +786,12 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
+}
+.xet-menu > ul::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .xet-menu > ul > li {
   float: left;
@@ -811,7 +821,7 @@ body {
   background-color: var(--xet-surface);
   min-width: 275px;
   box-shadow: var(--xet-shadow-lg);
-  z-index: 1;
+  z-index: 1000;
   margin: 0;
   border: 1px solid var(--xet-border);
 }
@@ -820,10 +830,10 @@ body {
   left: 100%;
 }
 .xet-autofill-panel {
+  top: 100%;
   bottom: auto;
-  left: auto;
-  right: 100%;
-  top: 0;
+  left: 0;
+  right: auto;
 }
 #xet-autofill-active {
   display: none;
