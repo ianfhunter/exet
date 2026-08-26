@@ -30,6 +30,24 @@
   --xet-radius-tab: 6px 6px 0 0;
   --xet-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   --xet-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --xet-tab-default-bg: #ececec;
+  --xet-tab-default-fg: #555555;
+  --xet-tab-default-border: #909090;
+  --xet-tab-blue-bg: #e4edf7;
+  --xet-tab-blue-fg: #555555;
+  --xet-tab-blue-border: #5a82a8;
+  --xet-tab-green-bg: #e4f0e8;
+  --xet-tab-green-fg: #555555;
+  --xet-tab-green-border: #4d8a62;
+  --xet-tab-orange-bg: #f7ece0;
+  --xet-tab-orange-fg: #555555;
+  --xet-tab-orange-border: #c07838;
+  --xet-tab-pink-bg: #f5e4ec;
+  --xet-tab-pink-fg: #555555;
+  --xet-tab-pink-border: #a86080;
+  --xet-tab-gold-bg: #f5eed8;
+  --xet-tab-gold-fg: #555555;
+  --xet-tab-gold-border: #a88838;
 }
 
 body {
@@ -185,36 +203,74 @@ body {
   min-width: 0;
   width: auto;
   min-height: 42px;
-  background-color: inherit;
   float: none;
   outline: none;
   cursor: pointer;
   padding: var(--tabtn-pad);
   transition: background-color 0.15s ease, color 0.15s ease,
-    box-shadow 0.12s ease;
+    border-color 0.15s ease;
   font-size: var(--tabtn-font-size);
   font-weight: bold;
   border-radius: 0;
-  border: 1px solid transparent;
-  color: var(--xet-text-muted);
+  border-style: solid;
+  border-width: 2px 1px 1px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.2;
+  margin-bottom: 0;
+}
+.xet-tab button.xet-tab-tone-default {
+  background-color: var(--xet-tab-default-bg);
+  color: var(--xet-tab-default-fg);
+  border-color: var(--xet-tab-default-border) var(--xet-tab-default-border)
+      var(--xet-border) var(--xet-tab-default-border);
+}
+.xet-tab button.xet-tab-tone-blue {
+  background-color: var(--xet-tab-blue-bg);
+  color: var(--xet-tab-blue-fg);
+  border-color: var(--xet-tab-blue-border) var(--xet-tab-blue-border)
+      var(--xet-border) var(--xet-tab-blue-border);
+}
+.xet-tab button.xet-tab-tone-green {
+  background-color: var(--xet-tab-green-bg);
+  color: var(--xet-tab-green-fg);
+  border-color: var(--xet-tab-green-border) var(--xet-tab-green-border)
+      var(--xet-border) var(--xet-tab-green-border);
+}
+.xet-tab button.xet-tab-tone-orange {
+  background-color: var(--xet-tab-orange-bg);
+  color: var(--xet-tab-orange-fg);
+  border-color: var(--xet-tab-orange-border) var(--xet-tab-orange-border)
+      var(--xet-border) var(--xet-tab-orange-border);
+}
+.xet-tab button.xet-tab-tone-pink {
+  background-color: var(--xet-tab-pink-bg);
+  color: var(--xet-tab-pink-fg);
+  border-color: var(--xet-tab-pink-border) var(--xet-tab-pink-border)
+      var(--xet-border) var(--xet-tab-pink-border);
+}
+.xet-tab button.xet-tab-tone-gold {
+  background-color: var(--xet-tab-gold-bg);
+  color: var(--xet-tab-gold-fg);
+  border-color: var(--xet-tab-gold-border) var(--xet-tab-gold-border)
+      var(--xet-border) var(--xet-tab-gold-border);
 }
 .xet-tab button:hover {
-  background-color: var(--xet-hover);
-  border-bottom: 0;
-  color: var(--xet-text);
   cursor: pointer;
-  box-shadow: var(--xet-shadow);
   z-index: 2;
   position: relative;
+  color: var(--xet-text);
+  filter: brightness(0.98);
 }
 .xet-tab button.active {
   background-color: var(--xet-surface);
-  border-bottom: 0;
+  border-bottom-color: var(--xet-surface);
   color: var(--xet-text);
+  filter: none;
+  z-index: 3;
+  position: relative;
+  margin-bottom: -1px;
 }
 .xet-tab-content {
   background-color: var(--xet-surface);
@@ -891,10 +947,6 @@ body {
   box-sizing: border-box;
   overflow: auto;
   padding: 6px 6px 6px 16px;
-  background-size: 20px 20px;
-  background-image:
-    linear-gradient(to right, gainsboro 1px, transparent 1px),
-    linear-gradient(to bottom, gainsboro 1px, transparent 1px);
 }
 .xet-analysis li {
   margin-top: 14px;
@@ -1384,6 +1436,21 @@ body {
   fill: red;
   font-weight: bold;
   pointer-events: none;
+}
+.xet-enum-mismatch-banner {
+  color: orange;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  cursor: help;
+  padding: 2px 0 4px;
+}
+.xet-enum-mismatch-clue {
+  color: orange;
+  font-weight: bold;
+  cursor: help;
+  margin-right: 0.25ch;
 }
 /*
  * Nutrimatic sizes each result with a large score-based font-size. We mark

@@ -668,4 +668,26 @@ class ExetAnalysis {
     }
     return true;
   }
+
+  /**
+   * Returns clues whose enumeration length does not match the light length.
+   * @param {!Object} puz An Exolve instance
+   * @return {!Array<{ci: string, label: string, enumLen: number, lightLen: number}>}
+   */
+  static enumMismatches(puz) {
+    if (!puz || puz.ignoreEnumMismatch || puz.hasDgmlessCells) {
+      return [];
+    }
+    const mismatches = [];
+    for (const ci of puz.getEnumMismatchClues()) {
+      const clue = puz.clues[ci];
+      mismatches.push({
+        ci: ci,
+        label: puz.clueLabelDisp(clue),
+        enumLen: puz.clueDisplayEnumLen(clue),
+        lightLen: puz.getAllCells(ci).length,
+      });
+    }
+    return mismatches;
+  }
 }

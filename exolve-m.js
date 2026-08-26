@@ -3030,12 +3030,11 @@ Exolve.prototype.checkConsistency = function() {
       if (noClueList) noClueList += ', '
       noClueList += cname
     }
-    const cells = this.getAllCells(ci);
-    const lightLen = cells.length;
-    if (!this.ignoreEnumMismatch && !this.hasDgmlessCells &&
-        clue.enumLen > 0 && lightLen > 0 && clue.enumLen != lightLen &&
-        (!cells.endsOnStart || clue.enumLen != lightLen + 1)) {
-      this.showWarning(cname + ': enum asks for ' + clue.enumLen +
+    if (this.isEnumMismatch(ci)) {
+      const cells = this.getAllCells(ci);
+      const lightLen = cells.length;
+      const enumLen = this.clueDisplayEnumLen(clue);
+      this.showWarning(cname + ': enum asks for ' + enumLen +
           ' cells, but the grid shows ' + lightLen + ' cells',
           'ignore-enum-mismatch');
     }
@@ -4524,6 +4523,64 @@ Exolve.prototype.getAllCells = function(ci, clues=null) {
     cells.endsOnStart = true;
   }
   return cells;
+}
+
+/**
+ * True if this clue's enumeration length does not match its light length.
+ */
+Exolve.prototype.isEnumMismatch = function(ci) {
+  const clue = this.clues[ci];
+  if (!clue || clue.parentClueIndex) {
+    return false;
+  }
+  if (this.ignoreEnumMismatch || this.hasDgmlessCells) {
+    return false;
+  }
+  const enumLen = this.clueDisplayEnumLen(clue);
+  if (enumLen <= 0) {
+    return false;
+  }
+  const cells = this.getAllCells(ci);
+  const lightLen = cells.length;
+  if (lightLen <= 0) {
+    return false;
+  }
+  if (enumLen == lightLen) {
+    return false;
+  }
+  if (cells.endsOnStart && enumLen == lightLen + 1) {
+    return false;
+  }
+  return true;
+}
+
+/**
+ * Enumeration letter-count parsed from clue text / enumStr (not the
+ * auto-inferred enumLen that finalClueTweaks may set from cell count).
+ */
+Exolve.prototype.clueDisplayEnumLen = function(clue) {
+  let line = (clue.clue || '').trim();
+  let enumParse = this.parseEnum(line);
+  if (enumParse.enumLen > 0) {
+    return enumParse.enumLen;
+  }
+  if (clue.enumStr) {
+    enumParse = this.parseEnum(clue.enumStr);
+    if (enumParse.enumLen > 0) {
+      return enumParse.enumLen;
+    }
+  }
+  return 0;
+}
+
+Exolve.prototype.getEnumMismatchClues = function() {
+  const mismatches = [];
+  for (const ci of Object.keys(this.clues)) {
+    if (this.isEnumMismatch(ci)) {
+      mismatches.push(ci);
+    }
+  }
+  return mismatches;
 }
 
 Exolve.prototype.punctuateEntry = function(solution, placeholder) {

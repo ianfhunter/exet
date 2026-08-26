@@ -11,7 +11,7 @@ Copyright (c) 2020 Viresh Ratnakar
 See the full license notice in exet.js.
 -->
 <link rel="stylesheet" type="text/css" href="exolve-m.css?v1.63"/>
-<link rel="stylesheet" type="text/css" href="exet.css?v1.09.1"/>
+<link rel="stylesheet" type="text/css" href="exet.css?v1.09.2"/>
 
 <script>
 /**
@@ -73,6 +73,7 @@ exetConfig = {
     {
       id: "synonyms",
       display: "Synonyms",
+      tone: "blue",
       hover: "WordNet synonyms for the current answer",
       sections: [
         {id: "xet-synonyms", title: "WordNet synonyms",
@@ -80,17 +81,9 @@ exetConfig = {
       ]
     },
     {
-      id: "prior-clues",
-      display: "Prior clues",
-      hover: "Offline lookup of previously published clues for the current answer",
-      sections: [
-        {id: "xet-prior-clues", title: "Published clues",
-         hover: "Clues from cryptics.georgeho.org and xd.saul.pw (offline index)"},
-      ]
-    },
-    {
       id: "hiddens",
       display: "Hiddens",
+      tone: "orange",
       hover: "Nutrimatic: hidden answers and reversed hidden answers",
       group: "Hiddens & Variants",
       sections: [
@@ -103,6 +96,7 @@ exetConfig = {
     {
       id: "alternations",
       display: "Alternations",
+      tone: "orange",
       hover: "Nutrimatic: alternations and reversed alternations",
       group: "Hiddens & Variants",
       sections: [
@@ -115,6 +109,7 @@ exetConfig = {
     {
       id: "acrostics",
       display: "Acrostics",
+      tone: "orange",
       hover: "Nutrimatic: acrostics, tail acrostics (telestichs), and both ends",
       group: "Hiddens & Variants",
       layout: "1+2",
@@ -125,6 +120,16 @@ exetConfig = {
          title: "Tail Acrostics"},
         {url: "https://nutrimatic.org/?q=", maker: 'Nutrimatic-BothEnds',
          title: "Both Ends"},
+      ]
+    },
+    {
+      id: "prior-clues",
+      display: "Prior clues",
+      tone: "pink",
+      hover: "Offline lookup of previously published clues for the current answer",
+      sections: [
+        {id: "xet-prior-clues", title: "Published clues",
+         hover: "Clues from cryptics.georgeho.org and xd.saul.pw (offline index)"},
       ]
     },
   ],
@@ -249,18 +254,18 @@ exetConfig = {
 
 <script src="lists/abbreviations-lookup.js"></script>
 <script src="lists/abbreviations-by-alpha.js"></script>
-<script src="exolve-m.js?v1.73.2"></script>
+<script src="exolve-m.js?v1.73.3"></script>
 <script src="exolve-from-puz.js?v1.73.2"></script>
 <script src="exolve-from-ipuz.js?v1.73.2"></script>
 <script src="exolve-to-puz.js?v1.73.2"></script>
 <script src="exolve-to-ipuz.js?v1.73.2"></script>
 <script src="exolve-exost.js?v1.73.2"></script>
-<script src="exet-analysis.js?v1.08"></script>
+<script src="exet-analysis.js?v1.09"></script>
 <script src="exet-storage.js?v1.08"></script>
 <script src="exet-theme-llm.js?v1.08"></script>
 <script src="exet-data-server.js?v1.08"></script>
 <script src="exet-puzzle-files.js?v1.08"></script>
-<script src="exet.js?v1.08"></script>
+<script src="exet.js?v1.09"></script>
 <script src="exet-magpie.js?v1.10"></script>
 <script src="exet-autofill.js?v1.08"></script>
 <script src="exet-lexicon.js?v1.08"></script>

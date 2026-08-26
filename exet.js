@@ -581,6 +581,7 @@ Exet.prototype.setPuzzle = function(puz) {
     {
       id: "exet",
       display: "Exet",
+      tone: "default",
       hover: "Main Exet functions: load, save, grid-fill, edit, etc.",
       sections: [],
       url: "",
@@ -588,18 +589,21 @@ Exet.prototype.setPuzzle = function(puz) {
     {
       id: "theme",
       display: "Theme",
+      tone: "default",
       hover: "Generate themed word lists for preferred fills (WebLLM)",
       sections: [],
     },
     {
       id: "research",
       display: "Research",
+      tone: "blue",
       hover: "Research tools for the current word and clue",
       sections: [],
     },
     {
       id: "anagrams",
       display: "Anagrams",
+      tone: "green",
       hover: "Anagrams, composite/extended anagrams, anagrammed deletions",
       sections: [
         {id: "xet-companag", maker: this.makeCAParam,
@@ -611,6 +615,7 @@ Exet.prototype.setPuzzle = function(puz) {
     {
       id: "containers",
       display: "Containers",
+      tone: "green",
       hover: "Containments and insertions",
       sections: [
         {id: "xet-containments", maker: this.makeCharadeParam,
@@ -620,6 +625,7 @@ Exet.prototype.setPuzzle = function(puz) {
     {
       id: "charades",
       display: "Charades",
+      tone: "green",
       hover: "Charades",
       sections: [
         {id: "xet-charades", maker: this.makeCharadeParam,
@@ -629,6 +635,7 @@ Exet.prototype.setPuzzle = function(puz) {
     {
       id: "edits-and-sounds",
       display: "Edits, Sounds",
+      tone: "green",
       hover: "Edits (small substitutions, insertions, deletions), " +
              "Homophones, Spoonerisms",
       sections: [
@@ -638,23 +645,26 @@ Exet.prototype.setPuzzle = function(puz) {
          title: "&#x1F56A; Homophones~ and &#x1F50A; Spoonerisms&lrhar;"},
       ]
     },
+  ];
+  const lastFewTabs = [
     {
       id: "magpie",
       display: "Magpie",
+      tone: "pink",
       hover: "Build a Magpie annotation interactively",
       sections: [],
     },
     {
       id: "analysis",
       display: "Analysis",
+      tone: "pink",
       hover: "Analyses of the crossword (grid, grid-fill, clues)",
       sections: [],
     },
-  ];
-  const lastFewTabs = [
     {
       id: "inds",
       display: "Lists",
+      tone: "gold",
       hover: "Offline cryptic indicator lists",
       sections: [],
     },
@@ -677,6 +687,13 @@ Exet.prototype.setPuzzle = function(puz) {
   for (let tab of lastFewTabs) {
     this.tabs[tab.id] = tab;
   }
+
+  this.tabOrder = [
+    "exet", "theme", "research", "synonyms",
+    "anagrams", "containers", "charades", "edits-and-sounds",
+    "hiddens", "alternations", "acrostics",
+    "prior-clues", "magpie", "analysis", "inds",
+  ];
 
   this.replaceHandlers()
 
@@ -796,6 +813,7 @@ Exet.prototype.setPuzzle = function(puz) {
     }
   }
   this.updateConsecutiveUnchMarks();
+  this.updateEnumMismatchMarks();
 
   // Display word list info
   const status = document.getElementById(`${this.puz.prefix}-status`);
@@ -2262,6 +2280,7 @@ Exet.prototype.getLightInfos = function() {
 }
 
 Exet.prototype.updateAnalysis = function(elt) {
+  this.updateEnumMismatchMarks();
   const grid = this.puz.grid;
   const w = this.puz.gridWidth;
   const h = this.puz.gridHeight;
@@ -2305,6 +2324,21 @@ Exet.prototype.updateAnalysis = function(elt) {
     }
   } else {
     html += '<li class="xet-red"><i>Has consecutive unches</i></li>';
+  }
+
+  const enumMismatches = ExetAnalysis.enumMismatches(this.puz);
+  if (this.puz.ignoreEnumMismatch || this.puz.hasDgmlessCells) {
+    html += '<li>Enumeration checks skipped</li>';
+  } else if (enumMismatches.length > 0) {
+    html += '<li class="xet-red"><i>' + enumMismatches.length +
+            ' enumeration(s) do not match light length</i><ul>';
+    for (const m of enumMismatches) {
+      html += '<li class="xet-red">' + m.label + ': enum ' + m.enumLen +
+              ', light ' + m.lightLen + '</li>';
+    }
+    html += '</ul></li>';
+  } else {
+    html += '<li>All enumerations match light lengths</li>';
   }
 
   const throughCuts = analysis.minThroughCuts();
@@ -4539,8 +4573,13 @@ Exet.prototype.urlSectionHtml = function(id, section, i, sectionClass) {
     </iframe>`;
 }
 
+Exet.prototype.getTabIds = function() {
+  const order = this.tabOrder || Object.keys(this.tabs);
+  return order.filter((id) => this.tabs[id]);
+};
+
 Exet.prototype.populateFrame = function() {
-  const tabIds = Object.keys(this.tabs);
+  const tabIds = this.getTabIds();
   const row1Count = Math.ceil(tabIds.length / 2);
   let frameHTML = '<div class="xet-tab-bar">';
   for (let row = 0; row < 2; row++) {
@@ -4550,7 +4589,9 @@ Exet.prototype.populateFrame = function() {
     for (let i = start; i < end; i++) {
       const id = tabIds[i];
       const tab = this.tabs[id];
-      frameHTML += `<button id="xet-${id}">${tab.display}</button>`;
+      const tone = tab.tone || "default";
+      frameHTML += `<button id="xet-${id}" class="xet-tab-tone-${tone}">` +
+          `${tab.display}</button>`;
     }
     frameHTML += '</div>';
   }
@@ -5108,6 +5149,7 @@ Exet.prototype.handleTabClick = function(id) {
   tab.button.className += " active";
 
   if (id == "exet") {
+    this.updateEnumMismatchMarks();
     return;
   }
   if (id == "inds") {
@@ -5744,7 +5786,7 @@ Exet.prototype.resizeRHS = function() {
     `;
   }
   /** Resize tab buttons — tabs span two rows, so size from the fuller row. */
-  const tabIds = Object.keys(this.tabs);
+  const tabIds = this.getTabIds();
   const row1Count = Math.ceil(tabIds.length / 2);
   const row2Count = tabIds.length - row1Count;
   const maxTabsInRow = Math.max(row1Count, row2Count, 1);
@@ -6553,6 +6595,11 @@ Exet.prototype.handleClueChange = function() {
   this.setDraftToggler();
 
   theClue.clue = clue;
+  theClue.enumLen = enumParse.enumLen;
+  theClue.enumStr = enumParse.enumStr;
+  theClue.placeholder = enumParse.placeholder;
+  theClue.hyphenAfter = enumParse.hyphenAfter;
+  theClue.wordEndAfter = enumParse.wordEndAfter;
   this.puz.parseInClueAnnos(theClue);
 
   this.stripInputLF(currClueAnno);
@@ -6577,10 +6624,11 @@ Exet.prototype.handleClueChange = function() {
   }
   if (oldEnumParse.enumStr != enumParse.enumStr) {
     if (this.handleGridInput()) {
-      // throttledSaveRev() got called already
+      this.updateEnumMismatchMarks();
       return;
     }
   }
+  this.updateEnumMismatchMarks();
   exetRevManager.throttledSaveRev(exetRevManager.REV_CLUE_CHANGE);
 }
 
@@ -7946,7 +7994,10 @@ Exet.prototype.getClues = function(dir, solved=true) {
   cluePtrs.sort((c1, c2) => parseInt(c1.label) - parseInt(c2.label));
   let clues = ''
   for (let clue of cluePtrs) {
-    const thisClue = this.puz.formatClue(clue.clue, true, true, solved);
+    let thisClue = this.puz.formatClue(clue.clue, true, true, solved);
+    if (clue.enumStr && thisClue.indexOf(clue.enumStr.trim()) < 0) {
+      thisClue = thisClue.trim() + ' ' + clue.enumStr;
+    }
     const label = clue.displayLabel || clue.label;
     clues = clues + '\n  ' + label + ' ' + thisClue;
     if (!solved || clue.parentClueIndex) {
@@ -8291,6 +8342,56 @@ Exet.prototype.updateConsecutiveUnchMarks = function() {
     title.textContent = 'Consecutive unch';
     mark.appendChild(title);
     gridCell.unchMark = mark;
+  }
+}
+
+Exet.prototype.updateEnumMismatchMarks = function() {
+  if (!this.puz) {
+    return;
+  }
+  const puz = this.puz;
+  const ENUM_MISMATCH_TITLE = 'enum total != light length';
+  const mismatches = puz.getEnumMismatchClues();
+
+  for (const ci in puz.clues) {
+    const theClue = puz.clues[ci];
+    if (theClue.enumMismatchWarn) {
+      theClue.enumMismatchWarn.remove();
+      theClue.enumMismatchWarn = null;
+    }
+  }
+
+  const centerer = document.getElementById(`${puz.prefix}-grid-parent-centerer`);
+  let banner = document.getElementById('xet-enum-mismatch-banner');
+  if (centerer) {
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'xet-enum-mismatch-banner';
+      banner.className = 'xet-enum-mismatch-banner';
+      banner.textContent = '!';
+      banner.title = ENUM_MISMATCH_TITLE;
+      const gridParent = document.getElementById(`${puz.prefix}-grid-parent`);
+      if (gridParent) {
+        centerer.insertBefore(banner, gridParent);
+      }
+    }
+    banner.style.display = mismatches.length > 0 ? '' : 'none';
+  }
+
+  for (const ci of mismatches) {
+    const theClue = puz.clues[ci];
+    if (!theClue || !theClue.clueTR) {
+      continue;
+    }
+    const labelCol = theClue.clueTR.querySelector('.xlv-clue-label');
+    if (labelCol) {
+      const warn = document.createElement('span');
+      warn.className = 'xet-enum-mismatch-clue';
+      warn.textContent = '!';
+      warn.title = ENUM_MISMATCH_TITLE;
+      labelCol.insertAdjacentElement('afterbegin', warn);
+      theClue.enumMismatchWarn = warn;
+    }
   }
 }
 
