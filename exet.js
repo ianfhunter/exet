@@ -187,6 +187,8 @@ function Exet() {
   this.gridFillDebounceMS = 800;
   this.longInputLagMS = 2000;
   this.sweepMS = 500;
+  /** Above this lexicon size, cap unfilled-clue lookups (ComboList-scale). */
+  this.largeLexiconStartLen = 200001;
 
   // State for "jump to most constrained" feature
   this.jumpConstrainedLastAt = 0;
@@ -653,7 +655,7 @@ Exet.prototype.setPuzzle = function(puz) {
     {
       id: "inds",
       display: "Lists",
-      hover: "Cryptic indicators and abbreviations lists",
+      hover: "Offline cryptic indicator lists",
       sections: [],
     },
   ];
@@ -3500,6 +3502,149 @@ Exet.prototype.getAbbrevLetterTooltip = function(letter) {
   }
   return tip;
 }
+
+Exet.prototype.ABBREV_CAT_LABELS = {
+  chemicals: "Chemicals",
+  geography: "Geography",
+  "roman-numerals": "Roman numerals",
+  music: "Music",
+  military: "Military & navy",
+  science: "Science & units",
+  church: "Church & religion",
+  politics: "Politics & government",
+  honours: "Honours & titles",
+  language: "Language & grammar",
+  time: "Time & dates",
+  money: "Money & currency",
+  sport: "Sport & games",
+  chess: "Chess",
+  general: "General",
+};
+
+Exet.prototype.makeAbbrevSidebar = function() {
+  if (document.getElementById('xet-abbrev-sidebar')) {
+    return;
+  }
+  const sidebar = document.createElement('aside');
+  sidebar.id = 'xet-abbrev-sidebar';
+  sidebar.title = 'Cryptic abbreviations — click a letter tab';
+
+  const tabs = document.createElement('div');
+  tabs.className = 'xet-abbrev-tabs';
+  for (const ch of 'ABCDEFGHIJKLMNOPQRSTUVWXYZ') {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'xet-abbrev-tab';
+    btn.dataset.letter = ch;
+    btn.textContent = ch;
+    btn.title = 'Abbreviations starting with ' + ch;
+    tabs.appendChild(btn);
+  }
+
+  const panel = document.createElement('div');
+  panel.className = 'xet-abbrev-panel';
+  panel.innerHTML = `
+    <div class="xet-abbrev-panel-head">
+      <span class="xet-abbrev-panel-letter"></span>
+      <input type="search" class="xet-abbrev-filter" placeholder="Filter…"
+          title="Filter abbreviations or clue words">
+    </div>
+    <div class="xet-abbrev-list"></div>
+  `;
+
+  sidebar.appendChild(panel);
+  sidebar.appendChild(tabs);
+  document.body.appendChild(sidebar);
+
+  this.abbrevSidebar = sidebar;
+  this.abbrevSidebarLetter = null;
+  this.abbrevSidebarFilter = panel.querySelector('.xet-abbrev-filter');
+  this.abbrevSidebarList = panel.querySelector('.xet-abbrev-list');
+  this.abbrevSidebarLetterSpan = panel.querySelector('.xet-abbrev-panel-letter');
+
+  tabs.addEventListener('click', (ev) => {
+    const btn = ev.target.closest('.xet-abbrev-tab');
+    if (!btn) {
+      return;
+    }
+    this.toggleAbbrevSidebar(btn.dataset.letter);
+  });
+  this.abbrevSidebarFilter.addEventListener('input', () => {
+    if (this.abbrevSidebarLetter) {
+      this.renderAbbrevSidebarContent(this.abbrevSidebarLetter);
+    }
+  });
+  document.addEventListener('click', (ev) => {
+    const sidebar = this.abbrevSidebar;
+    if (!sidebar || !sidebar.classList.contains('expanded')) {
+      return;
+    }
+    if (sidebar.contains(ev.target)) {
+      return;
+    }
+    this.collapseAbbrevSidebar();
+  });
+};
+
+Exet.prototype.collapseAbbrevSidebar = function() {
+  const sidebar = this.abbrevSidebar;
+  if (!sidebar || !sidebar.classList.contains('expanded')) {
+    return;
+  }
+  sidebar.classList.remove('expanded');
+  this.abbrevSidebarLetter = null;
+  for (const b of sidebar.querySelectorAll('.xet-abbrev-tab')) {
+    b.classList.remove('active');
+  }
+};
+
+Exet.prototype.toggleAbbrevSidebar = function(letter) {
+  const sidebar = this.abbrevSidebar;
+  if (!sidebar) {
+    return;
+  }
+  const isOpen = sidebar.classList.contains('expanded');
+  if (isOpen && this.abbrevSidebarLetter === letter) {
+    this.collapseAbbrevSidebar();
+    return;
+  }
+  this.abbrevSidebarLetter = letter;
+  sidebar.classList.add('expanded');
+  for (const b of sidebar.querySelectorAll('.xet-abbrev-tab')) {
+    b.classList.toggle('active', b.dataset.letter === letter);
+  }
+  this.abbrevSidebarLetterSpan.textContent = letter;
+  this.abbrevSidebarFilter.value = '';
+  this.renderAbbrevSidebarContent(letter);
+  this.abbrevSidebarFilter.focus();
+};
+
+Exet.prototype.renderAbbrevSidebarContent = function(letter) {
+  const data = (typeof exetAbbrevByAlpha === 'object') ? exetAbbrevByAlpha : null;
+  if (!data || !this.abbrevSidebarList) {
+    return;
+  }
+  const term = this.abbrevSidebarFilter.value.trim().toLowerCase();
+  const entries = data[letter] || [];
+  let html = '';
+  for (const entry of entries) {
+    const clues = entry.c;
+    const text = entry.a + ' ' + clues.map(c => c[0]).join(' ');
+    if (term && !text.toLowerCase().includes(term)) {
+      continue;
+    }
+    const clueHtml = clues.map(([word, cat]) => {
+      const label = this.ABBREV_CAT_LABELS[cat] || cat;
+      return '<span class="xet-abbrev-clue cat-' + cat + '" title="' +
+             this.escapeAttr(label) + '">' + this.escapeHtml(word) + '</span>';
+    }).join(', ');
+    html += '<div class="xet-abbrev-row"><span class="xet-abbrev-abbr">' +
+            this.escapeHtml(entry.a) + '</span><span class="xet-abbrev-clues">' +
+            clueHtml + '</span></div>';
+  }
+  this.abbrevSidebarList.innerHTML = html ||
+      '<div class="xet-abbrev-empty">No matches</div>';
+};
 
 Exet.prototype.escapeAttr = function(s) {
   return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;')
@@ -6808,9 +6953,64 @@ Exet.prototype.handleGridInput = function(revType=null) {
   }
   if (needsUpdate) {
     if (!revType) revType = exetRevManager.REV_GRIDFILL_CHANGE;
-    this.updatePuzzle(revType);
+    this.refreshGridFill(revType);
   }
   return needsUpdate;
+}
+
+/**
+ * Max fill matches to fetch per unfilled clue. Huge lists (ComboList) use a
+ * cap so grid edits stay responsive; smaller lists keep limit=0 (all matches).
+ */
+Exet.prototype.unfilledChoicesLimit = function() {
+  if (exetLexicon.startLen > this.largeLexiconStartLen) {
+    return this.sweepMaxChoices;
+  }
+  return 0;
+}
+
+/** Sync fillState from the live grid without rebuilding Exolve. */
+Exet.prototype.syncFillStateFromPuzzle = function() {
+  if (!this.puz || !this.fillState) {
+    return;
+  }
+  for (let row = 0; row < this.puz.gridHeight; row++) {
+    for (let col = 0; col < this.puz.gridWidth; col++) {
+      const pCell = this.puz.grid[row][col];
+      const fCell = this.fillState.grid[row][col];
+      if (!pCell.isLight) {
+        continue;
+      }
+      fCell.currLetter = pCell.currLetter;
+      fCell.solution = pCell.solution;
+    }
+  }
+  for (const ci in this.puz.clues) {
+    const fClue = this.fillState.clues[ci];
+    if (!fClue) {
+      continue;
+    }
+    const pClue = this.puz.clues[ci];
+    fClue.solution = pClue.solution;
+    fClue.placeholder = pClue.placeholder;
+    fClue.enumLen = pClue.enumLen;
+  }
+}
+
+/**
+ * Lightweight grid-fill update: refresh fill suggestions without destroying
+ * and recreating the Exolve instance (which updatePuzzle does).
+ */
+Exet.prototype.refreshGridFill = function(revType=exetRevManager.REV_GRIDFILL_CHANGE) {
+  if (revType <= exetRevManager.REV_GRIDFILL_CHANGE &&
+      revType != exetRevManager.REV_AUTOFILL_GRIDFILL_CHANGE) {
+    this.autofill.reset('Aborted');
+  }
+  this.syncFillStateFromPuzzle();
+  this.resetViability();
+  if (revType > 0) {
+    exetRevManager.throttledSaveRev(revType);
+  }
 }
 
 Exet.prototype.remapDisplayLabel = function(displayLabel, dir, newLabels) {
@@ -9134,6 +9334,7 @@ Exet.prototype.periodicChecks = function() {
 
 Exet.prototype.finishSetup = function() {
   this.loadAbbreviations();
+  this.makeAbbrevSidebar();
   this.versionText = '';
   this.periodicChecks();
   /** Check every 10 minutes */

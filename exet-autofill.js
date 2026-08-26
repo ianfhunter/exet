@@ -421,7 +421,8 @@ ExetFillState.prototype.resetViability = function() {
     if (!theClue.solution || theClue.solution.indexOf('?') < 0) {
       continue;
     }
-    theClue.lChoices = exetLexicon.getLexChoices(theClue.solution, 0,
+    theClue.lChoices = exetLexicon.getLexChoices(theClue.solution,
+        exet.unfilledChoicesLimit(),
         this.dontReuse,
         exet.noProperNouns,
         exet.indexMinPop,

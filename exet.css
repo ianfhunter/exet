@@ -1029,6 +1029,141 @@ body {
 .xet-charade-word.xet-abbrev-hint .xet-darkgreen {
   background: #fff8e6;
 }
+#xet-abbrev-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 9000;
+  font: 12px/1.4 ui-monospace, Consolas, monospace;
+  pointer-events: none;
+}
+#xet-abbrev-sidebar .xet-abbrev-tabs,
+#xet-abbrev-sidebar .xet-abbrev-panel {
+  pointer-events: auto;
+}
+#xet-abbrev-sidebar .xet-abbrev-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  flex-shrink: 0;
+  background: #eef3fb;
+  border-left: 1px solid #d0dcee;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.06);
+}
+#xet-abbrev-sidebar .xet-abbrev-tab {
+  font: inherit;
+  font-size: 0.68rem;
+  font-weight: 600;
+  width: 20px;
+  min-height: 20px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #d8e2f0;
+  background: linear-gradient(90deg, #e8eef8 0%, #f4f7fc 100%);
+  color: #445;
+  cursor: pointer;
+  line-height: 1;
+}
+#xet-abbrev-sidebar .xet-abbrev-tab:hover {
+  background: #dce8f8;
+  color: var(--xet-accent, #1a5fb4);
+}
+#xet-abbrev-sidebar .xet-abbrev-tab.active {
+  background: var(--xet-accent, #1a5fb4);
+  color: #fff;
+  box-shadow: inset 2px 0 0 #0d3d7a;
+}
+#xet-abbrev-sidebar .xet-abbrev-panel {
+  width: 0;
+  overflow: hidden;
+  background: #fff;
+  border-left: 1px solid var(--xet-border, #ddd);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.18s ease;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.08);
+}
+#xet-abbrev-sidebar.expanded .xet-abbrev-panel {
+  width: min(300px, 70vw);
+}
+#xet-abbrev-sidebar .xet-abbrev-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--xet-border, #ddd);
+  background: #f5f7fb;
+  flex-shrink: 0;
+}
+#xet-abbrev-sidebar .xet-abbrev-panel-letter {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--xet-accent, #1a5fb4);
+  min-width: 1.1em;
+  text-align: center;
+}
+#xet-abbrev-sidebar .xet-abbrev-filter {
+  flex: 1;
+  min-width: 0;
+  padding: 3px 6px;
+  font: inherit;
+  font-size: 0.85rem;
+  border: 1px solid var(--xet-border, #ddd);
+  border-radius: 3px;
+}
+#xet-abbrev-sidebar .xet-abbrev-list {
+  overflow-y: auto;
+  flex: 1;
+  padding: 4px 0;
+}
+#xet-abbrev-sidebar .xet-abbrev-row {
+  display: flex;
+  gap: 6px;
+  padding: 4px 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+#xet-abbrev-sidebar .xet-abbrev-row:hover {
+  background: #fafcff;
+}
+#xet-abbrev-sidebar .xet-abbrev-abbr {
+  font-weight: 700;
+  white-space: nowrap;
+  min-width: 2em;
+}
+#xet-abbrev-sidebar .xet-abbrev-clues {
+  color: #333;
+  line-height: 1.5;
+}
+#xet-abbrev-sidebar .xet-abbrev-clue {
+  border-radius: 2px;
+  padding: 0 2px;
+}
+#xet-abbrev-sidebar .xet-abbrev-empty {
+  padding: 12px 8px;
+  color: #888;
+  font-style: italic;
+}
+#xet-abbrev-sidebar .cat-chemicals { background: #e8f4fd; border: 1px solid #b8d4ee; }
+#xet-abbrev-sidebar .cat-geography { background: #eef8ef; border: 1px solid #c8dfc9; }
+#xet-abbrev-sidebar .cat-roman-numerals { background: #fff0e6; border: 1px solid #f0c8a8; }
+#xet-abbrev-sidebar .cat-music { background: #f3ecff; border: 1px solid #d4c4f0; }
+#xet-abbrev-sidebar .cat-military { background: #fde8e8; border: 1px solid #e8b4b4; }
+#xet-abbrev-sidebar .cat-science { background: #e6f7fa; border: 1px solid #a8dce8; }
+#xet-abbrev-sidebar .cat-church { background: #fff8e6; border: 1px solid #f0dfa0; }
+#xet-abbrev-sidebar .cat-politics { background: #fce8f3; border: 1px solid #e8b4d4; }
+#xet-abbrev-sidebar .cat-honours { background: #f0f0ff; border: 1px solid #c8c8f0; }
+#xet-abbrev-sidebar .cat-language { background: #eef3fb; border: 1px solid #d0dcee; }
+#xet-abbrev-sidebar .cat-time { background: #f5f5f5; border: 1px solid #d8d8d8; }
+#xet-abbrev-sidebar .cat-money { background: #fff6e6; border: 1px solid #f0d090; }
+#xet-abbrev-sidebar .cat-sport { background: #e8fff0; border: 1px solid #b4e8c8; }
+#xet-abbrev-sidebar .cat-chess { background: #f5f0e8; border: 1px solid #d8cbb0; }
+#xet-abbrev-sidebar .cat-general { background: #f7f7f7; border: 1px solid #e0e0e0; }
 .xet-sweeping-box {
   display: inline-block;
   position: absolute;

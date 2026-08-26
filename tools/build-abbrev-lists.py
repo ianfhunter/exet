@@ -775,6 +775,29 @@ def add_abbrev_text(
     return count
 
 
+def add_source_abbrev_pair(
+    store: dict[str, dict],
+    left: str,
+    right: str,
+    source: str,
+) -> int:
+    """Parse MHL/Longair lines written as abbreviation: clue phrase."""
+    left = norm_space(left)
+    if is_abbrev_form(left):
+        abbrev = abbrev_display(left)
+        count = 0
+        for clue in split_expansions(right):
+            if add_abbrev(store, clue, abbrev, source):
+                count += 1
+            elif norm_headword(clue) in store:
+                before = len(store[norm_headword(clue)]["expansions"])
+                add_abbrev(store, clue, abbrev, source)
+                if len(store[norm_headword(clue)]["expansions"]) > before:
+                    count += 1
+        return count
+    return add_abbrev_text(store, left, right, source)
+
+
 def load_clue_clinic_abbrev_html(page_id: int) -> str:
     cache_name = f"clueclinic-{page_id}-abbrev.html"
     cache = SOURCES_DIR / cache_name
@@ -816,7 +839,7 @@ def scrape_mhl_yaml(store: dict[str, dict]) -> int:
     for line in text.splitlines():
         m = re.match(r"^\s*([a-z0-9][a-z0-9 .'-]*):\s*(.+)$", line, re.I)
         if m:
-            count += add_abbrev_text(store, m.group(1), m.group(2), "mhl-yaml")
+            count += add_source_abbrev_pair(store, m.group(1), m.group(2), "mhl-yaml")
     return count
 
 
@@ -829,7 +852,7 @@ def scrape_longair(store: dict[str, dict]) -> int:
     for line in text.splitlines():
         m = re.match(r"^\s{3}([a-z0-9][a-z0-9 .'-]*):\s*(.+)$", line, re.I)
         if m:
-            count += add_abbrev_text(store, m.group(1), m.group(2), "longair")
+            count += add_source_abbrev_pair(store, m.group(1), m.group(2), "longair")
     return count
 
 
@@ -952,6 +975,11 @@ def sanitize_roman_numerals(store: dict[str, dict]) -> int:
     return removed
 
 
+ABBREV_CURATED_EXTRAS: list[tuple[str, str]] = [
+    ("50/50", "LL"),  # fifty-fifty (L = 50 in Roman numerals)
+]
+
+
 def apply_curated_extras(store: dict[str, dict]) -> int:
     """Add validated Roman numerals and the full NATO phonetic alphabet."""
     added = 0
@@ -963,6 +991,65 @@ def apply_curated_extras(store: dict[str, dict]) -> int:
         added += add_abbrev(
             store, word, letter, "curated", category="military"
         )
+    for clue, abbrev in ABBREV_CURATED_EXTRAS:
+        if add_abbrev(store, clue, abbrev, "curated"):
+            added += 1
+    return added
+
+
+# Fallback when lists/compound-indicators.txt has not been built yet.
+# Kept in sync with CURATED in tools/build-compound-indicators.py.
+COMPOUND_LETTER_CURATED: list[tuple[str, str]] = [
+    ("egghead", "E"),
+    ("redhead", "R"),
+    ("masthead", "M"),
+    ("gateshead", "G"),
+    ("horntail", "N"),
+    ("foxtail", "X"),
+    ("sweetheart", "E"),
+    ("oxtail", "X"),
+    ("pigtail", "G"),
+    ("rattail", "T"),
+    ("warhead", "W"),
+    ("pinhead", "P"),
+    ("flathead", "F"),
+    ("deadhead", "D"),
+    ("bulkhead", "B"),
+    ("figurehead", "F"),
+    ("lionheart", "I"),
+    ("braveheart", "A"),
+    ("horsetail", "E"),
+]
+
+
+def load_compound_letter_words() -> list[tuple[str, str]]:
+    """Words embedding head/tail/heart/start/end etc. -> selected letter."""
+    path = OUT_DIR / "compound-indicators.txt"
+    if path.is_file():
+        pairs: list[tuple[str, str]] = []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            parts = line.split("\t")
+            if len(parts) != 2:
+                continue
+            word, letter = parts[0].strip(), parts[1].strip().upper()
+            if word and len(letter) == 1 and letter.isalpha():
+                pairs.append((word, letter))
+        if pairs:
+            return pairs
+    return list(COMPOUND_LETTER_CURATED)
+
+
+def apply_compound_letter_words(store: dict[str, dict]) -> int:
+    """Add compound letter-selection words (e.g. sweetheart -> E)."""
+    added = 0
+    for word, letter in load_compound_letter_words():
+        if add_abbrev(
+            store, word, letter, "compound-indicators", category="language"
+        ):
+            added += 1
     return added
 
 
@@ -977,6 +1064,7 @@ def build_abbreviations() -> dict[str, dict]:
         ("cryptipedia", scrape_cryptipedia_abbrev),
         ("sanitize-roman", lambda s: sanitize_roman_numerals(s)),
         ("curated-extras", apply_curated_extras),
+        ("compound-letter-words", apply_compound_letter_words),
     ]
     print("\n=== Abbreviations (clue word -> expansion) ===", flush=True)
     for name, fn in steps:
@@ -1069,7 +1157,9 @@ def write_abbrev_outputs(store: dict[str, dict]) -> int:
         + "\n",
         encoding="utf-8",
     )
-    (OUT_DIR / f"{base}.html").write_text(render_abbrev_html(meta), encoding="utf-8")
+    inverted = invert_abbrev_entries(serializable)
+    by_alpha = build_abbrev_by_alpha(inverted)
+    (OUT_DIR / f"{base}.html").write_text(render_abbrev_html(meta, by_alpha), encoding="utf-8")
     lookup = {e["headword"]: e["expansions"] for e in serializable}
     (OUT_DIR / "abbreviations-lookup.js").write_text(
         "var exetAbbrevLookup="
@@ -1077,6 +1167,7 @@ def write_abbrev_outputs(store: dict[str, dict]) -> int:
         + ";\n",
         encoding="utf-8",
     )
+    write_abbrev_by_alpha_js(by_alpha)
     return len(serializable)
 
 
@@ -1156,6 +1247,172 @@ def render_indicator_html(meta: dict) -> str:
 """
 
 
+def build_abbrev_by_alpha(inverted: list[dict]) -> dict[str, list[dict]]:
+    """Group inverted abbreviation rows by first-letter bucket for sidebar UI."""
+    by_alpha: dict[str, list[dict]] = {}
+    for entry in inverted:
+        alpha = entry["alpha"]
+        if alpha == "#":
+            continue
+        clues = sorted(
+            [[word, cat] for word, cat in entry["clue_categories"].items()],
+            key=lambda pair: pair[0].lower(),
+        )
+        by_alpha.setdefault(alpha, []).append({"a": entry["abbreviation"], "c": clues})
+    for alpha in by_alpha:
+        by_alpha[alpha].sort(key=lambda row: row["a"].upper())
+    return by_alpha
+
+
+def write_abbrev_by_alpha_js(by_alpha: dict[str, list[dict]]) -> None:
+    (OUT_DIR / "abbreviations-by-alpha.js").write_text(
+        "var exetAbbrevByAlpha="
+        + json.dumps(by_alpha, ensure_ascii=False, separators=(",", ":"))
+        + ";\n",
+        encoding="utf-8",
+    )
+
+
+def abbrev_sidebar_css(*, prefix: str = "") -> str:
+    p = prefix
+    cat_css = "\n".join(
+        f"  .{p}cat-{slug} {{ background: {bg}; border: 1px solid {border}; "
+        f"border-radius: 3px; padding: 0 3px; }}"
+        for slug, _label, bg, border in CLUE_CATEGORIES
+    )
+    return f"""
+  .{p}abbrev-layout {{ display: flex; min-height: 100vh; }}
+  .{p}abbrev-main {{ flex: 1; min-width: 0; }}
+  .{p}abbrev-sidebar {{
+    display: flex; flex-direction: row-reverse; flex-shrink: 0;
+    position: sticky; top: 0; align-self: flex-start; height: 100vh;
+    z-index: 5; font: 13px/1.4 system-ui, sans-serif;
+  }}
+  .{p}abbrev-tabs {{
+    display: flex; flex-direction: column; width: 22px; flex-shrink: 0;
+    background: #eef3fb; border-left: 1px solid #d0dcee;
+    overflow-y: auto; overflow-x: hidden;
+  }}
+  .{p}abbrev-tab {{
+    font: inherit; font-size: 0.72rem; font-weight: 600;
+    width: 22px; min-height: 22px; padding: 0; margin: 0;
+    border: none; border-bottom: 1px solid #d8e2f0;
+    background: linear-gradient(90deg, #e8eef8 0%, #f4f7fc 100%);
+    color: #445; cursor: pointer; line-height: 1;
+  }}
+  .{p}abbrev-tab:hover {{ background: #dce8f8; color: var(--accent, #1a5fb4); }}
+  .{p}abbrev-tab.active {{
+    background: var(--accent, #1a5fb4); color: #fff;
+    box-shadow: inset 2px 0 0 #0d3d7a;
+  }}
+  .{p}abbrev-panel {{
+    width: 0; overflow: hidden; background: #fff;
+    border-left: 1px solid var(--border, #ddd);
+    display: flex; flex-direction: column;
+    transition: width 0.18s ease;
+  }}
+  .{p}abbrev-sidebar.expanded .{p}abbrev-panel {{ width: min(320px, 72vw); }}
+  .{p}abbrev-panel-head {{
+    display: flex; align-items: center; gap: 6px; padding: 8px 10px;
+    border-bottom: 1px solid var(--border, #ddd); background: #f5f7fb;
+    flex-shrink: 0;
+  }}
+  .{p}abbrev-panel-letter {{
+    font-size: 1.1rem; font-weight: 700; color: var(--accent, #1a5fb4);
+    min-width: 1.2em; text-align: center;
+  }}
+  .{p}abbrev-filter {{
+    flex: 1; min-width: 0; padding: 4px 8px; font: inherit; font-size: 0.85rem;
+    border: 1px solid var(--border, #ddd); border-radius: 4px;
+  }}
+  .{p}abbrev-list {{
+    overflow-y: auto; flex: 1; padding: 6px 0;
+  }}
+  .{p}abbrev-row {{
+    display: flex; gap: 8px; padding: 5px 10px;
+    border-bottom: 1px solid #f0f0f0;
+  }}
+  .{p}abbrev-row:hover {{ background: #fafcff; }}
+  .{p}abbrev-abbr {{
+    font-weight: 700; white-space: nowrap; min-width: 2.5em; color: #222;
+  }}
+  .{p}abbrev-clues {{ color: #444; line-height: 1.55; }}
+  .{p}abbrev-empty {{ padding: 16px 10px; color: #888; font-style: italic; }}
+  .{p}abbrev-hint {{
+    padding: 24px 16px; color: var(--muted, #666); font-size: 0.9rem;
+  }}
+{cat_css}
+"""
+
+
+def abbrev_sidebar_script(*, prefix: str = "", data_var: str = "exetAbbrevByAlpha") -> str:
+    p = prefix
+    return f"""
+(function() {{
+  const sidebar = document.getElementById('{p}abbrev-sidebar');
+  const panelLetter = document.getElementById('{p}abbrev-panel-letter');
+  const filter = document.getElementById('{p}abbrev-filter');
+  const list = document.getElementById('{p}abbrev-list');
+  const tabs = document.getElementById('{p}abbrev-tabs');
+  const data = typeof {data_var} === 'object' ? {data_var} : {{}};
+  let letter = null;
+
+  function render() {{
+    if (!letter) return;
+    const term = filter.value.trim().toLowerCase();
+    const entries = data[letter] || [];
+    let html = '';
+    for (const entry of entries) {{
+      const clues = entry.c.map(([word, cat]) =>
+        '<span class="{p}abbrev-clue {p}cat-' + cat + '">' + word + '</span>'
+      ).join(', ');
+      const text = entry.a + ' ' + entry.c.map(c => c[0]).join(' ');
+      if (term && !text.toLowerCase().includes(term)) continue;
+      html += '<div class="{p}abbrev-row"><span class="{p}abbrev-abbr">' +
+        entry.a + '</span><span class="{p}abbrev-clues">' + clues + '</span></div>';
+    }}
+    list.innerHTML = html || '<div class="{p}abbrev-empty">No matches</div>';
+  }}
+
+  function collapse() {{
+    if (!sidebar.classList.contains('expanded')) return;
+    sidebar.classList.remove('expanded');
+    letter = null;
+    for (const b of tabs.querySelectorAll('button')) b.classList.remove('active');
+  }}
+
+  function setLetter(ch) {{
+    const isOpen = sidebar.classList.contains('expanded');
+    if (isOpen && letter === ch) {{
+      collapse();
+      return;
+    }}
+    letter = ch;
+    sidebar.classList.add('expanded');
+    panelLetter.textContent = ch;
+    filter.value = '';
+    for (const b of tabs.querySelectorAll('button')) {{
+      b.classList.toggle('active', b.dataset.letter === ch);
+    }}
+    render();
+    filter.focus();
+  }}
+
+  tabs.addEventListener('click', (ev) => {{
+    const btn = ev.target.closest('button[data-letter]');
+    if (!btn) return;
+    setLetter(btn.dataset.letter);
+  }});
+  filter.addEventListener('input', render);
+  document.addEventListener('click', (ev) => {{
+    if (!sidebar.classList.contains('expanded')) return;
+    if (sidebar.contains(ev.target)) return;
+    collapse();
+  }});
+}})();
+"""
+
+
 def render_clue_cell(clue_categories: dict[str, str]) -> str:
     parts: list[str] = []
     for word in sorted(clue_categories, key=str.lower):
@@ -1168,43 +1425,26 @@ def render_clue_cell(clue_categories: dict[str, str]) -> str:
     return ", ".join(parts)
 
 
-def render_abbrev_html(meta: dict) -> str:
-    inverted = invert_abbrev_entries(meta["entries"])
-    count = len(inverted)
+def render_abbrev_html(meta: dict, by_alpha: dict[str, list[dict]]) -> str:
+    count = sum(len(v) for v in by_alpha.values())
     sources = ", ".join(meta["sources"])
-    rows = []
-    for entry in inverted:
-        src = html_lib.escape(", ".join(entry["sources"]))
-        abbrev = html_lib.escape(entry["abbreviation"])
-        alpha = html_lib.escape(entry["alpha"])
-        clues = render_clue_cell(entry["clue_categories"])
-        note = html_lib.escape(", ".join(entry["notes"]))
-        title = f"Sources: {src}" + (f" · Notes: {note}" if note else "")
-        rows.append(
-            f'<tr class="row" data-alpha="{alpha}" title="{title}">'
-            f'<td class="abbrev">{abbrev}</td>'
-            f'<td class="clues">{clues}</td></tr>'
-        )
-    body_rows = "\n".join(rows)
     blurb = (
         "Letters and short forms used in cryptic crosswords, with the clue words "
         "and phrases that commonly stand for each abbreviation (bits-and-pieces). "
-        "Clue words are colour-coded by topic."
+        "Click a letter tab on the right to browse. Clue words are colour-coded by topic."
     )
     alpha_btns = "".join(
-        f'<button type="button" class="alpha" data-letter="{ch}">{ch}</button>'
+        f'<button type="button" class="abbrev-tab" data-letter="{ch}">{ch}</button>'
         for ch in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    )
-    cat_css = "\n".join(
-        f"  .cat-{slug} {{ background: {bg}; border: 1px solid {border}; "
-        f"border-radius: 3px; padding: 1px 4px; }}"
-        for slug, _label, bg, border in CLUE_CATEGORIES
     )
     legend = "".join(
         f'<span><i class="sw cat-{slug}"></i> {html_lib.escape(label)}</span>'
         for slug, label, bg, border in CLUE_CATEGORIES
         if slug != "general"
     )
+    data_json = json.dumps(by_alpha, ensure_ascii=False, separators=(",", ":"))
+    sidebar_css = abbrev_sidebar_css()
+    sidebar_js = abbrev_sidebar_script(data_var="abbrevByAlpha")
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1213,101 +1453,47 @@ def render_abbrev_html(meta: dict) -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {{
-    --bg: #fafafa; --fg: #222; --muted: #666; --accent: #1a5fb4;
-    --hi: #ffe082; --border: #ddd; --chip: #eef3fb;
+    --bg: #fafafa; --fg: #222; --muted: #666; --accent: #1a5fb4; --border: #ddd;
   }}
   body {{ font: 15px/1.45 system-ui, sans-serif; margin: 0; background: var(--bg); color: var(--fg); }}
-  header {{ padding: 12px 16px; border-bottom: 1px solid var(--border); background: #fff; }}
+  header {{ padding: 12px 16px 12px 16px; border-bottom: 1px solid var(--border); background: #fff; }}
   header h1 {{ margin: 0 0 4px; font-size: 1.2rem; }}
   header p {{ margin: 0; color: var(--muted); font-size: 0.85rem; }}
   .legend {{ display: flex; gap: 10px 14px; flex-wrap: wrap; margin-top: 8px;
               font-size: 0.82rem; color: var(--muted); }}
   .legend span {{ display: inline-flex; align-items: center; gap: 4px; }}
   .legend i.sw {{ display: inline-block; width: 12px; height: 12px; border-radius: 3px; }}
-{cat_css}
-  #toolbar {{ padding: 10px 16px; background: #fff; border-bottom: 1px solid var(--border);
-              position: sticky; top: 0; z-index: 2; }}
-  #toolbar-row {{ display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }}
-  #q {{ flex: 1 1 240px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }}
-  #stats {{ color: var(--muted); font-size: 0.85rem; white-space: nowrap; }}
-  #alpha {{ display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }}
-  #alpha button {{
-    font: inherit; font-size: 0.82rem; min-width: 1.8em; padding: 3px 6px;
-    border: 1px solid #d0dcee; border-radius: 4px; background: var(--chip); cursor: pointer;
-  }}
-  #alpha button:hover {{ border-color: var(--accent); }}
-  #alpha button.active {{ background: var(--accent); color: #fff; border-color: var(--accent); }}
-  #alpha button.all {{ font-weight: 600; }}
-  main {{ padding: 12px 16px 32px; }}
-  table {{ width: 100%; border-collapse: collapse; background: #fff; }}
-  th, td {{ text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }}
-  th {{ background: #f5f7fb; color: var(--accent); position: sticky; top: 118px; }}
-  tr.hide {{ display: none; }}
-  tr.hi {{ background: var(--hi); }}
-  tr.hi .clue {{ opacity: 0.92; }}
-  .abbrev {{ font-weight: 600; width: 12%; white-space: nowrap; }}
-  .clues {{ color: #333; line-height: 1.65; }}
+{sidebar_css}
 </style>
 </head>
 <body>
-<header>
-  <h1>Cryptic abbreviations</h1>
-  <p>{count} abbreviations · built {meta["built"]} · merged from: {html_lib.escape(sources)}</p>
-  <p>{html_lib.escape(blurb)}</p>
-  <div class="legend">{legend}</div>
-</header>
-<div id="toolbar">
-  <div id="toolbar-row">
-    <input type="search" id="q" placeholder="Filter abbreviation or clue word…" autofocus>
-    <span id="stats">{count} shown</span>
+<div class="abbrev-layout">
+  <div class="abbrev-main">
+    <header>
+      <h1>Cryptic abbreviations</h1>
+      <p>{count} abbreviations · built {meta["built"]} · merged from: {html_lib.escape(sources)}</p>
+      <p>{html_lib.escape(blurb)}</p>
+      <div class="legend">{legend}</div>
+    </header>
+    <div class="abbrev-hint">Select a letter tab on the right →</div>
   </div>
-  <div id="alpha">
-    <button type="button" class="alpha all active" data-letter="">All</button>
+  <aside id="abbrev-sidebar" class="abbrev-sidebar">
+    <div class="abbrev-panel">
+      <div class="abbrev-panel-head">
+        <span id="abbrev-panel-letter" class="abbrev-panel-letter"></span>
+        <input type="search" id="abbrev-filter" class="abbrev-filter"
+            placeholder="Filter…">
+      </div>
+      <div id="abbrev-list" class="abbrev-list"></div>
+    </div>
+    <div id="abbrev-tabs" class="abbrev-tabs">
 {alpha_btns}
-  </div>
+    </div>
+  </aside>
 </div>
-<main>
-  <table>
-    <thead><tr><th>Abbreviation</th><th>Clue words</th></tr></thead>
-    <tbody id="rows">
-{body_rows}
-    </tbody>
-  </table>
-</main>
 <script>
-(function() {{
-  const q = document.getElementById('q');
-  const stats = document.getElementById('stats');
-  const alpha = document.getElementById('alpha');
-  let letter = '';
-
-  function applyFilter() {{
-    const term = q.value.trim().toLowerCase();
-    let shown = 0;
-    for (const row of document.querySelectorAll('#rows tr')) {{
-      const okLetter = !letter || row.dataset.alpha === letter;
-      const text = row.textContent.toLowerCase();
-      const okTerm = !term || text.includes(term);
-      const ok = okLetter && okTerm;
-      row.classList.toggle('hide', !ok);
-      row.classList.toggle('hi', ok && term.length > 0);
-      if (ok) shown++;
-    }}
-    stats.textContent = shown + ' shown';
-  }}
-
-  q.addEventListener('input', applyFilter);
-
-  alpha.addEventListener('click', (ev) => {{
-    const btn = ev.target.closest('button[data-letter]');
-    if (!btn) return;
-    letter = btn.dataset.letter;
-    for (const b of alpha.querySelectorAll('button')) {{
-      b.classList.toggle('active', b === btn);
-    }}
-    applyFilter();
-  }});
-}})();
+var abbrevByAlpha={data_json};
+{sidebar_js}
 </script>
 </body>
 </html>
