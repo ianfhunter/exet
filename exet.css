@@ -1874,3 +1874,8 @@ body {
   padding: 0 4px !important;
   color: chocolate;
 }
+.xet-dropdown-item.xet-menu-copied {
+  background-color: var(--xet-green-bg, #d4edda) !important;
+  color: var(--xet-green-fg, #155724);
+  font-weight: bold;
+}

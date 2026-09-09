@@ -1365,6 +1365,22 @@ Exet.prototype.makeExetTab = function() {
           <hr>
 
           <div class="xet-dropdown-item">
+            Add/remove Enums:
+            <div class="xet-dropdown-submenu">
+              <div class="xet-dropdown-subitem"
+                  title="Add length enumerations such as (4,3) to all clues"
+                  onclick="exet.addAllEnums()">
+                Add enums to all clues
+              </div>
+              <div class="xet-dropdown-subitem"
+                  title="Remove length enumerations from all clue texts"
+                  onclick="exet.removeAllEnums()">
+                Remove enums from all clues
+              </div>
+            </div>
+          </div>
+
+          <div class="xet-dropdown-item">
             Add/edit special sections:
             <div class="xet-dropdown-submenu">
               <div class="xet-dropdown-subitem" id="xet-edit-preamble"
@@ -1502,7 +1518,8 @@ Exet.prototype.makeExetTab = function() {
               </div>
             </div>
           </div>
-          <div class="xet-dropdown-item" onclick="exet.copyAllCluesAndAnswers()">
+          <div class="xet-dropdown-item" id="xet-copy-all-clues"
+              onclick="exet.copyAllCluesAndAnswers('xet-copy-all-clues')">
             Copy all clues and answers &#128203;
           </div>
           <hr>
@@ -4904,29 +4921,174 @@ Exet.prototype.downloadIPuz = function() {
   exetModals.hide()
 }
 
-Exet.prototype.copyAllCluesAndAnswers = function() {
+Exet.prototype.plainTextFromHtml = function(html) {
+  if (!html) {
+    return '';
+  }
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
+}
+
+Exet.prototype.plainClueSolution = function(ci) {
+  if (!this.puz) {
+    return '';
+  }
+  const theClue = this.puz.clues[ci];
+  if (!theClue) {
+    return '';
+  }
+  this.puz.setClueSolution(ci);
+  if (theClue.solution) {
+    return this.plainTextFromHtml(theClue.solution);
+  }
+  const solutions = this.puz.getClueSolutionsWithAlts(ci);
+  if (!solutions || solutions.length == 0) {
+    return '';
+  }
+  return solutions.map((sg) =>
+      this.puz.punctuateEntry(sg.solution, theClue.placeholder)).join(', ');
+}
+
+Exet.prototype.flashMenuCopied = function(menuItemId, count) {
+  const item = menuItemId ? document.getElementById(menuItemId) : null;
+  if (!item) {
+    return;
+  }
+  if (!item.dataset.xetOrigHtml) {
+    item.dataset.xetOrigHtml = item.innerHTML;
+  }
+  item.innerHTML = 'Copied!';
+  item.classList.add('xet-menu-copied');
+  clearTimeout(item.xetCopiedTimer);
+  item.xetCopiedTimer = setTimeout(() => {
+    item.innerHTML = item.dataset.xetOrigHtml;
+    item.classList.remove('xet-menu-copied');
+  }, 1500);
+  if (count != null) {
+    item.title = 'Copied ' + count + ' clues to clipboard';
+  }
+}
+
+Exet.prototype.copyTextToClipboard = function(text, menuItemId, count=null) {
+  const done = (ok) => {
+    exetModals.hide();
+    if (ok) {
+      this.flashMenuCopied(menuItemId, count);
+      return;
+    }
+    window.prompt('Copy manually:', text);
+  };
+  const execCopy = () => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, ta.value.length);
+    let ok = false;
+    try {
+      ok = document.execCommand('copy');
+    } catch (e) {
+      ok = false;
+    }
+    document.body.removeChild(ta);
+    return ok;
+  };
+  let writeText = null;
+  try {
+    writeText = navigator.clipboard && navigator.clipboard.writeText;
+  } catch (e) {
+    writeText = null;
+  }
+  if (typeof writeText === 'function') {
+    writeText.call(navigator.clipboard, text).then(() => done(true)).catch(() => {
+      done(execCopy());
+    });
+    return;
+  }
+  done(execCopy());
+}
+
+Exet.prototype.addAllEnums = function() {
+  if (!this.puz) {
+    return;
+  }
+  let changed = false;
+  this.requireEnums = true;
+  for (const ci of this.puz.allClueIndices) {
+    const theClue = this.puz.clues[ci];
+    if (!theClue || theClue.parentClueIndex) {
+      continue;
+    }
+    const before = theClue.clue;
+    if (!this.puz.parseEnum(theClue.clue).enumStr && theClue.enumStr) {
+      theClue.clue = (theClue.clue.trim() + ' ' + theClue.enumStr).trim();
+    }
+    this.maybeAdjustEnum(ci);
+    if (theClue.clue != before) {
+      changed = true;
+    }
+    this.renderClue(theClue);
+  }
+  if (changed) {
+    this.updatePuzzle(exetRevManager.REV_CLUE_CHANGE);
+  }
+  exetModals.hide();
+}
+
+Exet.prototype.removeAllEnums = function() {
+  if (!this.puz) {
+    return;
+  }
+  let changed = false;
+  this.requireEnums = false;
+  for (const ci of this.puz.allClueIndices) {
+    const theClue = this.puz.clues[ci];
+    if (!theClue || theClue.parentClueIndex) {
+      continue;
+    }
+    const parsed = this.puz.parseEnum(theClue.clue);
+    if (parsed.enumStr) {
+      theClue.enumStr = parsed.enumStr;
+      theClue.clue = theClue.clue.substr(0, parsed.afterClue).trim();
+      changed = true;
+    }
+    this.renderClue(theClue);
+  }
+  if (changed) {
+    this.updatePuzzle(exetRevManager.REV_CLUE_CHANGE);
+  }
+  exetModals.hide();
+}
+
+Exet.prototype.copyAllCluesAndAnswers = function(menuItemId='xet-copy-all-clues') {
   if (!this.puz) {
     return;
   }
   const lines = [];
   for (const ci of this.puz.allClueIndices) {
     const theClue = this.puz.clues[ci];
-    if (!theClue || theClue.parentClueIndex || !theClue.clue) {
+    if (!theClue || theClue.parentClueIndex) {
       continue;
     }
-    const clue = theClue.clue.replace(/\s+/g, ' ').trim();
-    const answer = (theClue.solution || '').trim();
-    const anno = (theClue.anno || '').trim();
+    let clue = (theClue.clue || '').replace(/\s+/g, ' ').trim();
+    if (!clue || this.isDraftClue(clue) || clue.startsWith(this.CLUE_NOT_SET)) {
+      continue;
+    }
+    clue = this.puz.formatClue(clue, false, true, false);
+    const answer = this.plainClueSolution(ci);
+    const anno = (theClue.anno || '').replace(/\s+/g, ' ').trim();
     lines.push(clue + ': ' + answer + ': ' + anno);
   }
-  const text = lines.join('\n');
-  navigator.clipboard.writeText(text).then(() => {
+  if (lines.length == 0) {
     exetModals.hide();
-    alert('Copied ' + lines.length + ' clues to clipboard.');
-  }).catch(() => {
-    exetModals.hide();
-    window.prompt('Copy all clues and answers:', text);
-  });
+    alert('No clues to copy.');
+    return;
+  }
+  this.copyTextToClipboard(lines.join('\n'), menuItemId, lines.length);
 }
 
 /**

@@ -19,6 +19,7 @@ from backend import puzzle_git
 from backend.puzzle_git import PuzzleGitError
 from backend.db import connect, get_meta
 from backend.lexicon_lookup import get_anagrams, get_fill_choices
+from backend.superset_anagrams import get_superset_anagrams
 from backend.multiword_anagrams import get_multiword_anagrams
 from backend.prior_clues_lookup import answer_key, parse_meta
 from backend.wordnet_lookup import lookup_synonyms
@@ -191,6 +192,34 @@ def lexicon_multiword_anagrams(
         k=k,
         limit=limit,
         seq_ok=seq_ok,
+    )
+    return {
+        "lexicon": dict(lex),
+        "query": q,
+        "count": len(results),
+        "results": results,
+    }
+
+
+@app.get("/api/lexicons/{lexicon_ref}/superset-anagrams")
+def lexicon_superset_anagrams(
+    lexicon_ref: str,
+    db: DbDep,
+    q: str = Query(
+        ..., min_length=1, description="Letters or phrase for anagrammed deletions"
+    ),
+    limit: int = Query(1000, ge=0, le=5000),
+    minus_limit: int = Query(6, ge=0, le=100),
+    max_sup_factor: int = Query(2, ge=1, le=4),
+):
+    lex = _resolve_lexicon(db, lexicon_ref)
+    results = get_superset_anagrams(
+        db,
+        lex["id"],
+        q,
+        limit=limit,
+        minus_limit=minus_limit,
+        max_sup_factor=max_sup_factor,
     )
     return {
         "lexicon": dict(lex),

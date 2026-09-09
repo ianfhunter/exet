@@ -249,6 +249,38 @@ const exetDataServer = (function() {
       return out;
     };
 
+    exetLexicon.getSupersetAnagrams = function(letters, limit, minusLimit, maxSupFactor) {
+      const q = letters.join('');
+      if (!q) {
+        return [];
+      }
+      const params = new URLSearchParams();
+      params.set('q', q);
+      if (limit > 0) {
+        params.set('limit', String(limit));
+      }
+      if (minusLimit > 0) {
+        params.set('minus_limit', String(minusLimit));
+      }
+      if (maxSupFactor > 0) {
+        params.set('max_sup_factor', String(maxSupFactor));
+      }
+      let data;
+      try {
+        data = syncGet('/api/lexicons/' + encodeURIComponent(slug) +
+                       '/superset-anagrams?' + params.toString());
+      } catch (e) {
+        console.warn('Server superset anagram lookup failed:', e);
+        return [];
+      }
+      const out = [];
+      for (const row of (data.results || [])) {
+        const idx = cacheEntry(this, row.form, row.score || 0, false);
+        out.push([idx, row.diff, row.anagrams || []]);
+      }
+      return out;
+    };
+
     exetLexicon.scoresSummary = {min: 0, max: 100};
     console.log('Lexicon served from SQLite API:', slug);
   }
