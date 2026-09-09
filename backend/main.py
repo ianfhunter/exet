@@ -19,6 +19,7 @@ from backend import puzzle_git
 from backend.puzzle_git import PuzzleGitError
 from backend.db import connect, get_meta
 from backend.lexicon_lookup import get_anagrams, get_fill_choices
+from backend.multiword_anagrams import get_multiword_anagrams
 from backend.prior_clues_lookup import answer_key, parse_meta
 from backend.wordnet_lookup import lookup_synonyms
 
@@ -170,6 +171,32 @@ def lexicon_anagrams(
         "query": q,
         "count": len(results),
         "anagrams": results,
+    }
+
+
+@app.get("/api/lexicons/{lexicon_ref}/multiword-anagrams")
+def lexicon_multiword_anagrams(
+    lexicon_ref: str,
+    db: DbDep,
+    q: str = Query(..., min_length=1, description="Letters or phrase to anagram"),
+    k: int = Query(2, ge=2, le=4, description="Max words in the anagram"),
+    limit: int = Query(200, ge=0, le=2000),
+    seq_ok: bool = Query(True, description="Allow words that are runs of the fodder"),
+):
+    lex = _resolve_lexicon(db, lexicon_ref)
+    results = get_multiword_anagrams(
+        db,
+        lex["id"],
+        q,
+        k=k,
+        limit=limit,
+        seq_ok=seq_ok,
+    )
+    return {
+        "lexicon": dict(lex),
+        "query": q,
+        "count": len(results),
+        "results": results,
     }
 
 

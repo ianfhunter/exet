@@ -193,7 +193,6 @@ const exetDataServer = (function() {
       if (limit > 0) {
         params.set('limit', String(limit));
       }
-      params.set('min_score', String(minScoreParam()));
       let data;
       try {
         data = syncGet('/api/lexicons/' + encodeURIComponent(slug) +
@@ -212,6 +211,40 @@ const exetDataServer = (function() {
         if (limit > 0 && out.length >= limit) {
           break;
         }
+      }
+      return out;
+    };
+
+    /**
+     * exet-lexicon.js builds multi-word anagrams from slkIndex, an index over
+     * the in-memory lexicon. There is no in-memory lexicon here, so that index
+     * is empty and the search finds nothing. Ask the server instead.
+     */
+    exetLexicon.getAnagramsK = function(letters, limit, k, seqOK) {
+      const q = letters.join('');
+      if (!q || k < 2) {
+        return [];
+      }
+      const params = new URLSearchParams();
+      params.set('q', q);
+      params.set('k', String(k));
+      if (limit > 0) {
+        params.set('limit', String(limit));
+      }
+      if (!seqOK) {
+        params.set('seq_ok', 'false');
+      }
+      let data;
+      try {
+        data = syncGet('/api/lexicons/' + encodeURIComponent(slug) +
+                       '/multiword-anagrams?' + params.toString());
+      } catch (e) {
+        console.warn('Server multi-word anagram lookup failed:', e);
+        return [];
+      }
+      const out = [];
+      for (const row of (data.results || [])) {
+        out.push(row.phrase);
       }
       return out;
     };
