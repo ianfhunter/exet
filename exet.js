@@ -2822,9 +2822,21 @@ Exet.prototype.makeThemeTab = function() {
       </label>`;
   }
 
+  /**
+   * navigator.gpu is [SecureContext], so WebGPU is missing entirely over
+   * plain http, however capable the browser is. Say so up front rather than
+   * letting the user fill the form in and hit a failure on Generate.
+   */
+  const insecureHtml = window.isSecureContext ? '' : `
+        <div class="xet-theme-insecure">
+          <b>Theme generation is unavailable over plain HTTP.</b>
+          WebGPU is only exposed in a secure context, so open this page over
+          <code>https://</code> (or localhost) and reload.
+        </div>`;
+
   themeTab.content.innerHTML = `
     <div class="xet-theme-tab">
-      <div class="xet-theme-controls">
+      <div class="xet-theme-controls">${insecureHtml}
         <div class="xet-theme-row">
           <label for="xet-theme-input"><b>Theme</b> (up to 100 chars):</label><br>
           <input id="xet-theme-input" class="xlv-answer" type="text"
@@ -3079,7 +3091,10 @@ Exet.prototype.generateThemeWords = async function() {
 
   if (!(await exetThemeLlm.hasWebGPU())) {
     this.setThemeStatus(
-        'WebGPU is not available in this browser. Try Chrome or Edge.', true);
+        window.isSecureContext ?
+        'WebGPU is not available in this browser. Try Chrome or Edge.' :
+        'WebGPU needs a secure context. Open this page over https:// and reload.',
+        true);
     return;
   }
 

@@ -1841,6 +1841,15 @@ body {
   color: var(--xet-text-muted);
   line-height: 1.4;
 }
+.xet-theme-insecure {
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  background-color: var(--xet-warning-bg);
+  border: 1px solid var(--xet-danger);
+  border-radius: var(--xet-radius);
+  color: var(--xet-danger);
+  line-height: 1.4;
+}
 .xet-theme-results-header {
   display: flex;
   align-items: center;
