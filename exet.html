@@ -97,13 +97,23 @@ exetConfig = {
       id: "alternations",
       display: "Alternations",
       tone: "orange",
-      hover: "Nutrimatic: alternations and reversed alternations",
+      hover: "Nutrimatic: alternations and reversed alternations, split by " +
+             "which letters of the entry spell the answer",
       group: "Hiddens & Variants",
+      layout: "2x2",
       sections: [
-        {url: "https://nutrimatic.org/?q=", maker: 'Nutrimatic-Alternation',
-         title: "Alternations"},
-        {url: "https://nutrimatic.org/?q=", maker: 'Nutrimatic-RevAlternation',
-         title: "Reversed alternations"},
+        {url: "https://nutrimatic.org/?q=", maker: 'Nutrimatic-AlternationEvens',
+         title: "Alternations: evens",
+         hover: "Answer spelled by the even letters of the entry"},
+        {url: "https://nutrimatic.org/?q=", maker: 'Nutrimatic-AlternationOdds',
+         title: "Alternations: odds",
+         hover: "Answer spelled by the odd letters of the entry"},
+        {url: "https://nutrimatic.org/?q=", maker: 'Nutrimatic-RevAlternationEvens',
+         title: "Reversed alternations: evens",
+         hover: "Reversed answer spelled by the even letters of the entry"},
+        {url: "https://nutrimatic.org/?q=", maker: 'Nutrimatic-RevAlternationOdds',
+         title: "Reversed alternations: odds",
+         hover: "Reversed answer spelled by the odd letters of the entry"},
       ]
     },
     {

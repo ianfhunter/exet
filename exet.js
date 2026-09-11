@@ -4634,6 +4634,20 @@ Exet.prototype.populateFrame = function() {
         </tr>
         </table>
         </div>`;
+      } else if (layout == '2x2') {
+        console.assert(tab.sections.length == 4);
+        frameHTML += `<div id="xet-${id}-sections"><table class="xet-sections"><tr>`;
+        frameHTML += '<td class="xet-td">';
+        frameHTML += this.urlSectionHtml(id, tab.sections[0], 0, 'xet-quarter-section');
+        frameHTML += this.urlSectionHtml(id, tab.sections[1], 1, 'xet-quarter-section');
+        frameHTML += '</td><td class="xet-td">';
+        frameHTML += this.urlSectionHtml(id, tab.sections[2], 2, 'xet-quarter-section');
+        frameHTML += this.urlSectionHtml(id, tab.sections[3], 3, 'xet-quarter-section');
+        frameHTML += '</td>';
+        frameHTML += `
+        </tr>
+        </table>
+        </div>`;
       } else {
         console.assert(tab.sections.length <= 2);
         const sectionClass = tab.sections.length > 1 ? 'xet-half-section' : 'xet-section';
@@ -5148,10 +5162,20 @@ Exet.prototype.makeCAParam = function(s) {
   return s.toLowerCase().replace(/\?/g, '');
 }
 
-/** Nutrimatic-specific maker */
-Exet.prototype.nutrAlternationParam = function(s) {
+/**
+ * Nutrimatic pattern for an alternation: the fodder letters sit at every
+ * other position of a longer entry. "lead" is the filler standing before the
+ * first fodder letter, which is what fixes the parity: '' leaves the fodder
+ * on the odd letters of the entry, 'A' pushes it onto the even letters, and
+ * an optional 'A%3F' allows either. The trailing '%3F' makes the last filler
+ * optional, so the entry may end on a fodder letter or one letter later.
+ */
+Exet.prototype.nutrAlternationPattern = function(s, lead, reverse) {
   const sL = exetLexicon.lcLettersOf(s);
-  let out = 'A%3F';
+  if (reverse) {
+    sL.reverse();
+  }
+  let out = lead;
   for (let c of sL) {
     out = out + c + 'A';
   }
@@ -5159,14 +5183,33 @@ Exet.prototype.nutrAlternationParam = function(s) {
 }
 
 /** Nutrimatic-specific maker */
+Exet.prototype.nutrAlternationParam = function(s) {
+  return this.nutrAlternationPattern(s, 'A%3F', false);
+}
+
+/** Nutrimatic-specific maker */
+Exet.prototype.nutrAlternationOddsParam = function(s) {
+  return this.nutrAlternationPattern(s, '', false);
+}
+
+/** Nutrimatic-specific maker */
+Exet.prototype.nutrAlternationEvensParam = function(s) {
+  return this.nutrAlternationPattern(s, 'A', false);
+}
+
+/** Nutrimatic-specific maker */
 Exet.prototype.nutrRevAlternationParam = function(s) {
-  const sL = exetLexicon.lcLettersOf(s);
-  sL.reverse();
-  let out = 'A%3F';
-  for (let c of sL) {
-    out = out + c + 'A';
-  }
-  return out + '%3F';
+  return this.nutrAlternationPattern(s, 'A%3F', true);
+}
+
+/** Nutrimatic-specific maker */
+Exet.prototype.nutrRevAlternationOddsParam = function(s) {
+  return this.nutrAlternationPattern(s, '', true);
+}
+
+/** Nutrimatic-specific maker */
+Exet.prototype.nutrRevAlternationEvensParam = function(s) {
+  return this.nutrAlternationPattern(s, 'A', true);
 }
 
 /** Nutrimatic-specific maker */
@@ -5245,8 +5288,16 @@ Exet.prototype.getNamedMaker = function(name) {
     return this.nutrRevHiddenParam;
   } else if (name == 'Nutrimatic-Alternation') {
     return this.nutrAlternationParam;
+  } else if (name == 'Nutrimatic-AlternationOdds') {
+    return this.nutrAlternationOddsParam;
+  } else if (name == 'Nutrimatic-AlternationEvens') {
+    return this.nutrAlternationEvensParam;
   } else if (name == 'Nutrimatic-RevAlternation') {
     return this.nutrRevAlternationParam;
+  } else if (name == 'Nutrimatic-RevAlternationOdds') {
+    return this.nutrRevAlternationOddsParam;
+  } else if (name == 'Nutrimatic-RevAlternationEvens') {
+    return this.nutrRevAlternationEvensParam;
   } else if (name == 'Nutrimatic-Acrostic') {
     return this.nutrAcrosticParam;
   } else if (name == 'Nutrimatic-Telestich') {
