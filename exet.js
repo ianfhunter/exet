@@ -609,7 +609,7 @@ Exet.prototype.setPuzzle = function(puz) {
         {id: "xet-companag", maker: this.makeCAParam,
          title: "Anagrams, composite/extended anagrams",},
         {id: "xet-anagdel", maker: this.makeCharadeParam,
-         title: "Anagrammed deletions"},
+         title: "Anagrammed deletions", filter: true},
       ],
     },
     {
@@ -3814,6 +3814,23 @@ Exet.prototype.useLongFodder = function(name, section) {
   }
 }
 
+/**
+ * Hides the result rows of a section that do not contain the text typed into
+ * its "Filter:" box. Also called after a re-render, because changing the
+ * fodder rebuilds the rows from scratch while the filter box keeps its text.
+ */
+Exet.prototype.applySectionFilter = function(id) {
+  const section = this.sectionsById ? this.sectionsById[id] : null;
+  if (!section || !section.filterInput || !section.content) {
+    return;
+  }
+  const term = section.filterInput.value.trim().toLowerCase();
+  for (const row of section.content.querySelectorAll('tr')) {
+    row.style.display =
+        (!term || row.textContent.toLowerCase().includes(term)) ? '' : 'none';
+  }
+}
+
 Exet.prototype.maybeTrimLongFodder = function(fodderArr, name) {
   const paramElt = document.getElementById(name + '-param');
   const warningElt = document.getElementById(name + '-warn-long');
@@ -3883,6 +3900,7 @@ Exet.prototype.updateAnagdel = function(fodder) {
   }
   html = html + '</table>';
   this.anagdel.innerHTML = html;
+  this.applySectionFilter('xet-anagdel');
 }
 
 Exet.prototype.updateCharadesPartial = function(work=100, sleep=50) {
@@ -4598,6 +4616,7 @@ Exet.prototype.getTabIds = function() {
 };
 
 Exet.prototype.populateFrame = function() {
+  this.sectionsById = {};
   const tabIds = this.getTabIds();
   const row1Count = Math.ceil(tabIds.length / 2);
   let frameHTML = '<div class="xet-tab-bar">';
@@ -4659,15 +4678,35 @@ Exet.prototype.populateFrame = function() {
           if (section.url) {
             frameHTML += this.urlSectionHtml(id, section, i, sectionClass);
           } else {
+          /**
+           * A filterable section labels its fodder box "Input:" so that it
+           * cannot be mistaken for the "Filter:" box below it. The boxes are
+           * narrowed to leave room for those labels, as a half-width section
+           * is only just wide enough for the unlabelled size-32 box.
+           */
+          const inputLabel = section.filter ?
+              `<label class="xet-param-label"
+                 for="${section.id}-param">Input:</label>` : '';
+          const filterHtml = section.filter ? `
+            <br>
+            <label class="xet-param-label"
+              for="${section.id}-filter">Filter:</label>
+            <input id="${section.id}-filter" class="xlv-answer"
+              size="24" type="text"
+              title="Show only results containing this text. Press <Esc> to clear"
+              placeholder="Filter results as you type">
+            </input>` : '';
           const paramHtml = `
             <br>
+            ${inputLabel}
             <input id="${section.id}-param" class="xlv-answer"
-              size="32" type="text"
+              size="${section.filter ? 24 : 32}" type="text"
               title="Press <Esc> to reset from grid"
               placeholder="Press <Esc> to reset from grid">
             </input>
             <button id="${section.id}-warn-long" class="xlv-small-button" style="display:none"
               title="Fodder too long, trimmed: Click to (or manually) add an exclamation mark at the end to go ahead anyway (can be SLOW and may lock your browser for a while!)"><span class="xlv-red">!</span></button>
+            ${filterHtml}
             `;
           frameHTML += `
             <div ${titleHover}class="xet-bold">${section.title || ''}</div>
@@ -4727,7 +4766,20 @@ Exet.prototype.populateFrame = function() {
               exet.useLongFodder(section.id, section);
             });
           }
+          section.filterInput = document.getElementById(`${section.id}-filter`);
+          if (section.filterInput) {
+            section.filterInput.addEventListener('input', e => {
+              exet.applySectionFilter(section.id);
+            });
+            section.filterInput.addEventListener('keyup', e => {
+              if (e.key == "Escape") {
+                section.filterInput.value = '';
+                exet.applySectionFilter(section.id);
+              }
+            });
+          }
           section.content = document.getElementById(`${section.id}-box`);
+          this.sectionsById[section.id] = section;
           continue;
         }
         section.content = document.getElementById(`xet-${id}-content-${i}`);

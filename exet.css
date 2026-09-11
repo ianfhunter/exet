@@ -332,6 +332,12 @@ body {
   border: 0;
   overflow: auto;
 }
+.xet-param-label {
+  display: inline-block;
+  min-width: 3.4em;
+  font-size: 0.9rem;
+  color: var(--xet-text-muted);
+}
 .xet-draft > td:first-child {
   color: var(--xet-text-muted);
 }
