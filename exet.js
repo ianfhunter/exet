@@ -775,20 +775,7 @@ Exet.prototype.setPuzzle = function(puz) {
     for (let j = 0; j < puz.gridWidth; j++) {
       const gridCell = puz.grid[i][j]
       if (gridCell.isLight && gridCell.solution == '?') {
-        const viablot =
-            document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        viablot.setAttributeNS(
-            null, 'cx', puz.cellLeftPos(j, puz.circleR + puz.GRIDLINE +
-                                           (puz.cellW/2 - puz.circleR)));
-        viablot.setAttributeNS(
-            null, 'cy', puz.cellTopPos(i, puz.circleR + puz.GRIDLINE +
-                                          (puz.cellH/2 - puz.circleR)));
-        viablot.setAttributeNS(null, 'class', 'xlv-cell-circle');
-        viablot.style.fill = 'transparent';
-        viablot.setAttributeNS(null, 'r', puz.circleR * 0.1);
-        gridCell.viablot = viablot;
-        gridCell.cellGroup.appendChild(viablot);
-        viablot.addEventListener('click', puz.cellActivator.bind(puz, i, j));
+        this.makeViablot(i, j);
       } else if (!gridCell.isLight) {
         const border = 4;
         const darkness =
@@ -8572,6 +8559,32 @@ Exet.prototype.updateEnumMismatchMarks = function() {
   }
 }
 
+/**
+ * Creates the viability indicator ("viablot") circle for a light cell.
+ * setPuzzle() only makes these for cells that are empty when the grid is
+ * built, but a filled cell can be cleared later, so updateViablots() may be
+ * the first to need one.
+ */
+Exet.prototype.makeViablot = function(i, j) {
+  const puz = this.puz;
+  const gridCell = puz.grid[i][j];
+  const viablot =
+      document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  viablot.setAttributeNS(
+      null, 'cx', puz.cellLeftPos(j, puz.circleR + puz.GRIDLINE +
+                                     (puz.cellW/2 - puz.circleR)));
+  viablot.setAttributeNS(
+      null, 'cy', puz.cellTopPos(i, puz.circleR + puz.GRIDLINE +
+                                    (puz.cellH/2 - puz.circleR)));
+  viablot.setAttributeNS(null, 'class', 'xlv-cell-circle');
+  viablot.style.fill = 'transparent';
+  viablot.setAttributeNS(null, 'r', puz.circleR * 0.1);
+  gridCell.viablot = viablot;
+  gridCell.cellGroup.appendChild(viablot);
+  viablot.addEventListener('click', puz.cellActivator.bind(puz, i, j));
+  return viablot;
+}
+
 Exet.prototype.updateViablots = function() {
   const fillState = this.fillState;
   let dead = 0;
@@ -8583,7 +8596,7 @@ Exet.prototype.updateViablots = function() {
       }
       const fillStateCell = fillState.grid[i][j];
       const choices = Object.keys(fillStateCell.cChoices);
-      const viablot = gridCell.viablot;
+      const viablot = gridCell.viablot || this.makeViablot(i, j);
       const opacity = dead > 3 ? 0.1 : (dead == 0 ? 0.6 : 0.3);
       viablot.style.fill = (fillStateCell.viability >= 5) ?
         'transparent' :
