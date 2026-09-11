@@ -17,7 +17,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "after odd losses",
@@ -25,7 +26,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "after regular excisions",
@@ -33,7 +35,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "alternate",
@@ -41,7 +44,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "alternate bits of",
@@ -52,7 +56,8 @@
       "categories": [
         "alternate letters"
       ],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "alternate characters",
@@ -60,7 +65,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "alternate letters",
@@ -68,7 +74,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "alternate parts of",
@@ -80,7 +87,8 @@
       ],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": null
     },
     {
       "indicator": "alternately",
@@ -93,7 +101,8 @@
       "categories": [
         "alternate letters"
       ],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "alternating",
@@ -101,7 +110,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "alternating letters",
@@ -109,7 +119,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "alternative",
@@ -117,7 +128,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "alternatively",
@@ -125,7 +137,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "alternatives",
@@ -133,7 +146,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "an even distribution of fruit",
@@ -141,7 +155,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "an occasional",
@@ -149,7 +164,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "appearing alternately",
@@ -157,7 +173,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "appearing intermittently",
@@ -165,7 +182,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "appearing regularly",
@@ -173,7 +191,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "appearing regularly in",
@@ -181,7 +200,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "applied evenly",
@@ -189,7 +209,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "are oddly",
@@ -197,7 +218,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "at intervals",
@@ -207,7 +229,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "at odds",
@@ -215,7 +238,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "at regular intervals",
@@ -223,7 +247,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "bits",
@@ -231,7 +256,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "bits regularly detached",
@@ -239,7 +265,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "bubbling up",
@@ -247,7 +274,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "bypassing the odd",
@@ -255,7 +283,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "changing sides",
@@ -263,7 +292,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "characters",
@@ -271,7 +301,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "characters regularly seen",
@@ -279,7 +310,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "coming up",
@@ -287,7 +319,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "confused x with y",
@@ -295,7 +328,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "consistently",
@@ -303,7 +337,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "crossing out every other letter",
@@ -311,7 +346,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "cut evenly",
@@ -319,7 +355,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "cycling",
@@ -327,7 +364,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "ditching regulars",
@@ -335,7 +373,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "dropping every second",
@@ -344,7 +383,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "dropping odds",
@@ -352,7 +392,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "even",
@@ -361,7 +402,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "even bits of",
@@ -370,7 +412,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "even letters",
@@ -378,7 +421,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "even letters from",
@@ -388,7 +432,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": "even letters"
     },
     {
       "indicator": "even ones",
@@ -396,7 +441,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "even pieces of",
@@ -406,7 +452,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": "even letters"
     },
     {
       "indicator": "evenly",
@@ -416,7 +463,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "evenly applied",
@@ -424,7 +472,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "evens out",
@@ -434,7 +483,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "every alternate",
@@ -442,7 +492,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "every now and again",
@@ -452,7 +503,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": null
     },
     {
       "indicator": "every now and then",
@@ -463,7 +515,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": null
     },
     {
       "indicator": "every other",
@@ -473,7 +526,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "every other character",
@@ -481,7 +535,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "every other element",
@@ -489,7 +544,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "every other letter",
@@ -497,7 +553,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "every other one",
@@ -505,7 +562,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "every other one blocked off",
@@ -513,7 +571,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "every other piece",
@@ -523,7 +582,8 @@
       "categories": [
         "alternate letters"
       ],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "every second",
@@ -534,7 +594,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "every so often",
@@ -544,7 +605,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "exceptionally",
@@ -552,7 +614,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "exchange clothes",
@@ -560,7 +623,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "first and third",
@@ -568,7 +632,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "frequently",
@@ -576,7 +641,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "from time to time",
@@ -585,7 +651,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "getting nothing even",
@@ -593,7 +660,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "getting oddly dismissed",
@@ -601,7 +669,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "going off",
@@ -609,7 +678,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "having a change of heart",
@@ -617,7 +687,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "having a heart transplant",
@@ -625,7 +696,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "having odd cancellations",
@@ -633,7 +705,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "having vanquished the odds",
@@ -641,7 +714,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "ignore the odds",
@@ -650,7 +724,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "ignoring odds",
@@ -658,7 +733,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "ignoring regulars",
@@ -666,7 +742,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "ignoring the odds",
@@ -675,7 +752,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "in a regular fashion",
@@ -683,7 +761,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "in an odd way",
@@ -691,7 +770,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "in odd places",
@@ -699,7 +779,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "in places",
@@ -707,7 +788,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "in regular instalments",
@@ -715,7 +797,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "intermittently",
@@ -724,7 +807,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "irregularly",
@@ -732,7 +816,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "is regularly not available",
@@ -740,7 +825,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "is regularly showing",
@@ -748,7 +834,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "just over half",
@@ -756,7 +843,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "just the regulars",
@@ -764,7 +852,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "lacking",
@@ -772,7 +861,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "leaving every other piece",
@@ -784,7 +874,8 @@
       ],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": null
     },
     {
       "indicator": "lose elements regularly",
@@ -792,7 +883,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "losing regulars",
@@ -800,7 +892,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "making x y",
@@ -808,7 +901,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "mislaying the odds",
@@ -816,7 +910,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "missing every other",
@@ -824,7 +919,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "missing every other letter",
@@ -832,7 +928,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "missing in odd places",
@@ -840,7 +937,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "missing odd",
@@ -848,7 +946,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "most prominently",
@@ -856,7 +955,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "not even",
@@ -865,7 +965,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "not odd",
@@ -873,7 +974,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "not oddly",
@@ -881,7 +983,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "not regularly found",
@@ -889,7 +992,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "nothing even",
@@ -897,7 +1001,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "nothing odd",
@@ -906,7 +1011,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "nothing odd in that",
@@ -914,7 +1020,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "nothing odd there",
@@ -922,7 +1029,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "now and again",
@@ -931,7 +1039,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "now and then",
@@ -941,7 +1050,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "observed regularly",
@@ -949,7 +1059,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "occasional",
@@ -957,7 +1068,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "occasionally",
@@ -967,7 +1079,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "occasionally clipped",
@@ -975,7 +1088,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "occasionally needed",
@@ -983,7 +1097,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "occasionally read",
@@ -991,7 +1106,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "occasionally swiped",
@@ -999,7 +1115,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "occasionally used",
@@ -1007,7 +1124,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "occurring intermittently",
@@ -1015,7 +1133,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "odd",
@@ -1024,7 +1143,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd bits",
@@ -1032,7 +1152,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd bits cut out",
@@ -1040,7 +1161,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "odd bits dropping off",
@@ -1048,7 +1170,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "odd bits of",
@@ -1057,7 +1180,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd characters",
@@ -1065,7 +1189,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd characters in",
@@ -1073,7 +1198,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd couple",
@@ -1081,7 +1207,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd items",
@@ -1089,7 +1216,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd letters",
@@ -1097,7 +1225,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd letters from",
@@ -1107,7 +1236,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd ones",
@@ -1115,7 +1245,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd ones out",
@@ -1123,7 +1254,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "odd ones seen among",
@@ -1131,7 +1263,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd parts",
@@ -1139,7 +1272,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd parts having run away",
@@ -1147,7 +1281,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "odd pieces",
@@ -1155,7 +1290,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd pieces of",
@@ -1165,7 +1301,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": "odd letters"
     },
     {
       "indicator": "odd positions",
@@ -1173,7 +1310,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "oddly",
@@ -1183,7 +1321,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "oddly abandoned",
@@ -1191,7 +1330,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly blanked out",
@@ -1199,7 +1339,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly chosen",
@@ -1209,7 +1350,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": "odd letters"
     },
     {
       "indicator": "oddly cut",
@@ -1217,7 +1359,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly deficient",
@@ -1225,7 +1368,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly disappears",
@@ -1233,7 +1377,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly dismissing",
@@ -1241,7 +1386,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly disregarded",
@@ -1249,7 +1395,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly dropped",
@@ -1257,7 +1404,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly enough",
@@ -1265,7 +1413,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "oddly erased",
@@ -1273,7 +1422,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly going missing",
@@ -1281,7 +1431,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly ignored",
@@ -1289,7 +1440,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly invisible",
@@ -1297,7 +1449,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly lacking",
@@ -1306,7 +1459,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly mislaid",
@@ -1314,7 +1468,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly missed",
@@ -1322,7 +1477,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly missing",
@@ -1330,7 +1486,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly neglected",
@@ -1338,7 +1495,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly overlooked",
@@ -1346,7 +1504,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly prohibited",
@@ -1354,7 +1513,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly rejected",
@@ -1362,7 +1522,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly removed",
@@ -1370,7 +1531,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly shunned",
@@ -1378,7 +1540,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "oddly unavailable",
@@ -1386,7 +1549,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "odds",
@@ -1395,7 +1559,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odds cut",
@@ -1403,7 +1568,8 @@
         "clue-clinic"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "odds dropped",
@@ -1411,7 +1577,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "odds incidental",
@@ -1419,7 +1586,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "odds of",
@@ -1427,7 +1595,8 @@
         "clue-clinic"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "off and on",
@@ -1438,7 +1607,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": null
     },
     {
       "indicator": "on a regular basis",
@@ -1446,7 +1616,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "on and off",
@@ -1455,7 +1626,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "on occasion",
@@ -1463,7 +1635,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "on regular occasions",
@@ -1471,7 +1644,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "only now and then",
@@ -1479,7 +1653,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "option",
@@ -1487,7 +1662,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "parts",
@@ -1495,7 +1671,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "patchy",
@@ -1503,7 +1680,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "periodic",
@@ -1511,7 +1689,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "periodically",
@@ -1521,7 +1700,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "periodically displayed",
@@ -1529,7 +1709,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "periodically visited",
@@ -1537,7 +1718,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "prime bits of",
@@ -1547,7 +1729,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": null
     },
     {
       "indicator": "prime elements",
@@ -1555,7 +1738,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "prime selection from",
@@ -1563,7 +1747,8 @@
         "clue-clinic"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regardless of the odds",
@@ -1571,7 +1756,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "regular",
@@ -1580,7 +1766,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular characters",
@@ -1588,7 +1775,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular chunks of",
@@ -1596,7 +1784,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular expulsions",
@@ -1604,7 +1793,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular helpings of",
@@ -1612,7 +1802,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular intervals",
@@ -1620,7 +1811,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular letters from",
@@ -1628,7 +1820,8 @@
         "clue-clinic"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular losses",
@@ -1636,7 +1829,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular parts",
@@ -1644,7 +1838,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular pieces",
@@ -1652,7 +1847,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular selection",
@@ -1660,7 +1856,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular treatment",
@@ -1668,7 +1865,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regular visits to",
@@ -1676,7 +1874,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly",
@@ -1686,7 +1885,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly absent",
@@ -1694,7 +1894,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly allowed to go out",
@@ -1702,7 +1903,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly apparent",
@@ -1710,7 +1912,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly avoided",
@@ -1718,7 +1921,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly citing",
@@ -1726,7 +1930,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly clipping",
@@ -1734,7 +1939,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly consuming",
@@ -1742,7 +1948,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly culled",
@@ -1750,7 +1957,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly discarded",
@@ -1758,7 +1966,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly dismissed",
@@ -1766,7 +1975,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly displayed",
@@ -1774,7 +1984,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly distributed",
@@ -1782,7 +1993,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly dropped",
@@ -1790,7 +2002,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly drops off",
@@ -1798,7 +2011,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly employed",
@@ -1806,7 +2020,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly exhibited",
@@ -1814,7 +2029,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly exposed",
@@ -1822,7 +2038,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly failed",
@@ -1830,7 +2047,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly featured in",
@@ -1838,7 +2056,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly forgotten",
@@ -1846,7 +2065,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly found",
@@ -1854,7 +2074,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly ignored",
@@ -1866,7 +2087,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": null
     },
     {
       "indicator": "regularly interrupted",
@@ -1874,7 +2096,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly lacking",
@@ -1882,7 +2105,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly logging",
@@ -1890,7 +2114,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly missed",
@@ -1898,7 +2123,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly missing",
@@ -1906,7 +2132,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly needed",
@@ -1914,7 +2141,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly observed",
@@ -1922,7 +2150,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly offers",
@@ -1930,7 +2159,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly picked",
@@ -1938,7 +2168,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly provided",
@@ -1946,7 +2177,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly pruned",
@@ -1954,7 +2186,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly quoted",
@@ -1962,7 +2195,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly removed",
@@ -1970,7 +2204,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly scrapped",
@@ -1978,7 +2213,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly seen",
@@ -1986,7 +2222,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly seen at",
@@ -1994,7 +2231,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly seen in",
@@ -2002,7 +2240,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly selected",
@@ -2010,7 +2249,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly shunned",
@@ -2018,7 +2258,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly spotted",
@@ -2026,7 +2267,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly substituting",
@@ -2034,7 +2276,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly taken",
@@ -2042,7 +2285,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly taking out",
@@ -2050,7 +2294,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly throughout",
@@ -2058,7 +2303,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly use",
@@ -2066,7 +2312,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly used",
@@ -2074,7 +2321,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly visited",
@@ -2082,7 +2330,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly visiting",
@@ -2090,7 +2339,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regularly wiping",
@@ -2098,7 +2348,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regulars",
@@ -2106,7 +2357,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "regulars in",
@@ -2117,7 +2369,8 @@
       "categories": [
         "alternate letters"
       ],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "releases odd items",
@@ -2125,7 +2378,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "removing every other",
@@ -2133,7 +2387,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "rid of odd characters",
@@ -2141,7 +2396,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "rising",
@@ -2149,7 +2405,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "score regularly",
@@ -2157,7 +2414,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "second and fourth",
@@ -2165,7 +2423,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "seconds out",
@@ -2176,7 +2435,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": "odd letters"
     },
     {
       "indicator": "seen intermittently",
@@ -2184,7 +2444,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "seen now and again",
@@ -2192,7 +2453,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "seen regularly",
@@ -2200,7 +2462,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "selected letters",
@@ -2208,7 +2471,8 @@
         "curated-extras"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "selections",
@@ -2216,7 +2480,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "served regularly",
@@ -2224,7 +2489,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "skipping regularly",
@@ -2232,7 +2498,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "spooner's",
@@ -2240,7 +2507,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "starts to change",
@@ -2248,7 +2516,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "strike only odd characters",
@@ -2256,7 +2525,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "suppressing every other",
@@ -2264,7 +2534,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "swapping tops",
@@ -2272,7 +2543,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "taken every so often",
@@ -2280,7 +2552,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "taken regularly",
@@ -2288,7 +2561,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "taking odd selection",
@@ -2296,7 +2570,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "taking regular breaks",
@@ -2304,7 +2579,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "taking turns",
@@ -2312,7 +2588,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "the odd bit",
@@ -2320,7 +2597,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "things",
@@ -2328,7 +2606,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "to be chosen alternately",
@@ -2336,7 +2615,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "to the bottom",
@@ -2344,7 +2624,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "to the top",
@@ -2352,7 +2633,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "took regularly",
@@ -2360,7 +2642,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "torn",
@@ -2368,7 +2651,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "trim the odds",
@@ -2376,7 +2660,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "unconnected characters",
@@ -2384,7 +2669,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "uneven",
@@ -2392,7 +2678,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "uneven bits",
@@ -2400,7 +2687,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "unevenly",
@@ -2408,7 +2696,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "used in alternation",
@@ -2416,7 +2705,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "used regularly",
@@ -2424,7 +2714,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "viewed regularly",
@@ -2432,7 +2723,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "wanting seconds",
@@ -2442,7 +2734,8 @@
       "categories": [],
       "notes": [
         "alternative"
-      ]
+      ],
+      "parity": "odd letters"
     },
     {
       "indicator": "with odd exceptions",
@@ -2450,7 +2743,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "even letters"
     },
     {
       "indicator": "with odd stripes",
@@ -2458,7 +2752,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "with regular absentees",
@@ -2466,7 +2761,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "with regular filleting",
@@ -2474,7 +2770,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "without",
@@ -2482,7 +2779,8 @@
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "without even parts",
@@ -2490,7 +2788,8 @@
         "cryptics-georgeho"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": "odd letters"
     },
     {
       "indicator": "x becoming y",
@@ -2498,7 +2797,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "x to y",
@@ -2506,7 +2806,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "y for x",
@@ -2514,7 +2815,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "y in place of x",
@@ -2522,7 +2824,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     },
     {
       "indicator": "y, not x",
@@ -2530,7 +2833,8 @@
         "cryptipedia"
       ],
       "categories": [],
-      "notes": []
+      "notes": [],
+      "parity": null
     }
   ]
 }

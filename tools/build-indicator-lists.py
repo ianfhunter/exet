@@ -9,6 +9,9 @@ Outputs one set per indicator type under lists/:
 Run from exet/:
   python tools/build-indicator-lists.py          # all types
   python tools/build-indicator-lists.py hidden # one type
+  python tools/build-indicator-lists.py alternation --from-json
+                                        # re-render from the committed json,
+                                        # without scraping the sources again
 """
 
 from __future__ import annotations
@@ -37,6 +40,59 @@ CTX_INSECURE = ssl._create_unverified_context()
 SKIP_WORDS = frozenset(
     "abcdefghijklmnopqrstuvwxyz separator menu scroll".split()
 )
+
+ODD_PARITY = "odd letters"
+EVEN_PARITY = "even letters"
+
+# Which parity an alternation indicator names. "uneven" is tested first so it
+# is not read as the "even" sitting inside it.
+PARITY_NAMES = (
+    (ODD_PARITY, re.compile(r"\bunevenl?y?\b")),
+    (ODD_PARITY, re.compile(r"\bodd(s|ly)?\b")),
+    (ODD_PARITY, re.compile(r"\b(first|1st) (and|,) ?(third|3rd)\b")),
+    (EVEN_PARITY, re.compile(r"\beven(s|ly)?\b")),
+    (EVEN_PARITY, re.compile(r"\bseconds?\b")),
+    (EVEN_PARITY, re.compile(r"\b(second|2nd) (and|,) ?(fourth|4th)\b")),
+)
+
+# Naming a parity is only half the story: an indicator that names letters in
+# order to throw them away leaves the solver holding the other parity, which
+# is why "oddly dropped" and "even letters" both point at the evens.
+PARITY_DROP = re.compile(
+    r"\b("
+    r"abandoned|absent|avoid(ing|ed)?|away|banished|blanked|bypass(ing|ed)?|"
+    r"cancel(led|lation|lations)?|clipp(ed|ing)|culled|cut|deficient|"
+    r"delet(e|ed|ing)|detached|disappear(s|ing|ed)?|discard(ed|ing)?|"
+    r"dismiss(ed|ing)?|disregard(ed|ing)?|ditch(ed|ing)?|drop(s|ped|ping)?|"
+    r"eras(ed|ing)|excis(ed|ion|ions)|exception(s)?|exclud(ed|ing)|"
+    r"expulsion(s)?|filleting|forget|forgetting|forgotten|gone|"
+    r"ignor(e|ed|ing)|invisible|lack(s|ing)?|los(e|es|ing|s|ses|t)|"
+    r"mislaid|mislaying|miss(ed|ing)?|neglected|no|not|nothing|off|"
+    r"omit(ted|ting)?|out|overlooked|prohibited|pruned|regardless|"
+    r"reject(ed|ing)?|releas(e|es|ed)|remov(e|ed|ing)|rid|scrapped|shunned|"
+    r"skip(ped|ping)?|trim|unavailable|vanquished|wanting|wiping|without"
+    r")\b"
+)
+
+
+def parity_of(indicator: str) -> str | None:
+    """Which letters of the fodder an alternation indicator leaves you with.
+
+    Returns None for the many indicators that signal alternation without
+    committing to a parity at all -- the whole "regularly" family, for
+    instance, is used by setters for either.
+    """
+    named = None
+    for label, pattern in PARITY_NAMES:
+        if pattern.search(indicator):
+            named = label
+            break
+    if named is None:
+        return None
+    if PARITY_DROP.search(indicator):
+        return EVEN_PARITY if named == ODD_PARITY else ODD_PARITY
+    return named
+
 
 WORDSUP_PAGES: dict[str, str] = {
     "anagram": "anagram-indicators.php",
@@ -691,25 +747,29 @@ def build_type(cfg: IndicatorType) -> dict[str, dict]:
     return store
 
 
-def write_outputs(cfg: IndicatorType, store: dict[str, dict]) -> int:
+def write_outputs(
+    cfg: IndicatorType, store: dict[str, dict], built: str | None = None
+) -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     base = f"{cfg.slug}-indicators"
     ordered = sorted(store.values(), key=lambda e: e["indicator"])
 
-    serializable = [
-        {
+    serializable = []
+    for e in ordered:
+        item = {
             "indicator": e["indicator"],
             "sources": sorted(e["sources"]),
             "categories": sorted(e["categories"]),
             "notes": sorted(e["notes"]),
         }
-        for e in ordered
-    ]
+        if cfg.slug == "alternation":
+            item["parity"] = parity_of(e["indicator"])
+        serializable.append(item)
 
     meta = {
         "type": cfg.slug,
         "title": cfg.title,
-        "built": date.today().isoformat(),
+        "built": built or date.today().isoformat(),
         "count": len(serializable),
         "sources": sorted({s for e in serializable for s in e["sources"]}),
         "entries": serializable,
@@ -727,13 +787,23 @@ def write_outputs(cfg: IndicatorType, store: dict[str, dict]) -> int:
             for cat in e["categories"]:
                 by_cat[cat].append(e)
 
+    by_parity: dict[str, list[dict]] = defaultdict(list)
+    for e in serializable:
+        if e.get("parity"):
+            by_parity[e["parity"]].append(e)
+
     (OUT_DIR / f"{base}.html").write_text(
-        render_html(cfg, meta, by_cat), encoding="utf-8"
+        render_html(cfg, meta, by_cat, by_parity), encoding="utf-8"
     )
     return len(serializable)
 
 
-def render_html(cfg: IndicatorType, meta: dict, by_cat: dict[str, list[dict]]) -> str:
+def render_html(
+    cfg: IndicatorType,
+    meta: dict,
+    by_cat: dict[str, list[dict]],
+    by_parity: dict[str, list[dict]],
+) -> str:
     count = meta["count"]
     sources = ", ".join(meta["sources"])
 
@@ -742,6 +812,30 @@ def render_html(cfg: IndicatorType, meta: dict, by_cat: dict[str, list[dict]]) -
         return (
             f'<span class="ind" title="Sources: {src}">'
             f"{html_lib.escape(entry['indicator'])}</span>"
+        )
+
+    parity_sections = []
+    for label in (ODD_PARITY, EVEN_PARITY):
+        items = sorted(by_parity.get(label, []), key=lambda e: e["indicator"])
+        if not items:
+            continue
+        chips = "\n".join(chip(e) for e in items)
+        parity_sections.append(
+            f'<section class="cat"><h2>{html_lib.escape(label.title())} '
+            f'<span class="n">({len(items)})</span></h2>'
+            f'<div class="grid">\n{chips}\n</div></section>'
+        )
+    parity_block = ""
+    if parity_sections:
+        parity_block = (
+            '<div id="parity">'
+            '<p class="note">Grouped by the letters you are left holding. An '
+            "indicator that names one parity in order to discard it, such as "
+            "&ldquo;oddly dropped&rdquo;, therefore sits under the other. "
+            "Indicators that signal alternation without fixing a parity, such "
+            "as the &ldquo;regularly&rdquo; family, are listed only under "
+            "<em>All indicators</em>.</p>"
+            f'{"".join(parity_sections)}</div>'
         )
 
     cat_sections = []
@@ -778,6 +872,7 @@ def render_html(cfg: IndicatorType, meta: dict, by_cat: dict[str, list[dict]]) -
   main {{ padding: 12px 16px 32px; }}
   .cat h2 {{ font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }}
   .cat .n {{ color: var(--muted); font-weight: normal; }}
+  .note {{ margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }}
   .grid {{ display: flex; flex-wrap: wrap; gap: 6px; }}
   .ind {{ background: var(--chip); border: 1px solid #d0dcee; border-radius: 4px;
           padding: 3px 8px; font-size: 0.92rem; cursor: default; }}
@@ -797,6 +892,7 @@ def render_html(cfg: IndicatorType, meta: dict, by_cat: dict[str, list[dict]]) -
   <span id="stats">{count} shown</span>
 </div>
 <main>
+  {parity_block}
   {"".join(cat_sections)}
   <section id="all">
     <h2>All indicators <span class="n">({count})</span></h2>
@@ -822,6 +918,11 @@ def render_html(cfg: IndicatorType, meta: dict, by_cat: dict[str, list[dict]]) -
     for (const sec of document.querySelectorAll('.cat')) {{
       sec.style.display = sec.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
     }}
+    const parity = document.getElementById('parity');
+    if (parity) {{
+      parity.style.display =
+          parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }}
   }}
   q.addEventListener('input', apply);
   apply();
@@ -832,8 +933,31 @@ def render_html(cfg: IndicatorType, meta: dict, by_cat: dict[str, list[dict]]) -
 """
 
 
+def load_store(cfg: IndicatorType) -> tuple[dict[str, dict], str]:
+    """Reload a previous build so outputs can be re-rendered without scraping.
+
+    Presentation changes should not have to hit the upstream sites again, nor
+    silently churn the entry set while doing it.
+    """
+    data = json.loads(
+        (OUT_DIR / f"{cfg.slug}-indicators.json").read_text(encoding="utf-8")
+    )
+    store = {
+        e["indicator"]: {
+            "indicator": e["indicator"],
+            "sources": set(e["sources"]),
+            "categories": set(e["categories"]),
+            "notes": set(e["notes"]),
+        }
+        for e in data["entries"]
+    }
+    return store, data["built"]
+
+
 def main(argv: list[str]) -> int:
-    wanted = {a.lower() for a in argv[1:]}
+    args = argv[1:]
+    from_json = "--from-json" in args
+    wanted = {a.lower() for a in args if not a.startswith("-")}
     types = INDICATOR_TYPES
     if wanted:
         types = [t for t in INDICATOR_TYPES if t.slug in wanted]
@@ -844,8 +968,11 @@ def main(argv: list[str]) -> int:
 
     summary: list[tuple[str, int]] = []
     for cfg in types:
-        store = build_type(cfg)
-        n = write_outputs(cfg, store)
+        if from_json:
+            store, built = load_store(cfg)
+        else:
+            store, built = build_type(cfg), None
+        n = write_outputs(cfg, store, built=built)
         summary.append((cfg.slug, n))
 
     print("\n--- Summary ---", flush=True)
