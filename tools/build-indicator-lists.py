@@ -281,7 +281,7 @@ WORDSUP_PAGES: dict[str, str] = {
     "alternation": "sequence-indicators.php",
 }
 
-# Containment list split: container (outer holds inner) vs insertion (inner enters outer).
+# Container list sections: outer holds inner vs inner enters outer.
 OUTER_CONTAINS_INNER_CATS = frozenset(
     {
         "containment",
@@ -299,23 +299,13 @@ INNER_ENTERS_OUTER_CATS = frozenset(
     }
 )
 
-CONTAINMENT_SPLIT_SPECS = (
+CONTAINER_SECTION_SPECS = (
     {
-        "slug": "outer-contains-inner",
         "title": "Outer contains inner indicators",
-        "blurb": (
-            "Container wordplay: the outer letter run holds the inner one "
-            "(around, holding, contains, accepts, …)."
-        ),
         "bucket": "outer",
     },
     {
-        "slug": "inner-enters-outer",
         "title": "Inner enters outer indicators",
-        "blurb": (
-            "Insertion wordplay: the inner letter run goes into the outer one "
-            "(in, into, enters, inside, …)."
-        ),
         "bucket": "inner",
     },
 )
@@ -350,7 +340,7 @@ _OUTER_INDICATOR_RE = re.compile(
 
 
 def containment_buckets(entry: dict) -> set[str]:
-    """Classify a merged containment entry for the split offline lists."""
+    """Classify a merged containment entry as outer-holds-inner and/or inner-enters-outer."""
     cats = {c.lower() for c in entry.get("categories") or []}
     buckets: set[str] = set()
     if cats & OUTER_CONTAINS_INNER_CATS:
@@ -1445,68 +1435,75 @@ def write_outputs(
         render_html(cfg, meta, by_cat, by_parity, by_hiding), encoding="utf-8"
     )
     if cfg.slug == "containment":
-        split_summary = write_containment_splits(store, built=built or meta["built"])
+        split_summary = write_container_list(store, built=built or meta["built"])
     else:
         split_summary = []
     return len(serializable), split_summary
 
 
-def write_containment_splits(
+def write_container_list(
     store: dict[str, dict], *, built: str
 ) -> list[tuple[str, int]]:
-    """Offline lists for container vs insertion wordplay (subset of merged containment)."""
+    """Single offline list: outer-contains-inner and inner-enters-outer as sections."""
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     ordered = sorted(store.values(), key=lambda e: e["indicator"])
-    summary: list[tuple[str, int]] = []
+    by_cat: dict[str, list[dict]] = {}
+    union: dict[str, dict] = {}
 
-    for spec in CONTAINMENT_SPLIT_SPECS:
-        bucket = spec["bucket"]
-        picked = [e for e in ordered if bucket in containment_buckets(e)]
-        serializable = []
-        for e in picked:
-            serializable.append(
-                {
-                    "indicator": e["indicator"],
-                    "sources": sorted(e["sources"]),
-                    "categories": sorted(e["categories"]),
-                    "notes": sorted(e["notes"]),
-                }
-            )
-
-        split_cfg = IndicatorType(
-            slug=spec["slug"],
-            title=spec["title"],
-            blurb=spec["blurb"],
-        )
-        base = f"{spec['slug']}-indicators"
-        meta = {
-            "type": spec["slug"],
-            "title": spec["title"],
-            "built": built,
-            "count": len(serializable),
-            "sources": sorted({s for e in serializable for s in e["sources"]}),
-            "entries": serializable,
+    def serialize(e: dict) -> dict:
+        return {
+            "indicator": e["indicator"],
+            "sources": sorted(e["sources"]),
+            "categories": sorted(e["categories"]),
+            "notes": sorted(e["notes"]),
         }
-        (OUT_DIR / f"{base}.json").write_text(
-            json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8"
-        )
-        (OUT_DIR / f"{base}.txt").write_text(
-            "\n".join(e["indicator"] for e in serializable) + "\n",
-            encoding="utf-8",
-        )
 
-        by_cat: dict[str, list[dict]] = defaultdict(list)
-        for e in serializable:
-            if e["categories"]:
-                for cat in e["categories"]:
-                    by_cat[cat].append(e)
+    for spec in CONTAINER_SECTION_SPECS:
+        picked = [
+            serialize(e)
+            for e in ordered
+            if spec["bucket"] in containment_buckets(e)
+        ]
+        by_cat[spec["title"]] = picked
+        for item in picked:
+            union[item["indicator"]] = item
 
-        (OUT_DIR / f"{base}.html").write_text(
-            render_html(split_cfg, meta, by_cat, {}, {}), encoding="utf-8"
-        )
-        summary.append((spec["slug"], len(serializable)))
+    serializable = sorted(union.values(), key=lambda e: e["indicator"])
+    container_cfg = IndicatorType(
+        slug="container",
+        title="Container indicators",
+        blurb=(
+            "One letter run placed inside another: the outer holds the inner "
+            "(around, holding, …) or the inner enters the outer (in, into, …)."
+        ),
+    )
+    base = "container-indicators"
+    meta = {
+        "type": "container",
+        "title": container_cfg.title,
+        "built": built,
+        "count": len(serializable),
+        "sources": sorted({s for e in serializable for s in e["sources"]}),
+        "entries": serializable,
+    }
+    (OUT_DIR / f"{base}.json").write_text(
+        json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+    (OUT_DIR / f"{base}.txt").write_text(
+        "\n".join(e["indicator"] for e in serializable) + "\n",
+        encoding="utf-8",
+    )
+    (OUT_DIR / f"{base}.html").write_text(
+        render_html(container_cfg, meta, by_cat, {}, {}), encoding="utf-8"
+    )
 
-    return summary
+    for old_slug in ("outer-contains-inner", "inner-enters-outer"):
+        for ext in (".html", ".json", ".txt"):
+            path = OUT_DIR / f"{old_slug}-indicators{ext}"
+            if path.exists():
+                path.unlink()
+
+    return [("container", len(serializable))]
 
 
 def render_html(
@@ -1602,7 +1599,13 @@ def render_html(
 
     cat_sections = []
     category_order = (
-        ANAGRAM_FUNCTIONS if cfg.slug == "anagram" else sorted(by_cat)
+        ANAGRAM_FUNCTIONS
+        if cfg.slug == "anagram"
+        else (
+            [spec["title"] for spec in CONTAINER_SECTION_SPECS]
+            if cfg.slug == "container"
+            else sorted(by_cat)
+        )
     )
     for cat in category_order:
         items = sorted(by_cat[cat], key=lambda e: e["indicator"])
@@ -1635,6 +1638,14 @@ def render_html(
         all_block = ""
     if cfg.slug == "hidden":
         # Each indicator already occurs once in a hiding-direction section.
+        all_block = ""
+    if cfg.slug == "container":
+        category_note = (
+            '<p class="note">Grouped by which letter run the indicator talks about. '
+            "<em>Outer contains inner</em> is container wordplay (around, holding, "
+            "contains, &hellip;). <em>Inner enters outer</em> is insertion (in, into, "
+            "enters, &hellip;). A few indicators belong in both.</p>"
+        )
         all_block = ""
     if all_block:
         nav_items.append(("all", "All indicators", count))
