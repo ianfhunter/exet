@@ -148,6 +148,45 @@ def get_fill_choices(
     return out
 
 
+SCORE_QUANTILE_BUCKETS = 500
+
+
+def score_quantiles_key(lexicon_id: str) -> str:
+    return f"lexicon_score_quantiles:{lexicon_id}"
+
+
+def get_score_quantiles(
+    conn: sqlite3.Connection,
+    lexicon_id: str,
+    buckets: int = SCORE_QUANTILE_BUCKETS,
+) -> list[float]:
+    """Scores at evenly spaced ranks, highest score first.
+
+    Exet's popularity control is a percentile over the whole list, while the
+    lookups here cut on score, so the client needs a rank -> score map to
+    convert between the two.
+    """
+    total = conn.execute(
+        "SELECT COUNT(*) FROM lexicon_entries WHERE lexicon_id = ?", (lexicon_id,)
+    ).fetchone()[0]
+    if not total:
+        return []
+    wanted = sorted({(total - 1) * i // buckets for i in range(buckets + 1)})
+    cursor = conn.execute(
+        "SELECT score FROM lexicon_entries WHERE lexicon_id = ? ORDER BY score DESC",
+        (lexicon_id,),
+    )
+    out: list[float] = []
+    pending = 0
+    for rank, row in enumerate(cursor):
+        while pending < len(wanted) and wanted[pending] == rank:
+            out.append(float(row[0]))
+            pending += 1
+        if pending >= len(wanted):
+            break
+    return out
+
+
 def get_anagrams(
     conn: sqlite3.Connection,
     lexicon_id: str,

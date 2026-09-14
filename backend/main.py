@@ -17,8 +17,13 @@ from pydantic import BaseModel, Field
 from backend.config import DB_PATH, DEFAULT_HOST, DEFAULT_PORT, EXET_DIR
 from backend import puzzle_git
 from backend.puzzle_git import PuzzleGitError
-from backend.db import connect, get_meta
-from backend.lexicon_lookup import get_anagrams, get_fill_choices
+from backend.db import connect, get_meta, set_meta
+from backend.lexicon_lookup import (
+    get_anagrams,
+    get_fill_choices,
+    get_score_quantiles,
+    score_quantiles_key,
+)
 from backend.superset_anagrams import get_superset_anagrams
 from backend.multiword_anagrams import get_multiword_anagrams
 from backend.prior_clues_lookup import answer_key, parse_meta
@@ -91,14 +96,51 @@ def health(db: DbDep):
     }
 
 
+_score_quantiles_memo: dict[str, dict] = {}
+
+
+def _score_quantiles_for(db: sqlite3.Connection, lex: sqlite3.Row) -> list[float]:
+    """Rank -> score map for a lexicon, keyed on its build timestamp.
+
+    Normally written by the build step; computed and persisted on first use for
+    databases built before it existed.
+    """
+    key = score_quantiles_key(lex["id"])
+    built_at = lex["built_at"] or ""
+    cached = _score_quantiles_memo.get(key)
+    if cached is None:
+        raw = get_meta(db, key)
+        if raw:
+            try:
+                cached = json.loads(raw)
+            except ValueError:
+                cached = None
+    if cached and cached.get("built_at") == built_at:
+        _score_quantiles_memo[key] = cached
+        return cached.get("quantiles") or []
+
+    cached = {"built_at": built_at, "quantiles": get_score_quantiles(db, lex["id"])}
+    _score_quantiles_memo[key] = cached
+    try:
+        set_meta(db, key, json.dumps(cached))
+        db.commit()
+    except sqlite3.Error:
+        pass
+    return cached["quantiles"]
+
+
 @app.get("/api/datasets")
 def datasets(db: DbDep):
-    lexicons = [
-        dict(row)
-        for row in db.execute(
-            "SELECT id, slug, display_name, entry_count, built_at FROM lexicons ORDER BY display_name"
-        ).fetchall()
-    ]
+    lexicons = []
+    for row in db.execute(
+        "SELECT id, slug, display_name, entry_count, built_at FROM lexicons ORDER BY display_name"
+    ).fetchall():
+        lex = dict(row)
+        quantiles = _score_quantiles_for(db, row)
+        lex["score_quantiles"] = quantiles
+        lex["score_max"] = quantiles[0] if quantiles else 0.0
+        lex["score_min"] = quantiles[-1] if quantiles else 0.0
+        lexicons.append(lex)
     prior_stats = get_meta(db, "prior_clues_stats")
     wordnet_stats = get_meta(db, "wordnet_stats")
     return {

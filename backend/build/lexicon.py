@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import sqlite3
 import time
 from datetime import datetime, timezone
@@ -9,7 +10,11 @@ from datetime import datetime, timezone
 from backend.build.load_tool import load_tool_module
 from backend.config import EXET_TOOLS_DIR, WORDLISTS_DIR
 from backend.db import set_meta
-from backend.lexicon_lookup import is_proper_noun
+from backend.lexicon_lookup import (
+    get_score_quantiles,
+    is_proper_noun,
+    score_quantiles_key,
+)
 
 
 def build_lexicon(
@@ -124,6 +129,14 @@ def build_lexicon(
             pattern_rows,
         )
     print(f"  pattern index done ({time.time() - t3:.1f}s)", flush=True)
+    conn.commit()
+
+    quantiles = get_score_quantiles(conn, lexicon_id)
+    set_meta(
+        conn,
+        score_quantiles_key(lexicon_id),
+        json.dumps({"built_at": built_at, "quantiles": quantiles}),
+    )
     conn.commit()
 
     stats = {

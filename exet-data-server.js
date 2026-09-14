@@ -91,6 +91,7 @@ const exetDataServer = (function() {
       stemsId: meta.id,
       serverSlug: meta.slug,
       serverEntryCount: meta.entry_count || 1,
+      serverScoreQuantiles: meta.score_quantiles || [],
       serverCache: {
         forms: [''],
         scores: [0],
@@ -291,7 +292,41 @@ const exetDataServer = (function() {
       return out;
     };
 
-    exetLexicon.scoresSummary = {min: 0, max: 100};
+    // The popularity control picks a percentile of the list, but the server
+    // filters on score, so map ranks onto real scores. Without the map we
+    // leave scoresSummary null so the UI falls back to unfiltered popularity
+    // rather than inventing a cutoff that matches nothing.
+    const quantiles = exetLexicon.serverScoreQuantiles || [];
+    if (quantiles.length >= 2) {
+      const buckets = quantiles.length - 1;
+      const lastIndex = Math.max(1, exetLexicon.startLen - 2);
+      exetLexicon.scoresSummary = {min: quantiles[buckets], max: quantiles[0]};
+      exetLexicon.indexToScore = function(index) {
+        const rank = Math.max(0, Math.min(lastIndex, index - 1));
+        return quantiles[Math.round(rank / lastIndex * buckets)];
+      };
+      /** Largest index whose score is still >= score, or 0 if none is. */
+      exetLexicon.scoreToIndex = function(score) {
+        let left = 0;
+        let right = buckets;
+        let found = -1;
+        while (left <= right) {
+          const mid = (left + right) >> 1;
+          if (quantiles[mid] >= score) {
+            found = mid;
+            left = mid + 1;
+          } else {
+            right = mid - 1;
+          }
+        }
+        if (found < 0) {
+          return 0;
+        }
+        return 1 + Math.round(found / buckets * lastIndex);
+      };
+    } else {
+      exetLexicon.scoresSummary = null;
+    }
     console.log('Lexicon served from SQLite API:', slug);
   }
 

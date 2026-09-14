@@ -456,12 +456,9 @@ Exet.prototype.setMinPop = function(m) {
   this.minpop = m;
   this.indexMinPop = Math.max(
       1, Math.floor(exetLexicon.startLen * (100 - m) / 100));
-  if (exetLexicon.serverSlug) {
-    // Server list scores are normalized to the same 0..100 range.
-    this.minscore = m;
-    return;
-  }
-  if (exetLexicon.scoresSummary) {
+  if (exetLexicon.indexToScore) {
+    this.minscore = exetLexicon.indexToScore(this.indexMinPop - 1);
+  } else if (exetLexicon.scoresSummary) {
     this.minscore = exetLexicon.scores[this.indexMinPop - 1];
   }
 }
@@ -474,14 +471,20 @@ Exet.prototype.setMinScore = function(s) {
     s = exetLexicon.scoresSummary.max;
   }
   this.minscore = s;
-  if (exetLexicon.serverSlug) {
-    this.indexMinPop = Math.max(
-        1, Math.floor(exetLexicon.startLen * (100 - s) / 100));
-    this.minpop = s;
-    return;
-  }
   this.indexMinPop = 1 + exetLexicon.scoreToIndex(s);
   this.minpop = 100 * (1 - (this.indexMinPop / exetLexicon.startLen));
+}
+
+/**
+ * A stored cutoff above the current list's top score cannot select anything,
+ * so treat it as stale state and let the caller fall back to minpop.
+ */
+function exetStoredScoreUsable(rev) {
+  return !!exetLexicon.scoresSummary &&
+      rev.hasOwnProperty('lexId') &&
+      rev.hasOwnProperty('minscore') &&
+      exetLexicon.id == rev.lexId &&
+      rev.minscore <= exetLexicon.scoresSummary.max;
 }
 
 Exet.prototype.handleMinLexChange = function(evt) {
@@ -10077,10 +10080,7 @@ function exetFromHistory(exetRev) {
   exet.prefix = exetRev.prefix;
   exet.suffix = exetRev.suffix;
   exetRevManager.retrievePrefUnpref(exetRev);
-  if (exetLexicon.scoresSummary &&
-      exetRev.hasOwnProperty('lexId') &&
-      exetRev.hasOwnProperty('minscore') &&
-      exetLexicon.id == exetRev.lexId) {
+  if (exetStoredScoreUsable(exetRev)) {
     exet.setMinScore(exetRev.minscore);
   } else {
     exet.setMinPop(exetRev.minpop || 0);
@@ -10326,10 +10326,7 @@ function exetLoadFromBytes(buffer, sourceName) {
     if (stored.revs.length > 0) {
       const lastRev = stored.revs[stored.revs.length - 1];
       exetRevManager.retrievePrefUnpref(lastRev);
-      if (exetLexicon.scoresSummary &&
-          lastRev.hasOwnProperty('lexId') &&
-          lastRev.hasOwnProperty('minscore') &&
-          exetLexicon.id == lastRev.lexId) {
+      if (exetStoredScoreUsable(lastRev)) {
         exet.setMinScore(lastRev.minscore);
       } else {
         exet.setMinPop(lastRev.minpop || 0);
