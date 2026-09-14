@@ -10327,18 +10327,7 @@ Exet.prototype.finishSetup = function() {
 }
 
 Exet.prototype.maybeLexiconOptions = function() {
-  if (!exetConfig.hasOwnProperty('lexicons') ||
-      Object.keys(exetConfig.lexicons).length <= 1) {
-    return '';
-  }
-  let html = `
-    <select id="xet-lexicon-select" onchange="exet.changeLexicon()">`;
-  for (const l in exetConfig.lexicons) {
-    html += `
-      <option value="${l}"${(l == exetState.lexicon) ? ' selected' : ''}>${l}</option>`;
-  }
-  html += '\n</select>';
-  return html;
+  return '';
 }
 
 Exet.prototype.lexiconControlsHtml = function() {
@@ -10675,9 +10664,10 @@ function exetLoadLexicon(lexiconName=null) {
     throw "exetConfig has no lexicon names!";
   }
   if (!lexiconName) {
-    lexiconName = exetState.lexicon ?? '';
+    lexiconName = exetConfig.defaultLexicon || exetState.lexicon || '';
     if (!exetConfig.lexicons.hasOwnProperty(lexiconName)) {
-      lexiconName = lexiconNames[0];
+      lexiconName = lexiconNames.includes('ComboList') ?
+          'ComboList' : lexiconNames[0];
     }
   }
   if (typeof exetDataServer !== 'undefined' && exetDataServer.enabled) {
