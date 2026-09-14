@@ -26,8 +26,14 @@ from backend.lexicon_lookup import (
 )
 from backend.superset_anagrams import get_superset_anagrams
 from backend.multiword_anagrams import get_multiword_anagrams
+from backend.lexicon_ext import (
+    get_fill_choices_batch,
+    get_subset_anagrams,
+    search_entries,
+)
 from backend.prior_clues_lookup import answer_key, parse_meta
 from backend.wordnet_lookup import lookup_synonyms
+from backend.words_ninja_proxy import router as words_ninja_router
 
 
 @asynccontextmanager
@@ -51,6 +57,8 @@ app.add_middleware(
     allow_methods=["GET", "HEAD", "OPTIONS", "POST"],
     allow_headers=["*"],
 )
+app.include_router(words_ninja_router)
+
 
 
 def get_db() -> sqlite3.Connection:
@@ -259,6 +267,7 @@ def lexicon_multiword_anagrams(
     k: int = Query(2, ge=2, le=4, description="Max words in the anagram"),
     limit: int = Query(200, ge=0, le=2000),
     seq_ok: bool = Query(True, description="Allow words that are runs of the fodder"),
+    min_score: float = Query(0.0),
 ):
     lex = _resolve_lexicon(db, lexicon_ref)
     results = get_multiword_anagrams(
@@ -268,6 +277,7 @@ def lexicon_multiword_anagrams(
         k=k,
         limit=limit,
         seq_ok=seq_ok,
+        min_score=min_score,
     )
     return {
         "lexicon": dict(lex),
@@ -287,6 +297,7 @@ def lexicon_superset_anagrams(
     limit: int = Query(1000, ge=0, le=5000),
     minus_limit: int = Query(6, ge=0, le=100),
     max_sup_factor: int = Query(2, ge=1, le=4),
+    min_score: float = Query(0.0),
 ):
     lex = _resolve_lexicon(db, lexicon_ref)
     results = get_superset_anagrams(
@@ -296,6 +307,7 @@ def lexicon_superset_anagrams(
         limit=limit,
         minus_limit=minus_limit,
         max_sup_factor=max_sup_factor,
+        min_score=min_score,
     )
     return {
         "lexicon": dict(lex),

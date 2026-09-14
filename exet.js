@@ -2957,6 +2957,139 @@ Exet.prototype.trimUrl = function(url) {
   return url.substr(0, 97) + '...';
 }
 
+
+/* xet-splash-words-ninja-v3 */
+Exet.prototype.shouldPairWordsNinja = function(url) {
+  return /^https?:\/\/(?:www\.)?nutrimatic\.org\//i.test(url || '');
+};
+
+Exet.prototype.wordsNinjaPaneHtml = function(idPrefix, extraClass) {
+  const cls = extraClass ? (' ' + extraClass) : '';
+  return `
+    <div class="xet-ninja-pane" data-ninja-pane="${idPrefix}">
+      <div class="xet-ninja-head">
+        <span class="xet-small xet-url-pair-label">words.ninja</span>
+        <select class="xet-ninja-dict" title="words.ninja dictionary">
+          <option value="12dicts" selected>12dicts</option>
+          <option value="combolist">ComboList</option>
+          <option value="wikipedia">Wikipedia</option>
+        </select>
+        <a href="" target="_blank" id="${idPrefix}-url"
+            class="xet-blue xet-small"></a>
+      </div>
+      <div id="${idPrefix}-box"
+        class="xet-in-tab-scrollable xet-ninja-results${cls}"></div>
+    </div>`;
+};
+
+Exet.prototype.wireWordsNinjaSection = function(section, idPrefix) {
+  section.ninjaBox = document.getElementById(idPrefix + '-box');
+  section.ninjaUrl = document.getElementById(idPrefix + '-url');
+  const pane = section.ninjaBox && section.ninjaBox.closest('.xet-ninja-pane');
+  section.ninjaDict = pane ? pane.querySelector('.xet-ninja-dict') : null;
+  if (section.ninjaDict && !section.ninjaDict.xetWired) {
+    section.ninjaDict.xetWired = true;
+    section.ninjaDict.addEventListener('change', () => {
+      if (section.ninjaBox) {
+        section.ninjaBox.dataset.ninjaLoaded = '';
+      }
+      this.refreshWordsNinjaSection(section, section.param || '');
+    });
+  }
+};
+
+Exet.prototype.refreshWordsNinjaSection = function(section, wordParam) {
+  if (!section || !section.ninjaBox) {
+    return;
+  }
+  const dict = section.ninjaDict ? section.ninjaDict.value : '12dicts';
+  this.loadWordsNinja(section.ninjaBox, wordParam, section.ninjaUrl, dict);
+};
+
+Exet.prototype.wordsNinjaQuery = function(wordParam) {
+  if (!wordParam) {
+    return '';
+  }
+  try {
+    return decodeURIComponent(String(wordParam).replace(/\+/g, ' '));
+  } catch (e) {
+    return String(wordParam);
+  }
+};
+
+Exet.prototype.loadWordsNinja = function(box, wordParam, urlElt, dictionary) {
+  if (!box) {
+    return;
+  }
+  const q = this.wordsNinjaQuery(wordParam);
+  const dict = dictionary || '12dicts';
+  if (box.dataset.ninjaQ === q && box.dataset.ninjaDict === dict &&
+      box.dataset.ninjaLoaded === '1') {
+    return;
+  }
+  box.dataset.ninjaQ = q;
+  box.dataset.ninjaDict = dict;
+  box.dataset.ninjaLoaded = '0';
+  if (urlElt) {
+    urlElt.innerText = '';
+    urlElt.removeAttribute('href');
+  }
+  if (!q) {
+    box.innerHTML = '<div class="xet-ninja-empty">No pattern yet</div>';
+    return;
+  }
+  if (box.ninjaAbort) {
+    box.ninjaAbort.abort();
+  }
+  box.ninjaAbort = new AbortController();
+  box.innerHTML = '<span class="xet-iframe-loading">Loading</span>';
+  const params = new URLSearchParams();
+  params.set('q', q);
+  params.set('dictionary', dict);
+  params.set('limit', '80');
+  const path = '/api/words-ninja/search?' + params.toString();
+  if (urlElt) {
+    urlElt.innerText = this.trimUrl(path);
+    urlElt.href = path;
+  }
+  fetch(path, {signal: box.ninjaAbort.signal})
+    .then((r) => {
+      if (!r.ok) {
+        throw new Error('HTTP ' + r.status);
+      }
+      return r.json();
+    })
+    .then((data) => {
+      box.dataset.ninjaLoaded = '1';
+      if (data.error) {
+        box.innerHTML = '<div class="xet-ninja-empty">' +
+            this.escapeHtml(data.error) + '</div>';
+        return;
+      }
+      const rows = data.results || [];
+      if (rows.length === 0) {
+        box.innerHTML = '<div class="xet-ninja-empty">No matches</div>';
+        return;
+      }
+      let html = '<ol class="xet-ninja-list">';
+      for (const row of rows) {
+        html += '<li><span class="xet-ninja-text">' +
+            this.escapeHtml(row.text || '') + '</span></li>';
+      }
+      html += '</ol>';
+      if (data.computation_limit_reached) {
+        html += '<div class="xet-ninja-note">Search budget reached</div>';
+      }
+      box.innerHTML = html;
+    })
+    .catch((e) => {
+      if (e && e.name === 'AbortError') {
+        return;
+      }
+      box.innerHTML = '<div class="xet-ninja-empty">words.ninja unavailable</div>';
+    });
+};
+
 Exet.prototype.loadIframe = function(iframe, url, urlElt) {
   const trimmedUrl = this.trimUrl(url);
   urlElt.innerText = trimmedUrl;
@@ -3569,12 +3702,20 @@ Exet.prototype.makeWebFillsPanel = function() {
   `;
   for (const wf of webFills) {
     names.push(wf.name);
+    const pairNinja = this.shouldPairWordsNinja(wf.url);
     html += `
       <div id="xet-web-fill-${wf.id}-frame" style="display:none">
+        ${pairNinja ? '<div class="xet-url-pair">' : ''}
+        <div class="${pairNinja ? 'xet-url-pair-col' : ''}">
+        ${pairNinja ? '<div class="xet-small xet-url-pair-label">Nutrimatic</div>' : ''}
         <a href="" target="_blank" id="xet-web-fill-${wf.id}-url"
           class="xet-blue xet-small"></a><br>
         <iframe class="xet-web-fills-iframe" id="xet-web-fill-${wf.id}-content">
         </iframe>
+        </div>
+        ${pairNinja ? '<div class="xet-url-pair-col">' +
+          this.wordsNinjaPaneHtml('xet-web-fill-' + wf.id + '-ninja', 'xet-web-fills-ninja') +
+          '</div></div>' : ''}
       </div>
     `;
   }
@@ -3590,6 +3731,7 @@ Exet.prototype.makeWebFillsPanel = function() {
     wf.frame = document.getElementById(`xet-web-fill-${wf.id}-frame`)
     wf.content = document.getElementById(`xet-web-fill-${wf.id}-content`)
     wf.urldisp = document.getElementById(`xet-web-fill-${wf.id}-url`)
+    this.wireWordsNinjaSection(wf, `xet-web-fill-${wf.id}-ninja`);
     if (typeof wf.maker == 'string') {
       wf.maker = this.getNamedMaker(wf.maker);
     }
@@ -3618,6 +3760,7 @@ Exet.prototype.webFillsMenuSelect = function() {
     wf.param = wordParam;
     const url = wf.url + wordParam;
     this.loadIframe(wf.content, url, wf.urldisp);
+    this.refreshWordsNinjaSection(wf, wordParam);
   }
 }
 
@@ -4812,12 +4955,26 @@ Exet.prototype.populateCompanag = function() {
 
 Exet.prototype.urlSectionHtml = function(id, section, i, sectionClass) {
   const titleHover = section.hover ? `title="${section.hover} "` : '';
-  return `
-    <div ${titleHover}class="xet-bold">${section.title || ''}</div>
+  const title = `
+    <div ${titleHover}class="xet-bold">${section.title || ''}</div>`;
+  const nutri = `
     <a href="" target="_blank" id="xet-${id}-url-${i}"
         class="xet-blue xet-small"></a><br>
     <iframe class="xet-iframe ${sectionClass}" id="xet-${id}-content-${i}">
     </iframe>`;
+  if (!this.shouldPairWordsNinja(section.url)) {
+    return title + nutri;
+  }
+  return title + `
+    <div class="xet-url-pair">
+      <div class="xet-url-pair-col">
+        <div class="xet-small xet-url-pair-label">Nutrimatic</div>
+        ${nutri}
+      </div>
+      <div class="xet-url-pair-col">
+        ${this.wordsNinjaPaneHtml('xet-' + id + '-ninja-' + i, sectionClass)}
+      </div>
+    </div>`;
 }
 
 Exet.prototype.getTabIds = function() {
@@ -4848,6 +5005,9 @@ Exet.prototype.populateFrame = function() {
   for (const id in this.tabs) {
     const tab = this.tabs[id];
     frameHTML += `<div class="xet-tab-content" id="xet-${id}-frame">`;
+    if (this.tabHasNutrimaticWordBox(tab)) {
+      frameHTML += this.nutrimaticWordBoxHtml(id);
+    }
     if (tab.sections.length > 0) {
       const layout = tab.layout || (tab.sections.length > 1 ? '2col' : '1col');
       if (layout == '1+2') {
@@ -4957,6 +5117,7 @@ Exet.prototype.populateFrame = function() {
     const handler = this.handleTabClick.bind(this, id);
     tab.button.addEventListener('click', handler);
     tab.frame = document.getElementById(`xet-${id}-frame`);
+    this.wireNutrimaticWordBox(tab, id);
     if (tab.sections.length > 0) {
       for (let i = 0; i < tab.sections.length; i++) {
         const section = tab.sections[i];
@@ -4994,6 +5155,7 @@ Exet.prototype.populateFrame = function() {
         }
         section.content = document.getElementById(`xet-${id}-content-${i}`);
         section.urldisp = document.getElementById(`xet-${id}-url-${i}`);
+        this.wireWordsNinjaSection(section, `xet-${id}-ninja-${i}`);
       }
     } else {
       tab.content = document.getElementById(`xet-${id}-content`);
@@ -5610,7 +5772,82 @@ Exet.prototype.draftClue = function(ci) {
   return ret;
 }
 
+
+Exet.prototype.tabHasNutrimaticWordBox = function(tab) {
+  return !!(tab && tab.sections && tab.sections.some((section) =>
+      section.url && /^https?:\/\/(?:www\.)?nutrimatic\.org\//i.test(section.url)));
+};
+
+Exet.prototype.nutrimaticWordBoxHtml = function(id) {
+  return `
+    <div class="xet-nutri-word-row">
+      <label class="xet-param-label" for="xet-${id}-word">Word:</label>
+      <input id="xet-${id}-word" class="xlv-answer xet-nutri-word"
+        size="24" type="text" autocomplete="off" spellcheck="false"
+        title="Plain word. Converted to Nutrimatic syntax for each pane. Esc resets from the grid."
+        placeholder="Type a word">
+    </div>`;
+};
+
+Exet.prototype.wireNutrimaticWordBox = function(tab, id) {
+  tab.wordInput = document.getElementById(`xet-${id}-word`);
+  if (!tab.wordInput || tab.wordInput.xetWired) {
+    return;
+  }
+  tab.wordInput.xetWired = true;
+  tab.wordInput.addEventListener('input', () => {
+    this.scheduleNutrimaticWord(id);
+  });
+  tab.wordInput.addEventListener('keydown', (e) => {
+    if (e.key == 'Enter') {
+      e.preventDefault();
+      this.flushNutrimaticWord(id);
+    } else if (e.key == 'Escape') {
+      this.restoreNutrimaticWord(id);
+    }
+  });
+};
+
+Exet.prototype.scheduleNutrimaticWord = function(id) {
+  const tab = this.tabs[id];
+  if (!tab) {
+    return;
+  }
+  clearTimeout(tab.nutriWordTimer);
+  tab.nutriWordTimer = setTimeout(() => {
+    this.flushNutrimaticWord(id);
+  }, 400);
+};
+
+Exet.prototype.flushNutrimaticWord = function(id) {
+  const tab = this.tabs[id];
+  if (tab) {
+    clearTimeout(tab.nutriWordTimer);
+  }
+  this.handleTabClick(id);
+};
+
+Exet.prototype.restoreNutrimaticWord = function(id) {
+  const tab = this.tabs[id];
+  if (!tab || !tab.wordInput) {
+    return;
+  }
+  tab.wordInput.value = tab.gridWord || '';
+  this.flushNutrimaticWord(id);
+};
+
+Exet.prototype.syncNutrimaticWord = function(tab, words) {
+  const gridWord = this.makeWordParam(words || '');
+  if (tab.gridWord !== gridWord) {
+    tab.gridWord = gridWord;
+    tab.wordInput.value = gridWord;
+  }
+  return tab.wordInput.value;
+};
+
+/* xet-splash-nutri-word-v1 */
 Exet.prototype.handleTabClick = function(id) {
+
   const tab = this.tabs[id];
   if (!tab) {
     return;
@@ -5649,6 +5886,9 @@ Exet.prototype.handleTabClick = function(id) {
     this.updateAnalysis(this.analysisPanel);
     return;
   }
+  if (tab.wordInput) {
+    words = this.syncNutrimaticWord(tab, words);
+  }
   for (let i = 0; i < tab.sections.length; i++) {
     let section = tab.sections[i]
     let wordParam = section.maker ? section.maker.call(this, words) :
@@ -5658,6 +5898,7 @@ Exet.prototype.handleTabClick = function(id) {
         section.param = wordParam;
         const url = section.url + wordParam;
         this.loadIframe(section.content, url, section.urldisp);
+        this.refreshWordsNinjaSection(section, wordParam);
       }
       continue;
     }
@@ -6242,6 +6483,23 @@ Exet.prototype.resizeRHS = function() {
       width: ${nutriHalfSectionW}px;
       height: ${nutriQuarterSectionH}px;
       zoom: ${nutriZoom};
+    }
+    .xet-url-pair .xet-iframe.xet-section,
+    .xet-url-pair .xet-ninja-results.xet-section {
+      width: ${Math.floor((sectionW - 8) / 2)}px;
+    }
+    .xet-url-pair .xet-iframe.xet-half-section,
+    .xet-url-pair .xet-iframe.xet-quarter-section,
+    .xet-url-pair .xet-ninja-results.xet-half-section,
+    .xet-url-pair .xet-ninja-results.xet-quarter-section {
+      width: ${Math.floor((halfSectionW - 8) / 2)}px;
+    }
+    .xet-url-pair .xet-nutrimatic-iframe.xet-section {
+      width: ${Math.floor((sectionW - 8) / 2 / nutriZoom)}px;
+    }
+    .xet-url-pair .xet-nutrimatic-iframe.xet-half-section,
+    .xet-url-pair .xet-nutrimatic-iframe.xet-quarter-section {
+      width: ${Math.floor((halfSectionW - 8) / 2 / nutriZoom)}px;
     }
     .xet-frame {
       width: ${frameW}px;

@@ -1882,3 +1882,67 @@ body {
   color: var(--xet-green-fg, #155724);
   font-weight: bold;
 }
+.xet-url-pair {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.xet-url-pair-col {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+.xet-url-pair-label {
+  color: var(--xet-text-muted);
+  font-weight: bold;
+}
+.xet-ninja-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+  min-height: 30px;
+}
+.xet-ninja-dict {
+  font-size: 11px;
+}
+.xet-ninja-results {
+  border: 1px solid var(--xet-border);
+  box-sizing: border-box;
+  min-height: 120px;
+  padding: 2px 6px;
+}
+/* The modal's panes are sized in fixed pixels, so halve those directly. */
+.xet-web-fills-panel .xet-url-pair .xet-web-fills-iframe {
+  width: 420px;
+}
+.xet-web-fills-panel .xet-url-pair .xet-web-fills-iframe.xet-nutrimatic-iframe {
+  width: 560px;
+}
+.xet-ninja-results.xet-web-fills-ninja {
+  width: 420px;
+  height: 440px;
+  max-height: 440px;
+}
+.xet-ninja-list {
+  margin: 0;
+  padding-left: 1.6em;
+  font-size: 12px;
+  line-height: 1.35;
+}
+.xet-ninja-empty,
+.xet-ninja-note {
+  color: var(--xet-text-muted);
+  font-size: 12px;
+  font-style: italic;
+}
+/* xet-splash-words-ninja-v3 */
+.xet-nutri-word-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 8px;
+}
+.xet-nutri-word {
+  max-width: 16em;
+}
+/* xet-splash-nutri-word-v1 */

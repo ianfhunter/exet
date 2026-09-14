@@ -17,6 +17,17 @@ const exetDataServer = (function() {
 
   // Compatibility path for tools whose public API is still synchronous.
   // Grid-fill and autofill never call this: they use exet-fill-worker.js.
+  function syncPost(path, body) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', path, false);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(body || {}));
+    if (xhr.status < 200 || xhr.status >= 300) {
+      throw new Error('POST ' + path + ' -> ' + xhr.status);
+    }
+    return JSON.parse(xhr.responseText || '{}');
+  }
+
   function syncGet(path) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', baseUrl() + path, false);
@@ -194,6 +205,117 @@ const exetDataServer = (function() {
       return out;
     };
 
+    exetLexicon.getLexChoicesBatch = function(requests, shared) {
+      // requests: [{pattern, limit, tryRev, key}]
+      // shared: {noProperNouns, minScore}
+      shared = shared || {};
+      const patterns = [];
+      const meta = [];
+      let maxLimit = 0;
+      let anyRev = false;
+      for (const req of requests) {
+        const key = this.lexkey(req.partialSol || req.pattern || '');
+        if (!key.length) {
+          meta.push(null);
+          continue;
+        }
+        const pattern = key.join('');
+        patterns.push(pattern);
+        meta.push({pattern: pattern, req: req});
+        if ((req.limit || 0) > maxLimit) maxLimit = req.limit;
+        if (req.tryRev) anyRev = true;
+      }
+      if (!patterns.length) {
+        return requests.map(() => []);
+      }
+      const body = {
+        patterns: patterns,
+        limit_per: maxLimit > 0 ? maxLimit : 200,
+        min_score: shared.minScore != null ? shared.minScore : minScoreParam(),
+        no_proper_nouns: !!shared.noProperNouns,
+        try_rev: !!anyRev,
+      };
+      let data;
+      try {
+        data = syncPost('/api/lexicons/' + encodeURIComponent(slug) +
+                        '/fill-batch', body);
+      } catch (e) {
+        console.warn('Server fill-batch failed:', e);
+        return requests.map(() => []);
+      }
+      const results = data.results || {};
+      const outs = [];
+      let pi = 0;
+      for (const m of meta) {
+        if (!m) {
+          outs.push([]);
+          continue;
+        }
+        const req = m.req;
+        const choices = results[m.pattern] || [];
+        const out = [];
+        const seen = {};
+        const regexp = req.regexp;
+        const dontReuse = req.dontReuse;
+        const unpreflexSet = req.unpreflexSet;
+        const limit = req.limit || 0;
+        for (const ch of choices) {
+          if (regexp && !regexp.test(ch.form)) continue;
+          const idx = cacheEntry(this, ch.form, ch.score, ch.reversed);
+          const loopIdx = ch.reversed ? -idx : idx;
+          if (dontReuse && dontReuse.has(Math.abs(idx))) continue;
+          if (unpreflexSet && unpreflexSet[idx]) continue;
+          if (seen[loopIdx]) continue;
+          seen[loopIdx] = true;
+          out.push(loopIdx);
+          if (limit > 0 && out.length >= limit) break;
+        }
+        outs.push(out);
+        pi++;
+      }
+      return outs;
+    };
+
+    exetLexicon.serverSearch = function(q, opts) {
+      opts = opts || {};
+      const params = new URLSearchParams();
+      params.set('q', q);
+      params.set('mode', opts.mode || 'contains');
+      if (opts.limit > 0) params.set('limit', String(opts.limit));
+      params.set('min_score', String(opts.minScore != null ? opts.minScore : minScoreParam()));
+      if (opts.noProperNouns) params.set('no_proper_nouns', 'true');
+      if (opts.minLen > 0) params.set('min_len', String(opts.minLen));
+      if (opts.maxLen > 0) params.set('max_len', String(opts.maxLen));
+      try {
+        return syncGet('/api/lexicons/' + encodeURIComponent(slug) +
+                       '/search?' + params.toString());
+      } catch (e) {
+        console.warn('Server search failed:', e);
+        return {results: [], count: 0};
+      }
+    };
+
+    exetLexicon.getSubsetAnagramsServer = function(letters, opts) {
+      opts = opts || {};
+      const q = (letters || []).join('');
+      if (!q) return [];
+      const params = new URLSearchParams();
+      params.set('q', q);
+      if (opts.limit > 0) params.set('limit', String(opts.limit));
+      params.set('min_score', String(opts.minScore != null ? opts.minScore : 0));
+      if (opts.minLen > 0) params.set('min_len', String(opts.minLen));
+      if (opts.maxLen > 0) params.set('max_len', String(opts.maxLen));
+      if (opts.noProperNouns) params.set('no_proper_nouns', 'true');
+      try {
+        const data = syncGet('/api/lexicons/' + encodeURIComponent(slug) +
+                             '/subset-anagrams?' + params.toString());
+        return (data.results || []).map(r => r.form);
+      } catch (e) {
+        console.warn('Server subset-anagrams failed:', e);
+        return [];
+      }
+    };
+
     exetLexicon.getAnagrams1 = function(letters, limit, getIndices) {
       const q = letters.join('');
       if (!q) {
@@ -363,5 +485,6 @@ const exetDataServer = (function() {
     fetchPriorClues: fetchPriorClues,
     fetchSynonyms: fetchSynonyms,
     syncGet: syncGet,
+    syncPost: syncPost,
   };
 })();

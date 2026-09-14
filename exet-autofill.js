@@ -393,6 +393,72 @@ ExetFillState.prototype.resetViability = function() {
   this.initViability();
   this.dontReuse = new Set;
   this.preflexUsed = new Set;
+
+  const useBatch = !!(exetLexicon.serverSlug && exetLexicon.getLexChoicesBatch);
+  if (useBatch) {
+    // One server round-trip for all lights (filled + unfilled).
+    const filled = [];
+    const unfilled = [];
+    for (const ci in this.clues) {
+      const theClue = this.clues[ci];
+      if (!theClue.solution) continue;
+      if (theClue.solution.indexOf('?') < 0) {
+        filled.push(ci);
+      } else {
+        unfilled.push(ci);
+      }
+    }
+    const reqs = [];
+    const order = [];
+    for (const ci of filled) {
+      order.push({ci: ci, kind: 'filled'});
+      reqs.push({
+        partialSol: this.clues[ci].solution,
+        limit: 1,
+        tryRev: false,
+        dontReuse: this.dontReuse,
+        unpreflexSet: exet.unpreflexSet,
+        regexp: exet.getLightRegexpC(ci),
+      });
+    }
+    for (const ci of unfilled) {
+      order.push({ci: ci, kind: 'unfilled'});
+      reqs.push({
+        partialSol: this.clues[ci].solution,
+        limit: exet.unfilledChoicesLimit(),
+        tryRev: exet.tryReversals,
+        dontReuse: this.dontReuse,
+        unpreflexSet: exet.unpreflexSet,
+        regexp: exet.getLightRegexpC(ci),
+      });
+    }
+    console.info('Server fill-batch viability', reqs.length, 'lights');
+    const t0 = performance.now();
+    const outs = exetLexicon.getLexChoicesBatch(reqs, {
+      noProperNouns: exet.noProperNouns,
+      minScore: (typeof exet.indexMinPop === 'number') ? exet.indexMinPop : undefined,
+    });
+    console.info('Server fill-batch done',
+                 reqs.length, 'lights in',
+                 (performance.now() - t0).toFixed(1), 'ms');
+    for (let i = 0; i < order.length; i++) {
+      const ci = order[i].ci;
+      const theClue = this.clues[ci];
+      const choices = outs[i] || [];
+      theClue.lChoices = choices;
+      theClue.lRejects = [];
+      if (order[i].kind === 'filled' && choices.length > 0) {
+        const p = choices[0];
+        console.assert(p > 0, p);
+        exet.addToDontReuse(p, this.dontReuse);
+        if (exet.preflexSet[p]) {
+          this.preflexUsed.add(p);
+        }
+      }
+    }
+    return;
+  }
+
   for (const ci in this.clues) {
     const theClue = this.clues[ci];
     if (!theClue.solution || theClue.solution.indexOf('?') >= 0) {
