@@ -574,7 +574,17 @@ Exet.prototype.setPuzzle = function(puz) {
 
   puz.gridInput.addEventListener(
       'keydown', this.handleRebusGridKeyDown.bind(this), true);
-  puz.gridInput.addEventListener('keydown', this.handleKeyDown.bind(this));
+  /**
+   * Frame-level listener so '.' / bars / etc. work while focus is in the
+   * curr-clue strip (still highlights the cell). gridInput events bubble here.
+   */
+  puz.frame.addEventListener('keydown', this.handleKeyDown.bind(this));
+  /**
+   * Mobile soft keyboards often skip keydown for punctuation and only emit
+   * beforeinput/input. Catch '.' (etc.) here before Exolve rejects them.
+   */
+  puz.gridInput.addEventListener(
+      'beforeinput', this.handleGridBeforeInput.bind(this));
   puz.gridInput.addEventListener('input', this.throttledGridInput.bind(this));
 
   const firstFewTabs = [
@@ -7125,21 +7135,94 @@ Exet.prototype.handleRebusGridKeyDown = function(e) {
   this.handleGridInput();
 }
 
+Exet.prototype.handleGridBeforeInput = function(e) {
+  if (!e || !this.puz || !this.puz.currCell()) {
+    return;
+  }
+  // insertText is what soft keyboards use for '.' / bars / etc.
+  if (e.inputType && e.inputType != 'insertText') {
+    return;
+  }
+  const ch = e.data;
+  if (!ch || ch.length != 1) {
+    return;
+  }
+  if (ch != '.' && ch != '|' && ch != '_' && ch != '#' &&
+      ch != '@' && ch != '$' && ch != '^' && ch != '=' &&
+      ch != '!' && ch != '0') {
+    return;
+  }
+  e.preventDefault();
+  e.stopPropagation();
+  this.handleKeyDown(ch);
+}
+
 Exet.prototype.handleKeyDown = function(e) {
   let key = e.key || e;
+  const isEvent = !!(e && typeof e.preventDefault == 'function');
+  const target = isEvent ? e.target : null;
+  const targetId = target && target.id;
+
+  // Period / numpad decimal: prefer e.code so layout quirks still toggle.
+  if (isEvent && (e.code == 'Period' || e.code == 'NumpadDecimal')) {
+    key = '.';
+  }
+
+  const isTypingTarget = (elt) => {
+    if (!elt || elt == this.puz.gridInput) {
+      return false;
+    }
+    const tag = (elt.tagName || '').toUpperCase();
+    return !!(elt.isContentEditable || tag == 'INPUT' || tag == 'TEXTAREA');
+  };
+
   // Prevent the browser from scrolling on Home/End; navigation is handled
-  // on keyup via homeEndNav().
+  // on keyup via homeEndNav(). Leave Home/End alone inside text editors.
   if (key == 'Home' || key == 'End') {
-    if (e && e.preventDefault) {
+    if (isTypingTarget(target)) {
+      return;
+    }
+    if (isEvent) {
       e.preventDefault();
     }
     return;
   }
+
+  /**
+   * While focus is in the draft clue strip, '.' used to insert into the clue
+   * even though the grid cell stayed highlighted. Treat '.' as Toggle block
+   * until the clue is no longer a draft. Other rare grid keys still shortcut.
+   */
+  if (isTypingTarget(target)) {
+    const gridShortcut = (
+        key == '.' || key == '|' || key == '_' || key == '#' ||
+        key == '@' || key == '$' || key == '^' || key == '=' ||
+        key == '!' || key == '0');
+    if (!gridShortcut) {
+      return;
+    }
+    if (key == '.' || key == '0') {
+      if (!(key == '.' && targetId == 'xet-clue' && this.currClueIsDraft)) {
+        return;
+      }
+    } else if (targetId != 'xet-clue' && targetId != 'xet-anno') {
+      return;
+    }
+  }
+
   if (key == '=') {
+    if (isEvent) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     this.acceptAll();
     return;
   }
   if (key == '!') {
+    if (isEvent) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     this.jumpToMostConstrained();
     return;
   }
@@ -7149,9 +7232,17 @@ Exet.prototype.handleKeyDown = function(e) {
   }
 
   if (key == '$') {
+    if (isEvent) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     this.toggleNina(e);
     return;
   } else if (key == '^') {
+    if (isEvent) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     this.toggleColour(e);
     return;
   }
@@ -7177,7 +7268,7 @@ Exet.prototype.handleKeyDown = function(e) {
     }
     this.killInvalidatedClues();
   } else if (key == '|') {
-    if (col >= this.gridWidth - 1) {
+    if (col >= this.puz.gridWidth - 1) {
       return;
     }
     gridCell.hasBarAfter = !gridCell.hasBarAfter;
@@ -7189,7 +7280,7 @@ Exet.prototype.handleKeyDown = function(e) {
     }
     this.killInvalidatedClues();
   } else if (key == '_') {
-    if (row >= this.gridHeight - 1) {
+    if (row >= this.puz.gridHeight - 1) {
       return;
     }
     gridCell.hasBarUnder = !gridCell.hasBarUnder;
@@ -7206,6 +7297,10 @@ Exet.prototype.handleKeyDown = function(e) {
     }
   } else {
     return;
+  }
+  if (isEvent) {
+    e.preventDefault();
+    e.stopPropagation();
   }
   this.updatePuzzle(revType);
 }
