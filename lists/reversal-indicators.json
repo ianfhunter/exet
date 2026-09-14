@@ -2,9 +2,10 @@
   "type": "reversal",
   "title": "Reversal indicators",
   "built": "2026-08-12",
-  "count": 1853,
+  "count": 1854,
   "sources": [
     "clue-clinic",
+    "clue-clinic-lexicon",
     "crossword-unclued",
     "cryptics-georgeho",
     "cryptipedia",
@@ -59,9 +60,12 @@
       "indicator": "aback",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -70,6 +74,7 @@
       "indicator": "about",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -78,7 +83,8 @@
       ],
       "categories": [
         "list of 88 reversal indicators for across and down clues",
-        "most common word reversals"
+        "most common word reversals",
+        "reversal"
       ],
       "notes": []
     },
@@ -542,9 +548,12 @@
       "indicator": "all around",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -722,9 +731,12 @@
       "indicator": "arises",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -733,12 +745,14 @@
       "indicator": "arising",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -754,6 +768,7 @@
       "indicator": "around",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -762,7 +777,8 @@
       ],
       "categories": [
         "list of 88 reversal indicators for across and down clues",
-        "most common word reversals"
+        "most common word reversals",
+        "reversal"
       ],
       "notes": []
     },
@@ -797,12 +813,14 @@
       "indicator": "ascendant",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": [
         "alternative"
@@ -812,6 +830,7 @@
       "indicator": "ascending",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -819,16 +838,20 @@
         "wordsup"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
     {
       "indicator": "ascends",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -885,6 +908,7 @@
       "indicator": "back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -895,7 +919,8 @@
       ],
       "categories": [
         "list of 88 reversal indicators for across and down clues",
-        "most common word reversals"
+        "most common word reversals",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -999,10 +1024,13 @@
       "indicator": "back to front",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -1043,13 +1071,15 @@
       "indicator": "backed",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": [
         "alternative"
@@ -1119,6 +1149,7 @@
       "indicator": "backing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -1126,7 +1157,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -1158,9 +1190,12 @@
       "indicator": "backs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1189,11 +1224,13 @@
       "indicator": "backsliding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -1221,11 +1258,13 @@
       "indicator": "backtracking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -1233,9 +1272,12 @@
       "indicator": "backtracks",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1252,6 +1294,7 @@
       "indicator": "backward",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -1259,7 +1302,8 @@
       ],
       "categories": [
         "list of 88 reversal indicators for across and down clues",
-        "most common word reversals"
+        "most common word reversals",
+        "reversal (a/d)"
       ],
       "notes": [
         "alternative"
@@ -1277,10 +1321,13 @@
       "indicator": "backwards",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1659,10 +1706,12 @@
       "indicator": "boomerangs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -1670,11 +1719,13 @@
       "indicator": "boosted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -1820,12 +1871,15 @@
       "indicator": "brought about",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -1865,12 +1919,15 @@
       "indicator": "brought up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -1966,12 +2023,14 @@
       "indicator": "capsized",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (d)"
       ],
       "notes": [
         "alternative"
@@ -1981,9 +2040,12 @@
       "indicator": "capsizes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1992,11 +2054,13 @@
       "indicator": "capsizing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -2068,10 +2132,13 @@
       "indicator": "cast up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -2169,9 +2236,12 @@
     {
       "indicator": "circulated",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2179,9 +2249,12 @@
     {
       "indicator": "circulates",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2190,9 +2263,12 @@
       "indicator": "circulating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal"
+      ],
       "notes": []
     },
     {
@@ -2223,6 +2299,7 @@
       "indicator": "climbing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -2231,7 +2308,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -2248,9 +2326,12 @@
       "indicator": "climbs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2272,6 +2353,16 @@
       ],
       "categories": [
         "list of 37 reversal indicators for down clues only"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "cocked (up)",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -2349,9 +2440,12 @@
       "indicator": "comes back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2368,9 +2462,12 @@
       "indicator": "comes round",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2379,9 +2476,12 @@
       "indicator": "comes up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2411,11 +2511,14 @@
       "indicator": "coming back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -2470,20 +2573,26 @@
       "indicator": "coming round",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
       "indicator": "coming up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -2645,6 +2754,7 @@
       "indicator": "counter",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -2652,7 +2762,8 @@
       ],
       "categories": [
         "list of 88 reversal indicators for across and down clues",
-        "most common word reversals"
+        "most common word reversals",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -3132,11 +3243,13 @@
       "indicator": "ebbing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -3144,9 +3257,12 @@
       "indicator": "ebbs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3241,11 +3357,13 @@
       "indicator": "erected",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -3407,9 +3525,12 @@
       "indicator": "falling back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -3514,9 +3635,12 @@
       "indicator": "fixed up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -3575,6 +3699,7 @@
       "indicator": "flipped",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -3583,7 +3708,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": [
         "alternative"
@@ -3602,6 +3728,7 @@
       "indicator": "flipping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -3609,7 +3736,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -3625,9 +3753,12 @@
       "indicator": "flips",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3923,9 +4054,12 @@
     {
       "indicator": "from back",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3942,10 +4076,13 @@
       "indicator": "from below",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -4000,26 +4137,33 @@
       "indicator": "from the back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
       "indicator": "from the bottom",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
       "indicator": "from the east",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -4027,7 +4171,9 @@
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a)"
+      ],
       "notes": []
     },
     {
@@ -4050,21 +4196,27 @@
       "indicator": "from the right",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a)"
+      ],
       "notes": []
     },
     {
       "indicator": "from the south",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -4594,9 +4746,12 @@
       "indicator": "goes back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4612,9 +4767,12 @@
     {
       "indicator": "goes north",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4631,9 +4789,12 @@
       "indicator": "goes round",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4642,9 +4803,12 @@
       "indicator": "goes up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4653,9 +4817,12 @@
       "indicator": "goes west",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4680,11 +4847,14 @@
       "indicator": "going back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -4731,13 +4901,16 @@
       "indicator": "going north",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -4768,11 +4941,14 @@
       "indicator": "going round",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -4820,11 +4996,14 @@
       "indicator": "going up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -4839,10 +5018,13 @@
       "indicator": "going uphill",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4859,13 +5041,16 @@
       "indicator": "going west",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "daily-cryptic",
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a)"
+      ],
       "notes": []
     },
     {
@@ -5056,10 +5241,13 @@
       "indicator": "hauled up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -5274,10 +5462,13 @@
       "indicator": "head over heels",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -5402,9 +5593,12 @@
       "indicator": "held back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -5435,11 +5629,14 @@
       "indicator": "held up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -5469,9 +5666,12 @@
     {
       "indicator": "hinges",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5479,21 +5679,26 @@
     {
       "indicator": "hinging",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
       "indicator": "hoisted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -5769,10 +5974,13 @@
       "indicator": "in retrospect",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -5797,11 +6005,14 @@
       "indicator": "in reverse",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -5816,9 +6027,12 @@
       "indicator": "in review",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -5942,9 +6156,12 @@
       "indicator": "inverse",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -5974,11 +6191,13 @@
       "indicator": "inverted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -6242,18 +6461,24 @@
       "indicator": "keeling over",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
       "indicator": "keels over",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -6286,10 +6511,13 @@
       "indicator": "kept back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -6361,9 +6589,12 @@
       "indicator": "knocked back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -6541,9 +6772,12 @@
     {
       "indicator": "lies about",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -6551,9 +6785,12 @@
     {
       "indicator": "lies around",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -6578,6 +6815,7 @@
       "indicator": "lifted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -6587,7 +6825,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -6714,12 +6953,15 @@
       "indicator": "looking back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -6766,11 +7008,14 @@
       "indicator": "looking up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -6793,18 +7038,24 @@
       "indicator": "lying about",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
       "indicator": "lying around",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -6876,9 +7127,12 @@
       "indicator": "making a comeback",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -7021,13 +7275,15 @@
       "indicator": "mounted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
         "list of 88 reversal indicators for across and down clues",
-        "most common word reversals"
+        "most common word reversals",
+        "reversal (d)"
       ],
       "notes": [
         "alternative"
@@ -7037,11 +7293,13 @@
       "indicator": "mounting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -7057,9 +7315,12 @@
       "indicator": "mounts",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -7260,6 +7521,7 @@
       "indicator": "northbound",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -7268,7 +7530,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -7292,10 +7555,13 @@
       "indicator": "northward",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -7383,18 +7649,24 @@
     {
       "indicator": "on head",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
       "indicator": "on its head",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -7427,9 +7699,12 @@
       "indicator": "on reflection",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -7549,18 +7824,24 @@
       "indicator": "on the counter",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
       "indicator": "on the rebound",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -7591,18 +7872,24 @@
       "indicator": "on the turn",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
       "indicator": "on the up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -7761,11 +8048,13 @@
       "indicator": "overthrown",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -7800,6 +8089,7 @@
       "indicator": "overturned",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -7808,7 +8098,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -7816,10 +8107,13 @@
       "indicator": "overturning",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -7833,9 +8127,12 @@
     {
       "indicator": "overturns",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8204,9 +8501,12 @@
     {
       "indicator": "propped up",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -8357,9 +8657,12 @@
       "indicator": "put back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -8398,10 +8701,13 @@
       "indicator": "put up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -8472,6 +8778,7 @@
       "indicator": "raised",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -8479,7 +8786,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -8647,11 +8955,13 @@
       "indicator": "rearing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -8667,9 +8977,12 @@
       "indicator": "rears",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8701,17 +9014,23 @@
     {
       "indicator": "rebounding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
       "indicator": "rebounds",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8720,11 +9039,13 @@
       "indicator": "rebuffed",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal"
       ],
       "notes": []
     },
@@ -8829,20 +9150,25 @@
       "indicator": "receding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
     {
       "indicator": "receives a tip",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8858,9 +9184,12 @@
     {
       "indicator": "receiving a tip",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -9186,11 +9515,13 @@
       "indicator": "regressing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -9198,10 +9529,13 @@
       "indicator": "regressive",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -9525,9 +9859,12 @@
       "indicator": "retires",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -9536,6 +9873,7 @@
       "indicator": "retiring",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -9543,7 +9881,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -9602,9 +9941,12 @@
       "indicator": "retracted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -9650,6 +9992,7 @@
       "indicator": "retreating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -9657,7 +10000,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -9665,9 +10009,12 @@
       "indicator": "retreats",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -9848,12 +10195,15 @@
       "indicator": "returned",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "daily-cryptic",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -9876,13 +10226,15 @@
       "indicator": "returning",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
         "list of 88 reversal indicators for across and down clues",
-        "most common word reversals"
+        "most common word reversals",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -9930,11 +10282,13 @@
       "indicator": "returns",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": [
         "alternative"
@@ -9985,9 +10339,12 @@
     {
       "indicator": "reverse of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -10002,6 +10359,7 @@
       "indicator": "reversed",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -10011,7 +10369,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": [
         "alternative"
@@ -10021,10 +10380,12 @@
       "indicator": "reverses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": [
         "alternative"
@@ -10042,6 +10403,7 @@
       "indicator": "reversing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -10049,7 +10411,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -10209,6 +10572,7 @@
       "indicator": "revolutionary",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -10217,7 +10581,8 @@
       ],
       "categories": [
         "list of 88 reversal indicators for across and down clues",
-        "most common word reversals"
+        "most common word reversals",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -10281,9 +10646,12 @@
     {
       "indicator": "right about",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -10312,9 +10680,12 @@
       "indicator": "rise of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -10337,9 +10708,12 @@
       "indicator": "rises",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -10348,13 +10722,15 @@
       "indicator": "rising",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -10378,19 +10754,24 @@
       "indicator": "rocketing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
     {
       "indicator": "rockets",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -10564,9 +10945,12 @@
       "indicator": "rotated",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -10574,9 +10958,12 @@
     {
       "indicator": "rotates",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -10585,11 +10972,13 @@
       "indicator": "rotating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -10954,13 +11343,16 @@
       "indicator": "sent back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -11007,11 +11399,14 @@
       "indicator": "sent up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -11058,10 +11453,13 @@
       "indicator": "served up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -11116,10 +11514,13 @@
       "indicator": "set back",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -11134,10 +11535,13 @@
       "indicator": "set up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -11268,11 +11672,14 @@
       "indicator": "shown up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -11463,18 +11870,24 @@
     {
       "indicator": "somersaulting",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
       "indicator": "somersaults",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -11603,11 +12016,13 @@
       "indicator": "spinning",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -11631,9 +12046,12 @@
       "indicator": "spins",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -11666,12 +12084,14 @@
       "indicator": "spun",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": [
         "alternative"
@@ -11705,11 +12125,13 @@
       "indicator": "standing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -11733,9 +12155,12 @@
       "indicator": "stands",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -11743,9 +12168,12 @@
     {
       "indicator": "stands up",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -11830,10 +12258,13 @@
       "indicator": "stuck up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -12064,17 +12495,23 @@
       "indicator": "swivelling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
       "indicator": "swivels",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -12118,9 +12555,12 @@
       "indicator": "taken aback",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -12175,10 +12615,13 @@
       "indicator": "taken up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -12545,9 +12988,12 @@
       "indicator": "tipping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -12562,9 +13008,12 @@
       "indicator": "tips",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13405,9 +13854,12 @@
     {
       "indicator": "topsy-turvy",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -13734,6 +14186,7 @@
       "indicator": "turned",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -13744,7 +14197,8 @@
       ],
       "categories": [
         "list of 88 reversal indicators for across and down clues",
-        "most common word reversals"
+        "most common word reversals",
+        "reversal (a/d)"
       ],
       "notes": [
         "alternative"
@@ -13780,10 +14234,13 @@
       "indicator": "turned over",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13832,6 +14289,7 @@
       "indicator": "turning",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -13841,7 +14299,8 @@
       ],
       "categories": [
         "list of 88 reversal indicators for across and down clues",
-        "most common word reversals"
+        "most common word reversals",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -13889,9 +14348,12 @@
       "indicator": "turning over",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
@@ -13914,9 +14376,12 @@
       "indicator": "turning up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -13949,9 +14414,12 @@
     {
       "indicator": "turnover in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13959,22 +14427,27 @@
     {
       "indicator": "turnover of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": []
     },
     {
       "indicator": "turns",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": [
         "alternative"
@@ -14007,9 +14480,12 @@
     {
       "indicator": "turns over",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14018,10 +14494,13 @@
       "indicator": "turns up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14074,12 +14553,14 @@
       "indicator": "twisted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": [
         "alternative"
@@ -14089,11 +14570,13 @@
       "indicator": "twisting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -14109,9 +14592,12 @@
       "indicator": "twists",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14246,9 +14732,12 @@
       "indicator": "upending",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -14263,9 +14752,12 @@
       "indicator": "uphill",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -14292,11 +14784,13 @@
       "indicator": "uplifted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -14368,9 +14862,12 @@
       "indicator": "upped",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14379,9 +14876,12 @@
       "indicator": "upping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal"
+      ],
       "notes": []
     },
     {
@@ -14404,11 +14904,13 @@
       "indicator": "upright",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -14455,9 +14957,12 @@
     {
       "indicator": "ups",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14466,6 +14971,7 @@
       "indicator": "upset",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -14474,7 +14980,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of 37 reversal indicators for down clues only"
+        "list of 37 reversal indicators for down clues only",
+        "reversal (d)"
       ],
       "notes": []
     },
@@ -14538,10 +15045,13 @@
       "indicator": "upside down",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -14598,9 +15108,12 @@
     {
       "indicator": "upturn in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -14635,19 +15148,25 @@
       "indicator": "upwardly mobile",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
       "indicator": "upwards",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14672,10 +15191,13 @@
       "indicator": "used up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {
@@ -14803,13 +15325,16 @@
       "indicator": "westbound",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "curated-extras",
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a)"
+      ],
       "notes": []
     },
     {
@@ -14840,10 +15365,13 @@
       "indicator": "westward",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14852,9 +15380,12 @@
       "indicator": "westwards",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14887,10 +15418,12 @@
       "indicator": "wheeling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -14898,9 +15431,12 @@
       "indicator": "wheels",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -15611,11 +16147,13 @@
       "indicator": "withdrawing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "list of 88 reversal indicators for across and down clues"
+        "list of 88 reversal indicators for across and down clues",
+        "reversal (a/d)"
       ],
       "notes": []
     },
@@ -15623,9 +16161,12 @@
       "indicator": "withdrawn",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -15650,9 +16191,12 @@
       "indicator": "withdraws",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (a/d)"
+      ],
       "notes": [
         "alternative"
       ]
@@ -15733,11 +16277,14 @@
       "indicator": "written up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "reversal (d)"
+      ],
       "notes": []
     },
     {

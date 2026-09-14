@@ -35,11 +35,13 @@ by
 capped by
 capping
 caps
+carried by
 carries
 carrying
 close by
 close on
 close to
+confronted by
 confronting
 confronts
 covered by
@@ -49,6 +51,7 @@ covers
 crowned by
 crowning
 crowns
+faced by
 faced with
 faces
 facing
@@ -91,8 +94,10 @@ preceded by
 precedes
 preceding
 prior to
+ridden by
 rides
 riding
+shadowed by
 shadowing
 shadows
 superior to

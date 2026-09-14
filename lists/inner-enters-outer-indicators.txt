@@ -68,6 +68,7 @@ being taken in by
 being trapped in
 being ushered in
 being welcomed in
+beset
 beset by
 beset with
 besieged
@@ -265,6 +266,7 @@ dropped in
 dropped into
 drowned in
 drowning in
+drunk
 drunk by
 dug into
 dumped in
@@ -305,6 +307,7 @@ enrobed in
 enshrined in
 enshrouded
 ensnared in
+enswathed in
 enter
 enter into
 entered
@@ -432,6 +435,7 @@ housed in
 hugged by
 hunger within
 immersed in
+implicated
 implicated by
 implicated in
 imported by
@@ -540,6 +544,8 @@ introduced to
 intrusion into
 invade
 invaded by
+invades
+invading
 invest in
 invested in
 invested with

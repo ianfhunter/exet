@@ -2,9 +2,10 @@
   "type": "deletion",
   "title": "Deletion indicators",
   "built": "2026-08-12",
-  "count": 1860,
+  "count": 1964,
   "sources": [
     "clue-clinic",
+    "clue-clinic-lexicon",
     "crossword-unclued",
     "cryptics-georgeho",
     "cryptipedia",
@@ -26,20 +27,24 @@
     {
       "indicator": "a great deal of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
     {
       "indicator": "a lot of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -73,6 +78,7 @@
       "indicator": "abandoned by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -84,6 +90,7 @@
       "indicator": "abandoning",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword",
@@ -107,6 +114,7 @@
       "indicator": "abandons",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -195,12 +203,14 @@
       "indicator": "abrupt",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -219,15 +229,28 @@
     {
       "indicator": "absconding",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
       "indicator": "absconding from",
       "sources": [
         "clue-clinic"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "absconds",
+      "sources": [
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -352,10 +375,12 @@
       "indicator": "after opening",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove first letter"
       ],
       "notes": [
         "alternative"
@@ -372,10 +397,12 @@
     {
       "indicator": "after starter",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove first letter"
       ],
       "notes": []
     },
@@ -450,10 +477,13 @@
       "indicator": "all but",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -483,9 +513,12 @@
     {
       "indicator": "all except",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -494,6 +527,7 @@
       "indicator": "almost",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -503,7 +537,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -511,10 +546,12 @@
       "indicator": "almost entirely",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": [
         "alternative"
@@ -540,10 +577,13 @@
       "indicator": "apart from",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -579,9 +619,12 @@
     {
       "indicator": "avoided",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -598,6 +641,7 @@
       "indicator": "avoiding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -617,6 +661,7 @@
       "indicator": "avoids",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -629,12 +674,14 @@
     {
       "indicator": "away",
       "sources": [
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
         "145 general deletion indicators",
+        "departure",
         "most common deletion indicators"
       ],
       "notes": []
@@ -643,7 +690,18 @@
       "indicator": "away from",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "axed",
+      "sources": [
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -663,9 +721,12 @@
     {
       "indicator": "axes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -673,9 +734,12 @@
     {
       "indicator": "axing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -741,6 +805,16 @@
       "notes": []
     },
     {
+      "indicator": "banished",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "banished by",
       "sources": [
         "clue-clinic"
@@ -765,9 +839,12 @@
     {
       "indicator": "banishes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -776,9 +853,12 @@
       "indicator": "banishing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -803,9 +883,12 @@
     {
       "indicator": "banned",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -842,12 +925,14 @@
       "indicator": "bar",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "expulsion"
       ],
       "notes": []
     },
@@ -855,12 +940,14 @@
       "indicator": "bare",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
         "38 middle letters deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -896,9 +983,12 @@
       "indicator": "barring",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -1062,9 +1152,12 @@
     {
       "indicator": "belted out",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -1080,17 +1173,23 @@
     {
       "indicator": "belting out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "belts out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1099,9 +1198,12 @@
       "indicator": "bereft of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -1123,9 +1225,12 @@
     {
       "indicator": "binned",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -1149,9 +1254,12 @@
     {
       "indicator": "bins",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1159,10 +1267,22 @@
     {
       "indicator": "bitten off",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "blanked out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
       ],
       "notes": []
     },
@@ -1179,17 +1299,23 @@
     {
       "indicator": "blanking out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "blanks out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1205,12 +1331,25 @@
     {
       "indicator": "blots",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "blotted out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "blotted out by",
@@ -1225,9 +1364,12 @@
     {
       "indicator": "blotting",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -1250,6 +1392,7 @@
       "indicator": "blowing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1280,7 +1423,8 @@
     {
       "indicator": "blows",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -1298,9 +1442,29 @@
       "notes": []
     },
     {
+      "indicator": "bolting",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "bolting from",
       "sources": [
         "clue-clinic"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "bolts",
+      "sources": [
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -1377,6 +1541,16 @@
       "notes": []
     },
     {
+      "indicator": "bounced",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "bounced by",
       "sources": [
         "clue-clinic"
@@ -1389,9 +1563,12 @@
     {
       "indicator": "bounces",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1399,9 +1576,12 @@
     {
       "indicator": "bouncing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -1416,12 +1596,14 @@
       "indicator": "boundless",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -1446,9 +1628,29 @@
       "notes": []
     },
     {
+      "indicator": "breaking loose",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "breaking loose from",
       "sources": [
         "clue-clinic"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "breaking out",
+      "sources": [
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -1490,6 +1692,26 @@
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "breaks loose",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "breaks out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "brief",
@@ -1551,9 +1773,12 @@
     {
       "indicator": "brushing aside",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1561,18 +1786,23 @@
     {
       "indicator": "brushing off",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "bulk of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -1582,6 +1812,16 @@
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "buried",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -1597,9 +1837,12 @@
     {
       "indicator": "buries",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1615,9 +1858,12 @@
     {
       "indicator": "burying",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -1635,9 +1881,12 @@
     {
       "indicator": "but for",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -1689,6 +1938,16 @@
       "notes": []
     },
     {
+      "indicator": "bypassed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "bypassed by",
       "sources": [
         "clue-clinic"
@@ -1701,9 +1960,12 @@
     {
       "indicator": "bypasses",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1711,9 +1973,12 @@
     {
       "indicator": "bypassing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -1745,10 +2010,13 @@
     {
       "indicator": "cancelled",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -1765,17 +2033,23 @@
       "indicator": "cancelling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "cancels",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1816,6 +2090,16 @@
       "notes": []
     },
     {
+      "indicator": "cashiered",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "cashiered by",
       "sources": [
         "clue-clinic"
@@ -1840,9 +2124,12 @@
     {
       "indicator": "cashiers",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -1859,9 +2146,12 @@
     {
       "indicator": "cast out",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -1897,17 +2187,23 @@
     {
       "indicator": "casting out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "casts out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1918,6 +2214,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ceded",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -1933,9 +2239,12 @@
     {
       "indicator": "cedes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1943,9 +2252,12 @@
     {
       "indicator": "ceding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -2032,10 +2344,12 @@
     {
       "indicator": "chiefly",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -2121,6 +2435,16 @@
       "notes": []
     },
     {
+      "indicator": "chucked (out)",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "chucked by",
       "sources": [
         "clue-clinic"
@@ -2145,17 +2469,23 @@
     {
       "indicator": "chucking (out)",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "chucks (out)",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2188,9 +2518,12 @@
       "indicator": "clear of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -2214,12 +2547,25 @@
     {
       "indicator": "cleared of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "cleared out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "cleared out from",
@@ -2277,6 +2623,7 @@
       "indicator": "clipped",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -2286,7 +2633,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -2315,6 +2663,16 @@
       "notes": []
     },
     {
+      "indicator": "comes out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "comes out of",
       "sources": [
         "clue-clinic"
@@ -2340,6 +2698,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "coming out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -2385,6 +2753,16 @@
       "notes": []
     },
     {
+      "indicator": "concealed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "concealed by",
       "sources": [
         "clue-clinic"
@@ -2397,17 +2775,23 @@
     {
       "indicator": "concealing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "conceals",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2415,9 +2799,12 @@
     {
       "indicator": "conceded",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -2433,9 +2820,12 @@
     {
       "indicator": "concedes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2444,9 +2834,12 @@
       "indicator": "conceding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -2455,6 +2848,16 @@
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "consumed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -2545,9 +2948,29 @@
       "notes": []
     },
     {
+      "indicator": "covered",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "covered in",
       "sources": [
         "clue-clinic"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "covered up",
+      "sources": [
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -2579,10 +3002,12 @@
     {
       "indicator": "covering head(s)",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter(s)"
       ],
       "notes": []
     },
@@ -2626,10 +3051,12 @@
     {
       "indicator": "cropped",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -2653,11 +3080,13 @@
       "indicator": "curt",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer"
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -2676,6 +3105,7 @@
       "indicator": "curtailed",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "curated-extras",
@@ -2686,7 +3116,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "curtailed x"
+        "curtailed x",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -2710,6 +3141,7 @@
       "indicator": "cut",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -2717,6 +3149,7 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
+        "departure",
         "reduction &#8211; last letter"
       ],
       "notes": []
@@ -2724,9 +3157,12 @@
     {
       "indicator": "cut by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -2748,6 +3184,16 @@
         "wordsup"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cut out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -2778,10 +3224,12 @@
     {
       "indicator": "cuts",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "departure"
+        "departure",
+        "expulsion"
       ],
       "notes": [
         "alternative"
@@ -2801,12 +3249,14 @@
       "indicator": "cutting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "wordsup"
       ],
       "categories": [
-        "departure"
+        "departure",
+        "expulsion"
       ],
       "notes": []
     },
@@ -2879,6 +3329,16 @@
       "notes": []
     },
     {
+      "indicator": "declined",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "declined by",
       "sources": [
         "clue-clinic"
@@ -2891,9 +3351,12 @@
     {
       "indicator": "declines",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2902,9 +3365,22 @@
       "indicator": "declining",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "deducted",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -2928,9 +3404,12 @@
     {
       "indicator": "deficient in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -2963,6 +3442,16 @@
       "notes": []
     },
     {
+      "indicator": "deleted",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "deleted from",
       "sources": [
         "clue-clinic"
@@ -2975,9 +3464,12 @@
     {
       "indicator": "deletes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2985,9 +3477,22 @@
     {
       "indicator": "deleting",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "delivered",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -3001,17 +3506,23 @@
     {
       "indicator": "delivering",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "delivers",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3020,25 +3531,31 @@
       "indicator": "denied",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "denied opening",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": []
     },
     {
       "indicator": "denied to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -3059,6 +3576,7 @@
       "indicator": "departing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3069,7 +3587,8 @@
     {
       "indicator": "departs",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -3097,6 +3616,16 @@
       "notes": []
     },
     {
+      "indicator": "deported",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "deported from",
       "sources": [
         "clue-clinic"
@@ -3109,17 +3638,23 @@
     {
       "indicator": "deporting",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "deports",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3164,10 +3699,13 @@
       "indicator": "deprived of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -3199,15 +3737,19 @@
     {
       "indicator": "deserted by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "deserting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptipedia"
       ],
       "categories": [
@@ -3219,6 +3761,7 @@
       "indicator": "deserts",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3247,10 +3790,13 @@
     {
       "indicator": "detached",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -3300,9 +3846,12 @@
       "indicator": "devoid of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -3362,11 +3911,13 @@
     {
       "indicator": "disappearing",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -3383,9 +3934,12 @@
     {
       "indicator": "disappears",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -3413,9 +3967,12 @@
     {
       "indicator": "discarded",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -3461,9 +4018,12 @@
     {
       "indicator": "discharged",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -3491,9 +4051,12 @@
     {
       "indicator": "discharges",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3501,9 +4064,12 @@
     {
       "indicator": "discharging",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -3528,9 +4094,12 @@
     {
       "indicator": "discounted",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -3558,9 +4127,12 @@
     {
       "indicator": "discounting",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -3574,9 +4146,12 @@
     {
       "indicator": "discounts",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3630,6 +4205,16 @@
       "notes": []
     },
     {
+      "indicator": "disgorged",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "disgorged by",
       "sources": [
         "clue-clinic"
@@ -3654,9 +4239,12 @@
     {
       "indicator": "disgorges",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3664,9 +4252,12 @@
     {
       "indicator": "disgorging",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -3741,12 +4332,14 @@
     {
       "indicator": "dismissed",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -3776,9 +4369,12 @@
       "indicator": "dismisses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3795,9 +4391,22 @@
       "indicator": "dismissing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "disowned",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -3813,20 +4422,36 @@
     {
       "indicator": "disowning",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "disowns",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "dispatched",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "dispatched by",
@@ -3841,9 +4466,12 @@
     {
       "indicator": "dispatches",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3852,9 +4480,12 @@
       "indicator": "dispatching",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -3869,9 +4500,12 @@
       "indicator": "dispenses with",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3887,9 +4521,12 @@
     {
       "indicator": "dispensing with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -3929,6 +4566,16 @@
       "notes": []
     },
     {
+      "indicator": "disposed of",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "disposed of by",
       "sources": [
         "clue-clinic"
@@ -3941,9 +4588,12 @@
     {
       "indicator": "disposes of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3978,9 +4628,12 @@
     {
       "indicator": "disregarded",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -3997,17 +4650,23 @@
       "indicator": "disregarding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "disregards",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4036,9 +4695,12 @@
     {
       "indicator": "ditched",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -4055,9 +4717,12 @@
       "indicator": "ditches",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4066,9 +4731,12 @@
       "indicator": "ditching",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -4090,9 +4758,12 @@
     {
       "indicator": "divested of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -4111,6 +4782,7 @@
       "indicator": "docked",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -4119,7 +4791,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -4159,6 +4832,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "doesn't close",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "remove: last letter"
+      ],
       "notes": []
     },
     {
@@ -4223,6 +4906,26 @@
       "notes": []
     },
     {
+      "indicator": "draining",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "drains",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "draw off",
       "sources": [
         "cryptics-georgeho"
@@ -4275,6 +4978,16 @@
       "notes": []
     },
     {
+      "indicator": "driven out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "driven out by",
       "sources": [
         "clue-clinic"
@@ -4289,9 +5002,12 @@
     {
       "indicator": "drives out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4300,9 +5016,12 @@
       "indicator": "driving out",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -4327,12 +5046,14 @@
     {
       "indicator": "dropped",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -4362,11 +5083,14 @@
       "indicator": "dropping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "daily-cryptic",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -4421,9 +5145,12 @@
       "indicator": "drops",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4463,7 +5190,8 @@
     {
       "indicator": "ducking",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -4473,7 +5201,8 @@
     {
       "indicator": "ducks",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -4503,9 +5232,12 @@
     {
       "indicator": "dumped",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -4522,17 +5254,23 @@
       "indicator": "dumping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "dumps",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4555,6 +5293,16 @@
       "notes": []
     },
     {
+      "indicator": "eclipsed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "eclipsed by",
       "sources": [
         "clue-clinic"
@@ -4568,9 +5316,12 @@
       "indicator": "eclipses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4578,9 +5329,12 @@
     {
       "indicator": "eclipsing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -4609,6 +5363,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "effused",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -4662,6 +5426,16 @@
       "notes": []
     },
     {
+      "indicator": "ejected",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "ejected by",
       "sources": [
         "clue-clinic"
@@ -4687,17 +5461,23 @@
       "indicator": "ejecting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "ejects",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4708,6 +5488,16 @@
         "curated-extras"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "eliminated",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -4735,9 +5525,12 @@
     {
       "indicator": "eliminates",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4746,9 +5539,12 @@
       "indicator": "eliminating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -4762,15 +5558,19 @@
     {
       "indicator": "eluded by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "eludes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -4782,7 +5582,8 @@
     {
       "indicator": "eluding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -4792,9 +5593,12 @@
     {
       "indicator": "emerges",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -4808,6 +5612,16 @@
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "emerging",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "emerging from",
@@ -4840,12 +5654,25 @@
     {
       "indicator": "emits",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "emitted",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "emitted by",
@@ -4873,10 +5700,13 @@
       "indicator": "emitting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -4956,6 +5786,7 @@
       "indicator": "endlessly",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword",
@@ -4963,7 +5794,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": [
         "alternative"
@@ -4989,9 +5821,12 @@
     {
       "indicator": "eradicated",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -5019,9 +5854,12 @@
     {
       "indicator": "eradicates",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5030,9 +5868,12 @@
       "indicator": "eradicating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -5085,6 +5926,7 @@
       "indicator": "escapes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5098,6 +5940,7 @@
       "indicator": "escaping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5116,6 +5959,16 @@
       "notes": []
     },
     {
+      "indicator": "eschewed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "eschewed by",
       "sources": [
         "clue-clinic"
@@ -5129,17 +5982,23 @@
       "indicator": "eschewing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "eschews",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5315,12 +6174,14 @@
       "indicator": "except",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "expulsion"
       ],
       "notes": []
     },
@@ -5328,9 +6189,12 @@
       "indicator": "except for",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5381,11 +6245,13 @@
     {
       "indicator": "excluded",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -5415,9 +6281,12 @@
     {
       "indicator": "excludes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5426,12 +6295,14 @@
       "indicator": "excluding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptipedia",
         "curated-extras",
         "unscramblerer"
       ],
       "categories": [
         "145 general deletion indicators",
+        "expulsion",
         "most common deletion indicators"
       ],
       "notes": []
@@ -5461,6 +6332,16 @@
       "notes": []
     },
     {
+      "indicator": "exiled",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "exiled by",
       "sources": [
         "clue-clinic"
@@ -5485,9 +6366,12 @@
     {
       "indicator": "exiles",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5495,9 +6379,12 @@
     {
       "indicator": "exiling",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -5511,7 +6398,8 @@
     {
       "indicator": "exiting",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -5521,7 +6409,8 @@
     {
       "indicator": "exits",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -5537,6 +6426,16 @@
       ],
       "categories": [
         "145 general deletion indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "expelled",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
       ],
       "notes": []
     },
@@ -5567,17 +6466,23 @@
       "indicator": "expelling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "expels",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5640,6 +6545,16 @@
       "notes": []
     },
     {
+      "indicator": "expressed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "expressed by",
       "sources": [
         "clue-clinic"
@@ -5652,9 +6567,12 @@
     {
       "indicator": "expresses",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5663,12 +6581,14 @@
       "indicator": "expressing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "expulsion"
       ],
       "notes": []
     },
@@ -5683,9 +6603,12 @@
     {
       "indicator": "expunged",
       "sources": [
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -5713,9 +6636,12 @@
     {
       "indicator": "expunges",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5723,9 +6649,12 @@
     {
       "indicator": "expunging",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -5750,9 +6679,12 @@
     {
       "indicator": "extracted",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -5808,6 +6740,16 @@
       "notes": []
     },
     {
+      "indicator": "extruded",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "extruded from",
       "sources": [
         "clue-clinic"
@@ -5820,9 +6762,12 @@
     {
       "indicator": "extrudes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5830,9 +6775,12 @@
     {
       "indicator": "extruding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -5848,17 +6796,23 @@
     {
       "indicator": "exuded",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
       "indicator": "exudes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5879,9 +6833,12 @@
       "indicator": "exuding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -5898,10 +6855,12 @@
       "indicator": "faceless",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": []
     },
@@ -5941,6 +6900,7 @@
       "indicator": "failing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5993,6 +6953,7 @@
       "indicator": "fails",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6141,9 +7102,12 @@
     {
       "indicator": "fired",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -6172,9 +7136,12 @@
     {
       "indicator": "fires",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -6182,9 +7149,12 @@
     {
       "indicator": "firing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -6310,7 +7280,8 @@
     {
       "indicator": "flies",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -6318,6 +7289,16 @@
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "flushed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "flushed from",
@@ -6332,9 +7313,12 @@
     {
       "indicator": "flushes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -6361,7 +7345,8 @@
     {
       "indicator": "flying",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -6420,19 +7405,22 @@
       "indicator": "for the most part",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
     {
       "indicator": "forbidden to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -6479,9 +7467,12 @@
     {
       "indicator": "forgets",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -6490,12 +7481,14 @@
       "indicator": "forgetting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "expulsion"
       ],
       "notes": []
     },
@@ -6547,9 +7540,12 @@
     {
       "indicator": "forgotten",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -6585,10 +7581,12 @@
     {
       "indicator": "frameless",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -6603,11 +7601,13 @@
     {
       "indicator": "free",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
         "145 general deletion indicators",
+        "departure",
         "most common deletion indicators"
       ],
       "notes": []
@@ -6616,10 +7616,12 @@
       "indicator": "free from",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
-        "departure"
+        "departure",
+        "expulsion"
       ],
       "notes": [
         "alternative"
@@ -6637,10 +7639,12 @@
       "indicator": "free of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
-        "departure"
+        "departure",
+        "expulsion"
       ],
       "notes": []
     },
@@ -6697,9 +7701,12 @@
       "indicator": "gets rid of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -6707,9 +7714,12 @@
     {
       "indicator": "gets shot of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -6766,9 +7776,12 @@
       "indicator": "getting rid of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -6866,6 +7879,7 @@
       "indicator": "goes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho"
       ],
@@ -6888,6 +7902,7 @@
       "indicator": "going",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6923,6 +7938,7 @@
       "indicator": "gone",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -6974,6 +7990,7 @@
     {
       "indicator": "gutted",
       "sources": [
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -6983,7 +8000,8 @@
         "wordsup"
       ],
       "categories": [
-        "38 middle letters deletion indicators"
+        "38 middle letters deletion indicators",
+        "remove: middle letter(s)"
       ],
       "notes": []
     },
@@ -7075,9 +8093,12 @@
       "indicator": "has no",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -7096,6 +8117,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "hasn't",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -7264,19 +8295,24 @@
       "indicator": "having no",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "having no leads",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; first letters"
+        "reduction &#8211; first letters",
+        "remove: first letters"
       ],
       "notes": []
     },
@@ -7411,6 +8447,7 @@
       "indicator": "headless",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -7421,7 +8458,8 @@
       ],
       "categories": [
         "21 first letter deletion indicators",
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": []
     },
@@ -7501,6 +8539,7 @@
       "indicator": "heartlessly",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword",
@@ -7508,7 +8547,8 @@
       ],
       "categories": [
         "38 middle letters deletion indicators",
-        "reduction &#8211; middle"
+        "reduction &#8211; middle",
+        "remove: middle letter(s)"
       ],
       "notes": [
         "alternative"
@@ -7525,9 +8565,12 @@
     {
       "indicator": "hidden",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -7623,10 +8666,12 @@
     {
       "indicator": "husked",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -7668,12 +8713,14 @@
     {
       "indicator": "ignored",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -7700,9 +8747,12 @@
       "indicator": "ignores",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -7711,10 +8761,13 @@
       "indicator": "ignoring",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -7788,6 +8841,7 @@
       "indicator": "incomplete",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -7798,7 +8852,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -7951,11 +9006,13 @@
       "indicator": "inside",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer"
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -7987,12 +9044,14 @@
       "indicator": "insides",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
         "38 middle letters deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": [
         "alternative"
@@ -8028,10 +9087,12 @@
     {
       "indicator": "interior of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -8069,10 +9130,22 @@
     {
       "indicator": "internally",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "internals",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -8143,6 +9216,16 @@
       "notes": []
     },
     {
+      "indicator": "isn't available",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "isn’t available to",
       "sources": [
         "clue-clinic"
@@ -8156,6 +9239,16 @@
       "indicator": "isn’t enjoyed by",
       "sources": [
         "clue-clinic"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "isolated",
+      "sources": [
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -8187,9 +9280,12 @@
     {
       "indicator": "isolates",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8197,9 +9293,22 @@
     {
       "indicator": "isolating",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "jettisoned",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -8227,17 +9336,23 @@
     {
       "indicator": "jettisoning",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "jettisons",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8261,9 +9376,12 @@
     {
       "indicator": "junks",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -8289,6 +9407,16 @@
       ],
       "categories": [
         "145 general deletion indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "kicked out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
       ],
       "notes": []
     },
@@ -8325,20 +9453,36 @@
     {
       "indicator": "kicking out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "kicks out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "killed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "killed by",
@@ -8354,17 +9498,23 @@
       "indicator": "killing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "kills",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8375,6 +9525,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "knocked back",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -8398,9 +9558,12 @@
     {
       "indicator": "knocked out",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -8416,26 +9579,35 @@
     {
       "indicator": "knocking back",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "knocking out",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "knocks back",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8443,9 +9615,12 @@
     {
       "indicator": "knocks out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8481,13 +9656,15 @@
       "indicator": "lacking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -8583,12 +9760,25 @@
       "indicator": "lacks",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "laid aside",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "laid aside by",
@@ -8620,12 +9810,14 @@
       "indicator": "largely",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -8684,17 +9876,23 @@
     {
       "indicator": "laying aside",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "lays aside",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8735,6 +9933,7 @@
       "indicator": "leaderless",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -8744,7 +9943,8 @@
       ],
       "categories": [
         "21 first letter deletion indicators",
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": []
     },
@@ -8754,6 +9954,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leaked",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -8782,9 +9992,12 @@
       "indicator": "leaking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -8800,9 +10013,12 @@
     {
       "indicator": "leaks",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8835,6 +10051,7 @@
       "indicator": "leaves",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "wordsup"
@@ -8849,9 +10066,12 @@
     {
       "indicator": "leaves out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8860,6 +10080,7 @@
       "indicator": "leaving",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -8873,9 +10094,12 @@
     {
       "indicator": "leaving out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -8902,9 +10126,12 @@
     {
       "indicator": "left by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8946,12 +10173,14 @@
       "indicator": "less",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "unscramblerer"
       ],
       "categories": [
         "145 general deletion indicators",
+        "expulsion",
         "most common deletion indicators"
       ],
       "notes": []
@@ -8967,17 +10196,23 @@
     {
       "indicator": "lessened by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "let out",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -9003,6 +10238,16 @@
       "notes": []
     },
     {
+      "indicator": "let slip",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "let slip by",
       "sources": [
         "clue-clinic"
@@ -9015,9 +10260,12 @@
     {
       "indicator": "lets out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -9025,9 +10273,12 @@
     {
       "indicator": "lets slip",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -9035,18 +10286,34 @@
     {
       "indicator": "letting out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "letting slip",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "liberated",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -9074,9 +10341,12 @@
     {
       "indicator": "liberates",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -9084,9 +10354,12 @@
     {
       "indicator": "liberating",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -9132,6 +10405,7 @@
       "indicator": "limitless",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptipedia",
         "unscramblerer",
@@ -9139,7 +10413,8 @@
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -9166,10 +10441,12 @@
     {
       "indicator": "lining of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -9241,9 +10518,12 @@
       "indicator": "loses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -9268,6 +10548,7 @@
       "indicator": "losing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -9276,7 +10557,8 @@
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "expulsion"
       ],
       "notes": []
     },
@@ -9308,10 +10590,12 @@
     {
       "indicator": "losing head(s)",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter(s)"
       ],
       "notes": []
     },
@@ -9319,6 +10603,7 @@
       "indicator": "losing heart",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -9326,7 +10611,8 @@
         "wordsup"
       ],
       "categories": [
-        "reduction &#8211; middle"
+        "reduction &#8211; middle",
+        "reduction: middle letter(s)"
       ],
       "notes": []
     },
@@ -9407,11 +10693,13 @@
     {
       "indicator": "lost",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -9489,12 +10777,14 @@
       "indicator": "mainly",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -9587,12 +10877,14 @@
       "indicator": "minus",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras",
         "solve-the-crossword",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "expulsion"
       ],
       "notes": []
     },
@@ -9651,6 +10943,16 @@
       "notes": []
     },
     {
+      "indicator": "missed out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "missed out by",
       "sources": [
         "clue-clinic"
@@ -9666,9 +10968,12 @@
       "indicator": "misses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -9685,6 +10990,7 @@
       "indicator": "missing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -9692,7 +10998,8 @@
         "wordsup"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -9804,11 +11111,13 @@
       "indicator": "most of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "solve-the-crossword"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -9824,6 +11133,7 @@
       "indicator": "mostly",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -9832,7 +11142,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": [
         "alternative"
@@ -9849,10 +11160,12 @@
     {
       "indicator": "much of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -9892,12 +11205,14 @@
       "indicator": "naked",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -9913,6 +11228,7 @@
       "indicator": "nearly",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -9922,7 +11238,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -9954,9 +11271,12 @@
       "indicator": "needing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -9987,9 +11307,12 @@
     {
       "indicator": "needs",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -10069,6 +11392,7 @@
       "indicator": "no",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -10077,6 +11401,7 @@
       ],
       "categories": [
         "145 general deletion indicators",
+        "expulsion",
         "most common deletion indicators"
       ],
       "notes": []
@@ -10254,6 +11579,7 @@
       "indicator": "not",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -10262,6 +11588,7 @@
       ],
       "categories": [
         "145 general deletion indicators",
+        "expulsion",
         "most common deletion indicators"
       ],
       "notes": []
@@ -10293,9 +11620,12 @@
     {
       "indicator": "not available",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -10371,10 +11701,12 @@
       "indicator": "not ending",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": [
         "alternative"
@@ -10427,10 +11759,12 @@
     {
       "indicator": "not finishing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -10626,11 +11960,13 @@
       "indicator": "not quite",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -10720,10 +12056,12 @@
       "indicator": "not the first",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": []
     },
@@ -10738,10 +12076,12 @@
     {
       "indicator": "not the last",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -10812,7 +12152,8 @@
     {
       "indicator": "nowhere to be seen",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -10840,6 +12181,16 @@
       "notes": []
     },
     {
+      "indicator": "obliterated",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "obliterated by",
       "sources": [
         "clue-clinic"
@@ -10852,9 +12203,12 @@
     {
       "indicator": "obliterates",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -10862,17 +12216,23 @@
     {
       "indicator": "obliterating",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "obscured",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -10888,9 +12248,12 @@
     {
       "indicator": "obscures",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -10899,9 +12262,12 @@
       "indicator": "obscuring",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -11158,10 +12524,12 @@
     {
       "indicator": "opening late",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": [
         "alternative"
@@ -11211,6 +12579,16 @@
       "notes": []
     },
     {
+      "indicator": "ousted",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "ousted from",
       "sources": [
         "clue-clinic"
@@ -11224,9 +12602,12 @@
       "indicator": "ousting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -11240,9 +12621,12 @@
     {
       "indicator": "ousts",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -11273,26 +12657,32 @@
       "indicator": "out of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "out of bounds",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wordsup"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
     {
       "indicator": "out of sight",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -11310,9 +12700,12 @@
     {
       "indicator": "outing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -11483,9 +12876,12 @@
     {
       "indicator": "parted from",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -11549,7 +12945,8 @@
     {
       "indicator": "passed",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -11557,6 +12954,16 @@
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "passed over",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "passed over by",
@@ -11571,9 +12978,12 @@
     {
       "indicator": "passes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -11581,9 +12991,12 @@
     {
       "indicator": "passes over",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -11592,6 +13005,7 @@
       "indicator": "passing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -11602,9 +13016,12 @@
     {
       "indicator": "passing over",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -11619,13 +13036,15 @@
       "indicator": "peeled",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -11782,21 +13201,26 @@
       "indicator": "pruned",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
     {
       "indicator": "pulled out",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -11810,9 +13234,29 @@
       "notes": []
     },
     {
+      "indicator": "pulling out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "pulling out of",
       "sources": [
         "clue-clinic"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "pulls out",
+      "sources": [
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -11840,6 +13284,16 @@
       "notes": []
     },
     {
+      "indicator": "put away",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "put away by",
       "sources": [
         "clue-clinic"
@@ -11862,9 +13316,12 @@
     {
       "indicator": "put out",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -11880,9 +13337,12 @@
     {
       "indicator": "puts away",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -11898,9 +13358,12 @@
     {
       "indicator": "puts out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -11909,9 +13372,12 @@
       "indicator": "putting away",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -11926,9 +13392,12 @@
       "indicator": "putting out",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -11990,11 +13459,31 @@
       "notes": []
     },
     {
+      "indicator": "racing",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "rear end missing",
       "sources": [
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rebuffed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -12012,7 +13501,8 @@
     {
       "indicator": "rebuffing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -12022,7 +13512,8 @@
     {
       "indicator": "rebuffs",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -12058,9 +13549,12 @@
       "indicator": "reduced by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -12082,7 +13576,8 @@
     {
       "indicator": "refused to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -12152,19 +13647,24 @@
       "indicator": "rejecting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "rejecting outsiders",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -12172,9 +13672,12 @@
       "indicator": "rejects",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -12193,9 +13696,12 @@
     {
       "indicator": "released",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -12219,9 +13725,12 @@
     {
       "indicator": "releases",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -12230,9 +13739,22 @@
       "indicator": "releasing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "relegated",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -12248,9 +13770,12 @@
     {
       "indicator": "relegates",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -12258,17 +13783,23 @@
     {
       "indicator": "relegating",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "relieved of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -12291,6 +13822,16 @@
       "notes": []
     },
     {
+      "indicator": "relinquished",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "relinquished by",
       "sources": [
         "clue-clinic"
@@ -12304,9 +13845,12 @@
       "indicator": "relinquishes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -12314,9 +13858,12 @@
     {
       "indicator": "relinquishing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -12398,13 +13945,15 @@
     {
       "indicator": "removed",
       "sources": [
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -12459,17 +14008,23 @@
     {
       "indicator": "rendering",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "renders",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -12481,6 +14036,16 @@
       ],
       "categories": [
         "145 general deletion indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "renounced",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
       ],
       "notes": []
     },
@@ -12497,9 +14062,12 @@
     {
       "indicator": "renounces",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -12508,9 +14076,12 @@
       "indicator": "renouncing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -12579,9 +14150,12 @@
     {
       "indicator": "rid of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -12662,9 +14236,22 @@
       "indicator": "robbed of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "rubbed out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -12688,17 +14275,23 @@
     {
       "indicator": "rubbing out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "rubs out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -12714,7 +14307,8 @@
     {
       "indicator": "running",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -12740,7 +14334,8 @@
     {
       "indicator": "runs",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -12795,18 +14390,23 @@
       "indicator": "save",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "save skin",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": [
         "alternative"
@@ -12824,18 +14424,23 @@
       "indicator": "saving",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "saving skin",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -12872,6 +14477,16 @@
       "notes": []
     },
     {
+      "indicator": "scored",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "scored by",
       "sources": [
         "clue-clinic"
@@ -12884,9 +14499,12 @@
     {
       "indicator": "scores",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -12894,9 +14512,12 @@
     {
       "indicator": "scoring",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -12906,6 +14527,16 @@
       ],
       "categories": [
         "145 general deletion indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "scrapped",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
       ],
       "notes": []
     },
@@ -12923,17 +14554,23 @@
       "indicator": "scrapping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "scraps",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -12978,6 +14615,7 @@
       "indicator": "scratched",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -12993,9 +14631,12 @@
     {
       "indicator": "scratches",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13016,18 +14657,23 @@
       "indicator": "scratching",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
       "indicator": "scratching backside",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -13076,10 +14722,22 @@
     {
       "indicator": "scratching head(s)",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter(s)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "screened",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
       ],
       "notes": []
     },
@@ -13108,17 +14766,23 @@
     {
       "indicator": "screening",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "screens",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13144,12 +14808,14 @@
     {
       "indicator": "scrubbed",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -13167,17 +14833,23 @@
       "indicator": "scrubbing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "scrubs",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13219,17 +14891,23 @@
     {
       "indicator": "sending out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "sends out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13240,6 +14918,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "sent out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -13267,7 +14955,8 @@
     {
       "indicator": "separated from",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -13293,9 +14982,12 @@
     {
       "indicator": "set aside",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -13311,9 +15003,12 @@
     {
       "indicator": "sets aside",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13321,9 +15016,12 @@
     {
       "indicator": "setting aside",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -13382,22 +15080,26 @@
     {
       "indicator": "sheared",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
     {
       "indicator": "shed",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -13423,20 +15125,26 @@
       "indicator": "shedding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "sheds",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13453,6 +15161,7 @@
       "indicator": "shelled",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptipedia",
         "unscramblerer",
@@ -13460,7 +15169,8 @@
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -13475,7 +15185,8 @@
     {
       "indicator": "shelved by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -13485,9 +15196,12 @@
     {
       "indicator": "shelves",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13495,15 +15209,19 @@
     {
       "indicator": "shelving",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "shifted",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -13524,9 +15242,12 @@
       "indicator": "shifting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -13542,9 +15263,12 @@
     {
       "indicator": "shifts",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13584,6 +15308,7 @@
       "indicator": "short",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -13591,7 +15316,8 @@
         "wordsup"
       ],
       "categories": [
-        "52 last letter deletion indicators"
+        "52 last letter deletion indicators",
+        "expulsion"
       ],
       "notes": [
         "alternative"
@@ -13601,10 +15327,13 @@
       "indicator": "short of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -13619,13 +15348,15 @@
       "indicator": "shortened",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "unscramblerer"
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -13665,9 +15396,12 @@
       "indicator": "shot of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -13676,6 +15410,16 @@
         "wordsup"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "shoved out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -13691,9 +15435,12 @@
     {
       "indicator": "shoves out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -13701,9 +15448,12 @@
     {
       "indicator": "shoving out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -13762,15 +15512,19 @@
       "indicator": "shunned by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "shunning",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -13784,7 +15538,8 @@
     {
       "indicator": "shuns",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -13844,9 +15599,12 @@
     {
       "indicator": "shy of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -13880,7 +15638,8 @@
     {
       "indicator": "sidestepping",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -13890,7 +15649,8 @@
     {
       "indicator": "sidesteps",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -13911,11 +15671,13 @@
       "indicator": "skinless",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer"
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -13923,6 +15685,7 @@
       "indicator": "skinned",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer",
@@ -13930,7 +15693,8 @@
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -13956,12 +15720,14 @@
       "indicator": "skipping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "expulsion"
       ],
       "notes": []
     },
@@ -13969,9 +15735,12 @@
       "indicator": "skips",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14001,6 +15770,16 @@
       "notes": []
     },
     {
+      "indicator": "snatched",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "snatched from",
       "sources": [
         "clue-clinic"
@@ -14025,11 +15804,13 @@
       "indicator": "snubbed",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
         "52 last letter deletion indicators",
+        "departure",
         "reduction &#8211; last letter"
       ],
       "notes": []
@@ -14046,6 +15827,7 @@
       "indicator": "snubbing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -14057,6 +15839,7 @@
       "indicator": "snubs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -14094,21 +15877,37 @@
       "indicator": "spending",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "spends",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "spent",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "spent by",
@@ -14134,9 +15933,12 @@
       "indicator": "spilling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -14153,9 +15955,12 @@
       "indicator": "spills",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14175,9 +15980,12 @@
     {
       "indicator": "spilt",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -14204,9 +16012,29 @@
       "notes": []
     },
     {
+      "indicator": "spirited away",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "spirited away from",
       "sources": [
         "clue-clinic"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "splits",
+      "sources": [
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -14228,9 +16056,12 @@
     {
       "indicator": "splitting",
       "sources": [
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -14256,15 +16087,19 @@
     {
       "indicator": "spurned by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
       "indicator": "spurning",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -14275,7 +16110,8 @@
     {
       "indicator": "spurns",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -14283,6 +16119,16 @@
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "squeezed out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "squeezed out by",
@@ -14297,9 +16143,12 @@
     {
       "indicator": "squeezes out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14307,9 +16156,12 @@
     {
       "indicator": "squeezing out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -14357,11 +16209,13 @@
       "indicator": "starting late",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": []
     },
@@ -14392,24 +16246,38 @@
     {
       "indicator": "steering clear of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "departure"
+        "departure",
+        "expulsion"
       ],
       "notes": []
     },
     {
       "indicator": "steers clear of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "departure"
+        "departure",
+        "expulsion"
       ],
       "notes": [
         "alternative"
       ]
+    },
+    {
+      "indicator": "stifled",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
     },
     {
       "indicator": "stifled by",
@@ -14424,9 +16292,12 @@
     {
       "indicator": "stifles",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14434,19 +16305,24 @@
     {
       "indicator": "stifling",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "stolen",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "departure"
       ],
       "notes": []
     },
@@ -14506,6 +16382,16 @@
       "notes": []
     },
     {
+      "indicator": "stricken",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "stricken by",
       "sources": [
         "clue-clinic"
@@ -14546,9 +16432,12 @@
     {
       "indicator": "strikes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14557,10 +16446,13 @@
       "indicator": "striking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -14576,11 +16468,14 @@
     {
       "indicator": "stripped",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -14597,9 +16492,12 @@
       "indicator": "stripped of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -14613,11 +16511,14 @@
     {
       "indicator": "struck",
       "sources": [
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -14687,11 +16588,13 @@
       "indicator": "stunted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer"
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -14784,9 +16687,12 @@
     {
       "indicator": "suppressed",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -14802,9 +16708,12 @@
     {
       "indicator": "suppresses",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14813,9 +16722,12 @@
       "indicator": "suppressing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -14837,6 +16749,16 @@
       "notes": []
     },
     {
+      "indicator": "surrendered",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "surrendered by",
       "sources": [
         "clue-clinic"
@@ -14850,17 +16772,23 @@
       "indicator": "surrendering",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "surrenders",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -14892,15 +16820,19 @@
     {
       "indicator": "swerved by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "swerves",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -14912,7 +16844,8 @@
     {
       "indicator": "swerving",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -14939,10 +16872,12 @@
       "indicator": "tailed",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -14950,6 +16885,7 @@
       "indicator": "tailless",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -14958,7 +16894,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -15001,6 +16938,7 @@
       "indicator": "taken from",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15017,6 +16955,16 @@
       "notes": []
     },
     {
+      "indicator": "taken out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "taken out of",
       "sources": [
         "clue-clinic"
@@ -15029,9 +16977,12 @@
     {
       "indicator": "takes out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -15065,9 +17016,12 @@
       "indicator": "taking out",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -15162,9 +17116,12 @@
       "indicator": "throwing out",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -15178,9 +17135,12 @@
     {
       "indicator": "thrown out",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -15208,9 +17168,12 @@
     {
       "indicator": "throws out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -15711,6 +17674,7 @@
       "indicator": "topless",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword",
@@ -15719,7 +17683,8 @@
       ],
       "categories": [
         "21 first letter deletion indicators",
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": []
     },
@@ -15773,6 +17738,16 @@
       "notes": []
     },
     {
+      "indicator": "torn out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "torn out from",
       "sources": [
         "clue-clinic"
@@ -15821,7 +17796,8 @@
     {
       "indicator": "trashed by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -15831,9 +17807,12 @@
     {
       "indicator": "trashes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -15841,9 +17820,12 @@
     {
       "indicator": "trashing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -15862,6 +17844,7 @@
       "indicator": "trimmed",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "curated-extras",
@@ -15870,7 +17853,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -15894,21 +17878,26 @@
       "indicator": "truncated",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
     {
       "indicator": "turned down",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -15932,9 +17921,12 @@
     {
       "indicator": "turning down",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -15956,9 +17948,12 @@
     {
       "indicator": "turns down",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -15999,21 +17994,25 @@
       "indicator": "unbounded",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer"
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
     {
       "indicator": "uncapped",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": []
     },
@@ -16033,12 +18032,14 @@
       "indicator": "unconfined",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -16065,23 +18066,27 @@
       "indicator": "uncovered",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
     {
       "indicator": "uncrowned",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": []
     },
@@ -16097,7 +18102,8 @@
     {
       "indicator": "unemployed",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -16108,6 +18114,7 @@
       "indicator": "unending",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptipedia",
         "unscramblerer",
@@ -16115,7 +18122,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -16139,6 +18147,7 @@
       "indicator": "unfinished",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -16149,7 +18158,8 @@
       ],
       "categories": [
         "52 last letter deletion indicators",
-        "reduction &#8211; last letter"
+        "reduction &#8211; last letter",
+        "remove: last letter"
       ],
       "notes": []
     },
@@ -16157,10 +18167,12 @@
       "indicator": "unframed",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -16178,6 +18190,16 @@
       "notes": []
     },
     {
+      "indicator": "unleashed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "unleashed by",
       "sources": [
         "clue-clinic"
@@ -16190,9 +18212,12 @@
     {
       "indicator": "unleashes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -16200,9 +18225,12 @@
     {
       "indicator": "unleashing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -16216,6 +18244,16 @@
       ],
       "categories": [
         "24 first and last letter deletion indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "unloaded",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
       ],
       "notes": []
     },
@@ -16245,17 +18283,23 @@
       "indicator": "unloading",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "unloads",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -16298,6 +18342,7 @@
       "indicator": "unopened",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -16306,7 +18351,8 @@
       ],
       "categories": [
         "21 first letter deletion indicators",
-        "reduction &#8211; first letter"
+        "reduction &#8211; first letter",
+        "remove: first letter"
       ],
       "notes": []
     },
@@ -16389,10 +18435,12 @@
       "indicator": "unsheathed",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptipedia"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -16442,6 +18490,16 @@
       "notes": []
     },
     {
+      "indicator": "unwanted",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "unwanted by",
       "sources": [
         "clue-clinic"
@@ -16476,12 +18534,14 @@
       "indicator": "unwrapped",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -16517,15 +18577,19 @@
     {
       "indicator": "vacated by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "vacates",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -16537,7 +18601,8 @@
     {
       "indicator": "vacating",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "departure"
@@ -16579,6 +18644,16 @@
       ],
       "categories": [
         "145 general deletion indicators"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vanished",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
       ],
       "notes": []
     },
@@ -16634,6 +18709,16 @@
       "notes": []
     },
     {
+      "indicator": "vanquished",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "vanquished by",
       "sources": [
         "clue-clinic"
@@ -16646,9 +18731,12 @@
     {
       "indicator": "vanquishes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -16656,9 +18744,22 @@
     {
       "indicator": "vanquishing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "vented",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -16674,17 +18775,23 @@
     {
       "indicator": "venting",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "vents",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -16725,6 +18832,16 @@
       "notes": []
     },
     {
+      "indicator": "voided",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "voided by",
       "sources": [
         "clue-clinic"
@@ -16737,17 +18854,23 @@
     {
       "indicator": "voiding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "voids",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -16783,6 +18906,7 @@
       "indicator": "wanting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -16812,9 +18936,12 @@
     {
       "indicator": "wants",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -16838,9 +18965,12 @@
     {
       "indicator": "wasted",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -16856,9 +18986,12 @@
     {
       "indicator": "wastes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -16867,11 +19000,13 @@
       "indicator": "wasting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
-        "145 general deletion indicators"
+        "145 general deletion indicators",
+        "expulsion"
       ],
       "notes": []
     },
@@ -16935,6 +19070,7 @@
       "indicator": "wingless",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptipedia",
         "unscramblerer",
@@ -16942,7 +19078,8 @@
       ],
       "categories": [
         "24 first and last letter deletion indicators",
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -16990,6 +19127,16 @@
       "notes": []
     },
     {
+      "indicator": "wiped",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "wiped from",
       "sources": [
         "clue-clinic"
@@ -17002,9 +19149,12 @@
     {
       "indicator": "wiped out",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "departure"
+      ],
       "notes": []
     },
     {
@@ -17020,9 +19170,12 @@
     {
       "indicator": "wipes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -17030,9 +19183,12 @@
     {
       "indicator": "wipes out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]
@@ -17041,9 +19197,12 @@
       "indicator": "wiping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -17058,9 +19217,12 @@
       "indicator": "wiping out",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
@@ -17098,10 +19260,12 @@
     {
       "indicator": "with heart void",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "reduction &#8211; middle"
+        "reduction &#8211; middle",
+        "remove: middle letters"
       ],
       "notes": []
     },
@@ -17189,6 +19353,46 @@
       "notes": []
     },
     {
+      "indicator": "withdrawing",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "withdrawn",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "withdraws",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "withheld",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "withheld by",
       "sources": [
         "clue-clinic"
@@ -17243,6 +19447,7 @@
       "indicator": "without",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -17253,6 +19458,7 @@
       ],
       "categories": [
         "145 general deletion indicators",
+        "expulsion",
         "most common deletion indicators"
       ],
       "notes": []
@@ -17334,12 +19540,14 @@
       "indicator": "without limits",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
       "categories": [
-        "reduction &#8211; both ends"
+        "reduction &#8211; both ends",
+        "remove: both ends"
       ],
       "notes": []
     },
@@ -17408,6 +19616,16 @@
       "notes": []
     },
     {
+      "indicator": "won't have",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "expulsion"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "won't start",
       "sources": [
         "wordsup"
@@ -17432,6 +19650,16 @@
       "notes": []
     },
     {
+      "indicator": "yielded",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "departure"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "yielded by",
       "sources": [
         "clue-clinic"
@@ -17444,17 +19672,23 @@
     {
       "indicator": "yielding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": []
     },
     {
       "indicator": "yields",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "expulsion"
+      ],
       "notes": [
         "alternative"
       ]

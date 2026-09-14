@@ -19,6 +19,7 @@ abrupt
 abruptly
 absconding
 absconding from
+absconds
 absconds from
 absence
 absent
@@ -63,6 +64,7 @@ avoiding outsiders
 avoids
 away
 away from
+axed
 axed by
 axes
 axing
@@ -73,6 +75,7 @@ backless
 backs off
 ban
 banish
+banished
 banished by
 banished from
 banishes
@@ -118,11 +121,13 @@ binned by
 binning
 bins
 bitten off
+blanked out
 blanked out by
 blanking out
 blanks out
 blocking out
 blots
+blotted out
 blotted out by
 blotting
 blow
@@ -132,7 +137,9 @@ blowing top
 blown by
 blows
 blues
+bolting
 bolting from
+bolts
 bolts from
 bones
 booted out
@@ -140,6 +147,7 @@ borders
 both
 bottom cut off
 bottomless
+bounced
 bounced by
 bounces
 bouncing
@@ -147,10 +155,14 @@ boundaries
 boundless
 breaking
 breaking free of
+breaking loose
 breaking loose from
+breaking out
 breaking out from
 breaks
 breaks free of
+breaks loose
+breaks out
 brief
 briefly
 bringing out
@@ -161,6 +173,7 @@ brushing aside
 brushing off
 bulk of
 bumping
+buried
 buried by
 buries
 burning old
@@ -173,6 +186,7 @@ but not
 but not the finish
 butt out
 bypass
+bypassed
 bypassed by
 bypasses
 bypassing
@@ -187,6 +201,7 @@ cap off
 carried off
 case
 case dismissed
+cashiered
 cashiered by
 cashiered from
 cashiers
@@ -198,6 +213,7 @@ casting off
 casting out
 casts out
 caught out
+ceded
 ceded by
 cedes
 ceding
@@ -220,6 +236,7 @@ chopping
 chopping off tails
 chops
 chuck
+chucked (out)
 chucked by
 chucked out by
 chucking (out)
@@ -231,6 +248,7 @@ clear of
 cleared
 cleared from
 cleared of
+cleared out
 cleared out from
 clearing away
 cleft by
@@ -240,14 +258,17 @@ clipped
 clobbered
 closing
 coat
+comes out
 comes out of
 coming in
 coming off
+coming out
 coming out of
 coming to a premature stop
 commencement
 commencing
 completely
+concealed
 concealed by
 concealing
 conceals
@@ -256,6 +277,7 @@ conceded by
 concedes
 conceding
 conceding to
+consumed
 consumed in
 content to be left
 content to leave
@@ -265,7 +287,9 @@ contract
 contracted
 core
 cored
+covered
 covered in
+covered up
 covered up by
 covering
 covering head(s)
@@ -285,6 +309,7 @@ cut
 cut by
 cut from
 cut off
+cut out
 cut out of
 cut short
 cuts
@@ -297,18 +322,22 @@ debts written off
 decapitate
 decapitated
 decapitation
+declined
 declined by
 declines
 declining
+deducted
 deducted from
 defaced
 deficient in
 deficit
 defunct
 delete
+deleted
 deleted from
 deletes
 deleting
+delivered
 delivered from
 delivering
 delivers
@@ -320,6 +349,7 @@ departing
 departs
 departure of
 deport
+deported
 deported from
 deporting
 deports
@@ -376,6 +406,7 @@ discovered
 disemboweled
 disembowelled
 disengaged
+disgorged
 disgorged by
 disgorged from
 disgorges
@@ -393,9 +424,11 @@ dismissed from
 dismisses
 dismisses good
 dismissing
+disowned
 disowned by
 disowning
 disowns
+dispatched
 dispatched by
 dispatches
 dispatching
@@ -407,6 +440,7 @@ dispersing
 displace
 displacing
 dispose
+disposed of
 disposed of by
 disposes of
 disposing
@@ -431,6 +465,7 @@ dodged by
 dodges
 dodging
 does not require
+doesn't close
 doesn’t close
 doesn’t enjoy
 doffed
@@ -438,12 +473,15 @@ doing duty
 don't start
 downing
 drained from
+draining
+drains
 draw off
 drawn
 drawn from centre
 drifting away
 driven away
 driven from
+driven out
 driven out by
 drives out
 driving out
@@ -474,22 +512,26 @@ dumping
 dumps
 early
 early closing
+eclipsed
 eclipsed by
 eclipses
 eclipsing
 edges
 edges away
 edges away from
+effused
 effuses from
 effusing from
 ejaculates
 ejaculating
 eject
+ejected
 ejected by
 ejected from
 ejecting
 ejects
 elided
+eliminated
 eliminated by
 eliminated from
 eliminates
@@ -500,10 +542,12 @@ eludes
 eluding
 emerges
 emerges from
+emerging
 emerging from
 emigrate
 emission
 emits
+emitted
 emitted by
 emitted from
 emitting
@@ -529,6 +573,7 @@ escaped by
 escapes
 escaping
 eschew
+eschewed
 eschewed by
 eschewing
 eschews
@@ -565,6 +610,7 @@ excluding
 exclusive of
 excreting
 exhausts
+exiled
 exiled by
 exiled from
 exiles
@@ -573,6 +619,7 @@ exit left
 exiting
 exits
 expel
+expelled
 expelled by
 expelled from
 expelling
@@ -583,6 +630,7 @@ export
 exposed
 exposing
 express
+expressed
 expressed by
 expresses
 expressing
@@ -601,6 +649,7 @@ extreme
 extreme elements
 extremely
 extremely deficient
+extruded
 extruded from
 extrudes
 extruding
@@ -656,6 +705,7 @@ fleeced of
 fleeing
 flees
 flies
+flushed
 flushed from
 flushes
 flushing
@@ -737,6 +787,7 @@ has lost tail
 has no
 has no tips
 has taken
+hasn't
 hasn’t
 having
 having abandoned
@@ -842,6 +893,7 @@ interminable
 interminably
 internal parts
 internally
+internals
 internals of
 interruptus
 introduction
@@ -850,12 +902,15 @@ is cleared
 is lost
 is not shown
 is scrapped
+isn't available
 isn’t available to
 isn’t enjoyed by
+isolated
 isolated by
 isolated from
 isolates
 isolating
+jettisoned
 jettisoned by
 jettisoned from
 jettisoning
@@ -866,15 +921,18 @@ junks
 just a bit nibbled off
 just all the contents
 kick
+kicked out
 kicked out by
 kicked out of
 kicking heels
 kicking out
 kicks out
+killed
 killed by
 killing
 kills
 king set free
+knocked back
 knocked back by
 knocked off
 knocked out
@@ -898,6 +956,7 @@ lacking name
 lacking time
 lacking wings
 lacks
+laid aside
 laid aside by
 laid bare
 laid off
@@ -916,6 +975,7 @@ leader taken off
 leader(s) kicked out
 leaderless
 leaders getting ignored
+leaked
 leaked by
 leaked from
 leaking
@@ -940,11 +1000,13 @@ lessened by
 let out
 let out by
 let out from
+let slip
 let slip by
 lets out
 lets slip
 letting out
 letting slip
+liberated
 liberated by
 liberated from
 liberates
@@ -1009,6 +1071,7 @@ mislaying
 mislays
 miss
 missed
+missed out
 missed out by
 misses
 misses out
@@ -1143,6 +1206,7 @@ now out of
 nowhere to be seen
 nucleus
 nude
+obliterated
 obliterated by
 obliterates
 obliterating
@@ -1185,6 +1249,7 @@ originally dismissed
 originally out
 oust
 oust leader
+ousted
 ousted from
 ousting
 ousting its leader
@@ -1223,6 +1288,7 @@ partly reduced
 parts from
 parts with
 passed
+passed over
 passed over by
 passes
 passes over
@@ -1250,9 +1316,12 @@ primarily deficient
 pruned
 pulled out
 pulled out of
+pulling out
 pulling out of
+pulls out
 pulls out of
 put aside
+put away
 put away by
 put off
 put out
@@ -1269,7 +1338,9 @@ quell
 quite
 quits
 quitting
+racing
 rear end missing
+rebuffed
 rebuffed by
 rebuffing
 rebuffs
@@ -1295,12 +1366,14 @@ released at
 released from
 releases
 releasing
+relegated
 relegated from
 relegates
 relegating
 relieved of
 relieving
 relinquish
+relinquished
 relinquished by
 relinquishes
 relinquishing
@@ -1322,6 +1395,7 @@ removing jacket
 rendering
 renders
 renounce
+renounced
 renounced by
 renounces
 renouncing
@@ -1343,6 +1417,7 @@ rind
 rip off
 ripping off
 robbed of
+rubbed out
 rubbed out by
 rubbing
 rubbing out
@@ -1366,10 +1441,12 @@ sawn-off
 scantily
 scoffed
 score
+scored
 scored by
 scores
 scoring
 scrap
+scrapped
 scrapped by
 scrapping
 scraps
@@ -1388,6 +1465,7 @@ scratching half
 scratching head
 scratching head in horror
 scratching head(s)
+screened
 screened by
 screened in
 screening
@@ -1405,6 +1483,7 @@ send out first
 sending out
 sends out
 sent off
+sent out
 sent out by
 sent out from
 separated from
@@ -1449,6 +1528,7 @@ shortly
 shot
 shot of
 shoulders
+shoved out
 shoved out by
 shoves out
 shoving out
@@ -1482,6 +1562,7 @@ skips
 skirts
 slash
 smashed
+snatched
 snatched from
 snub
 snubbed
@@ -1493,6 +1574,7 @@ spared
 specific
 spending
 spends
+spent
 spent by
 spew
 spilling
@@ -1502,7 +1584,9 @@ spills from
 spilt
 spilt by
 spineless
+spirited away
 spirited away from
+splits
 splits from
 splitting
 splitting from
@@ -1510,6 +1594,7 @@ spurn
 spurned by
 spurning
 spurns
+squeezed out
 squeezed out by
 squeezes out
 squeezing out
@@ -1524,6 +1609,7 @@ starts failing
 stays out
 steering clear of
 steers clear of
+stifled
 stifled by
 stifles
 stifling
@@ -1534,6 +1620,7 @@ stoned
 stood down
 stopped short
 stopping for
+stricken
 stricken by
 strike
 strike head
@@ -1570,6 +1657,7 @@ suppresses
 suppressing
 surface
 surrender
+surrendered
 surrendered by
 surrendering
 surrenders
@@ -1589,6 +1677,7 @@ take off coat
 taken
 taken from
 taken off
+taken out
 taken out of
 takes out
 taking
@@ -1679,6 +1768,7 @@ topped and tailed
 topping
 toppled
 torn off
+torn out
 torn out from
 torn out of
 tossing
@@ -1719,10 +1809,12 @@ unfilled
 unfinished
 unframed
 uninitiated
+unleashed
 unleashed by
 unleashes
 unleashing
 unlimited
+unloaded
 unloaded by
 unloaded from
 unloading
@@ -1746,6 +1838,7 @@ unstarted
 unused
 unused in
 unveiled
+unwanted
 unwanted by
 unwelcome
 unwrap
@@ -1760,14 +1853,17 @@ vacation
 vacuous
 vacuum
 vanish
+vanished
 vanished by
 vanishes
 vanishes from
 vanishing
 vanishing from
+vanquished
 vanquished by
 vanquishes
 vanquishing
+vented
 vented by
 venting
 vents
@@ -1775,6 +1871,7 @@ very short
 vetoed
 virtually
 void
+voided
 voided by
 voiding
 voids
@@ -1804,6 +1901,7 @@ wings off
 winking at
 wipe
 wipe bottom
+wiped
 wiped from
 wiped out
 wiped out by
@@ -1827,6 +1925,10 @@ with one abstention
 with one single out
 withdraw
 withdrawals
+withdrawing
+withdrawn
+withdraws
+withheld
 withheld by
 withheld from
 withhold
@@ -1851,9 +1953,11 @@ without origin
 without oxygen
 without secrets now and then
 without sides
+won't have
 won't start
 won’t have
 written out
+yielded
 yielded by
 yielding
 yields

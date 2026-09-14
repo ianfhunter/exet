@@ -2,9 +2,10 @@
   "type": "juxtaposition",
   "title": "Juxtaposition indicators",
   "built": "2026-09-14",
-  "count": 125,
+  "count": 130,
   "sources": [
     "clue-clinic",
+    "clue-clinic-lexicon",
     "curated-extras"
   ],
   "entries": [
@@ -12,9 +13,11 @@
       "indicator": "above",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -117,9 +120,11 @@
       "indicator": "after",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -146,9 +151,11 @@
       "indicator": "ahead of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -176,9 +183,11 @@
       "indicator": "and",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -190,9 +199,11 @@
     {
       "indicator": "at end of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -212,9 +223,11 @@
     {
       "indicator": "backing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -226,9 +239,11 @@
     {
       "indicator": "backs",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -241,9 +256,11 @@
     {
       "indicator": "bearing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -255,9 +272,11 @@
     {
       "indicator": "bears",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -271,9 +290,11 @@
       "indicator": "before",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -286,9 +307,11 @@
       "indicator": "behind",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -301,9 +324,11 @@
       "indicator": "below",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -316,9 +341,11 @@
       "indicator": "beneath",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -361,9 +388,11 @@
     {
       "indicator": "beyond",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -375,9 +404,11 @@
     {
       "indicator": "bolstered by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -389,9 +420,11 @@
     {
       "indicator": "bolstering",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -403,9 +436,11 @@
     {
       "indicator": "bolsters",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -445,9 +480,11 @@
     {
       "indicator": "borne by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before",
         "juxtaposition"
       ],
       "notes": [
@@ -474,9 +511,11 @@
     {
       "indicator": "capped by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -488,9 +527,11 @@
     {
       "indicator": "capping",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -502,9 +543,11 @@
     {
       "indicator": "caps",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -515,11 +558,23 @@
       ]
     },
     {
-      "indicator": "carries",
+      "indicator": "carried by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "carries",
+      "sources": [
+        "clue-clinic",
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -532,9 +587,11 @@
     {
       "indicator": "carrying",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -585,11 +642,23 @@
       ]
     },
     {
-      "indicator": "confronting",
+      "indicator": "confronted by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "confronting",
+      "sources": [
+        "clue-clinic",
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "before (a)",
         "juxtaposition"
       ],
       "notes": [
@@ -601,9 +670,11 @@
     {
       "indicator": "confronts",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a)",
         "juxtaposition"
       ],
       "notes": [
@@ -616,9 +687,11 @@
     {
       "indicator": "covered by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -631,9 +704,11 @@
     {
       "indicator": "covered with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -659,9 +734,11 @@
     {
       "indicator": "covers",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -674,9 +751,11 @@
     {
       "indicator": "crowned by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -688,9 +767,11 @@
     {
       "indicator": "crowning",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -702,9 +783,11 @@
     {
       "indicator": "crowns",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -713,6 +796,16 @@
         "down",
         "standard"
       ]
+    },
+    {
+      "indicator": "faced by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "after (a)"
+      ],
+      "notes": []
     },
     {
       "indicator": "faced with",
@@ -731,9 +824,11 @@
     {
       "indicator": "faces",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a)",
         "juxtaposition"
       ],
       "notes": [
@@ -747,9 +842,11 @@
       "indicator": "facing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "before (a)",
         "juxtaposition"
       ],
       "notes": [
@@ -762,9 +859,11 @@
       "indicator": "followed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -777,9 +876,11 @@
       "indicator": "following",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -791,9 +892,11 @@
     {
       "indicator": "follows",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -806,9 +909,11 @@
     {
       "indicator": "fronting",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a)",
         "juxtaposition"
       ],
       "notes": [
@@ -820,9 +925,11 @@
     {
       "indicator": "fronts",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a)",
         "juxtaposition"
       ],
       "notes": [
@@ -835,9 +942,11 @@
     {
       "indicator": "given",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -849,9 +958,11 @@
     {
       "indicator": "headed by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -863,9 +974,11 @@
     {
       "indicator": "heading",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -877,9 +990,11 @@
     {
       "indicator": "heads",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -892,9 +1007,11 @@
     {
       "indicator": "held up by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -906,9 +1023,11 @@
     {
       "indicator": "heralded by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -920,9 +1039,11 @@
     {
       "indicator": "heralding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -934,9 +1055,11 @@
     {
       "indicator": "heralds",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -949,9 +1072,11 @@
     {
       "indicator": "holding up",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -963,9 +1088,11 @@
     {
       "indicator": "holds up",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -979,9 +1106,11 @@
       "indicator": "in front of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "before (a)",
         "juxtaposition"
       ],
       "notes": [
@@ -994,9 +1123,11 @@
     {
       "indicator": "inferior to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1008,9 +1139,11 @@
     {
       "indicator": "introduces",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1023,9 +1156,11 @@
     {
       "indicator": "introducing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1061,9 +1196,11 @@
     {
       "indicator": "leading",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1075,9 +1212,11 @@
     {
       "indicator": "leads",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1090,9 +1229,11 @@
     {
       "indicator": "led by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1183,9 +1324,11 @@
     {
       "indicator": "on top of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1213,9 +1356,11 @@
     {
       "indicator": "past",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1228,9 +1373,11 @@
       "indicator": "plus",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1250,9 +1397,11 @@
     {
       "indicator": "precedes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1266,9 +1415,11 @@
       "indicator": "preceding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1280,9 +1431,11 @@
     {
       "indicator": "prior to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1292,11 +1445,23 @@
       ]
     },
     {
-      "indicator": "rides",
+      "indicator": "ridden by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "rides",
+      "sources": [
+        "clue-clinic",
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1309,9 +1474,11 @@
     {
       "indicator": "riding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1321,11 +1488,23 @@
       ]
     },
     {
-      "indicator": "shadowing",
+      "indicator": "shadowed by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "shadowing",
+      "sources": [
+        "clue-clinic",
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "after (a)",
         "juxtaposition"
       ],
       "notes": [
@@ -1337,9 +1516,11 @@
     {
       "indicator": "shadows",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a)",
         "juxtaposition"
       ],
       "notes": [
@@ -1352,9 +1533,11 @@
     {
       "indicator": "superior to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1366,9 +1549,11 @@
     {
       "indicator": "supported by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1380,9 +1565,11 @@
     {
       "indicator": "supporting",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1394,9 +1581,11 @@
     {
       "indicator": "supports",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1409,9 +1598,11 @@
     {
       "indicator": "tailing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1423,9 +1614,11 @@
     {
       "indicator": "tails",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1454,9 +1647,11 @@
     {
       "indicator": "tipped by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1469,9 +1664,11 @@
     {
       "indicator": "tipped with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1483,9 +1680,11 @@
     {
       "indicator": "tipping",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1497,9 +1696,11 @@
     {
       "indicator": "tips",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1540,9 +1741,11 @@
     {
       "indicator": "topped by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1555,9 +1758,11 @@
     {
       "indicator": "topped with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1569,9 +1774,11 @@
     {
       "indicator": "topping",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1583,9 +1790,11 @@
     {
       "indicator": "tops",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1599,9 +1808,11 @@
       "indicator": "under",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1613,9 +1824,11 @@
     {
       "indicator": "underneath",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1628,9 +1841,11 @@
     {
       "indicator": "underpinned by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1642,9 +1857,11 @@
     {
       "indicator": "underpinning",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1656,9 +1873,11 @@
     {
       "indicator": "underpins",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1672,9 +1891,11 @@
       "indicator": "upon",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
+        "before (d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1686,9 +1907,11 @@
     {
       "indicator": "ushered in by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "after (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1700,9 +1923,11 @@
     {
       "indicator": "ushering in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [
@@ -1714,9 +1939,11 @@
     {
       "indicator": "ushers in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "before (a/d)",
         "juxtaposition"
       ],
       "notes": [

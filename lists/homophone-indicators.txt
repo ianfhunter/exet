@@ -104,6 +104,7 @@ being spoken
 being talked about
 being vocal
 being voiced
+bellowed
 broadcast
 broadcasting
 broadcasts
@@ -156,6 +157,7 @@ could be heard
 could be said
 could one say
 could sound right for
+cried
 cry of
 crying
 declaimed
@@ -318,6 +320,7 @@ in hearing
 in my ear
 in need of articulation
 in oral exam
+in podcast
 in proclamation
 in pronouncing
 in pronunciation
@@ -472,6 +475,7 @@ picked up from
 picked up on the mike
 picking up
 picks
+podcaster's
 podcaster’s
 posed
 poured out
@@ -549,6 +553,7 @@ said to make
 say
 say(s)
 saying
+screamed
 should be announced
 should be heard
 shout
@@ -556,6 +561,7 @@ shouted
 shouted out
 shouting
 shouts
+shrieked
 sing
 sing(s)
 singing

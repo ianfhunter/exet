@@ -2,9 +2,10 @@
   "type": "containment",
   "title": "Containment indicators",
   "built": "2026-08-12",
-  "count": 3961,
+  "count": 3967,
   "sources": [
     "clue-clinic",
+    "clue-clinic-lexicon",
     "crossword-unclued",
     "cryptics-georgeho",
     "cryptipedia",
@@ -163,6 +164,7 @@
       "indicator": "aboard",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -180,6 +182,7 @@
       "indicator": "about",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -264,6 +267,7 @@
       "indicator": "absorbed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -283,6 +287,7 @@
       "indicator": "absorbing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -305,6 +310,7 @@
       "indicator": "absorbs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -343,6 +349,7 @@
       "indicator": "accepted by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -370,6 +377,7 @@
       "indicator": "accepting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -392,6 +400,7 @@
       "indicator": "accepts",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -451,6 +460,7 @@
       "indicator": "accommodated by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -470,6 +480,7 @@
       "indicator": "accommodates",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -483,6 +494,7 @@
       "indicator": "accommodating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -737,6 +749,7 @@
       "indicator": "admits",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -767,6 +780,7 @@
       "indicator": "admitted by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -786,6 +800,7 @@
       "indicator": "admitting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -808,6 +823,7 @@
       "indicator": "adopted by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -819,6 +835,7 @@
       "indicator": "adopting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -833,6 +850,7 @@
       "indicator": "adopts",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1107,6 +1125,7 @@
       "indicator": "amid",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -1122,6 +1141,7 @@
       "indicator": "amidst",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -1141,6 +1161,7 @@
       "indicator": "among",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -1155,11 +1176,13 @@
     {
       "indicator": "amongst",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
+        "insertion",
         "list of 57 contents indicators",
         "most common contents indicators"
       ],
@@ -1331,6 +1354,7 @@
       "indicator": "apprehended by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1342,6 +1366,7 @@
       "indicator": "apprehending",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1352,7 +1377,8 @@
     {
       "indicator": "apprehends",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -1405,6 +1431,7 @@
       "indicator": "around",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -1432,6 +1459,7 @@
       "indicator": "arrested by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1451,6 +1479,7 @@
       "indicator": "arresting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1462,6 +1491,7 @@
       "indicator": "arrests",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1802,6 +1832,7 @@
       "indicator": "bagged by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1813,6 +1844,7 @@
       "indicator": "bagging",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -1827,6 +1859,7 @@
       "indicator": "bags",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1861,7 +1894,8 @@
     {
       "indicator": "bandaged by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -1872,6 +1906,7 @@
       "indicator": "bandages",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1885,6 +1920,7 @@
       "indicator": "bandaging",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -1990,6 +2026,7 @@
       "indicator": "bathed in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -2000,7 +2037,8 @@
     {
       "indicator": "bathes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -2012,7 +2050,8 @@
     {
       "indicator": "bathing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -2047,6 +2086,7 @@
       "indicator": "bearing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -2058,6 +2098,7 @@
       "indicator": "bears",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -2078,7 +2119,8 @@
     {
       "indicator": "bedded in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -2713,9 +2755,12 @@
     {
       "indicator": "beset",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "insertion"
+      ],
       "notes": []
     },
     {
@@ -2745,6 +2790,7 @@
       "indicator": "besets",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -2758,6 +2804,7 @@
       "indicator": "besetting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -2802,6 +2849,7 @@
       "indicator": "besieged by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -2813,6 +2861,7 @@
       "indicator": "besieges",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "unscramblerer",
         "wordsup"
@@ -2829,6 +2878,7 @@
       "indicator": "besieging",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
@@ -2849,7 +2899,8 @@
     {
       "indicator": "bestridden by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -2859,7 +2910,8 @@
     {
       "indicator": "bestrides",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -2871,7 +2923,8 @@
     {
       "indicator": "bestriding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -2913,6 +2966,7 @@
       "indicator": "binding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -2924,6 +2978,7 @@
       "indicator": "binds",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -2957,6 +3012,7 @@
       "indicator": "bites",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -2970,6 +3026,7 @@
       "indicator": "biting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -2989,6 +3046,7 @@
       "indicator": "bitten by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3016,6 +3074,7 @@
       "indicator": "blankets",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3059,6 +3118,7 @@
       "indicator": "blocked by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3070,6 +3130,7 @@
       "indicator": "blocking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -3082,6 +3143,7 @@
       "indicator": "blocks",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
@@ -3104,6 +3166,7 @@
       "indicator": "boarded by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3115,6 +3178,7 @@
       "indicator": "boarding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "solve-the-crossword",
@@ -3131,6 +3195,7 @@
       "indicator": "boards",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3169,7 +3234,8 @@
     {
       "indicator": "bones",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -3179,7 +3245,8 @@
     {
       "indicator": "bookends",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -3190,6 +3257,7 @@
       "indicator": "bordered by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3201,6 +3269,7 @@
       "indicator": "bordering",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3212,6 +3281,7 @@
       "indicator": "borders",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3241,6 +3311,7 @@
       "indicator": "bored by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3260,6 +3331,7 @@
       "indicator": "bores",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3273,6 +3345,7 @@
       "indicator": "boring",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3284,6 +3357,7 @@
       "indicator": "borne by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3302,7 +3376,8 @@
     {
       "indicator": "bottled by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -3321,6 +3396,7 @@
       "indicator": "bottles",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3334,6 +3410,7 @@
       "indicator": "bottling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3361,6 +3438,7 @@
       "indicator": "bound by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3388,6 +3466,7 @@
       "indicator": "bounded by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
@@ -3399,6 +3478,7 @@
       "indicator": "bounding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3409,7 +3489,8 @@
     {
       "indicator": "bounds",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -3454,6 +3535,7 @@
       "indicator": "boxed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3465,6 +3547,7 @@
       "indicator": "boxes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -3482,6 +3565,7 @@
       "indicator": "boxing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -3511,7 +3595,8 @@
     {
       "indicator": "bracketed by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -3522,6 +3607,7 @@
       "indicator": "bracketing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptipedia",
         "unscramblerer"
       ],
@@ -3535,6 +3621,7 @@
       "indicator": "brackets",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3870,7 +3957,8 @@
     {
       "indicator": "bunged by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -3880,7 +3968,8 @@
     {
       "indicator": "bunging",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -3890,7 +3979,8 @@
     {
       "indicator": "bungs",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -3929,6 +4019,7 @@
       "indicator": "buried in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -3956,6 +4047,7 @@
       "indicator": "buries",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4009,6 +4101,7 @@
       "indicator": "burying",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4214,7 +4307,8 @@
     {
       "indicator": "canned by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -4225,6 +4319,7 @@
       "indicator": "cans",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4332,6 +4427,7 @@
       "indicator": "captured by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4351,6 +4447,7 @@
       "indicator": "captures",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -4368,6 +4465,7 @@
       "indicator": "capturing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -4423,6 +4521,7 @@
       "indicator": "carried by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
@@ -4459,6 +4558,7 @@
       "indicator": "carries",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -4500,6 +4600,7 @@
       "indicator": "carrying",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -4553,7 +4654,8 @@
     {
       "indicator": "cased by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -4572,6 +4674,7 @@
       "indicator": "cases",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4585,6 +4688,7 @@
       "indicator": "casing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4632,6 +4736,7 @@
       "indicator": "catches",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -4649,6 +4754,7 @@
       "indicator": "catching",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -4685,6 +4791,7 @@
       "indicator": "caught by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4696,6 +4803,7 @@
       "indicator": "caught in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "solve-the-crossword"
@@ -4827,6 +4935,7 @@
       "indicator": "charged with",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4838,6 +4947,7 @@
       "indicator": "charges",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4851,6 +4961,7 @@
       "indicator": "charging",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4870,6 +4981,7 @@
       "indicator": "checked by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4881,6 +4993,7 @@
       "indicator": "checking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4900,6 +5013,7 @@
       "indicator": "checks",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4953,6 +5067,7 @@
       "indicator": "choked by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -4963,7 +5078,8 @@
     {
       "indicator": "chokes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -4976,6 +5092,7 @@
       "indicator": "choking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5084,6 +5201,7 @@
       "indicator": "circled by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5095,6 +5213,7 @@
       "indicator": "circles",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
@@ -5118,6 +5237,7 @@
       "indicator": "circling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -5182,7 +5302,8 @@
     {
       "indicator": "circumvented by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -5193,6 +5314,7 @@
       "indicator": "circumventing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5204,6 +5326,7 @@
       "indicator": "circumvents",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5233,6 +5356,7 @@
       "indicator": "clad in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5243,7 +5367,8 @@
     {
       "indicator": "clad with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -5256,6 +5381,7 @@
       "indicator": "cladding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5266,7 +5392,8 @@
     {
       "indicator": "clads",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -5319,6 +5446,7 @@
       "indicator": "clamped by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5330,6 +5458,7 @@
       "indicator": "clamping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5341,6 +5470,7 @@
       "indicator": "clamps",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5354,6 +5484,7 @@
       "indicator": "clasped by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5365,6 +5496,7 @@
       "indicator": "clasping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -5378,7 +5510,8 @@
     {
       "indicator": "clasps",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -5410,7 +5543,8 @@
     {
       "indicator": "clenched in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -5421,6 +5555,7 @@
       "indicator": "clenches",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5434,6 +5569,7 @@
       "indicator": "clenching",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5460,7 +5596,8 @@
     {
       "indicator": "clinging to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -5480,7 +5617,8 @@
     {
       "indicator": "clings to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -5498,7 +5636,8 @@
     {
       "indicator": "clipped by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -5508,7 +5647,8 @@
     {
       "indicator": "clipping",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -5519,6 +5659,7 @@
       "indicator": "clips",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5532,6 +5673,7 @@
       "indicator": "cloaked in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5543,6 +5685,7 @@
       "indicator": "cloaking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5553,7 +5696,8 @@
     {
       "indicator": "cloaks",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -5600,6 +5744,7 @@
       "indicator": "closed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5618,7 +5763,8 @@
     {
       "indicator": "closes in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -5639,6 +5785,7 @@
       "indicator": "closing in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5650,6 +5797,7 @@
       "indicator": "clothed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5661,6 +5809,7 @@
       "indicator": "clothed in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5674,6 +5823,7 @@
       "indicator": "clothes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5687,6 +5837,7 @@
       "indicator": "clothing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5736,6 +5887,7 @@
       "indicator": "clutched by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5747,6 +5899,7 @@
       "indicator": "clutches",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -5764,6 +5917,7 @@
       "indicator": "clutching",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -5786,6 +5940,7 @@
       "indicator": "coated in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5797,6 +5952,7 @@
       "indicator": "coated with",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5810,6 +5966,7 @@
       "indicator": "coating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5821,6 +5978,7 @@
       "indicator": "coats",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5866,6 +6024,7 @@
       "indicator": "collared by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5877,6 +6036,7 @@
       "indicator": "collaring",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -5888,6 +6048,7 @@
       "indicator": "collars",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6248,7 +6409,8 @@
     {
       "indicator": "compressed in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -6258,7 +6420,8 @@
     {
       "indicator": "compresses",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -6270,7 +6433,8 @@
     {
       "indicator": "compressing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -6280,7 +6444,8 @@
     {
       "indicator": "comprised by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -6424,7 +6589,8 @@
     {
       "indicator": "confined in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -6451,6 +6617,7 @@
       "indicator": "confines",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6464,6 +6631,7 @@
       "indicator": "confining",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6533,6 +6701,7 @@
       "indicator": "conserved by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6544,6 +6713,7 @@
       "indicator": "conserves",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6557,6 +6727,7 @@
       "indicator": "conserving",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6576,6 +6747,7 @@
       "indicator": "constrained by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6587,6 +6759,7 @@
       "indicator": "constraining",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6598,6 +6771,7 @@
       "indicator": "constrains",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6610,7 +6784,8 @@
     {
       "indicator": "constricted by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -6621,6 +6796,7 @@
       "indicator": "constricting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6631,7 +6807,8 @@
     {
       "indicator": "constricts",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -6661,6 +6838,7 @@
       "indicator": "consumed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6680,6 +6858,7 @@
       "indicator": "consumes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6693,6 +6872,7 @@
       "indicator": "consuming",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -6749,6 +6929,7 @@
       "indicator": "contained by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6760,6 +6941,7 @@
       "indicator": "contained in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6797,6 +6979,7 @@
       "indicator": "containing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -6823,6 +7006,7 @@
       "indicator": "contains",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
@@ -6961,6 +7145,7 @@
       "indicator": "controlled by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6972,6 +7157,7 @@
       "indicator": "controlling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -6982,7 +7168,8 @@
     {
       "indicator": "controls",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -7035,6 +7222,7 @@
       "indicator": "cops",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7062,6 +7250,7 @@
       "indicator": "cornered by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7073,6 +7262,7 @@
       "indicator": "cornering",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7083,7 +7273,8 @@
     {
       "indicator": "corners",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -7178,6 +7369,7 @@
       "indicator": "covered by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -7192,6 +7384,7 @@
       "indicator": "covered in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7253,6 +7446,7 @@
       "indicator": "covers",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "curated-extras",
@@ -7392,6 +7586,7 @@
       "indicator": "cramped by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7402,7 +7597,8 @@
     {
       "indicator": "cramping",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -7413,6 +7609,7 @@
       "indicator": "cramps",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7433,7 +7630,8 @@
     {
       "indicator": "crashed by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -7544,6 +7742,7 @@
       "indicator": "crossed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7555,6 +7754,7 @@
       "indicator": "crosses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -7569,6 +7769,7 @@
       "indicator": "crossing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7587,7 +7788,8 @@
     {
       "indicator": "crowded by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -7597,7 +7799,8 @@
     {
       "indicator": "crowded with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -7607,7 +7810,8 @@
     {
       "indicator": "crowding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment",
@@ -7618,7 +7822,8 @@
     {
       "indicator": "crowds",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment",
@@ -7666,6 +7871,7 @@
       "indicator": "crushed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7677,6 +7883,7 @@
       "indicator": "crushes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7690,6 +7897,7 @@
       "indicator": "crushing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7719,6 +7927,7 @@
       "indicator": "cuddled by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7729,7 +7938,8 @@
     {
       "indicator": "cuddles",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -7742,6 +7952,7 @@
       "indicator": "cuddling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7771,7 +7982,8 @@
     {
       "indicator": "curbed by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -7782,6 +7994,7 @@
       "indicator": "curbing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7793,6 +8006,7 @@
       "indicator": "curbs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7894,6 +8108,7 @@
       "indicator": "cuts",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -7915,6 +8130,7 @@
       "indicator": "cutting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -7985,7 +8201,8 @@
     {
       "indicator": "decked by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -7995,7 +8212,8 @@
     {
       "indicator": "decking",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -8005,7 +8223,8 @@
     {
       "indicator": "decks",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -8042,6 +8261,7 @@
       "indicator": "defended by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8053,6 +8273,7 @@
       "indicator": "defending",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8064,6 +8285,7 @@
       "indicator": "defends",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8206,6 +8428,7 @@
       "indicator": "detained by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8225,6 +8448,7 @@
       "indicator": "detaining",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8236,6 +8460,7 @@
       "indicator": "detains",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8265,6 +8490,7 @@
       "indicator": "devoured by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -8277,6 +8503,7 @@
       "indicator": "devouring",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -8292,6 +8519,7 @@
       "indicator": "devours",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8304,7 +8532,8 @@
     {
       "indicator": "digested by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -8315,6 +8544,7 @@
       "indicator": "digesting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8325,7 +8555,8 @@
     {
       "indicator": "digests",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -8594,6 +8825,7 @@
       "indicator": "divided by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8605,6 +8837,7 @@
       "indicator": "divides",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8618,6 +8851,7 @@
       "indicator": "dividing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -8713,7 +8947,8 @@
     {
       "indicator": "done up in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -8723,7 +8958,8 @@
     {
       "indicator": "done up with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -8752,6 +8988,7 @@
       "indicator": "dons",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8762,9 +8999,11 @@
     {
       "indicator": "downed by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "containment",
         "insertion"
       ],
       "notes": []
@@ -8773,6 +9012,7 @@
       "indicator": "downing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8783,7 +9023,8 @@
     {
       "indicator": "downs",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -8796,6 +9037,7 @@
       "indicator": "drawing in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -8815,7 +9057,8 @@
     {
       "indicator": "drawn in by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -8834,6 +9077,7 @@
       "indicator": "draws in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8902,7 +9146,8 @@
     {
       "indicator": "drilled by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -8913,6 +9158,7 @@
       "indicator": "drilling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8923,7 +9169,8 @@
     {
       "indicator": "drills",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -8944,6 +9191,7 @@
       "indicator": "drinking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -8963,6 +9211,7 @@
       "indicator": "drinks",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9063,9 +9312,12 @@
     {
       "indicator": "drunk",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "insertion"
+      ],
       "notes": []
     },
     {
@@ -9168,6 +9420,7 @@
       "indicator": "eaten by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9187,6 +9440,7 @@
       "indicator": "eating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -9209,6 +9463,7 @@
       "indicator": "eats",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9237,7 +9492,8 @@
     {
       "indicator": "edged by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -9247,7 +9503,8 @@
     {
       "indicator": "edges",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -9260,6 +9517,7 @@
       "indicator": "edging",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9327,6 +9585,7 @@
       "indicator": "embedded in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9360,6 +9619,7 @@
       "indicator": "embodied by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9371,6 +9631,7 @@
       "indicator": "embodies",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9384,6 +9645,7 @@
       "indicator": "embodying",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -9431,6 +9693,7 @@
       "indicator": "embraced by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -9443,6 +9706,7 @@
       "indicator": "embraces",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "unscramblerer"
@@ -9459,6 +9723,7 @@
       "indicator": "embracing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -9590,6 +9855,7 @@
       "indicator": "encapsulated by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9609,6 +9875,7 @@
       "indicator": "encapsulates",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9622,6 +9889,7 @@
       "indicator": "encapsulating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9633,6 +9901,7 @@
       "indicator": "encased in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9641,12 +9910,25 @@
       "notes": []
     },
     {
+      "indicator": "encases",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "containment"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "encasing",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "containment"
+      ],
       "notes": []
     },
     {
@@ -9676,6 +9958,7 @@
       "indicator": "encircled by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9687,6 +9970,7 @@
       "indicator": "encircles",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -9704,6 +9988,7 @@
       "indicator": "encircling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -9736,6 +10021,7 @@
       "indicator": "enclosed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -9747,7 +10033,8 @@
     {
       "indicator": "enclosed in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -9760,6 +10047,7 @@
       "indicator": "encloses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9773,6 +10061,7 @@
       "indicator": "enclosing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -9795,7 +10084,8 @@
     {
       "indicator": "encompassed by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -9806,6 +10096,7 @@
       "indicator": "encompasses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9819,6 +10110,7 @@
       "indicator": "encompassing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -9841,6 +10133,7 @@
       "indicator": "encrusted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9851,7 +10144,8 @@
     {
       "indicator": "encrusting",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -9861,7 +10155,8 @@
     {
       "indicator": "encrusts",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -9903,7 +10198,8 @@
     {
       "indicator": "enfolded by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -9913,7 +10209,8 @@
     {
       "indicator": "enfolded in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -9926,6 +10223,7 @@
       "indicator": "enfolding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
@@ -9939,6 +10237,7 @@
       "indicator": "enfolds",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "unscramblerer",
         "wordsup"
@@ -9963,6 +10262,7 @@
       "indicator": "engaged by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -9976,6 +10276,7 @@
       "indicator": "engaged in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -9988,6 +10289,7 @@
       "indicator": "engages",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10001,6 +10303,7 @@
       "indicator": "engaging",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10084,6 +10387,7 @@
       "indicator": "engulfed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10103,6 +10407,7 @@
       "indicator": "engulfing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -10117,6 +10422,7 @@
       "indicator": "engulfs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10169,10 +10475,31 @@
     {
       "indicator": "enrobed in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "enrobes",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "containment"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "enrobing",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "containment"
       ],
       "notes": []
     },
@@ -10187,7 +10514,8 @@
     {
       "indicator": "enshrined in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -10197,7 +10525,8 @@
     {
       "indicator": "enshrines",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -10209,7 +10538,8 @@
     {
       "indicator": "enshrining",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -10219,7 +10549,8 @@
     {
       "indicator": "enshrouded",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -10229,7 +10560,8 @@
     {
       "indicator": "enshrouding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -10239,7 +10571,8 @@
     {
       "indicator": "enshrouds",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -10267,7 +10600,8 @@
     {
       "indicator": "ensnared in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -10278,6 +10612,7 @@
       "indicator": "ensnares",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10291,7 +10626,38 @@
       "indicator": "ensnaring",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
+      ],
+      "categories": [
+        "containment"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "enswathed in",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "insertion"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "enswathes",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "containment"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "enswathing",
+      "sources": [
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -10334,6 +10700,7 @@
       "indicator": "entered by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10361,6 +10728,7 @@
       "indicator": "entering",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -10387,6 +10755,7 @@
       "indicator": "enters",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10416,6 +10785,7 @@
       "indicator": "entertained by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10427,6 +10797,7 @@
       "indicator": "entertaining",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -10441,6 +10812,7 @@
       "indicator": "entertains",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10462,6 +10834,7 @@
       "indicator": "enthralled by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10473,6 +10846,7 @@
       "indicator": "enthralling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -10487,6 +10861,7 @@
       "indicator": "enthralls",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10570,6 +10945,7 @@
       "indicator": "enveloped by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -10597,6 +10973,7 @@
       "indicator": "enveloping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -10613,6 +10990,7 @@
       "indicator": "envelops",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -10854,6 +11232,7 @@
       "indicator": "externally",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -11038,6 +11417,7 @@
       "indicator": "fed to",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -11089,6 +11469,7 @@
       "indicator": "fenced by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -11100,6 +11481,7 @@
       "indicator": "fences",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -11113,6 +11495,7 @@
       "indicator": "fencing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -11167,6 +11550,7 @@
       "indicator": "filled by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -11204,6 +11588,7 @@
       "indicator": "filled with",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -11223,6 +11608,7 @@
       "indicator": "filling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -11257,6 +11643,7 @@
       "indicator": "fills",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -11446,6 +11833,7 @@
       "indicator": "flanked by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -11457,6 +11845,7 @@
       "indicator": "flanking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -11471,6 +11860,7 @@
       "indicator": "flanks",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -11893,6 +12283,7 @@
       "indicator": "found in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -11983,6 +12374,7 @@
       "indicator": "framed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -11995,6 +12387,7 @@
       "indicator": "frames",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -12012,6 +12405,7 @@
       "indicator": "framing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -12041,7 +12435,8 @@
     {
       "indicator": "fringed with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -12051,7 +12446,8 @@
     {
       "indicator": "fringes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -12064,6 +12460,7 @@
       "indicator": "fringing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -12133,6 +12530,7 @@
       "indicator": "full of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -12282,7 +12680,8 @@
     {
       "indicator": "gatecrashed by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -12535,7 +12934,8 @@
     {
       "indicator": "gets hold of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -12564,6 +12964,7 @@
       "indicator": "gets into",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -12634,6 +13035,7 @@
       "indicator": "getting about",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -12647,6 +13049,7 @@
       "indicator": "getting around",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -12707,6 +13110,7 @@
       "indicator": "getting hold of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -12743,6 +13147,7 @@
       "indicator": "getting into",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras"
@@ -12870,6 +13275,7 @@
       "indicator": "girdles",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -12977,7 +13383,8 @@
     {
       "indicator": "gloves",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -13019,7 +13426,8 @@
     {
       "indicator": "gobbled by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -13038,6 +13446,7 @@
       "indicator": "gobbles",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -13051,6 +13460,7 @@
       "indicator": "gobbling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -13113,6 +13523,7 @@
       "indicator": "goes into",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -13142,6 +13553,7 @@
       "indicator": "going about",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -13164,6 +13576,7 @@
       "indicator": "going around",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -13200,6 +13613,7 @@
       "indicator": "going into",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -13325,6 +13739,7 @@
       "indicator": "grabbed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -13344,6 +13759,7 @@
       "indicator": "grabbing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -13360,6 +13776,7 @@
       "indicator": "grabs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -13438,6 +13855,7 @@
       "indicator": "grasped by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -13449,6 +13867,7 @@
       "indicator": "grasping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -13465,6 +13884,7 @@
       "indicator": "grasps",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
@@ -13534,6 +13954,7 @@
       "indicator": "gripped by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -13545,6 +13966,7 @@
       "indicator": "gripping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -13559,6 +13981,7 @@
       "indicator": "grips",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -13612,6 +14035,7 @@
       "indicator": "guarded by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -13623,6 +14047,7 @@
       "indicator": "guarding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -13635,6 +14060,7 @@
       "indicator": "guards",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -13647,7 +14073,8 @@
     {
       "indicator": "gulped by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -13658,6 +14085,7 @@
       "indicator": "gulping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -13672,6 +14100,7 @@
       "indicator": "gulps",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -13836,7 +14265,8 @@
     {
       "indicator": "harboured by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -13847,6 +14277,7 @@
       "indicator": "harbouring",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -13865,6 +14296,7 @@
       "indicator": "harbours",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "unscramblerer"
@@ -13913,6 +14345,7 @@
       "indicator": "has",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -14086,6 +14519,7 @@
       "indicator": "having",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -14635,7 +15069,8 @@
     {
       "indicator": "hedged by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -14735,6 +15170,7 @@
       "indicator": "held by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -14771,6 +15207,7 @@
       "indicator": "held in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -14850,6 +15287,7 @@
       "indicator": "hemming",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -14868,7 +15306,8 @@
     {
       "indicator": "hems",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -14947,6 +15386,7 @@
       "indicator": "hidden by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -14975,6 +15415,7 @@
       "indicator": "hides",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -14988,6 +15429,7 @@
       "indicator": "hiding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -15002,6 +15444,7 @@
       "indicator": "hiding in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15047,6 +15490,7 @@
       "indicator": "hoarded by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15058,6 +15502,7 @@
       "indicator": "hoarding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15069,6 +15514,7 @@
       "indicator": "hoards",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15126,6 +15572,7 @@
       "indicator": "holding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "daily-cryptic",
@@ -15175,6 +15622,7 @@
       "indicator": "holds",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -15249,7 +15697,8 @@
     {
       "indicator": "hoops",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -15292,6 +15741,7 @@
       "indicator": "hosted by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15303,6 +15753,7 @@
       "indicator": "hosting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -15317,6 +15768,7 @@
       "indicator": "hosts",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15371,6 +15823,7 @@
       "indicator": "housed in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15382,6 +15835,7 @@
       "indicator": "houses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "curated-extras",
@@ -15400,6 +15854,7 @@
       "indicator": "housing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -15434,6 +15889,7 @@
       "indicator": "hugged by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15445,6 +15901,7 @@
       "indicator": "hugging",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -15459,6 +15916,7 @@
       "indicator": "hugs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15637,9 +16095,12 @@
     {
       "indicator": "implicated",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "insertion"
+      ],
       "notes": []
     },
     {
@@ -15706,6 +16167,7 @@
       "indicator": "imported by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15717,6 +16179,7 @@
       "indicator": "importing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15728,6 +16191,7 @@
       "indicator": "imports",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15878,6 +16342,7 @@
       "indicator": "imprisoned in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15889,6 +16354,7 @@
       "indicator": "imprisoning",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -15903,6 +16369,7 @@
       "indicator": "imprisons",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -15916,6 +16383,7 @@
       "indicator": "in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -16466,6 +16934,7 @@
       "indicator": "included in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
@@ -16478,6 +16947,7 @@
       "indicator": "includes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "solve-the-crossword"
       ],
@@ -16500,6 +16970,7 @@
       "indicator": "including",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -16564,7 +17035,8 @@
     {
       "indicator": "incorporated in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -16575,6 +17047,7 @@
       "indicator": "incorporates",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -16588,6 +17061,7 @@
       "indicator": "incorporating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -16706,6 +17180,7 @@
       "indicator": "infiltrated by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -16717,6 +17192,7 @@
       "indicator": "infiltrates",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -16730,6 +17206,7 @@
       "indicator": "infiltrating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -16824,6 +17301,7 @@
       "indicator": "inhabited by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -16835,6 +17313,7 @@
       "indicator": "inhabiting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -16846,6 +17325,7 @@
       "indicator": "inhabits",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -16899,6 +17379,7 @@
       "indicator": "inhibited by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -16910,6 +17391,7 @@
       "indicator": "inhibiting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -16921,6 +17403,7 @@
       "indicator": "inhibits",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -16958,6 +17441,7 @@
       "indicator": "injected with",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17122,6 +17606,7 @@
       "indicator": "inside",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -17233,6 +17718,7 @@
       "indicator": "installed in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17244,6 +17730,7 @@
       "indicator": "installing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17254,7 +17741,8 @@
     {
       "indicator": "installs",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -17274,7 +17762,8 @@
     {
       "indicator": "instilled with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -17466,7 +17955,8 @@
     {
       "indicator": "interred in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -17493,6 +17983,7 @@
       "indicator": "interrupted by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -17505,6 +17996,7 @@
       "indicator": "interrupting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -17523,6 +18015,7 @@
       "indicator": "interrupts",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17544,6 +18037,7 @@
       "indicator": "intervening",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17602,6 +18096,7 @@
       "indicator": "introduced by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17621,6 +18116,7 @@
       "indicator": "introduced to",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17634,6 +18130,7 @@
       "indicator": "introduces",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17647,6 +18144,7 @@
       "indicator": "introducing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17706,9 +18204,11 @@
       "indicator": "invaded by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
+        "containment",
         "insertion"
       ],
       "notes": []
@@ -17717,11 +18217,13 @@
       "indicator": "invades",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
       "categories": [
-        "containment"
+        "containment",
+        "insertion"
       ],
       "notes": [
         "alternative"
@@ -17731,12 +18233,14 @@
       "indicator": "invading",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "solve-the-crossword"
       ],
       "categories": [
-        "containment"
+        "containment",
+        "insertion"
       ],
       "notes": []
     },
@@ -17785,6 +18289,7 @@
       "indicator": "invested with",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17875,6 +18380,7 @@
       "indicator": "involved in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -17911,6 +18417,7 @@
       "indicator": "involves",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -17924,6 +18431,7 @@
       "indicator": "involving",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -18572,6 +19080,7 @@
       "indicator": "jammed with",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -18675,6 +19184,7 @@
       "indicator": "keeping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -18698,7 +19208,8 @@
     {
       "indicator": "keeping in check",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -18709,6 +19220,7 @@
       "indicator": "keeps",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword"
@@ -18723,7 +19235,8 @@
     {
       "indicator": "keeps in check",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -18776,6 +19289,7 @@
       "indicator": "kept by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -18787,6 +19301,7 @@
       "indicator": "kept in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -18799,7 +19314,8 @@
     {
       "indicator": "kept in check by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -19171,6 +19687,7 @@
       "indicator": "limited by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -19182,6 +19699,7 @@
       "indicator": "limiting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -19196,6 +19714,7 @@
       "indicator": "limits",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -19217,6 +19736,7 @@
       "indicator": "lined with",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -19228,6 +19748,7 @@
       "indicator": "lines",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -19249,6 +19770,7 @@
       "indicator": "lining",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -19743,7 +20265,8 @@
     {
       "indicator": "mantles",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -19785,7 +20308,8 @@
     {
       "indicator": "masked by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -20411,6 +20935,7 @@
       "indicator": "nabbed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20422,6 +20947,7 @@
       "indicator": "nabbing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20432,7 +20958,8 @@
     {
       "indicator": "nabs",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -20445,6 +20972,7 @@
       "indicator": "nailed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20456,6 +20984,7 @@
       "indicator": "nailing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20467,6 +20996,7 @@
       "indicator": "nails",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20640,6 +21170,7 @@
       "indicator": "nets",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20661,6 +21192,7 @@
       "indicator": "netted by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20672,6 +21204,7 @@
       "indicator": "netting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -20728,6 +21261,7 @@
       "indicator": "nicked by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20739,6 +21273,7 @@
       "indicator": "nicking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20750,6 +21285,7 @@
       "indicator": "nicks",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20763,6 +21299,7 @@
       "indicator": "nipped by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20774,6 +21311,7 @@
       "indicator": "nipping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20784,7 +21322,8 @@
     {
       "indicator": "nips",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -20796,7 +21335,8 @@
     {
       "indicator": "nobbled by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -20806,7 +21346,8 @@
     {
       "indicator": "nobbles",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -20818,7 +21359,8 @@
     {
       "indicator": "nobbling",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -20877,6 +21419,7 @@
       "indicator": "nursed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20888,6 +21431,7 @@
       "indicator": "nurses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -20901,6 +21445,7 @@
       "indicator": "nursing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -21081,6 +21626,7 @@
       "indicator": "occupied by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -21092,6 +21638,7 @@
       "indicator": "occupies",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -21113,6 +21660,7 @@
       "indicator": "occupying",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -21414,6 +21962,7 @@
       "indicator": "opened by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -21569,6 +22118,7 @@
       "indicator": "outside",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -21753,7 +22303,8 @@
     {
       "indicator": "overtakes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -21766,6 +22317,7 @@
       "indicator": "overtaking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -21793,6 +22345,7 @@
       "indicator": "overwhelmed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -21804,6 +22357,7 @@
       "indicator": "overwhelming",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -21815,6 +22369,7 @@
       "indicator": "overwhelms",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -21920,6 +22475,7 @@
       "indicator": "packed with",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -21931,6 +22487,7 @@
       "indicator": "packing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "curated-extras",
@@ -21948,6 +22505,7 @@
       "indicator": "packs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22080,7 +22638,8 @@
     {
       "indicator": "part way through",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -22090,7 +22649,8 @@
     {
       "indicator": "parted by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -22149,6 +22709,7 @@
       "indicator": "parting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -22189,6 +22750,7 @@
       "indicator": "parts",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22257,7 +22819,8 @@
     {
       "indicator": "patrolled by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -22268,6 +22831,7 @@
       "indicator": "patrolling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22278,7 +22842,8 @@
     {
       "indicator": "patrols",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -22307,6 +22872,7 @@
       "indicator": "penetrated by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -22319,6 +22885,7 @@
       "indicator": "penetrates",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -22333,6 +22900,7 @@
       "indicator": "penetrating",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -22366,6 +22934,7 @@
       "indicator": "penned by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22385,6 +22954,7 @@
       "indicator": "penning",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -22399,6 +22969,7 @@
       "indicator": "pens",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22482,6 +23053,7 @@
       "indicator": "picked up by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22493,6 +23065,7 @@
       "indicator": "picking up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22528,6 +23101,7 @@
       "indicator": "pierced by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -22540,6 +23114,7 @@
       "indicator": "pierces",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22553,6 +23128,7 @@
       "indicator": "piercing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -22593,6 +23169,7 @@
       "indicator": "pinched by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22612,6 +23189,7 @@
       "indicator": "pinches",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22625,6 +23203,7 @@
       "indicator": "pinching",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -22663,6 +23242,7 @@
       "indicator": "pinned in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
@@ -22794,7 +23374,8 @@
     {
       "indicator": "plugged by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -22813,6 +23394,7 @@
       "indicator": "plugging",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22824,6 +23406,7 @@
       "indicator": "plugs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22877,6 +23460,7 @@
       "indicator": "pocketed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -22888,6 +23472,7 @@
       "indicator": "pocketing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -22902,6 +23487,7 @@
       "indicator": "pockets",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -23053,6 +23639,7 @@
       "indicator": "possessed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
@@ -23065,6 +23652,7 @@
       "indicator": "possesses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -23078,6 +23666,7 @@
       "indicator": "possessing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -23231,6 +23820,7 @@
       "indicator": "pressed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -23242,6 +23832,7 @@
       "indicator": "presses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -23255,6 +23846,7 @@
       "indicator": "pressing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -23332,6 +23924,7 @@
       "indicator": "probed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -23343,6 +23936,7 @@
       "indicator": "probes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -23356,6 +23950,7 @@
       "indicator": "probing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -23431,6 +24026,7 @@
       "indicator": "protected by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -23450,6 +24046,7 @@
       "indicator": "protecting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -23496,6 +24093,7 @@
       "indicator": "protects",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -23696,7 +24294,8 @@
     {
       "indicator": "punctuated with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -23706,7 +24305,8 @@
     {
       "indicator": "punctuates",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -23718,7 +24318,8 @@
     {
       "indicator": "punctuating",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -23774,7 +24375,8 @@
     {
       "indicator": "purses",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -23786,7 +24388,8 @@
     {
       "indicator": "pursing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -23812,7 +24415,8 @@
     {
       "indicator": "put about",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -23831,6 +24435,7 @@
       "indicator": "put in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -23859,6 +24464,7 @@
       "indicator": "put into",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -23889,6 +24495,7 @@
       "indicator": "put round",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24046,6 +24653,7 @@
       "indicator": "received by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24065,6 +24673,7 @@
       "indicator": "receives",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -24083,6 +24692,7 @@
       "indicator": "receiving",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -24225,6 +24835,7 @@
       "indicator": "repressed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24236,6 +24847,7 @@
       "indicator": "represses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24249,6 +24861,7 @@
       "indicator": "repressing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24422,6 +25035,7 @@
       "indicator": "restrained by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24433,6 +25047,7 @@
       "indicator": "restraining",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -24447,6 +25062,7 @@
       "indicator": "restrains",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -24481,6 +25097,7 @@
       "indicator": "restricted by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24500,6 +25117,7 @@
       "indicator": "restricting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -24514,6 +25132,7 @@
       "indicator": "restricts",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24535,6 +25154,7 @@
       "indicator": "retained by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24554,6 +25174,7 @@
       "indicator": "retaining",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -24568,6 +25189,7 @@
       "indicator": "retains",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24722,6 +25344,7 @@
       "indicator": "ringing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
@@ -24735,6 +25358,7 @@
       "indicator": "rings",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -24841,6 +25465,7 @@
       "indicator": "rounded by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -24995,7 +25620,8 @@
     {
       "indicator": "sandwiched by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -25006,6 +25632,7 @@
       "indicator": "sandwiches",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
@@ -25126,6 +25753,7 @@
       "indicator": "screened by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -25137,6 +25765,7 @@
       "indicator": "screening",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -25148,6 +25777,7 @@
       "indicator": "screens",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -25283,6 +25913,7 @@
       "indicator": "secured by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -25302,6 +25933,7 @@
       "indicator": "secures",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -25315,6 +25947,7 @@
       "indicator": "securing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -25498,6 +26131,7 @@
       "indicator": "seized by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -25525,6 +26159,7 @@
       "indicator": "seizes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -25538,6 +26173,7 @@
       "indicator": "seizing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -25661,6 +26297,7 @@
       "indicator": "set about",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -25688,6 +26325,7 @@
       "indicator": "set in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras"
@@ -25927,6 +26565,7 @@
       "indicator": "sheltered by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -25938,6 +26577,7 @@
       "indicator": "sheltering",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -25963,6 +26603,7 @@
       "indicator": "shelters",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "unscramblerer"
@@ -26018,7 +26659,8 @@
     {
       "indicator": "shipped by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -26028,7 +26670,8 @@
     {
       "indicator": "shipping",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -26039,6 +26682,7 @@
       "indicator": "ships",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26347,7 +26991,8 @@
     {
       "indicator": "shrouded by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -26366,6 +27011,7 @@
       "indicator": "shrouding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26377,6 +27023,7 @@
       "indicator": "shrouds",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26486,6 +27133,7 @@
       "indicator": "skirted by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26497,6 +27145,7 @@
       "indicator": "skirting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26508,6 +27157,7 @@
       "indicator": "skirts",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26569,6 +27219,7 @@
       "indicator": "slipped into",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26604,6 +27255,7 @@
       "indicator": "smothered by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26623,6 +27275,7 @@
       "indicator": "smothering",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26634,6 +27287,7 @@
       "indicator": "smothers",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26759,6 +27413,7 @@
       "indicator": "snared by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26770,6 +27425,7 @@
       "indicator": "snares",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26791,6 +27447,7 @@
       "indicator": "snaring",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26802,6 +27459,7 @@
       "indicator": "snatched by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26813,6 +27471,7 @@
       "indicator": "snatches",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26826,6 +27485,7 @@
       "indicator": "snatching",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26852,7 +27512,8 @@
     {
       "indicator": "snuggles",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -26864,7 +27525,8 @@
     {
       "indicator": "snuggling",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -26955,6 +27617,7 @@
       "indicator": "spanned by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26966,6 +27629,7 @@
       "indicator": "spanning",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -26977,6 +27641,7 @@
       "indicator": "spans",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27040,6 +27705,7 @@
       "indicator": "split by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -27052,6 +27718,7 @@
       "indicator": "splits",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27065,6 +27732,7 @@
       "indicator": "splitting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -27159,6 +27827,7 @@
       "indicator": "spreading",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27169,7 +27838,8 @@
     {
       "indicator": "spreads",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -27198,6 +27868,7 @@
       "indicator": "squashed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -27210,6 +27881,7 @@
       "indicator": "squashes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27223,6 +27895,7 @@
       "indicator": "squashing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27242,6 +27915,7 @@
       "indicator": "squeezed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27261,6 +27935,7 @@
       "indicator": "squeezes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27290,6 +27965,7 @@
       "indicator": "squeezing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -27503,7 +28179,8 @@
     {
       "indicator": "stemmed by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -27513,7 +28190,8 @@
     {
       "indicator": "stemming",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -27523,7 +28201,8 @@
     {
       "indicator": "stems",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -27566,6 +28245,7 @@
       "indicator": "stifled by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27585,6 +28265,7 @@
       "indicator": "stifles",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27598,6 +28279,7 @@
       "indicator": "stifling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27788,6 +28470,7 @@
       "indicator": "stored in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27799,6 +28482,7 @@
       "indicator": "stores",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27812,6 +28496,7 @@
       "indicator": "storing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -27823,7 +28508,8 @@
     {
       "indicator": "stowed in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -27834,6 +28520,7 @@
       "indicator": "stowing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -27847,7 +28534,8 @@
     {
       "indicator": "stows",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -27860,6 +28548,7 @@
       "indicator": "straddled by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27871,6 +28560,7 @@
       "indicator": "straddles",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -27884,6 +28574,7 @@
       "indicator": "straddling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28034,6 +28725,7 @@
       "indicator": "stuffed with",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -28046,6 +28738,7 @@
       "indicator": "stuffing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -28069,6 +28762,7 @@
       "indicator": "stuffs",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28270,6 +28964,7 @@
       "indicator": "suppressed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28281,6 +28976,7 @@
       "indicator": "suppresses",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28294,6 +28990,7 @@
       "indicator": "suppressing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28339,6 +29036,7 @@
       "indicator": "surrounded by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28350,6 +29048,7 @@
       "indicator": "surrounding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -28387,6 +29086,7 @@
       "indicator": "surrounds",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "curated-extras",
@@ -28467,6 +29167,7 @@
       "indicator": "swallowed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -28487,6 +29188,7 @@
       "indicator": "swallowing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -28504,6 +29206,7 @@
       "indicator": "swallows",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "curated-extras",
@@ -28560,6 +29263,7 @@
       "indicator": "swathed in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28570,7 +29274,8 @@
     {
       "indicator": "swathes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -28583,6 +29288,7 @@
       "indicator": "swathing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28658,6 +29364,7 @@
       "indicator": "tackled by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28669,6 +29376,7 @@
       "indicator": "tackles",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28682,6 +29390,7 @@
       "indicator": "tackling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28832,6 +29541,7 @@
       "indicator": "taken by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28860,6 +29570,7 @@
       "indicator": "taken in by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -28962,6 +29673,7 @@
       "indicator": "takes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho"
       ],
@@ -28976,6 +29688,7 @@
       "indicator": "takes in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
@@ -29035,6 +29748,7 @@
       "indicator": "taking",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -29086,6 +29800,7 @@
       "indicator": "taking in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -29477,6 +30192,7 @@
       "indicator": "throttled by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -29487,7 +30203,8 @@
     {
       "indicator": "throttles",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -29500,6 +30217,7 @@
       "indicator": "throttling",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -29535,6 +30253,7 @@
       "indicator": "thrown in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -29546,6 +30265,7 @@
       "indicator": "thrown into",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -33030,6 +33750,7 @@
       "indicator": "transfixed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
@@ -33041,7 +33762,8 @@
     {
       "indicator": "transfixes",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "insertion"
@@ -33054,6 +33776,7 @@
       "indicator": "transfixing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -33130,6 +33853,7 @@
       "indicator": "trapped in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
@@ -33150,6 +33874,7 @@
       "indicator": "trapping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -33164,6 +33889,7 @@
       "indicator": "traps",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -33253,6 +33979,7 @@
       "indicator": "trousers",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -33288,6 +34015,7 @@
       "indicator": "tucked into",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
@@ -33802,6 +34530,7 @@
       "indicator": "wearing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -33817,6 +34546,7 @@
       "indicator": "wears",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -33830,6 +34560,7 @@
       "indicator": "wedged in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
@@ -33840,7 +34571,8 @@
     {
       "indicator": "wedged with",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "containment"
@@ -33888,6 +34620,7 @@
       "indicator": "welcomed by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -33915,6 +34648,7 @@
       "indicator": "welcomes",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -33936,6 +34670,7 @@
       "indicator": "welcoming",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
@@ -35241,6 +35976,7 @@
       "indicator": "within",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -35283,6 +36019,7 @@
       "indicator": "worn by",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -35419,6 +36156,7 @@
       "indicator": "wrapped in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
@@ -35470,6 +36208,7 @@
       "indicator": "wrapping",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -35485,6 +36224,7 @@
       "indicator": "wraps",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -35510,6 +36250,7 @@
       "indicator": "wreathed in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [

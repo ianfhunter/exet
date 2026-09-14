@@ -3,9 +3,10 @@
   "title": "Cryptic abbreviations",
   "blurb": "Clue words and phrases that commonly abbreviate to letters or short forms in cryptic crosswords (bits-and-pieces).",
   "built": "2026-09-14",
-  "count": 4969,
+  "count": 4975,
   "sources": [
     "clue-clinic",
+    "clue-clinic-lexicon",
     "compound-indicators",
     "crossword-unclued",
     "cryptipedia",
@@ -38,6 +39,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -52,7 +54,8 @@
         "ABS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -63,7 +66,8 @@
         "ABS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -103,6 +107,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -114,6 +119,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -128,6 +134,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -152,6 +159,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -173,7 +181,8 @@
         "A"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -186,6 +195,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -199,6 +209,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -211,7 +222,8 @@
         "ADJ"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -222,6 +234,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -233,7 +246,8 @@
         "A"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -244,6 +258,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -258,6 +273,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -307,6 +323,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml"
@@ -334,6 +351,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -349,6 +367,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -365,6 +384,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -389,6 +409,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -437,7 +458,8 @@
         "AN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -449,6 +471,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -484,6 +507,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -496,6 +520,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -507,7 +532,8 @@
         "AR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -531,6 +557,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -556,6 +583,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -632,6 +660,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -644,7 +673,8 @@
         "A"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -655,6 +685,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -854,6 +885,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -912,6 +944,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1010,6 +1043,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -1030,6 +1064,7 @@
         "G"
       ],
       "sources": [
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -1110,6 +1145,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1148,6 +1184,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml",
@@ -1172,9 +1209,13 @@
       "expansions": [
         "A",
         "B",
+        "FT",
+        "I",
         "MS"
       ],
       "sources": [
+        "clue-clinic-lexicon",
+        "curated",
         "longair",
         "mhl-yaml"
       ],
@@ -1188,6 +1229,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -1205,6 +1247,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1264,7 +1307,8 @@
         "A"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -1349,6 +1393,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1371,7 +1416,8 @@
         "A1"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -1381,7 +1427,8 @@
         "AA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -1391,7 +1438,8 @@
         "AA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -1431,7 +1479,8 @@
         "AA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -1444,6 +1493,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1481,6 +1531,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1535,7 +1586,8 @@
         "AB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -1582,6 +1634,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1613,6 +1666,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -1653,6 +1707,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1818,6 +1873,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1830,7 +1886,8 @@
         "ABS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -1842,6 +1899,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1920,7 +1978,8 @@
         "AC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -1930,7 +1989,8 @@
         "AC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -1978,6 +2038,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -2045,6 +2106,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -2263,7 +2325,8 @@
         "AD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -2720,6 +2783,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -2758,6 +2822,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -2935,6 +3000,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -2988,6 +3054,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -3153,6 +3220,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -3282,6 +3350,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -3294,7 +3363,8 @@
         "AK"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -3304,7 +3374,8 @@
         "AKA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -3327,6 +3398,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -3351,6 +3423,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -3374,6 +3447,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -3566,7 +3640,8 @@
         "DZ"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -3670,6 +3745,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -3725,7 +3801,8 @@
         "AM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -3795,6 +3872,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -3889,7 +3967,8 @@
         "AMP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -3931,7 +4010,8 @@
         "AN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -3986,6 +4066,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -4201,6 +4282,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -4443,6 +4525,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -4520,6 +4603,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -4572,7 +4656,8 @@
         "ARK"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -4653,6 +4738,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -4996,6 +5082,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -5205,7 +5292,8 @@
         "AT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -5280,7 +5368,8 @@
         "ATM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -5350,6 +5439,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -5392,6 +5482,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -5633,7 +5724,8 @@
         "AZE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -5643,7 +5735,8 @@
         "AZE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -5677,6 +5770,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -5760,6 +5854,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -5773,6 +5868,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -5796,6 +5892,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -5818,6 +5915,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -5891,6 +5989,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -5935,6 +6034,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -6001,7 +6101,8 @@
         "BN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -6016,6 +6117,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -6030,6 +6132,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -6149,6 +6252,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -6177,6 +6281,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -6190,6 +6295,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -6222,6 +6328,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -6258,6 +6365,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -6269,6 +6377,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -6322,6 +6431,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -6335,6 +6445,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -6465,6 +6576,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -6479,6 +6591,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -6501,7 +6614,8 @@
         "B"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -6514,6 +6628,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -6561,6 +6676,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -6574,6 +6690,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -6605,7 +6722,8 @@
         "BA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -6637,6 +6755,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -6728,6 +6847,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -6883,6 +7003,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -6916,7 +7037,8 @@
         "BBC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -6997,7 +7119,8 @@
         "BD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7118,7 +7241,8 @@
         "BDS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7150,7 +7274,8 @@
         "BE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7321,7 +7446,8 @@
         "BF"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7331,7 +7457,8 @@
         "BG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7341,7 +7468,8 @@
         "BH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7361,7 +7489,8 @@
         "BI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7643,7 +7772,8 @@
         "BLT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7658,6 +7788,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -7672,6 +7803,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -7704,6 +7836,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -7743,7 +7876,8 @@
         "BO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7753,7 +7887,8 @@
         "BO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7799,6 +7934,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -7832,7 +7968,8 @@
         "BOL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7958,7 +8095,8 @@
         "BP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -7978,7 +8116,8 @@
         "BP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8032,7 +8171,8 @@
         "BR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8043,6 +8183,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -8076,7 +8217,8 @@
         "BR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8098,6 +8240,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -8111,6 +8254,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -8150,6 +8294,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -8162,7 +8307,8 @@
         "BR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8274,7 +8420,8 @@
         "BRN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8284,7 +8431,8 @@
         "BRU"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8296,7 +8444,8 @@
         "SCB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8317,7 +8466,8 @@
         "BS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8419,7 +8569,8 @@
         "BT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8440,7 +8591,8 @@
         "BT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8514,7 +8666,8 @@
         "BW"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8534,7 +8687,8 @@
         "BY"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8548,6 +8702,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -8570,7 +8725,8 @@
         "C"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8627,7 +8783,8 @@
         "CAL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8658,6 +8815,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -8699,6 +8857,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -8720,7 +8879,8 @@
         "C"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8732,6 +8892,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -8744,7 +8905,8 @@
         "C"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8780,6 +8942,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -8837,7 +9000,8 @@
         "C"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -8848,6 +9012,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -8863,6 +9028,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -8886,6 +9052,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "wikipedia"
       ],
@@ -9016,7 +9183,8 @@
         "C"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -9036,7 +9204,8 @@
         "C"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -9047,6 +9216,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -9172,6 +9342,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -9351,6 +9522,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -9429,6 +9601,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml",
@@ -9512,6 +9685,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -9551,7 +9725,8 @@
         "PL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -9600,6 +9775,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -9650,6 +9826,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -9672,6 +9849,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -9686,6 +9864,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -9720,7 +9899,8 @@
         "CA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -9731,6 +9911,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -9955,6 +10136,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -10151,7 +10333,8 @@
         "CC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -10161,7 +10344,8 @@
         "CC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -10224,7 +10408,8 @@
         "CC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -10244,7 +10429,8 @@
         "CC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -10293,7 +10479,8 @@
         "ML"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -10519,7 +10706,8 @@
         "CD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -10579,7 +10767,8 @@
         "CD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -10627,6 +10816,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -10666,6 +10856,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -10739,7 +10930,8 @@
         "CDN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -10868,6 +11060,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -10881,6 +11074,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -11032,7 +11226,8 @@
         "CF"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -11064,6 +11259,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -11209,6 +11405,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -11262,7 +11459,8 @@
         "CH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -11297,6 +11495,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -11308,7 +11507,8 @@
         "CH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -11408,6 +11608,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -11457,6 +11658,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -11535,6 +11737,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -11663,6 +11866,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -11696,7 +11900,8 @@
         "CI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -11751,6 +11956,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -11787,6 +11993,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -11940,7 +12147,8 @@
         "CL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -11951,6 +12159,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -12043,7 +12252,8 @@
         "CL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -12066,6 +12276,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -12099,7 +12310,8 @@
         "CM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -12119,7 +12331,8 @@
         "CM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -12249,7 +12462,8 @@
         "CN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -12259,7 +12473,8 @@
         "CNN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -12281,6 +12496,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -12294,6 +12510,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -12306,6 +12523,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -12318,7 +12536,8 @@
         "COL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -12339,6 +12558,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -12362,6 +12582,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -12386,6 +12607,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -12412,6 +12634,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -12498,6 +12721,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -12528,7 +12752,8 @@
         "COL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -12816,6 +13041,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -12912,6 +13138,17 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "my",
+      "expansions": [
+        "COR"
+      ],
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated"
       ],
       "notes": []
     },
@@ -13099,7 +13336,8 @@
         "CR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13109,7 +13347,8 @@
         "CR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13129,7 +13368,8 @@
         "CR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13140,6 +13380,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -13194,6 +13435,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -13206,7 +13448,8 @@
         "CR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13253,7 +13496,8 @@
         "CR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13275,7 +13519,8 @@
         "CS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13306,6 +13551,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -13350,7 +13596,8 @@
         "CS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13381,6 +13628,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -13393,6 +13641,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -13428,6 +13677,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -13454,6 +13704,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -13469,6 +13720,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -13568,7 +13820,8 @@
         "CV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13588,7 +13841,8 @@
         "CV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13638,7 +13892,8 @@
         "CWT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13648,7 +13903,8 @@
         "CY"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13669,7 +13925,8 @@
         "CZ"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13679,7 +13936,8 @@
         "D"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13731,6 +13989,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -13744,6 +14003,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -13758,6 +14018,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -13770,6 +14031,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -13840,6 +14102,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -13864,6 +14127,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml"
@@ -13878,6 +14142,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -13891,7 +14156,8 @@
         "DEM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -13902,6 +14168,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -13993,6 +14260,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -14038,6 +14306,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -14061,6 +14330,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -14211,6 +14481,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -14269,6 +14540,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml",
@@ -14316,6 +14588,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -14455,7 +14728,8 @@
         "P"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -14609,6 +14883,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -14635,6 +14910,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -14791,7 +15067,8 @@
         "DB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -14801,7 +15078,8 @@
         "DB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -14839,7 +15117,8 @@
         "DC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -14892,6 +15171,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -15249,7 +15529,8 @@
         "DD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -15273,6 +15554,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -15293,6 +15575,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -15308,6 +15591,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -15319,7 +15603,8 @@
         "DEL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -15420,6 +15705,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -15680,6 +15966,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -15755,7 +16042,8 @@
         "DG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -15809,6 +16097,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -15844,6 +16133,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -15858,7 +16148,8 @@
         "WPC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -16130,6 +16421,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -16140,7 +16432,8 @@
         "DJ"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -16182,6 +16475,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -16331,6 +16625,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -16378,6 +16673,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -16477,7 +16773,8 @@
         "PHD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -16545,7 +16842,8 @@
         "DV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -16787,7 +17085,8 @@
         "DY"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -16860,6 +17159,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -17081,6 +17381,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -17106,6 +17407,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -17120,6 +17422,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -17142,6 +17445,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "wikipedia"
       ],
@@ -17155,6 +17459,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -17229,7 +17534,8 @@
         "E"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -17253,6 +17559,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -17278,6 +17585,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -17292,6 +17600,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -17338,6 +17647,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -17435,10 +17745,13 @@
     {
       "headword": "irrational",
       "expansions": [
-        "E"
+        "E",
+        "PI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon",
+        "curated"
       ],
       "notes": []
     },
@@ -17592,6 +17905,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -17679,6 +17993,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -17961,6 +18276,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -18020,6 +18336,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -18044,6 +18361,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -18064,7 +18382,8 @@
         "EC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -18138,7 +18457,8 @@
         "ED"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -18149,6 +18469,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -18193,7 +18514,8 @@
         "ED"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -18203,7 +18525,8 @@
         "ED"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -18296,6 +18619,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -18471,6 +18795,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -18690,6 +19015,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -18721,7 +19047,8 @@
         "EP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -18772,7 +19099,8 @@
         "ER"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -18833,6 +19161,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -18846,7 +19175,8 @@
         "ER"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -18867,7 +19197,8 @@
         "ER"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -18941,7 +19272,8 @@
         "ES"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -18963,6 +19295,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -18973,7 +19306,8 @@
         "ESC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -18993,7 +19327,8 @@
         "ESP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -19004,6 +19339,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -19038,6 +19374,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -19068,7 +19405,8 @@
         "EST"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -19134,6 +19472,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -19197,6 +19536,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -19218,7 +19558,8 @@
         "ETA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -19282,7 +19623,8 @@
         "ETH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -19292,7 +19634,8 @@
         "EU"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -19363,6 +19706,7 @@
         "EVE"
       ],
       "sources": [
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -19633,6 +19977,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -19847,6 +20192,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -19971,6 +20317,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -19984,6 +20331,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -20097,6 +20445,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -20135,6 +20484,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -20150,6 +20500,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -20167,6 +20518,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -20200,6 +20552,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -20222,6 +20575,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -20234,6 +20588,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -20247,6 +20602,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -20260,7 +20616,8 @@
         "FR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -20271,6 +20628,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -20296,6 +20654,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -20339,7 +20698,8 @@
         "FUR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -20349,7 +20709,8 @@
         "F"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -20384,6 +20745,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -20443,6 +20805,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -20467,6 +20830,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -20480,6 +20844,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -20493,7 +20858,8 @@
         "SFA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -20559,6 +20925,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -20601,6 +20968,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -20625,6 +20993,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -20741,6 +21110,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -20793,6 +21163,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -20855,7 +21226,8 @@
         "FIG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -20876,7 +21248,8 @@
         "FIN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -21013,7 +21386,8 @@
         "FJI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -21044,6 +21418,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -21055,7 +21430,8 @@
         "FL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -21065,7 +21441,8 @@
         "FL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -21139,7 +21516,8 @@
         "FO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -21213,6 +21591,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -21332,6 +21711,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -21344,6 +21724,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -21432,6 +21813,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -21443,7 +21825,8 @@
         "FT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -21461,10 +21844,13 @@
       "headword": "newspaper",
       "expansions": [
         "FT",
+        "I",
         "RAG",
         "SUN"
       ],
       "sources": [
+        "clue-clinic-lexicon",
+        "curated",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -21487,7 +21873,8 @@
         "FX"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -21543,6 +21930,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -21583,7 +21971,8 @@
         "G"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -21669,6 +22058,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -21684,6 +22074,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -21698,6 +22089,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -21772,6 +22164,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -21827,6 +22220,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -21854,7 +22248,8 @@
         "GR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -21865,6 +22260,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -21879,6 +22275,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -22114,7 +22511,8 @@
         "GA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -22146,6 +22544,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -22237,7 +22636,8 @@
         "GB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -22258,6 +22658,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -22323,6 +22724,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -22381,7 +22783,8 @@
         "GE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -22391,7 +22794,8 @@
         "GE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -22518,7 +22922,8 @@
         "GH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -22619,7 +23024,8 @@
         "GI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -22641,6 +23047,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -22694,7 +23101,8 @@
         "GM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -22894,7 +23302,8 @@
         "GP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -22925,6 +23334,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -22982,6 +23392,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -22994,6 +23405,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -23191,7 +23603,8 @@
         "GT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -23413,6 +23826,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -23506,7 +23920,8 @@
         "H"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -23518,6 +23933,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -23543,6 +23959,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -23645,6 +24062,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -23658,6 +24076,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -23670,6 +24089,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -23692,6 +24112,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -23726,6 +24147,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -23764,6 +24186,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -23799,6 +24222,17 @@
       ],
       "sources": [
         "compound-indicators"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "rugby goal",
+      "expansions": [
+        "H"
+      ],
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated"
       ],
       "notes": []
     },
@@ -24074,6 +24508,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -24099,6 +24534,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -24111,6 +24547,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -24124,6 +24561,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -24146,6 +24584,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -24174,6 +24613,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -24370,6 +24810,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -24444,7 +24885,8 @@
         "HI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -24486,7 +24928,8 @@
         "HK"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -24517,6 +24960,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -24529,6 +24973,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -24540,7 +24985,8 @@
         "HN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -24702,6 +25148,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -24715,7 +25162,19 @@
         "PS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "house of parliament",
+      "expansions": [
+        "HP"
+      ],
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated"
       ],
       "notes": []
     },
@@ -24761,7 +25220,8 @@
         "HQ"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -24771,7 +25231,8 @@
         "HR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -24801,7 +25262,8 @@
         "HR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -24863,7 +25325,8 @@
         "TGV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -24935,9 +25398,12 @@
     {
       "headword": "a",
       "expansions": [
-        "I"
+        "I",
+        "PER"
       ],
       "sources": [
+        "clue-clinic-lexicon",
+        "curated",
         "longair",
         "mhl-yaml"
       ],
@@ -24970,7 +25436,8 @@
         "I"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -25014,6 +25481,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -25027,6 +25495,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -25079,7 +25548,8 @@
         "I"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": [
         "advanced"
@@ -25103,6 +25573,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -25115,6 +25586,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml"
@@ -25159,6 +25631,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -25205,6 +25678,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -25231,6 +25705,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -25275,7 +25750,8 @@
         "I"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -25357,6 +25833,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -25427,6 +25904,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -25513,7 +25991,8 @@
         "IDA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -25524,6 +26003,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -25535,7 +26015,8 @@
         "ID"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -25607,6 +26088,7 @@
         "MSS"
       ],
       "sources": [
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -25655,6 +26137,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -25783,6 +26266,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -25833,6 +26317,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -25845,6 +26330,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -26054,6 +26540,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -26067,7 +26554,8 @@
         "INS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26078,7 +26566,8 @@
         "IND"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26088,7 +26577,8 @@
         "IN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26100,6 +26590,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -26171,7 +26662,8 @@
         "INC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26181,7 +26673,8 @@
         "INC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26191,7 +26684,8 @@
         "INC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26243,7 +26737,8 @@
         "INF"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26438,6 +26933,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -26452,6 +26948,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml",
@@ -26570,7 +27067,8 @@
         "IQ"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26590,7 +27088,8 @@
         "IR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26611,6 +27110,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -26625,6 +27125,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -26637,7 +27138,8 @@
         "IR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26647,7 +27149,8 @@
         "IR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26690,6 +27193,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -26732,7 +27236,8 @@
         "IS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -26812,12 +27317,28 @@
       "notes": []
     },
     {
+      "headword": "appeal",
+      "expansions": [
+        "IT",
+        "SA",
+        "SOS"
+      ],
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated",
+        "longair",
+        "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
       "headword": "information technology",
       "expansions": [
         "IT"
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -26829,6 +27350,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -26842,6 +27364,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -27000,6 +27523,17 @@
       "notes": []
     },
     {
+      "headword": "hook",
+      "expansions": [
+        "J"
+      ],
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "japan",
       "expansions": [
         "J",
@@ -27007,6 +27541,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -27030,6 +27565,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -27075,6 +27611,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -27098,6 +27635,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -27167,6 +27705,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -27190,6 +27729,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -27210,7 +27750,8 @@
         "JAS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -27315,7 +27856,8 @@
         "JP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -27327,6 +27869,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -27359,6 +27902,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -27370,6 +27914,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -27381,7 +27926,8 @@
         "M"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -27451,7 +27997,8 @@
         "K"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -27513,6 +28060,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -27569,6 +28117,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml",
@@ -27583,7 +28132,8 @@
         "KB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -27594,7 +28144,8 @@
         "KB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -27606,6 +28157,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -27617,7 +28169,8 @@
         "K"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -27644,6 +28197,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -27771,7 +28325,8 @@
         "M"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -27782,6 +28337,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -28003,6 +28559,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -28057,7 +28614,8 @@
         "KG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -28067,7 +28625,8 @@
         "KG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -28077,7 +28636,8 @@
         "KG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -28109,7 +28669,8 @@
         "KL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -28186,6 +28747,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -28198,7 +28760,8 @@
         "KO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -28230,6 +28793,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -28241,7 +28805,8 @@
         "KS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -28326,7 +28891,8 @@
         "L"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -28441,6 +29007,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml",
@@ -28531,6 +29098,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -28545,6 +29113,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -28583,6 +29152,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -28617,6 +29187,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -28655,6 +29226,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -28690,6 +29262,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -28734,6 +29307,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -28780,6 +29354,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -28928,6 +29503,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -29060,6 +29636,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -29234,7 +29811,8 @@
         "LA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -29276,6 +29854,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -29290,6 +29869,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -29397,7 +29977,8 @@
         "LAO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -29419,6 +30000,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -29493,7 +30075,8 @@
         "LB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -29553,7 +30136,8 @@
         "LC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -29641,6 +30225,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -29702,6 +30287,7 @@
         "LEG"
       ],
       "sources": [
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -29907,7 +30493,8 @@
         "LI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -29960,6 +30547,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -30053,7 +30641,8 @@
         "LIT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -30073,7 +30662,8 @@
         "LIT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -30454,7 +31044,8 @@
         "LS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -30498,7 +31089,8 @@
         "LT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -30529,7 +31121,8 @@
         "LTD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -30581,7 +31174,8 @@
         "LV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -30591,7 +31185,8 @@
         "LV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -30643,6 +31238,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -31116,6 +31712,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -31169,6 +31766,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -31193,6 +31791,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -31207,6 +31806,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -31264,6 +31864,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -31360,6 +31961,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -31373,7 +31975,8 @@
         "M"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -31384,6 +31987,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -31397,6 +32001,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -31420,7 +32025,8 @@
         "ML"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -31431,6 +32037,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -31441,7 +32048,8 @@
         "M"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -31453,6 +32061,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "wikipedia"
       ],
@@ -31464,7 +32073,8 @@
         "M"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -31487,6 +32097,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -31516,6 +32127,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -31530,6 +32142,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -31604,6 +32217,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -31679,6 +32293,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -31703,6 +32318,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -31716,6 +32332,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml",
@@ -31740,7 +32357,8 @@
         "MA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -31751,6 +32369,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -31774,7 +32393,8 @@
         "MOR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -31808,6 +32428,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -31852,6 +32473,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -31885,7 +32507,8 @@
         "MAL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -31929,6 +32552,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -32027,7 +32651,8 @@
         "MB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32050,6 +32675,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -32091,6 +32717,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -32133,7 +32760,8 @@
         "MC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32143,7 +32771,8 @@
         "MC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32153,7 +32782,8 @@
         "MD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32163,7 +32793,8 @@
         "MD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32173,7 +32804,8 @@
         "MD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32193,7 +32825,8 @@
         "MD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32226,7 +32859,8 @@
         "ME"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32277,6 +32911,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -32548,7 +33183,8 @@
         "MEX"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32648,7 +33284,8 @@
         "MGL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32700,7 +33337,8 @@
         "MI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32863,7 +33501,8 @@
         "MK"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32956,7 +33595,8 @@
         "MM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -32966,7 +33606,8 @@
         "MM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33007,7 +33648,8 @@
         "MN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33029,7 +33671,8 @@
         "MN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33049,7 +33692,8 @@
         "MO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33060,6 +33704,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -33071,7 +33716,8 @@
         "MO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33081,7 +33727,8 @@
         "MO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33125,7 +33772,8 @@
         "MOC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33245,6 +33893,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -33278,7 +33927,8 @@
         "MOR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33375,6 +34025,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -33408,6 +34059,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -33584,6 +34236,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -33595,7 +34248,8 @@
         "MS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33605,7 +34259,8 @@
         "MS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33615,7 +34270,8 @@
         "MS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33637,6 +34293,7 @@
         "R"
       ],
       "sources": [
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -33649,7 +34306,8 @@
         "MSC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33660,6 +34318,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -33713,7 +34372,8 @@
         "MT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33793,6 +34453,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -33900,7 +34561,8 @@
         "MW"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -33991,7 +34653,8 @@
         "MYA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -34177,6 +34840,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -34256,6 +34920,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -34294,6 +34959,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -34367,6 +35033,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -34381,6 +35048,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -34394,6 +35062,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -34406,6 +35075,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -34419,6 +35089,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "curated"
       ],
@@ -34498,6 +35169,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -34647,7 +35319,8 @@
         "NA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -34658,6 +35331,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -34683,6 +35357,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -34693,7 +35368,8 @@
         "NA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -34704,6 +35380,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -34716,7 +35393,8 @@
         "NAM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -34788,7 +35466,8 @@
         "NB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -34798,7 +35477,8 @@
         "NB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -34818,7 +35498,8 @@
         "NB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -34889,7 +35570,8 @@
         "NC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -34959,6 +35641,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -35019,7 +35702,8 @@
         "NEB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35030,6 +35714,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -35053,6 +35738,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -35064,7 +35750,8 @@
         "NE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35147,7 +35834,8 @@
         "NEP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35202,7 +35890,8 @@
         "NV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35246,7 +35935,8 @@
         "NF"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35256,7 +35946,8 @@
         "NF"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35319,6 +36010,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -35330,7 +36022,8 @@
         "NGR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35340,7 +36033,8 @@
         "NH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35350,7 +36044,8 @@
         "NI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35361,6 +36056,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -35393,7 +36089,8 @@
         "NI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35413,7 +36110,8 @@
         "NI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35447,7 +36145,8 @@
         "NIC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35459,6 +36158,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -35472,6 +36172,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -35487,6 +36188,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -35500,6 +36202,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -35541,7 +36244,8 @@
         "NL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35605,7 +36309,8 @@
         "NM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35735,7 +36440,8 @@
         "NUM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35962,7 +36668,8 @@
         "NT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -35973,6 +36680,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -35984,6 +36692,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -35997,7 +36706,8 @@
         "NT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -36239,6 +36949,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -36250,7 +36961,8 @@
         "NW"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -36271,6 +36983,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -36283,7 +36996,8 @@
         "NZ"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -36325,6 +37039,7 @@
         "O"
       ],
       "sources": [
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -36337,6 +37052,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -36404,6 +37120,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -36438,6 +37155,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36461,6 +37179,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36602,6 +37321,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36659,6 +37379,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -36672,6 +37393,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -36756,7 +37478,8 @@
         "ORD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -36788,6 +37511,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -36881,6 +37605,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36915,6 +37640,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36958,7 +37684,8 @@
         "O"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": [
         "advanced"
@@ -36982,6 +37709,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36994,7 +37722,8 @@
         "O"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -37024,7 +37753,8 @@
         "OAP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -37056,6 +37786,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -37067,7 +37798,8 @@
         "OB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -37077,7 +37809,8 @@
         "OB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -37169,7 +37902,8 @@
         "OBS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -37265,6 +37999,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -37296,6 +38031,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -37306,7 +38042,8 @@
         "OD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -37316,7 +38053,8 @@
         "OD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -37361,6 +38099,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -37447,6 +38186,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -37502,7 +38242,8 @@
         "OK"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -37708,6 +38449,7 @@
         "ON"
       ],
       "sources": [
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -37883,6 +38625,7 @@
         "OO"
       ],
       "sources": [
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -37973,6 +38716,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -38153,6 +38897,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -38196,7 +38941,8 @@
         "OR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -38336,6 +39082,22 @@
       "notes": []
     },
     {
+      "headword": "extra large",
+      "expansions": [
+        "OS",
+        "XL"
+      ],
+      "sources": [
+        "clue-clinic",
+        "clue-clinic-lexicon",
+        "curated",
+        "longair",
+        "mhl-yaml",
+        "wikipedia"
+      ],
+      "notes": []
+    },
+    {
       "headword": "large letters",
       "expansions": [
         "OS"
@@ -38375,6 +39137,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "wikipedia"
       ],
@@ -38400,7 +39163,8 @@
         "OS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -38410,7 +39174,8 @@
         "OS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -38421,6 +39186,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -38463,6 +39229,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -38505,6 +39272,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -38517,6 +39285,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -38540,7 +39309,8 @@
         "OTT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -38550,7 +39320,8 @@
         "OTT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -38561,6 +39332,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -38572,7 +39344,8 @@
         "OU"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -38585,6 +39358,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -38676,6 +39450,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -38785,6 +39560,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -38818,6 +39594,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -38842,6 +39619,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -38920,6 +39698,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -39007,7 +39786,8 @@
         "P"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39029,6 +39809,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -39063,6 +39844,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -39148,6 +39930,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -39192,6 +39975,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -39225,7 +40009,8 @@
         "P"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39238,6 +40023,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -39352,6 +40138,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -39405,6 +40192,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -39437,7 +40225,8 @@
         "PA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39447,7 +40236,8 @@
         "PA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39467,7 +40257,8 @@
         "PA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39497,7 +40288,8 @@
         "PA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39529,6 +40321,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -39540,7 +40333,8 @@
         "PK"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39623,6 +40417,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -39698,6 +40493,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -39721,6 +40517,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -39742,7 +40539,8 @@
         "PCT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39752,7 +40550,8 @@
         "PC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39762,7 +40561,8 @@
         "PC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39772,7 +40572,8 @@
         "PC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39782,7 +40583,8 @@
         "PC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39792,7 +40594,8 @@
         "PC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -39824,6 +40627,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -39847,7 +40651,20 @@
         "TRAIN"
       ],
       "sources": [
+        "clue-clinic-lexicon",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "exercises",
+      "expansions": [
+        "PE",
+        "PT"
+      ],
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated"
       ],
       "notes": []
     },
@@ -39859,6 +40676,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -39872,6 +40690,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -39884,6 +40703,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -39951,6 +40771,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -40021,6 +40842,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -40137,7 +40959,8 @@
         "PG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -40212,7 +41035,8 @@
         "PI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -40255,7 +41079,8 @@
         "PJS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -40320,6 +41145,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -40363,7 +41189,8 @@
         "PM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -40373,7 +41200,8 @@
         "PM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -40384,6 +41212,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -40405,7 +41234,8 @@
         "PM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -40436,6 +41266,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -40468,7 +41299,8 @@
         "PM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -40498,7 +41330,8 @@
         "PNG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -40561,6 +41394,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -40573,7 +41407,8 @@
         "PO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -40698,6 +41533,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -40754,6 +41590,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -40787,6 +41624,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -40915,7 +41753,8 @@
         "PR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -40936,6 +41775,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -41213,6 +42053,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -41326,6 +42167,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -41338,7 +42180,8 @@
         "PT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -41349,6 +42192,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -41443,7 +42287,8 @@
         "PU"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -41484,7 +42329,8 @@
         "PW"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -41514,7 +42360,8 @@
         "PY"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -41525,6 +42372,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -41579,7 +42427,8 @@
         "Q"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -41627,6 +42476,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml"
@@ -41667,6 +42517,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -41722,7 +42573,8 @@
         "QA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -42298,6 +43150,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -42344,6 +43197,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -42392,6 +43246,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -42456,6 +43311,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -42468,6 +43324,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml"
@@ -42502,6 +43359,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -42586,6 +43444,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -42608,7 +43467,8 @@
         "R"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -42652,6 +43512,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -42695,7 +43556,8 @@
         "RA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -42728,6 +43590,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -42759,7 +43622,8 @@
         "RA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -42780,6 +43644,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -42792,6 +43657,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -42805,6 +43671,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -42820,6 +43687,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -43072,7 +43940,8 @@
         "RB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43082,7 +43951,8 @@
         "RB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43103,6 +43973,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -43115,7 +43986,8 @@
         "RC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43125,7 +43997,8 @@
         "RCA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43135,7 +44008,8 @@
         "RCH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43223,6 +44097,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -43235,7 +44110,8 @@
         "RE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43257,6 +44133,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -43283,6 +44160,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -43742,7 +44620,8 @@
         "RH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43762,7 +44641,8 @@
         "RH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43785,7 +44665,8 @@
         "RH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43805,7 +44686,8 @@
         "RI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43846,7 +44728,8 @@
         "RI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43857,6 +44740,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -43882,6 +44766,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -43905,7 +44790,8 @@
         "RIM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -43983,7 +44869,8 @@
         "RL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44003,7 +44890,8 @@
         "RL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44024,7 +44912,8 @@
         "RM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44088,7 +44977,8 @@
         "RM"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44120,6 +45010,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -44178,7 +45069,8 @@
         "RN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44188,7 +45080,8 @@
         "RN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44209,6 +45102,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -44233,6 +45127,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -44347,6 +45242,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -44382,7 +45278,8 @@
         "RP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44479,7 +45376,8 @@
         "RR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44490,6 +45388,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -44575,7 +45474,8 @@
         "RU"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44606,7 +45506,8 @@
         "RU"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44616,7 +45517,8 @@
         "RU"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44639,6 +45541,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -44684,7 +45587,8 @@
         "RUS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -44760,6 +45664,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -45032,6 +45937,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -45355,6 +46261,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -45399,7 +46306,8 @@
         "S"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -45474,6 +46382,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -45559,6 +46468,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -45704,6 +46614,7 @@
         "WEE"
       ],
       "sources": [
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -45759,6 +46670,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -45792,6 +46704,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -45805,6 +46718,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -45842,6 +46756,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml",
@@ -45856,6 +46771,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -45890,7 +46806,8 @@
         "S"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -45912,6 +46829,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -45966,6 +46884,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -46094,6 +47013,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -46116,6 +47036,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -46270,7 +47191,8 @@
         "SA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -46302,6 +47224,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -46400,7 +47323,8 @@
         "SB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -46430,7 +47354,8 @@
         "SC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -46450,7 +47375,8 @@
         "SC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -46461,6 +47387,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -46504,7 +47431,8 @@
         "SC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -46535,7 +47463,8 @@
         "SCH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -46545,7 +47474,8 @@
         "SCI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -46622,6 +47552,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -46633,7 +47564,8 @@
         "SD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -46708,7 +47640,8 @@
         "SE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -46729,6 +47662,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -46740,7 +47674,8 @@
         "SE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -46833,6 +47768,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -46871,6 +47807,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -46932,7 +47869,8 @@
         "SF"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -47012,7 +47950,8 @@
         "SGP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -47120,6 +48059,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -47270,7 +48210,8 @@
         "SK"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -47321,7 +48262,8 @@
         "SLO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -47425,7 +48367,8 @@
         "SN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -47436,6 +48379,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -47499,7 +48443,8 @@
         "SO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -47620,23 +48565,13 @@
       "notes": []
     },
     {
-      "headword": "appeal",
-      "expansions": [
-        "SOS"
-      ],
-      "sources": [
-        "longair",
-        "mhl-yaml"
-      ],
-      "notes": []
-    },
-    {
       "headword": "apppeal for help",
       "expansions": [
         "SOS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -47700,6 +48635,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -47736,7 +48672,8 @@
         "SP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -47747,6 +48684,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -47852,7 +48790,8 @@
         "SR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -47896,6 +48835,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -47918,6 +48858,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -47941,6 +48882,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -48004,6 +48946,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -48049,7 +48992,8 @@
         "STA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -48218,7 +49162,8 @@
         "SUD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -48229,6 +49174,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -48386,6 +49332,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -48407,6 +49354,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -48418,7 +49366,8 @@
         "SW"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -48449,7 +49398,8 @@
         "SY"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -48519,7 +49469,8 @@
         "SYR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -48677,6 +49628,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -48843,6 +49795,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -49080,6 +50033,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -49142,7 +50096,8 @@
         "T"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -49190,6 +50145,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -49263,7 +50219,8 @@
         "T"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -49379,6 +50336,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -49454,7 +50412,8 @@
         "TA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -49476,6 +50435,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -49631,7 +50591,8 @@
         "TCH"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -49671,7 +50632,8 @@
         "TE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -49747,7 +50709,8 @@
         "TER"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -49813,7 +50776,8 @@
         "TG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -49835,6 +50799,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued"
       ],
       "notes": []
@@ -49896,7 +50861,8 @@
         "TI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50003,7 +50969,8 @@
         "TL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50053,7 +51020,8 @@
         "TN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50073,7 +51041,8 @@
         "TN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50192,6 +51161,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -50340,6 +51310,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -50460,6 +51431,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -50471,7 +51443,8 @@
         "TT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50481,7 +51454,8 @@
         "TT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50553,7 +51527,8 @@
         "TV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50563,7 +51538,8 @@
         "TV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50573,7 +51549,8 @@
         "TV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50606,7 +51583,8 @@
         "TX"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50730,7 +51708,8 @@
         "U"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50752,6 +51731,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -50787,7 +51767,8 @@
         "U"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -50820,6 +51801,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -50832,6 +51814,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -50866,6 +51849,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -50887,6 +51871,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -50909,6 +51894,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -50943,6 +51929,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -50956,6 +51943,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -50992,7 +51980,8 @@
         "UA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -51002,7 +51991,8 @@
         "UAE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -51117,6 +52107,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -51161,6 +52152,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -51174,6 +52166,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -51413,7 +52406,8 @@
         "US"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -51434,7 +52428,8 @@
         "US"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -51557,6 +52552,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -51587,7 +52583,8 @@
         "UV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -51597,7 +52594,8 @@
         "V"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -51627,7 +52625,8 @@
         "V"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -51638,6 +52637,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated",
         "longair",
         "mhl-yaml",
@@ -51673,6 +52673,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -51707,6 +52708,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -51729,7 +52731,8 @@
         "V"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -51761,6 +52764,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -51819,6 +52823,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -51842,6 +52847,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -51866,6 +52872,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -51909,6 +52916,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -51924,6 +52932,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -51955,6 +52964,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -51998,7 +53008,8 @@
         "VC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52240,7 +53251,8 @@
         "VN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52260,7 +53272,8 @@
         "VR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52270,7 +53283,8 @@
         "VR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52300,7 +53314,8 @@
         "VT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52360,7 +53375,8 @@
         "VW"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52442,6 +53458,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -52543,6 +53560,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -52577,6 +53595,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "longair",
         "mhl-yaml"
@@ -52590,6 +53609,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -52602,6 +53622,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -52654,6 +53675,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -52666,6 +53688,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -52677,6 +53700,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -52690,6 +53714,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -52711,7 +53736,8 @@
         "W"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52771,7 +53797,8 @@
         "WA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52781,7 +53808,8 @@
         "WAL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52823,6 +53851,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "wikipedia"
       ],
       "notes": []
@@ -52843,7 +53872,8 @@
         "WD"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52927,7 +53957,8 @@
         "WG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52957,7 +53988,8 @@
         "WI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -52979,6 +54011,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -52991,7 +54024,8 @@
         "WIS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53001,7 +54035,8 @@
         "WI"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53033,7 +54068,8 @@
         "WL"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53043,7 +54079,8 @@
         "WO"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53124,7 +54161,8 @@
         "WS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53135,7 +54173,8 @@
         "WVA"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53145,7 +54184,8 @@
         "WY"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53155,7 +54195,8 @@
         "X"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53178,7 +54219,8 @@
         "Z"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53225,7 +54267,8 @@
         "Z"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53247,6 +54290,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -53269,7 +54313,8 @@
         "X"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53301,6 +54346,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -53399,7 +54445,8 @@
         "X"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53410,6 +54457,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -53422,7 +54470,8 @@
         "X"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53432,7 +54481,8 @@
         "X"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53609,7 +54659,8 @@
         "XE"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -53634,19 +54685,6 @@
       "sources": [
         "longair",
         "mhl-yaml"
-      ],
-      "notes": []
-    },
-    {
-      "headword": "extra large",
-      "expansions": [
-        "XL"
-      ],
-      "sources": [
-        "clue-clinic",
-        "longair",
-        "mhl-yaml",
-        "wikipedia"
       ],
       "notes": []
     },
@@ -53965,6 +55003,17 @@
       "notes": []
     },
     {
+      "headword": "axes",
+      "expansions": [
+        "XY"
+      ],
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated"
+      ],
+      "notes": []
+    },
+    {
       "headword": "alloy",
       "expansions": [
         "Y"
@@ -54134,6 +55183,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -54211,7 +55261,8 @@
         "YAR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -54241,7 +55292,8 @@
         "YDS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -54286,6 +55338,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -54297,7 +55350,8 @@
         "YRS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -54307,7 +55361,8 @@
         "YRS"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -54349,7 +55404,8 @@
         "YU"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -54359,7 +55415,8 @@
         "YV"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -54498,6 +55555,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "longair",
         "mhl-yaml"
       ],
@@ -54573,6 +55631,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated"
       ],
       "notes": []
@@ -54583,7 +55642,8 @@
         "ZN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -54615,7 +55675,8 @@
         "ZR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },
@@ -54635,7 +55696,8 @@
         "ZW"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "notes": []
     },

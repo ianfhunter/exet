@@ -1073,6 +1073,98 @@ def scrape_cryptipedia_abbrev(store: dict[str, dict]) -> int:
     return count
 
 
+# Wordplay labels that sometimes leak into the lexicon "Can Represent" column.
+LEXICON_NOT_EXPANSION = frozenset(
+    {
+        "anagram",
+        "reversal",
+        "hidden",
+        "homophone",
+        "pun",
+        "containment",
+        "insertion",
+        "expulsion",
+        "departure",
+        "reduction",
+        "replacement",
+        "shift",
+        "after",
+        "before",
+        "select",
+        "remove",
+        "abbreviation",
+        "letter",
+    }
+)
+
+
+def load_cryptic_lexicon_rows() -> list[tuple[str, str, str]]:
+    cache = SOURCES_DIR / "clueclinic-4538-lexicon.html"
+    if cache.is_file():
+        html = cache.read_text(encoding="utf-8")
+    else:
+        url = "https://clueclinic.com/index.php/wp-json/wp/v2/pages/4538"
+        req = Request(url, headers={"User-Agent": UA})
+        html = None
+        for ctx in (CTX, CTX_INSECURE):
+            try:
+                with urlopen(req, context=ctx, timeout=120) as resp:
+                    html = json.loads(resp.read().decode("utf-8", "replace"))[
+                        "content"
+                    ]["rendered"]
+                break
+            except Exception:
+                continue
+        if html is None:
+            raise RuntimeError("fetch failed: clueclinic cryptic lexicon")
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_text(html, encoding="utf-8")
+    rows: list[tuple[str, str, str]] = []
+    for row_html in re.findall(r'<tr class="row-[^"]*">(.*?)</tr>', html, re.S):
+        cells = re.findall(r'<td class="column-\d+">([^<]*)</td>', row_html)
+        if not cells or cells[0].strip().lower() == "text":
+            continue
+        text = html_lib.unescape(cells[0]).strip()
+        represent = html_lib.unescape(cells[1]).strip() if len(cells) > 1 else ""
+        indicate = html_lib.unescape(cells[2]).strip() if len(cells) > 2 else ""
+        rows.append((text, represent, indicate))
+    return rows
+
+
+def scrape_cryptic_lexicon_abbrev(store: dict[str, dict]) -> int:
+    """ClueClinic cryptic lexicon rows whose 'Can Represent' is a letter run."""
+    count = 0
+    for text, represent, _indicate in load_cryptic_lexicon_rows():
+        if not represent:
+            continue
+        low = represent.lower().strip()
+        if any(low == k or low.startswith(k + ":") for k in LEXICON_NOT_EXPANSION):
+            continue
+        for exp in split_expansions(represent):
+            if not is_abbrev_like(exp) and not (
+                len(exp) <= 4 and exp.isalpha()
+            ):
+                continue
+            count += add_abbrev_text(
+                store, text, exp, "clue-clinic-lexicon"
+            )
+    return count
+
+
+def load_abbrev_store() -> dict[str, dict]:
+    data = json.loads((OUT_DIR / "abbreviations.json").read_text(encoding="utf-8"))
+    store: dict[str, dict] = {}
+    for e in data["entries"]:
+        store[e["headword"]] = {
+            "headword": e["headword"],
+            "expansions": set(e["expansions"]),
+            "sources": set(e["sources"]),
+            "notes": set(e.get("notes") or []),
+            "category": None,
+        }
+    return store
+
+
 def scrape_solve_the_crossword_indicators(store: dict[str, dict]) -> int:
     text = read_or_fetch(
         "solvethecrossword-clue-signals.html",
@@ -1152,6 +1244,21 @@ def sanitize_roman_numerals(store: dict[str, dict]) -> int:
 
 ABBREV_CURATED_EXTRAS: list[tuple[str, str]] = [
     ("50/50", "LL"),  # fifty-fifty (L = 50 in Roman numerals)
+    ("axes", "XY"),
+    ("exercises", "PE"),
+    ("exercises", "PT"),
+    ("hook", "J"),
+    ("house of parliament", "HP"),
+    ("my", "COR"),
+    ("rugby goal", "H"),
+    ("a", "PER"),
+    ("appeal", "SA"),
+    ("appeal", "IT"),
+    ("extra large", "OS"),
+    ("irrational", "PI"),
+    ("newspaper", "I"),
+    ("paper", "I"),
+    ("paper", "FT"),
 ]
 
 
@@ -1239,6 +1346,7 @@ def build_abbreviations() -> dict[str, dict]:
         ("wikipedia", scrape_wikipedia_abbrev),
         ("crossword-unclued", scrape_crossword_unclued_abbrev),
         ("cryptipedia", scrape_cryptipedia_abbrev),
+        ("clue-clinic-lexicon", scrape_cryptic_lexicon_abbrev),
         ("sanitize-roman", lambda s: sanitize_roman_numerals(s)),
         ("curated-extras", apply_curated_extras),
         ("compound-letter-words", apply_compound_letter_words),
@@ -1678,7 +1786,9 @@ var abbrevByAlpha={data_json};
 
 
 def main(argv: list[str]) -> int:
-    wanted = {a.lower() for a in argv[1:]}
+    args = argv[1:]
+    from_json = "--from-json" in args
+    wanted = {a.lower() for a in args if not a.startswith("-")}
     do_indicators = not wanted or "indicators" in wanted or "abbreviation-indicators" in wanted
     do_abbrev = not wanted or "abbreviations" in wanted or "abbrev" in wanted
 
@@ -1687,7 +1797,16 @@ def main(argv: list[str]) -> int:
         n = write_indicator_outputs(build_abbreviation_indicators())
         summary.append(("abbreviation-indicators", n))
     if do_abbrev:
-        n = write_abbrev_outputs(build_abbreviations())
+        if from_json and (OUT_DIR / "abbreviations.json").is_file():
+            store = load_abbrev_store()
+            print("\n=== Abbreviations [from-json + lexicon] ===", flush=True)
+            n_lex = scrape_cryptic_lexicon_abbrev(store)
+            print(f"  clue-clinic-lexicon: +{n_lex} ({len(store)} unique)", flush=True)
+            n_cur = apply_curated_extras(store)
+            print(f"  curated-extras: +{n_cur} ({len(store)} unique)", flush=True)
+            n = write_abbrev_outputs(store)
+        else:
+            n = write_abbrev_outputs(build_abbreviations())
         summary.append(("abbreviations", n))
 
     print("\n--- Summary ---", flush=True)

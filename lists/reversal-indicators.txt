@@ -258,6 +258,7 @@ climbing up
 climbs
 clockwise
 cocked
+cocked (up)
 cocked up
 coiling around
 combed back

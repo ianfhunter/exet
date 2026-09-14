@@ -2,9 +2,10 @@
   "type": "alternation",
   "title": "Alternation indicators",
   "built": "2026-08-12",
-  "count": 304,
+  "count": 305,
   "sources": [
     "clue-clinic",
+    "clue-clinic-lexicon",
     "cryptics-georgeho",
     "cryptipedia",
     "curated-extras",
@@ -51,10 +52,12 @@
       "indicator": "alternate bits of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
-        "alternate letters"
+        "alternate letters",
+        "select: alternate letters"
       ],
       "notes": [],
       "parity": null
@@ -80,10 +83,12 @@
     {
       "indicator": "alternate parts of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "alternate letters"
+        "alternate letters",
+        "select: alternate letters"
       ],
       "notes": [
         "alternative"
@@ -94,12 +99,14 @@
       "indicator": "alternately",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "wordsup"
       ],
       "categories": [
-        "alternate letters"
+        "alternate letters",
+        "select: alternate letters"
       ],
       "notes": [],
       "parity": null
@@ -225,10 +232,13 @@
       "indicator": "at intervals",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -380,9 +390,12 @@
       "indicator": "dropping every second",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "select: odd letters"
+      ],
       "notes": [],
       "parity": "odd letters"
     },
@@ -409,9 +422,12 @@
       "indicator": "even bits of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "select: even letters"
+      ],
       "notes": [],
       "parity": "even letters"
     },
@@ -427,9 +443,12 @@
     {
       "indicator": "even letters from",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "select: even letters"
+      ],
       "notes": [
         "alternative"
       ],
@@ -447,9 +466,12 @@
     {
       "indicator": "even pieces of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "select: even letters"
+      ],
       "notes": [
         "alternative"
       ],
@@ -459,10 +481,13 @@
       "indicator": "evenly",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "select: even letters"
+      ],
       "notes": [],
       "parity": "even letters"
     },
@@ -479,10 +504,13 @@
       "indicator": "evens out",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "select: odd letters"
+      ],
       "notes": [],
       "parity": "odd letters"
     },
@@ -498,9 +526,12 @@
     {
       "indicator": "every now and again",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [
         "alternative"
       ],
@@ -510,9 +541,12 @@
       "indicator": "every now and then",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [
         "alternative"
       ],
@@ -577,10 +611,12 @@
     {
       "indicator": "every other piece",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "alternate letters"
+        "alternate letters",
+        "select: alternate letters"
       ],
       "notes": [],
       "parity": null
@@ -589,11 +625,14 @@
       "indicator": "every second",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "select: even letters"
+      ],
       "notes": [],
       "parity": "even letters"
     },
@@ -601,10 +640,13 @@
       "indicator": "every so often",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -648,9 +690,12 @@
       "indicator": "from time to time",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -749,9 +794,12 @@
       "indicator": "ignoring the odds",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "select: even letters"
+      ],
       "notes": [],
       "parity": "even letters"
     },
@@ -804,9 +852,12 @@
       "indicator": "intermittently",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -867,10 +918,12 @@
     {
       "indicator": "leaving every other piece",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
-        "alternate letters"
+        "alternate letters",
+        "select: alternate letters"
       ],
       "notes": [
         "alternative"
@@ -1036,9 +1089,12 @@
       "indicator": "now and again",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -1046,10 +1102,13 @@
       "indicator": "now and then",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -1075,10 +1134,13 @@
       "indicator": "occasionally",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -1177,9 +1239,12 @@
       "indicator": "odd bits of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "select: odd letters"
+      ],
       "notes": [],
       "parity": "odd letters"
     },
@@ -1231,9 +1296,12 @@
     {
       "indicator": "odd letters from",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "select: odd letters"
+      ],
       "notes": [
         "alternative"
       ],
@@ -1296,9 +1364,12 @@
     {
       "indicator": "odd pieces of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "select: odd letters"
+      ],
       "notes": [
         "alternative"
       ],
@@ -1317,10 +1388,13 @@
       "indicator": "oddly",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "select: odd letters"
+      ],
       "notes": [],
       "parity": "odd letters"
     },
@@ -1345,9 +1419,12 @@
     {
       "indicator": "oddly chosen",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "select: odd letters"
+      ],
       "notes": [
         "alternative"
       ],
@@ -1565,9 +1642,12 @@
     {
       "indicator": "odds cut",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "select: even letters"
+      ],
       "notes": [],
       "parity": "even letters"
     },
@@ -1592,9 +1672,12 @@
     {
       "indicator": "odds of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "select: odd letters"
+      ],
       "notes": [],
       "parity": "odd letters"
     },
@@ -1602,9 +1685,12 @@
       "indicator": "off and on",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [
         "alternative"
       ],
@@ -1623,9 +1709,12 @@
       "indicator": "on and off",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -1696,10 +1785,13 @@
       "indicator": "periodically",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -1817,9 +1909,12 @@
     {
       "indicator": "regular letters from",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -1881,10 +1976,13 @@
       "indicator": "regularly",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [],
       "parity": null
     },
@@ -2081,10 +2179,13 @@
       "indicator": "regularly ignored",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "select: regular letters"
+      ],
       "notes": [
         "alternative"
       ],
@@ -2364,10 +2465,12 @@
       "indicator": "regulars in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
       "categories": [
-        "alternate letters"
+        "alternate letters",
+        "select: alternate letters"
       ],
       "notes": [],
       "parity": null
@@ -2423,6 +2526,17 @@
         "curated-extras"
       ],
       "categories": [],
+      "notes": [],
+      "parity": "even letters"
+    },
+    {
+      "indicator": "seconds our",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "select: odd letters"
+      ],
       "notes": [],
       "parity": "even letters"
     },
@@ -2729,9 +2843,12 @@
     {
       "indicator": "wanting seconds",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "select: odd letters"
+      ],
       "notes": [
         "alternative"
       ],

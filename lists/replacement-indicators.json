@@ -2,16 +2,28 @@
   "type": "replacement",
   "title": "Replacement indicators",
   "built": "2026-09-14",
-  "count": 100,
+  "count": 153,
   "sources": [
     "clue-clinic",
+    "clue-clinic-lexicon",
     "curated-extras"
   ],
   "entries": [
     {
+      "indicator": "assuming role of",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "becoming",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -22,9 +34,20 @@
       ]
     },
     {
+      "indicator": "bumped by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "bumping",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -50,9 +73,12 @@
     {
       "indicator": "changed to",
       "sources": [
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "replacement"
+      ],
       "notes": []
     },
     {
@@ -69,9 +95,30 @@
       ]
     },
     {
+      "indicator": "coming in for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "concealed by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "concealing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -82,9 +129,20 @@
       ]
     },
     {
+      "indicator": "conceals",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "conceding to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -108,9 +166,30 @@
       ]
     },
     {
+      "indicator": "covering for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "displaced by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "displacing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -134,9 +213,30 @@
       ]
     },
     {
+      "indicator": "doing duty for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "downed by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "downing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -147,9 +247,30 @@
       ]
     },
     {
+      "indicator": "downs",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "driving off",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "driving out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -160,9 +281,20 @@
       ]
     },
     {
+      "indicator": "dropped for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "dropping",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -173,9 +305,30 @@
       ]
     },
     {
+      "indicator": "eclipsed by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "eclipses",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "eclipsing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -189,6 +342,7 @@
       "indicator": "exchanging",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
@@ -200,9 +354,20 @@
       ]
     },
     {
+      "indicator": "expelled by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "expelling",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -213,9 +378,20 @@
       ]
     },
     {
+      "indicator": "expels",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "falling for",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -226,9 +402,20 @@
       ]
     },
     {
+      "indicator": "forced out by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "forcing out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -252,9 +439,30 @@
       ]
     },
     {
+      "indicator": "getting ... for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "given up for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "giving up",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -280,9 +488,12 @@
     {
       "indicator": "giving way to",
       "sources": [
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "replacement"
+      ],
       "notes": []
     },
     {
@@ -299,6 +510,16 @@
       ]
     },
     {
+      "indicator": "going for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "having",
       "sources": [
         "clue-clinic"
@@ -310,6 +531,26 @@
         "having y for x",
         "standard"
       ]
+    },
+    {
+      "indicator": "having ... for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "having ... not",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
     },
     {
       "indicator": "having y not x",
@@ -325,11 +566,23 @@
       ]
     },
     {
-      "indicator": "hiding",
+      "indicator": "hidden by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic-lexicon"
       ],
       "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "hiding",
+      "sources": [
+        "clue-clinic",
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement",
         "x hidden by y"
       ],
       "notes": [
@@ -369,15 +622,29 @@
     {
       "indicator": "instead of",
       "sources": [
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "knocked out by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
       "notes": []
     },
     {
       "indicator": "knocking out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -386,6 +653,16 @@
         "standard",
         "y knocking out x"
       ]
+    },
+    {
+      "indicator": "knocks out",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
     },
     {
       "indicator": "leaving",
@@ -401,9 +678,20 @@
       ]
     },
     {
+      "indicator": "leaving ... for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "made invisible by",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -427,9 +715,30 @@
       ]
     },
     {
+      "indicator": "making way for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "obscured by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "obscuring",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -440,9 +749,20 @@
       ]
     },
     {
+      "indicator": "ousted by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "ousting",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
@@ -454,9 +774,30 @@
       ]
     },
     {
+      "indicator": "ousts",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "overcome by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "overcoming",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -469,7 +810,8 @@
     {
       "indicator": "overthrowing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -478,6 +820,16 @@
         "standard",
         "y overthrowing x"
       ]
+    },
+    {
+      "indicator": "overthrown by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
     },
     {
       "indicator": "overwritten",
@@ -493,6 +845,16 @@
       ]
     },
     {
+      "indicator": "overwritten by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "playing part",
       "sources": [
         "clue-clinic"
@@ -506,9 +868,20 @@
       ]
     },
     {
+      "indicator": "playing part of",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "preferred to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -532,9 +905,30 @@
       ]
     },
     {
+      "indicator": "put aside for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "put out by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "putting out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -543,6 +937,16 @@
         "standard",
         "y putting out x"
       ]
+    },
+    {
+      "indicator": "relieved by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
     },
     {
       "indicator": "relieving",
@@ -560,15 +964,19 @@
     {
       "indicator": "replaced by",
       "sources": [
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "replacement"
+      ],
       "notes": []
     },
     {
       "indicator": "replacing",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
@@ -580,9 +988,20 @@
       ]
     },
     {
+      "indicator": "squeezed out by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "squeezing out",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -608,9 +1027,12 @@
     {
       "indicator": "standing in for",
       "sources": [
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "replacement"
+      ],
       "notes": []
     },
     {
@@ -627,6 +1049,16 @@
       ]
     },
     {
+      "indicator": "submitting to",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "substituted",
       "sources": [
         "clue-clinic"
@@ -638,6 +1070,16 @@
         "standard",
         "y substituted for x"
       ]
+    },
+    {
+      "indicator": "substituted by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
     },
     {
       "indicator": "substituted for",
@@ -656,9 +1098,20 @@
       "notes": []
     },
     {
+      "indicator": "succeeded by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "succeeding",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -682,9 +1135,30 @@
       ]
     },
     {
+      "indicator": "succumbing to",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "superseded by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "superseding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
@@ -694,6 +1168,16 @@
         "standard",
         "y superseding x"
       ]
+    },
+    {
+      "indicator": "supplanted by",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
     },
     {
       "indicator": "supplanting",
@@ -712,7 +1196,8 @@
     {
       "indicator": "suppressing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -736,6 +1221,16 @@
       ]
     },
     {
+      "indicator": "surrendering to",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "swapping",
       "sources": [
         "clue-clinic",
@@ -750,6 +1245,16 @@
       ]
     },
     {
+      "indicator": "swapping ... for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "taking",
       "sources": [
         "clue-clinic"
@@ -761,6 +1266,16 @@
         "standard",
         "taking y for x"
       ]
+    },
+    {
+      "indicator": "taking ... for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
     },
     {
       "indicator": "taking over",
@@ -778,9 +1293,12 @@
     {
       "indicator": "taking over from",
       "sources": [
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "replacement"
+      ],
       "notes": []
     },
     {
@@ -797,6 +1315,16 @@
       ]
     },
     {
+      "indicator": "taking place of",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "taking role",
       "sources": [
         "clue-clinic"
@@ -810,6 +1338,16 @@
       ]
     },
     {
+      "indicator": "taking role of",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "taking the place of",
       "sources": [
         "curated-extras"
@@ -820,7 +1358,8 @@
     {
       "indicator": "trading",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
       "categories": [
         "replacement"
@@ -842,6 +1381,7 @@
       "indicator": "turning into",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
       "categories": [
@@ -851,6 +1391,16 @@
         "standard",
         "x turning into y"
       ]
+    },
+    {
+      "indicator": "turning to",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
     },
     {
       "indicator": "with",
@@ -864,6 +1414,26 @@
         "standard",
         "with y for x"
       ]
+    },
+    {
+      "indicator": "with ... as",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "with ... for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
     },
     {
       "indicator": "with y as x",
@@ -1243,11 +1813,24 @@
       ]
     },
     {
+      "indicator": "yielding for",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "yielding to",
       "sources": [
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "replacement"
+      ],
       "notes": []
     }
   ]

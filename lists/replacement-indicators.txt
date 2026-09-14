@@ -1,73 +1,125 @@
+assuming role of
 becoming
+bumped by
 bumping
 changed
 changed to
 coming in
+coming in for
+concealed by
 concealing
+conceals
 conceding to
 covering
+covering for
+displaced by
 displacing
 doing duty
+doing duty for
+downed by
 downing
+downs
+driving off
 driving out
+dropped for
 dropping
+eclipsed by
+eclipses
 eclipsing
 exchanging
+expelled by
 expelling
+expels
 falling for
+forced out by
 forcing out
 getting
+getting ... for
+given up for
 giving up
 giving way
 giving way to
 going
+going for
 having
+having ... for
+having ... not
 having y not x
+hidden by
 hiding
 in favour of
 in place of
 instead
 instead of
+knocked out by
 knocking out
+knocks out
 leaving
+leaving ... for
 made invisible by
 making way
+making way for
+obscured by
 obscuring
+ousted by
 ousting
+ousts
+overcome by
 overcoming
 overthrowing
+overthrown by
 overwritten
+overwritten by
 playing part
+playing part of
 preferred to
 put aside
+put aside for
+put out by
 putting out
+relieved by
 relieving
 replaced by
 replacing
+squeezed out by
 squeezing out
 standing in
 standing in for
 submitting
+submitting to
 substituted
+substituted by
 substituted for
 substituting
+succeeded by
 succeeding
 succumbing
+succumbing to
+superseded by
 superseding
+supplanted by
 supplanting
 suppressing
 surrendering
+surrendering to
 swapping
+swapping ... for
 taking
+taking ... for
 taking over
 taking over from
 taking place
+taking place of
 taking role
+taking role of
 taking the place of
 trading
 transformed into
 turning into
+turning to
 with
+with ... as
+with ... for
 with y as x
 x assuming role of y
 x bumped by y
@@ -97,4 +149,5 @@ x yielding to y
 y covering for x
 y driving off x
 yielding
+yielding for
 yielding to

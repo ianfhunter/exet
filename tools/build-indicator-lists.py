@@ -444,10 +444,46 @@ INDICATOR_TYPES: list[IndicatorType] = [
             "in favour of", "giving way to", "yielding to", "turning into",
             "changed to", "transformed into", "standing in for", "swapping",
             "exchanging", "substituting", "substituted for", "superseding",
-            "supplanting", "ousting", "taking over from", "taking the place of",
+            "supplanting",             "ousting", "taking over from", "taking the place of",
+        ],
+    ),
+    IndicatorType(
+        slug="movement",
+        title="Letter-movement indicators",
+        blurb=(
+            "A letter or chunk is shifted inside the fodder: first-to-last, "
+            "cyclic, promoted/demoted, tips swapped (head to tail, cycling, …)."
+        ),
+        allow_digits=True,
+        curated_extras=[
+            "head to tail", "first to last", "cycled", "cycling",
+            "with parts swapped", "swapping tips", "tail first",
+            "x becoming leader", "x taking lead",
         ],
     ),
 ]
+
+
+# ClueClinic cryptic lexicon "Can Indicate" labels -> offline list.
+# Pun is ClueClinic's label for speech/soundalike indicators (homophone).
+LEXICON_KIND_MATCH: dict[str, tuple[str, ...]] = {
+    "anagram": ("anagram",),
+    "hidden": ("hidden",),
+    "reversal": ("reversal",),
+    "homophone": ("homophone", "pun"),
+    "deletion": ("expulsion", "departure", "remove", "reduction"),
+    "containment": ("containment", "insertion"),
+    "letter-selection": ("select",),
+    "alternation": (
+        "select: regular",
+        "select: odd",
+        "select: even",
+        "select: alternate",
+    ),
+    "juxtaposition": ("after", "before"),
+    "replacement": ("replacement",),
+    "movement": ("shift",),
+}
 
 
 def fetch(url: str, timeout: int = 120) -> str:
@@ -826,6 +862,63 @@ def scrape_wordsup(
     return count
 
 
+def _lexicon_kind_hits(kind: str, prefixes: tuple[str, ...]) -> bool:
+    k = re.sub(r"\s+", " ", kind.strip().lower())
+    for p in prefixes:
+        if k == p or k.startswith(p + ":") or k.startswith(p + " :"):
+            return True
+        if k.startswith(p + " ") or k.startswith(p + "("):
+            return True
+    return False
+
+
+def load_cryptic_lexicon_rows() -> list[tuple[str, str, str]]:
+    cache = SOURCES_DIR / "clueclinic-4538-lexicon.html"
+    if cache.is_file():
+        html = cache.read_text(encoding="utf-8")
+    else:
+        url = "https://clueclinic.com/index.php/wp-json/wp/v2/pages/4538"
+        html = json.loads(fetch(url))["content"]["rendered"]
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_text(html, encoding="utf-8")
+    rows: list[tuple[str, str, str]] = []
+    for row_html in re.findall(r'<tr class="row-[^"]*">(.*?)</tr>', html, re.S):
+        cells = re.findall(r'<td class="column-\d+">([^<]*)</td>', row_html)
+        if not cells or cells[0].strip().lower() == "text":
+            continue
+        text = html_lib.unescape(cells[0]).strip()
+        represent = html_lib.unescape(cells[1]).strip() if len(cells) > 1 else ""
+        indicate = html_lib.unescape(cells[2]).strip() if len(cells) > 2 else ""
+        rows.append((text, represent, indicate))
+    return rows
+
+
+def scrape_cryptic_lexicon(
+    store: dict[str, dict],
+    prefixes: tuple[str, ...],
+    *,
+    allow_digits: bool = False,
+) -> int:
+    count = 0
+    for text, _represent, indicate in load_cryptic_lexicon_rows():
+        if not indicate:
+            continue
+        kinds = [k.strip() for k in re.split(r"\s*,\s*", indicate) if k.strip()]
+        matched = [k for k in kinds if _lexicon_kind_hits(k, prefixes)]
+        if not matched:
+            continue
+        category = matched[0].lower()
+        if add_entry(
+            store,
+            text,
+            "clue-clinic-lexicon",
+            category=category,
+            allow_digits=allow_digits,
+        ):
+            count += 1
+    return count
+
+
 def build_type(cfg: IndicatorType) -> dict[str, dict]:
     store: dict[str, dict] = {}
     steps: list[tuple[str, callable]] = []
@@ -906,6 +999,16 @@ def build_type(cfg: IndicatorType) -> dict[str, dict]:
                         s, x, "curated-extras", allow_digits=cfg.allow_digits
                     )
                     for x in cfg.curated_extras
+                ),
+            )
+        )
+    prefixes = LEXICON_KIND_MATCH.get(cfg.slug)
+    if prefixes:
+        steps.append(
+            (
+                "clue-clinic-lexicon",
+                lambda s, p=prefixes: scrape_cryptic_lexicon(
+                    s, p, allow_digits=cfg.allow_digits
                 ),
             )
         )
@@ -1185,8 +1288,8 @@ def load_store(cfg: IndicatorType) -> tuple[dict[str, dict], str]:
         e["indicator"]: {
             "indicator": e["indicator"],
             "sources": set(e["sources"]),
-            "categories": set(e["categories"]),
-            "notes": set(e["notes"]),
+            "categories": set(e.get("categories") or []),
+            "notes": set(e.get("notes") or []),
         }
         for e in data["entries"]
     }
@@ -1207,8 +1310,15 @@ def main(argv: list[str]) -> int:
 
     summary: list[tuple[str, int]] = []
     for cfg in types:
-        if from_json:
+        if from_json and (OUT_DIR / f"{cfg.slug}-indicators.json").is_file():
             store, built = load_store(cfg)
+            prefixes = LEXICON_KIND_MATCH.get(cfg.slug)
+            if prefixes:
+                print(f"\n=== {cfg.title} ({cfg.slug}) [from-json + lexicon] ===", flush=True)
+                n = scrape_cryptic_lexicon(
+                    store, prefixes, allow_digits=cfg.allow_digits
+                )
+                print(f"  clue-clinic-lexicon: +{n} new ({len(store)} unique)", flush=True)
         else:
             store, built = build_type(cfg), None
         n, splits = write_outputs(cfg, store, built=built)

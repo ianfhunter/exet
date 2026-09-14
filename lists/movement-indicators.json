@@ -1,0 +1,511 @@
+{
+  "type": "movement",
+  "title": "Letter-movement indicators",
+  "built": "2026-09-14",
+  "count": 49,
+  "sources": [
+    "clue-clinic-lexicon",
+    "curated-extras"
+  ],
+  "entries": [
+    {
+      "indicator": "back at the start",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: last letter to start (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "beginning to end",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter to end (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "beginning to fall",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter moved down (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "beginning to retreat",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter moved back (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "cycled",
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated-extras"
+      ],
+      "categories": [
+        "shift: cyclic (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "cycles",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: cyclic (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "cycling",
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated-extras"
+      ],
+      "categories": [
+        "shift: cyclic (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "ending on top",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: last letter to start (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "exchanging tips",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first/last swapped (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "first to back",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter to end (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "first to be relegated",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter moved down (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "first to finish",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter to end (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "first to last",
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated-extras"
+      ],
+      "categories": [
+        "shift: first letter to end (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "first to retreat",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter moved back (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "head down",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter moved down (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "head to foot",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter to end (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "head to tail",
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated-extras"
+      ],
+      "categories": [
+        "shift: first letter to end (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "leader dropping back",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter moved back (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "leader retreating",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter moved back (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "leads to retreat",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first pair moved pack (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "leads to reverse",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first pair swapped (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "second to last",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: second letter to end (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "start to back",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter to end (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "start to fall",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter moved down (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "swapping sides",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first/last swapped (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "swapping tips",
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated-extras"
+      ],
+      "categories": [
+        "shift: first/last swapped (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "tail aloft",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: last letter to start (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "tail first",
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated-extras"
+      ],
+      "categories": [
+        "shift: last letter to start (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "with demotion of x",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to end (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "with head dropping",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter moved down (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "with opener dropping down",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: first letter moved down (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "with parts exchanged",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: cyclic (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "with parts swapped",
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated-extras"
+      ],
+      "categories": [
+        "shift: cyclic (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "with promotion of x",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to start (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x advanced",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to start (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x becoming leader",
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated-extras"
+      ],
+      "categories": [
+        "shift: x moved to start (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x brought forward",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to start (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x climbing",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to start (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x coming to fore",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved to start (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x coming to head",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved to start (a/d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x demoted",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to end (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x given a boost",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to start (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x promoted",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to start (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x pushed back",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to end (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x put back",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to end (a)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x rising",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to start (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x stepping down",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to end (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x taken up",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "shift: x moved nearer to start (d)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "x taking lead",
+      "sources": [
+        "clue-clinic-lexicon",
+        "curated-extras"
+      ],
+      "categories": [
+        "shift: x moved to start (a/d)"
+      ],
+      "notes": []
+    }
+  ]
+}

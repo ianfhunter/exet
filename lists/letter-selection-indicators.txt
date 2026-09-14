@@ -4,11 +4,14 @@ abbreviations of
 across faces (of)
 alpha and omega in
 alternate
+alternate bits of
 alternate letters
+alternate parts of
 alternately
 apex
 at first
 at heart
+at intervals
 at intervals (regular)
 at last
 at odd moments
@@ -48,11 +51,14 @@ borders
 borders of
 both sides of
 bottom
+boundary
 boundary for/from/of
+bounds
 bounds of
 butt of
 butts
 by all conclusions
+cap
 cap from/of
 capital
 capital of
@@ -65,11 +71,14 @@ casing
 casing of
 caved
 central (characters) exposed
+central ingredient
 central ingredient of
+centre
 centre for/of
 centre of
 centre(s) in the
 centre(s)/center(s) in the
+centrepiece
 centrepiece of
 character facing
 chiefly
@@ -79,26 +88,35 @@ cleared out
 close
 close of/to
 close to
+closer
 closer to
 closing letters
+closure
 closure of
+clothing
 clothing for/from/on
 coat
 coat of
 coating
 conclude
+conclusion
 conclusion of/to
 conclusion to
+confines
 confines of
 core
 core of
 cored
+cover
 cover from/of
 covering from/of
 crown
 crowns (the)
+crust
 crust from/of
+crux
 crux of
+dash
 dash of
 debut
 debuts of
@@ -108,12 +126,14 @@ disheartened
 drained
 drop
 drop of
+dropping every second
 earliest
 early sign of
 early signs of
 eastern border
 edges
 edges of
+edging
 edging on/to
 element of
 emptied
@@ -136,15 +156,21 @@ essential ingredient of
 essentially
 evacuated
 even
+even bits of
+even letters from
+even pieces of
 even(s)
 evenly
 evens
+evens out
 eventually
 every
 every fourth letter
+every now and again
 every now and then
 every other
 every other (part)
+every other piece
 every second
 every second letter
 every so often
@@ -162,7 +188,9 @@ extremities of
 face of
 far side of
 filleted
+filling
 final
+final bit
 final bit from/of/off
 final letters
 final signs
@@ -193,6 +221,7 @@ focus of
 for
 for starters
 fore
+foremost
 foremost in/of
 fourth letters
 fringe
@@ -201,6 +230,7 @@ fringe(s)
 fringes of
 from the outset
 from the start
+from time to time
 front
 front of
 fronting (those)
@@ -213,6 +243,7 @@ half (of)
 half concealed
 half of
 half-cut
+half-hearted(ly)
 head
 head for/from/of/off
 head(s)
@@ -233,7 +264,9 @@ hem
 hint of
 hollow
 hull from/of
+hull of
 ignore the odds
+ignoring the odds
 in conclusion
 in entrances
 in front of
@@ -248,6 +281,7 @@ initials
 initials of
 initiate
 initiated (by)
+initiation
 initiation of/in/to
 innards
 inside
@@ -260,6 +294,7 @@ introduction from/to
 introduction(s) to
 intros (in)
 jacket
+jacket of
 lacking
 last
 last bit of
@@ -285,10 +320,13 @@ leading characters
 leading letters
 leads
 leads (in)
+leaving every other piece
 left
 left extremity of
 letters
+limit
 limit of/to
+limits
 limits of/to
 lists of
 losses
@@ -304,6 +342,7 @@ mostly
 mouth
 nether
 nip of
+no. 1
 no. 1 for/in
 nose
 not
@@ -315,13 +354,19 @@ nucleus
 occasional
 occasionally
 odd
+odd bits of
+odd letters from
 odd pieces
+odd pieces of
 odd positions
 oddly
+oddly chosen
 oddly enough
 oddly ignored * (evens only)
 odds
 odds are non-existent
+odds cut
+odds of
 of
 off
 off and on
@@ -352,6 +397,7 @@ outside of
 outsiders
 outsiders in
 outskirts of
+overture
 overture from/to
 overtures (to)
 patterns
@@ -370,12 +416,16 @@ principal characters
 principally
 principle of
 prow
+rear
 rear in/of
 regular
+regular letters from
 regularly
 regularly ignored
+regulars in
 right
 right(s)
+rind
 rind from/of
 root(s)
 scrap of
@@ -384,13 +434,16 @@ second half
 second letter
 second letters
 seconds
+seconds our
 selecting from
+shell
 shell from/of
 shred of
 sides
 sides of
 skin of
 skinned
+skirts
 skirts of/on
 slice of
 snap of
@@ -460,11 +513,16 @@ vacated
 vacuous
 void
 voided
+wanting seconds
 western border
+what gets ... going
+what gets ... started
 what gets … going
 what gets … started
 what winds up
+what's behind
 what’s behind
+wings
 wings of
 without filling
 without stopping
@@ -472,4 +530,5 @@ without stuffing
 wrapper
 wrapper for/from/of/on
 wrappers
+wrapping
 wrapping for/from/of/on

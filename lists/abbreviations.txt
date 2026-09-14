@@ -88,7 +88,7 @@ note -> A, B, C, D, DO, DOH, E, F, FA, FAH, G, LA, LAH, ME, MI, N, NB, PS, RE, S
 note + -> A, B, C, D, E, F, G
 one -> A, ACE, AN, ANE, I, J, UN, UNIT, rarely A
 one * -> A, AN
-paper -> A, B, MS
+paper -> A, B, FT, I, MS
 per -> A, PR
 road -> A, AI, AVE, R, RD, ST
 spacecenter -> A
@@ -1126,6 +1126,7 @@ corinthians -> COR
 corner -> COR, L, NE, NW, SE, SW
 cornet -> COR
 coroner -> COR
+my -> COR
 chief of staff -> COS
 lettuce -> COS
 bed -> COT
@@ -1533,7 +1534,7 @@ horsetail -> E
 illbeback -> E
 indetail -> E
 intheend -> E
-irrational -> E
+irrational -> E, PI
 keepscore -> E
 kitetail -> E
 layer -> E, HEN
@@ -1895,7 +1896,7 @@ dela -> from the, of the
 feet -> FT
 financial times -> FT
 fort -> FT
-newspaper -> FT, RAG, SUN
+newspaper -> FT, I, RAG, SUN
 future -> FUT
 effects -> FX
 forced -> FZ
@@ -2109,6 +2110,7 @@ hydrogen -> H
 planck's constant -> H
 pushback -> H
 rehabcenter -> H
+rugby goal -> H
 switchback -> H
 theheart -> H
 touchback -> H
@@ -2193,6 +2195,7 @@ high pressure -> HP
 high priest -> HP
 hire purchase -> HP
 horsepower -> HP, PS
+house of parliament -> HP
 houses of parliament -> HP
 never-never -> HP
 westminster -> HP, WI
@@ -2213,7 +2216,7 @@ lakh -> hundred thousand
 orion -> hunter
 high voltage -> HV
 hertz -> HZ
-a -> I
+a -> I, PER
 bigheart -> I
 che -> I
 ego -> I
@@ -2382,6 +2385,7 @@ doctrine -> ISM
 theory -> ISM
 internet/internet provider -> ISP
 exists -> ISS
+appeal -> IT, SA, SOS
 information technology -> IT
 italian -> IT
 sex appeal -> IT, SA
@@ -2399,6 +2403,7 @@ i have -> IVE
 isle of wight -> IW
 nine -> IX
 heat -> J
+hook -> J
 japan -> J, YEN
 jarhead -> J
 jay -> J
@@ -3445,6 +3450,7 @@ ring road -> ORD
 bit -> ORT
 big -> OS
 bone -> OS, T
+extra large -> OS, XL
 large letters -> OS
 map-makers -> OS
 old style -> OS
@@ -3585,6 +3591,7 @@ paid -> PD
 palladium -> PD, PO
 police department -> PD
 exercise -> PE, PT, TRAIN
+exercises -> PE, PT
 gym -> PE, PT
 peru -> PE
 physical education -> PE
@@ -4307,7 +4314,6 @@ impi -> soldiers
 somerset -> SOM
 issue -> SON
 aria -> song
-appeal -> SOS
 apppeal for help -> SOS
 drunk/drunkard -> sot
 parent -> source
@@ -4869,7 +4875,6 @@ ex dividend -> XD
 xenon -> XE
 team -> XI, XV
 excel -> XL
-extra large -> XL
 forty -> XL
 forty one -> XLI
 forty two -> XLII
@@ -4901,6 +4906,7 @@ thirty five -> XXXV
 thirty six -> XXXVI
 thirty seven -> XXXVII
 thirty eight -> XXXVIII
+axes -> XY
 alloy -> Y
 carryback -> Y
 donkeytail -> Y

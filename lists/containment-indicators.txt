@@ -1023,6 +1023,7 @@ encapsulated in
 encapsulates
 encapsulating
 encased in
+encases
 encasing
 encircle
 encircled
@@ -1074,6 +1075,8 @@ enjoys
 enlists
 enriches
 enrobed in
+enrobes
+enrobing
 enrolling
 enshrined in
 enshrines
@@ -1086,6 +1089,9 @@ ensnared by
 ensnared in
 ensnares
 ensnaring
+enswathed in
+enswathes
+enswathing
 enter
 enter into
 enter(s)

@@ -2,9 +2,10 @@
   "type": "homophone",
   "title": "Homophone indicators",
   "built": "2026-08-12",
-  "count": 782,
+  "count": 788,
   "sources": [
     "clue-clinic",
+    "clue-clinic-lexicon",
     "crossword-unclued",
     "cryptics-georgeho",
     "cryptipedia",
@@ -51,11 +52,14 @@
       "indicator": "according to hearsay",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "homophone"
+      ],
       "notes": [
         "standard"
       ]
@@ -193,6 +197,7 @@
       "indicator": "aloud",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -201,7 +206,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -228,6 +234,7 @@
       "indicator": "announced",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -237,7 +244,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -312,13 +320,15 @@
       "indicator": "articulated",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -464,9 +474,12 @@
       "indicator": "as stated",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "alternative"
       ]
@@ -605,6 +618,7 @@
       "indicator": "audible",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -612,7 +626,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -622,6 +637,7 @@
       "indicator": "audibly",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -630,7 +646,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "alternative"
@@ -943,9 +960,20 @@
       "notes": []
     },
     {
+      "indicator": "bellowed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "homophone"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "broadcast",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword",
@@ -953,7 +981,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -1117,6 +1146,7 @@
       "indicator": "by the sound of it",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
@@ -1124,7 +1154,9 @@
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1254,9 +1286,12 @@
       "indicator": "caught",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -1304,9 +1339,12 @@
     {
       "indicator": "comes across as",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "homophone"
+      ],
       "notes": [
         "standard"
       ]
@@ -1315,9 +1353,12 @@
       "indicator": "coming across as",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "homophone"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1407,6 +1448,16 @@
       "notes": []
     },
     {
+      "indicator": "cried",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "homophone"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "cry of",
       "sources": [
         "cryptics-georgeho"
@@ -1445,11 +1496,13 @@
       "indicator": "declared",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "unscramblerer"
       ],
       "categories": [
+        "homophone",
         "list of homophone indicators",
         "most common homophone indicators"
       ],
@@ -1485,9 +1538,12 @@
       "indicator": "delivered",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -1552,9 +1608,12 @@
       "indicator": "detected by auditors",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -1587,9 +1646,12 @@
     {
       "indicator": "dictator's",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": []
     },
     {
@@ -1756,9 +1818,12 @@
     {
       "indicator": "escaping from trap",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -1908,9 +1973,12 @@
       "indicator": "for audience",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -1943,9 +2011,12 @@
       "indicator": "for auditors",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "alternative"
       ]
@@ -1986,9 +2057,12 @@
       "indicator": "for eavesdroppers",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -2005,9 +2079,12 @@
       "indicator": "for listener",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -2160,9 +2237,12 @@
     {
       "indicator": "for those in earshot",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2170,9 +2250,12 @@
     {
       "indicator": "for those in hearing",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -2269,9 +2352,12 @@
       "indicator": "gathered",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -2454,6 +2540,7 @@
       "indicator": "heard",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -2464,7 +2551,8 @@
       ],
       "categories": [
         "list of homophone indicators",
-        "most common homophone indicators"
+        "most common homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -2705,11 +2793,14 @@
       "indicator": "in audition",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -2758,11 +2849,14 @@
       "indicator": "in conversation",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -2779,9 +2873,12 @@
       "indicator": "in discussion",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -2824,6 +2921,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in podcast",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "pun"
+      ],
       "notes": []
     },
     {
@@ -2870,9 +2977,12 @@
     {
       "indicator": "in recording",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -2881,9 +2991,12 @@
       "indicator": "in report",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2942,13 +3055,16 @@
       "indicator": "in speech",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
         "daily-cryptic",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -3423,9 +3539,12 @@
       "indicator": "made out",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -3800,9 +3919,12 @@
       "indicator": "on record",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -3880,13 +4002,16 @@
       "indicator": "on the radio",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -3903,10 +4028,13 @@
       "indicator": "on the telephone",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -3964,10 +4092,13 @@
       "indicator": "oral",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -3976,6 +4107,7 @@
       "indicator": "orally",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -3986,7 +4118,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "alternative"
@@ -4023,13 +4156,15 @@
       "indicator": "outspoken",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -4064,6 +4199,7 @@
       "indicator": "overheard",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -4072,7 +4208,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -4097,9 +4234,12 @@
     {
       "indicator": "perceived as",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "homophone"
+      ],
       "notes": [
         "standard"
       ]
@@ -4125,10 +4265,13 @@
       "indicator": "picked up",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -4171,6 +4314,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "podcaster's",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "pun"
+      ],
       "notes": []
     },
     {
@@ -4221,11 +4374,13 @@
     {
       "indicator": "proclaimed",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
+        "homophone",
         "list of homophone indicators"
       ],
       "notes": []
@@ -4290,6 +4445,7 @@
       "indicator": "pronounced",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -4298,7 +4454,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -4401,10 +4558,13 @@
       "indicator": "read aloud",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4413,10 +4573,13 @@
       "indicator": "read out",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -4563,9 +4726,12 @@
     {
       "indicator": "released from trap",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "alternative"
       ]
@@ -4623,6 +4789,7 @@
       "indicator": "reported",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -4631,7 +4798,8 @@
       ],
       "categories": [
         "list of homophone indicators",
-        "most common homophone indicators"
+        "most common homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -4657,6 +4825,7 @@
       "indicator": "reportedly",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -4666,7 +4835,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "alternative"
@@ -4759,9 +4929,12 @@
     {
       "indicator": "roared",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "homophone"
+      ],
       "notes": []
     },
     {
@@ -4838,6 +5011,7 @@
       "indicator": "said",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
@@ -4845,7 +5019,8 @@
       ],
       "categories": [
         "list of homophone indicators",
-        "most common homophone indicators"
+        "most common homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -4914,6 +5089,16 @@
       "notes": []
     },
     {
+      "indicator": "screamed",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "homophone"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "should be announced",
       "sources": [
         "cryptics-georgeho"
@@ -4944,10 +5129,13 @@
       "indicator": "shouted",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "homophone"
+      ],
       "notes": [
         "standard"
       ]
@@ -4975,6 +5163,16 @@
         "cryptics-georgeho"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "shrieked",
+      "sources": [
+        "clue-clinic-lexicon"
+      ],
+      "categories": [
+        "homophone"
+      ],
       "notes": []
     },
     {
@@ -5028,9 +5226,12 @@
     {
       "indicator": "so it's said",
       "sources": [
+        "clue-clinic-lexicon",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": []
     },
     {
@@ -5172,9 +5373,12 @@
       "indicator": "sound of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -5191,6 +5395,7 @@
       "indicator": "sounded",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -5198,7 +5403,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -5216,6 +5422,7 @@
       "indicator": "sounding",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -5223,7 +5430,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "alternative"
@@ -5254,13 +5462,15 @@
       "indicator": "sounds",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -5286,12 +5496,15 @@
       "indicator": "sounds like",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "daily-cryptic",
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5433,6 +5646,7 @@
       "indicator": "spoken",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "solve-the-crossword",
@@ -5440,7 +5654,8 @@
         "wordsup"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -5489,9 +5704,12 @@
     {
       "indicator": "spouted",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "homophone"
+      ],
       "notes": [
         "standard"
       ]
@@ -5513,12 +5731,14 @@
       "indicator": "stated",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "unscramblerer"
       ],
       "categories": [
         "list of homophone indicators",
-        "most common homophone indicators"
+        "most common homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -5560,11 +5780,13 @@
       "indicator": "sung",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
+        "homophone",
         "list of homophone indicators"
       ],
       "notes": [
@@ -6113,12 +6335,14 @@
       "indicator": "told",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -6212,11 +6436,14 @@
       "indicator": "uttered",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "standard"
       ]
@@ -6241,12 +6468,14 @@
       "indicator": "verbal",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "standard"
@@ -6264,12 +6493,14 @@
       "indicator": "verbally",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "unscramblerer"
       ],
       "categories": [
-        "list of homophone indicators"
+        "list of homophone indicators",
+        "pun"
       ],
       "notes": [
         "alternative"
@@ -6430,6 +6661,7 @@
       "indicator": "voiced",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -6437,6 +6669,7 @@
         "wordsup"
       ],
       "categories": [
+        "homophone",
         "list of homophone indicators"
       ],
       "notes": [
@@ -6502,9 +6735,12 @@
     {
       "indicator": "we gather",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "alternative"
       ]
@@ -6513,12 +6749,15 @@
       "indicator": "we hear",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "daily-cryptic",
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "pun"
+      ],
       "notes": [
         "alternative"
       ]
@@ -6907,9 +7146,12 @@
     {
       "indicator": "yelled",
       "sources": [
+        "clue-clinic-lexicon",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "homophone"
+      ],
       "notes": []
     },
     {

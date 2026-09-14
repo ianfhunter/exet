@@ -5,6 +5,7 @@
   "count": 1293,
   "sources": [
     "clue-clinic",
+    "clue-clinic-lexicon",
     "crossword-unclued",
     "cryptics-georgeho",
     "cryptipedia",
@@ -394,11 +395,14 @@
       "indicator": "amid",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -406,9 +410,12 @@
     {
       "indicator": "amidst",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "alternative"
       ]
@@ -417,11 +424,14 @@
       "indicator": "among",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -430,10 +440,13 @@
       "indicator": "amongst",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "alternative"
       ]
@@ -441,9 +454,12 @@
     {
       "indicator": "amount of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -1721,9 +1737,12 @@
       "indicator": "component of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -2134,10 +2153,13 @@
       "indicator": "contributing to",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -2154,9 +2176,12 @@
       "indicator": "contribution to",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "alternative"
       ]
@@ -2452,10 +2477,13 @@
       "indicator": "cut of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -2962,9 +2990,12 @@
       "indicator": "element of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -3180,9 +3211,12 @@
     {
       "indicator": "enclosure to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -3561,11 +3595,14 @@
       "indicator": "extract from",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -3582,9 +3619,12 @@
       "indicator": "extracted from",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "alternative"
       ]
@@ -3624,9 +3664,12 @@
     {
       "indicator": "factor in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -3643,10 +3686,13 @@
       "indicator": "feature of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": []
     },
     {
@@ -3923,10 +3969,13 @@
       "indicator": "fragment of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -3959,6 +4008,7 @@
       "indicator": "from",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -3967,6 +4017,7 @@
         "wordsup"
       ],
       "categories": [
+        "hidden",
         "list of hidden word indicators",
         "most common hidden word indicators"
       ],
@@ -5067,6 +5118,7 @@
       "indicator": "in",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -5076,6 +5128,7 @@
         "wordsup"
       ],
       "categories": [
+        "hidden",
         "list of hidden word indicators",
         "most common hidden word indicators"
       ],
@@ -5119,11 +5172,14 @@
       "indicator": "in part",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "alternative"
       ]
@@ -5163,9 +5219,12 @@
     {
       "indicator": "in some measure",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -5544,6 +5603,7 @@
       "indicator": "inside",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
@@ -5552,6 +5612,7 @@
         "wordsup"
       ],
       "categories": [
+        "hidden",
         "list of hidden word indicators",
         "most common hidden word indicators"
       ],
@@ -6498,9 +6559,12 @@
       "indicator": "measure of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -7173,13 +7237,16 @@
       "indicator": "part of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "daily-cryptic",
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -7235,11 +7302,14 @@
       "indicator": "partially",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "alternative"
       ]
@@ -7477,11 +7547,14 @@
       "indicator": "piece of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -7619,11 +7692,14 @@
       "indicator": "portion of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -7904,9 +7980,12 @@
       "indicator": "quantity of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -8235,9 +8314,12 @@
       "indicator": "sample from",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "curated-extras"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -8424,9 +8506,12 @@
       "indicator": "section of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -8529,9 +8614,12 @@
       "indicator": "selection from",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -8540,9 +8628,12 @@
       "indicator": "selection of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "alternative"
       ]
@@ -8845,10 +8936,13 @@
       "indicator": "slice of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "solve-the-crossword"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -8935,6 +9029,7 @@
       "indicator": "some",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
         "solve-the-crossword",
@@ -8942,6 +9037,7 @@
         "wordsup"
       ],
       "categories": [
+        "hidden",
         "list of hidden word indicators",
         "most common hidden word indicators"
       ],
@@ -9033,12 +9129,15 @@
       "indicator": "some of",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "daily-cryptic",
         "solve-the-crossword",
         "wordsup"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "alternative"
       ]
@@ -9349,9 +9448,12 @@
     {
       "indicator": "string from",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
@@ -9359,9 +9461,12 @@
     {
       "indicator": "string in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "alternative"
       ]
@@ -10201,10 +10306,13 @@
       "indicator": "to some extent",
       "sources": [
         "clue-clinic",
+        "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "alternative"
       ]
@@ -10284,9 +10392,12 @@
     {
       "indicator": "tranche of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "clue-clinic-lexicon"
       ],
-      "categories": [],
+      "categories": [
+        "hidden"
+      ],
       "notes": [
         "standard"
       ]
