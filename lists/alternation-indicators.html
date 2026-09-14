@@ -17,7 +17,15 @@
               position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   #q { flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }
   #stats { color: var(--muted); font-size: 0.85rem; }
+  #jump { padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }
+  #jump a { color: var(--accent); text-decoration: none; }
+  #jump a:hover { text-decoration: underline; }
+  #jump a.hide { display: none; }
+  #jump .n { color: var(--muted); }
   main { padding: 12px 16px 32px; }
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all { scroll-margin-top: 64px; }
   .cat h2 { font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }
   .cat .n { color: var(--muted); font-weight: normal; }
   .note { margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }
@@ -35,12 +43,22 @@
   <p>305 entries · built 2026-08-12 · merged from: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, curated-extras, wordsup</p>
   <p>Signal taking alternate letters or every Nth letter from fodder.</p>
 </header>
+<nav id="jump" aria-label="Jump to section">
+<a href="#sec-odd-letters">Odd Letters <span class="n">(42)</span></a>
+<a href="#sec-even-letters">Even Letters <span class="n">(64)</span></a>
+<a href="#sec-alternate-letters">Alternate Letters <span class="n">(6)</span></a>
+<a href="#sec-select-alternate-letters">Select: Alternate Letters <span class="n">(6)</span></a>
+<a href="#sec-select-even-letters">Select: Even Letters <span class="n">(7)</span></a>
+<a href="#sec-select-odd-letters">Select: Odd Letters <span class="n">(10)</span></a>
+<a href="#sec-select-regular-letters">Select: Regular Letters <span class="n">(15)</span></a>
+<a href="#all">All indicators <span class="n">(305)</span></a>
+</nav>
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter indicators…" autofocus>
   <span id="stats">305 shown</span>
 </div>
 <main>
-  <div id="parity"><p class="note">Grouped by the letters you are left holding. An indicator that names one parity in order to discard it, such as &ldquo;oddly dropped&rdquo;, therefore sits under the other. Indicators that signal alternation without fixing a parity, such as the &ldquo;regularly&rdquo; family, are listed only under <em>All indicators</em>.</p><section class="cat"><h2>Odd Letters <span class="n">(42)</span></h2><div class="grid">
+<div id="parity"><p class="note">Grouped by the letters you are left holding. An indicator that names one parity in order to discard it, such as &ldquo;oddly dropped&rdquo;, therefore sits under the other. Indicators that signal alternation without fixing a parity, such as the &ldquo;regularly&rdquo; family, are listed only under <em>All indicators</em>.</p><section class="cat" id="sec-odd-letters"><h2>Odd Letters <span class="n">(42)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho">are oddly</span>
 <span class="ind" title="Sources: cryptics-georgeho">at odds</span>
 <span class="ind" title="Sources: cryptics-georgeho">cut evenly</span>
@@ -83,7 +101,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">wanting seconds</span>
 <span class="ind" title="Sources: cryptics-georgeho">with odd stripes</span>
 <span class="ind" title="Sources: cryptics-georgeho">without even parts</span>
-</div></section><section class="cat"><h2>Even Letters <span class="n">(64)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-even-letters"><h2>Even Letters <span class="n">(64)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho">after odd losses</span>
 <span class="ind" title="Sources: cryptics-georgeho">an even distribution of fruit</span>
 <span class="ind" title="Sources: cryptics-georgeho">applied evenly</span>
@@ -149,21 +167,21 @@
 <span class="ind" title="Sources: cryptics-georgeho">trim the odds</span>
 <span class="ind" title="Sources: cryptics-georgeho">with odd exceptions</span>
 </div></section></div>
-  <section class="cat"><h2>Alternate Letters <span class="n">(6)</span></h2><div class="grid">
+<section class="cat" id="sec-alternate-letters"><h2>Alternate Letters <span class="n">(6)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">alternate bits of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">alternate parts of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, curated-extras, wordsup">alternately</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">every other piece</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">leaving every other piece</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho">regulars in</span>
-</div></section><section class="cat"><h2>Select: Alternate Letters <span class="n">(6)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-alternate-letters"><h2>Select: Alternate Letters <span class="n">(6)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">alternate bits of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">alternate parts of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, curated-extras, wordsup">alternately</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">every other piece</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">leaving every other piece</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho">regulars in</span>
-</div></section><section class="cat"><h2>Select: Even Letters <span class="n">(7)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-even-letters"><h2>Select: Even Letters <span class="n">(7)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">even bits of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">even letters from</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">even pieces of</span>
@@ -171,7 +189,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, curated-extras, wordsup">every second</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho">ignoring the odds</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">odds cut</span>
-</div></section><section class="cat"><h2>Select: Odd Letters <span class="n">(10)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-odd-letters"><h2>Select: Odd Letters <span class="n">(10)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">dropping every second</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, wordsup">evens out</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">odd bits of</span>
@@ -182,7 +200,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">odds of</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">seconds our</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">wanting seconds</span>
-</div></section><section class="cat"><h2>Select: Regular Letters <span class="n">(15)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-regular-letters"><h2>Select: Regular Letters <span class="n">(15)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, curated-extras">at intervals</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">every now and again</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho">every now and then</span>
@@ -199,9 +217,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, wordsup">regularly</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, wordsup">regularly ignored</span>
 </div></section>
-  <section id="all">
-    <h2>All indicators <span class="n">(305)</span></h2>
-    <div class="grid" id="grid">
+<section id="all"><h2>All indicators <span class="n">(305)</span></h2><div class="grid" id="grid">
 <span class="ind" title="Sources: cryptics-georgeho">abnormal</span>
 <span class="ind" title="Sources: cryptics-georgeho">after odd losses</span>
 <span class="ind" title="Sources: cryptics-georgeho">after regular excisions</span>
@@ -507,8 +523,7 @@
 <span class="ind" title="Sources: cryptipedia">y for x</span>
 <span class="ind" title="Sources: cryptipedia">y in place of x</span>
 <span class="ind" title="Sources: cryptipedia">y, not x</span>
-    </div>
-  </section>
+</div></section>
 </main>
 <script>
 (function() {
@@ -531,6 +546,10 @@
     if (parity) {
       parity.style.display =
           parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    for (const link of document.querySelectorAll('#jump a')) {
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
     }
   }
   q.addEventListener('input', apply);

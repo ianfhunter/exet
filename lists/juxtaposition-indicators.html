@@ -17,7 +17,15 @@
               position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   #q { flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }
   #stats { color: var(--muted); font-size: 0.85rem; }
+  #jump { padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }
+  #jump a { color: var(--accent); text-decoration: none; }
+  #jump a:hover { text-decoration: underline; }
+  #jump a.hide { display: none; }
+  #jump .n { color: var(--muted); }
   main { padding: 12px 16px 32px; }
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all { scroll-margin-top: 64px; }
   .cat h2 { font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }
   .cat .n { color: var(--muted); font-weight: normal; }
   .note { margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }
@@ -35,18 +43,28 @@
   <p>130 entries · built 2026-09-14 · merged from: clue-clinic, clue-clinic-lexicon, curated-extras</p>
   <p>Charade / beside: one letter run is placed before or after another (after, beside, next to, following, …).</p>
 </header>
+<nav id="jump" aria-label="Jump to section">
+<a href="#sec-after-a">After (A) <span class="n">(4)</span></a>
+<a href="#sec-after-a-d">After (A/D) <span class="n">(15)</span></a>
+<a href="#sec-after-d">After (D) <span class="n">(27)</span></a>
+<a href="#sec-before">Before <span class="n">(1)</span></a>
+<a href="#sec-before-a">Before (A) <span class="n">(8)</span></a>
+<a href="#sec-before-a-d">Before (A/D) <span class="n">(21)</span></a>
+<a href="#sec-before-d">Before (D) <span class="n">(17)</span></a>
+<a href="#sec-juxtaposition">Juxtaposition <span class="n">(114)</span></a>
+<a href="#all">All indicators <span class="n">(130)</span></a>
+</nav>
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter indicators…" autofocus>
   <span id="stats">130 shown</span>
 </div>
 <main>
-  
-  <section class="cat"><h2>After (A) <span class="n">(4)</span></h2><div class="grid">
+<section class="cat" id="sec-after-a"><h2>After (A) <span class="n">(4)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">confronted by</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">faced by</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">shadowing</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">shadows</span>
-</div></section><section class="cat"><h2>After (A/D) <span class="n">(15)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-after-a-d"><h2>After (A/D) <span class="n">(15)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">after</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">at end of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">behind</span>
@@ -62,7 +80,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">tipping</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">tips</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">ushered in by</span>
-</div></section><section class="cat"><h2>After (D) <span class="n">(27)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-after-d"><h2>After (D) <span class="n">(27)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">backing</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">backs</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">bearing</span>
@@ -90,9 +108,9 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">underneath</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">underpinning</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">underpins</span>
-</div></section><section class="cat"><h2>Before <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-before"><h2>Before <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">borne by</span>
-</div></section><section class="cat"><h2>Before (A) <span class="n">(8)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-before-a"><h2>Before (A) <span class="n">(8)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">confronting</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">confronts</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">faces</span>
@@ -101,7 +119,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">fronts</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">in front of</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">shadowed by</span>
-</div></section><section class="cat"><h2>Before (A/D) <span class="n">(21)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-before-a-d"><h2>Before (A/D) <span class="n">(21)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">ahead of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">and</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">before</span>
@@ -123,7 +141,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">tipped with</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">ushering in</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">ushers in</span>
-</div></section><section class="cat"><h2>Before (D) <span class="n">(17)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-before-d"><h2>Before (D) <span class="n">(17)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">above</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">bolstered by</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">capping</span>
@@ -141,7 +159,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">tops</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">underpinned by</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">upon</span>
-</div></section><section class="cat"><h2>Juxtaposition <span class="n">(114)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-juxtaposition"><h2>Juxtaposition <span class="n">(114)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">above</span>
 <span class="ind" title="Sources: clue-clinic">accompanies</span>
 <span class="ind" title="Sources: clue-clinic">accompanying</span>
@@ -257,9 +275,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">ushers in</span>
 <span class="ind" title="Sources: clue-clinic, curated-extras">with</span>
 </div></section>
-  <section id="all">
-    <h2>All indicators <span class="n">(130)</span></h2>
-    <div class="grid" id="grid">
+<section id="all"><h2>All indicators <span class="n">(130)</span></h2><div class="grid" id="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">above</span>
 <span class="ind" title="Sources: clue-clinic">accompanies</span>
 <span class="ind" title="Sources: clue-clinic">accompanying</span>
@@ -390,8 +406,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">ushering in</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">ushers in</span>
 <span class="ind" title="Sources: clue-clinic, curated-extras">with</span>
-    </div>
-  </section>
+</div></section>
 </main>
 <script>
 (function() {
@@ -414,6 +429,10 @@
     if (parity) {
       parity.style.display =
           parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    for (const link of document.querySelectorAll('#jump a')) {
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
     }
   }
   q.addEventListener('input', apply);

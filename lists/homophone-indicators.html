@@ -17,7 +17,15 @@
               position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   #q { flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }
   #stats { color: var(--muted); font-size: 0.85rem; }
+  #jump { padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }
+  #jump a { color: var(--accent); text-decoration: none; }
+  #jump a:hover { text-decoration: underline; }
+  #jump a.hide { display: none; }
+  #jump .n { color: var(--muted); }
   main { padding: 12px 16px 32px; }
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all { scroll-margin-top: 64px; }
   .cat h2 { font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }
   .cat .n { color: var(--muted); font-weight: normal; }
   .note { margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }
@@ -35,13 +43,19 @@
   <p>788 entries · built 2026-08-12 · merged from: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, curated-extras, daily-cryptic, solve-the-crossword, unscramblerer, wordsup</p>
   <p>Signal that clued material sounds like the answer.</p>
 </header>
+<nav id="jump" aria-label="Jump to section">
+<a href="#sec-homophone">Homophone <span class="n">(16)</span></a>
+<a href="#sec-list-of-homophone-indicators">List Of Homophone Indicators <span class="n">(82)</span></a>
+<a href="#sec-most-common-homophone-indicators">Most Common Homophone Indicators <span class="n">(25)</span></a>
+<a href="#sec-pun">Pun <span class="n">(59)</span></a>
+<a href="#all">All indicators <span class="n">(788)</span></a>
+</nav>
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter indicators…" autofocus>
   <span id="stats">788 shown</span>
 </div>
 <main>
-  
-  <section class="cat"><h2>Homophone <span class="n">(16)</span></h2><div class="grid">
+<section class="cat" id="sec-homophone"><h2>Homophone <span class="n">(16)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, wordsup">according to hearsay</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">bellowed</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">comes across as</span>
@@ -58,7 +72,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, unscramblerer">sung</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, unscramblerer, wordsup">voiced</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, cryptipedia">yelled</span>
-</div></section><section class="cat"><h2>List Of Homophone Indicators <span class="n">(82)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-list-of-homophone-indicators"><h2>List Of Homophone Indicators <span class="n">(82)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, solve-the-crossword, unscramblerer, wordsup">aloud</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, curated-extras, solve-the-crossword, unscramblerer, wordsup">announced</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, unscramblerer, wordsup">articulated</span>
@@ -141,7 +155,7 @@
 <span class="ind" title="Sources: unscramblerer, wordsup">voice</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, unscramblerer, wordsup">voiced</span>
 <span class="ind" title="Sources: unscramblerer, wordsup">whisper</span>
-</div></section><section class="cat"><h2>Most Common Homophone Indicators <span class="n">(25)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-most-common-homophone-indicators"><h2>Most Common Homophone Indicators <span class="n">(25)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho, unscramblerer, wordsup">call</span>
 <span class="ind" title="Sources: unscramblerer, wordsup">catch</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, curated-extras, unscramblerer">declared</span>
@@ -167,7 +181,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, unscramblerer">stated</span>
 <span class="ind" title="Sources: cryptics-georgeho, unscramblerer, wordsup">talking</span>
 <span class="ind" title="Sources: unscramblerer, wordsup">voice</span>
-</div></section><section class="cat"><h2>Pun <span class="n">(59)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-pun"><h2>Pun <span class="n">(59)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, solve-the-crossword, unscramblerer, wordsup">aloud</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, curated-extras, solve-the-crossword, unscramblerer, wordsup">announced</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, unscramblerer, wordsup">articulated</span>
@@ -228,9 +242,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">we gather</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, daily-cryptic, solve-the-crossword, wordsup">we hear</span>
 </div></section>
-  <section id="all">
-    <h2>All indicators <span class="n">(788)</span></h2>
-    <div class="grid" id="grid">
+<section id="all"><h2>All indicators <span class="n">(788)</span></h2><div class="grid" id="grid">
 <span class="ind" title="Sources: cryptics-georgeho">a report on</span>
 <span class="ind" title="Sources: crossword-unclued">according</span>
 <span class="ind" title="Sources: cryptics-georgeho">according to announcement</span>
@@ -1019,8 +1031,7 @@
 <span class="ind" title="Sources: cryptics-georgeho">you might pick up</span>
 <span class="ind" title="Sources: cryptics-georgeho">you might say</span>
 <span class="ind" title="Sources: cryptics-georgeho">you say</span>
-    </div>
-  </section>
+</div></section>
 </main>
 <script>
 (function() {
@@ -1043,6 +1054,10 @@
     if (parity) {
       parity.style.display =
           parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    for (const link of document.querySelectorAll('#jump a')) {
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
     }
   }
   q.addEventListener('input', apply);

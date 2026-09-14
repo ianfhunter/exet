@@ -17,7 +17,15 @@
               position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   #q { flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }
   #stats { color: var(--muted); font-size: 0.85rem; }
+  #jump { padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }
+  #jump a { color: var(--accent); text-decoration: none; }
+  #jump a:hover { text-decoration: underline; }
+  #jump a.hide { display: none; }
+  #jump .n { color: var(--muted); }
   main { padding: 12px 16px 32px; }
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all { scroll-margin-top: 64px; }
   .cat h2 { font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }
   .cat .n { color: var(--muted); font-weight: normal; }
   .note { margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }
@@ -35,13 +43,17 @@
   <p>153 entries · built 2026-09-14 · merged from: clue-clinic, clue-clinic-lexicon, curated-extras</p>
   <p>One letter run is swapped for another inside the fodder (replacing, instead of, giving way to, turning into, …).</p>
 </header>
+<nav id="jump" aria-label="Jump to section">
+<a href="#sec-replacement">Replacement <span class="n">(146)</span></a>
+<a href="#sec-x-hidden-by-y">X Hidden By Y <span class="n">(2)</span></a>
+<a href="#all">All indicators <span class="n">(153)</span></a>
+</nav>
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter indicators…" autofocus>
   <span id="stats">153 shown</span>
 </div>
 <main>
-  
-  <section class="cat"><h2>Replacement <span class="n">(146)</span></h2><div class="grid">
+<section class="cat" id="sec-replacement"><h2>Replacement <span class="n">(146)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">assuming role of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">becoming</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">bumped by</span>
@@ -188,13 +200,11 @@
 <span class="ind" title="Sources: clue-clinic">yielding</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">yielding for</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">yielding to</span>
-</div></section><section class="cat"><h2>X Hidden By Y <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-x-hidden-by-y"><h2>X Hidden By Y <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">hiding</span>
 <span class="ind" title="Sources: clue-clinic">x hidden by y</span>
 </div></section>
-  <section id="all">
-    <h2>All indicators <span class="n">(153)</span></h2>
-    <div class="grid" id="grid">
+<section id="all"><h2>All indicators <span class="n">(153)</span></h2><div class="grid" id="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">assuming role of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">becoming</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">bumped by</span>
@@ -348,8 +358,7 @@
 <span class="ind" title="Sources: clue-clinic">yielding</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">yielding for</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">yielding to</span>
-    </div>
-  </section>
+</div></section>
 </main>
 <script>
 (function() {
@@ -372,6 +381,10 @@
     if (parity) {
       parity.style.display =
           parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    for (const link of document.querySelectorAll('#jump a')) {
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
     }
   }
   q.addEventListener('input', apply);

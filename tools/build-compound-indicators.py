@@ -8,6 +8,9 @@ Outputs lists/compound-indicators.sql
 
 Run from exet/:
   python tools/build-compound-indicators.py
+  python tools/build-compound-indicators.py --render-only
+                                        # re-render the html from the committed
+                                        # data, without scraping or wordlists
 """
 
 from __future__ import annotations
@@ -16,6 +19,7 @@ import html as html_lib
 import json
 import re
 import ssl
+import sys
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -268,15 +272,27 @@ def render_html(rows: list[Row], meta: dict) -> str:
         return f'<tr class="row" data-word="{w}"><td class="letter">{ch}</td><td class="word">{w}</td></tr>'
 
     sections = []
+    nav_links = []
     for letter in sorted(by_letter):
         items = by_letter[letter]
         body = "\n".join(row_html(r) for r in items)
+        anchor = f"sec-{html_lib.escape(letter.lower())}"
+        nav_links.append(
+            f'<a href="#{anchor}">{html_lib.escape(letter)} '
+            f'<span class="n">({len(items)})</span></a>'
+        )
         sections.append(
-            f'<section class="cat"><h2>{html_lib.escape(letter)} '
+            f'<section class="cat" id="{anchor}">'
+            f'<h2>{html_lib.escape(letter)} '
             f'<span class="n">({len(items)})</span></h2>'
             f'<table class="tbl"><thead><tr><th>Letter</th><th>Word</th></tr></thead>'
             f"<tbody>\n{body}\n</tbody></table></section>"
         )
+    nav_block = (
+        '<nav id="jump" aria-label="Jump to section">\n'
+        + "\n".join(nav_links)
+        + "\n</nav>"
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -297,7 +313,15 @@ def render_html(rows: list[Row], meta: dict) -> str:
               position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }}
   #q {{ flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }}
   #stats {{ color: var(--muted); font-size: 0.85rem; }}
+  #jump {{ padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }}
+  #jump a {{ color: var(--accent); text-decoration: none; }}
+  #jump a:hover {{ text-decoration: underline; }}
+  #jump a.hide {{ display: none; }}
+  #jump .n {{ color: var(--muted); }}
   main {{ padding: 12px 16px 32px; }}
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat {{ scroll-margin-top: 64px; }}
   .cat h2 {{ font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }}
   .cat .n {{ color: var(--muted); font-weight: normal; }}
   .tbl {{ border-collapse: collapse; width: 100%; max-width: 420px; background: #fff; }}
@@ -314,6 +338,7 @@ def render_html(rows: list[Row], meta: dict) -> str:
   <p>{count} entries · built {meta["built"]} · {meta["curated"]} curated, {meta["wordlist"]} from wordlists</p>
   <p>Real words embedding a letter-selection indicator — e.g. <strong>foxtail</strong> → X (tail of fox).</p>
 </header>
+{nav_block}
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter words or letters…" autofocus>
   <span id="stats">{count} shown</span>
@@ -338,6 +363,10 @@ def render_html(rows: list[Row], meta: dict) -> str:
     stats.textContent = shown + ' shown';
     for (const sec of document.querySelectorAll('.cat')) {{
       sec.style.display = sec.querySelectorAll('tr.row:not(.hide)').length ? '' : 'none';
+    }}
+    for (const link of document.querySelectorAll('#jump a')) {{
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
     }}
   }}
   q.addEventListener('input', apply);
@@ -381,7 +410,28 @@ def write_sql(rows: list[Row], *, meta: dict) -> None:
     write_txt(rows)
 
 
-def main() -> int:
+def load_committed_rows() -> list[Row]:
+    rows = []
+    for line in OUT_TXT.read_text(encoding="utf-8").splitlines():
+        word, _, letter = line.partition("\t")
+        if word and letter:
+            rows.append(Row(word, letter))
+    return rows
+
+
+def render_only() -> int:
+    """Rebuild just the html, so presentation changes cannot churn the data."""
+    rows = load_committed_rows()
+    meta = json.loads(OUT_SQL.with_suffix(".json").read_text(encoding="utf-8"))
+    write_html(rows, meta=meta)
+    print(f"Wrote {OUT_HTML} ({len(rows)} entries, from committed data)", flush=True)
+    return 0
+
+
+def main(argv: list[str]) -> int:
+    if "--render-only" in argv[1:]:
+        return render_only()
+
     curated = [Row(w.lower(), ch.upper()) for w, ch in CURATED]
     scraped = scrape_web_mentions()
 
@@ -422,4 +472,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit(main(sys.argv))

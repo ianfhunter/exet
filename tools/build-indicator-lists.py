@@ -528,6 +528,23 @@ def norm(s: str) -> str:
     return s.lower()
 
 
+def section_id(label: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
+    return f"sec-{slug}" if slug else "sec"
+
+
+def jump_nav(items: list[tuple[str, str, int]]) -> str:
+    """Links to each section, for pages long enough to need scrolling."""
+    if len(items) < 2:
+        return ""
+    links = "\n".join(
+        f'<a href="#{anchor}">{html_lib.escape(label)} '
+        f'<span class="n">({count})</span></a>'
+        for anchor, label, count in items
+    )
+    return f'<nav id="jump" aria-label="Jump to section">\n{links}\n</nav>'
+
+
 def _wordnet_parts_of_speech() -> dict[str, set[str]]:
     """Return WordNet parts of speech for single-word indicator inference."""
     path = ROOT / "exet-wordnet.js"
@@ -1349,14 +1366,31 @@ def render_html(
             f"{html_lib.escape(entry['indicator'])}</span>"
         )
 
+    nav_items: list[tuple[str, str, int]] = []
+    used_ids: set[str] = set()
+
+    def unique_section_id(label: str) -> str:
+        """Near-duplicate category labels must still get their own anchor."""
+        base = section_id(label)
+        anchor = base
+        suffix = 2
+        while anchor in used_ids:
+            anchor = f"{base}-{suffix}"
+            suffix += 1
+        used_ids.add(anchor)
+        return anchor
+
     parity_sections = []
     for label in (ODD_PARITY, EVEN_PARITY):
         items = sorted(by_parity.get(label, []), key=lambda e: e["indicator"])
         if not items:
             continue
+        anchor = unique_section_id(label)
+        nav_items.append((anchor, label.title(), len(items)))
         chips = "\n".join(chip(e) for e in items)
         parity_sections.append(
-            f'<section class="cat"><h2>{html_lib.escape(label.title())} '
+            f'<section class="cat" id="{anchor}">'
+            f'<h2>{html_lib.escape(label.title())} '
             f'<span class="n">({len(items)})</span></h2>'
             f'<div class="grid">\n{chips}\n</div></section>'
         )
@@ -1379,9 +1413,12 @@ def render_html(
     )
     for cat in category_order:
         items = sorted(by_cat[cat], key=lambda e: e["indicator"])
+        anchor = unique_section_id(cat)
+        nav_items.append((anchor, cat.title(), len(items)))
         chips = "\n".join(chip(e) for e in items)
         cat_sections.append(
-            f'<section class="cat"><h2>{html_lib.escape(cat.title())} '
+            f'<section class="cat" id="{anchor}">'
+            f'<h2>{html_lib.escape(cat.title())} '
             f'<span class="n">({len(items)})</span></h2>'
             f'<div class="grid">\n{chips}\n</div></section>'
         )
@@ -1403,6 +1440,14 @@ def render_html(
         )
         # Each indicator already occurs once in a function section.
         all_block = ""
+    if all_block:
+        nav_items.append(("all", "All indicators", count))
+    nav_block = jump_nav(nav_items)
+    main_blocks = "\n".join(
+        block
+        for block in (parity_block, category_note, "".join(cat_sections), all_block)
+        if block
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -1423,7 +1468,15 @@ def render_html(
               position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }}
   #q {{ flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }}
   #stats {{ color: var(--muted); font-size: 0.85rem; }}
+  #jump {{ padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }}
+  #jump a {{ color: var(--accent); text-decoration: none; }}
+  #jump a:hover {{ text-decoration: underline; }}
+  #jump a.hide {{ display: none; }}
+  #jump .n {{ color: var(--muted); }}
   main {{ padding: 12px 16px 32px; }}
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all {{ scroll-margin-top: 64px; }}
   .cat h2 {{ font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }}
   .cat .n {{ color: var(--muted); font-weight: normal; }}
   .note {{ margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }}
@@ -1441,15 +1494,13 @@ def render_html(
   <p>{count} entries · built {meta["built"]} · merged from: {html_lib.escape(sources)}</p>
   <p>{html_lib.escape(cfg.blurb)}</p>
 </header>
+{nav_block}
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter indicators…" autofocus>
   <span id="stats">{count} shown</span>
 </div>
 <main>
-  {parity_block}
-  {category_note}
-  {"".join(cat_sections)}
-{all_block}
+{main_blocks}
 </main>
 <script>
 (function() {{
@@ -1472,6 +1523,10 @@ def render_html(
     if (parity) {{
       parity.style.display =
           parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }}
+    for (const link of document.querySelectorAll('#jump a')) {{
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
     }}
   }}
   q.addEventListener('input', apply);

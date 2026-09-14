@@ -17,7 +17,15 @@
               position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   #q { flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }
   #stats { color: var(--muted); font-size: 0.85rem; }
+  #jump { padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }
+  #jump a { color: var(--accent); text-decoration: none; }
+  #jump a:hover { text-decoration: underline; }
+  #jump a.hide { display: none; }
+  #jump .n { color: var(--muted); }
   main { padding: 12px 16px 32px; }
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all { scroll-margin-top: 64px; }
   .cat h2 { font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }
   .cat .n { color: var(--muted); font-weight: normal; }
   .note { margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }
@@ -35,13 +43,36 @@
   <p>534 entries · built 2026-08-12 · merged from: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptipedia, curated-extras, unscramblerer, wordsup</p>
   <p>Initial, final, alternate, and other letter-picking wordplay.</p>
 </header>
+<nav id="jump" aria-label="Jump to section">
+<a href="#sec-list-of-21-first-letter-selection-indicators">List Of 21 First Letter Selection Indicators <span class="n">(23)</span></a>
+<a href="#sec-list-of-24-first-and-last-letter-selection-indicators">List Of 24 First And Last Letter Selection Indicators <span class="n">(28)</span></a>
+<a href="#sec-list-of-52-last-letter-selection-indicators">List Of 52 Last Letter Selection Indicators <span class="n">(13)</span></a>
+<a href="#sec-most-common-selection-indicators">Most Common Selection Indicators <span class="n">(25)</span></a>
+<a href="#sec-select-first-letter">Select : First Letter <span class="n">(1)</span></a>
+<a href="#sec-select-alternate-letters">Select: Alternate Letters <span class="n">(6)</span></a>
+<a href="#sec-select-even-letters">Select: Even Letters <span class="n">(7)</span></a>
+<a href="#sec-select-first-and-last-letters">Select: First And Last Letters <span class="n">(59)</span></a>
+<a href="#sec-select-first-letter-2">Select: First Letter <span class="n">(61)</span></a>
+<a href="#sec-select-first-letter-cap">Select: First Letter (Cap) <span class="n">(2)</span></a>
+<a href="#sec-select-first-letter-s">Select: First Letter(S) <span class="n">(6)</span></a>
+<a href="#sec-select-first-or-second-half">Select: First Or Second Half <span class="n">(5)</span></a>
+<a href="#sec-select-first-two-letters">Select: First Two Letters <span class="n">(2)</span></a>
+<a href="#sec-select-last-letter">Select: Last Letter <span class="n">(32)</span></a>
+<a href="#sec-select-last-letter-s">Select: Last Letter(S) <span class="n">(4)</span></a>
+<a href="#sec-select-middle-letter">Select: Middle Letter <span class="n">(4)</span></a>
+<a href="#sec-select-middle-letter-s">Select: Middle Letter(S) <span class="n">(9)</span></a>
+<a href="#sec-select-odd-letters">Select: Odd Letters <span class="n">(10)</span></a>
+<a href="#sec-select-one-of-central-pair-lost">Select: One Of Central Pair Lost <span class="n">(1)</span></a>
+<a href="#sec-select-regular-letters">Select: Regular Letters <span class="n">(15)</span></a>
+<a href="#sec-select-second-letter">Select: Second Letter <span class="n">(1)</span></a>
+<a href="#all">All indicators <span class="n">(534)</span></a>
+</nav>
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter indicators…" autofocus>
   <span id="stats">534 shown</span>
 </div>
 <main>
-  
-  <section class="cat"><h2>List Of 21 First Letter Selection Indicators <span class="n">(23)</span></h2><div class="grid">
+<section class="cat" id="sec-list-of-21-first-letter-selection-indicators"><h2>List Of 21 First Letter Selection Indicators <span class="n">(23)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon, unscramblerer">beginner</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, unscramblerer, wordsup">beginning</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, unscramblerer">capital</span>
@@ -65,7 +96,7 @@
 <span class="ind" title="Sources: unscramblerer, wordsup">start</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, unscramblerer, wordsup">starter</span>
 <span class="ind" title="Sources: cryptipedia, unscramblerer, wordsup">top</span>
-</div></section><section class="cat"><h2>List Of 24 First And Last Letter Selection Indicators <span class="n">(28)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-list-of-24-first-and-last-letter-selection-indicators"><h2>List Of 24 First And Last Letter Selection Indicators <span class="n">(28)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptipedia, unscramblerer">banks</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, cryptipedia, unscramblerer">borders</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, cryptipedia, unscramblerer">case</span>
@@ -94,7 +125,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, unscramblerer">void</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, unscramblerer">voided</span>
 <span class="ind" title="Sources: unscramblerer">wrappers</span>
-</div></section><section class="cat"><h2>List Of 52 Last Letter Selection Indicators <span class="n">(13)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-list-of-52-last-letter-selection-indicators"><h2>List Of 52 Last Letter Selection Indicators <span class="n">(13)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon, cryptipedia, unscramblerer, wordsup">back</span>
 <span class="ind" title="Sources: cryptipedia, unscramblerer">bottom</span>
 <span class="ind" title="Sources: clue-clinic, unscramblerer">chump</span>
@@ -108,7 +139,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras, unscramblerer">lastly</span>
 <span class="ind" title="Sources: cryptipedia, unscramblerer">tail</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras, unscramblerer">ultimately</span>
-</div></section><section class="cat"><h2>Most Common Selection Indicators <span class="n">(25)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-most-common-selection-indicators"><h2>Most Common Selection Indicators <span class="n">(25)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon, cryptipedia, unscramblerer, wordsup">back</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, unscramblerer, wordsup">beginning</span>
 <span class="ind" title="Sources: cryptipedia, unscramblerer">bottom</span>
@@ -134,16 +165,16 @@
 <span class="ind" title="Sources: unscramblerer, wordsup">start</span>
 <span class="ind" title="Sources: cryptipedia, unscramblerer, wordsup">top</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras, unscramblerer">ultimately</span>
-</div></section><section class="cat"><h2>Select : First Letter <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-first-letter"><h2>Select : First Letter <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptipedia, wordsup">firstly</span>
-</div></section><section class="cat"><h2>Select: Alternate Letters <span class="n">(6)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-alternate-letters"><h2>Select: Alternate Letters <span class="n">(6)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">alternate bits of</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">alternate parts of</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, crossword-unclued, cryptipedia, wordsup">alternately</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">every other piece</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">leaving every other piece</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">regulars in</span>
-</div></section><section class="cat"><h2>Select: Even Letters <span class="n">(7)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-even-letters"><h2>Select: Even Letters <span class="n">(7)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">even bits of</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">even letters from</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">even pieces of</span>
@@ -151,7 +182,7 @@
 <span class="ind" title="Sources: clue-clinic-lexicon, wordsup">every second</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">ignoring the odds</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">odds cut</span>
-</div></section><section class="cat"><h2>Select: First And Last Letters <span class="n">(59)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-first-and-last-letters"><h2>Select: First And Last Letters <span class="n">(59)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">alpha and omega in</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">at the edges</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, cryptipedia, unscramblerer">borders</span>
@@ -211,7 +242,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">without stuffing</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, cryptipedia">wrapper</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">wrapping</span>
-</div></section><section class="cat"><h2>Select: First Letter <span class="n">(61)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-first-letter-2"><h2>Select: First Letter <span class="n">(61)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia">basically</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, unscramblerer">beginner</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, unscramblerer, wordsup">beginning</span>
@@ -273,26 +304,26 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">trace of</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">what gets ... going</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">what gets ... started</span>
-</div></section><section class="cat"><h2>Select: First Letter (Cap) <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-first-letter-cap"><h2>Select: First Letter (Cap) <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">big end of</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, unscramblerer">capital</span>
-</div></section><section class="cat"><h2>Select: First Letter(S) <span class="n">(6)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-first-letter-s"><h2>Select: First Letter(S) <span class="n">(6)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras">at first</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptipedia, curated-extras, unscramblerer, wordsup">initially</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, unscramblerer, wordsup">originally</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras, unscramblerer, wordsup">primarily</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras, unscramblerer">principally</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras">to begin with</span>
-</div></section><section class="cat"><h2>Select: First Or Second Half <span class="n">(5)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-first-or-second-half"><h2>Select: First Or Second Half <span class="n">(5)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">50%</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">half (of)</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">half concealed</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">half-cut</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">not half</span>
-</div></section><section class="cat"><h2>Select: First Two Letters <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-first-two-letters"><h2>Select: First Two Letters <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia">early signs of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">first pair of</span>
-</div></section><section class="cat"><h2>Select: Last Letter <span class="n">(32)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-last-letter"><h2>Select: Last Letter <span class="n">(32)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon, cryptipedia, unscramblerer, wordsup">back</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">backside of</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">boundary</span>
@@ -325,17 +356,17 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">ultimate in</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">what winds up</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">what&#x27;s behind</span>
-</div></section><section class="cat"><h2>Select: Last Letter(S) <span class="n">(4)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-last-letter-s"><h2>Select: Last Letter(S) <span class="n">(4)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras">at last</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras, unscramblerer">finally</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras, unscramblerer">lastly</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras, unscramblerer">ultimately</span>
-</div></section><section class="cat"><h2>Select: Middle Letter <span class="n">(4)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-middle-letter"><h2>Select: Middle Letter <span class="n">(4)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">central ingredient</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">essential character of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">essential ingredient of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">focus of</span>
-</div></section><section class="cat"><h2>Select: Middle Letter(S) <span class="n">(9)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-middle-letter-s"><h2>Select: Middle Letter(S) <span class="n">(9)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia">at heart</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">belly of</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">centre</span>
@@ -345,7 +376,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia">essentially</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, curated-extras">heart of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">middle of</span>
-</div></section><section class="cat"><h2>Select: Odd Letters <span class="n">(10)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-odd-letters"><h2>Select: Odd Letters <span class="n">(10)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">dropping every second</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">evens out</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">odd bits of</span>
@@ -356,9 +387,9 @@
 <span class="ind" title="Sources: clue-clinic-lexicon">odds of</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">seconds our</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">wanting seconds</span>
-</div></section><section class="cat"><h2>Select: One Of Central Pair Lost <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-one-of-central-pair-lost"><h2>Select: One Of Central Pair Lost <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">half-hearted(ly)</span>
-</div></section><section class="cat"><h2>Select: Regular Letters <span class="n">(15)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-regular-letters"><h2>Select: Regular Letters <span class="n">(15)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">at intervals</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">every now and again</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, cryptipedia">every now and then</span>
@@ -374,12 +405,10 @@
 <span class="ind" title="Sources: clue-clinic-lexicon">regular letters from</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, crossword-unclued, cryptipedia, curated-extras, wordsup">regularly</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, wordsup">regularly ignored</span>
-</div></section><section class="cat"><h2>Select: Second Letter <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-select-second-letter"><h2>Select: Second Letter <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued">second</span>
 </div></section>
-  <section id="all">
-    <h2>All indicators <span class="n">(534)</span></h2>
-    <div class="grid" id="grid">
+<section id="all"><h2>All indicators <span class="n">(534)</span></h2><div class="grid" id="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, curated-extras">50%</span>
 <span class="ind" title="Sources: cryptipedia">a piece of</span>
 <span class="ind" title="Sources: curated-extras">abbreviations of</span>
@@ -914,8 +943,7 @@
 <span class="ind" title="Sources: unscramblerer">wrappers</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">wrapping</span>
 <span class="ind" title="Sources: clue-clinic">wrapping for/from/of/on</span>
-    </div>
-  </section>
+</div></section>
 </main>
 <script>
 (function() {
@@ -938,6 +966,10 @@
     if (parity) {
       parity.style.display =
           parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    for (const link of document.querySelectorAll('#jump a')) {
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
     }
   }
   q.addEventListener('input', apply);

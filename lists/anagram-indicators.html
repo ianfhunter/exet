@@ -17,7 +17,15 @@
               position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   #q { flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }
   #stats { color: var(--muted); font-size: 0.85rem; }
+  #jump { padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }
+  #jump a { color: var(--accent); text-decoration: none; }
+  #jump a:hover { text-decoration: underline; }
+  #jump a.hide { display: none; }
+  #jump .n { color: var(--muted); }
   main { padding: 12px 16px 32px; }
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all { scroll-margin-top: 64px; }
   .cat h2 { font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }
   .cat .n { color: var(--muted); font-weight: normal; }
   .note { margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }
@@ -35,14 +43,23 @@
   <p>8518 entries · built 2026-09-14 · merged from: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, curated-extras, daily-cryptic, minute-cryptic, solve-the-crossword, unscramblerer, wordsup</p>
   <p>Candidates for rearrangement — grammar and context decide.</p>
 </header>
+<nav id="jump" aria-label="Jump to section">
+<a href="#sec-adjective">Adjective <span class="n">(983)</span></a>
+<a href="#sec-adverb">Adverb <span class="n">(1313)</span></a>
+<a href="#sec-past-participle">Past Participle <span class="n">(1515)</span></a>
+<a href="#sec-present-participle">Present Participle <span class="n">(1226)</span></a>
+<a href="#sec-verb-imperative">Verb Imperative <span class="n">(1370)</span></a>
+<a href="#sec-verb-indicative">Verb Indicative <span class="n">(477)</span></a>
+<a href="#sec-noun-expression">Noun Expression <span class="n">(712)</span></a>
+<a href="#sec-context-dependent">Context-Dependent <span class="n">(922)</span></a>
+</nav>
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter indicators…" autofocus>
   <span id="stats">8518 shown</span>
 </div>
 <main>
-  
-  <p class="note">Grouped by grammatical function in the wordplay. 968 functions come from ClueClinic; the remainder are conservative grammatical inferences. Hover over an indicator to see whether its function was inferred.</p>
-  <section class="cat"><h2>Adjective <span class="n">(983)</span></h2><div class="grid">
+<p class="note">Grouped by grammatical function in the wordplay. 968 functions come from ClueClinic; the remainder are conservative grammatical inferences. Hover over an indicator to see whether its function was inferred.</p>
+<section class="cat" id="sec-adjective"><h2>Adjective <span class="n">(983)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, solve-the-crossword, unscramblerer, wordsup; Function: Adjective">abandoned</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, wordsup; Function: Adjective">aberrant</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Adjective (inferred)">abhorrent</span>
@@ -1026,7 +1043,7 @@
 <span class="ind" title="Sources: cryptics-georgeho; Function: Adjective (inferred)">wrongful</span>
 <span class="ind" title="Sources: cryptics-georgeho, cryptipedia, unscramblerer, wordsup; Function: Adjective (inferred)">wrought</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho; Function: Adjective">wry</span>
-</div></section><section class="cat"><h2>Adverb <span class="n">(1313)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-adverb"><h2>Adverb <span class="n">(1313)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho; Function: Adverb (inferred)">a bit differently</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Adverb (inferred)">abjectly</span>
 <span class="ind" title="Sources: cryptics-georgeho, cryptipedia, wordsup; Function: Adverb (inferred)">abnormally</span>
@@ -2340,7 +2357,7 @@
 <span class="ind" title="Sources: cryptics-georgeho; Function: Adverb (inferred)">wrongly seen as</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Adverb (inferred)">wryly</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Adverb (inferred)">zippily</span>
-</div></section><section class="cat"><h2>Past Participle <span class="n">(1515)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-past-participle"><h2>Past Participle <span class="n">(1515)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho; Function: Past participle (inferred)">aborted</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, wordsup; Function: Past participle">abused</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Past participle (inferred)">acciden</span>
@@ -3856,7 +3873,7 @@
 <span class="ind" title="Sources: cryptics-georgeho; Function: Past participle (inferred)">written about</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Past participle (inferred)">zapped</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Past participle (inferred)">zonked</span>
-</div></section><section class="cat"><h2>Present Participle <span class="n">(1226)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-present-participle"><h2>Present Participle <span class="n">(1226)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho; Function: Present participle (inferred)">abusing</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho; Function: Present participle">acting</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Present participle (inferred)">acting up</span>
@@ -5083,7 +5100,7 @@
 <span class="ind" title="Sources: cryptics-georgeho; Function: Present participle (inferred)">writing out</span>
 <span class="ind" title="Sources: cryptics-georgeho, cryptipedia, unscramblerer, wordsup; Function: Present participle (inferred)">yielding</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Present participle (inferred)">zapping</span>
-</div></section><section class="cat"><h2>Verb Imperative <span class="n">(1370)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-verb-imperative"><h2>Verb Imperative <span class="n">(1370)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho, wordsup; Function: Verb imperative (inferred)">abandon</span>
 <span class="ind" title="Sources: cryptics-georgeho, minute-cryptic, unscramblerer, wordsup; Function: Verb imperative (inferred)">abstract</span>
 <span class="ind" title="Sources: cryptics-georgeho, wordsup; Function: Verb imperative (inferred)">abuse</span>
@@ -6454,7 +6471,7 @@
 <span class="ind" title="Sources: cryptipedia; Function: Verb imperative (inferred)">wrong (way)</span>
 <span class="ind" title="Sources: cryptipedia; Function: Verb imperative (inferred)">wrong (would be)</span>
 <span class="ind" title="Sources: clue-clinic; Function: Verb imperative">yank</span>
-</div></section><section class="cat"><h2>Verb Indicative <span class="n">(477)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-verb-indicative"><h2>Verb Indicative <span class="n">(477)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho; Function: Verb indicative (inferred)">accounts for</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon; Function: Verb indicative">acts</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Verb indicative (inferred)">adjusts</span>
@@ -6932,7 +6949,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon; Function: Verb indicative">wrestles</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho; Function: Verb indicative">wriggles</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon; Function: Verb indicative">writhes</span>
-</div></section><section class="cat"><h2>Noun Expression <span class="n">(712)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-noun-expression"><h2>Noun Expression <span class="n">(712)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho; Function: Noun expression (inferred)">a bad way</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Noun expression (inferred)">a brew of</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Noun expression (inferred)">a cocktail</span>
@@ -7645,7 +7662,7 @@
 <span class="ind" title="Sources: cryptics-georgeho; Function: Noun expression (inferred)">work of</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Noun expression (inferred)">workout</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Noun expression (inferred)">wreckage</span>
-</div></section><section class="cat"><h2>Context-Dependent <span class="n">(922)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-context-dependent"><h2>Context-Dependent <span class="n">(922)</span></h2><div class="grid">
 <span class="ind" title="Sources: crossword-unclued, wordsup; Function: Context-dependent (inferred)">accidental</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Context-dependent (inferred)">adjustments made to</span>
 <span class="ind" title="Sources: cryptics-georgeho; Function: Context-dependent (inferred)">adjustments to</span>
@@ -8569,7 +8586,6 @@
 <span class="ind" title="Sources: cryptics-georgeho; Function: Context-dependent (inferred)">you need to make</span>
 <span class="ind" title="Sources: cryptipedia, minute-cryptic, wordsup; Function: Context-dependent (inferred)">zany</span>
 </div></section>
-
 </main>
 <script>
 (function() {
@@ -8592,6 +8608,10 @@
     if (parity) {
       parity.style.display =
           parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    for (const link of document.querySelectorAll('#jump a')) {
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
     }
   }
   q.addEventListener('input', apply);

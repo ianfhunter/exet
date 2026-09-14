@@ -292,9 +292,11 @@ def render_glue_html(meta: dict) -> str:
     cat_meta = {c["slug"]: c for c in meta["categories"]}
 
     sections: list[str] = []
+    nav_items: list[tuple[str, str, int]] = []
     for cat in meta["categories"]:
         slug = cat["slug"]
         items = [e for e in meta["entries"] if e["category"] == slug]
+        nav_items.append((f"sec-{slug}", cat["title"], len(items)))
         chips = []
         for e in items:
             note = html_lib.escape(", ".join(e["notes"]))
@@ -305,12 +307,21 @@ def render_glue_html(meta: dict) -> str:
                 f"{html_lib.escape(e['phrase'])}</span>"
             )
         sections.append(
-            f'<section class="cat" data-cat="{html_lib.escape(slug)}">'
+            f'<section class="cat" id="sec-{html_lib.escape(slug)}" '
+            f'data-cat="{html_lib.escape(slug)}">'
             f"<h2>{html_lib.escape(cat['title'])} "
             f'<span class="n">({len(items)})</span></h2>'
             f"<p class=\"cat-blurb\">{html_lib.escape(cat['blurb'])}</p>"
             f'<div class="grid">\n' + "\n".join(chips) + "\n</div></section>"
         )
+
+    nav_items.append(("all", "All glue words", count))
+    nav_links = "\n".join(
+        f'<a href="#{anchor}">{html_lib.escape(label)} '
+        f'<span class="n">({n})</span></a>'
+        for anchor, label, n in nav_items
+    )
+    nav_block = f'<nav id="jump" aria-label="Jump to section">\n{nav_links}\n</nav>'
 
     all_chips = []
     for e in meta["entries"]:
@@ -346,7 +357,15 @@ def render_glue_html(meta: dict) -> str:
   #q {{ flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }}
   #cat {{ padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }}
   #stats {{ color: var(--muted); font-size: 0.85rem; }}
+  #jump {{ padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }}
+  #jump a {{ color: var(--accent); text-decoration: none; }}
+  #jump a:hover {{ text-decoration: underline; }}
+  #jump a.hide {{ display: none; }}
+  #jump .n {{ color: var(--muted); }}
   main {{ padding: 12px 16px 32px; }}
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all {{ scroll-margin-top: 64px; }}
   .cat h2 {{ font-size: 1rem; margin: 20px 0 6px; color: var(--accent); }}
   .cat .n {{ color: var(--muted); font-weight: normal; }}
   .cat-blurb {{ margin: 0 0 8px; color: var(--muted); font-size: 0.88rem; }}
@@ -374,6 +393,7 @@ def render_glue_html(meta: dict) -> str:
     <span><i style="background:var(--ambiguous-bg);border-color:var(--ambiguous-border)"></i> Ambiguous softeners</span>
   </div>
 </header>
+{nav_block}
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter glue words…" autofocus>
   <select id="cat">
@@ -423,6 +443,10 @@ def render_glue_html(meta: dict) -> str:
       shown = document.querySelectorAll('.cat:not([style*=\"display: none\"]) .glue:not(.hide)').length;
     }}
     stats.textContent = shown + ' shown';
+    for (const link of document.querySelectorAll('#jump a')) {{
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
+    }}
   }}
   q.addEventListener('input', apply);
   cat.addEventListener('change', apply);
@@ -509,6 +533,16 @@ def render_spoonerism_html(meta: dict) -> str:
 """
 
 
+def built_date(base: str, entries: list[dict]) -> str:
+    """Keep the recorded date when a rebuild only changes presentation."""
+    path = OUT_DIR / f"{base}.json"
+    if path.is_file():
+        previous = json.loads(path.read_text(encoding="utf-8"))
+        if previous.get("entries") == entries:
+            return previous["built"]
+    return date.today().isoformat()
+
+
 def write_glue() -> int:
     entries = build_glue_entries()
     meta = {
@@ -519,7 +553,7 @@ def write_glue() -> int:
             "They are not wordplay indicators — though some ambiguous entries "
             "can occasionally double as weak signals."
         ),
-        "built": date.today().isoformat(),
+        "built": built_date("clue-glue", entries),
         "count": len(entries),
         "sources": ["curated"],
         "categories": [
@@ -554,7 +588,7 @@ def write_spoonerism() -> int:
             "Signal that adjacent word sounds should be swapped (Spoonerised) "
             "to form the answer — e.g. Spooner's, after Spooner, swapping tops."
         ),
-        "built": date.today().isoformat(),
+        "built": built_date("spoonerism-indicators", entries),
         "count": len(entries),
         "sources": sorted({s for e in entries for s in e["sources"]}),
         "entries": entries,

@@ -17,7 +17,15 @@
               position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   #q { flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }
   #stats { color: var(--muted); font-size: 0.85rem; }
+  #jump { padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }
+  #jump a { color: var(--accent); text-decoration: none; }
+  #jump a:hover { text-decoration: underline; }
+  #jump a.hide { display: none; }
+  #jump .n { color: var(--muted); }
   main { padding: 12px 16px 32px; }
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all { scroll-margin-top: 64px; }
   .cat h2 { font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }
   .cat .n { color: var(--muted); font-weight: normal; }
   .note { margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }
@@ -35,13 +43,41 @@
   <p>1964 entries · built 2026-08-12 · merged from: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, curated-extras, daily-cryptic, solve-the-crossword, unscramblerer, wordsup</p>
   <p>Signal removing letter(s) from fodder — head, tail, middle, or named letters.</p>
 </header>
+<nav id="jump" aria-label="Jump to section">
+<a href="#sec-145-general-deletion-indicators">145 General Deletion Indicators <span class="n">(145)</span></a>
+<a href="#sec-21-first-letter-deletion-indicators">21 First Letter Deletion Indicators <span class="n">(21)</span></a>
+<a href="#sec-24-first-and-last-letter-deletion-indicators">24 First And Last Letter Deletion Indicators <span class="n">(24)</span></a>
+<a href="#sec-38-middle-letters-deletion-indicators">38 Middle Letters Deletion Indicators <span class="n">(38)</span></a>
+<a href="#sec-52-last-letter-deletion-indicators">52 Last Letter Deletion Indicators <span class="n">(52)</span></a>
+<a href="#sec-curtailed-x">Curtailed X <span class="n">(1)</span></a>
+<a href="#sec-departure">Departure <span class="n">(460)</span></a>
+<a href="#sec-expulsion">Expulsion <span class="n">(266)</span></a>
+<a href="#sec-most-common-deletion-indicators">Most Common Deletion Indicators <span class="n">(25)</span></a>
+<a href="#sec-reduction-8211-both-ends">Reduction &amp;#8211; Both Ends <span class="n">(40)</span></a>
+<a href="#sec-reduction-8211-first-letter">Reduction &amp;#8211; First Letter <span class="n">(20)</span></a>
+<a href="#sec-reduction-8211-first-letters">Reduction &amp;#8211; First Letters <span class="n">(1)</span></a>
+<a href="#sec-reduction-8211-last-letter">Reduction &amp;#8211; Last Letter <span class="n">(48)</span></a>
+<a href="#sec-reduction-8211-middle">Reduction &amp;#8211; Middle <span class="n">(9)</span></a>
+<a href="#sec-reduction-8211-one-of-central-pair">Reduction &amp;#8211; One Of Central Pair <span class="n">(2)</span></a>
+<a href="#sec-reduction-middle-letter-s">Reduction: Middle Letter(S) <span class="n">(1)</span></a>
+<a href="#sec-remove-first-letter">Remove First Letter <span class="n">(2)</span></a>
+<a href="#sec-remove-both-ends">Remove: Both Ends <span class="n">(29)</span></a>
+<a href="#sec-remove-first-letter-2">Remove: First Letter <span class="n">(11)</span></a>
+<a href="#sec-remove-first-letter-s">Remove: First Letter(S) <span class="n">(3)</span></a>
+<a href="#sec-remove-first-letters">Remove: First Letters <span class="n">(1)</span></a>
+<a href="#sec-remove-last-letter">Remove: Last Letter <span class="n">(37)</span></a>
+<a href="#sec-remove-middle-letter-s">Remove: Middle Letter(S) <span class="n">(2)</span></a>
+<a href="#sec-remove-middle-letters">Remove: Middle Letters <span class="n">(1)</span></a>
+<a href="#sec-x-hidden-by-y">X Hidden By Y <span class="n">(1)</span></a>
+<a href="#sec-y-hidden-from-x">Y Hidden From X <span class="n">(2)</span></a>
+<a href="#all">All indicators <span class="n">(1964)</span></a>
+</nav>
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter indicators…" autofocus>
   <span id="stats">1964 shown</span>
 </div>
 <main>
-  
-  <section class="cat"><h2>145 General Deletion Indicators <span class="n">(145)</span></h2><div class="grid">
+<section class="cat" id="sec-145-general-deletion-indicators"><h2>145 General Deletion Indicators <span class="n">(145)</span></h2><div class="grid">
 <span class="ind" title="Sources: unscramblerer">abandon</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, solve-the-crossword, unscramblerer">abandoning</span>
 <span class="ind" title="Sources: unscramblerer">abolish</span>
@@ -187,7 +223,7 @@
 <span class="ind" title="Sources: cryptics-georgeho, unscramblerer">withdraw</span>
 <span class="ind" title="Sources: unscramblerer">withhold</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, daily-cryptic, solve-the-crossword, unscramblerer, wordsup">without</span>
-</div></section><section class="cat"><h2>21 First Letter Deletion Indicators <span class="n">(21)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-21-first-letter-deletion-indicators"><h2>21 First Letter Deletion Indicators <span class="n">(21)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho, unscramblerer, wordsup">bareheaded</span>
 <span class="ind" title="Sources: crossword-unclued, unscramblerer">beginning</span>
 <span class="ind" title="Sources: unscramblerer, wordsup">behead</span>
@@ -209,7 +245,7 @@
 <span class="ind" title="Sources: crossword-unclued, cryptipedia, unscramblerer, wordsup">uninitiated</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, curated-extras, unscramblerer, wordsup">unopened</span>
 <span class="ind" title="Sources: crossword-unclued, curated-extras, unscramblerer, wordsup">unstarted</span>
-</div></section><section class="cat"><h2>24 First And Last Letter Deletion Indicators <span class="n">(24)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-24-first-and-last-letter-deletion-indicators"><h2>24 First And Last Letter Deletion Indicators <span class="n">(24)</span></h2><div class="grid">
 <span class="ind" title="Sources: unscramblerer, wordsup">banks</span>
 <span class="ind" title="Sources: unscramblerer, wordsup">borders</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, unscramblerer">boundless</span>
@@ -234,7 +270,7 @@
 <span class="ind" title="Sources: crossword-unclued, cryptics-georgeho, cryptipedia, unscramblerer, wordsup">unlimited</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, unscramblerer">unwrapped</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptipedia, unscramblerer, wordsup">wingless</span>
-</div></section><section class="cat"><h2>38 Middle Letters Deletion Indicators <span class="n">(38)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-38-middle-letters-deletion-indicators"><h2>38 Middle Letters Deletion Indicators <span class="n">(38)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, unscramblerer, wordsup">bare</span>
 <span class="ind" title="Sources: unscramblerer, wordsup">bones</span>
 <span class="ind" title="Sources: unscramblerer">central</span>
@@ -273,7 +309,7 @@
 <span class="ind" title="Sources: unscramblerer, wordsup">unwrap</span>
 <span class="ind" title="Sources: cryptics-georgeho, cryptipedia, unscramblerer, wordsup">vacant</span>
 <span class="ind" title="Sources: cryptipedia, unscramblerer, wordsup">vacuous</span>
-</div></section><section class="cat"><h2>52 Last Letter Deletion Indicators <span class="n">(52)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-52-last-letter-deletion-indicators"><h2>52 Last Letter Deletion Indicators <span class="n">(52)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, cryptics-georgeho, cryptipedia, unscramblerer">abbreviated</span>
 <span class="ind" title="Sources: clue-clinic, crossword-unclued, cryptics-georgeho, unscramblerer, wordsup">abridged</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, unscramblerer">abrupt</span>
@@ -326,9 +362,9 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptipedia, unscramblerer, wordsup">unending</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, curated-extras, solve-the-crossword, unscramblerer, wordsup">unfinished</span>
 <span class="ind" title="Sources: unscramblerer, wordsup">virtually</span>
-</div></section><section class="cat"><h2>Curtailed X <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-curtailed-x"><h2>Curtailed X <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, curated-extras, daily-cryptic, solve-the-crossword, unscramblerer, wordsup">curtailed</span>
-</div></section><section class="cat"><h2>Departure <span class="n">(460)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-departure"><h2>Departure <span class="n">(460)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho">abandoned by</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, solve-the-crossword, unscramblerer">abandoning</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho">abandons</span>
@@ -789,7 +825,7 @@
 <span class="ind" title="Sources: clue-clinic">withheld from</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">yielded</span>
 <span class="ind" title="Sources: clue-clinic">yielded by</span>
-</div></section><section class="cat"><h2>Expulsion <span class="n">(266)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-expulsion"><h2>Expulsion <span class="n">(266)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia">all but</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">all except</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, curated-extras">apart from</span>
@@ -1056,7 +1092,7 @@
 <span class="ind" title="Sources: clue-clinic-lexicon">won&#x27;t have</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">yielding</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">yields</span>
-</div></section><section class="cat"><h2>Most Common Deletion Indicators <span class="n">(25)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-most-common-deletion-indicators"><h2>Most Common Deletion Indicators <span class="n">(25)</span></h2><div class="grid">
 <span class="ind" title="Sources: cryptics-georgeho, unscramblerer">avoid</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, unscramblerer">away</span>
 <span class="ind" title="Sources: cryptics-georgeho, unscramblerer">but</span>
@@ -1082,7 +1118,7 @@
 <span class="ind" title="Sources: unscramblerer">take</span>
 <span class="ind" title="Sources: unscramblerer">want</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, daily-cryptic, solve-the-crossword, unscramblerer, wordsup">without</span>
-</div></section><section class="cat"><h2>Reduction &amp;#8211; Both Ends <span class="n">(40)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-reduction-8211-both-ends"><h2>Reduction &amp;#8211; Both Ends <span class="n">(40)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, unscramblerer, wordsup">bare</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, unscramblerer">boundless</span>
 <span class="ind" title="Sources: clue-clinic">contents of</span>
@@ -1123,7 +1159,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, unscramblerer">unwrapped</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptipedia, unscramblerer, wordsup">wingless</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, wordsup">without limits</span>
-</div></section><section class="cat"><h2>Reduction &amp;#8211; First Letter <span class="n">(20)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-reduction-8211-first-letter"><h2>Reduction &amp;#8211; First Letter <span class="n">(20)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho">after opening</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">after starter</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">covering head(s)</span>
@@ -1144,9 +1180,9 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">uncapped</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">uncrowned</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, curated-extras, unscramblerer, wordsup">unopened</span>
-</div></section><section class="cat"><h2>Reduction &amp;#8211; First Letters <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-reduction-8211-first-letters"><h2>Reduction &amp;#8211; First Letters <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">having no leads</span>
-</div></section><section class="cat"><h2>Reduction &amp;#8211; Last Letter <span class="n">(48)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-reduction-8211-last-letter"><h2>Reduction &amp;#8211; Last Letter <span class="n">(48)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">a great deal of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">a lot of</span>
 <span class="ind" title="Sources: clue-clinic, cryptics-georgeho, cryptipedia, unscramblerer">abbreviated</span>
@@ -1195,7 +1231,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, unscramblerer">truncated</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptipedia, unscramblerer, wordsup">unending</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, curated-extras, solve-the-crossword, unscramblerer, wordsup">unfinished</span>
-</div></section><section class="cat"><h2>Reduction &amp;#8211; Middle <span class="n">(9)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-reduction-8211-middle"><h2>Reduction &amp;#8211; Middle <span class="n">(9)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, crossword-unclued, cryptipedia, wordsup">cored</span>
 <span class="ind" title="Sources: clue-clinic, unscramblerer, wordsup">disembowelled</span>
 <span class="ind" title="Sources: clue-clinic, crossword-unclued, cryptics-georgeho, cryptipedia, unscramblerer, wordsup">disheartened</span>
@@ -1205,15 +1241,15 @@
 <span class="ind" title="Sources: clue-clinic">lacking heart</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, curated-extras, solve-the-crossword, wordsup">losing heart</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">with heart void</span>
-</div></section><section class="cat"><h2>Reduction &amp;#8211; One Of Central Pair <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-reduction-8211-one-of-central-pair"><h2>Reduction &amp;#8211; One Of Central Pair <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, wordsup">half-hearted</span>
 <span class="ind" title="Sources: clue-clinic, cryptipedia">half-heartedly</span>
-</div></section><section class="cat"><h2>Reduction: Middle Letter(S) <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-reduction-middle-letter-s"><h2>Reduction: Middle Letter(S) <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, curated-extras, solve-the-crossword, wordsup">losing heart</span>
-</div></section><section class="cat"><h2>Remove First Letter <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-remove-first-letter"><h2>Remove First Letter <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho">after opening</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">after starter</span>
-</div></section><section class="cat"><h2>Remove: Both Ends <span class="n">(29)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-remove-both-ends"><h2>Remove: Both Ends <span class="n">(29)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, unscramblerer, wordsup">bare</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, unscramblerer">boundless</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">frameless</span>
@@ -1243,7 +1279,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, unscramblerer">unwrapped</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptipedia, unscramblerer, wordsup">wingless</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, wordsup">without limits</span>
-</div></section><section class="cat"><h2>Remove: First Letter <span class="n">(11)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-remove-first-letter-2"><h2>Remove: First Letter <span class="n">(11)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">denied opening</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho">faceless</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, daily-cryptic, solve-the-crossword, unscramblerer, wordsup">headless</span>
@@ -1255,13 +1291,13 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">uncapped</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">uncrowned</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, curated-extras, unscramblerer, wordsup">unopened</span>
-</div></section><section class="cat"><h2>Remove: First Letter(S) <span class="n">(3)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-remove-first-letter-s"><h2>Remove: First Letter(S) <span class="n">(3)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">covering head(s)</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">losing head(s)</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">scratching head(s)</span>
-</div></section><section class="cat"><h2>Remove: First Letters <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-remove-first-letters"><h2>Remove: First Letters <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">having no leads</span>
-</div></section><section class="cat"><h2>Remove: Last Letter <span class="n">(37)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-remove-last-letter"><h2>Remove: Last Letter <span class="n">(37)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">a great deal of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">a lot of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptipedia, unscramblerer">abrupt</span>
@@ -1299,20 +1335,18 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, unscramblerer">truncated</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptipedia, unscramblerer, wordsup">unending</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, curated-extras, solve-the-crossword, unscramblerer, wordsup">unfinished</span>
-</div></section><section class="cat"><h2>Remove: Middle Letter(S) <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-remove-middle-letter-s"><h2>Remove: Middle Letter(S) <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon, crossword-unclued, cryptics-georgeho, cryptipedia, curated-extras, solve-the-crossword, unscramblerer, wordsup">gutted</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon, cryptics-georgeho, cryptipedia, solve-the-crossword, unscramblerer">heartlessly</span>
-</div></section><section class="cat"><h2>Remove: Middle Letters <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-remove-middle-letters"><h2>Remove: Middle Letters <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">with heart void</span>
-</div></section><section class="cat"><h2>X Hidden By Y <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-x-hidden-by-y"><h2>X Hidden By Y <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic, cryptics-georgeho">hiding</span>
-</div></section><section class="cat"><h2>Y Hidden From X <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-y-hidden-from-x"><h2>Y Hidden From X <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic">hidden from</span>
 <span class="ind" title="Sources: clue-clinic">hidden in</span>
 </div></section>
-  <section id="all">
-    <h2>All indicators <span class="n">(1964)</span></h2>
-    <div class="grid" id="grid">
+<section id="all"><h2>All indicators <span class="n">(1964)</span></h2><div class="grid" id="grid">
 <span class="ind" title="Sources: cryptics-georgeho">a certain amount off</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">a great deal of</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">a lot of</span>
@@ -3277,8 +3311,7 @@
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">yielding</span>
 <span class="ind" title="Sources: clue-clinic, clue-clinic-lexicon">yields</span>
 <span class="ind" title="Sources: cryptics-georgeho">zero</span>
-    </div>
-  </section>
+</div></section>
 </main>
 <script>
 (function() {
@@ -3301,6 +3334,10 @@
     if (parity) {
       parity.style.display =
           parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    for (const link of document.querySelectorAll('#jump a')) {
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
     }
   }
   q.addEventListener('input', apply);

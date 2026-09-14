@@ -17,7 +17,15 @@
               position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   #q { flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }
   #stats { color: var(--muted); font-size: 0.85rem; }
+  #jump { padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }
+  #jump a { color: var(--accent); text-decoration: none; }
+  #jump a:hover { text-decoration: underline; }
+  #jump a.hide { display: none; }
+  #jump .n { color: var(--muted); }
   main { padding: 12px 16px 32px; }
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all { scroll-margin-top: 64px; }
   .cat h2 { font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }
   .cat .n { color: var(--muted); font-weight: normal; }
   .note { margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }
@@ -35,84 +43,103 @@
   <p>49 entries · built 2026-09-14 · merged from: clue-clinic-lexicon, curated-extras</p>
   <p>A letter or chunk is shifted inside the fodder: first-to-last, cyclic, promoted/demoted, tips swapped (head to tail, cycling, …).</p>
 </header>
+<nav id="jump" aria-label="Jump to section">
+<a href="#sec-shift-cyclic-a-d">Shift: Cyclic (A/D) <span class="n">(5)</span></a>
+<a href="#sec-shift-first-letter-moved-back-a">Shift: First Letter Moved Back (A) <span class="n">(4)</span></a>
+<a href="#sec-shift-first-letter-moved-down-d">Shift: First Letter Moved Down (D) <span class="n">(6)</span></a>
+<a href="#sec-shift-first-letter-to-end-a">Shift: First Letter To End (A) <span class="n">(2)</span></a>
+<a href="#sec-shift-first-letter-to-end-a-d">Shift: First Letter To End (A/D) <span class="n">(4)</span></a>
+<a href="#sec-shift-first-letter-to-end-d">Shift: First Letter To End (D) <span class="n">(1)</span></a>
+<a href="#sec-shift-first-pair-moved-pack-a">Shift: First Pair Moved Pack (A) <span class="n">(1)</span></a>
+<a href="#sec-shift-first-pair-swapped-a-d">Shift: First Pair Swapped (A/D) <span class="n">(1)</span></a>
+<a href="#sec-shift-first-last-swapped-a">Shift: First/Last Swapped (A) <span class="n">(1)</span></a>
+<a href="#sec-shift-first-last-swapped-a-d">Shift: First/Last Swapped (A/D) <span class="n">(2)</span></a>
+<a href="#sec-shift-last-letter-to-start-a">Shift: Last Letter To Start (A) <span class="n">(1)</span></a>
+<a href="#sec-shift-last-letter-to-start-a-d">Shift: Last Letter To Start (A/D) <span class="n">(2)</span></a>
+<a href="#sec-shift-last-letter-to-start-d">Shift: Last Letter To Start (D) <span class="n">(1)</span></a>
+<a href="#sec-shift-second-letter-to-end-a-d">Shift: Second Letter To End (A/D) <span class="n">(1)</span></a>
+<a href="#sec-shift-x-moved-nearer-to-end-a">Shift: X Moved Nearer To End (A) <span class="n">(2)</span></a>
+<a href="#sec-shift-x-moved-nearer-to-end-d">Shift: X Moved Nearer To End (D) <span class="n">(3)</span></a>
+<a href="#sec-shift-x-moved-nearer-to-start-a">Shift: X Moved Nearer To Start (A) <span class="n">(2)</span></a>
+<a href="#sec-shift-x-moved-nearer-to-start-d">Shift: X Moved Nearer To Start (D) <span class="n">(6)</span></a>
+<a href="#sec-shift-x-moved-to-start-a-d">Shift: X Moved To Start (A/D) <span class="n">(4)</span></a>
+<a href="#all">All indicators <span class="n">(49)</span></a>
+</nav>
 <div id="toolbar">
   <input type="search" id="q" placeholder="Filter indicators…" autofocus>
   <span id="stats">49 shown</span>
 </div>
 <main>
-  
-  <section class="cat"><h2>Shift: Cyclic (A/D) <span class="n">(5)</span></h2><div class="grid">
+<section class="cat" id="sec-shift-cyclic-a-d"><h2>Shift: Cyclic (A/D) <span class="n">(5)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">cycled</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">cycles</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">cycling</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">with parts exchanged</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">with parts swapped</span>
-</div></section><section class="cat"><h2>Shift: First Letter Moved Back (A) <span class="n">(4)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-first-letter-moved-back-a"><h2>Shift: First Letter Moved Back (A) <span class="n">(4)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">beginning to retreat</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">first to retreat</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">leader dropping back</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">leader retreating</span>
-</div></section><section class="cat"><h2>Shift: First Letter Moved Down (D) <span class="n">(6)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-first-letter-moved-down-d"><h2>Shift: First Letter Moved Down (D) <span class="n">(6)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">beginning to fall</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">first to be relegated</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">head down</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">start to fall</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">with head dropping</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">with opener dropping down</span>
-</div></section><section class="cat"><h2>Shift: First Letter To End (A) <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-first-letter-to-end-a"><h2>Shift: First Letter To End (A) <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">first to back</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">start to back</span>
-</div></section><section class="cat"><h2>Shift: First Letter To End (A/D) <span class="n">(4)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-first-letter-to-end-a-d"><h2>Shift: First Letter To End (A/D) <span class="n">(4)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">beginning to end</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">first to finish</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">first to last</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">head to tail</span>
-</div></section><section class="cat"><h2>Shift: First Letter To End (D) <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-first-letter-to-end-d"><h2>Shift: First Letter To End (D) <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">head to foot</span>
-</div></section><section class="cat"><h2>Shift: First Pair Moved Pack (A) <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-first-pair-moved-pack-a"><h2>Shift: First Pair Moved Pack (A) <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">leads to retreat</span>
-</div></section><section class="cat"><h2>Shift: First Pair Swapped (A/D) <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-first-pair-swapped-a-d"><h2>Shift: First Pair Swapped (A/D) <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">leads to reverse</span>
-</div></section><section class="cat"><h2>Shift: First/Last Swapped (A) <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-first-last-swapped-a"><h2>Shift: First/Last Swapped (A) <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">swapping sides</span>
-</div></section><section class="cat"><h2>Shift: First/Last Swapped (A/D) <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-first-last-swapped-a-d"><h2>Shift: First/Last Swapped (A/D) <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">exchanging tips</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">swapping tips</span>
-</div></section><section class="cat"><h2>Shift: Last Letter To Start (A) <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-last-letter-to-start-a"><h2>Shift: Last Letter To Start (A) <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">back at the start</span>
-</div></section><section class="cat"><h2>Shift: Last Letter To Start (A/D) <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-last-letter-to-start-a-d"><h2>Shift: Last Letter To Start (A/D) <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">tail aloft</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">tail first</span>
-</div></section><section class="cat"><h2>Shift: Last Letter To Start (D) <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-last-letter-to-start-d"><h2>Shift: Last Letter To Start (D) <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">ending on top</span>
-</div></section><section class="cat"><h2>Shift: Second Letter To End (A/D) <span class="n">(1)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-second-letter-to-end-a-d"><h2>Shift: Second Letter To End (A/D) <span class="n">(1)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">second to last</span>
-</div></section><section class="cat"><h2>Shift: X Moved Nearer To End (A) <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-x-moved-nearer-to-end-a"><h2>Shift: X Moved Nearer To End (A) <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">x pushed back</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x put back</span>
-</div></section><section class="cat"><h2>Shift: X Moved Nearer To End (D) <span class="n">(3)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-x-moved-nearer-to-end-d"><h2>Shift: X Moved Nearer To End (D) <span class="n">(3)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">with demotion of x</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x demoted</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x stepping down</span>
-</div></section><section class="cat"><h2>Shift: X Moved Nearer To Start (A) <span class="n">(2)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-x-moved-nearer-to-start-a"><h2>Shift: X Moved Nearer To Start (A) <span class="n">(2)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">x advanced</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x brought forward</span>
-</div></section><section class="cat"><h2>Shift: X Moved Nearer To Start (D) <span class="n">(6)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-x-moved-nearer-to-start-d"><h2>Shift: X Moved Nearer To Start (D) <span class="n">(6)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">with promotion of x</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x climbing</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x given a boost</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x promoted</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x rising</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x taken up</span>
-</div></section><section class="cat"><h2>Shift: X Moved To Start (A/D) <span class="n">(4)</span></h2><div class="grid">
+</div></section><section class="cat" id="sec-shift-x-moved-to-start-a-d"><h2>Shift: X Moved To Start (A/D) <span class="n">(4)</span></h2><div class="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">x becoming leader</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x coming to fore</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x coming to head</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">x taking lead</span>
 </div></section>
-  <section id="all">
-    <h2>All indicators <span class="n">(49)</span></h2>
-    <div class="grid" id="grid">
+<section id="all"><h2>All indicators <span class="n">(49)</span></h2><div class="grid" id="grid">
 <span class="ind" title="Sources: clue-clinic-lexicon">back at the start</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">beginning to end</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">beginning to fall</span>
@@ -162,8 +189,7 @@
 <span class="ind" title="Sources: clue-clinic-lexicon">x stepping down</span>
 <span class="ind" title="Sources: clue-clinic-lexicon">x taken up</span>
 <span class="ind" title="Sources: clue-clinic-lexicon, curated-extras">x taking lead</span>
-    </div>
-  </section>
+</div></section>
 </main>
 <script>
 (function() {
@@ -186,6 +212,10 @@
     if (parity) {
       parity.style.display =
           parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    for (const link of document.querySelectorAll('#jump a')) {
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
     }
   }
   q.addEventListener('input', apply);
