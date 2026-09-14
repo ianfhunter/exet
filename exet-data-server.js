@@ -15,6 +15,8 @@ const exetDataServer = (function() {
     return '';
   }
 
+  // Compatibility path for tools whose public API is still synchronous.
+  // Grid-fill and autofill never call this: they use exet-fill-worker.js.
   function syncGet(path) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', baseUrl() + path, false);
@@ -34,7 +36,7 @@ const exetDataServer = (function() {
     });
   }
 
-  function probe() {
+  async function probe() {
     const mode = (typeof exetConfig !== 'undefined' && exetConfig.dataServer) ?
         exetConfig.dataServer : 'auto';
     if (mode === false || mode === 'off') {
@@ -42,13 +44,13 @@ const exetDataServer = (function() {
       return false;
     }
     try {
-      const health = syncGet('/health');
+      const health = await fetchJson('/health');
       if (!health || !health.ok) {
         enabled = false;
         return false;
       }
       enabled = true;
-      const data = syncGet('/api/datasets');
+      const data = await fetchJson('/api/datasets');
       for (const lx of (data.lexicons || [])) {
         lexiconByName[lx.display_name] = lx;
         // Menu keys from import-wordlists often match display_name.
@@ -88,13 +90,18 @@ const exetDataServer = (function() {
       stems: [0],
       stemsId: meta.id,
       serverSlug: meta.slug,
-      serverCache: {forms: [''], scores: [0]},
+      serverEntryCount: meta.entry_count || 1,
+      serverCache: {
+        forms: [''],
+        scores: [0],
+        formToIndex: new Map([['', 0]]),
+      },
     };
   }
 
   function cacheEntry(stub, form, score, reversed) {
-    let idx = stub.serverCache.forms.indexOf(form);
-    if (idx < 0) {
+    let idx = stub.serverCache.formToIndex.get(form);
+    if (idx === undefined) {
       idx = stub.lexicon.length;
       stub.lexicon.push(form);
       stub.scores.push(score);
@@ -102,6 +109,7 @@ const exetDataServer = (function() {
       stub.phones.push([]);
       stub.serverCache.forms.push(form);
       stub.serverCache.scores.push(score);
+      stub.serverCache.formToIndex.set(form, idx);
     }
     return reversed ? -idx : idx;
   }
@@ -118,7 +126,9 @@ const exetDataServer = (function() {
       return;
     }
     const slug = exetLexicon.serverSlug;
-    exetLexicon.startLen = 1;
+    // This is the size of the server-side list, not the small browser cache.
+    // Large-list limits key off startLen.
+    exetLexicon.startLen = exetLexicon.serverEntryCount || 1;
 
     exetLexicon.getLex = function(idx) {
       const i = Math.abs(idx);
@@ -302,6 +312,7 @@ const exetDataServer = (function() {
 
   return {
     probe: probe,
+    baseUrl: baseUrl,
     get enabled() {
       return enabled;
     },

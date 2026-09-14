@@ -1095,6 +1095,10 @@ class ExetAutofill {
   }
 
   startstop() {
+    if (exet.fillClient && exet.fillClient.enabled) {
+      this.startstopWorker();
+      return;
+    }
     if (!this.running) {
       if (exet.puz.hasRebusCells) {
         alert('Autofill is not supported for rebus puzzles.');
@@ -1170,6 +1174,93 @@ class ExetAutofill {
     this.statusSpan.innerHTML = this.status;
     this.activeDivMsg.innerHTML = this.status;
     this.activeDiv.style.display = 'block';
+  }
+
+  startstopWorker() {
+    if (this.running) {
+      this.running = false;
+      exet.fillClient.pauseAutofill();
+      this.status = 'Paused';
+      this.startstopButton.innerText = 'Start';
+      this.startstopButton.className = 'xlv-button';
+      this.accept.disabled = false;
+      this.clear.disabled = false;
+    } else {
+      if (exet.puz.hasRebusCells) {
+        alert('Autofill is not supported for rebus puzzles.');
+        return;
+      }
+      if (exet.puz.numCellsToFill == exet.puz.numCellsFilled) {
+        alert('The grid is already full');
+        return;
+      }
+      const beamWidth = parseInt(this.beamWidthInp.value);
+      if (!isNaN(beamWidth) && beamWidth > 0) this.beamWidth = beamWidth;
+      this.boostPangram = this.pangramInp.checked;
+      this.loopForPangram = this.pangramLoopInp.checked;
+      this.pangramAll = this.pangramAllInp.checked;
+      this.pangramCircled = this.pangramCircledInp.checked;
+      this.pangramChecked = this.pangramCheckedInp.checked;
+      this.pangramUnchecked = this.pangramUncheckedInp.checked;
+      this.pangramFirsts = this.pangramFirstsInp.checked;
+      this.pangramLasts = this.pangramLastsInp.checked;
+      if (!exet.fillClient.startAutofill({
+        beamWidth: this.beamWidth,
+        constrainerLimit: this.constrainerLimit,
+        refinementSweeps: this.refinementSweeps,
+        boostPangram: this.boostPangram,
+        loopForPangram: this.loopForPangram,
+        pangramAll: this.pangramAll,
+        pangramCircled: this.pangramCircled,
+        pangramChecked: this.pangramChecked,
+        pangramUnchecked: this.pangramUnchecked,
+        pangramFirsts: this.pangramFirsts,
+        pangramLasts: this.pangramLasts,
+      })) {
+        return;
+      }
+      this.running = true;
+      this.status = 'Running';
+      this.accept.disabled = true;
+      this.clear.disabled = true;
+      this.startstopButton.innerText = 'Pause';
+      this.startstopButton.className = 'xlv-button xet-pink-button';
+    }
+    this.statusSpan.innerHTML = this.status;
+    this.activeDivMsg.innerHTML = this.status;
+    this.activeDiv.style.display = 'block';
+    exet.updateSweepInd();
+  }
+
+  workerProgress(progress) {
+    this.step = progress.step;
+    this.msUsed = progress.msUsed;
+    this.stepSpan.innerText = progress.step;
+    this.currBeamSpan.innerText = progress.beamSize;
+    this.timeSpan.innerText = progress.msUsed;
+    this.speedSpan.innerText =
+        progress.step ? (progress.msUsed / progress.step).toFixed(0) : '--';
+    this.scoreSpan.innerText = (progress.score || 0).toFixed(2);
+    this.scoreVSpan.innerText = (progress.scoreV || 0).toFixed(2);
+    this.scorePSpan.innerText = (progress.scoreP || 0).toFixed(2);
+    this.scoreFSpan.innerText = (progress.scoreF || 0).toFixed(2);
+    this.reversalsSpan.innerText = progress.reversals || 0;
+    this.pangramSpan.innerText = progress.numLettersUsed || 0;
+    this.pangramConstrSpan.innerText =
+        `(${progress.numConstrLetters || 0} in pangram cells)`;
+  }
+
+  workerStatus(status) {
+    this.status = status;
+    this.running = false;
+    this.statusSpan.innerHTML = status;
+    this.activeDivMsg.innerHTML = status;
+    this.startstopButton.innerText = 'Start';
+    this.startstopButton.className = 'xlv-button';
+    const succeeded = status == 'Succeeded!';
+    this.accept.disabled = !succeeded;
+    this.clear.disabled = !succeeded;
+    exet.updateSweepInd();
   }
 
   reshowSettings() {

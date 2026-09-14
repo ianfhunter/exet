@@ -1379,18 +1379,6 @@ body {
 .xet-word-list-row {
   line-height: 1.6;
 }
-.xet-disable-autofill-label {
-  display: inline-block;
-  margin-left: 8px;
-  font-size: 12px;
-  font-weight: normal;
-  white-space: nowrap;
-  vertical-align: middle;
-}
-.xet-disable-autofill-label input {
-  margin: 0 4px 0 0;
-  vertical-align: middle;
-}
 #xet-save-warnings {
   padding: 2px 15px;
 }

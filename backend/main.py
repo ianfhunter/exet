@@ -157,6 +157,40 @@ def lexicon_fill(
     }
 
 
+@app.post("/api/lexicons/{lexicon_ref}/fill-batch")
+def lexicon_fill_batch(
+    lexicon_ref: str,
+    db: DbDep,
+    body: dict,
+):
+    """Resolve all grid-light patterns in one request for the fill worker."""
+    lex = _resolve_lexicon(db, lexicon_ref)
+    patterns = body.get("patterns") or []
+    if not isinstance(patterns, list) or any(
+        not isinstance(pattern, str) for pattern in patterns
+    ):
+        raise HTTPException(400, "patterns must be a list of strings")
+    if len(patterns) > 500:
+        raise HTTPException(400, "at most 500 patterns per batch")
+    limit = max(0, min(int(body.get("limit_per") or 200), 5000))
+    min_score = float(body.get("min_score") or 0)
+    no_proper_nouns = bool(body.get("no_proper_nouns") or False)
+    try_rev = bool(body.get("try_rev") or False)
+    results = {
+        pattern: get_fill_choices(
+            db,
+            lex["id"],
+            pattern,
+            limit=limit,
+            min_score=min_score,
+            no_proper_nouns=no_proper_nouns,
+            try_rev=try_rev,
+        )
+        for pattern in dict.fromkeys(patterns)
+    }
+    return {"lexicon": dict(lex), "results": results}
+
+
 @app.get("/api/lexicons/{lexicon_ref}/anagrams")
 def lexicon_anagrams(
     lexicon_ref: str,

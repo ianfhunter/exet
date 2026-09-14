@@ -48,6 +48,169 @@ function xetAfterPaint(fn) {
   });
 }
 
+/**
+ * Main-thread facade for the fill worker. The live puzzle and all DOM updates
+ * stay here; the worker owns lexicon requests and speculative fill states.
+ */
+class ExetFillClient {
+  constructor(owner) {
+    this.owner = owner;
+    this.gen = 0;
+    this.busy = false;
+    this.ready = false;
+    this.pendingState = null;
+    this.enabled = !!(window.Worker && exetLexicon && exetLexicon.serverSlug);
+    if (!this.enabled) return;
+    this.worker = new Worker('exet-fill-worker.js?v1.00');
+    this.worker.onmessage = this.onMessage.bind(this);
+    this.worker.onerror = error => {
+      console.error('Fill worker failed; using inline fill engine', error);
+      this.enabled = false;
+      this.busy = false;
+      owner.updateSweepInd();
+      owner.resetViability();
+    };
+    this.worker.postMessage({
+      type: 'init',
+      baseUrl: (typeof exetDataServer != 'undefined') ?
+          exetDataServer.baseUrl() : '',
+      lexicon: {
+        slug: exetLexicon.serverSlug,
+        entry_count: exetLexicon.serverEntryCount || exetLexicon.startLen,
+        letters: exetLexicon.letters,
+      },
+      cachedEntries: exetLexicon.lexicon.map((form, index) => ({
+        form,
+        score: exetLexicon.scores[index] || 0,
+      })),
+      options: this.options(),
+    });
+  }
+  options() {
+    const regexps = {};
+    for (const ci in this.owner.lightRegexpsC || {}) {
+      const regexp = this.owner.lightRegexpsC[ci];
+      regexps[ci] = {source: regexp.source, flags: regexp.flags};
+    }
+    return {
+      noProperNouns: this.owner.noProperNouns,
+      noStemDupes: this.owner.noStemDupes,
+      tryReversals: this.owner.tryReversals,
+      minScore: this.owner.minscore,
+      unfilledChoicesLimit: this.owner.sweepMaxChoices,
+      sweepMaxChoices: this.owner.sweepMaxChoices,
+      shownChoices: this.owner.shownLightChoices,
+      preflexForms: this.owner.preflex,
+      regexps,
+      letterRarities: exetLexicon.letterRarities || {},
+    };
+  }
+  setState() {
+    if (!this.enabled) return false;
+    const state = new ExetFillState(this.owner.puz);
+    const message = {
+      type: 'setState',
+      gen: ++this.gen,
+      state,
+      options: this.options(),
+    };
+    if (!this.ready) {
+      this.pendingState = message;
+    } else {
+      this.worker.postMessage(message);
+    }
+    this.busy = true;
+    this.owner.updateSweepInd();
+    return true;
+  }
+  pauseAutofill() {
+    if (this.enabled && this.ready) {
+      this.worker.postMessage({type: 'pauseAutofill', gen: this.gen});
+    }
+  }
+  invalidate() {
+    if (!this.enabled) return;
+    this.gen++;
+    this.pendingState = null;
+    this.pauseAutofill();
+    this.busy = false;
+  }
+  startAutofill(options) {
+    if (!this.enabled || !this.ready) return false;
+    this.worker.postMessage({
+      type: 'startAutofill',
+      gen: this.gen,
+      options,
+    });
+    return true;
+  }
+  installEntries(entries) {
+    for (const entry of entries || []) {
+      exetLexicon.lexicon[entry.index] = entry.form;
+      exetLexicon.scores[entry.index] = entry.score;
+      exetLexicon.stems[entry.index] = entry.index;
+      exetLexicon.phones[entry.index] = [];
+      if (exetLexicon.serverCache) {
+        exetLexicon.serverCache.forms[entry.index] = entry.form;
+        exetLexicon.serverCache.scores[entry.index] = entry.score;
+      }
+    }
+  }
+  applySnapshot(message) {
+    this.installEntries(message.entries);
+    const fillState = new ExetFillState(this.owner.puz);
+    fillState.viable = message.viable;
+    for (let row = 0; row < message.cells.length; row++) {
+      for (let col = 0; col < message.cells[row].length; col++) {
+        const source = message.cells[row][col];
+        if (!source) continue;
+        const cell = fillState.grid[row][col];
+        cell.cChoices = Object.fromEntries(
+            source.cChoices.map(letter => [letter, true]));
+        cell.viability = source.viability;
+      }
+    }
+    for (const ci in message.clues) {
+      if (!fillState.clues[ci]) continue;
+      const source = message.clues[ci];
+      const clue = fillState.clues[ci];
+      clue.lChoices = source.lChoices;
+      clue.lChoicesTotal = source.lChoicesTotal;
+      clue.lRejects = source.lRejects;
+      clue.lRejectsTotal = source.lRejectsTotal;
+    }
+    this.owner.fillState = fillState;
+    this.owner.preflexUsed = fillState.preflexUsed;
+    this.owner.updateViablots();
+    this.owner.updateFillChoices();
+    if (message.kind == 'autofill' && message.progress) {
+      this.owner.autofill.workerProgress(message.progress);
+    }
+  }
+  onMessage(event) {
+    const message = event.data || {};
+    if (message.type == 'ready') {
+      this.ready = true;
+      if (this.pendingState) {
+        this.worker.postMessage(this.pendingState);
+        this.pendingState = null;
+      }
+      return;
+    }
+    if (message.gen != null && message.gen != this.gen) return;
+    if (message.type == 'snapshot') {
+      this.applySnapshot(message);
+    } else if (message.type == 'busy') {
+      this.busy = message.busy;
+      this.owner.updateSweepInd();
+    } else if (message.type == 'autofillStatus') {
+      this.owner.autofill.workerStatus(message.status);
+    } else if (message.type == 'error') {
+      console.error('Fill worker:', message.message);
+    }
+  }
+}
+
 function ExetModals() {
   this.modal = null;
   document.addEventListener('click', this.handleClick.bind(this));
@@ -293,6 +456,11 @@ Exet.prototype.setMinPop = function(m) {
   this.minpop = m;
   this.indexMinPop = Math.max(
       1, Math.floor(exetLexicon.startLen * (100 - m) / 100));
+  if (exetLexicon.serverSlug) {
+    // Server list scores are normalized to the same 0..100 range.
+    this.minscore = m;
+    return;
+  }
   if (exetLexicon.scoresSummary) {
     this.minscore = exetLexicon.scores[this.indexMinPop - 1];
   }
@@ -306,6 +474,12 @@ Exet.prototype.setMinScore = function(s) {
     s = exetLexicon.scoresSummary.max;
   }
   this.minscore = s;
+  if (exetLexicon.serverSlug) {
+    this.indexMinPop = Math.max(
+        1, Math.floor(exetLexicon.startLen * (100 - s) / 100));
+    this.minpop = s;
+    return;
+  }
   this.indexMinPop = 1 + exetLexicon.scoreToIndex(s);
   this.minpop = 100 * (1 - (this.indexMinPop / exetLexicon.startLen));
 }
@@ -463,6 +637,10 @@ Exet.prototype.setPuzzle = function(puz) {
         gridFillChanges = true;
       }
     }
+  }
+  if (this.fillClient && this.fillClient.worker) {
+    this.fillClient.worker.terminate();
+    this.fillClient = null;
   }
   this.puz = puz;
   puz.useWebifi = false;
@@ -821,12 +999,6 @@ Exet.prototype.setPuzzle = function(puz) {
          ${this.lexiconControlsHtml()} <span id="xet-lexicon-id">${exetLexicon.id}</span>
        </div>`);
   this.lexiconId = document.getElementById('xet-lexicon-id');
-  this.disableAutofillToggle = document.getElementById('xet-disable-autofill');
-  if (this.disableAutofillToggle) {
-    this.disableAutofillToggle.checked = !!exetState.disableAutofill;
-    this.disableAutofillToggle.addEventListener(
-        'change', this.handleDisableAutofillChange.bind(this));
-  }
   // Make the puzzle ID visible. But in a div, saving vspace.
   const idPara = document.getElementById(this.puz.prefix + '-id');
   if (idPara) {
@@ -847,6 +1019,7 @@ Exet.prototype.setPuzzle = function(puz) {
   this.markClueEnds();  /** Needed for some autofill options */
   this.fillState = new ExetFillState(this.puz);
   this.autofill = new ExetAutofill();
+  this.fillClient = new ExetFillClient(this);
   this.resetViability();
 
   this.updateSweepInd();
@@ -7306,6 +7479,11 @@ Exet.prototype.handleKeyDown = function(e) {
 }
 
 Exet.prototype.cancelDeadendSweep = function() {
+  if (this.fillClient && this.fillClient.enabled) {
+    this.fillClient.invalidate();
+    this.updateSweepInd();
+    return;
+  }
   if (this.viabilityUpdateTimer) {
     clearTimeout(this.viabilityUpdateTimer);
     this.viabilityUpdateTimer = null;
@@ -9044,7 +9222,7 @@ Exet.prototype.findDeadendsByClue = function() {
 
 Exet.prototype.startDeadendSweep = function(ci='') {
   this.cancelDeadendSweep();
-  if (exetState.disableAutofill) {
+  if (this.fillClient && this.fillClient.enabled) {
     return;
   }
   if (!this.puz || this.puz.numCellsFilled >= this.puz.numCellsToFill) {
@@ -9108,7 +9286,8 @@ Exet.prototype.findConstrainedCluesSorted = function() {
     }
     clues.push({
       ci: ci,
-      numChoices: theClue.lChoices ? theClue.lChoices.length : 0,
+      numChoices: theClue.lChoicesTotal ??
+          (theClue.lChoices ? theClue.lChoices.length : 0),
     });
   }
   clues.sort((a, b) => {
@@ -9152,6 +9331,12 @@ Exet.prototype.jumpToMostConstrained = function() {
 }
 
 Exet.prototype.updateSweepInd = function() {
+  if (this.fillClient && this.fillClient.enabled) {
+    this.sweepIndicator.className =
+        (this.fillClient.busy || this.autofill.running) ?
+        'xet-sweeping-animated' : 'xet-sweeping';
+    return;
+  }
   this.sweepIndicator.className =
       (this.viabilityUpdateTimer || this.autofill.running) ?
       'xet-sweeping-animated' : 'xet-sweeping';
@@ -9218,6 +9403,9 @@ Exet.prototype.viability = function(len) {
 Exet.prototype.resetViability = function() {
   if (this.autofill) {
     this.autofill.reset('Aborted');
+  }
+  if (this.fillClient && this.fillClient.setState()) {
+    return;
   }
   this.fillState.resetViability();
   this.preflexUsed = this.fillState.preflexUsed;
@@ -9867,26 +10055,7 @@ Exet.prototype.maybeLexiconOptions = function() {
 }
 
 Exet.prototype.lexiconControlsHtml = function() {
-  const checked = exetState.disableAutofill ? ' checked' : '';
-  return `${this.maybeLexiconOptions()}
-    <label class="xet-disable-autofill-label"
-        title="Skip background viability sweeps that prune fill suggestions; useful for very large word lists">
-      <input type="checkbox" id="xet-disable-autofill"${checked}>
-      Disable auto-fill (for large lists)
-    </label>`;
-}
-
-Exet.prototype.handleDisableAutofillChange = function() {
-  exetState.disableAutofill = !!this.disableAutofillToggle.checked;
-  exetRevManager.saveLocal(exetRevManager.SPECIAL_KEY, JSON.stringify(exetState));
-  if (exetState.disableAutofill) {
-    this.cancelDeadendSweep();
-    if (this.autofill) {
-      this.autofill.reset('Aborted');
-    }
-  } else {
-    this.startDeadendSweep();
-  }
+  return this.maybeLexiconOptions();
 }
 
 Exet.prototype.changeLexicon = function() {
@@ -10223,9 +10392,8 @@ function exetLoadState() {
   if (!exetState.hasOwnProperty('lastBackup')) {
     exetState.lastBackup = Date.now();
   }
-  if (!exetState.hasOwnProperty('disableAutofill')) {
-    exetState.disableAutofill = false;
-  }
+  // Removed in v1.09: fill now runs in a worker and never blocks grid input.
+  delete exetState.disableAutofill;
 }
 
 function exetLoadLexicon(lexiconName=null) {
@@ -10373,7 +10541,7 @@ function exetInit() {
   exet.finishSetup()
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   exetRevManager = new ExetRevManager();
   exetModals = new ExetModals();
   if (!window.localStorage) {
@@ -10382,7 +10550,7 @@ document.addEventListener('DOMContentLoaded', () => {
   exetLoadState();
 
   if (typeof exetDataServer !== 'undefined') {
-    exetDataServer.probe();
+    await exetDataServer.probe();
   }
 
   if (exetConfig.lexicons) {
