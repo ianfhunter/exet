@@ -829,6 +829,63 @@ def scrape_clue_clinic_abbrev(store: dict[str, dict], page_id: int) -> int:
     return count
 
 
+# Explanation column of ClueClinic's single-letter page -> clue-word category.
+SINGLE_LETTER_CATEGORY_HINTS: tuple[tuple[str, str], ...] = (
+    ("radio communications", "military"),
+    ("signalling", "military"),
+    ("roman", "roman-numerals"),
+    ("piano", "music"),
+    ("forte", "music"),
+    ("graphs", "science"),
+    ("algebra", "science"),
+    ("mathematics", "science"),
+    ("multiplication", "science"),
+    ("j-curve", "science"),
+    ("cards", "sport"),
+    ("horse racing", "sport"),
+    ("name of letter", "language"),
+    ("for each", "language"),
+)
+
+
+def single_letter_category(explanation: str) -> str | None:
+    low = norm_headword(explanation)
+    for needle, slug in SINGLE_LETTER_CATEGORY_HINTS:
+        if needle in low:
+            return slug
+    return None
+
+
+def scrape_clue_clinic_single_letters(store: dict[str, dict]) -> int:
+    """Clue words standing for one letter (alpha -> A, axis -> X/Y/Z)."""
+    html = load_clue_clinic_abbrev_html(1614)
+    count = 0
+    for row in re.findall(r'<tr class="row-[^"]*">(.*?)</tr>', html, re.S):
+        cells = re.findall(r'<td class="column-(\d+)">([^<]*)</td>', row)
+        if not cells:
+            continue
+        by_col = {int(col): norm_space(val) for col, val in cells}
+        indicator = by_col.get(1, "")
+        letter = by_col.get(3, "").upper()
+        if not indicator or indicator.lower() == "indicator":
+            continue
+        if len(letter) != 1 or not letter.isalpha():
+            continue
+        category = single_letter_category(by_col.get(5, ""))
+        note = "advanced" if by_col.get(4, "").lower() == "advanced" else None
+        for clue in [indicator, *split_expansions(by_col.get(2, ""))]:
+            key = norm_headword(clue)
+            before = len(store[key]["expansions"]) if key in store else 0
+            add_abbrev(
+                store, clue, letter, "clue-clinic",
+                category=category, note=note,
+            )
+            entry = store.get(key)
+            if entry and len(entry["expansions"]) > before:
+                count += 1
+    return count
+
+
 def scrape_mhl_yaml(store: dict[str, dict]) -> int:
     text = read_or_fetch(
         "mhl-indicators.yml",
@@ -1176,6 +1233,7 @@ def build_abbreviations() -> dict[str, dict]:
     steps = [
         ("clue-clinic-all", lambda s: scrape_clue_clinic_abbrev(s, 365)),
         ("clue-clinic-standard", lambda s: scrape_clue_clinic_abbrev(s, 340)),
+        ("clue-clinic-single-letter", scrape_clue_clinic_single_letters),
         ("mhl-yaml", scrape_mhl_yaml),
         ("longair", scrape_longair),
         ("wikipedia", scrape_wikipedia_abbrev),

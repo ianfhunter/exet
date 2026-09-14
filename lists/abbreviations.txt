@@ -86,6 +86,7 @@ level -> A, Y
 midday -> A, M, N
 note -> A, B, C, D, DO, DOH, E, F, FA, FAH, G, LA, LAH, ME, MI, N, NB, PS, RE, SI, SO, SOH, SOL, TE, TI, TI. LA is most commonly referenced, TIC, UT
 note + -> A, B, C, D, E, F, G
+one -> A, ACE, AN, ANE, I, J, UN, UNIT, rarely A
 one * -> A, AN
 paper -> A, B, MS
 per -> A, PR
@@ -94,6 +95,7 @@ spacecenter -> A
 string -> A, D, E, G
 strings -> A, D, G
 takeaback -> A
+top grade -> A
 tradecenter -> A
 un -> A, AN, I
 unit -> A, I
@@ -169,7 +171,6 @@ accusative -> ACC
 card -> ACE
 champion -> ACE, CH
 expert -> ACE, DAB, PRO
-one -> ACE, AN, ANE, I, J, UN, UNIT, rarely A
 pilot -> ACE
 service -> ACE, LET, RAF, RM, RN
 winner -> ACE, fabulous tortoise
@@ -391,7 +392,7 @@ autonomous republic -> AR
 year of reign -> AR
 artist -> ARA, PRA, RA
 painter -> ARA, NEY, PRA, RA
-curve -> ARC
+curve -> ARC, J
 cantuar -> archbishop
 ebor -> archbishop
 laud -> archbishop
@@ -469,7 +470,7 @@ aver -> average
 beard -> AWN
 always -> AY, AYE, EER, ERE
 ever -> AY, AYE, EER, ER
-yes -> AY, AYE, DA, JA, OUI, SI, Y
+yes -> AY, AYE, DA, I, JA, OUI, SI, Y
 i say -> AYE, EYE
 azed -> AZ
 plenty of -> AZ
@@ -552,6 +553,7 @@ magnetic flux -> B
 second -> B, MO, S, SEC
 second class -> B
 second letter -> B
+second rate -> B
 soft -> B, P, PP
 three thousand -> B
 teacher -> B ED, DON
@@ -822,6 +824,7 @@ lot -> C, D, M
 one hundred -> C
 one hundred dollars -> C
 party -> C, CON, DO, LAB, LD, LIB, TORY
+programming language -> C, PL
 recyclingcenter -> C
 roughly -> C, CA
 sea -> C, MER
@@ -829,6 +832,7 @@ see -> C, ELY, LO, V, VID
 speed of light -> C
 spring -> C, SPA
 tap -> C, H
+ton -> C, T
 tragicend -> C
 calcium -> CA
 california -> CA, CAL
@@ -1529,6 +1533,7 @@ horsetail -> E
 illbeback -> E
 indetail -> E
 intheend -> E
+irrational -> E
 keepscore -> E
 kitetail -> E
 layer -> E, HEN
@@ -2211,14 +2216,17 @@ hertz -> HZ
 a -> I
 bigheart -> I
 che -> I
+ego -> I
 electrical current -> I
 eye -> I
 faintheart -> I
+first -> I, IST
 first person -> I, ME
 grindcore -> I
 ilionheart -> I
 imaginary number -> I
 imahead -> I
+indeed -> I
 independence -> I
 independent -> I, IND
 india -> I, IND
@@ -2235,6 +2243,7 @@ line -> I, L, ROW, RY, shipping company
 lionheart -> I
 lunchtime -> I, ONE
 medicalcenter -> I
+self -> I
 setter -> I, ME, ONE
 single -> I
 square root of -1 -> I, J
@@ -2373,7 +2382,6 @@ doctrine -> ISM
 theory -> ISM
 internet/internet provider -> ISP
 exists -> ISS
-first -> IST
 information technology -> IT
 italian -> IT
 sex appeal -> IT, SA
@@ -2762,6 +2770,7 @@ eighty eight -> LXXXVIII
 bond's boss -> M
 commend -> M
 em -> M
+emma -> M
 french man -> M
 frenchman -> M
 gateshead -> M
@@ -3308,8 +3317,10 @@ round -> O
 spangle -> O
 stormcenter -> O
 tonoend -> O
+unplaced -> O
 wheel -> O
 zero -> O, Z
+zip -> O
 on account of -> OA
 old person -> OAP
 pensioner -> OAP
@@ -3617,7 +3628,6 @@ place -> PL, SET, SITE, SPOT
 plural -> PL
 poet laureate -> PL
 poland -> PL
-programming language -> PL
 public library -> PL
 mountain retreat -> PLA
 port authority -> PLA
@@ -3770,6 +3780,7 @@ which see -> QV
 arithmetic -> R
 beavertail -> R
 bitterend -> R
+canine letter -> R
 clearancecenter -> R
 copperbottom -> R
 cornerback -> R
@@ -4092,6 +4103,7 @@ sectionhead -> S
 seeahead -> S
 setahead -> S
 seven thousand -> S, Z
+shape of console -> S
 sheepshead -> S
 shilling -> S
 shithead -> S
@@ -4449,7 +4461,6 @@ thunderhead -> T
 tightend -> T
 tiltinghead -> T
 toahead -> T
-ton -> T
 tonne -> T, weight
 tons -> T
 towhead -> T
@@ -4589,6 +4600,7 @@ ewe -> U
 for all to see -> U
 fourscore -> U
 german submarine -> U
+horseshoe -> U
 on view to all -> U
 posh -> U
 socially acceptable -> U
@@ -4670,6 +4682,7 @@ ultraviolet -> UV
 5 -> V
 check or checkmark -> V
 civiccenter -> V
+fifth -> V
 five -> V
 haveaheart -> V
 neckline -> V
@@ -4813,12 +4826,15 @@ west virginia -> WV, WVA
 wyoming -> WY
 10 -> X
 across -> X
+axis -> X, Y, Z
 body -> X
 chi -> X
 chromosome -> X, Y
+co-ordinate -> X, Y, Z
 draw -> X
 ex -> X
 exe -> X
+factor -> X
 foxtail -> X
 illiterate's signature -> X
 kiss -> X
@@ -4830,7 +4846,9 @@ sign of love -> X
 sign of the times -> X
 spot marked -> X
 ten thousand -> X
+tenth -> X
 vote -> X
+wrong answer -> X
 wrong mark -> X
 wrong sign -> X
 x-ray -> X

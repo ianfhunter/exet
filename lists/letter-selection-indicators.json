@@ -2,7 +2,7 @@
   "type": "letter-selection",
   "title": "Letter-selection indicators",
   "built": "2026-08-12",
-  "count": 581,
+  "count": 475,
   "sources": [
     "clue-clinic",
     "crossword-unclued",
@@ -13,56 +13,6 @@
   ],
   "entries": [
     {
-      "indicator": "10",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "100",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "1000",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "5",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "50",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
       "indicator": "50%",
       "sources": [
         "clue-clinic",
@@ -70,16 +20,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "500",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "a piece of",
@@ -101,14 +41,6 @@
       "indicator": "across faces (of)",
       "sources": [
         "cryptipedia"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "alpha",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -152,14 +84,6 @@
       "indicator": "apex",
       "sources": [
         "wordsup"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "article",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -290,14 +214,6 @@
       "notes": []
     },
     {
-      "indicator": "axis",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "back",
       "sources": [
         "cryptipedia",
@@ -351,14 +267,6 @@
       "sources": [
         "clue-clinic",
         "cryptipedia"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "bee",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -477,14 +385,6 @@
       "notes": []
     },
     {
-      "indicator": "bend",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "big end of",
       "sources": [
         "clue-clinic"
@@ -500,16 +400,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "blob",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "bonnet",
@@ -576,14 +466,6 @@
       "notes": []
     },
     {
-      "indicator": "bravo",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "butt of",
       "sources": [
         "clue-clinic"
@@ -600,25 +482,9 @@
       "notes": []
     },
     {
-      "indicator": "by",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "by all conclusions",
       "sources": [
         "wordsup"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "canine letter",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -778,33 +644,7 @@
       "notes": []
     },
     {
-      "indicator": "century",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "certificate",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "character facing",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "charlie",
       "sources": [
         "clue-clinic"
       ],
@@ -828,14 +668,6 @@
       "categories": [
         "list of 52 last letter selection indicators"
       ],
-      "notes": []
-    },
-    {
-      "indicator": "circular letter",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
       "notes": []
     },
     {
@@ -909,16 +741,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "co-ordinate",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "coat",
@@ -1020,14 +842,6 @@
       "notes": []
     },
     {
-      "indicator": "cross",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "crown",
       "sources": [
         "clue-clinic"
@@ -1060,22 +874,6 @@
       "notes": []
     },
     {
-      "indicator": "cue",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "curve",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "dash of",
       "sources": [
         "clue-clinic"
@@ -1095,22 +893,6 @@
       "indicator": "debuts of",
       "sources": [
         "cryptipedia"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "dee",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "delta",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -1173,14 +955,6 @@
       "notes": []
     },
     {
-      "indicator": "duck",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "earliest",
       "sources": [
         "clue-clinic"
@@ -1209,14 +983,6 @@
       "indicator": "eastern border",
       "sources": [
         "wordsup"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "echo",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -1251,31 +1017,7 @@
       "notes": []
     },
     {
-      "indicator": "egg",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "ego",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "element of",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "emma",
       "sources": [
         "clue-clinic"
       ],
@@ -1574,14 +1316,6 @@
       "notes": []
     },
     {
-      "indicator": "ex",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "excavated",
       "sources": [
         "clue-clinic"
@@ -1682,31 +1416,7 @@
       "notes": []
     },
     {
-      "indicator": "factor",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "far side of",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "fifth",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "fifty",
       "sources": [
         "clue-clinic"
       ],
@@ -1863,14 +1573,6 @@
       "notes": []
     },
     {
-      "indicator": "first class",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "first in/of/to",
       "sources": [
         "clue-clinic"
@@ -1933,16 +1635,6 @@
       "notes": []
     },
     {
-      "indicator": "first person",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
       "indicator": "first show of",
       "sources": [
         "clue-clinic"
@@ -1984,22 +1676,6 @@
         "crossword-unclued",
         "cryptipedia",
         "wordsup"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "five",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "five hundred",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -2057,14 +1733,6 @@
       "indicator": "fourth letters",
       "sources": [
         "curated-extras"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "foxtrot",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -2158,14 +1826,6 @@
       "notes": []
     },
     {
-      "indicator": "gee",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "get even (with)",
       "sources": [
         "cryptipedia"
@@ -2175,14 +1835,6 @@
     },
     {
       "indicator": "glimpse of",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "golf",
       "sources": [
         "clue-clinic"
       ],
@@ -2411,39 +2063,7 @@
       "notes": []
     },
     {
-      "indicator": "honour",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "horseshoe",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "hotel",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "hull from/of",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "hundred",
       "sources": [
         "clue-clinic"
       ],
@@ -2511,24 +2131,6 @@
       "indicator": "incipient",
       "sources": [
         "wordsup"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "indeed",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "india",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -2696,63 +2298,7 @@
       "notes": []
     },
     {
-      "indicator": "irrational",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "jacket",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "jay",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "juliet",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "junction",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "kay",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "kilo",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "kiss",
       "sources": [
         "clue-clinic"
       ],
@@ -3005,14 +2551,6 @@
       "notes": []
     },
     {
-      "indicator": "lima",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "limit of/to",
       "sources": [
         "clue-clinic"
@@ -3040,22 +2578,6 @@
       "indicator": "losses",
       "sources": [
         "crossword-unclued"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "loud",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "love",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -3122,14 +2644,6 @@
       "notes": []
     },
     {
-      "indicator": "mike",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "minimum of",
       "sources": [
         "clue-clinic"
@@ -3160,16 +2674,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "nil",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "nip of",
@@ -3212,14 +2716,6 @@
       "notes": []
     },
     {
-      "indicator": "notch",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "nothing",
       "sources": [
         "clue-clinic",
@@ -3229,14 +2725,6 @@
       "notes": [
         "alternative"
       ]
-    },
-    {
-      "indicator": "november",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
     },
     {
       "indicator": "now and again",
@@ -3399,14 +2887,6 @@
       "notes": []
     },
     {
-      "indicator": "one",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "one half of",
       "sources": [
         "curated-extras"
@@ -3553,14 +3033,6 @@
       "notes": []
     },
     {
-      "indicator": "oscar",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "other",
       "sources": [
         "crossword-unclued"
@@ -3650,14 +3122,6 @@
       "notes": []
     },
     {
-      "indicator": "papa",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "patterns",
       "sources": [
         "crossword-unclued"
@@ -3666,33 +3130,9 @@
       "notes": []
     },
     {
-      "indicator": "pee",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "peeled",
       "sources": [
         "cryptipedia"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "pen",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "per",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -3723,30 +3163,6 @@
     },
     {
       "indicator": "pinch of",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "point",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "pole",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "posh",
       "sources": [
         "clue-clinic"
       ],
@@ -3839,14 +3255,6 @@
       "notes": []
     },
     {
-      "indicator": "programming language",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "prow",
       "sources": [
         "cryptipedia",
@@ -3855,14 +3263,6 @@
       "categories": [
         "list of 21 first letter selection indicators"
       ],
-      "notes": []
-    },
-    {
-      "indicator": "quebec",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
       "notes": []
     },
     {
@@ -3927,25 +3327,9 @@
       "notes": []
     },
     {
-      "indicator": "romeo",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "root(s)",
       "sources": [
         "cryptipedia"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "round",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -3963,14 +3347,6 @@
       "sources": [
         "clue-clinic",
         "crossword-unclued"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "second class",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -4004,16 +3380,6 @@
       "notes": []
     },
     {
-      "indicator": "second rate",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
       "indicator": "seconds",
       "sources": [
         "crossword-unclued"
@@ -4022,35 +3388,9 @@
       "notes": []
     },
     {
-      "indicator": "see",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "selecting from",
       "sources": [
         "curated-extras"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "self",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "shape of console",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -4087,14 +3427,6 @@
       "sources": [
         "clue-clinic",
         "curated-extras"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "sierra",
-      "sources": [
-        "clue-clinic"
       ],
       "categories": [],
       "notes": []
@@ -4138,24 +3470,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "soft",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "softly",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "some",
@@ -4208,14 +3522,6 @@
     },
     {
       "indicator": "spot of",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "spymaster",
       "sources": [
         "clue-clinic"
       ],
@@ -4458,39 +3764,7 @@
       "notes": []
     },
     {
-      "indicator": "tango",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "taste of",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "tee",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "ten",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "tenth",
       "sources": [
         "clue-clinic"
       ],
@@ -4554,30 +3828,12 @@
       "notes": []
     },
     {
-      "indicator": "thousand",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "time to time (from)",
       "sources": [
         "cryptipedia"
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "times",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "tip",
@@ -4622,16 +3878,6 @@
       "notes": []
     },
     {
-      "indicator": "ton",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
       "indicator": "top",
       "sources": [
         "cryptipedia",
@@ -4643,16 +3889,6 @@
         "most common selection indicators"
       ],
       "notes": []
-    },
-    {
-      "indicator": "top grade",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "top of",
@@ -4720,14 +3956,6 @@
       "notes": []
     },
     {
-      "indicator": "turn",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "turned out",
       "sources": [
         "clue-clinic"
@@ -4756,40 +3984,6 @@
         "most common selection indicators"
       ],
       "notes": []
-    },
-    {
-      "indicator": "uniform",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "unknown",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "unplaced",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "upper class",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "vacant",
@@ -4822,24 +4016,6 @@
       "notes": []
     },
     {
-      "indicator": "variable",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "victor",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
       "indicator": "void",
       "sources": [
         "clue-clinic",
@@ -4859,14 +4035,6 @@
       "categories": [
         "list of 24 first and last letter selection indicators"
       ],
-      "notes": []
-    },
-    {
-      "indicator": "vote",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
       "notes": []
     },
     {
@@ -4903,14 +4071,6 @@
     },
     {
       "indicator": "what’s behind",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "whiskey",
       "sources": [
         "clue-clinic"
       ],
@@ -4977,58 +4137,6 @@
     },
     {
       "indicator": "wrapping for/from/of/on",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "wrong answer",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "yankee",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "yes",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": []
-    },
-    {
-      "indicator": "zero",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "zip",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "zulu",
       "sources": [
         "clue-clinic"
       ],

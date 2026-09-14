@@ -3,7 +3,7 @@
   "title": "Cryptic abbreviations",
   "blurb": "Clue words and phrases that commonly abbreviate to letters or short forms in cryptic crosswords (bits-and-pieces).",
   "built": "2026-09-14",
-  "count": 4951,
+  "count": 4969,
   "sources": [
     "clue-clinic",
     "compound-indicators",
@@ -306,6 +306,7 @@
         "first letter"
       ],
       "sources": [
+        "clue-clinic",
         "curated",
         "longair",
         "mhl-yaml"
@@ -852,6 +853,7 @@
         "AI"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -968,7 +970,9 @@
         "mhl-yaml",
         "wikipedia"
       ],
-      "notes": []
+      "notes": [
+        "advanced"
+      ]
     },
     {
       "headword": "i",
@@ -1130,6 +1134,28 @@
       "notes": []
     },
     {
+      "headword": "one",
+      "expansions": [
+        "A",
+        "ACE",
+        "AN",
+        "ANE",
+        "I",
+        "J",
+        "UN",
+        "UNIT",
+        "rarely A"
+      ],
+      "sources": [
+        "clue-clinic",
+        "curated",
+        "longair",
+        "mhl-yaml",
+        "wikipedia"
+      ],
+      "notes": []
+    },
+    {
       "headword": "one *",
       "expansions": [
         "A",
@@ -1229,6 +1255,16 @@
       ],
       "sources": [
         "compound-indicators"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "top grade",
+      "expansions": [
+        "A"
+      ],
+      "sources": [
+        "clue-clinic"
       ],
       "notes": []
     },
@@ -2123,27 +2159,6 @@
       "sources": [
         "longair",
         "mhl-yaml"
-      ],
-      "notes": []
-    },
-    {
-      "headword": "one",
-      "expansions": [
-        "ACE",
-        "AN",
-        "ANE",
-        "I",
-        "J",
-        "UN",
-        "UNIT",
-        "rarely A"
-      ],
-      "sources": [
-        "clue-clinic",
-        "curated",
-        "longair",
-        "mhl-yaml",
-        "wikipedia"
       ],
       "notes": []
     },
@@ -4661,13 +4676,17 @@
     {
       "headword": "curve",
       "expansions": [
-        "ARC"
+        "ARC",
+        "J"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
-      "notes": []
+      "notes": [
+        "advanced"
+      ]
     },
     {
       "headword": "cantuar",
@@ -5547,17 +5566,21 @@
         "AY",
         "AYE",
         "DA",
+        "I",
         "JA",
         "OUI",
         "SI",
         "Y"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
       ],
-      "notes": []
+      "notes": [
+        "advanced"
+      ]
     },
     {
       "headword": "i say",
@@ -5867,6 +5890,7 @@
         "B"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -6233,6 +6257,7 @@
         "B"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -6453,6 +6478,7 @@
         "B"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -6470,6 +6496,16 @@
       "notes": []
     },
     {
+      "headword": "second rate",
+      "expansions": [
+        "B"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
       "headword": "soft",
       "expansions": [
         "B",
@@ -6477,6 +6513,7 @@
         "PP"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -8510,6 +8547,7 @@
         "daily"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -8847,6 +8885,7 @@
         "C"
       ],
       "sources": [
+        "clue-clinic",
         "curated",
         "wikipedia"
       ],
@@ -9389,6 +9428,7 @@
         "C"
       ],
       "sources": [
+        "clue-clinic",
         "curated",
         "longair",
         "mhl-yaml",
@@ -9505,6 +9545,17 @@
       "notes": []
     },
     {
+      "headword": "programming language",
+      "expansions": [
+        "C",
+        "PL"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
       "headword": "recyclingcenter",
       "expansions": [
         "C"
@@ -9586,6 +9637,19 @@
         "H"
       ],
       "sources": [
+        "longair",
+        "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "ton",
+      "expansions": [
+        "C",
+        "T"
+      ],
+      "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -13775,6 +13839,7 @@
         "D"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -13798,6 +13863,7 @@
         "D"
       ],
       "sources": [
+        "clue-clinic",
         "curated",
         "longair",
         "mhl-yaml"
@@ -14202,6 +14268,7 @@
         "D"
       ],
       "sources": [
+        "clue-clinic",
         "curated",
         "longair",
         "mhl-yaml",
@@ -16792,6 +16859,7 @@
         "TEN"
       ],
       "sources": [
+        "clue-clinic",
         "wikipedia"
       ],
       "notes": []
@@ -17073,6 +17141,7 @@
         "E"
       ],
       "sources": [
+        "clue-clinic",
         "curated",
         "wikipedia"
       ],
@@ -17360,6 +17429,16 @@
       ],
       "sources": [
         "compound-indicators"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "irrational",
+      "expansions": [
+        "E"
+      ],
+      "sources": [
+        "clue-clinic"
       ],
       "notes": []
     },
@@ -20142,6 +20221,7 @@
         "F"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -20399,6 +20479,7 @@
         "O"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -21461,6 +21542,7 @@
         "X"
       ],
       "sources": [
+        "clue-clinic",
         "wikipedia"
       ],
       "notes": []
@@ -21586,6 +21668,7 @@
         "G"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -21688,6 +21771,7 @@
         "G"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -23585,6 +23669,7 @@
         "H"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -24880,6 +24965,16 @@
       "notes": []
     },
     {
+      "headword": "ego",
+      "expansions": [
+        "I"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
       "headword": "electrical current",
       "expansions": [
         "I"
@@ -24912,12 +25007,26 @@
       "notes": []
     },
     {
+      "headword": "first",
+      "expansions": [
+        "I",
+        "IST"
+      ],
+      "sources": [
+        "clue-clinic",
+        "longair",
+        "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
       "headword": "first person",
       "expansions": [
         "I",
         "ME"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -24963,6 +25072,18 @@
         "compound-indicators"
       ],
       "notes": []
+    },
+    {
+      "headword": "indeed",
+      "expansions": [
+        "I"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": [
+        "advanced"
+      ]
     },
     {
       "headword": "independence",
@@ -25145,6 +25266,16 @@
       ],
       "sources": [
         "compound-indicators"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "self",
+      "expansions": [
+        "I"
+      ],
+      "sources": [
+        "clue-clinic"
       ],
       "notes": []
     },
@@ -26681,17 +26812,6 @@
       "notes": []
     },
     {
-      "headword": "first",
-      "expansions": [
-        "IST"
-      ],
-      "sources": [
-        "longair",
-        "mhl-yaml"
-      ],
-      "notes": []
-    },
-    {
       "headword": "information technology",
       "expansions": [
         "IT"
@@ -26909,6 +27029,7 @@
         "J"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -26976,6 +27097,7 @@
         "J"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -27030,10 +27152,13 @@
         "J"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
-      "notes": []
+      "notes": [
+        "advanced"
+      ]
     },
     {
       "headword": "jamaica",
@@ -27387,6 +27512,7 @@
         "K"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -28653,6 +28779,7 @@
         "L"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -30885,6 +31012,18 @@
       "notes": []
     },
     {
+      "headword": "emma",
+      "expansions": [
+        "M"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": [
+        "advanced"
+      ]
+    },
+    {
       "headword": "french man",
       "expansions": [
         "M"
@@ -31244,6 +31383,7 @@
         "M"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -31562,6 +31702,7 @@
         "M"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -31574,6 +31715,7 @@
         "or K"
       ],
       "sources": [
+        "clue-clinic",
         "curated",
         "longair",
         "mhl-yaml",
@@ -35329,6 +35471,7 @@
         "O"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36193,6 +36336,7 @@
         "O"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -36259,6 +36403,7 @@
         "O"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -36292,6 +36437,7 @@
         "O"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36314,6 +36460,7 @@
         "O"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36454,6 +36601,7 @@
         "O"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36639,6 +36787,7 @@
         "O"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -36765,6 +36914,7 @@
         "O"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -36803,6 +36953,18 @@
       "notes": []
     },
     {
+      "headword": "unplaced",
+      "expansions": [
+        "O"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": [
+        "advanced"
+      ]
+    },
+    {
       "headword": "wheel",
       "expansions": [
         "O"
@@ -36823,6 +36985,16 @@
         "longair",
         "mhl-yaml",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "zip",
+      "expansions": [
+        "O"
+      ],
+      "sources": [
+        "clue-clinic"
       ],
       "notes": []
     },
@@ -38645,6 +38817,7 @@
         "P"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -38746,6 +38919,7 @@
         "P"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -39177,6 +39351,7 @@
         "P"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -39775,6 +39950,7 @@
         "T"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -39844,6 +40020,7 @@
         "X"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -40145,16 +40322,6 @@
         "clue-clinic",
         "longair",
         "mhl-yaml"
-      ],
-      "notes": []
-    },
-    {
-      "headword": "programming language",
-      "expansions": [
-        "PL"
-      ],
-      "sources": [
-        "clue-clinic"
       ],
       "notes": []
     },
@@ -41357,6 +41524,7 @@
         "Q"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -41786,6 +41954,18 @@
         "compound-indicators"
       ],
       "notes": []
+    },
+    {
+      "headword": "canine letter",
+      "expansions": [
+        "R"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": [
+        "advanced"
+      ]
     },
     {
       "headword": "clearancecenter",
@@ -42287,6 +42467,7 @@
         "R"
       ],
       "sources": [
+        "clue-clinic",
         "curated",
         "longair",
         "mhl-yaml"
@@ -44578,6 +44759,7 @@
         "Z"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -45264,6 +45446,18 @@
       "notes": []
     },
     {
+      "headword": "shape of console",
+      "expansions": [
+        "S"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": [
+        "advanced"
+      ]
+    },
+    {
       "headword": "sheepshead",
       "expansions": [
         "S"
@@ -45364,6 +45558,7 @@
         "S"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -48481,6 +48676,7 @@
         "X"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -48646,6 +48842,7 @@
         "T"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -48882,6 +49079,7 @@
         "T"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -49044,18 +49242,6 @@
       ],
       "sources": [
         "compound-indicators"
-      ],
-      "notes": []
-    },
-    {
-      "headword": "ton",
-      "expansions": [
-        "T"
-      ],
-      "sources": [
-        "clue-clinic",
-        "longair",
-        "mhl-yaml"
       ],
       "notes": []
     },
@@ -50539,6 +50725,16 @@
       "notes": []
     },
     {
+      "headword": "horseshoe",
+      "expansions": [
+        "U"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
       "headword": "on view to all",
       "expansions": [
         "U"
@@ -50555,6 +50751,7 @@
         "U"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -50622,6 +50819,7 @@
         "U"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -50633,6 +50831,7 @@
         "U"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -50709,6 +50908,7 @@
         "U"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -51422,6 +51622,16 @@
       "notes": []
     },
     {
+      "headword": "fifth",
+      "expansions": [
+        "V"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
       "headword": "five",
       "expansions": [
         "V"
@@ -51462,6 +51672,7 @@
         "V"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -51630,6 +51841,7 @@
         "V"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -52389,6 +52601,7 @@
         "W"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -52958,6 +53171,18 @@
       "notes": []
     },
     {
+      "headword": "axis",
+      "expansions": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
       "headword": "body",
       "expansions": [
         "X"
@@ -52993,6 +53218,18 @@
       "notes": []
     },
     {
+      "headword": "co-ordinate",
+      "expansions": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
       "headword": "draw",
       "expansions": [
         "X"
@@ -53009,6 +53246,7 @@
         "X"
       ],
       "sources": [
+        "clue-clinic",
         "longair",
         "mhl-yaml"
       ],
@@ -53022,6 +53260,16 @@
       "sources": [
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "factor",
+      "expansions": [
+        "X"
+      ],
+      "sources": [
+        "clue-clinic"
       ],
       "notes": []
     },
@@ -53146,6 +53394,16 @@
       "notes": []
     },
     {
+      "headword": "tenth",
+      "expansions": [
+        "X"
+      ],
+      "sources": [
+        "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
       "headword": "vote",
       "expansions": [
         "X"
@@ -53155,6 +53413,16 @@
         "longair",
         "mhl-yaml",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "wrong answer",
+      "expansions": [
+        "X"
+      ],
+      "sources": [
+        "clue-clinic"
       ],
       "notes": []
     },
@@ -53865,6 +54133,7 @@
         "Y"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
@@ -54303,6 +54572,7 @@
         "Z"
       ],
       "sources": [
+        "clue-clinic",
         "curated"
       ],
       "notes": []
