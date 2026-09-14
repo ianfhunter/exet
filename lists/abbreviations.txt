@@ -100,6 +100,7 @@ unit -> A, I
 violin string -> A, D, E, G
 vitamin -> A, B, BI, C, D, E, F, H, K, L, M, P, X
 year -> A, Y, YR
+forms -> a range of dimensions like area
 first-class -> A1
 alcoholics anonymous -> AA
 anti-aircraft -> AA
@@ -124,7 +125,9 @@ sailor -> AB, HAND, JACK, OS, RN, SALT, TAR, able seaman
 salt -> AB, TAR, able seaman
 seaman -> AB, TAR
 tar -> AB
+used -> SH, abbreviation substitution need not always
 alphabet -> ABC
+famous personalities lincoln -> ABE
 lincoln -> ABE
 antiballistic missile -> ABM
 native -> ABO, NAT
@@ -274,6 +277,7 @@ alan -> AL
 albania -> AL, ALB
 albert -> AL
 aluminium -> AL
+aluminum -> AL, Al
 anglo-latin -> AL
 capone -> AL
 gangster -> AL
@@ -764,7 +768,7 @@ chicagoheart -> C
 chilihead -> C
 chowderhead -> C
 chucklehead -> C
-circa -> C
+circa -> C, CA
 classifiedhead -> C
 clifftop -> C
 cloudy -> C
@@ -945,7 +949,7 @@ common era -> CE
 council of europe -> CE
 engineer -> CE, ENG, ME, RE, REME
 engineers -> CE, RE
-this -> CE, CET, HIC
+this -> CE, CET, HIC, example
 cato -> censor, plotters' street
 edit -> censor
 physicists -> CERN
@@ -1146,6 +1150,8 @@ crown -> CR
 king -> CR, ER, GR, HM, K, R, ROI, SM, or CR. Also BB, or GR
 king charles -> CR
 monarch -> CR, ER, GR, K, Q, R
+rajaji -> CR
+such as rajaji -> CR
 the king -> CR
 ious -> credit notes, promises to pay
 caesium -> CS
@@ -1543,7 +1549,7 @@ retail -> E
 ridgeback -> E
 saddleback -> E
 shavetail -> E
-spain -> E
+spain -> E, ES
 stickleback -> E
 strikeback -> E
 sweetheart -> E, JO
@@ -1719,6 +1725,7 @@ former -> EX
 late -> EX
 one time -> EX
 oral -> examination, test
+saint -> S, ST, example is ST, paragon
 asis -> existing state
 experiment -> EXP
 experimental -> EXP
@@ -1804,7 +1811,7 @@ football club -> FC
 forestry commission -> FC
 free church -> FC
 further education -> FE
-iron -> FE
+iron -> FE, Fe
 declaration -> FEB
 february -> FEB
 he made this -> FEC
@@ -1877,6 +1884,7 @@ friar -> FR
 ouija -> Franco-German agreement
 rene -> French man
 reine -> French queen
+fri -> FRI
 tuck -> friar
 dela -> from the, of the
 feet -> FT
@@ -2053,6 +2061,7 @@ chai -> gypsy woman
 cashback -> H
 dirac's constant -> H
 edithtail -> H
+element periodic table hydrogen -> H
 fishtail -> H
 flashback -> H
 flyingfishtail -> H
@@ -2569,6 +2578,7 @@ overhead railway -> L
 plate -> L, P, T
 port -> L, PT, RIO, left, wine
 pound -> L, LAM, LB
+pound sterling -> L
 pullback -> L
 pupil -> L
 rollback -> L
@@ -2683,6 +2693,8 @@ logarithm -> LN
 look -> LO, SEE, V
 hair net -> lock keeper
 maths function -> LOG, TAN
+indian crosswords -> LON
+london -> LON
 longitude -> LON
 vide -> V, look, see
 speaks -> LOQ
@@ -2784,10 +2796,11 @@ metre -> M
 metres -> M
 mike -> M
 mile -> M, MI, ML
+mile . -> M
 miles -> M, ML
 million -> M
 millions -> M
-minute -> M
+minute -> M, MI
 minutes -> M
 modulus -> M
 monday -> M, MON
@@ -2836,6 +2849,7 @@ matrix -> MAT
 sine -> maths function, without
 maximum -> MAX
 can -> MAY, TIN
+may -> MAY
 666 -> MB
 manitoba -> MB
 mark of the beast -> MB
@@ -2950,6 +2964,7 @@ modern -> MOD
 cat -> MOG, REX, TOM
 mole -> MOL, SPY
 pier -> mole
+mon -> MON
 monmouthshire -> MON
 brass -> money
 women -> W, monstrous regiment
@@ -2962,6 +2977,7 @@ sherpa -> mountaineer
 lips -> mouthpiece, speakers
 army cop -> MP
 fairly quiet -> MP
+madhya pradesh -> MP
 melting-point -> MP
 member of parliament -> MP
 metropolitan police -> MP
@@ -3040,6 +3056,7 @@ nailhead -> N
 naira -> N
 name -> N
 nationalist -> N, NAT
+nee -> N
 neper -> N
 neuter -> N
 neutral -> N
@@ -3117,6 +3134,7 @@ neon -> NE
 new england -> NE
 north-east -> NE
 north-eastern -> NE
+northeast -> NE
 tyneside -> NE
 cattle -> neat
 lowing -> neat sound
@@ -3209,6 +3227,8 @@ northwest territories -> NT, NW
 part of bible -> NT, OT
 preservationists -> NT
 scriptures -> NT, OT
+and nt rama rao -> NTR
+nt rama rao -> NTR
 name unknown -> NU
 unidentified -> NU
 miners -> NUM
@@ -3224,6 +3244,7 @@ new version -> NV
 merseyside -> NW
 north-west -> NW
 north-western -> NW
+northwest -> NW
 new york -> NY
 new zealand -> NZ
 aught -> O
@@ -3395,6 +3416,7 @@ very well indeed -> OPT
 alternative -> OR
 alternatively -> OR
 before * -> OR
+in heraldry -> OR
 men -> OR
 non-commissioned officers -> OR
 operational research -> OR
@@ -3425,6 +3447,7 @@ outstanding -> OS
 oversize -> OS
 very large -> OS
 died without issue -> OSP
+for new/old testament -> OT
 occupational therapist -> OT
 occupational therapy -> OT
 old testament -> OT
@@ -3531,7 +3554,6 @@ parallel -> PAR
 parish -> PAR
 standard -> PAR, STD
 paratrooper -> PARA
-saint -> S, ST, paragon
 dance -> PAS
 step -> PAS
 past tense -> PAT, PT
@@ -3826,7 +3848,7 @@ rear admiral -> RA
 royal academician -> RA
 royal academy -> RA
 royal artillery -> RA
-sun -> RA, S
+sun -> RA, S, SUN
 sun god -> RA
 butler -> RAB
 brer -> rabbit
@@ -4017,7 +4039,7 @@ childhoodsend -> S
 cutsback -> S
 datesback -> S
 dogstail -> S
-dollar -> S
+dollar -> S, USD
 doublesback -> S
 entropy -> S
 es -> S
@@ -4155,6 +4177,7 @@ storm section -> SA
 without date -> SA
 idem -> said
 samuel -> SAM
+sat -> SAT
 yule -> say, you will
 antimony -> SB
 substantive -> SB
@@ -4189,6 +4212,7 @@ selenium -> SE
 society of engineers -> SE
 south-east -> SE
 south-eastern -> SE
+southeast -> SE
 temp -> secretary
 semester -> SEM
 semicolon -> SEM
@@ -4217,7 +4241,6 @@ singapore -> SGP
 hush -> SH, ST
 second-hand -> SH
 shorthand -> SH
-used -> SH
 scrip -> shares
 novel -> SHE
 the woman -> SHE
@@ -4326,6 +4349,7 @@ substitute -> SUB
 u-boat -> SUB
 warship -> SUB
 nemo -> submariner
+range -> substitution. e.g. metal can stand for an
 sudan -> SUD
 sunday -> SUN
 above -> SUP
@@ -4346,6 +4370,7 @@ short wave -> SW
 small women -> SW
 south-west -> SW
 south-western -> SW
+southwest -> SW
 essex -> SX
 seychelles -> SY
 symbol -> SYM
@@ -4480,7 +4505,11 @@ offensive -> TET
 togo -> TG
 thorium -> TH
 thursday -> TH, THU
+stands -> the actual metal name TIN and not its sho
 inst -> this month
+thu -> THU
+thur -> THU
+thurs -> THU
 titanium -> TI
 spasm -> TIC
 twitching -> TIC
@@ -4495,6 +4524,7 @@ thallium -> TL
 thulium -> TM
 transcendental meditation -> TM
 turkmenistan -> TM
+tamil nadu -> TN
 tennessee -> TN
 tradename -> TN
 tunisia -> TN
@@ -4539,6 +4569,8 @@ trinidad and tobago -> TT
 trade union -> TU
 tradesmen -> TU
 workers -> TU
+tue -> TUE
+tues -> TUE
 corporation -> TUM
 box -> TV
 televison -> TV
@@ -4606,6 +4638,7 @@ mounted -> UP
 riding -> UP
 united presbyterian -> UP
 united press -> UP
+uttar pradesh -> UP
 you queue -> UQ
 ancient city -> UR
 old city -> UR
@@ -4719,7 +4752,7 @@ waterfront -> W
 watt -> W
 wavefront -> W
 weak -> W
-wednesday -> W
+wednesday -> W, WED
 week -> W, WK
 wellhead -> W
 welsh -> W
@@ -4752,6 +4785,7 @@ dominca -> WD
 wheel drive -> WD
 works department -> WD
 you and i -> WE
+wed -> WED
 little -> WEE
 minor -> WEE
 rebecca -> Welsh riots

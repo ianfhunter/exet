@@ -1,0 +1,1744 @@
+{
+  "type": "juxtaposition",
+  "title": "Juxtaposition indicators",
+  "built": "2026-09-14",
+  "count": 125,
+  "sources": [
+    "clue-clinic",
+    "curated-extras"
+  ],
+  "entries": [
+    {
+      "indicator": "above",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "accompanies",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "accompanying",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "added to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "adjacent",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "adjacent to",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "adjoining",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "adjoins",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "after",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "against",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "ahead of",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "alongside",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "and",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "at end of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "atop",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "backing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "after",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "backs",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "after",
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "bearing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "bears",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "before",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "behind",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "below",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "beneath",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "beside",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "beside that",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "besides",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "beyond",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "bolstered by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "bolstering",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "bolsters",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "bordering",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "borders",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "borne by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "by",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "capped by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "capping",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "caps",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "carries",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "carrying",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "close by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "close on",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "advanced",
+        "after",
+        "either"
+      ]
+    },
+    {
+      "indicator": "close to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "confronting",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "before",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "confronts",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "alternative",
+        "before",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "covered by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "covered with",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "covering",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "covers",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "crowned by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "crowning",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "crowns",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "faced with",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "after",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "faces",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "alternative",
+        "before",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "facing",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "before",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "followed by",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "following",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "follows",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "fronting",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "before",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "fronts",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "alternative",
+        "before",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "given",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "headed by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "heading",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "heads",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "held up by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "heralded by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "heralding",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "heralds",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "holding up",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "holds up",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "in front of",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "alternative",
+        "before",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "inferior to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "introduces",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "introducing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "joined by",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "alternative",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "joining",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leading",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "leads",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "led by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "meeting",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "meets",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "near",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "neighbouring",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "next door",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "next to",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "on",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "on top of",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "over",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "past",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "plus",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "preceded by",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "precedes",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "preceding",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "prior to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "rides",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "riding",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "shadowing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "after",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "shadows",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "across",
+        "after",
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "superior to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "supported by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "supporting",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "supports",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "tailing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "tails",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "then",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "then comes",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tipped by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "tipped with",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "tipping",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "tips",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "together with",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "topped by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "topped with",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "topping",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "tops",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "under",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "underneath",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "underpinned by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "underpinning",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "underpins",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "alternative",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "upon",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "down",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "ushered in by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "after",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "ushering in",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "ushers in",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "alternative",
+        "before",
+        "either",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "with",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "juxtaposition"
+      ],
+      "notes": [
+        "either",
+        "standard"
+      ]
+    }
+  ]
+}

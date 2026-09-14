@@ -210,8 +210,8 @@ CRYPTIPEDIA_PAGES: dict[str, list[str]] = {
     ],
     "containment": [
         "List_of_container_and_contents_indicators",
-        "List_of_juxtaposition_indicators",
     ],
+    "juxtaposition": ["List_of_juxtaposition_indicators"],
     "letter-selection": ["List_of_letter_selection_indicators"],
     "alternation": ["List_of_substitution_and_movement_indicators"],
 }
@@ -349,7 +349,7 @@ INDICATOR_TYPES: list[IndicatorType] = [
         title="Containment indicators",
         blurb="Container, contents, and insertion — one letter run placed inside another.",
         georgeho_wordplays=["container", "insertion"],
-        clue_clinic_ids=[419, 1563],
+        clue_clinic_ids=[419],
         crossword_unclued_path="2009/02/container-and-content-indicators.html",
         unscramblerer_path="container-contents-indicators/",
         solve_the_crossword_slug="container-clues",
@@ -409,6 +409,24 @@ INDICATOR_TYPES: list[IndicatorType] = [
             "dropping every second", "even bits of", "odd bits of",
             "every other", "every alternate", "alternate characters",
             "selected letters", "regular intervals",
+        ],
+    ),
+    IndicatorType(
+        slug="juxtaposition",
+        title="Juxtaposition indicators",
+        blurb=(
+            "Charade / beside: one letter run is placed before or after another "
+            "(after, beside, next to, following, …)."
+        ),
+        clue_clinic_ids=[1563],
+        curated_extras=[
+            "and", "with", "plus", "beside", "besides", "next to", "next door",
+            "alongside", "adjacent", "adjacent to", "adjoining", "against",
+            "before", "after", "behind", "ahead of", "in front of", "following",
+            "followed by", "preceding", "preceded by", "then", "then comes",
+            "meeting", "meets", "joining", "joined by", "together with",
+            "facing", "beside that", "by", "on", "upon", "over", "under",
+            "above", "below", "beneath", "atop",
         ],
     ),
 ]
@@ -474,8 +492,38 @@ def split_alternatives(text: str) -> list[str]:
     return [p.strip() for p in parts if p.strip()]
 
 
-def scrape_clue_clinic(store: dict[str, dict], page_ids: list[int], *, allow_digits: bool = False) -> int:
+def _clue_clinic_table_rows(html: str) -> list[list[str]]:
+    """TablePress (classed tds) or plain HTML tables from ClueClinic pages."""
+    rows: list[list[str]] = []
+    for row_html in re.findall(r"<tr class=\"row-[^\"]*\">(.*?)</tr>", html, re.S):
+        cells = re.findall(r'<td class="column-\d+">([^<]*)</td>', row_html)
+        if cells:
+            rows.append([html_lib.unescape(c).strip() for c in cells])
+    if rows:
+        return rows
+    for row_html in re.findall(r"<tr>(.*?)</tr>", html, re.S | re.I):
+        if re.search(r"<th\b", row_html, re.I):
+            continue
+        cells = []
+        for cell in re.findall(r"<td[^>]*>(.*?)</td>", row_html, re.S | re.I):
+            plain = re.sub(r"<[^>]+>", " ", cell)
+            cells.append(html_lib.unescape(re.sub(r"\s+", " ", plain)).strip())
+        if cells:
+            rows.append(cells)
+    return rows
+
+
+def scrape_clue_clinic(
+    store: dict[str, dict],
+    page_ids: list[int],
+    *,
+    allow_digits: bool = False,
+    default_category: str | None = None,
+) -> int:
     count = 0
+    note_tokens = {
+        "standard", "advanced", "before", "after", "either", "across", "down",
+    }
     for page_id in page_ids:
         url = f"https://clueclinic.com/index.php/wp-json/wp/v2/pages/{page_id}"
         html = json.loads(fetch(url))["content"]["rendered"]
@@ -483,13 +531,14 @@ def scrape_clue_clinic(store: dict[str, dict], page_ids: list[int], *, allow_dig
         cache.parent.mkdir(parents=True, exist_ok=True)
         cache.write_text(html, encoding="utf-8")
 
-        for row_html in re.findall(r"<tr class=\"row-[^\"]*\">(.*?)</tr>", html, re.S):
-            cells = re.findall(r'<td class="column-\d+">([^<]*)</td>', row_html)
-            if not cells or cells[0].strip().lower() == "indicator":
+        for cells in _clue_clinic_table_rows(html):
+            if not cells or cells[0].strip().lower() in {
+                "indicator", "word", "clue word",
+            }:
                 continue
             primary = cells[0].strip()
-            category = None
-            for cell in cells[2:5]:
+            category = default_category
+            for cell in cells[2:]:
                 c = cell.strip()
                 if c and c not in {"Standard", "Advanced"} and not c.startswith("V*"):
                     if any(
@@ -497,15 +546,23 @@ def scrape_clue_clinic(store: dict[str, dict], page_ids: list[int], *, allow_dig
                         for k in (
                             "reduction", "departure", "insertion", "containment",
                             "selection", "behead", "curtail", "hidden", "reversal",
-                            "homophone", "alternat",
+                            "homophone", "alternat", "juxtapos",
                         )
                     ):
                         category = c.lower()
                         break
+            notes = [
+                c.strip().lower()
+                for c in cells[2:]
+                if c.strip().lower() in note_tokens
+            ]
             if add_entry(
                 store, primary, "clue-clinic", category=category, allow_digits=allow_digits
             ):
                 count += 1
+            key = norm(primary)
+            if key in store:
+                store[key]["notes"].update(notes)
             if len(cells) > 1:
                 for alt in split_alternatives(cells[1]):
                     if add_entry(
@@ -517,15 +574,9 @@ def scrape_clue_clinic(store: dict[str, dict], page_ids: list[int], *, allow_dig
                         allow_digits=allow_digits,
                     ):
                         count += 1
-
-        for m in re.finditer(
-            r'<td class="column-1">([^<]+)</td><td class="column-2">[^<]*</td>'
-            r'<td class="column-3">(Standard|Advanced)</td>',
-            html,
-        ):
-            ind = norm(m.group(1))
-            if ind in store:
-                store[ind]["notes"].add(m.group(2).lower())
+                    alt_key = norm(alt)
+                    if alt_key in store:
+                        store[alt_key]["notes"].update(notes)
     return count
 
 
@@ -724,7 +775,13 @@ def scrape_cryptipedia(
 
         for lm in re.finditer(r"<li>([^<]{2,80})</li>", body, re.I):
             ind = _clean_wiki_indicator(lm.group(1))
-            if add_entry(store, ind, "cryptipedia", allow_digits=allow_digits):
+            if add_entry(
+                store,
+                ind,
+                "cryptipedia",
+                category=page.replace("List_of_", "").replace("_", " ").lower(),
+                allow_digits=allow_digits,
+            ):
                 count += 1
         time.sleep(0.5)
     return count
@@ -757,7 +814,10 @@ def build_type(cfg: IndicatorType) -> dict[str, dict]:
             (
                 "clue-clinic",
                 lambda s: scrape_clue_clinic(
-                    s, cfg.clue_clinic_ids, allow_digits=cfg.allow_digits
+                    s,
+                    cfg.clue_clinic_ids,
+                    allow_digits=cfg.allow_digits,
+                    default_category=cfg.slug,
                 ),
             )
         )

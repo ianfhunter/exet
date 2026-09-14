@@ -2,11 +2,12 @@
   "type": "abbreviations",
   "title": "Cryptic abbreviations",
   "blurb": "Clue words and phrases that commonly abbreviate to letters or short forms in cryptic crosswords (bits-and-pieces).",
-  "built": "2026-08-26",
-  "count": 4917,
+  "built": "2026-09-14",
+  "count": 4951,
   "sources": [
     "clue-clinic",
     "compound-indicators",
+    "crossword-unclued",
     "cryptipedia",
     "curated",
     "longair",
@@ -37,6 +38,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1318,6 +1320,16 @@
       "notes": []
     },
     {
+      "headword": "forms",
+      "expansions": [
+        "a range of dimensions like area"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "first-class",
       "expansions": [
         "A1"
@@ -1565,6 +1577,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -1611,6 +1624,19 @@
       "notes": []
     },
     {
+      "headword": "used",
+      "expansions": [
+        "SH",
+        "abbreviation substitution need not always"
+      ],
+      "sources": [
+        "crossword-unclued",
+        "longair",
+        "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
       "headword": "alphabet",
       "expansions": [
         "ABC"
@@ -1621,11 +1647,22 @@
       "notes": []
     },
     {
+      "headword": "famous personalities lincoln",
+      "expansions": [
+        "ABE"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "lincoln",
       "expansions": [
         "ABE"
       ],
       "sources": [
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -3322,9 +3359,21 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "aluminum",
+      "expansions": [
+        "AL",
+        "Al"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -4378,7 +4427,8 @@
         "APR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -5256,6 +5306,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -5279,7 +5330,8 @@
         "AUG"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -6073,6 +6125,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -6100,6 +6153,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -6386,6 +6440,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -8850,9 +8905,11 @@
     {
       "headword": "circa",
       "expansions": [
-        "C"
+        "C",
+        "CA"
       ],
       "sources": [
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -10841,9 +10898,11 @@
       "expansions": [
         "CE",
         "CET",
-        "HIC"
+        "HIC",
+        "example"
       ],
       "sources": [
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -11334,6 +11393,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -13100,6 +13160,26 @@
         "longair",
         "mhl-yaml",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "rajaji",
+      "expansions": [
+        "CR"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "such as rajaji",
+      "expansions": [
+        "CR"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -15272,7 +15352,8 @@
         "DEC"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -16957,6 +17038,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -17513,10 +17595,12 @@
     {
       "headword": "spain",
       "expansions": [
-        "E"
+        "E",
+        "ES"
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -18670,6 +18754,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -19460,6 +19545,23 @@
       "notes": []
     },
     {
+      "headword": "saint",
+      "expansions": [
+        "S",
+        "ST",
+        "example is ST",
+        "paragon"
+      ],
+      "sources": [
+        "clue-clinic",
+        "crossword-unclued",
+        "longair",
+        "mhl-yaml",
+        "wikipedia"
+      ],
+      "notes": []
+    },
+    {
       "headword": "asis",
       "expansions": [
         "existing state"
@@ -19969,6 +20071,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -20113,6 +20216,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -20411,10 +20515,12 @@
     {
       "headword": "iron",
       "expansions": [
-        "FE"
+        "FE",
+        "Fe"
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -20437,7 +20543,8 @@
         "FEB"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -21205,6 +21312,16 @@
       "notes": []
     },
     {
+      "headword": "fri",
+      "expansions": [
+        "FRI"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "tuck",
       "expansions": [
         "friar"
@@ -21626,6 +21743,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -23135,6 +23253,16 @@
       "notes": []
     },
     {
+      "headword": "element periodic table hydrogen",
+      "expansions": [
+        "H"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "fishtail",
       "expansions": [
         "H"
@@ -23479,6 +23607,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -23550,6 +23679,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -26934,7 +27064,8 @@
         "JAN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -27102,7 +27233,8 @@
         "JY"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -27112,7 +27244,8 @@
         "JUN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -28800,9 +28933,20 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "pound sterling",
+      "expansions": [
+        "L"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -29005,6 +29149,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -30031,6 +30176,26 @@
       "notes": []
     },
     {
+      "headword": "indian crosswords",
+      "expansions": [
+        "LON"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "london",
+      "expansions": [
+        "LON"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "longitude",
       "expansions": [
         "LON"
@@ -31043,6 +31208,7 @@
         "M"
       ],
       "sources": [
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -31055,6 +31221,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -31090,8 +31257,19 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "mile .",
+      "expansions": [
+        "M"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -31130,10 +31308,12 @@
     {
       "headword": "minute",
       "expansions": [
-        "M"
+        "M",
+        "MI"
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "wikipedia"
       ],
       "notes": []
@@ -31167,6 +31347,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -31605,7 +31786,8 @@
         "MAR"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -31673,6 +31855,16 @@
       "sources": [
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "may",
+      "expansions": [
+        "MAY"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -32873,6 +33065,16 @@
       "notes": []
     },
     {
+      "headword": "mon",
+      "expansions": [
+        "MON"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "monmouthshire",
       "expansions": [
         "MON"
@@ -33001,6 +33203,16 @@
       "sources": [
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "madhya pradesh",
+      "expansions": [
+        "MP"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -33842,6 +34054,16 @@
       "notes": []
     },
     {
+      "headword": "nee",
+      "expansions": [
+        "N"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "neper",
       "expansions": [
         "N"
@@ -34003,6 +34225,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -34054,6 +34277,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "curated"
       ],
       "notes": []
@@ -34132,6 +34356,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -34698,6 +34923,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "northeast",
+      "expansions": [
+        "NE"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -35606,6 +35841,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -35686,6 +35922,26 @@
       "sources": [
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "and nt rama rao",
+      "expansions": [
+        "NTR"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "nt rama rao",
+      "expansions": [
+        "NTR"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -35856,12 +36112,23 @@
       "notes": []
     },
     {
+      "headword": "northwest",
+      "expansions": [
+        "NW"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "new york",
       "expansions": [
         "NY"
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -36825,7 +37092,8 @@
         "OCT"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -37697,6 +37965,16 @@
       "notes": []
     },
     {
+      "headword": "in heraldry",
+      "expansions": [
+        "OR"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "men",
       "expansions": [
         "OR"
@@ -37925,6 +38203,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "wikipedia"
       ],
       "notes": []
@@ -38028,6 +38307,16 @@
       "notes": []
     },
     {
+      "headword": "for new/old testament",
+      "expansions": [
+        "OT"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "occupational therapist",
       "expansions": [
         "OT"
@@ -38056,6 +38345,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -39169,21 +39459,6 @@
         "PARA"
       ],
       "sources": [
-        "wikipedia"
-      ],
-      "notes": []
-    },
-    {
-      "headword": "saint",
-      "expansions": [
-        "S",
-        "ST",
-        "paragon"
-      ],
-      "sources": [
-        "clue-clinic",
-        "longair",
-        "mhl-yaml",
         "wikipedia"
       ],
       "notes": []
@@ -42359,10 +42634,12 @@
       "headword": "sun",
       "expansions": [
         "RA",
-        "S"
+        "S",
+        "SUN"
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -44432,9 +44709,11 @@
     {
       "headword": "dollar",
       "expansions": [
-        "S"
+        "S",
+        "USD"
       ],
       "sources": [
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -44894,6 +45173,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -45367,6 +45647,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml",
         "wikipedia"
@@ -45897,6 +46178,16 @@
       "notes": []
     },
     {
+      "headword": "sat",
+      "expansions": [
+        "SAT"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "yule",
       "expansions": [
         "say",
@@ -46259,6 +46550,16 @@
       "notes": []
     },
     {
+      "headword": "southeast",
+      "expansions": [
+        "SE"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "temp",
       "expansions": [
         "secretary"
@@ -46374,7 +46675,8 @@
         "SEP"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -46549,17 +46851,6 @@
       ],
       "sources": [
         "clue-clinic"
-      ],
-      "notes": []
-    },
-    {
-      "headword": "used",
-      "expansions": [
-        "SH"
-      ],
-      "sources": [
-        "longair",
-        "mhl-yaml"
       ],
       "notes": []
     },
@@ -47717,6 +48008,16 @@
       "notes": []
     },
     {
+      "headword": "range",
+      "expansions": [
+        "substitution. e.g. metal can stand for an"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
       "headword": "sudan",
       "expansions": [
         "SUD"
@@ -47732,7 +48033,8 @@
         "SUN"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -47922,6 +48224,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "southwest",
+      "expansions": [
+        "SW"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -48881,6 +49193,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -49335,7 +49648,18 @@
         "THU"
       ],
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "stands",
+      "expansions": [
+        "the actual metal name TIN and not its sho"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -49347,6 +49671,36 @@
       "sources": [
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thu",
+      "expansions": [
+        "THU"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thur",
+      "expansions": [
+        "THU"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "thurs",
+      "expansions": [
+        "THU"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -49494,6 +49848,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "tamil nadu",
+      "expansions": [
+        "TN"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -49963,6 +50327,26 @@
       ],
       "sources": [
         "wikipedia"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "tue",
+      "expansions": [
+        "TUE"
+      ],
+      "sources": [
+        "crossword-unclued"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "tues",
+      "expansions": [
+        "TUE"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -50690,6 +51074,16 @@
       ],
       "sources": [
         "clue-clinic"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "uttar pradesh",
+      "expansions": [
+        "UP"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },
@@ -51919,9 +52313,11 @@
     {
       "headword": "wednesday",
       "expansions": [
-        "W"
+        "W",
+        "WED"
       ],
       "sources": [
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -51969,6 +52365,7 @@
       ],
       "sources": [
         "clue-clinic",
+        "crossword-unclued",
         "longair",
         "mhl-yaml"
       ],
@@ -52265,6 +52662,16 @@
       "sources": [
         "longair",
         "mhl-yaml"
+      ],
+      "notes": []
+    },
+    {
+      "headword": "wed",
+      "expansions": [
+        "WED"
+      ],
+      "sources": [
+        "crossword-unclued"
       ],
       "notes": []
     },

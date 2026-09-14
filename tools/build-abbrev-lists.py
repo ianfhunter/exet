@@ -874,6 +874,124 @@ def scrape_wikipedia_abbrev(store: dict[str, dict]) -> int:
     return count
 
 
+UNCLUED_ABBREV_EXPLICIT: list[tuple[str, str]] = [
+    ("saint", "ST"),
+    ("operating system", "OS"),
+    ("book", "NT"),
+    ("book", "OT"),
+    ("new testament", "NT"),
+    ("old testament", "OT"),
+    ("mile", "M"),
+    ("born", "N"),
+    ("nee", "N"),
+    ("lincoln", "ABE"),
+    ("rajaji", "CR"),
+    ("nt rama rao", "NTR"),
+    ("sailor", "AB"),
+    ("sailor", "TAR"),
+    ("queen", "Q"),
+    ("queen", "ER"),
+    ("queen", "HM"),
+    ("gold", "AU"),
+    ("gold", "OR"),
+    ("hydrogen", "H"),
+    ("iron", "FE"),
+    ("aluminum", "AL"),
+    ("aluminium", "AL"),
+    ("switzerland", "CH"),
+    ("spain", "ES"),
+    ("new york", "NY"),
+    ("los angeles", "LA"),
+    ("london", "LON"),
+    ("uttar pradesh", "UP"),
+    ("madhya pradesh", "MP"),
+    ("tamil nadu", "TN"),
+    ("circa", "C"),
+    ("circa", "CA"),
+    ("about", "C"),
+    ("about", "CA"),
+]
+
+
+def scrape_crossword_unclued_abbrev(store: dict[str, dict]) -> int:
+    """Primer page: typed examples plus a category table, not a full dictionary."""
+    text = read_or_fetch(
+        "crossword-unclued-cryptic-abbreviations.html",
+        "https://www.crosswordunclued.com/2008/10/cryptic-abbreviations.html",
+    )
+    count = 0
+    for clue, abbrev in UNCLUED_ABBREV_EXPLICIT:
+        count += add_abbrev(store, clue, abbrev, "crossword-unclued")
+
+    body = text
+    m = re.search(
+        r"class=['\"]post-body[^'\"]*['\"][^>]*>(.*?)Posted by",
+        text,
+        re.S | re.I,
+    )
+    if m:
+        body = m.group(1)
+    plain = re.sub(r"<script[^>]*>.*?</script>", " ", body, flags=re.I | re.S)
+    plain = re.sub(r"<style[^>]*>.*?</style>", " ", plain, flags=re.I | re.S)
+    plain = re.sub(r"<br\s*/?>", "\n", plain, flags=re.I)
+    plain = re.sub(r"</p>|</li>|</tr>", "\n", plain, flags=re.I)
+    plain = re.sub(r"<[^>]+>", " ", plain)
+    plain = html_lib.unescape(plain)
+
+    for m in re.finditer(
+        r"\b([A-Za-z][A-Za-z .'-]{1,40}?)\s*=\s*([A-Za-z0-9]{1,6})\b",
+        plain,
+    ):
+        count += add_source_abbrev_pair(store, m.group(1), m.group(2), "crossword-unclued")
+
+    for m in re.finditer(
+        r"\b([A-Z]{1,6})\s*\(([^)]{2,40})\)",
+        plain,
+    ):
+        count += add_abbrev(store, m.group(2), m.group(1), "crossword-unclued")
+
+    for m in re.finditer(
+        r"\b([A-Z]{1,6})\s+for\s+([a-z][a-z .'-]{1,40})",
+        plain,
+        re.I,
+    ):
+        left, right = m.group(1), m.group(2)
+        if is_abbrev_like(left) or is_abbrev_form(left):
+            count += add_abbrev(store, right, left, "crossword-unclued")
+        else:
+            count += add_abbrev(store, left, right, "crossword-unclued")
+
+    # Calendar ranges named on the page.
+    for day in (
+        "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday",
+        "sun", "mon", "tue", "tues", "wed", "thu", "thur", "thurs", "fri", "sat",
+    ):
+        count += add_abbrev(
+            store, day, day[:3].upper() if day != "tuesday" else "TUE",
+            "crossword-unclued",
+        )
+    for month, abbr in (
+        ("january", "JAN"), ("february", "FEB"), ("march", "MAR"),
+        ("april", "APR"), ("may", "MAY"), ("june", "JUN"), ("july", "JUL"),
+        ("august", "AUG"), ("september", "SEP"), ("october", "OCT"),
+        ("november", "NOV"), ("december", "DEC"),
+    ):
+        count += add_abbrev(store, month, abbr, "crossword-unclued")
+
+    for clue, abbrev in (
+        ("north", "N"), ("south", "S"), ("east", "E"), ("west", "W"),
+        ("northeast", "NE"), ("northwest", "NW"),
+        ("southeast", "SE"), ("southwest", "SW"),
+        ("pole", "N"), ("pole", "S"),
+        ("gram", "G"), ("pound", "LB"), ("dollar", "USD"), ("pound sterling", "L"),
+        ("foot", "FT"), ("metre", "M"), ("meter", "M"),
+        ("second", "S"), ("minute", "M"), ("minute", "MI"),
+        ("hour", "H"), ("hour", "HR"),
+    ):
+        count += add_abbrev(store, clue, abbrev, "crossword-unclued")
+    return count
+
+
 def scrape_cryptipedia_abbrev(store: dict[str, dict]) -> int:
     text = read_or_fetch(
         "cryptipedia-List_of_abbreviations.html",
@@ -1061,6 +1179,7 @@ def build_abbreviations() -> dict[str, dict]:
         ("mhl-yaml", scrape_mhl_yaml),
         ("longair", scrape_longair),
         ("wikipedia", scrape_wikipedia_abbrev),
+        ("crossword-unclued", scrape_crossword_unclued_abbrev),
         ("cryptipedia", scrape_cryptipedia_abbrev),
         ("sanitize-roman", lambda s: sanitize_roman_numerals(s)),
         ("curated-extras", apply_curated_extras),
