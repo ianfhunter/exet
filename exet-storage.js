@@ -643,6 +643,7 @@ ExetRevManager.prototype.saveRev = function(revType, details="") {
         lastRev.tryReversals == exet.tryReversals &&
         lastRev.minpop == exet.minpop &&
         lastRev.hasOwnProperty('minscore') && lastRev.minscore == exet.minscore &&
+        lastRev.minscoreV == 2 &&
         lastRev.hasOwnProperty('lexId') && lastRev.lexId == exetLexicon.id &&
         lastRev.hasOwnProperty('requireEnums') && lastRev.requireEnums == exet.requireEnums &&
         lastRev.hasOwnProperty('lightRegexps') && JSON.stringify(lastRev.lightRegexps) == JSON.stringify(exet.lightRegexps) &&
@@ -668,6 +669,8 @@ ExetRevManager.prototype.saveRev = function(revType, details="") {
   exetRev.tryReversals = exet.tryReversals;
   exetRev.minpop = exet.minpop;
   exetRev.minscore = exet.minscore;
+  /** Marks minscore as a real lexicon score; older revs stored a percentile. */
+  exetRev.minscoreV = 2;
   exetRev.lexId = exetLexicon.id;
   exetRev.requireEnums = exet.requireEnums;
   exetRev.lightRegexps = exet.lightRegexps;

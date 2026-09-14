@@ -763,6 +763,12 @@ class ExetAutofill {
     this.pangramLasts = false;
     this.triedHashes = {};
 
+    /**
+     * Autofill is held to a higher standard than the suggestions panel, which
+     * shows the whole list: only entries in this top percentile are used.
+     */
+    this.minPop = 80;
+
     /** How many light choices do we consider for each light: */
     this.constrainerLimit = 2000;
     /** How many iterations of refineLightChoices to vet: */
@@ -814,6 +820,9 @@ class ExetAutofill {
     this.beamWidthInp = document.getElementById(
         'xet-autofill-max-beam');
     this.beamWidthInp.value = this.beamWidth;
+
+    this.minPopInp = document.getElementById('xet-autofill-min-pop');
+    this.minPopInp.value = this.minPop;
 
     this.pangramInp = document.getElementById(
         'xet-autofill-boost-pangram');
@@ -940,6 +949,16 @@ class ExetAutofill {
                     value="64" type="text" size="4" maxlength="4"
                     style="padding:0;margin:0">
                 </input>
+              </div>
+              <div title="Autofill only uses entries in this top percentile of the word list, so it does not reach for obscure fills. The suggestions panel is unaffected. 0 allows the whole list."
+                  class="xet-pdiv">
+                Autofill word quality:
+                <input id="xet-autofill-min-pop"
+                    name="xet-autofill-min-pop"
+                    value="80" type="text" size="3" maxlength="3"
+                    style="padding:0;margin:0">
+                </input>
+                <span class="xet-small">%ile and above</span>
               </div>
               <div class="xet-pdiv">
                 Try to find a pangram:
@@ -1073,6 +1092,62 @@ class ExetAutofill {
     `;
   }
 
+  readMinPop() {
+    const m = parseInt(this.minPopInp.value);
+    if (isNaN(m) || m < 0 || m > 100) {
+      this.minPopInp.value = this.minPop;
+    } else {
+      this.minPop = m;
+    }
+  }
+
+  /** Lexicon index cutoff for this.minPop, never looser than the panel's. */
+  indexMinPop() {
+    const m = Math.max(0, Math.min(100, this.minPop));
+    const index = Math.max(
+        1, Math.floor(exetLexicon.startLen * (100 - m) / 100));
+    return Math.min(exet.indexMinPop, index);
+  }
+
+  /**
+   * Copy of the current fill state with candidates below the autofill floor
+   * dropped, so the beam search never reaches for obscure entries. Preferred
+   * fills are exempt, and filled lights keep whatever entry they hold.
+   */
+  flooredState() {
+    const candidate = new ExetFillState(exet.fillState);
+    const minScore = this.minScore();
+    if (minScore <= 0) {
+      return candidate;
+    }
+    for (const ci in candidate.clues) {
+      const clue = candidate.clues[ci];
+      if (!clue.solution || clue.solution.indexOf('?') < 0) {
+        continue;
+      }
+      clue.lChoices = clue.lChoices.filter(choice => {
+        const index = Math.abs(choice);
+        return exet.preflexSet[index] || exetLexicon.scores[index] >= minScore;
+      });
+    }
+    return candidate;
+  }
+
+  /** Score cutoff for this.minPop, or 0 when the whole list is allowed. */
+  minScore() {
+    const index = this.indexMinPop();
+    if (index >= exetLexicon.startLen) {
+      return 0;
+    }
+    if (exetLexicon.indexToScore) {
+      return exetLexicon.indexToScore(index - 1);
+    }
+    if (exetLexicon.scoresSummary) {
+      return exetLexicon.scores[index - 1] || 0;
+    }
+    return 0;
+  }
+
   reset(status, longStatus='') {
     this.beam = new ExetDher(this.beamWidth);
     this.step = 0;
@@ -1115,6 +1190,7 @@ class ExetAutofill {
         this.beamWidth = beamWidth;
         this.beam.relimit(beamWidth);
       }
+      this.readMinPop();
       this.boostPangram = this.pangramInp.checked;
       this.loopForPangram = this.pangramLoopInp.checked;
       this.pangramAll = this.pangramAllInp.checked;
@@ -1125,7 +1201,7 @@ class ExetAutofill {
       this.pangramLasts = this.pangramLastsInp.checked;
 
       if (this.beam.size() == 0) {
-        const candidate = new ExetFillState(exet.fillState);
+        const candidate = this.flooredState();
         for (let s = 0; s < this.refinementSweeps && candidate.viable; s++) {
           if (!exet.refineLightChoices(candidate, this.constrainerLimit)) break;
         }
@@ -1196,6 +1272,7 @@ class ExetAutofill {
       }
       const beamWidth = parseInt(this.beamWidthInp.value);
       if (!isNaN(beamWidth) && beamWidth > 0) this.beamWidth = beamWidth;
+      this.readMinPop();
       this.boostPangram = this.pangramInp.checked;
       this.loopForPangram = this.pangramLoopInp.checked;
       this.pangramAll = this.pangramAllInp.checked;
@@ -1206,6 +1283,7 @@ class ExetAutofill {
       this.pangramLasts = this.pangramLastsInp.checked;
       if (!exet.fillClient.startAutofill({
         beamWidth: this.beamWidth,
+        minScore: this.minScore(),
         constrainerLimit: this.constrainerLimit,
         refinementSweeps: this.refinementSweeps,
         boostPangram: this.boostPangram,
@@ -1267,6 +1345,7 @@ class ExetAutofill {
     this.preflexTotalSpan.innerText = exet.preflex.length;
     this.tryReversalsSpan.innerText = exet.tryReversals ?
         "allowed" : "disallowed";
+    this.minPopInp.value = this.minPop;
   }
 
   refreshDisplay() {
@@ -1410,7 +1489,7 @@ class ExetAutofill {
       return;
     }
     const usedP = {};
-    const child = new ExetFillState(exet.fillState);
+    const child = this.flooredState();
     const priClueIndices = {};
     for (let i = 0; i < this.priorityClues.length; i++) {
       priClueIndices[i] = true;

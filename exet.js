@@ -61,7 +61,7 @@ class ExetFillClient {
     this.pendingState = null;
     this.enabled = !!(window.Worker && exetLexicon && exetLexicon.serverSlug);
     if (!this.enabled) return;
-    this.worker = new Worker('exet-fill-worker.js?v1.00');
+    this.worker = new Worker('exet-fill-worker.js?v1.01');
     this.worker.onmessage = this.onMessage.bind(this);
     this.worker.onerror = error => {
       console.error('Fill worker failed; using inline fill engine', error);
@@ -476,15 +476,34 @@ Exet.prototype.setMinScore = function(s) {
 }
 
 /**
- * A stored cutoff above the current list's top score cannot select anything,
- * so treat it as stale state and let the caller fall back to minpop.
+ * Revisions before minscoreV 2 stored a percentile in minscore, which selects
+ * almost nothing when applied as a score, and a cutoff above the list's top
+ * score cannot select anything at all. Either way the caller falls back to the
+ * saved minpop percentile, which has always been recorded correctly.
  */
 function exetStoredScoreUsable(rev) {
   return !!exetLexicon.scoresSummary &&
+      rev.minscoreV >= 2 &&
       rev.hasOwnProperty('lexId') &&
       rev.hasOwnProperty('minscore') &&
       exetLexicon.id == rev.lexId &&
       rev.minscore <= exetLexicon.scoresSummary.max;
+}
+
+/**
+ * Restores the saved fill cutoff, preferring the exact score when it is
+ * trustworthy and the percentile otherwise. Nothing a pre-minscoreV-2 revision
+ * recorded describes a cutoff the user chose deliberately, so those fall back
+ * to the configured default.
+ */
+function exetRestoreMinLex(rev) {
+  if (exetStoredScoreUsable(rev)) {
+    exet.setMinScore(rev.minscore);
+  } else if (rev.minscoreV >= 2) {
+    exet.setMinPop(rev.minpop || 0);
+  } else {
+    exet.setMinPop(exetConfig.defaultPopularity);
+  }
 }
 
 Exet.prototype.handleMinLexChange = function(evt) {
@@ -10080,11 +10099,7 @@ function exetFromHistory(exetRev) {
   exet.prefix = exetRev.prefix;
   exet.suffix = exetRev.suffix;
   exetRevManager.retrievePrefUnpref(exetRev);
-  if (exetStoredScoreUsable(exetRev)) {
-    exet.setMinScore(exetRev.minscore);
-  } else {
-    exet.setMinPop(exetRev.minpop || 0);
-  }
+  exetRestoreMinLex(exetRev);
   exet.noProperNouns = exetRev.noProperNouns || false;
   exet.region = exetRev.region || '';
   exet.region = exetLexicon.preferRegion(exet.region);
@@ -10326,11 +10341,7 @@ function exetLoadFromBytes(buffer, sourceName) {
     if (stored.revs.length > 0) {
       const lastRev = stored.revs[stored.revs.length - 1];
       exetRevManager.retrievePrefUnpref(lastRev);
-      if (exetStoredScoreUsable(lastRev)) {
-        exet.setMinScore(lastRev.minscore);
-      } else {
-        exet.setMinPop(lastRev.minpop || 0);
-      }
+      exetRestoreMinLex(lastRev);
       exet.noProperNouns = lastRev.noProperNouns || false;
       exet.asymOK = lastRev.asymOK || false;
       exet.region = lastRev.region || '';
