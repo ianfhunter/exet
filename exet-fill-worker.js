@@ -349,8 +349,29 @@ function getPriorityClues(fillState) {
   return priority;
 }
 
+/**
+ * Drop candidates below autofill's own score floor, which is stricter than the
+ * suggestions panel's. Preferred fills are exempt, and filled lights keep
+ * whatever entry they hold. Returns false if a light is left with nothing.
+ */
+function applyAutofillFloor(fillState, minScore) {
+  if (!(minScore > 0)) return true;
+  for (const ci in fillState.clues) {
+    const clue = fillState.clues[ci];
+    if (clue.parentClueIndex || !clue.solution ||
+        !clue.solution.includes('?')) continue;
+    clue.lChoices = clue.lChoices.filter(choice => {
+      const index = Math.abs(choice);
+      return options.preflexSet[index] ||
+          (lexicon.scores[index] || 0) >= minScore;
+    });
+    if (!clue.lChoices.length) return false;
+  }
+  return true;
+}
+
 function addPriorityCandidate(search) {
-  const child = new ExetFillStateCore(state);
+  const child = new ExetFillStateCore(search.baseState);
   const remaining = search.priorityClues.slice();
   const used = new Set();
   while (child.viable && remaining.length) {
@@ -438,6 +459,16 @@ async function runAutofill(message) {
     priorityLoop: 0,
   };
   const initial = new ExetFillStateCore(state);
+  if (!applyAutofillFloor(initial, searchOptions.minScore || 0)) {
+    runningAutofill = false;
+    postMessage({
+      type: 'autofillStatus',
+      gen: generation,
+      status: 'No fills at this word quality',
+    });
+    return;
+  }
+  search.baseState = new ExetFillStateCore(initial);
   for (let pass = 0;
        pass < (searchOptions.refinementSweeps || 2) && initial.viable;
        pass++) {
