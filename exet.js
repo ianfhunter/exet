@@ -6259,21 +6259,6 @@ Exet.prototype.replaceHandlers = function() {
 Exet.prototype.isDraftClue = function(clueText) {
   return clueText.trim().startsWith(this.DRAFT)
 }
-/**
- * True when the clue strip still holds the untouched placeholder, i.e. no clue
- * text has been typed for the current light. Reads the editable span rather
- * than theClue.clue, which only catches up after the input throttle.
- */
-Exet.prototype.currClueIsUnset = function() {
-  const xetClue = document.getElementById("xet-clue");
-  const theClue = this.currClue();
-  let clue = (xetClue ? xetClue.innerText : (theClue ? theClue.clue : '')) || '';
-  clue = clue.trim();
-  if (clue.startsWith(this.DRAFT)) {
-    clue = clue.substr(this.DRAFT.length).trim();
-  }
-  return clue.startsWith(this.CLUE_NOT_SET);
-}
 Exet.prototype.renderClue = function(theClue=null) {
   if (!theClue) {
     theClue = exet.currClue();
@@ -7623,7 +7608,6 @@ Exet.prototype.handleKeyDown = function(e) {
   let key = e.key || e;
   const isEvent = !!(e && typeof e.preventDefault == 'function');
   const target = isEvent ? e.target : null;
-  const targetId = target && target.id;
 
   // Period / numpad decimal: prefer e.code so layout quirks still toggle.
   if (isEvent && (e.code == 'Period' || e.code == 'NumpadDecimal')) {
@@ -7651,25 +7635,12 @@ Exet.prototype.handleKeyDown = function(e) {
   }
 
   /**
-   * Focus sits in the curr-clue strip while the grid is still being laid out
-   * (the cell stays highlighted), so grid keys keep working there as long as
-   * the clue is the untouched placeholder. As soon as there is clue text,
-   * every character types literally: clues and annos contain '!', '#', '=' etc.
+   * Grid keys ('.', bars, '!', '=', ...) only act on the grid when the grid
+   * has focus: grid navigation refocuses gridInput, so nothing is lost by
+   * staying out of text fields, and clue text can contain any of them.
    */
   if (isTypingTarget(target)) {
-    const gridShortcut = (
-        key == '.' || key == '|' || key == '_' || key == '#' ||
-        key == '@' || key == '$' || key == '^' || key == '=' ||
-        key == '!');
-    if (!gridShortcut) {
-      return;
-    }
-    if (targetId != 'xet-clue' && targetId != 'xet-anno') {
-      return;
-    }
-    if (!this.currClueIsUnset()) {
-      return;
-    }
+    return;
   }
 
   if (key == '=') {
