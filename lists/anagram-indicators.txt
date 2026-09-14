@@ -76,7 +76,6 @@ adapted
 adapting
 addle
 addled
-adjective
 adjust
 adjustable
 adjusted
@@ -98,7 +97,6 @@ adrift
 adulterate
 adulterated
 advanced
-adverb
 adverse
 adversely
 affair
@@ -1151,7 +1149,6 @@ chewed (up)
 chewed up
 chewing
 childish
-childless
 chirpy
 chomping
 chop
@@ -1361,8 +1358,6 @@ constructing
 construction
 construe
 construed
-containing o
-containing s (or sp)
 contaminated
 contamination of
 contemporary
@@ -1629,7 +1624,6 @@ dealing with
 dealt
 dealt with
 debacle
-debased
 debatable
 debauch
 debauched
@@ -1643,7 +1637,6 @@ decayed
 decaying
 deceitful
 deceive
-decent
 deception
 deceptive
 deceptively
@@ -1676,13 +1669,11 @@ defect
 defected
 defective
 defiled
-defined
 deform
 deformed
 deforming
 deformity
 deftly
-degaussed
 degenerate
 degenerated
 delinquent
@@ -1699,10 +1690,8 @@ demolish
 demolished
 demolishing
 demolition
-denoted
 denounced
 dented
-departed
 departs
 deplorable
 deplorably
@@ -1752,7 +1741,6 @@ destructive
 desultorily
 desultory
 detached
-detailed
 deteriorate
 deteriorated
 deteriorates
@@ -1844,13 +1832,10 @@ disconcert
 disconcerted
 disconcerting
 disconnect
-discontented
 discord
 discordance
 discordant
 discordantly
-discovered
-discredited
 discuss(es)
 discussed
 discussion
@@ -2281,7 +2266,6 @@ explosively
 exposed
 exposing
 extended
-extra-special
 extractable from
 extraordinarily
 extraordinary
@@ -2400,7 +2384,6 @@ finicky
 fired
 fires
 firing
-first and last letter selection
 fished with
 fishy
 fissile
@@ -2548,7 +2531,6 @@ foolishly
 foolishly employed
 fools
 fools about
-footloose
 for
 for a change
 for a massage
@@ -3358,7 +3340,6 @@ hitch
 hitting
 hobbled
 hoist
-homophone
 hook
 hop
 hopeless
@@ -3793,7 +3774,6 @@ insanely
 insanitary
 insecure
 insecurely
-insertion of p in middle
 inspired by
 instinct
 insult(s)
@@ -4210,7 +4190,6 @@ liquidated
 liquidised
 lissom
 list
-listless
 lit
 littered
 live
@@ -4954,7 +4933,6 @@ not right
 not straight
 not to be trusted
 not usually
-noun expression
 nouveau
 nouvelle
 novel
@@ -5193,7 +5171,6 @@ partying
 passed around
 passion
 passionately
-past participle
 pasted
 pastiche
 patch
@@ -5378,7 +5355,6 @@ poured
 poured out
 pouring
 powdered
-powerless
 prance
 prancing
 pranged
@@ -5394,7 +5370,6 @@ prepared
 preparing
 preposterous
 prescription
-present participle
 presented
 presented awkwardly
 press
@@ -5816,31 +5791,6 @@ remodel
 remodeled
 remodelled
 remoulded
-removal of a (or ans)
-removal of c
-removal of ch
-removal of clo
-removal of cr
-removal of d
-removal of e
-removal of f
-removal of fig
-removal of first and last letters
-removal of first letter
-removal of g
-removal of j
-removal of l
-removal of last letter
-removal of m
-removal of middle letter
-removal of n
-removal of p
-removal of pt
-removal of s
-removal of ss
-removal of st
-removal of t
-removal of w
 remove
 removed
 removed from
@@ -6008,7 +5958,6 @@ revelry
 revels
 reverberate
 reverberating
-reversal of last two letters (down clue)
 review
 review of
 reviewed
@@ -6579,7 +6528,6 @@ so planned
 soak
 soaked
 sock
-soft-hearted
 soiled
 solution
 solve
@@ -6605,7 +6553,6 @@ sorted out
 sorting
 sorting out
 sorts
-soundly
 soup
 source
 source of
@@ -6792,7 +6739,6 @@ stirs
 stirs up
 stitches up
 stoned
-stoneless
 storm
 storm in
 storm of
@@ -6885,7 +6831,6 @@ suffers
 suitable
 sundry
 sunk
-sunless
 supple
 supplied
 supply
@@ -7113,7 +7058,6 @@ tidying up
 tie(s)
 tied
 tight
-timeless
 tingling
 tinker
 tinkered with
@@ -7792,7 +7736,6 @@ type
 type of
 type(s)
 ugly
-unanswered
 unbalanced
 unbelievably
 unbridled
@@ -7820,10 +7763,8 @@ unconvincingly
 uncoordinated
 uncouth
 uncovering
-uncrowned
 uncultivated
 uncured
-undated
 undecided
 undefined
 under control
@@ -7843,7 +7784,6 @@ undo
 undoing
 undone
 undulate
-unearthed
 unearthly
 uneasily
 uneasy
@@ -7856,11 +7796,9 @@ unfairly
 unfaithful
 unfamiliar
 unfathomable
-unfathomed
 unfettered
 unfinished
 unfit
-unfocused
 unfolded
 unfolding
 unfolds
@@ -7885,20 +7823,14 @@ uniquely
 unkempt
 unknotted
 unlawful
-unleaded
 unleash
 unleashed
 unlikely
-unlined
-unlisted
 unloaded
 unlocked
 unmade
-unmarked
-unnamed
 unnatural
 unnaturally
-unnumbered
 unordered
 unorthodox
 unpalatable
@@ -7931,7 +7863,6 @@ unseemly
 unsettle
 unsettled
 unsettling
-unshipped
 unsolved
 unsound
 unstable
@@ -7970,7 +7901,6 @@ up in the air
 up the pole
 up the wall
 updated
-upended
 upgrade
 upgraded
 upheaval
@@ -8036,8 +7966,6 @@ varying
 veer
 vehemently
 venture
-verb imperative
-verb indicative
 versatile
 version
 version of
@@ -8127,7 +8055,6 @@ weave(s)
 weaved
 weaving
 web
-weightless
 weird
 weirdly
 weirdo

@@ -44,6 +44,28 @@ SKIP_WORDS = frozenset(
 ODD_PARITY = "odd letters"
 EVEN_PARITY = "even letters"
 
+ANAGRAM_FUNCTIONS = (
+    "Adjective",
+    "Adverb",
+    "Past participle",
+    "Present participle",
+    "Verb imperative",
+    "Verb indicative",
+    "Noun expression",
+    "Context-dependent",
+)
+
+IRREGULAR_PAST_PARTICIPLES = frozenset(
+    """
+    bent blown broke broken built burst cast caught dealt done drawn driven
+    drunk fallen fed fled flown forged gone ground hung hurt laid led left
+    lost made meant met misshapen mixed outdone overcome put read rent risen
+    run set shaken shot shown shrunk slain slid smitten spun split spread
+    sprung stuck strewn struck strung swept swollen swung thrown torn upset
+    woven withdrawn wrecked wrung
+    """.split()
+)
+
 # Which parity an alternation indicator names. "uneven" is tested first so it
 # is not read as the "even" sitting inside it.
 PARITY_NAMES = (
@@ -230,7 +252,8 @@ class IndicatorType:
     daily_cryptic_anchor: str | None = None
     allow_digits: bool = False
     curated_extras: list[str] = field(default_factory=list)
-    clue_clinic_alt_index: int = 1
+    clue_clinic_alt_index: int | None = 1
+    clue_clinic_function_index: int | None = None
 
 
 INDICATOR_TYPES: list[IndicatorType] = [
@@ -239,7 +262,9 @@ INDICATOR_TYPES: list[IndicatorType] = [
         title="Anagram indicators",
         blurb="Candidates for rearrangement — grammar and context decide.",
         georgeho_wordplays=["anagram"],
-        clue_clinic_ids=[461, 3503],
+        clue_clinic_ids=[461],
+        clue_clinic_alt_index=None,
+        clue_clinic_function_index=1,
         crossword_unclued_path="2008/09/anagram-indicators.html",
         unscramblerer_path="anagram-indicators/",
         solve_the_crossword_slug="anagram-indicators",
@@ -503,6 +528,86 @@ def norm(s: str) -> str:
     return s.lower()
 
 
+def _wordnet_parts_of_speech() -> dict[str, set[str]]:
+    """Return WordNet parts of speech for single-word indicator inference."""
+    path = ROOT / "exet-wordnet.js"
+    if not path.is_file():
+        return {}
+    text = path.read_text(encoding="utf-8")
+    marker = "const DATA = "
+    start = text.find(marker)
+    if start < 0:
+        return {}
+    data, _ = json.JSONDecoder().raw_decode(text, start + len(marker))
+    synsets = data.get("s") or []
+    result: dict[str, set[str]] = {}
+    for lemma, indices in (data.get("i") or {}).items():
+        key = norm(lemma.replace("_", " "))
+        if " " in key:
+            continue
+        result[key] = {
+            synsets[index][0]
+            for index in indices
+            if 0 <= index < len(synsets) and synsets[index]
+        }
+    return result
+
+
+def infer_anagram_function(
+    indicator: str, wordnet_pos: dict[str, set[str]]
+) -> str:
+    """Conservatively infer an anagram indicator's wordplay function."""
+    words = re.findall(r"[a-z]+(?:'[a-z]+)?", indicator.lower())
+    if not words:
+        return "Context-dependent"
+
+    first, last = words[0], words[-1]
+    if last.endswith("ly") or first in {
+        "about", "above", "across", "afresh", "again", "along", "around",
+        "aside", "astray", "away", "back", "differently", "otherwise",
+    }:
+        return "Adverb"
+    if first in {
+        "at", "by", "for", "in", "into", "off", "on", "out", "over",
+        "through", "under", "with", "without",
+    }:
+        return "Adverb"
+    if first in {"a", "an", "the"}:
+        return "Noun expression"
+
+    # In phrasal verbs the inflected first word determines the function.
+    verb_word = first if len(words) > 1 else last
+    if verb_word.endswith("ing"):
+        return "Present participle"
+    if (
+        verb_word.endswith(("ed", "en"))
+        or verb_word in IRREGULAR_PAST_PARTICIPLES
+    ):
+        return "Past participle"
+    if len(words) > 1 and last == "of":
+        return "Noun expression"
+    if verb_word.endswith("s") and "v" in wordnet_pos.get(
+        verb_word.removesuffix("s"), set()
+    ):
+        return "Verb indicative"
+
+    pos = wordnet_pos.get(verb_word, set())
+    if pos and pos <= {"a", "s"}:
+        return "Adjective"
+    if pos == {"r"}:
+        return "Adverb"
+    if "v" in pos:
+        return "Verb imperative"
+    if pos == {"n"}:
+        return "Noun expression"
+
+    # A final adjective often makes the whole multi-word indicator adjectival.
+    last_pos = wordnet_pos.get(last, set())
+    if len(words) > 1 and last_pos and last_pos <= {"a", "s"}:
+        return "Adjective"
+    return "Context-dependent"
+
+
 def add_entry(
     store: dict[str, dict],
     indicator: str,
@@ -528,7 +633,14 @@ def add_entry(
     before = indicator not in store
     entry = store.setdefault(
         indicator,
-        {"indicator": indicator, "sources": set(), "categories": set(), "notes": set()},
+        {
+            "indicator": indicator,
+            "sources": set(),
+            "categories": set(),
+            "notes": set(),
+            "function": None,
+            "function_inferred": False,
+        },
     )
     entry["sources"].add(source)
     if category:
@@ -573,7 +685,8 @@ def scrape_clue_clinic(
     *,
     allow_digits: bool = False,
     default_category: str | None = None,
-    alt_index: int = 1,
+    alt_index: int | None = 1,
+    function_index: int | None = None,
 ) -> int:
     count = 0
     note_tokens = {
@@ -618,9 +731,21 @@ def scrape_clue_clinic(
             key = norm(primary)
             if key in store:
                 store[key]["notes"].update(notes)
-                if alt_index >= 2 and len(cells) > 1 and cells[1].strip():
+                if (
+                    function_index is not None
+                    and len(cells) > function_index
+                    and cells[function_index].strip() in ANAGRAM_FUNCTIONS
+                ):
+                    store[key]["function"] = cells[function_index].strip()
+                    store[key]["function_inferred"] = False
+                if (
+                    alt_index is not None
+                    and alt_index >= 2
+                    and len(cells) > 1
+                    and cells[1].strip()
+                ):
                     store[key]["notes"].add(cells[1].strip().lower())
-            if len(cells) > alt_index:
+            if alt_index is not None and len(cells) > alt_index:
                 for alt in split_alternatives(cells[alt_index]):
                     if add_entry(
                         store,
@@ -634,6 +759,19 @@ def scrape_clue_clinic(
                     alt_key = norm(alt)
                     if alt_key in store:
                         store[alt_key]["notes"].update(notes)
+    return count
+
+
+def scrape_clue_clinic_whimsical_anagrams(store: dict[str, dict]) -> int:
+    """Keep only rows explicitly labelled Anagram on the whimsical page."""
+    url = "https://clueclinic.com/index.php/wp-json/wp/v2/pages/3503"
+    html = json.loads(fetch(url))["content"]["rendered"]
+    count = 0
+    for cells in _clue_clinic_table_rows(html):
+        if len(cells) < 2 or cells[1].strip().lower() != "anagram":
+            continue
+        if add_entry(store, cells[0], "clue-clinic"):
+            count += 1
     return count
 
 
@@ -922,6 +1060,15 @@ def scrape_cryptic_lexicon(
 def build_type(cfg: IndicatorType) -> dict[str, dict]:
     store: dict[str, dict] = {}
     steps: list[tuple[str, callable]] = []
+    previous_entries: list[dict] = []
+    previous_path = OUT_DIR / f"{cfg.slug}-indicators.json"
+    if previous_path.is_file():
+        try:
+            previous_entries = json.loads(
+                previous_path.read_text(encoding="utf-8")
+            ).get("entries", [])
+        except (OSError, ValueError):
+            pass
 
     if cfg.clue_clinic_ids:
         steps.append(
@@ -933,8 +1080,13 @@ def build_type(cfg: IndicatorType) -> dict[str, dict]:
                     allow_digits=cfg.allow_digits,
                     default_category=cfg.slug,
                     alt_index=cfg.clue_clinic_alt_index,
+                    function_index=cfg.clue_clinic_function_index,
                 ),
             )
+        )
+    if cfg.slug == "anagram":
+        steps.append(
+            ("clue-clinic-whimsical", scrape_clue_clinic_whimsical_anagrams)
         )
     if cfg.solve_the_crossword_slug:
         steps.append(
@@ -1023,7 +1175,28 @@ def build_type(cfg: IndicatorType) -> dict[str, dict]:
                 flush=True,
             )
         except Exception as exc:
-            print(f"  {name}: FAIL — {exc}", flush=True)
+            restored = 0
+            # Fandom regularly blocks automated requests. Keep its committed
+            # entries rather than silently shrinking the list on every build.
+            if name == "cryptipedia":
+                for old in previous_entries:
+                    if name not in (old.get("sources") or []):
+                        continue
+                    if add_entry(
+                        store,
+                        old["indicator"],
+                        name,
+                        allow_digits=cfg.allow_digits,
+                    ):
+                        restored += 1
+                    key = norm(old["indicator"])
+                    if key in store and old.get("function"):
+                        store[key]["function"] = old["function"]
+                        store[key]["function_inferred"] = bool(
+                            old.get("function_inferred")
+                        )
+            suffix = f"; restored {restored} prior entries" if restored else ""
+            print(f"  {name}: FAIL — {exc}{suffix}", flush=True)
     return store
 
 
@@ -1033,15 +1206,26 @@ def write_outputs(
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     base = f"{cfg.slug}-indicators"
     ordered = sorted(store.values(), key=lambda e: e["indicator"])
+    wordnet_pos = _wordnet_parts_of_speech() if cfg.slug == "anagram" else {}
 
     serializable = []
     for e in ordered:
+        function = e.get("function")
+        function_inferred = bool(e.get("function_inferred"))
+        if cfg.slug == "anagram" and not function:
+            function = infer_anagram_function(e["indicator"], wordnet_pos)
+            function_inferred = True
         item = {
             "indicator": e["indicator"],
             "sources": sorted(e["sources"]),
-            "categories": sorted(e["categories"]),
+            "categories": (
+                [] if cfg.slug == "anagram" else sorted(e["categories"])
+            ),
             "notes": sorted(e["notes"]),
         }
+        if cfg.slug == "anagram":
+            item["function"] = function
+            item["function_inferred"] = function_inferred
         if cfg.slug == "alternation":
             item["parity"] = parity_of(e["indicator"])
         serializable.append(item)
@@ -1062,10 +1246,14 @@ def write_outputs(
     )
 
     by_cat: dict[str, list[dict]] = defaultdict(list)
-    for e in serializable:
-        if e["categories"]:
-            for cat in e["categories"]:
-                by_cat[cat].append(e)
+    if cfg.slug == "anagram":
+        for e in serializable:
+            by_cat[e["function"]].append(e)
+    else:
+        for e in serializable:
+            if e["categories"]:
+                for cat in e["categories"]:
+                    by_cat[cat].append(e)
 
     by_parity: dict[str, list[dict]] = defaultdict(list)
     for e in serializable:
@@ -1151,8 +1339,13 @@ def render_html(
 
     def chip(entry: dict) -> str:
         src = html_lib.escape(", ".join(entry["sources"]))
+        function = entry.get("function")
+        inferred = " (inferred)" if entry.get("function_inferred") else ""
+        function_title = (
+            f"; Function: {html_lib.escape(function)}{inferred}" if function else ""
+        )
         return (
-            f'<span class="ind" title="Sources: {src}">'
+            f'<span class="ind" title="Sources: {src}{function_title}">'
             f"{html_lib.escape(entry['indicator'])}</span>"
         )
 
@@ -1181,7 +1374,10 @@ def render_html(
         )
 
     cat_sections = []
-    for cat in sorted(by_cat):
+    category_order = (
+        ANAGRAM_FUNCTIONS if cfg.slug == "anagram" else sorted(by_cat)
+    )
+    for cat in category_order:
         items = sorted(by_cat[cat], key=lambda e: e["indicator"])
         chips = "\n".join(chip(e) for e in items)
         cat_sections.append(
@@ -1191,6 +1387,22 @@ def render_html(
         )
 
     all_chips = "\n".join(chip(e) for e in meta["entries"])
+    category_note = ""
+    all_block = (
+        '<section id="all">'
+        f'<h2>All indicators <span class="n">({count})</span></h2>'
+        f'<div class="grid" id="grid">\n{all_chips}\n</div></section>'
+    )
+    if cfg.slug == "anagram":
+        exact = sum(not e.get("function_inferred") for e in meta["entries"])
+        category_note = (
+            '<p class="note">Grouped by grammatical function in the wordplay. '
+            f'{exact} functions come from ClueClinic; the remainder are '
+            'conservative grammatical inferences. Hover over an indicator to '
+            'see whether its function was inferred.</p>'
+        )
+        # Each indicator already occurs once in a function section.
+        all_block = ""
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -1235,13 +1447,9 @@ def render_html(
 </div>
 <main>
   {parity_block}
+  {category_note}
   {"".join(cat_sections)}
-  <section id="all">
-    <h2>All indicators <span class="n">({count})</span></h2>
-    <div class="grid" id="grid">
-{all_chips}
-    </div>
-  </section>
+{all_block}
 </main>
 <script>
 (function() {{
@@ -1290,6 +1498,8 @@ def load_store(cfg: IndicatorType) -> tuple[dict[str, dict], str]:
             "sources": set(e["sources"]),
             "categories": set(e.get("categories") or []),
             "notes": set(e.get("notes") or []),
+            "function": e.get("function"),
+            "function_inferred": bool(e.get("function_inferred")),
         }
         for e in data["entries"]
     }
