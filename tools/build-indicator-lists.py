@@ -116,6 +116,160 @@ def parity_of(indicator: str) -> str | None:
     return named
 
 
+HIDDEN_PRECEDING_HIDES = "Preceding text hides upcoming"
+HIDDEN_UPCOMING_HIDES = "Upcoming text hides preceding"
+HIDDEN_OTHERWISE = "Otherwise"
+HIDDEN_DIRECTION_ORDER = (
+    HIDDEN_PRECEDING_HIDES,
+    HIDDEN_UPCOMING_HIDES,
+    HIDDEN_OTHERWISE,
+)
+
+# Relative "in which" family: the fodder comes first, then the indicator,
+# then the definition (THE CARNIVAL in which BRAT).
+_HIDDEN_WHICH_RE = re.compile(
+    r"\b((with)?in|inside)\s+which\b|\bwherein\b|\bas setting for\b"
+)
+
+# The container/fodder is named after the indicator (BRAT in CELEBRATION).
+_HIDDEN_FOLLOWING_FODDER_RE = re.compile(
+    r"("
+    r"\((in|into|inside|within|from|among|amongst|amid|amidst|of|by)\)|"
+    r"\b("
+    r"in|into|inside|within|from|among|amongst|amid|amidst|"
+    r"through|throughout|during|of|by"
+    r")\s*$"
+    r")"
+)
+_HIDDEN_FOLLOWING_TO_RE = re.compile(
+    r"\b("
+    r"contribut(?:e|es|ing|ion)|belonging|belongs|"
+    r"native|intrinsic|inherent|internal|"
+    r"admitted|tucking|enclosure"
+    r")\s+to\s*$"
+    r"|\bto\s*$"
+)
+
+# Sits equally well on either side, or names extent rather than a container.
+_HIDDEN_ADVERB_RE = re.compile(
+    r"("
+    r"\b("
+    r"partly|partially|somewhat|essentially|secretly|"
+    r"internally|fundamentally|intrinsically|inherently|"
+    r"innately|heartily|slightly|mostly|centrally|"
+    r"apparently|evidently|selectively"
+    r")\b|"
+    r"to some (extent|degree)|in some measure|^in part$|"
+    r"not (all|entirely|completely|fully|totally|wholly)|"
+    r"to an extent|to a certain extent|in essence"
+    r")"
+)
+
+_HIDDEN_SANDWICH_RE = re.compile(
+    r"\b(between|betwixt|either side|flanked|flanking|links between)\b"
+)
+
+# Transitive hiding/showing: fodder first (CELEBRATION conceals BRAT).
+_HIDDEN_PRECEDING_VERB_RE = re.compile(
+    r"\b("
+    r"conceal(?:s|ing|ed|ment)?|hid(?:e|es|ing|den)|"
+    r"cover(?:s|ing|ed)?|contain(?:s|ing|ed)?|"
+    r"hold(?:s|ing)?|stor(?:e|es|ing|ed)|"
+    r"veil(?:s|ing|ed)?|includ(?:e|es|ing|ed)|"
+    r"hous(?:e|es|ing|ed)|harbour(?:s|ing|ed)?|harbor(?:s|ing|ed)?|"
+    r"show(?:s|ing|n|ed)?|featur(?:e|es|ing|ed)|"
+    r"display(?:s|ing|ed)?|exhibit(?:s|ing|ed|ion)?|"
+    r"demonstrat(?:e|es|ing|ed)|"
+    r"\bhas\b|have|having|had|"
+    r"smuggl(?:e|es|ing|ed)|secret(?:e|es|ing|ed)|"
+    r"enclos(?:e|es|ing|ed|ure)|camouflag(?:e|es|ing|ed)|"
+    r"withhold(?:s|ing)?|furnish(?:es|ing|ed)?|"
+    r"giv(?:e|es|ing|en)|provid(?:e|es|ing|ed|ing)|"
+    r"eclips(?:e|es|ing|ed)|keep(?:s|ing)|kept|"
+    r"carr(?:y|ies|ying|ied)|wrap(?:s|ping|ped)?|"
+    r"bur(?:y|ies|ying|ied)|bag(?:s|ging|ged)?|box(?:es|ing|ed)?|"
+    r"pocket(?:s|ing|ed)?|swallow(?:s|ing|ed)?|"
+    r"trap(?:s|ping|ped)?|lock(?:s|ing|ed)?|"
+    r"embrac(?:e|es|ing|ed)|surround(?:s|ing|ed)?|"
+    r"mask(?:s|ing|ed)?|cloak(?:s|ing|ed)?|"
+    r"obscur(?:e|es|ing|ed)|screen(?:s|ing|ed)?|"
+    r"shelter(?:s|ing|ed)?|shield(?:s|ing|ed)?|"
+    r"fram(?:e|es|ing|ed)|"
+    r"offer(?:s|ing|ed)?|yield(?:s|ing|ed)?|"
+    r"reveal(?:s|ing|ed)?|expos(?:e|es|ing|ed)|"
+    r"bear(?:s|ing)|"
+    r"pack(?:s|ing|ed)|stuff(?:s|ing|ed)|"
+    r"nest(?:s|ing|ed|les|ling)|host(?:s|ing|ed)|"
+    r"absorb(?:s|ing|ed)|accept(?:s|ing|ed)|"
+    r"accommodat(?:e|es|ing|ed)|admit(?:s|ting|ted)|"
+    r"arrest(?:s|ing|ed)|besieg(?:e|es|ing|ed)|"
+    r"captur(?:e|es|ing|ed)|catch(?:es|ing)?|caught|"
+    r"circl(?:e|es|ing|ed)|clasp(?:s|ing|ed)|"
+    r"cloth(?:e|es|ing|ed)|clutch(?:es|ing|ed)|"
+    r"consum(?:e|es|ing|ed)|"
+    r"describ(?:e|es|ing|ed)|"
+    r"disguis(?:e|es|ing|ed)|"
+    r"eat(?:s|ing)|eaten|"
+    r"encapsulat(?:e|es|ing|ed)|"
+    r"engulf(?:s|ing|ed)|envelop(?:e|es|ing|ed|s)?|"
+    r"fill(?:s|ing|ed)|grasp(?:s|ing|ed)|grip(?:s|ping|ped)|"
+    r"guard(?:s|ing|ed)|hug(?:s|ging|ged)|"
+    r"imprison(?:s|ing|ed)|incorporat(?:e|es|ing|ed)|"
+    r"involv(?:e|es|ing|ed)|"
+    r"jail(?:s|ing|ed)|"
+    r"nurs(?:e|es|ing|ed)|"
+    r"pen(?:s|ning|ned)|"
+    r"possess(?:es|ing|ed)|"
+    r"restrict(?:s|ing|ed)|retain(?:s|ing|ed)|"
+    r"sandwich(?:es|ing|ed)?|"
+    r"suppress(?:es|ing|ed)?|"
+    r"wear(?:s|ing)|wore|worn|"
+    r"welcom(?:e|es|ing|ed)|"
+    r"aboard|around|about|round|"
+    r"bracket(?:s|ing|ed)?|"
+    r"cag(?:e|es|ing|ed)|"
+    r"dwell(?:s|ing)|"
+    r"hoard(?:s|ing|ed)|"
+    r"immers(?:e|es|ing|ed)|"
+    r"interrupt(?:s|ing|ed)?|"
+    r"net(?:s|ting|ted)|"
+    r"shroud(?:s|ing|ed)|"
+    r"stock(?:s|ing|ed)|stow(?:s|ing|ed)|"
+    r"wall(?:s|ing|ed)"
+    r")\b"
+)
+
+_HIDDEN_UPCOMING_START_RE = re.compile(
+    r"^(some|a bit|a little|a hint|a touch|a trace|just a bit|get some|"
+    r"found|appearing|appears|seen|visible|buried|hidden|lurking|"
+    r"characters|letters)\b"
+)
+
+
+def hiding_of(indicator: str) -> str:
+    """Which side of a hidden-word indicator holds the consecutive letters.
+
+    Preceding text hides upcoming: fodder, then indicator, then definition
+    (CELEBRATION conceals BRAT). Upcoming text hides preceding: definition,
+    then indicator, then fodder (BRAT in CELEBRATION). Otherwise covers
+    sandwiching, extent adverbs, and indicators that do not fix a direction.
+    """
+    s = re.sub(r"\s+", " ", indicator.lower()).strip()
+    if _HIDDEN_SANDWICH_RE.search(s):
+        return HIDDEN_OTHERWISE
+    if _HIDDEN_WHICH_RE.search(s):
+        return HIDDEN_PRECEDING_HIDES
+    if _HIDDEN_FOLLOWING_FODDER_RE.search(s) or _HIDDEN_FOLLOWING_TO_RE.search(s):
+        return HIDDEN_UPCOMING_HIDES
+    if _HIDDEN_ADVERB_RE.search(s):
+        return HIDDEN_OTHERWISE
+    if _HIDDEN_PRECEDING_VERB_RE.search(s):
+        return HIDDEN_PRECEDING_HIDES
+    if _HIDDEN_UPCOMING_START_RE.search(s):
+        return HIDDEN_UPCOMING_HIDES
+    return HIDDEN_OTHERWISE
+
+
 WORDSUP_PAGES: dict[str, str] = {
     "anagram": "anagram-indicators.php",
     "hidden": "hidden-word-indicators.php",
@@ -284,7 +438,10 @@ INDICATOR_TYPES: list[IndicatorType] = [
     IndicatorType(
         slug="hidden",
         title="Hidden word indicators",
-        blurb="Signal that consecutive letters of the answer lurk in the clue text.",
+        blurb=(
+            "Signal that consecutive letters of the answer lurk in the clue "
+            "text. Grouped by which side of the indicator holds those letters."
+        ),
         georgeho_wordplays=["hidden"],
         clue_clinic_ids=[449],
         crossword_unclued_path="2009/03/hidden-word-indicators.html",
@@ -1245,6 +1402,8 @@ def write_outputs(
             item["function_inferred"] = function_inferred
         if cfg.slug == "alternation":
             item["parity"] = parity_of(e["indicator"])
+        if cfg.slug == "hidden":
+            item["hiding"] = hiding_of(e["indicator"])
         serializable.append(item)
 
     meta = {
@@ -1266,7 +1425,7 @@ def write_outputs(
     if cfg.slug == "anagram":
         for e in serializable:
             by_cat[e["function"]].append(e)
-    else:
+    elif cfg.slug != "hidden":
         for e in serializable:
             if e["categories"]:
                 for cat in e["categories"]:
@@ -1277,8 +1436,13 @@ def write_outputs(
         if e.get("parity"):
             by_parity[e["parity"]].append(e)
 
+    by_hiding: dict[str, list[dict]] = defaultdict(list)
+    for e in serializable:
+        if e.get("hiding"):
+            by_hiding[e["hiding"]].append(e)
+
     (OUT_DIR / f"{base}.html").write_text(
-        render_html(cfg, meta, by_cat, by_parity), encoding="utf-8"
+        render_html(cfg, meta, by_cat, by_parity, by_hiding), encoding="utf-8"
     )
     if cfg.slug == "containment":
         split_summary = write_containment_splits(store, built=built or meta["built"])
@@ -1338,7 +1502,7 @@ def write_containment_splits(
                     by_cat[cat].append(e)
 
         (OUT_DIR / f"{base}.html").write_text(
-            render_html(split_cfg, meta, by_cat, {}), encoding="utf-8"
+            render_html(split_cfg, meta, by_cat, {}, {}), encoding="utf-8"
         )
         summary.append((spec["slug"], len(serializable)))
 
@@ -1350,6 +1514,7 @@ def render_html(
     meta: dict,
     by_cat: dict[str, list[dict]],
     by_parity: dict[str, list[dict]],
+    by_hiding: dict[str, list[dict]],
 ) -> str:
     count = meta["count"]
     sources = ", ".join(meta["sources"])
@@ -1407,6 +1572,34 @@ def render_html(
             f'{"".join(parity_sections)}</div>'
         )
 
+    hiding_sections = []
+    for label in HIDDEN_DIRECTION_ORDER:
+        items = sorted(by_hiding.get(label, []), key=lambda e: e["indicator"])
+        if not items:
+            continue
+        anchor = unique_section_id(label)
+        nav_items.append((anchor, label, len(items)))
+        chips = "\n".join(chip(e) for e in items)
+        hiding_sections.append(
+            f'<section class="cat" id="{anchor}">'
+            f'<h2>{html_lib.escape(label)} '
+            f'<span class="n">({len(items)})</span></h2>'
+            f'<div class="grid">\n{chips}\n</div></section>'
+        )
+    hiding_block = ""
+    if hiding_sections:
+        hiding_block = (
+            '<div id="hiding">'
+            '<p class="note">Grouped by how the consecutive letters are hidden. '
+            "<em>Preceding text hides upcoming</em> when the fodder comes first "
+            "(conceals, holds, covers, &hellip;). "
+            "<em>Upcoming text hides preceding</em> when the fodder follows "
+            "(in, from, part of, &hellip;). "
+            "Adverbs of extent, sandwiching, and indicators that do not fix a "
+            "direction sit under <em>Otherwise</em>.</p>"
+            f'{"".join(hiding_sections)}</div>'
+        )
+
     cat_sections = []
     category_order = (
         ANAGRAM_FUNCTIONS if cfg.slug == "anagram" else sorted(by_cat)
@@ -1440,12 +1633,21 @@ def render_html(
         )
         # Each indicator already occurs once in a function section.
         all_block = ""
+    if cfg.slug == "hidden":
+        # Each indicator already occurs once in a hiding-direction section.
+        all_block = ""
     if all_block:
         nav_items.append(("all", "All indicators", count))
     nav_block = jump_nav(nav_items)
     main_blocks = "\n".join(
         block
-        for block in (parity_block, category_note, "".join(cat_sections), all_block)
+        for block in (
+            parity_block,
+            hiding_block,
+            category_note,
+            "".join(cat_sections),
+            all_block,
+        )
         if block
     )
 
@@ -1523,6 +1725,11 @@ def render_html(
     if (parity) {{
       parity.style.display =
           parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }}
+    const hiding = document.getElementById('hiding');
+    if (hiding) {{
+      hiding.style.display =
+          hiding.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
     }}
     for (const link of document.querySelectorAll('#jump a')) {{
       const target = document.getElementById(link.hash.slice(1));
