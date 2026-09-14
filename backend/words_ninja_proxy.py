@@ -54,7 +54,7 @@ def _upstream(path: str, query: dict[str, str], base: str = WORDS_NINJA_URL) -> 
 
 
 @router.get("/health")
-def words_ninja_health(dictionary: str = Query("12dicts")):
+def words_ninja_health(dictionary: str = Query("combolist")):
     base, _ = _route(dictionary)
     return _upstream("/health", {}, base)
 
@@ -62,7 +62,7 @@ def words_ninja_health(dictionary: str = Query("12dicts")):
 @router.get("/search")
 def words_ninja_search(
     q: str = Query(..., min_length=1),
-    dictionary: str = Query("12dicts"),
+    dictionary: str = Query("combolist"),
     limit: int = Query(80, ge=1, le=1000),
     offset: int = Query(0, ge=0),
 ):

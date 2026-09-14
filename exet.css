@@ -1923,9 +1923,6 @@ body {
   align-items: baseline;
   min-height: 30px;
 }
-.xet-ninja-dict {
-  font-size: 11px;
-}
 .xet-ninja-results {
   border: 1px solid var(--xet-border);
   box-sizing: border-box;

@@ -2975,11 +2975,6 @@ Exet.prototype.wordsNinjaPaneHtml = function(idPrefix, extraClass) {
     <div class="xet-ninja-pane" data-ninja-pane="${idPrefix}">
       <div class="xet-ninja-head">
         <span class="xet-small xet-url-pair-label">words.ninja</span>
-        <select class="xet-ninja-dict" title="words.ninja dictionary">
-          <option value="12dicts" selected>12dicts</option>
-          <option value="combolist">ComboList</option>
-          <option value="wikipedia">Wikipedia</option>
-        </select>
         <a href="" target="_blank" id="${idPrefix}-url"
             class="xet-blue xet-small"></a>
       </div>
@@ -2991,25 +2986,13 @@ Exet.prototype.wordsNinjaPaneHtml = function(idPrefix, extraClass) {
 Exet.prototype.wireWordsNinjaSection = function(section, idPrefix) {
   section.ninjaBox = document.getElementById(idPrefix + '-box');
   section.ninjaUrl = document.getElementById(idPrefix + '-url');
-  const pane = section.ninjaBox && section.ninjaBox.closest('.xet-ninja-pane');
-  section.ninjaDict = pane ? pane.querySelector('.xet-ninja-dict') : null;
-  if (section.ninjaDict && !section.ninjaDict.xetWired) {
-    section.ninjaDict.xetWired = true;
-    section.ninjaDict.addEventListener('change', () => {
-      if (section.ninjaBox) {
-        section.ninjaBox.dataset.ninjaLoaded = '';
-      }
-      this.refreshWordsNinjaSection(section, section.param || '');
-    });
-  }
 };
 
 Exet.prototype.refreshWordsNinjaSection = function(section, wordParam) {
   if (!section || !section.ninjaBox) {
     return;
   }
-  const dict = section.ninjaDict ? section.ninjaDict.value : '12dicts';
-  this.loadWordsNinja(section.ninjaBox, wordParam, section.ninjaUrl, dict);
+  this.loadWordsNinja(section.ninjaBox, wordParam, section.ninjaUrl);
 };
 
 Exet.prototype.wordsNinjaQuery = function(wordParam) {
@@ -3028,7 +3011,7 @@ Exet.prototype.loadWordsNinja = function(box, wordParam, urlElt, dictionary) {
     return;
   }
   const q = this.wordsNinjaQuery(wordParam);
-  const dict = dictionary || '12dicts';
+  const dict = dictionary || 'combolist';
   if (box.dataset.ninjaQ === q && box.dataset.ninjaDict === dict &&
       box.dataset.ninjaLoaded === '1') {
     return;
