@@ -331,6 +331,12 @@ const exetDataServer = (function() {
   }
 
   function loadServerLexicon(displayName, meta) {
+    // The stub only becomes a usable lexicon once exetLexiconInit() and
+    // applyServerLexicon() have run, so stop any main-thread sweep that would
+    // otherwise reach into it during the intervening paint.
+    if (typeof exet !== 'undefined' && exet && exet.cancelDeadendSweep) {
+      exet.cancelDeadendSweep();
+    }
     exetLexicon = makeStub(meta);
     exetLexiconNewName = displayName;
     xetAfterPaint(exetLoadedLexicon);
