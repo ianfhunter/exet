@@ -58,6 +58,7 @@ def get_superset_anagrams(
     limit: int = 1000,
     minus_limit: int = 6,
     max_sup_factor: int = 2,
+    min_score: float = 0.0,
 ) -> list[dict]:
     letters = _letters_of(phrase)
     if not letters:
@@ -75,14 +76,17 @@ def get_superset_anagrams(
         WHERE lexicon_id = ?
           AND letter_count > ?
           AND letter_count <= ?
+          AND score >= ?
           {like_sql}
         ORDER BY score DESC, id ASC
     """
-    params: list[object] = [lexicon_id, len(letters), max_len, *like_params]
+    params: list[object] = [lexicon_id, len(letters), max_len, min_score, *like_params]
 
     out: list[dict] = []
     num = 0
     for form, normalized, score in conn.execute(sql, params):
+        if score < min_score:
+            continue
         sup_letters = _letters_of(normalized)
         if len(sup_letters) < min_len:
             continue
@@ -98,7 +102,7 @@ def get_superset_anagrams(
         diff_anags = [
             row["form"]
             for row in get_anagrams(
-                conn, lexicon_id, diff_str, limit=minus_limit, min_score=0.0
+                conn, lexicon_id, diff_str, limit=minus_limit, min_score=min_score
             )
         ]
         if not diff_anags:

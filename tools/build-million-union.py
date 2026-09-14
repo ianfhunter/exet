@@ -62,6 +62,12 @@ SOURCES = [
     ("wordlists/_sources/nzfeng-core.txt", 8, 55.0),
     ("wordlists/_sources/nzfeng-contemporary.txt", 8, 50.0),
     ("wordlists/_sources/nzfeng-idioms.txt", 8, 55.0),
+    # Idiom / phrase packs (tools/fetch-idiom-packs.py)
+    ("wordlists/_sources/idioms-magpie.txt", 8, 55.0),
+    ("wordlists/_sources/idioms-midas.txt", 9, 50.0),
+    ("wordlists/_sources/idioms-kaikki.txt", 9, 50.0),
+    ("wordlists/_sources/idioms-wordnet-mwe.txt", 10, 50.0),
+    ("wordlists/_sources/idioms-englishidioms.txt", 11, 45.0),
     ("wordlists/_sources/ecnd-names.txt", 8, 64.0),
     ("wordlists/_sources/ecnd-places.txt", 8, 64.0),
     ("wordlists/_sources/maiamcc-queer-scored.dict", 9, 50.0),

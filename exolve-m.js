@@ -84,7 +84,7 @@ function Exolve(puzzleSpec,
                 visTop=0,
                 maxDim=0,
                 notTemp=true) {
-  this.VERSION = 'Exolve v1.73.1, August 12, 2026';
+  this.VERSION = 'Exolve v1.73.3, September 13, 2026';
   this.id = '';
 
   this.puzzleText = puzzleSpec;
@@ -109,6 +109,7 @@ function Exolve(puzzleSpec,
   this.offsetTop = 0;
 
   this.viewportDim = 0;
+  this.viewportWidth = 0;
   this.viewportWidthUsable = 0;
   /**
    * For the following, if the corresponding {cell,tiling,box}WHGiven is false,
@@ -3030,11 +3031,12 @@ Exolve.prototype.checkConsistency = function() {
       if (noClueList) noClueList += ', '
       noClueList += cname
     }
-    if (this.isEnumMismatch(ci)) {
-      const cells = this.getAllCells(ci);
-      const lightLen = cells.length;
-      const enumLen = this.clueDisplayEnumLen(clue);
-      this.showWarning(cname + ': enum asks for ' + enumLen +
+    const cells = this.getAllCells(ci);
+    const lightLen = cells.length;
+    if (!this.ignoreEnumMismatch && !this.hasDgmlessCells &&
+        clue.enumLen > 0 && lightLen > 0 && clue.enumLen != lightLen &&
+        (!cells.endsOnStart || clue.enumLen != lightLen + 1)) {
+      this.showWarning(cname + ': enum asks for ' + clue.enumLen +
           ' cells, but the grid shows ' + lightLen + ' cells',
           'ignore-enum-mismatch');
     }
@@ -4523,64 +4525,6 @@ Exolve.prototype.getAllCells = function(ci, clues=null) {
     cells.endsOnStart = true;
   }
   return cells;
-}
-
-/**
- * True if this clue's enumeration length does not match its light length.
- */
-Exolve.prototype.isEnumMismatch = function(ci) {
-  const clue = this.clues[ci];
-  if (!clue || clue.parentClueIndex) {
-    return false;
-  }
-  if (this.ignoreEnumMismatch || this.hasDgmlessCells) {
-    return false;
-  }
-  const enumLen = this.clueDisplayEnumLen(clue);
-  if (enumLen <= 0) {
-    return false;
-  }
-  const cells = this.getAllCells(ci);
-  const lightLen = cells.length;
-  if (lightLen <= 0) {
-    return false;
-  }
-  if (enumLen == lightLen) {
-    return false;
-  }
-  if (cells.endsOnStart && enumLen == lightLen + 1) {
-    return false;
-  }
-  return true;
-}
-
-/**
- * Enumeration letter-count parsed from clue text / enumStr (not the
- * auto-inferred enumLen that finalClueTweaks may set from cell count).
- */
-Exolve.prototype.clueDisplayEnumLen = function(clue) {
-  let line = (clue.clue || '').trim();
-  let enumParse = this.parseEnum(line);
-  if (enumParse.enumLen > 0) {
-    return enumParse.enumLen;
-  }
-  if (clue.enumStr) {
-    enumParse = this.parseEnum(clue.enumStr);
-    if (enumParse.enumLen > 0) {
-      return enumParse.enumLen;
-    }
-  }
-  return 0;
-}
-
-Exolve.prototype.getEnumMismatchClues = function() {
-  const mismatches = [];
-  for (const ci of Object.keys(this.clues)) {
-    if (this.isEnumMismatch(ci)) {
-      mismatches.push(ci);
-    }
-  }
-  return mismatches;
 }
 
 Exolve.prototype.punctuateEntry = function(solution, placeholder) {
@@ -6143,6 +6087,7 @@ Exolve.prototype.getViewportDim = function() {
 
 /**
  * Sets the following:
+ *   viewportWidth
  *   viewportWidthUsable
  *   viewportDim
  *   squareDim, squareDimBy2
@@ -6165,8 +6110,8 @@ Exolve.prototype.getViewportDim = function() {
  */
 Exolve.prototype.computeGridSize = function() {
   this.viewportDim = this.getViewportDim();
-  const viewportWidth = this.getViewportWidth();
-  this.viewportWidthUsable = viewportWidth;
+  this.viewportWidth = this.getViewportWidth();
+  this.viewportWidthUsable = this.viewportWidth;
   const bodyStyles = window.getComputedStyle(document.body);
   const marginRight = parseFloat(bodyStyles.marginRight);
   const marginLeft = parseFloat(bodyStyles.marginLeft);
@@ -6495,9 +6440,9 @@ Exolve.prototype.myStatePart = function(s) {
  * Call updateDisplayAndGetState() and save state in local storage.
  */
 Exolve.prototype.updateAndSaveState = function(notifyIfComplete=true) {
-  let state = this.updateDisplayAndGetState(notifyIfComplete)
+  let state = this.updateDisplayAndGetState(notifyIfComplete);
   for (let a of this.answersList) {
-    state = state + this.STATE_SEP + a.input.value
+    state = state + this.STATE_SEP + a.input.value;
   }
 
   if (this.notTemp) {
@@ -11419,6 +11364,10 @@ Exolve.prototype.createPuzzle = function() {
 
   if (this.customizer) {
     this.customizer(this);
+    /**
+     * The customizer may have set some solutions/answers, so re-save.
+     */
+    this.updateAndSaveState();
   }
   /**
    * Register into the global exolvePuzzles[] registry only at the very end.
@@ -11446,4 +11395,48 @@ function createExolve(puzzleText, containerId="",
  */
 function createPuzzle() {
   return createExolve(puzzleText, "");
+}
+
+/* xet-splash-enum-api-v1 */
+/**
+ * Enum length that the clue text asks for, 0 if the clue has no numeric enum.
+ * finalClueTweaks() backfills enumLen from the light for enum-less clues, so
+ * such clues can never look mismatched.
+ * @param {!Object} clue
+ * @return {number}
+ */
+Exolve.prototype.clueDisplayEnumLen = function(clue) {
+  return (clue && clue.enumLen > 0) ? clue.enumLen : 0;
+}
+
+/**
+ * Indices of clues whose enum total differs from the length of their light.
+ * Mirrors the check in checkConsistency(), minus the ignoreEnumMismatch
+ * suppression: callers decide whether to surface these. Child clues of a
+ * linked group are skipped, as the parent spans the whole light.
+ * @return {!Array<string>}
+ */
+Exolve.prototype.getEnumMismatchClues = function() {
+  const mismatches = [];
+  if (this.hasDgmlessCells) {
+    return mismatches;
+  }
+  for (const ci of Object.keys(this.clues)) {
+    const clue = this.clues[ci];
+    if (!clue || clue.parentClueIndex) {
+      continue;
+    }
+    const enumLen = this.clueDisplayEnumLen(clue);
+    if (enumLen <= 0) {
+      continue;
+    }
+    const cells = this.getAllCells(ci);
+    const lightLen = cells.length;
+    if (lightLen <= 0 || enumLen == lightLen ||
+        (cells.endsOnStart && enumLen == lightLen + 1)) {
+      continue;
+    }
+    mismatches.push(ci);
+  }
+  return mismatches;
 }

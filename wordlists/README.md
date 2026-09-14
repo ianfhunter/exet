@@ -25,6 +25,8 @@ To build / refresh the merged list:
 python tools/extract-exet-lexicons.py      # Nediger + Lufz -> _sources/
 python tools/fetch-extra-wordlists.py      # Broda / STC / ECND / queer (best-effort)
 python tools/fetch-recommended-packs.py    # nzfeng / geo / maiamcc packs
+python tools/fetch-idiom-packs.py          # MAGPIE / MIDAS / kaikki / WordNet MWEs
+# optional: python tools/fetch-idiom-packs.py --merge-combolist
 python tools/build-million-union.py        # merge + xd-clues frequency boost
 python tools/import-wordlists.py --only combolist
 ```
@@ -38,6 +40,7 @@ Sources (when present under `wordlists/` / `_sources/`):
 - Peter Broda wordlist, Solve The Crossword (STC) scored list
 - Spread the Wordlist, Matt’s list (CC BY-NC-SA), Chris Jones, Ettu
 - nzfeng curated core / contemporary / idioms
+- Idiom/phrase packs via fetch-idiom-packs.py (MAGPIE, MIDAS, kaikki Wiktionary phrases/idioms, WordNet MWEs, englishidioms)
 - Expanded Crossword Name Database, maiamcc specialty dicts (queer, celebs, …)
 - Geo packs (cities, countries, states, job titles, website phrases)
 - UKACD18plus
