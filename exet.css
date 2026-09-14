@@ -812,6 +812,17 @@ body {
 .xet-fills-heading {
   min-height: 22px;
 }
+.xet-fills-spinner {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 4px;
+  cursor: progress;
+}
+.xet-fills-spinner .loader-inline {
+  width: 12px;
+  height: 12px;
+}
 .xet-fill-settings {
   width: 100%;
   margin: 0 0 8px;

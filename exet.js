@@ -1807,6 +1807,11 @@ Exet.prototype.makeExetTab = function() {
       <div class="xet-fills-heading">
         <span style="font-weight:bold" title="Click on a suggestion below to ` +
             `select it.">Choose grid-fill:</span>
+        <span class="xet-fills-spinner" id="xet-fills-spinner"
+            style="display:none"
+            title="Exet is rebuilding the list of possible entries">
+          <span class="loader loader-inline"></span>
+        </span>
         <button class="xlv-small-button" style="padding:5px 4px;color:black"
             title="Click to see grid-fill possibilities from web sources of words and phrases"
             id="xet-show-web-fills">Web sources
@@ -1996,6 +2001,7 @@ Exet.prototype.makeExetTab = function() {
 
   this.lChoices = document.getElementById("xet-light-choices");
   this.lRejects = document.getElementById("xet-light-rejects");
+  this.fillsSpinner = document.getElementById("xet-fills-spinner");
   this.webFillsPanel = document.getElementById("xet-web-fills-panel");
   this.showWebFillsButton = document.getElementById("xet-show-web-fills");
   if (!exetConfig.webFills || exetConfig.webFills.length == 0) {
@@ -9522,7 +9528,7 @@ Exet.prototype.startDeadendSweep = function(ci='') {
     return;
   }
   this.deadendsGridSweep = true;
-  this.sweepIndicator.className = 'xet-sweeping-animated';
+  this.updateSweepInd(true);
   this.viabilityUpdateTimer = setTimeout(() => {
     this.findAllDeadendFills(ci);
   }, this.sweepMS);
@@ -9620,16 +9626,24 @@ Exet.prototype.jumpToMostConstrained = function() {
   return true;
 }
 
-Exet.prototype.updateSweepInd = function() {
+Exet.prototype.sweeping = function() {
   if (this.fillClient && this.fillClient.enabled) {
-    this.sweepIndicator.className =
-        (this.fillClient.busy || this.autofill.running) ?
-        'xet-sweeping-animated' : 'xet-sweeping';
-    return;
+    return !!(this.fillClient.busy || this.autofill.running);
+  }
+  return !!(this.viabilityUpdateTimer || this.autofill.running);
+}
+
+// Pass sweeping=true when the sweep state is about to be set up but the
+// timer/busy flag it is derived from is not in place yet.
+Exet.prototype.updateSweepInd = function(sweeping=null) {
+  if (sweeping === null) {
+    sweeping = this.sweeping();
   }
   this.sweepIndicator.className =
-      (this.viabilityUpdateTimer || this.autofill.running) ?
-      'xet-sweeping-animated' : 'xet-sweeping';
+      sweeping ? 'xet-sweeping-animated' : 'xet-sweeping';
+  if (this.fillsSpinner) {
+    this.fillsSpinner.style.display = sweeping ? '' : 'none';
+  }
 }
 
 Exet.prototype.findAllDeadendFills = function(ci) {
