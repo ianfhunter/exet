@@ -10478,6 +10478,10 @@ function exetLoadedLexicon() {
     exet.setUnpreflex(exet.unpreflex);
     exet.region = exetLexicon.preferRegion(exet.region);
     exet.populateSpellingsRegionMenu();
+    if (exet.fillClient && exet.fillClient.worker) {
+      exet.fillClient.worker.terminate();
+    }
+    exet.fillClient = new ExetFillClient(exet);
     exet.resetViability();
     exet.renderMinLex();
     exet.lexiconId.innerHTML = exetLexicon.id;
