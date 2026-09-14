@@ -230,6 +230,7 @@ class IndicatorType:
     daily_cryptic_anchor: str | None = None
     allow_digits: bool = False
     curated_extras: list[str] = field(default_factory=list)
+    clue_clinic_alt_index: int = 1
 
 
 INDICATOR_TYPES: list[IndicatorType] = [
@@ -326,7 +327,7 @@ INDICATOR_TYPES: list[IndicatorType] = [
         title="Deletion indicators",
         blurb="Signal removing letter(s) from fodder — head, tail, middle, or named letters.",
         georgeho_wordplays=["deletion"],
-        clue_clinic_ids=[7176, 3440],
+        clue_clinic_ids=[7176],
         crossword_unclued_path="2009/04/deletion-indicators.html",
         unscramblerer_path="deletion-indicators/",
         solve_the_crossword_slug="deletion-clues",
@@ -429,6 +430,23 @@ INDICATOR_TYPES: list[IndicatorType] = [
             "above", "below", "beneath", "atop",
         ],
     ),
+    IndicatorType(
+        slug="replacement",
+        title="Replacement indicators",
+        blurb=(
+            "One letter run is swapped for another inside the fodder "
+            "(replacing, instead of, giving way to, turning into, …)."
+        ),
+        clue_clinic_ids=[3440],
+        clue_clinic_alt_index=2,
+        curated_extras=[
+            "replacing", "replaced by", "instead of", "in place of",
+            "in favour of", "giving way to", "yielding to", "turning into",
+            "changed to", "transformed into", "standing in for", "swapping",
+            "exchanging", "substituting", "substituted for", "superseding",
+            "supplanting", "ousting", "taking over from", "taking the place of",
+        ],
+    ),
 ]
 
 
@@ -519,6 +537,7 @@ def scrape_clue_clinic(
     *,
     allow_digits: bool = False,
     default_category: str | None = None,
+    alt_index: int = 1,
 ) -> int:
     count = 0
     note_tokens = {
@@ -563,8 +582,10 @@ def scrape_clue_clinic(
             key = norm(primary)
             if key in store:
                 store[key]["notes"].update(notes)
-            if len(cells) > 1:
-                for alt in split_alternatives(cells[1]):
+                if alt_index >= 2 and len(cells) > 1 and cells[1].strip():
+                    store[key]["notes"].add(cells[1].strip().lower())
+            if len(cells) > alt_index:
+                for alt in split_alternatives(cells[alt_index]):
                     if add_entry(
                         store,
                         alt,
@@ -818,6 +839,7 @@ def build_type(cfg: IndicatorType) -> dict[str, dict]:
                     cfg.clue_clinic_ids,
                     allow_digits=cfg.allow_digits,
                     default_category=cfg.slug,
+                    alt_index=cfg.clue_clinic_alt_index,
                 ),
             )
         )

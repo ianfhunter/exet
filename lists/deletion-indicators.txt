@@ -459,7 +459,6 @@ dropping off
 dropping the bass
 dropping the fourth
 dropping the head
-dropping x for y
 drops
 drops crown
 drops off
@@ -556,7 +555,6 @@ except for
 except for leader
 except for the first
 exchanging
-exchanging x for y
 excised
 exclude
 excluded
@@ -707,7 +705,6 @@ getting knocked out
 getting off
 getting rid of
 getting scrubbed
-getting y for x
 given away
 given away by
 gives away
@@ -715,7 +712,6 @@ gives way to
 giving away
 giving out
 giving up
-giving up x for y
 giving way
 go
 goes
@@ -768,7 +764,6 @@ having not finished
 having released
 having sailed
 having to leave
-having y for x
 he parted from her
 head
 head away
@@ -932,7 +927,6 @@ leaves
 leaves out
 leaving
 leaving out
-leaving x in favour of y
 left
 left and right
 left by
@@ -1581,7 +1575,6 @@ surrendering
 surrenders
 swallowing
 swapping
-swapping x for y
 swept away
 swerved by
 swerves
@@ -1606,7 +1599,6 @@ taking over
 taking place
 taking role
 taking tip off
-taking y for x
 that disregards
 that exclude
 that ousts
@@ -1692,7 +1684,6 @@ torn out of
 tossing
 totally heartless
 trading
-trading x for y
 trashed by
 trashes
 trashing
@@ -1834,7 +1825,6 @@ with no capital
 with no opening
 with one abstention
 with one single out
-with y for x
 withdraw
 withdrawals
 withheld by
@@ -1864,55 +1854,7 @@ without sides
 won't start
 won’t have
 written out
-x becoming y
-x changed to y
-x conceding to y
-x falling for y
-x giving way to y
-x going for y
-x made invisible by y
-x making way for y
-x overwritten by y
-x put aside for y
-x submitting to y
-x succumbing to y
-x surrendering to y
-x turning into y
-y bumping x
-y coming in for x
-y concealing x
-y covering x
-y displacing x
-y doing duty for x
-y downing x
-y driving out x
-y eclipsing x
-y expelling x
-y forcing out x
-y hiding x
-y instead of x
-y knocking out x
-y obscuring x
-y ousting x
-y overcoming x
-y overthrowing x
-y playing part of x
-y preferred to x
-y putting out x
-y relieving x
-y replacing x
-y squeezing out x
-y standing in for x
-y substituted for x
-y succeeding x
-y superseding x
-y supplanting x
-y suppressing x
-y taking over from x
-y taking place of x
-y taking role of x
 yielded by
 yielding
-yielding x for y
 yields
 zero

@@ -1,0 +1,1254 @@
+{
+  "type": "replacement",
+  "title": "Replacement indicators",
+  "built": "2026-09-14",
+  "count": 100,
+  "sources": [
+    "clue-clinic",
+    "curated-extras"
+  ],
+  "entries": [
+    {
+      "indicator": "becoming",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x becoming y"
+      ]
+    },
+    {
+      "indicator": "bumping",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y bumping x"
+      ]
+    },
+    {
+      "indicator": "changed",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x changed to y"
+      ]
+    },
+    {
+      "indicator": "changed to",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "coming in",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y coming in for x"
+      ]
+    },
+    {
+      "indicator": "concealing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y concealing x"
+      ]
+    },
+    {
+      "indicator": "conceding to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x conceding to y"
+      ]
+    },
+    {
+      "indicator": "covering",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y covering x"
+      ]
+    },
+    {
+      "indicator": "displacing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y displacing x"
+      ]
+    },
+    {
+      "indicator": "doing duty",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y doing duty for x"
+      ]
+    },
+    {
+      "indicator": "downing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y downing x"
+      ]
+    },
+    {
+      "indicator": "driving out",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y driving out x"
+      ]
+    },
+    {
+      "indicator": "dropping",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "dropping x for y",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "eclipsing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y eclipsing x"
+      ]
+    },
+    {
+      "indicator": "exchanging",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "exchanging x for y",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "expelling",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y expelling x"
+      ]
+    },
+    {
+      "indicator": "falling for",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x falling for y"
+      ]
+    },
+    {
+      "indicator": "forcing out",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y forcing out x"
+      ]
+    },
+    {
+      "indicator": "getting",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "getting y for x",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "giving up",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "giving up x for y",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "giving way",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x giving way to y"
+      ]
+    },
+    {
+      "indicator": "giving way to",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "going",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x going for y"
+      ]
+    },
+    {
+      "indicator": "having",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "having y for x",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "having y not x",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "hiding",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "x hidden by y"
+      ],
+      "notes": [
+        "standard",
+        "y hiding x"
+      ]
+    },
+    {
+      "indicator": "in favour of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "in place of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "instead",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y instead of x"
+      ]
+    },
+    {
+      "indicator": "instead of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "knocking out",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y knocking out x"
+      ]
+    },
+    {
+      "indicator": "leaving",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "leaving x in favour of y",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "made invisible by",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x made invisible by y"
+      ]
+    },
+    {
+      "indicator": "making way",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x making way for y"
+      ]
+    },
+    {
+      "indicator": "obscuring",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y obscuring x"
+      ]
+    },
+    {
+      "indicator": "ousting",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y ousting x"
+      ]
+    },
+    {
+      "indicator": "overcoming",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y overcoming x"
+      ]
+    },
+    {
+      "indicator": "overthrowing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y overthrowing x"
+      ]
+    },
+    {
+      "indicator": "overwritten",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x overwritten by y"
+      ]
+    },
+    {
+      "indicator": "playing part",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y playing part of x"
+      ]
+    },
+    {
+      "indicator": "preferred to",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y preferred to x"
+      ]
+    },
+    {
+      "indicator": "put aside",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x put aside for y"
+      ]
+    },
+    {
+      "indicator": "putting out",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y putting out x"
+      ]
+    },
+    {
+      "indicator": "relieving",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y relieving x"
+      ]
+    },
+    {
+      "indicator": "replaced by",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "replacing",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y replacing x"
+      ]
+    },
+    {
+      "indicator": "squeezing out",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y squeezing out x"
+      ]
+    },
+    {
+      "indicator": "standing in",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y standing in for x"
+      ]
+    },
+    {
+      "indicator": "standing in for",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "submitting",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x submitting to y"
+      ]
+    },
+    {
+      "indicator": "substituted",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y substituted for x"
+      ]
+    },
+    {
+      "indicator": "substituted for",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "substituting",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "succeeding",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y succeeding x"
+      ]
+    },
+    {
+      "indicator": "succumbing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x succumbing to y"
+      ]
+    },
+    {
+      "indicator": "superseding",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y superseding x"
+      ]
+    },
+    {
+      "indicator": "supplanting",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y supplanting x"
+      ]
+    },
+    {
+      "indicator": "suppressing",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y suppressing x"
+      ]
+    },
+    {
+      "indicator": "surrendering",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x surrendering to y"
+      ]
+    },
+    {
+      "indicator": "swapping",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "swapping x for y"
+      ]
+    },
+    {
+      "indicator": "taking",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "taking y for x"
+      ]
+    },
+    {
+      "indicator": "taking over",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y taking over from x"
+      ]
+    },
+    {
+      "indicator": "taking over from",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "taking place",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y taking place of x"
+      ]
+    },
+    {
+      "indicator": "taking role",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "y taking role of x"
+      ]
+    },
+    {
+      "indicator": "taking the place of",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "trading",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "trading x for y"
+      ]
+    },
+    {
+      "indicator": "transformed into",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "turning into",
+      "sources": [
+        "clue-clinic",
+        "curated-extras"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "x turning into y"
+      ]
+    },
+    {
+      "indicator": "with",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "with y for x"
+      ]
+    },
+    {
+      "indicator": "with y as x",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x assuming role of y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x bumped by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x concealed by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x displaced by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x downed by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x dropped for y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x eclipsed by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x expelled by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x forced out by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x given up for y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x hidden by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "x hidden by y"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x knocked out by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x obscured by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x ousted by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x overcome by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x overthrown by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x put out by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x relieved by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x replaced by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x squeezed out by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x succeeded by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x superseded by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x supplanted by y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x turning to y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "x yielding to y",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "y covering for x",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "y driving off x",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "alternative",
+        "standard"
+      ]
+    },
+    {
+      "indicator": "yielding",
+      "sources": [
+        "clue-clinic"
+      ],
+      "categories": [
+        "replacement"
+      ],
+      "notes": [
+        "standard",
+        "yielding x for y"
+      ]
+    },
+    {
+      "indicator": "yielding to",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    }
+  ]
+}

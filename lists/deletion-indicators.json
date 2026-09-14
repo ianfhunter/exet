@@ -2,7 +2,7 @@
   "type": "deletion",
   "title": "Deletion indicators",
   "built": "2026-08-12",
-  "count": 1918,
+  "count": 1860,
   "sources": [
     "clue-clinic",
     "crossword-unclued",
@@ -4418,16 +4418,6 @@
       "notes": []
     },
     {
-      "indicator": "dropping x for y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
       "indicator": "drops",
       "sources": [
         "clue-clinic",
@@ -5368,16 +5358,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "exchanging x for y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "excised",
@@ -6800,16 +6780,6 @@
       "notes": []
     },
     {
-      "indicator": "getting y for x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
       "indicator": "given away",
       "sources": [
         "cryptics-georgeho"
@@ -6870,16 +6840,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "giving up x for y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "giving way",
@@ -7359,16 +7319,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "having y for x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "he parted from her",
@@ -8927,16 +8877,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "leaving x in favour of y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "left",
@@ -14942,16 +14882,6 @@
       "notes": []
     },
     {
-      "indicator": "swapping x for y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
       "indicator": "swept away",
       "sources": [
         "cryptics-georgeho"
@@ -15171,16 +15101,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "taking y for x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "that disregards",
@@ -15897,16 +15817,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "trading x for y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "trashed by",
@@ -17260,16 +17170,6 @@
       "notes": []
     },
     {
-      "indicator": "with y for x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
       "indicator": "withdraw",
       "sources": [
         "cryptics-georgeho",
@@ -17532,478 +17432,6 @@
       "notes": []
     },
     {
-      "indicator": "x becoming y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x changed to y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x conceding to y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x falling for y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x giving way to y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x going for y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x made invisible by y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x making way for y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x overwritten by y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x put aside for y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x submitting to y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x succumbing to y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x surrendering to y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "x turning into y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y bumping x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y coming in for x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y concealing x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y covering x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y displacing x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y doing duty for x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y downing x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y driving out x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y eclipsing x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y expelling x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y forcing out x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y hiding x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [
-        "x hidden by y"
-      ],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y instead of x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y knocking out x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y obscuring x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y ousting x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y overcoming x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y overthrowing x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y playing part of x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y preferred to x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y putting out x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y relieving x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y replacing x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y squeezing out x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y standing in for x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y substituted for x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y succeeding x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y superseding x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y supplanting x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y suppressing x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y taking over from x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y taking place of x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
-      "indicator": "y taking role of x",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
-    },
-    {
       "indicator": "yielded by",
       "sources": [
         "clue-clinic"
@@ -18020,16 +17448,6 @@
       ],
       "categories": [],
       "notes": []
-    },
-    {
-      "indicator": "yielding x for y",
-      "sources": [
-        "clue-clinic"
-      ],
-      "categories": [],
-      "notes": [
-        "alternative"
-      ]
     },
     {
       "indicator": "yields",
