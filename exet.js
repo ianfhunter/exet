@@ -2958,7 +2958,7 @@ Exet.prototype.trimUrl = function(url) {
 }
 
 
-/* xet-splash-words-ninja-v3 */
+/* xet-splash-words-ninja-v4 */
 Exet.prototype.shouldPairWordsNinja = function(url) {
   return /^https?:\/\/(?:www\.)?nutrimatic\.org\//i.test(url || '');
 };
@@ -10842,3 +10842,38 @@ document.addEventListener('DOMContentLoaded', async () => {
   exetLexiconInit();
   exetInit();
 });
+
+/* Paired panes link out instead of printing the query or URL. */
+(function() {
+  const SHORT_LINK = 'open \u2197';
+  const baseLoadIframe = Exet.prototype.loadIframe;
+  Exet.prototype.loadIframe = function(iframe, url, urlElt) {
+    baseLoadIframe.call(this, iframe, url, urlElt);
+    if (!urlElt || !this.shouldPairWordsNinja(url)) {
+      return;
+    }
+    urlElt.xetShortUrl = url;
+    const shorten = () => {
+      urlElt.title = urlElt.xetShortUrl;
+      urlElt.innerText = SHORT_LINK;
+    };
+    if (!iframe.xetShortLinkWired) {
+      iframe.xetShortLinkWired = true;
+      /* Added after loadIframe's own onload, so this label wins. */
+      iframe.addEventListener('load', shorten);
+    }
+    shorten();
+    urlElt.insertAdjacentHTML(
+        'beforeend', ' <span class="xet-iframe-loading">Loading</span>');
+  };
+
+  const baseLoadWordsNinja = Exet.prototype.loadWordsNinja;
+  Exet.prototype.loadWordsNinja = function(box, wordParam, urlElt, dict) {
+    baseLoadWordsNinja.call(this, box, wordParam, urlElt, dict);
+    const href = urlElt ? urlElt.getAttribute('href') : '';
+    if (href) {
+      urlElt.title = href;
+      urlElt.innerText = SHORT_LINK;
+    }
+  };
+})();
