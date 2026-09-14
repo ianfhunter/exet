@@ -105,6 +105,100 @@ WORDSUP_PAGES: dict[str, str] = {
     "alternation": "sequence-indicators.php",
 }
 
+# Containment list split: container (outer holds inner) vs insertion (inner enters outer).
+OUTER_CONTAINS_INNER_CATS = frozenset(
+    {
+        "containment",
+        "container",
+        "list of 150 container indicators",
+        "most common container indicators",
+    }
+)
+INNER_ENTERS_OUTER_CATS = frozenset(
+    {
+        "insertion",
+        "contents",
+        "list of 57 contents indicators",
+        "most common contents indicators",
+    }
+)
+
+CONTAINMENT_SPLIT_SPECS = (
+    {
+        "slug": "outer-contains-inner",
+        "title": "Outer contains inner indicators",
+        "blurb": (
+            "Container wordplay: the outer letter run holds the inner one "
+            "(around, holding, contains, accepts, …)."
+        ),
+        "bucket": "outer",
+    },
+    {
+        "slug": "inner-enters-outer",
+        "title": "Inner enters outer indicators",
+        "blurb": (
+            "Insertion wordplay: the inner letter run goes into the outer one "
+            "(in, into, enters, inside, …)."
+        ),
+        "bucket": "inner",
+    },
+)
+
+_INNER_INDICATOR_RE = re.compile(
+    r"(^|\s)("
+    r"in(?:to|side|ward)?|within|enter(?:s|ing|ed)?|insert(?:s|ing|ed|ion)?|"
+    r"penetrates?|penetrating|invades?|invading|tucked|nested|embedded|"
+    r"secreted|smuggled|packed|pushed|placed|put|set|slotted|threaded|"
+    r"interrupt(?:s|ing|ed)?|pierced|split(?:s|ting)?"
+    r")(\s|$)|"
+    r"\b(?:into|inside|within)\b|"
+    r"\bin\b$|"
+    r"^in\b"
+)
+
+_OUTER_INDICATOR_RE = re.compile(
+    r"\b("
+    r"about|around|round|holding?|holds|contain(?:s|ing|ed)?|surround(?:s|ing|ed)?|"
+    r"embrac(?:e|es|ing|ed)|wrap(?:s|ping|ped)?|enclos(?:e|es|ing|ed)|"
+    r"cover(?:s|ing|ed)?|harbour(?:s|ing|ed)?|possess(?:es|ing|ed)?|"
+    r"accept(?:s|ing|ed)?|admit(?:s|ting|ted)?|capture(?:s|d|ing)?|"
+    r"swallow(?:s|ing|ed)?|devour(?:s|ing|ed)?|bear(?:s|ing)?|carry(?:ing|ies)?|"
+    r"clothe(?:s|d|ing)?|dress(?:es|ed|ing)?|box(?:es|ed|ing)?|cag(?:e|es|ed|ing)|"
+    r"trap(?:s|ped|ping)?|board(?:s|ed|ing)?|aboard|accommodat(?:e|es|ing|ed)|"
+    r"housing|houses|pocket(?:s|ed|ing)?|sheath(?:s|ed|ing)?|coil(?:s|ed|ing)?|"
+    r"ring(?:s|ed|ing)?|band(?:s|ed|ing)?|border(?:s|ing|ed)?|bound(?:s|ing|ed)?|"
+    r"bracket(?:s|ed|ing)?|sandwich(?:es|ed|ing)?|bookend(?:s|ed|ing)?|"
+    r"split(?:s|ting)? by|outside|without|beyond"
+    r")\b"
+)
+
+
+def containment_buckets(entry: dict) -> set[str]:
+    """Classify a merged containment entry for the split offline lists."""
+    cats = {c.lower() for c in entry.get("categories") or []}
+    buckets: set[str] = set()
+    if cats & OUTER_CONTAINS_INNER_CATS:
+        buckets.add("outer")
+    if cats & INNER_ENTERS_OUTER_CATS:
+        buckets.add("inner")
+    if buckets:
+        return buckets
+
+    ind = entry["indicator"].lower()
+    inner = bool(_INNER_INDICATOR_RE.search(ind))
+    outer = bool(_OUTER_INDICATOR_RE.search(ind))
+    if inner and not outer:
+        return {"inner"}
+    if outer and not inner:
+        return {"outer"}
+    if inner and outer:
+        return {"inner", "outer"}
+    # Cryptipedia's juxtaposition page lands in the merged list but is not containment.
+    if "cryptipedia" in entry.get("sources", ()) and "juxtaposition" in cats:
+        return set()
+    return {"outer"}
+
+
 CRYPTIPEDIA_PAGES: dict[str, list[str]] = {
     "anagram": ["List_of_anagram_indicators"],
     "hidden": ["List_of_hidden_word_indicators"],
@@ -546,8 +640,9 @@ def scrape_georgeho(store: dict[str, dict], wordplays: list[str]) -> int:
             cache.write_text(
                 json.dumps(sorted(all_rows), indent=2), encoding="utf-8"
             )
+        category = wordplay.lower()
         for ind in sorted(all_rows):
-            if add_entry(store, ind, "cryptics-georgeho"):
+            if add_entry(store, ind, "cryptics-georgeho", category=category):
                 count += 1
     return count
 
@@ -749,7 +844,7 @@ def build_type(cfg: IndicatorType) -> dict[str, dict]:
 
 def write_outputs(
     cfg: IndicatorType, store: dict[str, dict], built: str | None = None
-) -> int:
+) -> tuple[int, list[tuple[str, int]]]:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     base = f"{cfg.slug}-indicators"
     ordered = sorted(store.values(), key=lambda e: e["indicator"])
@@ -795,7 +890,69 @@ def write_outputs(
     (OUT_DIR / f"{base}.html").write_text(
         render_html(cfg, meta, by_cat, by_parity), encoding="utf-8"
     )
-    return len(serializable)
+    if cfg.slug == "containment":
+        split_summary = write_containment_splits(store, built=built or meta["built"])
+    else:
+        split_summary = []
+    return len(serializable), split_summary
+
+
+def write_containment_splits(
+    store: dict[str, dict], *, built: str
+) -> list[tuple[str, int]]:
+    """Offline lists for container vs insertion wordplay (subset of merged containment)."""
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    ordered = sorted(store.values(), key=lambda e: e["indicator"])
+    summary: list[tuple[str, int]] = []
+
+    for spec in CONTAINMENT_SPLIT_SPECS:
+        bucket = spec["bucket"]
+        picked = [e for e in ordered if bucket in containment_buckets(e)]
+        serializable = []
+        for e in picked:
+            serializable.append(
+                {
+                    "indicator": e["indicator"],
+                    "sources": sorted(e["sources"]),
+                    "categories": sorted(e["categories"]),
+                    "notes": sorted(e["notes"]),
+                }
+            )
+
+        split_cfg = IndicatorType(
+            slug=spec["slug"],
+            title=spec["title"],
+            blurb=spec["blurb"],
+        )
+        base = f"{spec['slug']}-indicators"
+        meta = {
+            "type": spec["slug"],
+            "title": spec["title"],
+            "built": built,
+            "count": len(serializable),
+            "sources": sorted({s for e in serializable for s in e["sources"]}),
+            "entries": serializable,
+        }
+        (OUT_DIR / f"{base}.json").write_text(
+            json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        (OUT_DIR / f"{base}.txt").write_text(
+            "\n".join(e["indicator"] for e in serializable) + "\n",
+            encoding="utf-8",
+        )
+
+        by_cat: dict[str, list[dict]] = defaultdict(list)
+        for e in serializable:
+            if e["categories"]:
+                for cat in e["categories"]:
+                    by_cat[cat].append(e)
+
+        (OUT_DIR / f"{base}.html").write_text(
+            render_html(split_cfg, meta, by_cat, {}), encoding="utf-8"
+        )
+        summary.append((spec["slug"], len(serializable)))
+
+    return summary
 
 
 def render_html(
@@ -972,8 +1129,9 @@ def main(argv: list[str]) -> int:
             store, built = load_store(cfg)
         else:
             store, built = build_type(cfg), None
-        n = write_outputs(cfg, store, built=built)
+        n, splits = write_outputs(cfg, store, built=built)
         summary.append((cfg.slug, n))
+        summary.extend(splits)
 
     print("\n--- Summary ---", flush=True)
     for slug, n in summary:
