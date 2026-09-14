@@ -6259,6 +6259,21 @@ Exet.prototype.replaceHandlers = function() {
 Exet.prototype.isDraftClue = function(clueText) {
   return clueText.trim().startsWith(this.DRAFT)
 }
+/**
+ * True when the clue strip still holds the untouched placeholder, i.e. no clue
+ * text has been typed for the current light. Reads the editable span rather
+ * than theClue.clue, which only catches up after the input throttle.
+ */
+Exet.prototype.currClueIsUnset = function() {
+  const xetClue = document.getElementById("xet-clue");
+  const theClue = this.currClue();
+  let clue = (xetClue ? xetClue.innerText : (theClue ? theClue.clue : '')) || '';
+  clue = clue.trim();
+  if (clue.startsWith(this.DRAFT)) {
+    clue = clue.substr(this.DRAFT.length).trim();
+  }
+  return clue.startsWith(this.CLUE_NOT_SET);
+}
 Exet.prototype.renderClue = function(theClue=null) {
   if (!theClue) {
     theClue = exet.currClue();
@@ -7636,23 +7651,23 @@ Exet.prototype.handleKeyDown = function(e) {
   }
 
   /**
-   * While focus is in the draft clue strip, '.' used to insert into the clue
-   * even though the grid cell stayed highlighted. Treat '.' as Toggle block
-   * until the clue is no longer a draft. Other rare grid keys still shortcut.
+   * Focus sits in the curr-clue strip while the grid is still being laid out
+   * (the cell stays highlighted), so grid keys keep working there as long as
+   * the clue is the untouched placeholder. As soon as there is clue text,
+   * every character types literally: clues and annos contain '!', '#', '=' etc.
    */
   if (isTypingTarget(target)) {
     const gridShortcut = (
         key == '.' || key == '|' || key == '_' || key == '#' ||
         key == '@' || key == '$' || key == '^' || key == '=' ||
-        key == '!' || key == '0');
+        key == '!');
     if (!gridShortcut) {
       return;
     }
-    if (key == '.' || key == '0') {
-      if (!(key == '.' && targetId == 'xet-clue' && this.currClueIsDraft)) {
-        return;
-      }
-    } else if (targetId != 'xet-clue' && targetId != 'xet-anno') {
+    if (targetId != 'xet-clue' && targetId != 'xet-anno') {
+      return;
+    }
+    if (!this.currClueIsUnset()) {
       return;
     }
   }
