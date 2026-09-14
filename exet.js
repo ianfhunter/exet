@@ -131,7 +131,12 @@ class ExetFillClient {
   invalidate() {
     if (!this.enabled) return;
     this.gen++;
-    this.pendingState = null;
+    /**
+     * A state still queued for a worker that has not signalled ready describes
+     * the current grid and nothing else would resend it, so retag it for the
+     * new generation rather than dropping it on the floor.
+     */
+    if (this.pendingState) this.pendingState.gen = this.gen;
     this.pauseAutofill();
     this.busy = false;
   }
@@ -9243,10 +9248,15 @@ Exet.prototype.findDeadendsByClue = function() {
 }
 
 Exet.prototype.startDeadendSweep = function(ci='') {
-  this.cancelDeadendSweep();
   if (this.fillClient && this.fillClient.enabled) {
+    /**
+     * The worker owns the sweep and is keyed to the grid, not to the cursor.
+     * Clue navigation calls this, and cancelling here would discard whatever
+     * the worker is computing every time the user clicks a light.
+     */
     return;
   }
+  this.cancelDeadendSweep();
   if (!this.puz || this.puz.numCellsFilled >= this.puz.numCellsToFill) {
     return;
   }
