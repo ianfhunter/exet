@@ -59,6 +59,9 @@ DISPLAY_NAMES = {
     "xwordlist": "Crossword Nexus",
 }
 
+# Only ComboList is offered in the Exet UI; other lists are ComboList sources.
+MENU_LEXICONS = {"ComboList"}
+
 
 def humanize(stem: str) -> str:
     key = stem.lower()
@@ -511,9 +514,12 @@ def write_manifest(
     manifest = out_dir / "lexicons-manifest.js"
     lexicons = load_existing_manifest(manifest) if merge else {}
     for name, files in entries:
+        if name not in MENU_LEXICONS:
+            continue
         lexicons[name] = [
             str(Path(rel_out) / f).replace("\\", "/") for f in files
         ]
+    lexicons = {k: v for k, v in lexicons.items() if k in MENU_LEXICONS}
 
     payload = json.dumps(lexicons, ensure_ascii=False, indent=2)
     manifest.write_text(

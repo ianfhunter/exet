@@ -143,6 +143,8 @@ def datasets(db: DbDep):
     for row in db.execute(
         "SELECT id, slug, display_name, entry_count, built_at FROM lexicons ORDER BY display_name"
     ).fetchall():
+        if row["display_name"] != "ComboList":
+            continue
         lex = dict(row)
         quantiles = _score_quantiles_for(db, row)
         lex["score_quantiles"] = quantiles
@@ -163,7 +165,8 @@ def list_lexicons(db: DbDep):
     return [
         dict(row)
         for row in db.execute(
-            "SELECT id, slug, display_name, entry_count, built_at FROM lexicons ORDER BY display_name"
+            "SELECT id, slug, display_name, entry_count, built_at FROM lexicons "
+            "WHERE display_name = 'ComboList' ORDER BY display_name"
         ).fetchall()
     ]
 

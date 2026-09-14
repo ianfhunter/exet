@@ -161,6 +161,8 @@ def build_all_lexicons(conn: sqlite3.Connection, only: str | None = None) -> lis
     if only:
         only_l = only.lower()
         sources = [p for p in sources if only_l in p.stem.lower()]
+    else:
+        sources = [p for p in sources if "combolist" in p.stem.lower()]
     if not sources:
         print("No wordlist sources found.", flush=True)
         return []
