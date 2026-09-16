@@ -9792,7 +9792,8 @@ Exet.prototype.fillLight = function(idx, ci='', revType=null) {
   const solParts = exetLexicon.partsOf(solution);
   for (let i = 0; i < solParts.length; i++) {
     let c = solParts[i];
-    if (enumPart > 0 && (c == ' ' || c == '-' || c == '\'')) {
+    // Apostrophes are never enumerated: "wine o'clock" is (4,6), not (4,1'5).
+    if (enumPart > 0 && (c == ' ' || c == '-')) {
       enumStr += ('' + enumPart + (c == ' ' ? ',' : c));
       enumPart = 0;
     }
