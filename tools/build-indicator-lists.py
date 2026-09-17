@@ -49,8 +49,10 @@ EVEN_PARITY = "even letters"
 # Sources name the same idea several ways ("select: first letter(s)", "list of
 # 21 first letter selection indicators"), which reads as a page of overlapping
 # sections. Map each spelling onto one heading; sections then appear in the
-# order written here. Categories with no entry keep their scraped name.
-LETTER_POSITION_LABELS: dict[str, str] = {
+# order written here. A None value drops the source heading (the indicators
+# still sit under their other, more precise categories). Categories with no
+# entry keep their scraped name.
+LETTER_POSITION_LABELS: dict[str, str | None] = {
     "select: first letter": "First Letter",
     "select : first letter": "First Letter",
     "select: first letter(s)": "First Letter",
@@ -72,30 +74,32 @@ LETTER_POSITION_LABELS: dict[str, str] = {
     "select: alternate letters": "Alternate Letters",
     "alternate letters": "Alternate Letters",
     "select: regular letters": "Alternate Letters",
-    "most common selection indicators": "Most Common",
+    "most common selection indicators": None,
 }
 
 # Alternation is deliberately left out: it already groups by parity, so an
 # "Odd Letters" category heading would collide with the parity section.
-CATEGORY_LABEL_MAPS: dict[str, dict[str, str]] = {
+CATEGORY_LABEL_MAPS: dict[str, dict[str, str | None]] = {
     "letter-selection": LETTER_POSITION_LABELS,
 }
 
 
-def category_label(slug: str, category: str) -> str:
-    """Section heading for a scraped category name."""
+def category_label(slug: str, category: str) -> str | None:
+    """Section heading for a scraped category name, or None to omit it."""
     mapping = CATEGORY_LABEL_MAPS.get(slug)
-    if mapping:
-        label = mapping.get(re.sub(r"\s+", " ", category.strip().lower()))
-        if label:
-            return label
+    if mapping is not None:
+        key = re.sub(r"\s+", " ", category.strip().lower())
+        if key in mapping:
+            return mapping[key]
     return category.title()
 
 
 def ordered_labels(slug: str, by_cat: dict[str, list[dict]]) -> list[str]:
     mapping = CATEGORY_LABEL_MAPS.get(slug) or {}
     preferred = [
-        label for label in dict.fromkeys(mapping.values()) if label in by_cat
+        label
+        for label in dict.fromkeys(mapping.values())
+        if label and label in by_cat
     ]
     return preferred + sorted(set(by_cat) - set(preferred))
 
@@ -1473,7 +1477,9 @@ def write_outputs(
     elif cfg.slug != "hidden":
         for e in serializable:
             for cat in e["categories"]:
-                by_cat[category_label(cfg.slug, cat)].append(e)
+                label = category_label(cfg.slug, cat)
+                if label:
+                    by_cat[label].append(e)
         # Merged headings can collect the same indicator from two sources.
         for label, items in by_cat.items():
             by_cat[label] = list(
@@ -1666,7 +1672,11 @@ def render_html(
     else:
         category_order = ordered_labels(cfg.slug, by_cat)
     for cat in category_order:
-        items = sorted(by_cat[cat], key=lambda e: e["indicator"])
+        if not cat:
+            continue
+        items = sorted(by_cat.get(cat, []), key=lambda e: e["indicator"])
+        if not items:
+            continue
         anchor = unique_section_id(cat)
         nav_items.append((anchor, cat, len(items)))
         chips = "\n".join(chip(e) for e in items)
