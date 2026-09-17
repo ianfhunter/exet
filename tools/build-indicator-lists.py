@@ -77,10 +77,26 @@ LETTER_POSITION_LABELS: dict[str, str | None] = {
     "most common selection indicators": None,
 }
 
+REVERSAL_ACROSS = "Across"
+REVERSAL_DOWN = "Down"
+REVERSAL_EITHER = "Across or Down"
+
+REVERSAL_DIRECTION_LABELS: dict[str, str | None] = {
+    "reversal (a)": REVERSAL_ACROSS,
+    "reversal (d)": REVERSAL_DOWN,
+    "list of 37 reversal indicators for down clues only": REVERSAL_DOWN,
+    "reversal (a/d)": REVERSAL_EITHER,
+    "list of 88 reversal indicators for across and down clues": REVERSAL_EITHER,
+    # Untagged "reversal" rows are not marked for one orientation.
+    "reversal": REVERSAL_EITHER,
+    "most common word reversals": None,
+}
+
 # Alternation is deliberately left out: it already groups by parity, so an
 # "Odd Letters" category heading would collide with the parity section.
 CATEGORY_LABEL_MAPS: dict[str, dict[str, str | None]] = {
     "letter-selection": LETTER_POSITION_LABELS,
+    "reversal": REVERSAL_DIRECTION_LABELS,
 }
 
 
@@ -1485,6 +1501,21 @@ def write_outputs(
             by_cat[label] = list(
                 {e["indicator"]: e for e in items}.values()
             )
+        if cfg.slug == "reversal":
+            # Across/Down is more precise than "either orientation".
+            specific = {
+                e["indicator"]
+                for label in (REVERSAL_ACROSS, REVERSAL_DOWN)
+                for e in by_cat.get(label, [])
+            }
+            either = [
+                e for e in by_cat.get(REVERSAL_EITHER, [])
+                if e["indicator"] not in specific
+            ]
+            if either:
+                by_cat[REVERSAL_EITHER] = either
+            else:
+                by_cat.pop(REVERSAL_EITHER, None)
 
     by_parity: dict[str, list[dict]] = defaultdict(list)
     for e in serializable:
