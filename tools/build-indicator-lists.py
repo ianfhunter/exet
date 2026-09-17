@@ -11,7 +11,9 @@ Run from exet/:
   python tools/build-indicator-lists.py hidden # one type
   python tools/build-indicator-lists.py alternation --from-json
                                         # re-render from the committed json,
-                                        # without scraping the sources again
+                                        # topping up from the ClueClinic lexicon
+  python tools/build-indicator-lists.py alternation --render-only
+                                        # re-render from the committed json only
 """
 
 from __future__ import annotations
@@ -43,6 +45,59 @@ SKIP_WORDS = frozenset(
 
 ODD_PARITY = "odd letters"
 EVEN_PARITY = "even letters"
+
+# Sources name the same idea several ways ("select: first letter(s)", "list of
+# 21 first letter selection indicators"), which reads as a page of overlapping
+# sections. Map each spelling onto one heading; sections then appear in the
+# order written here. Categories with no entry keep their scraped name.
+LETTER_POSITION_LABELS: dict[str, str] = {
+    "select: first letter": "First Letter",
+    "select : first letter": "First Letter",
+    "select: first letter(s)": "First Letter",
+    "select: first letter (cap)": "First Letter",
+    "list of 21 first letter selection indicators": "First Letter",
+    "select: second letter": "Second Letter",
+    "select: first two letters": "First Two Letters",
+    "select: last letter": "Last Letter",
+    "select: last letter(s)": "Last Letter",
+    "list of 52 last letter selection indicators": "Last Letter",
+    "select: first and last letters": "First and Last Letters",
+    "list of 24 first and last letter selection indicators": "First and Last Letters",
+    "select: middle letter": "Middle Letter",
+    "select: middle letter(s)": "Middle Letter",
+    "select: one of central pair lost": "Central Pair",
+    "select: first or second half": "First or Second Half",
+    "select: odd letters": "Odd Letters",
+    "select: even letters": "Even Letters",
+    "select: alternate letters": "Alternate Letters",
+    "alternate letters": "Alternate Letters",
+    "select: regular letters": "Alternate Letters",
+    "most common selection indicators": "Most Common",
+}
+
+# Alternation is deliberately left out: it already groups by parity, so an
+# "Odd Letters" category heading would collide with the parity section.
+CATEGORY_LABEL_MAPS: dict[str, dict[str, str]] = {
+    "letter-selection": LETTER_POSITION_LABELS,
+}
+
+
+def category_label(slug: str, category: str) -> str:
+    """Section heading for a scraped category name."""
+    mapping = CATEGORY_LABEL_MAPS.get(slug)
+    if mapping:
+        label = mapping.get(re.sub(r"\s+", " ", category.strip().lower()))
+        if label:
+            return label
+    return category.title()
+
+
+def ordered_labels(slug: str, by_cat: dict[str, list[dict]]) -> list[str]:
+    mapping = CATEGORY_LABEL_MAPS.get(slug) or {}
+    preferred = [
+        label for label in dict.fromkeys(mapping.values()) if label in by_cat
+    ]
+    return preferred + sorted(set(by_cat) - set(preferred))
 
 ANAGRAM_FUNCTIONS = (
     "Adjective",
@@ -1414,12 +1469,16 @@ def write_outputs(
     by_cat: dict[str, list[dict]] = defaultdict(list)
     if cfg.slug == "anagram":
         for e in serializable:
-            by_cat[e["function"]].append(e)
+            by_cat[category_label(cfg.slug, e["function"])].append(e)
     elif cfg.slug != "hidden":
         for e in serializable:
-            if e["categories"]:
-                for cat in e["categories"]:
-                    by_cat[cat].append(e)
+            for cat in e["categories"]:
+                by_cat[category_label(cfg.slug, cat)].append(e)
+        # Merged headings can collect the same indicator from two sources.
+        for label, items in by_cat.items():
+            by_cat[label] = list(
+                {e["indicator"]: e for e in items}.values()
+            )
 
     by_parity: dict[str, list[dict]] = defaultdict(list)
     for e in serializable:
@@ -1464,7 +1523,7 @@ def write_container_list(
             for e in ordered
             if spec["bucket"] in containment_buckets(e)
         ]
-        by_cat[spec["title"]] = picked
+        by_cat[category_label("container", spec["title"])] = picked
         for item in picked:
             union[item["indicator"]] = item
 
@@ -1598,23 +1657,22 @@ def render_html(
         )
 
     cat_sections = []
-    category_order = (
-        ANAGRAM_FUNCTIONS
-        if cfg.slug == "anagram"
-        else (
-            [spec["title"] for spec in CONTAINER_SECTION_SPECS]
-            if cfg.slug == "container"
-            else sorted(by_cat)
-        )
-    )
+    if cfg.slug == "anagram":
+        category_order = [category_label(cfg.slug, f) for f in ANAGRAM_FUNCTIONS]
+    elif cfg.slug == "container":
+        category_order = [
+            category_label(cfg.slug, spec["title"]) for spec in CONTAINER_SECTION_SPECS
+        ]
+    else:
+        category_order = ordered_labels(cfg.slug, by_cat)
     for cat in category_order:
         items = sorted(by_cat[cat], key=lambda e: e["indicator"])
         anchor = unique_section_id(cat)
-        nav_items.append((anchor, cat.title(), len(items)))
+        nav_items.append((anchor, cat, len(items)))
         chips = "\n".join(chip(e) for e in items)
         cat_sections.append(
             f'<section class="cat" id="{anchor}">'
-            f'<h2>{html_lib.escape(cat.title())} '
+            f'<h2>{html_lib.escape(cat)} '
             f'<span class="n">({len(items)})</span></h2>'
             f'<div class="grid">\n{chips}\n</div></section>'
         )
@@ -1782,6 +1840,7 @@ def load_store(cfg: IndicatorType) -> tuple[dict[str, dict], str]:
 def main(argv: list[str]) -> int:
     args = argv[1:]
     from_json = "--from-json" in args
+    render_only = "--render-only" in args
     wanted = {a.lower() for a in args if not a.startswith("-")}
     types = INDICATOR_TYPES
     if wanted:
@@ -1793,7 +1852,10 @@ def main(argv: list[str]) -> int:
 
     summary: list[tuple[str, int]] = []
     for cfg in types:
-        if from_json and (OUT_DIR / f"{cfg.slug}-indicators.json").is_file():
+        if render_only:
+            # Presentation-only rebuild: no scraping, no lexicon top-up.
+            store, built = load_store(cfg)
+        elif from_json and (OUT_DIR / f"{cfg.slug}-indicators.json").is_file():
             store, built = load_store(cfg)
             prefixes = LEXICON_KIND_MATCH.get(cfg.slug)
             if prefixes:
