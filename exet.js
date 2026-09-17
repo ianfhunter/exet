@@ -3528,10 +3528,23 @@ Exet.prototype.makeAnalysisTab = function() {
 }
 
 Exet.prototype.makeIndsTab = function() {
+  /* Groups keep their configured order; lists within a group are alphabetical. */
+  const groupOrder = [];
+  for (const link of exetConfig.listsLinks) {
+    const group = link.group || "";
+    if (!groupOrder.includes(group)) {
+      groupOrder.push(group);
+    }
+  }
+  const sortedLists = exetConfig.listsLinks.slice().sort((a, b) => {
+    const groupDiff = groupOrder.indexOf(a.group || "") -
+                      groupOrder.indexOf(b.group || "");
+    return groupDiff || a.name.localeCompare(b.name);
+  });
   const inds = [
     {name: "Please select:", url: ""},
     {name: "separator"},
-  ].concat(exetConfig.listsLinks);
+  ].concat(sortedLists);
   const highlighters = [
     {name: "Optional: Using a keyword, choose a type of words to highlight:", key: "none"},
     {name: "Highlight words related to:", key: "ml="},
