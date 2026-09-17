@@ -61,7 +61,7 @@ class ExetFillClient {
     this.pendingState = null;
     this.enabled = !!(window.Worker && exetLexicon && exetLexicon.serverSlug);
     if (!this.enabled) return;
-    this.worker = new Worker('exet-fill-worker.js?v1.01');
+    this.worker = new Worker('exet-fill-worker.js?v1.02');
     this.worker.onmessage = this.onMessage.bind(this);
     this.worker.onerror = error => {
       console.error('Fill worker failed; using inline fill engine', error);
@@ -79,10 +79,13 @@ class ExetFillClient {
         entry_count: exetLexicon.serverEntryCount || exetLexicon.startLen,
         letters: exetLexicon.letters,
       },
-      cachedEntries: exetLexicon.lexicon.map((form, index) => ({
-        form,
-        score: exetLexicon.scores[index] || 0,
-      })),
+      // Indices are server entry ids, so this array is sparse: send pairs.
+      cachedEntries: exetLexicon.lexicon.reduce((out, form, index) => {
+        if (index && form) {
+          out.push({index, form, score: exetLexicon.scores[index] || 0});
+        }
+        return out;
+      }, []),
       options: this.options(),
     });
   }
@@ -100,7 +103,11 @@ class ExetFillClient {
       unfilledChoicesLimit: this.owner.sweepMaxChoices,
       sweepMaxChoices: this.owner.sweepMaxChoices,
       shownChoices: this.owner.shownLightChoices,
-      preflexForms: this.owner.preflex,
+      preflexEntries: Object.keys(this.owner.preflexSet || {}).map(index => ({
+        index: Number(index),
+        form: this.owner.preflexSet[index],
+        score: exetLexicon.scores[index] || 0,
+      })),
       regexps,
       letterRarities: exetLexicon.letterRarities || {},
     };
@@ -158,6 +165,7 @@ class ExetFillClient {
       if (exetLexicon.serverCache) {
         exetLexicon.serverCache.forms[entry.index] = entry.form;
         exetLexicon.serverCache.scores[entry.index] = entry.score;
+        exetLexicon.serverCache.formToIndex.set(entry.form, entry.index);
       }
     }
   }
@@ -9893,8 +9901,13 @@ Exet.prototype.setPreflex = function(preflex) {
     if (inLexicon.length > 0) {
       p = inLexicon[0];
     } else  {
-      exetLexicon.lexicon.push(ptext);
-      p = exetLexicon.lexicon.length - 1;
+      /**
+       * Park words that are not in the list past the end of it. With a server
+       * lexicon the array is a sparse cache keyed by entry id, so appending at
+       * .length would land on top of a real entry.
+       */
+      p = Math.max(exetLexicon.startLen, exetLexicon.lexicon.length);
+      exetLexicon.lexicon[p] = ptext;
     }
     if (!this.preflexByLen[len]) this.preflexByLen[len] = [];
     this.preflexByLen[len].push(p);

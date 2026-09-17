@@ -9,6 +9,7 @@ import sqlite3
 from backend.lexicon_lookup import (
     LETTER_SET,
     get_fill_choices,
+    lexicon_id_base,
     parts_of,
 )
 
@@ -78,10 +79,11 @@ def search_entries(
         sql += " LIMIT ?"
         params.append(limit)
 
+    id_base = lexicon_id_base(conn, lexicon_id)
     rows = conn.execute(sql, params).fetchall()
     return [
         {
-            "id": r["id"] if isinstance(r, sqlite3.Row) else r[0],
+            "id": (r["id"] if isinstance(r, sqlite3.Row) else r[0]) - id_base,
             "form": r["form"] if isinstance(r, sqlite3.Row) else r[1],
             "normalized": r["normalized"] if isinstance(r, sqlite3.Row) else r[2],
             "score": r["score"] if isinstance(r, sqlite3.Row) else r[3],
@@ -167,6 +169,7 @@ def get_subset_anagrams(
     from collections import Counter
 
     target = Counter(letters)
+    id_base = lexicon_id_base(conn, lexicon_id)
     out: list[dict] = []
     for row in conn.execute(sql, params):
         form = row["form"] if isinstance(row, sqlite3.Row) else row[1]
@@ -180,7 +183,7 @@ def get_subset_anagrams(
             continue
         out.append(
             {
-                "id": eid,
+                "id": eid - id_base,
                 "form": form,
                 "score": score,
                 "letter_count": len(letters_n),

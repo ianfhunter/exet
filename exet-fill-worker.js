@@ -25,28 +25,31 @@ class WorkerLexicon {
     this.scores = [0];
     this.formToIndex = new Map([['', 0]]);
     this.sentIndices = new Set([0]);
-    for (let index = 1; index < cachedEntries.length; index++) {
-      const entry = cachedEntries[index];
-      if (!entry || !entry.form) continue;
-      this.forms[index] = entry.form;
-      this.scores[index] = entry.score || 0;
-      this.formToIndex.set(entry.form, index);
-      this.sentIndices.add(index);
+    for (const entry of cachedEntries) {
+      if (!entry || !entry.form || !entry.index) continue;
+      this.install(entry.index, entry.form, entry.score || 0);
+      this.sentIndices.add(entry.index);
     }
+  }
+  install(index, form, score) {
+    this.forms[index] = form;
+    this.scores[index] = score;
+    this.formToIndex.set(form, index);
+    return index;
   }
   lexkey(value) {
     const allowed = new Set(this.letters);
     return Array.from(String(value || '').toUpperCase())
         .filter(letter => allowed.has(letter) || letter == '?');
   }
-  cacheEntry(form, score, reversed=false) {
-    let index = this.formToIndex.get(form);
-    if (index === undefined) {
-      index = this.forms.length;
-      this.formToIndex.set(form, index);
-      this.forms.push(form);
-      this.scores.push(score || 0);
-    }
+  /**
+   * Index by the server entry id, so this worker and the main thread name the
+   * same word by the same number. See cacheEntry() in exet-data-server.js.
+   */
+  cacheEntry(id, form, score, reversed=false) {
+    const index = Math.abs(Number(id));
+    if (!index) return 0;
+    this.install(index, form, score || 0);
     return reversed ? -index : index;
   }
   keyForIndex(signedIndex) {
@@ -71,7 +74,7 @@ class WorkerLexicon {
         `/api/lexicons/${encodeURIComponent(this.slug)}/anagrams?${params}`,
         signal);
     return (data.anagrams || []).map(entry =>
-      this.cacheEntry(entry.form, entry.score, false));
+      this.cacheEntry(entry.id, entry.form, entry.score, false));
   }
   async getAnagramsK(letters, limit, count, sequenceOK, signal) {
     const params = new URLSearchParams({
@@ -130,7 +133,7 @@ class WorkerLexicon {
       }
       const limit = request.limit || 0;
       result[request.ci] = choices.slice(0, limit || undefined).map(choice =>
-        this.cacheEntry(choice.form, choice.score, choice.reversed));
+        this.cacheEntry(choice.id, choice.form, choice.score, choice.reversed));
     }
     return result;
   }
@@ -185,9 +188,12 @@ async function rebuild(message) {
   activeController = new AbortController();
   options = {...options, ...(message.options || {})};
   options.preflexSet = {};
-  for (const form of options.preflexForms || []) {
-    const index = lexicon.cacheEntry(form, 100, false);
-    options.preflexSet[index] = true;
+  // The main thread has already resolved these to lexicon indices; resolving
+  // them again here would invent numbers for anything outside the word list.
+  for (const entry of options.preflexEntries || []) {
+    if (!entry || !entry.index) continue;
+    lexicon.install(entry.index, entry.form, entry.score || 0);
+    options.preflexSet[entry.index] = true;
   }
   state = new ExetFillStateCore(message.state);
   engine = new ExetFillEngine(makeContext());

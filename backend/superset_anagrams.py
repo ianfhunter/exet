@@ -4,7 +4,12 @@ from __future__ import annotations
 
 import sqlite3
 
-from backend.lexicon_lookup import LETTER_SET, get_anagrams, parts_of
+from backend.lexicon_lookup import (
+    LETTER_SET,
+    get_anagrams,
+    lexicon_id_base,
+    parts_of,
+)
 
 
 def _letters_of(s: str) -> list[str]:
@@ -71,7 +76,7 @@ def get_superset_anagrams(
     like_sql, like_params = _like_filters(letters)
 
     sql = f"""
-        SELECT form, normalized, score
+        SELECT id, form, normalized, score
         FROM lexicon_entries
         WHERE lexicon_id = ?
           AND letter_count > ?
@@ -82,9 +87,10 @@ def get_superset_anagrams(
     """
     params: list[object] = [lexicon_id, len(letters), max_len, min_score, *like_params]
 
+    id_base = lexicon_id_base(conn, lexicon_id)
     out: list[dict] = []
     num = 0
-    for form, normalized, score in conn.execute(sql, params):
+    for entry_id, form, normalized, score in conn.execute(sql, params):
         if score < min_score:
             continue
         sup_letters = _letters_of(normalized)
@@ -108,6 +114,7 @@ def get_superset_anagrams(
         if not diff_anags:
             continue
         out.append({
+            "id": entry_id - id_base,
             "form": form,
             "score": score,
             "diff": diff_str,

@@ -111,19 +111,24 @@ const exetDataServer = (function() {
     };
   }
 
-  function cacheEntry(stub, form, score, reversed) {
-    let idx = stub.serverCache.formToIndex.get(form);
-    if (idx === undefined) {
-      idx = stub.lexicon.length;
-      stub.lexicon.push(form);
-      stub.scores.push(score);
-      stub.stems.push(idx);
-      stub.phones.push([]);
-      stub.serverCache.forms.push(form);
-      stub.serverCache.scores.push(score);
-      stub.serverCache.formToIndex.set(form, idx);
-    }
-    return reversed ? -idx : idx;
+  /**
+   * The server entry id *is* the lexicon index: it is stable, and the rows
+   * are numbered by rank, which is what indexLimit and the rank readout
+   * expect. Handing out local counters instead would give the fill worker and
+   * this thread two numberings of the same array, and a light would then be
+   * offered a word from whichever side wrote its slot last.
+   */
+  function cacheEntry(stub, id, form, score) {
+    const idx = Math.abs(Number(id));
+    if (!idx) return 0;
+    stub.lexicon[idx] = form;
+    stub.scores[idx] = score;
+    stub.stems[idx] = idx;
+    stub.phones[idx] = [];
+    stub.serverCache.forms[idx] = form;
+    stub.serverCache.scores[idx] = score;
+    stub.serverCache.formToIndex.set(form, idx);
+    return idx;
   }
 
   function minScoreParam() {
@@ -139,8 +144,10 @@ const exetDataServer = (function() {
     }
     const slug = exetLexicon.serverSlug;
     // This is the size of the server-side list, not the small browser cache.
-    // Large-list limits key off startLen.
-    exetLexicon.startLen = exetLexicon.serverEntryCount || 1;
+    // Large-list limits key off startLen. Ranks run 1..entryCount, so the
+    // first free slot -- where preferred fills outside the list go, and what
+    // choiceDisplayHTML tests against -- is one past the last of them.
+    exetLexicon.startLen = (exetLexicon.serverEntryCount || 0) + 1;
 
     exetLexicon.getLex = function(idx) {
       const i = Math.abs(idx);
@@ -185,7 +192,7 @@ const exetDataServer = (function() {
         if (regexp && !regexp.test(ch.form)) {
           continue;
         }
-        const idx = cacheEntry(this, ch.form, ch.score, ch.reversed);
+        const idx = cacheEntry(this, ch.id, ch.form, ch.score);
         const loopIdx = ch.reversed ? -idx : idx;
         if (dontReuse && dontReuse.has(Math.abs(idx))) {
           continue;
@@ -261,7 +268,7 @@ const exetDataServer = (function() {
         const limit = req.limit || 0;
         for (const ch of choices) {
           if (regexp && !regexp.test(ch.form)) continue;
-          const idx = cacheEntry(this, ch.form, ch.score, ch.reversed);
+          const idx = cacheEntry(this, ch.id, ch.form, ch.score);
           const loopIdx = ch.reversed ? -idx : idx;
           if (dontReuse && dontReuse.has(Math.abs(idx))) continue;
           if (unpreflexSet && unpreflexSet[idx]) continue;
@@ -337,7 +344,7 @@ const exetDataServer = (function() {
       const out = [];
       for (const a of (data.anagrams || [])) {
         if (getIndices) {
-          out.push(cacheEntry(this, a.form, a.score, false));
+          out.push(cacheEntry(this, a.id, a.form, a.score));
         } else {
           out.push(a.form);
         }
@@ -408,7 +415,7 @@ const exetDataServer = (function() {
       }
       const out = [];
       for (const row of (data.results || [])) {
-        const idx = cacheEntry(this, row.form, row.score || 0, false);
+        const idx = cacheEntry(this, row.id, row.form, row.score || 0);
         out.push([idx, row.diff, row.anagrams || []]);
       }
       return out;

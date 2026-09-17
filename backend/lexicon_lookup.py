@@ -65,6 +65,32 @@ def is_proper_noun(form: str) -> bool:
     return True
 
 
+_ID_BASE_CACHE: dict[str, int] = {}
+
+
+def lexicon_id_base(conn: sqlite3.Connection, lexicon_id: str) -> int:
+    """Row ids are unique across lexicons; the client indexes by rank.
+
+    Subtracting the base turns an id into 1..entry_count, which is what the
+    browser's lexicon array, its popularity cut, and its rank readout all
+    assume. Scanning for MIN(id) costs ~70ms, so it is cached and revalidated
+    with a primary-key lookup.
+    """
+    base = _ID_BASE_CACHE.get(lexicon_id)
+    if base is not None:
+        row = conn.execute(
+            "SELECT lexicon_id FROM lexicon_entries WHERE id = ?", (base + 1,)
+        ).fetchone()
+        if row and row[0] == lexicon_id:
+            return base
+    row = conn.execute(
+        "SELECT MIN(id) FROM lexicon_entries WHERE lexicon_id = ?", (lexicon_id,)
+    ).fetchone()
+    base = (row[0] or 1) - 1
+    _ID_BASE_CACHE[lexicon_id] = base
+    return base
+
+
 def _fetch_pattern_rows(
     conn: sqlite3.Connection,
     lexicon_id: str,
@@ -106,6 +132,10 @@ def get_fill_choices(
     if not key:
         return []
 
+    id_base = lexicon_id_base(conn, lexicon_id)
+    if index_limit > 0:
+        index_limit += id_base
+
     exclude_ids = exclude_ids or set()
     loops: list[list[str]] = [key]
     if try_rev:
@@ -123,7 +153,7 @@ def get_fill_choices(
             )
             if rows:
                 for row in rows:
-                    entry_id = row["id"]
+                    entry_id = row["id"] - id_base
                     loop_id = -entry_id if reversed_flag else entry_id
                     if loop_id in seen or entry_id in exclude_ids:
                         continue
@@ -209,5 +239,8 @@ def get_anagrams(
     if limit > 0:
         sql += " LIMIT ?"
         params.append(limit)
+    id_base = lexicon_id_base(conn, lexicon_id)
     rows = conn.execute(sql, params).fetchall()
-    return [{"id": r["id"], "form": r["form"], "score": r["score"]} for r in rows]
+    return [
+        {"id": r["id"] - id_base, "form": r["form"], "score": r["score"]} for r in rows
+    ]
