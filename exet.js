@@ -3899,6 +3899,7 @@ Exet.prototype.getAbbrevLetterTooltip = function(letter) {
 }
 
 Exet.prototype.ABBREV_CAT_LABELS = {
+  compound: "Letter-selection compounds",
   chemicals: "Chemicals",
   geography: "Geography",
   "roman-numerals": "Roman numerals",

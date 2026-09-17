@@ -10,6 +10,9 @@ Run from exet/:
   python tools/build-abbrev-lists.py
   python tools/build-abbrev-lists.py indicators
   python tools/build-abbrev-lists.py abbreviations
+  python tools/build-abbrev-lists.py --render-only
+                                        # re-emit the abbreviation outputs from
+                                        # the committed json, without scraping
 """
 
 from __future__ import annotations
@@ -76,6 +79,7 @@ ABBREV_INDICATOR_CURATED = [
 # Semantic groups for clue words (colour-coded in abbreviations.html).
 # Order matters: earlier = preferred when a word matches multiple rules.
 CLUE_CATEGORIES: list[tuple[str, str, str, str]] = [
+    ("compound", "Letter-selection compounds", "#f0f7d4", "#cfe08a"),
     ("chemicals", "Chemicals", "#e8f4fd", "#b8d4ee"),
     ("geography", "Geography", "#eef8ef", "#c8dfc9"),
     ("roman-numerals", "Roman numerals", "#fff0e6", "#f0c8a8"),
@@ -551,12 +555,19 @@ def wikipedia_line_category(line: str) -> str | None:
     return None
 
 
-def classify_clue_word(clue_word: str, hint: str | None = None) -> str:
+def classify_clue_word(
+    clue_word: str, hint: str | None = None, abbrev: str | None = None
+) -> str:
     if hint and hint in _CATEGORY_RANK:
         return hint
     text = norm_headword(clue_word)
     if not text:
         return "general"
+    # egghead/foxtail/bareback: when the abbreviation is the letter the compound
+    # selects, the wordplay outranks whatever topic the fodder belongs to. Other
+    # senses of the same word (weekend -> SS) keep their own category.
+    if abbrev and compound_letter_map().get(text) == norm_space(abbrev).upper():
+        return "compound"
     if text in ROMAN_CLUE_ABBREV:
         return "roman-numerals"
     if text in _CHESS_PHRASES or text in _CHESS_PIECES:
@@ -614,7 +625,7 @@ def invert_abbrev_entries(entries: list[dict]) -> list[dict]:
         clue_word = norm_headword(clue_word)
         if not clue_word:
             return
-        cat = classify_clue_word(clue_word, category_hint)
+        cat = classify_clue_word(clue_word, category_hint, row["abbreviation"])
         row["clue_categories"][clue_word] = pick_clue_category(
             row["clue_categories"].get(clue_word), cat
         )
@@ -1324,12 +1335,26 @@ def load_compound_letter_words() -> list[tuple[str, str]]:
     return list(COMPOUND_LETTER_CURATED)
 
 
+_COMPOUND_LETTER_MAP: dict[str, str] | None = None
+
+
+def compound_letter_map() -> dict[str, str]:
+    """Compound letter-selection word -> the letter it selects."""
+    global _COMPOUND_LETTER_MAP
+    if _COMPOUND_LETTER_MAP is None:
+        _COMPOUND_LETTER_MAP = {
+            norm_headword(word): letter.upper()
+            for word, letter in load_compound_letter_words()
+        }
+    return _COMPOUND_LETTER_MAP
+
+
 def apply_compound_letter_words(store: dict[str, dict]) -> int:
     """Add compound letter-selection words (e.g. sweetheart -> E)."""
     added = 0
     for word, letter in load_compound_letter_words():
         if add_abbrev(
-            store, word, letter, "compound-indicators", category="language"
+            store, word, letter, "compound-indicators", category="compound"
         ):
             added += 1
     return added
@@ -1788,9 +1813,17 @@ var abbrevByAlpha={data_json};
 def main(argv: list[str]) -> int:
     args = argv[1:]
     from_json = "--from-json" in args
+    render_only = "--render-only" in args
     wanted = {a.lower() for a in args if not a.startswith("-")}
     do_indicators = not wanted or "indicators" in wanted or "abbreviation-indicators" in wanted
     do_abbrev = not wanted or "abbreviations" in wanted or "abbrev" in wanted
+
+    if render_only:
+        # Presentation-only rebuild: no scraping, so the data cannot churn.
+        n = write_abbrev_outputs(load_abbrev_store())
+        print(f"\n--- Summary ---\n  abbreviations: {n} entries (from committed data)",
+              flush=True)
+        return 0
 
     summary: list[tuple[str, int]] = []
     if do_indicators:
