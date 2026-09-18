@@ -18,6 +18,7 @@ a portion of
 a section
 a selection of
 a spot of
+a stretch inside
 a touch of
 a trace of
 abducted by
@@ -138,6 +139,7 @@ camouflages
 can be seen in
 can hold
 can secure
+cans
 captivated (by)
 captured
 captured by
@@ -151,6 +153,7 @@ carrying
 case
 case for
 cases
+casing
 catch
 catch (to)
 catches
@@ -161,6 +164,7 @@ caught in
 caught up
 caught up in
 central
+central characters in
 central role
 central to
 centrally
@@ -183,6 +187,7 @@ chunk of
 cinematographi
 circles
 circling
+claims
 clinches
 clip
 clip from
@@ -462,7 +467,9 @@ found upside down
 fragment
 fragment from
 fragment of
+framed by
 frames
+framing
 franc
 freed from
 from
@@ -595,6 +602,7 @@ impounding
 imprison
 imprisoned
 imprisoned (by) (in)
+imprisoning
 in
 in course of
 in display of
@@ -818,6 +826,7 @@ observed amid
 observed in
 obtained
 occupant of
+occupies
 occupying
 oddly not
 of
@@ -969,6 +978,7 @@ reviewing
 riding in
 rings
 rooted (in)
+run from
 run of
 running across
 running through
@@ -1011,6 +1021,7 @@ selection from
 selection of
 selectively
 sequence of
+series in
 series of
 served
 served during
@@ -1060,6 +1071,7 @@ some (makes)
 some (of)
 some characters
 some characters for
+some characters in
 some constituents
 some from
 some items in
@@ -1097,6 +1109,7 @@ stored
 stored by
 stored in
 stores
+storing
 stowing
 strand of
 stretch

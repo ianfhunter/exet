@@ -1,4 +1,7 @@
+'s inaugural
 50%
+50% of
+a little
 a piece of
 abbreviations of
 across faces (of)
@@ -26,9 +29,13 @@ at the outset
 at the start
 away
 back
+back from
 back from/of/off
+back of
 backside of
 banks
+banks of
+banks on
 base
 basically
 beginner
@@ -37,6 +44,7 @@ beginners
 beginning
 beginning and end of
 beginning in/of/to
+beginning of
 beginning to
 beginning to end
 beginning(s)
@@ -49,22 +57,28 @@ bit of
 bonnet
 borders
 borders of
+borders on
 both sides of
 bottom
 boundary
+boundary for
 boundary for/from/of
+boundary of
 bounds
 bounds of
 butt of
 butts
 by all conclusions
 cap
+cap from
 cap from/of
+cap of
 capital
 capital of
 capital(s)
 capitals of
 case
+case for
 case for/of
 case of
 casing
@@ -73,7 +87,9 @@ caved
 central (characters) exposed
 central ingredient
 central ingredient of
+centrally
 centre
+centre for
 centre for/of
 centre of
 centre(s) in the
@@ -86,6 +102,7 @@ chump
 cleared
 cleared out
 close
+close of
 close of/to
 close to
 closer
@@ -94,62 +111,87 @@ closing letters
 closure
 closure of
 clothing
+clothing for
 clothing for/from/on
+coasts of
 coat
 coat of
 coating
+coda of
 conclude
 conclusion
+conclusion of
 conclusion of/to
 conclusion to
 confines
 confines of
+container for
+container of
 core
 core of
 cored
 cover
+cover from
 cover from/of
+cover of
+covering from
 covering from/of
+covering of
 crown
+crown of
 crowns (the)
 crust
+crust from
 crust from/of
+crust of
 crux
 crux of
 dash
 dash of
 debut
+debut of
 debuts of
 depleted
 discharged
+disembowelled
 disheartened
 drained
 drop
 drop of
 dropping every second
 earliest
+earliest of
 early sign of
 early signs of
 eastern border
+edge of
 edges
 edges of
 edging
+edging on
 edging on/to
+edging to
 element of
 emptied
 empty
 end
 end for/in/of/to
 end of
+end to
 end(s) of
 end(s) with
 ending
+ending in
 ending in/of
+ending of
 ending with
 ending(s)
 ends
 ends of
 entrance
+entrance for
+entrance to
+entrée of
 environs of
 essential character of
 essential ingredient of
@@ -193,12 +235,17 @@ final
 final bit
 final bit from/of/off
 final letters
+final of
 final signs
 finale
+finale of
 finale of/to
+finale to
 finally
 finish
+finish of
 finish of/off/to
+finish to
 finishing touch for
 first
 first and last letters
@@ -214,6 +261,7 @@ first pair of
 first show of
 first sign of
 first signs
+first to
 first two letters
 firstly
 flanks of
@@ -222,7 +270,9 @@ for
 for starters
 fore
 foremost
+foremost in
 foremost in/of
+foremost of
 fourth letters
 fringe
 fringe of
@@ -245,13 +295,19 @@ half of
 half-cut
 half-hearted(ly)
 head
+head for
 head for/from/of/off
+head of
 head(s)
 head(s) for
 head(s) of
+header of
+header to
 heading
 heading (up)
+heading for
 heading for/to
+heading of
 heads
 heads of
 heads to
@@ -263,6 +319,7 @@ heel of
 hem
 hint of
 hollow
+housing for
 hull from/of
 hull of
 ignore the odds
@@ -273,8 +330,10 @@ in front of
 in the end
 inane
 inaugural
+inauguration of
 incipient
 initial
+initial of
 initial(s)
 initially
 initials
@@ -282,7 +341,9 @@ initials of
 initiate
 initiated (by)
 initiation
+initiation of
 initiation of/in/to
+initiation to
 innards
 inside
 insiders
@@ -290,7 +351,9 @@ insides of
 intermittent
 intermittently
 introduction
+introduction from
 introduction from/to
+introduction to
 introduction(s) to
 intros (in)
 jacket
@@ -301,17 +364,25 @@ last bit of
 last drop of
 last from/in/of/to
 last letter
+last of
 last shred of
+last to
 lastly
 latest
+latest in
 latest in/of
+latest of
 lead
 lead character in
+lead from
 lead from/to
+lead to
 lead(s)
 lead(s) to
 leader
+leader in
 leader in/of
+leader of
 leader(s) in/of
 leaders
 leaders of
@@ -323,16 +394,23 @@ leads (in)
 leaving every other piece
 left
 left extremity of
+left in
+left of
 letters
 limit
+limit of
 limit of/to
+limit to
 limits
+limits of
 limits of/to
+limits to
 lists of
 losses
 maiden
 mainly
 marches from/off
+margins of
 middle (in)
 middle letter
 middle letter(s)
@@ -344,7 +422,10 @@ nether
 nip of
 no. 1
 no. 1 for/in
+no.1 for
+no.1 in
 nose
+nose of
 not
 not half
 nothing
@@ -372,6 +453,7 @@ off
 off and on
 on a regular basis
 on and off
+on the edges
 on vacation
 one half of
 onset
@@ -380,11 +462,15 @@ onset of
 opener
 opener for
 opening
+opening for
 opening for/in/of
 opening letters
+opening of
 opening(s)
 origin
+origin in
 origin in/of
+origin of
 origin(s)
 original
 originally
@@ -399,6 +485,7 @@ outsiders in
 outskirts of
 overture
 overture from/to
+overtures
 overtures (to)
 patterns
 peeled
@@ -407,6 +494,8 @@ periodically (found)
 piece of
 pinch of
 preface to
+prelude of
+prelude to
 primarily
 prime
 prime elements
@@ -417,7 +506,9 @@ principally
 principle of
 prow
 rear
+rear in
 rear in/of
+rear of
 regular
 regular letters from
 regularly
@@ -426,7 +517,9 @@ regulars in
 right
 right(s)
 rind
+rind from
 rind from/of
+rind of
 root(s)
 scrap of
 second
@@ -437,14 +530,18 @@ seconds
 seconds our
 selecting from
 shell
+shell from
 shell from/of
+shell of
 shred of
 sides
 sides of
 skin of
 skinned
 skirts
+skirts of
 skirts of/on
+skirts on
 slice of
 snap of
 some
@@ -456,7 +553,9 @@ sources of
 spot of
 squares (numbers)
 start
+start of
 start of/off/to
+start to
 start(s)
 start(s) to
 starter
@@ -486,15 +585,20 @@ taste of
 term of
 terminal
 terminal to
+terminally
 terminus
 terminus of
 third letters
 thirds
 time to time (from)
 tip
+tip from
 tip from/of/off
+tip of
 tips
+tips from
 tips from/of
+tips of
 to begin with
 top
 top of
@@ -508,12 +612,16 @@ tunnelled
 turned out
 ultimate in
 ultimately
+unfilled
+unloaded
+unoccupied
 vacant
 vacated
 vacuous
 void
 voided
 wanting seconds
+west side of
 western border
 what gets ... going
 what gets ... started
@@ -524,11 +632,16 @@ what's behind
 what’s behind
 wings
 wings of
+wings to
 without filling
 without stopping
 without stuffing
 wrapper
+wrapper for
 wrapper for/from/of/on
+wrapper of
 wrappers
 wrapping
+wrapping for
 wrapping for/from/of/on
+wrapping of

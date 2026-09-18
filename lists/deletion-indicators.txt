@@ -1,3 +1,4 @@
+-
 a certain amount off
 a great deal of
 a lot of
@@ -451,6 +452,7 @@ disregarded by
 disregarding
 disregards
 disrobe
+disrobed
 ditch
 ditched
 ditched by
@@ -750,6 +752,7 @@ gets shot of
 getting
 getting cut
 getting defaced
+getting end away
 getting half cut
 getting knocked out
 getting off
@@ -878,6 +881,7 @@ initially lost
 initially obscured
 initially rejected
 initially suppressed
+initially wanting
 innards
 inner
 inside
@@ -965,6 +969,7 @@ last
 lastly
 lasts out
 late getting underway
+late-starting
 lavishes
 lavishing
 laying aside
@@ -1438,6 +1443,7 @@ saved
 saving
 saving skin
 sawn-off
+scalped
 scantily
 scoffed
 score
@@ -1561,6 +1567,7 @@ skipping
 skips
 skirts
 slash
+slashed
 smashed
 snatched
 snatched from
@@ -1809,6 +1816,7 @@ unfilled
 unfinished
 unframed
 uninitiated
+unintroduced
 unleashed
 unleashed by
 unleashes
@@ -1824,6 +1832,7 @@ unnamed
 unobserved
 unoccupied
 unopened
+unprotected
 unremembered by
 unrestricted
 unsalted

@@ -1084,6 +1084,48 @@ def scrape_cryptipedia_abbrev(store: dict[str, dict]) -> int:
     return count
 
 
+def scrape_mycrossword_abbrev(store: dict[str, dict]) -> int:
+    """Pull clue-word -> abbreviation pairs from the MyCrossword toolkit."""
+    import string
+
+    count = 0
+    seen_ids: set[int] = set()
+    for letter in list(string.ascii_lowercase):
+        url = (
+            f"https://www.mycrossword.co.uk/toolkit/abbreviations?letter={letter}"
+        )
+        html = fetch(url)
+        cache = SOURCES_DIR / f"mycrossword-abbreviations-{letter}.html"
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_text(html, encoding="utf-8")
+        m = re.search(
+            r"window\.__remixContext\s*=\s*(\{.*?\});\s*</script>", html, re.S
+        )
+        if not m:
+            continue
+        try:
+            ctx = json.loads(m.group(1))
+            rows = (
+                ctx["state"]["loaderData"]["routes/toolkit_.abbreviations"].get(
+                    "abbreviations"
+                )
+                or []
+            )
+        except (KeyError, TypeError, ValueError):
+            continue
+        for row in rows:
+            rid = row.get("abbreviationId")
+            if isinstance(rid, int):
+                if rid in seen_ids:
+                    continue
+                seen_ids.add(rid)
+            clue = (row.get("name") or "").strip()
+            abbrev = (row.get("abbreviation") or "").strip()
+            if clue and abbrev and add_abbrev(store, clue, abbrev, "mycrossword"):
+                count += 1
+    return count
+
+
 # Wordplay labels that sometimes leak into the lexicon "Can Represent" column.
 LEXICON_NOT_EXPANSION = frozenset(
     {
@@ -1371,12 +1413,22 @@ def build_abbreviations() -> dict[str, dict]:
         ("wikipedia", scrape_wikipedia_abbrev),
         ("crossword-unclued", scrape_crossword_unclued_abbrev),
         ("cryptipedia", scrape_cryptipedia_abbrev),
+        ("mycrossword", scrape_mycrossword_abbrev),
         ("clue-clinic-lexicon", scrape_cryptic_lexicon_abbrev),
         ("sanitize-roman", lambda s: sanitize_roman_numerals(s)),
         ("curated-extras", apply_curated_extras),
         ("compound-letter-words", apply_compound_letter_words),
     ]
     print("\n=== Abbreviations (clue word -> expansion) ===", flush=True)
+    previous_entries: list[dict] = []
+    previous_path = OUT_DIR / "abbreviations.json"
+    if previous_path.is_file():
+        try:
+            previous_entries = json.loads(
+                previous_path.read_text(encoding="utf-8")
+            ).get("entries", [])
+        except (OSError, ValueError):
+            pass
     for name, fn in steps:
         try:
             before = len(store)
@@ -1387,7 +1439,23 @@ def build_abbreviations() -> dict[str, dict]:
                 flush=True,
             )
         except Exception as exc:
-            print(f"  {name}: FAIL — {exc}", flush=True)
+            restored = 0
+            if name == "cryptipedia":
+                for old in previous_entries:
+                    if "cryptipedia" not in (old.get("sources") or []):
+                        continue
+                    for exp in old.get("expansions") or []:
+                        text = (
+                            exp
+                            if isinstance(exp, str)
+                            else (exp.get("text") if isinstance(exp, dict) else None)
+                        )
+                        if text and add_abbrev(
+                            store, old["headword"], text, "cryptipedia"
+                        ):
+                            restored += 1
+            suffix = f"; restored {restored} prior entries" if restored else ""
+            print(f"  {name}: FAIL — {exc}{suffix}", flush=True)
     return store
 
 

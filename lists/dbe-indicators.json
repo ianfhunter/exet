@@ -1,0 +1,151 @@
+{
+  "type": "dbe",
+  "title": "Definition-by-example indicators",
+  "built": "2026-09-18",
+  "count": 16,
+  "sources": [
+    "curated-extras",
+    "mycrossword"
+  ],
+  "entries": [
+    {
+      "indicator": "among others",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "e.g.",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "eg",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for example",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for instance",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "for one",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "including",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "is one",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "like",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "maybe",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "notably",
+      "sources": [
+        "curated-extras"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "perhaps",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "possibly",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "potentially",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "say",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "such as",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    }
+  ]
+}

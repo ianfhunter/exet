@@ -1,18 +1,31 @@
 {
   "type": "letter-selection",
   "title": "Letter-selection indicators",
-  "built": "2026-08-12",
-  "count": 534,
+  "built": "2026-09-18",
+  "count": 647,
   "sources": [
     "clue-clinic",
     "clue-clinic-lexicon",
     "crossword-unclued",
     "cryptipedia",
     "curated-extras",
+    "mycrossword",
     "unscramblerer",
     "wordsup"
   ],
   "entries": [
+    {
+      "indicator": "'s inaugural",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
     {
       "indicator": "50%",
       "sources": [
@@ -22,6 +35,26 @@
       ],
       "categories": [
         "select: first or second half"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "50% of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "half only"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "a little",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
       ],
       "notes": []
     },
@@ -124,9 +157,11 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptipedia",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "first (multiple)",
         "select: first letter(s)"
       ],
       "notes": []
@@ -136,9 +171,11 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
+        "middle (multiple)",
         "select: middle letter(s)"
       ],
       "notes": []
@@ -167,9 +204,11 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptipedia",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "last (multiple)",
         "select: last letter(s)"
       ],
       "notes": []
@@ -210,9 +249,11 @@
       "indicator": "at the edges",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -281,6 +322,18 @@
       "notes": []
     },
     {
+      "indicator": "back from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "back from/of/off",
       "sources": [
         "clue-clinic"
@@ -289,12 +342,24 @@
       "notes": []
     },
     {
+      "indicator": "back of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "backside of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -309,6 +374,28 @@
         "list of 24 first and last letter selection indicators"
       ],
       "notes": []
+    },
+    {
+      "indicator": "banks of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "banks on",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "base",
@@ -346,9 +433,12 @@
     {
       "indicator": "beginner in",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -392,12 +482,27 @@
       "notes": []
     },
     {
+      "indicator": "beginning of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "beginning to",
       "sources": [
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
-      "categories": [],
-      "notes": []
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "beginning to end",
@@ -444,9 +549,11 @@
       "indicator": "belly of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "middle (multiple)",
         "select: middle letter(s)"
       ],
       "notes": []
@@ -467,9 +574,11 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -499,21 +608,40 @@
       "indicator": "borders of",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
       "notes": []
+    },
+    {
+      "indicator": "borders on",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "both sides of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
-      "notes": []
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "bottom",
@@ -538,11 +666,33 @@
       "notes": []
     },
     {
+      "indicator": "boundary for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "boundary for/from/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "boundary of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
       "notes": []
     },
     {
@@ -558,18 +708,23 @@
     {
       "indicator": "bounds of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
       "indicator": "butt of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -601,11 +756,33 @@
       "notes": []
     },
     {
+      "indicator": "cap from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "cap from/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "cap of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -624,9 +801,12 @@
     {
       "indicator": "capital of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -660,6 +840,18 @@
       "notes": []
     },
     {
+      "indicator": "case for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "case for/of",
       "sources": [
         "clue-clinic"
@@ -670,9 +862,12 @@
     {
       "indicator": "case of",
       "sources": [
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
@@ -691,9 +886,12 @@
     {
       "indicator": "casing of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
@@ -725,9 +923,22 @@
     {
       "indicator": "central ingredient of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "middle"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "centrally",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "middle"
+      ],
       "notes": []
     },
     {
@@ -741,6 +952,18 @@
       "notes": []
     },
     {
+      "indicator": "centre for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "middle (multiple)"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "centre for/of",
       "sources": [
         "clue-clinic"
@@ -751,9 +974,12 @@
     {
       "indicator": "centre of",
       "sources": [
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "middle (multiple)"
+      ],
       "notes": []
     },
     {
@@ -785,9 +1011,12 @@
     {
       "indicator": "centrepiece of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "middle (multiple)"
+      ],
       "notes": []
     },
     {
@@ -823,18 +1052,23 @@
     {
       "indicator": "cleared",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
       "indicator": "cleared out",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -851,6 +1085,16 @@
       "notes": []
     },
     {
+      "indicator": "close of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "close of/to",
       "sources": [
         "clue-clinic"
@@ -861,10 +1105,15 @@
     {
       "indicator": "close to",
       "sources": [
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
-      "categories": [],
-      "notes": []
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "closer",
@@ -879,9 +1128,12 @@
     {
       "indicator": "closer to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "last"
+      ],
       "notes": []
     },
     {
@@ -905,9 +1157,12 @@
     {
       "indicator": "closure of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "last"
+      ],
       "notes": []
     },
     {
@@ -921,11 +1176,31 @@
       "notes": []
     },
     {
+      "indicator": "clothing for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "clothing for/from/on",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "coasts of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
@@ -956,6 +1231,16 @@
       "notes": []
     },
     {
+      "indicator": "coda of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "conclude",
       "sources": [
         "wordsup"
@@ -974,6 +1259,16 @@
       "notes": []
     },
     {
+      "indicator": "conclusion of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "conclusion of/to",
       "sources": [
         "clue-clinic"
@@ -984,10 +1279,15 @@
     {
       "indicator": "conclusion to",
       "sources": [
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
-      "categories": [],
-      "notes": []
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "confines",
@@ -1002,9 +1302,34 @@
     {
       "indicator": "confines of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "container for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "container of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
@@ -1020,9 +1345,11 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "middle (multiple)",
         "select: middle letter(s)"
       ],
       "notes": []
@@ -1048,12 +1375,46 @@
       "notes": []
     },
     {
+      "indicator": "cover from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "cover from/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
       "notes": []
+    },
+    {
+      "indicator": "cover of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "covering from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "covering from/of",
@@ -1064,6 +1425,16 @@
       "notes": []
     },
     {
+      "indicator": "covering of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "crown",
       "sources": [
         "clue-clinic",
@@ -1071,6 +1442,16 @@
       ],
       "categories": [
         "select: first letter"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "crown of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
       ],
       "notes": []
     },
@@ -1093,11 +1474,33 @@
       "notes": []
     },
     {
+      "indicator": "crust from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "crust from/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "crust of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
@@ -1113,9 +1516,12 @@
     {
       "indicator": "crux of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "middle (multiple)"
+      ],
       "notes": []
     },
     {
@@ -1131,9 +1537,12 @@
     {
       "indicator": "dash of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -1142,6 +1551,16 @@
         "wordsup"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "debut of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -1155,9 +1574,12 @@
     {
       "indicator": "depleted",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
@@ -1165,11 +1587,23 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "disembowelled",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
       ],
       "notes": []
     },
@@ -1177,10 +1611,12 @@
       "indicator": "disheartened",
       "sources": [
         "clue-clinic",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
-        "list of 24 first and last letter selection indicators"
+        "list of 24 first and last letter selection indicators",
+        "outer"
       ],
       "notes": []
     },
@@ -1189,10 +1625,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -1209,9 +1647,11 @@
       "indicator": "drop of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -1238,12 +1678,24 @@
       "notes": []
     },
     {
+      "indicator": "earliest of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "early sign of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -1269,6 +1721,16 @@
       "notes": []
     },
     {
+      "indicator": "edge of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "edges",
       "sources": [
         "clue-clinic-lexicon",
@@ -1286,9 +1748,12 @@
       "indicator": "edges of",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
@@ -1302,6 +1767,18 @@
       "notes": []
     },
     {
+      "indicator": "edging on",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "edging on/to",
       "sources": [
         "clue-clinic"
@@ -1310,12 +1787,24 @@
       "notes": []
     },
     {
+      "indicator": "edging to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "element of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -1325,10 +1814,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -1338,10 +1829,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -1371,10 +1864,25 @@
     {
       "indicator": "end of",
       "sources": [
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "last"
+      ],
       "notes": []
+    },
+    {
+      "indicator": "end to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "end(s) of",
@@ -1405,11 +1913,33 @@
       "notes": []
     },
     {
+      "indicator": "ending in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "ending in/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "ending of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
       "notes": []
     },
     {
@@ -1457,6 +1987,38 @@
       "notes": []
     },
     {
+      "indicator": "entrance for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "entrance to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "entrée of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "environs of",
       "sources": [
         "clue-clinic",
@@ -1471,9 +2033,11 @@
       "indicator": "essential character of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "middle",
         "select: middle letter"
       ],
       "notes": []
@@ -1482,9 +2046,11 @@
       "indicator": "essential ingredient of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "middle",
         "select: middle letter"
       ],
       "notes": []
@@ -1494,9 +2060,11 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
+        "middle (multiple)",
         "select: middle letter(s)"
       ],
       "notes": []
@@ -1506,10 +2074,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -1568,9 +2138,11 @@
         "crossword-unclued",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
+        "intermittent",
         "select: even letters"
       ],
       "notes": []
@@ -1670,9 +2242,11 @@
       "indicator": "every second",
       "sources": [
         "clue-clinic-lexicon",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
+        "intermittent",
         "select: even letters"
       ],
       "notes": []
@@ -1709,9 +2283,11 @@
       "indicator": "excavated",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -1721,10 +2297,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -1764,9 +2342,11 @@
       "indicator": "extreme of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -1776,11 +2356,13 @@
       "sources": [
         "crossword-unclued",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
-        "most common selection indicators"
+        "most common selection indicators",
+        "outer"
       ],
       "notes": []
     },
@@ -1796,9 +2378,11 @@
       "indicator": "extremes of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -1807,9 +2391,11 @@
       "indicator": "extremities of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -1818,9 +2404,11 @@
       "indicator": "face of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -1829,9 +2417,11 @@
       "indicator": "far side of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -1897,6 +2487,16 @@
       "notes": []
     },
     {
+      "indicator": "final of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "final signs",
       "sources": [
         "wordsup"
@@ -1919,6 +2519,16 @@
       "notes": []
     },
     {
+      "indicator": "finale of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "finale of/to",
       "sources": [
         "clue-clinic"
@@ -1927,15 +2537,29 @@
       "notes": []
     },
     {
+      "indicator": "finale to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "finally",
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
+        "last (multiple)",
         "list of 52 last letter selection indicators",
         "most common selection indicators",
         "select: last letter(s)"
@@ -1958,6 +2582,16 @@
       "notes": []
     },
     {
+      "indicator": "finish of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "finish of/off/to",
       "sources": [
         "clue-clinic"
@@ -1966,12 +2600,26 @@
       "notes": []
     },
     {
+      "indicator": "finish to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "finishing touch for",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -2057,9 +2705,12 @@
     {
       "indicator": "first of",
       "sources": [
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -2086,9 +2737,11 @@
       "indicator": "first show of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -2098,9 +2751,11 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -2112,6 +2767,18 @@
       ],
       "categories": [],
       "notes": []
+    },
+    {
+      "indicator": "first to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "first two letters",
@@ -2130,9 +2797,11 @@
         "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptipedia",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
+        "first (multiple)",
         "select : first letter"
       ],
       "notes": []
@@ -2141,9 +2810,11 @@
       "indicator": "flanks of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -2152,9 +2823,11 @@
       "indicator": "focus of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "middle",
         "select: middle letter"
       ],
       "notes": []
@@ -2195,11 +2868,33 @@
       "notes": []
     },
     {
+      "indicator": "foremost in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "foremost in/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "foremost of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -2224,9 +2919,11 @@
       "indicator": "fringe of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -2243,9 +2940,11 @@
       "indicator": "fringes of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -2294,9 +2993,11 @@
       "indicator": "front of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -2342,10 +3043,12 @@
     {
       "indicator": "gutless",
       "sources": [
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
-        "list of 24 first and last letter selection indicators"
+        "list of 24 first and last letter selection indicators",
+        "outer"
       ],
       "notes": []
     },
@@ -2354,10 +3057,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -2387,18 +3092,23 @@
     {
       "indicator": "half of",
       "sources": [
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "half only"
+      ],
       "notes": []
     },
     {
       "indicator": "half-cut",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "half only",
         "select: first or second half"
       ],
       "notes": []
@@ -2428,11 +3138,33 @@
       "notes": []
     },
     {
+      "indicator": "head for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "head for/from/of/off",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "head of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -2460,6 +3192,28 @@
       "notes": []
     },
     {
+      "indicator": "header of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "header to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "heading",
       "sources": [
         "clue-clinic-lexicon",
@@ -2481,11 +3235,33 @@
       "notes": []
     },
     {
+      "indicator": "heading for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "heading for/to",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "heading of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -2527,9 +3303,11 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptipedia",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "middle (multiple)",
         "select: middle letter(s)"
       ],
       "notes": []
@@ -2556,9 +3334,11 @@
       "indicator": "heel of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -2575,9 +3355,11 @@
       "indicator": "hint of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -2588,11 +3370,23 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "housing for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
       ],
       "notes": []
     },
@@ -2607,9 +3401,11 @@
     {
       "indicator": "hull of",
       "sources": [
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -2660,9 +3456,12 @@
       "indicator": "in the end",
       "sources": [
         "cryptipedia",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "last"
+      ],
       "notes": []
     },
     {
@@ -2682,6 +3481,16 @@
         "wordsup"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "inauguration of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -2708,6 +3517,16 @@
       "notes": []
     },
     {
+      "indicator": "initial of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "initial(s)",
       "sources": [
         "cryptipedia"
@@ -2723,10 +3542,12 @@
         "crossword-unclued",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
+        "first (multiple)",
         "list of 21 first letter selection indicators",
         "most common selection indicators",
         "select: first letter(s)"
@@ -2777,12 +3598,34 @@
       "notes": []
     },
     {
+      "indicator": "initiation of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "initiation of/in/to",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
       "notes": []
+    },
+    {
+      "indicator": "initiation to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "innards",
@@ -2828,9 +3671,11 @@
       "indicator": "intermittently",
       "sources": [
         "clue-clinic-lexicon",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
+        "intermittent",
         "select: regular letters"
       ],
       "notes": []
@@ -2850,12 +3695,34 @@
       "notes": []
     },
     {
+      "indicator": "introduction from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "introduction from/to",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
       "notes": []
+    },
+    {
+      "indicator": "introduction to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "introduction(s) to",
@@ -2926,9 +3793,11 @@
       "indicator": "last drop of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -2952,15 +3821,39 @@
       ]
     },
     {
+      "indicator": "last of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "last shred of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
+    },
+    {
+      "indicator": "last to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "lastly",
@@ -2969,9 +3862,11 @@
         "clue-clinic-lexicon",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
+        "last (multiple)",
         "list of 52 last letter selection indicators",
         "select: last letter(s)"
       ],
@@ -2989,11 +3884,33 @@
       "notes": []
     },
     {
+      "indicator": "latest in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "latest in/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "latest of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
       "notes": []
     },
     {
@@ -3013,10 +3930,22 @@
       "indicator": "lead character in",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "lead from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
       ],
       "notes": []
     },
@@ -3027,6 +3956,18 @@
       ],
       "categories": [],
       "notes": []
+    },
+    {
+      "indicator": "lead to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "lead(s)",
@@ -3058,11 +3999,33 @@
       "notes": []
     },
     {
+      "indicator": "leader in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "leader in/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "leader of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -3162,6 +4125,28 @@
       "notes": []
     },
     {
+      "indicator": "left in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "left of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "letters",
       "sources": [
         "crossword-unclued"
@@ -3180,12 +4165,34 @@
       "notes": []
     },
     {
+      "indicator": "limit of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "limit of/to",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
       "notes": []
+    },
+    {
+      "indicator": "limit to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "limits",
@@ -3198,12 +4205,34 @@
       "notes": []
     },
     {
+      "indicator": "limits of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "limits of/to",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
       "notes": []
+    },
+    {
+      "indicator": "limits to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "lists of",
@@ -3246,6 +4275,16 @@
       "notes": []
     },
     {
+      "indicator": "margins of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "middle (in)",
       "sources": [
         "cryptipedia"
@@ -3278,9 +4317,11 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "middle (multiple)",
         "select: middle letter(s)"
       ],
       "notes": []
@@ -3350,6 +4391,28 @@
       "notes": []
     },
     {
+      "indicator": "no.1 for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "no.1 in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "nose",
       "sources": [
         "clue-clinic",
@@ -3357,6 +4420,16 @@
       ],
       "categories": [
         "select: first letter"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "nose of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
       ],
       "notes": []
     },
@@ -3372,9 +4445,11 @@
       "indicator": "not half",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "half only",
         "select: first or second half"
       ],
       "notes": []
@@ -3453,9 +4528,11 @@
     {
       "indicator": "odd bits of",
       "sources": [
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "intermittent",
         "select: odd letters"
       ],
       "notes": []
@@ -3503,9 +4580,11 @@
         "crossword-unclued",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
+        "intermittent",
         "select: odd letters"
       ],
       "notes": []
@@ -3621,12 +4700,26 @@
       "notes": []
     },
     {
+      "indicator": "on the edges",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "on vacation",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -3659,9 +4752,11 @@
       "indicator": "onset of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -3683,9 +4778,12 @@
     {
       "indicator": "opener for",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -3701,6 +4799,18 @@
       "notes": []
     },
     {
+      "indicator": "opening for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "opening for/in/of",
       "sources": [
         "clue-clinic"
@@ -3714,6 +4824,16 @@
         "curated-extras"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "opening of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -3739,11 +4859,33 @@
       "notes": []
     },
     {
+      "indicator": "origin in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "origin in/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "origin of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -3758,9 +4900,11 @@
       "indicator": "original",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -3771,10 +4915,12 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
+        "first (multiple)",
         "list of 21 first letter selection indicators",
         "most common selection indicators",
         "select: first letter(s)"
@@ -3835,9 +4981,12 @@
       "indicator": "outside of",
       "sources": [
         "cryptipedia",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
@@ -3865,9 +5014,11 @@
       "indicator": "outskirts of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -3888,6 +5039,16 @@
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "overtures",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first (multiple)"
+      ],
       "notes": []
     },
     {
@@ -3918,9 +5079,11 @@
       "indicator": "periodically",
       "sources": [
         "clue-clinic-lexicon",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
+        "intermittent",
         "select: regular letters"
       ],
       "notes": []
@@ -3937,9 +5100,11 @@
       "indicator": "piece of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -3948,9 +5113,11 @@
       "indicator": "pinch of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -3959,10 +5126,34 @@
       "indicator": "preface to",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "prelude of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "prelude to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
       ],
       "notes": []
     },
@@ -3973,10 +5164,12 @@
         "clue-clinic-lexicon",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
+        "first (multiple)",
         "list of 21 first letter selection indicators",
         "most common selection indicators",
         "select: first letter(s)"
@@ -4012,9 +5205,11 @@
       "indicator": "principal character in",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4034,9 +5229,11 @@
         "clue-clinic-lexicon",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
+        "first (multiple)",
         "list of 21 first letter selection indicators",
         "select: first letter(s)"
       ],
@@ -4046,9 +5243,11 @@
       "indicator": "principle of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4075,11 +5274,33 @@
       "notes": []
     },
     {
+      "indicator": "rear in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "rear in/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rear of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last"
+      ],
       "notes": []
     },
     {
@@ -4109,9 +5330,11 @@
         "crossword-unclued",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
+        "intermittent",
         "select: regular letters"
       ],
       "notes": []
@@ -4164,11 +5387,33 @@
       "notes": []
     },
     {
+      "indicator": "rind from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "rind from/of",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "rind of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
@@ -4183,9 +5428,11 @@
       "indicator": "scrap of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4267,6 +5514,18 @@
       "notes": []
     },
     {
+      "indicator": "shell from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "shell from/of",
       "sources": [
         "clue-clinic"
@@ -4275,12 +5534,24 @@
       "notes": []
     },
     {
+      "indicator": "shell of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "shred of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4302,18 +5573,23 @@
       "indicator": "sides of",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
       "indicator": "skin of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -4337,6 +5613,16 @@
       "notes": []
     },
     {
+      "indicator": "skirts of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "skirts of/on",
       "sources": [
         "clue-clinic"
@@ -4345,12 +5631,26 @@
       "notes": []
     },
     {
+      "indicator": "skirts on",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "slice of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4391,9 +5691,11 @@
       "indicator": "source of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4419,9 +5721,11 @@
       "indicator": "spot of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4447,12 +5751,34 @@
       "notes": []
     },
     {
+      "indicator": "start of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "start of/off/to",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
       "notes": []
+    },
+    {
+      "indicator": "start to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "start(s)",
@@ -4486,9 +5812,12 @@
     {
       "indicator": "starter of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -4544,9 +5873,11 @@
       "indicator": "stern of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -4555,9 +5886,11 @@
       "indicator": "stripped",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -4577,9 +5910,11 @@
       "indicator": "suggestion of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4610,9 +5945,11 @@
       "indicator": "tail of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -4685,9 +6022,11 @@
       "indicator": "taste of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4696,9 +6035,11 @@
       "indicator": "term of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -4715,10 +6056,22 @@
       "indicator": "terminal to",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "terminally",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "last (multiple)"
       ],
       "notes": []
     },
@@ -4734,9 +6087,11 @@
       "indicator": "terminus of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -4777,11 +6132,33 @@
       "notes": []
     },
     {
+      "indicator": "tip from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "tip from/of/off",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "tip of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
+      ],
       "notes": []
     },
     {
@@ -4796,6 +6173,18 @@
       "notes": []
     },
     {
+      "indicator": "tips from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "tips from/of",
       "sources": [
         "clue-clinic"
@@ -4804,14 +6193,26 @@
       "notes": []
     },
     {
+      "indicator": "tips of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "to begin with",
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptipedia",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "first (multiple)",
         "select: first letter(s)"
       ],
       "notes": []
@@ -4834,9 +6235,11 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4861,9 +6264,11 @@
       "indicator": "topside of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4872,9 +6277,11 @@
       "indicator": "touch of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4883,9 +6290,11 @@
       "indicator": "trace of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "first",
         "select: first letter"
       ],
       "notes": []
@@ -4894,9 +6303,11 @@
       "indicator": "train of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -4913,9 +6324,11 @@
       "indicator": "turned out",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -4924,9 +6337,11 @@
       "indicator": "ultimate in",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -4938,12 +6353,44 @@
         "clue-clinic-lexicon",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
+        "last (multiple)",
         "list of 52 last letter selection indicators",
         "most common selection indicators",
         "select: last letter(s)"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "unfilled",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "unloaded",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "unoccupied",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
       ],
       "notes": []
     },
@@ -4952,10 +6399,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -4965,10 +6414,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -4977,9 +6428,11 @@
       "indicator": "vacuous",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -5002,10 +6455,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of 24 first and last letter selection indicators",
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -5017,6 +6472,16 @@
       ],
       "categories": [
         "select: odd letters"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "west side of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "first"
       ],
       "notes": []
     },
@@ -5078,9 +6543,11 @@
     {
       "indicator": "what's behind",
       "sources": [
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "last",
         "select: last letter"
       ],
       "notes": []
@@ -5106,18 +6573,35 @@
     {
       "indicator": "wings of",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "outer"
+      ],
       "notes": []
+    },
+    {
+      "indicator": "wings to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "without filling",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -5134,9 +6618,11 @@
       "indicator": "without stuffing",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "outer",
         "select: first and last letters"
       ],
       "notes": []
@@ -5153,11 +6639,33 @@
       "notes": []
     },
     {
+      "indicator": "wrapper for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "wrapper for/from/of/on",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "wrapper of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     },
     {
@@ -5181,11 +6689,33 @@
       "notes": []
     },
     {
+      "indicator": "wrapping for",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
       "indicator": "wrapping for/from/of/on",
       "sources": [
         "clue-clinic"
       ],
       "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "wrapping of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "outer"
+      ],
       "notes": []
     }
   ]

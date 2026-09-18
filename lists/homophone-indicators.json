@@ -1,8 +1,8 @@
 {
   "type": "homophone",
   "title": "Homophone indicators",
-  "built": "2026-08-12",
-  "count": 788,
+  "built": "2026-09-18",
+  "count": 792,
   "sources": [
     "clue-clinic",
     "clue-clinic-lexicon",
@@ -11,6 +11,7 @@
     "cryptipedia",
     "curated-extras",
     "daily-cryptic",
+    "mycrossword",
     "solve-the-crossword",
     "unscramblerer",
     "wordsup"
@@ -201,6 +202,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -239,6 +241,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -323,6 +326,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -475,7 +479,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -622,6 +627,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -642,6 +648,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -976,6 +983,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -1151,6 +1159,7 @@
         "cryptipedia",
         "curated-extras",
         "daily-cryptic",
+        "mycrossword",
         "solve-the-crossword",
         "wordsup"
       ],
@@ -1195,6 +1204,7 @@
       "sources": [
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
@@ -1287,7 +1297,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -1390,6 +1401,16 @@
         "list of homophone indicators"
       ],
       "notes": []
+    },
+    {
+      "indicator": "conversationalist's",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "conveyed",
@@ -1539,7 +1560,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -1575,7 +1597,8 @@
     {
       "indicator": "delivery of",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": []
@@ -1609,7 +1632,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -1635,6 +1659,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -1716,6 +1741,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -1819,7 +1845,8 @@
       "indicator": "escaping from trap",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -1974,7 +2001,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -2012,7 +2040,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -2032,10 +2061,13 @@
     {
       "indicator": "for dictator",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
-      "notes": []
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "for discussing",
@@ -2080,7 +2112,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -2343,7 +2376,8 @@
     {
       "indicator": "from what we hear",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": []
@@ -2353,7 +2387,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -2507,6 +2542,14 @@
       "notes": []
     },
     {
+      "indicator": "having said that",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
       "indicator": "hear",
       "sources": [
         "crossword-unclued",
@@ -2545,6 +2588,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "daily-cryptic",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -2796,6 +2840,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
@@ -2852,6 +2897,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
@@ -2894,7 +2940,8 @@
     {
       "indicator": "in hearing",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": []
@@ -2926,7 +2973,8 @@
     {
       "indicator": "in podcast",
       "sources": [
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -2978,7 +3026,8 @@
       "indicator": "in recording",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -3060,6 +3109,7 @@
         "cryptipedia",
         "curated-extras",
         "daily-cryptic",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
@@ -3098,7 +3148,8 @@
       "indicator": "in the auditorium",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
       "notes": []
@@ -3107,10 +3158,13 @@
       "indicator": "in the ear",
       "sources": [
         "cryptics-georgeho",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [],
-      "notes": []
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "in the ears",
@@ -3540,7 +3594,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -3630,7 +3685,8 @@
       "indicator": "mentioned",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
       "notes": []
@@ -3920,7 +3976,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -3993,6 +4050,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [],
@@ -4006,6 +4064,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "solve-the-crossword",
         "wordsup"
       ],
@@ -4030,7 +4089,8 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -4094,6 +4154,7 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
@@ -4113,6 +4174,7 @@
         "cryptipedia",
         "curated-extras",
         "daily-cryptic",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -4159,6 +4221,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -4203,6 +4266,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -4267,7 +4331,8 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -4319,7 +4384,8 @@
     {
       "indicator": "podcaster's",
       "sources": [
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -4450,6 +4516,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -4560,7 +4627,8 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -4575,6 +4643,7 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
@@ -4793,6 +4862,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -4830,6 +4900,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "daily-cryptic",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -5014,6 +5085,7 @@
         "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -5227,12 +5299,15 @@
       "indicator": "so it's said",
       "sources": [
         "clue-clinic-lexicon",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
         "pun"
       ],
-      "notes": []
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "so it’s said",
@@ -5374,7 +5449,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -5499,6 +5575,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "daily-cryptic",
+        "mycrossword",
         "solve-the-crossword",
         "wordsup"
       ],
@@ -5649,6 +5726,7 @@
         "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -5733,6 +5811,7 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
@@ -5837,6 +5916,14 @@
       "indicator": "talked of",
       "sources": [
         "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": []
+    },
+    {
+      "indicator": "talker's",
+      "sources": [
+        "mycrossword"
       ],
       "categories": [],
       "notes": []
@@ -6291,7 +6378,8 @@
       "indicator": "to the ear",
       "sources": [
         "cryptics-georgeho",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [],
       "notes": []
@@ -6338,6 +6426,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
@@ -6439,6 +6528,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [
@@ -6471,6 +6561,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
@@ -6496,6 +6587,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
@@ -6552,6 +6644,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -6620,6 +6713,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -6627,7 +6721,9 @@
       "categories": [
         "list of homophone indicators"
       ],
-      "notes": []
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "vocally imitated",
@@ -6665,6 +6761,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -6683,6 +6780,16 @@
       ],
       "categories": [],
       "notes": []
+    },
+    {
+      "indicator": "voiced out",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "voicing",
@@ -6736,7 +6843,8 @@
       "indicator": "we gather",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "pun"
@@ -6752,6 +6860,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "daily-cryptic",
+        "mycrossword",
         "solve-the-crossword",
         "wordsup"
       ],
@@ -7197,7 +7306,8 @@
     {
       "indicator": "you might say",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": []

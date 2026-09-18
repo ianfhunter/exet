@@ -1,45 +1,49 @@
 dime -> 12.5 cents, IOC
-about -> A, C, CA, ON, RE
-absent -> A, ABS
+about -> A, C, CA, ON, RE, a, ca, on, re
+absent -> A, ABS, a
 absolute -> A, ABS
 academician -> A, ARA, PRA, RA
 academy -> A, RA
-acceleration -> A, G
-accepted -> A
+acceleration -> A, G, a
+accepted -> A, a
 ace -> A, AI
 acidhead -> A
-acre -> A, AC
-acreage -> A
+acre -> A, AC, a
+acreage -> A, a
 acres -> A
-acting -> A, ACT, ON
-active -> A, ACT
-adjective -> A, ADJ
+across -> A, X
+acting -> A, ACT, ON, a
+active -> A, ACT, a
+adjective -> A, ADJ, a
 adult -> A
-advance -> A
-advanced -> A
-afternoon -> A, IAM, PM
+advance -> A, a
+advanced -> A, a
+afternoon -> A, IAM, PM, a, pm
 airhead -> A
 aleph -> A, Hebrew letter
 alfa -> A
 alpha -> A, Greek letter, beginning, first character, first letter
-alto -> A, ALT
+alto -> A, ALT, a
 amateur -> A, AM
-america -> A, AM, US, USA
-american -> A, AM, GI, US
+america -> A, AM, Am, US, USA
+american -> A, AM, Am, GI, US
 ammeter -> A
+amp -> A
 ampere -> A, AMP
 an -> A, I
 ane -> A, I
 angstrom -> A
-anonymous -> A, AN
-answer -> A, ANS
+annum -> a
+anonymous -> A, AN, a
+answer -> A, ANS, a, ans
 ante -> A
-anterior -> A
-are -> A, R
+anterior -> A, a
+are -> A, R, r
+are (metric measure) -> a
 area -> A
-argon -> A, AR
+argon -> A, AR, Ar
 arrowhead -> A
-article -> A, AN, ART, THE
+article -> A, AN, ART, THE, the
 articles -> A
 associate -> A, ASS
 at -> A
@@ -48,60 +52,70 @@ atomic -> A
 atomic weight -> A
 atthestart -> A
 atthetop -> A
+atto- -> a
 australia -> A, AUS, OZ
 australian -> A
 austria -> A
 axehead -> A
 axhead -> A
-ay -> A, I
-aye -> A, I
+ay -> A, I, a, i
+aye -> A, I, a, i
 badheart -> A
 before -> A, AN, BEF, ERE
+before (ante) -> a
 blackheart -> A
 blood group -> A, B, O
 bomb -> A, EGG, H, V
 braveheart -> A
+card -> A, ACE, J, K, Q
 crazyheart -> A
 effect -> A
 examination -> A, EX, O
 fatheart -> A
 film -> A, ET, U, X
+first -> A, I, IST, ist
 first character -> A
 first class -> A, AI
 first letter -> A
+first-rate -> A
 five thousand -> A, E
 gayheart -> A
 getatip -> A
-good -> A, AI, G, PI
+good -> A, AI, G, PI, a, g, pi
 heavyheart -> A
-high class -> A, AI, U
+high class -> A, AI, U, a
 hollaback -> A
 honour -> A, CBE, CH, J, K, MBE, OBE, OM, Q
-i -> A, AN, ANE, AY, AYE, EYE, JE
+i -> A, AN, ANE, AY, AYE, EYE, JE, a, ay, aye, eye
 in the year -> A, AN
-it -> A, SA
-key -> A, ALT, B, C, D, DEL, E, ESC, F, G
-key + -> A, B, C, D, E, F, G
+in the year (anno) -> a
+it -> A, SA, a
+key -> A, ALT, B, C, D, DEL, E, ESC, F, G, b
+key + -> A, B, C, D, E, F, G, c, d, e
 level -> A, Y
-midday -> A, M, N
-note -> A, B, C, D, DO, DOH, E, F, FA, FAH, G, LA, LAH, ME, MI, N, NB, PS, RE, SI, SO, SOH, SOL, TE, TI, TI. LA is most commonly referenced, TIC, UT
-note + -> A, B, C, D, E, F, G
-one -> A, ACE, AN, ANE, I, J, UN, UNIT, rarely A
+midday -> A, M, N, a
+note -> A, B, C, D, DO, DOH, E, F, FA, FAH, G, LA, LAH, ME, MI, N, NB, PS, RE, SI, SO, SOH, SOL, TE, TI, TI. LA is most commonly referenced, TIC, UT, b, do, doh, fa, fah, la, lah, me, mi, n, re, si, soh, sol, te, ti, ut
+note + -> A, B, C, D, E, F, G, c, d, e
+one -> A, ACE, AN, ANE, I, J, UN, UNIT, a, rarely A, un
 one * -> A, AN
-paper -> A, B, FT, I, MS
-per -> A, PR
-road -> A, AI, AVE, R, RD, ST
+paper -> A, B, FT, I, MS, i, ms
+per -> A, PR, a
+playing card -> A, J, K, Q
+road -> A, AI, AVE, R, RD, Rd, ST, St, ave
+scale -> A, B, C, D, E, F, G
 spacecenter -> A
 string -> A, D, E, G
 strings -> A, D, G
 takeaback -> A
+top class -> A
 top grade -> A
 tradecenter -> A
-un -> A, AN, I
-unit -> A, I
+un -> A, AN, I, a, i
+unit -> A, I, a, i
 violin string -> A, D, E, G
-vitamin -> A, B, BI, C, D, E, F, H, K, L, M, P, X
-year -> A, Y, YR
+vitamin -> A, B, BI, C, D, E, F, H, K, L, M, P, X, bi, d
+year -> A, Y, YR, a, y, yr
+year (annus) -> a
 forms -> a range of dimensions like area
 first-class -> A1
 alcoholics anonymous -> AA
@@ -110,27 +124,27 @@ architectural association -> AA
 associate of arts -> AA
 australian army -> AA
 automobile association -> AA
-dry -> AA, SEC, TT
+dry -> AA, SEC, TT, sec
 motoring organisation -> AA, RAC
 motorists -> AA, RAC
 teetotal -> AA, TT
-able seaman -> AB, TAR
+able seaman -> AB, TAR, tar
 able-bodied -> AB
 advisory board -> AB
 airborne -> AB
 alberta -> AB
 autobahn -> AB
-hand -> AB, E, H, L, MAN, N, R, S, W, worker
+hand -> AB, E, H, L, MAN, N, R, S, W, man, worker
 jack -> AB, J, TAR, sailor, salt, seaman
 rating -> AB
-sailor -> AB, HAND, JACK, OS, RN, SALT, TAR, able seaman
-salt -> AB, TAR, able seaman
-seaman -> AB, TAR
+sailor -> AB, HAND, JACK, OS, RN, SALT, TAR, able seaman, tar
+salt -> AB, TAR, able seaman, tar
+seaman -> AB, TAR, tar
 tar -> AB
 used -> SH, abbreviation substitution need not always
 alphabet -> ABC
 famous personalities lincoln -> ABE
-lincoln -> ABE
+lincoln -> ABE, Abe
 antiballistic missile -> ABM
 native -> ABO, NAT
 archbishop -> ABP
@@ -143,7 +157,7 @@ abstract -> ABS
 brakes -> ABS
 navy -> ABS, N, RN, TARS
 stopping aid -> ABS
-account -> AC, ACC
+account -> AC, ACC, ac, acc
 account current -> AC
 accountant -> AC, ACA, ACC, CA
 actinium -> AC
@@ -158,8 +172,8 @@ alpine club -> AC
 alternating current -> AC
 appellation contrôlée -> AC
 before christ -> AC, BC
-before food -> AC
-bill -> AC, ACC, IOU, TAB
+before food -> AC, ac
+bill -> AC, ACC, IOU, TAB, ac, acc
 current -> AC, AD, AMP, CUR, DC, I
 electricity -> AC, DC
 prof -> academic
@@ -168,23 +182,22 @@ acceptance -> ACC
 accompanied -> ACC
 according -> ACC
 accusative -> ACC
-card -> ACE
-champion -> ACE, CH
-expert -> ACE, DAB, PRO
+champion -> ACE, CH, Ch
+expert -> ACE, DAB, PRO, pro
 pilot -> ACE
 service -> ACE, LET, RAF, RM, RN
 winner -> ACE, fabulous tortoise
 decree -> ACT
 performance -> ACT
-tree -> ASH, FIR, YEW, actor
+tree -> ASH, FIR, YEW, actor, ash, fir, yew
 aircraftswoman -> ACW
 active duty -> AD
 advantage -> AD
 advert -> AD
-advertisement -> AD
-after date -> AD
+advertisement -> AD, ad
+after date -> AD, ad
 air defence -> AD
-before the day -> AD
+before the day -> AD, ad
 christian era -> AD
 commercial -> AD
 contemporary -> AD
@@ -193,14 +206,14 @@ in the modern age -> AD
 in the year of our lord -> AD
 in the year of the lord -> AD
 modern times -> AD
-notice -> AD, D
+notice -> AD, D, ad
 now -> AD
 nowadays -> AD
 our era -> AD
 our time -> AD
 period -> AD, AGE, BC, PER
 present day -> AD
-promotion -> AD
+promotion -> AD, ad
 puff -> AD
 this era -> AD
 today -> AD
@@ -215,12 +228,12 @@ business -> ADO, BIZ, BUS, CO
 difficulty -> ADO, ER
 fuss -> ADO
 row -> ADO
-trouble -> ADO, AIL
+trouble -> ADO, AIL, ail
 advent -> ADV
 adverb -> ADV
 advisory -> ADV
 advocate -> ADV
-against -> ADV, CON, V, VS
+against -> ADV, CON, V, VS, con, v
 lent -> advanced
 aged -> AE, AET
 hospital department -> AE, ENT
@@ -240,18 +253,18 @@ adjutant-general -> AG
 agricultural -> AG
 attorney-general -> AG
 german company -> AG
-silver -> AG
+silver -> AG, Ag
 muslim leader -> AGA
 long time -> AGE
 mature -> AGE
-time -> AGE, EON, M, MO, S, SEC, T, father
+time -> AGE, EON, M, MO, S, SEC, T, eon, father, sec, t
 air-to-ground missile -> AGM
 annual meeting -> AGM
 meeting -> AGM
 yearly meeting -> AGM
 agriculture -> AGR
-agent -> AGT, G, REP, SPY, V, spy
-agreement -> AGT, AY, AYE, DA, JA, OUI, SI, YEA
+agent -> AGT, G, REP, SPY, V, fed, rep, spy
+agreement -> AGT, AY, AYE, DA, JA, OUI, SI, YEA, ay, aye
 at this place -> AHL
 at this word -> AHV
 amnesty -> AI
@@ -260,93 +273,96 @@ artificial insemination -> AI
 artificial intelligence -> AI
 capital -> AI, CAP
 main road -> AI, MI
-sloth -> AI
+sloth -> AI, ai
 excellent -> AI)
 actuary -> AIA, FIA
 own -> AIN
-appearance -> AIR
-display -> AIR
-song -> AIR, LAY
-tune -> AIR
+appearance -> AIR, air
+display -> AIR, air
+song -> AIR, LAY, air, lay
+tune -> AIR, air
 para -> Brazilian, airborne soldier
-island -> AIT, I, IOM, IS, MAN
+island -> AIT, I, IOM, IS, MAN, ait
 alaska -> AK
 alias -> AKA
 also known as -> AKA
 alabama -> AL, ALA
-alan -> AL
+alan -> AL, Al
 albania -> AL, ALB
-albert -> AL
-aluminium -> AL
+albania (ivr) -> AL
+albert -> AL, Al
+aluminium -> AL, Al
 aluminum -> AL, Al
 anglo-latin -> AL
-capone -> AL
-gangster -> AL
+capone -> AL, Al
+gangster -> AL, Al
 gangster/gang leader -> AL
-one pound -> AL, ALB, IL, ILB, L, LB
-after the style of -> ALA
-in the style of -> ALA
+one pound -> AL, ALB, IL, ILB, L, LB, al, il, ilb, l, lb
+after the style of -> ALA, ala
+in the style of -> ALA, ala
 to the -> ALA, AU, AUX
 wings -> ALA
 alas -> Alaska
-vestment -> ALB
+vestment -> ALB, alb
 alderman -> ALD
-beer -> ALE
+beer -> ALE, ale
 algebra -> ALG
 algebraic -> ALG
 algeria -> ALG, DZ
-the greatest -> ALI
-completely -> ALL
-everybody -> ALL
-everything -> ALL
-mountain -> ALP, MT, TOR
-peak -> ALP, PK
+the greatest -> ALI, Ali
+completely -> ALL, all
+everybody -> ALL, all
+everything -> ALL, all
+mountain -> ALP, MT, Mt, TOR, alp, tor
+peak -> ALP, PK, alp
 alternate -> ALT
 altitude -> ALT
 namely -> SC, SS, VIZ, alternative to IE
 admitting -> AM, IAM, IM
 americium -> AM
 amplitude modulation -> AM
+armenia (ivr) -> AM
 associate member -> AM
+ave maria -> AM
 before noon -> AM
 boasting -> AM, IAM, IM
 hail mary -> AM
-half day -> AM, PM
+half day -> AM, PM, am, pm
 hymns -> AM
 i am -> AM, IAM, IM
-in the morning -> AM
-morning -> AM
+in the morning -> AM, am
+morning -> AM, am
 morning or half day -> AM
 self-confessed -> AM, IAM, IM
 amer -> American
 g-man -> American detective
-bull -> American policeman, OX, gold
+bull -> American policeman, OX, gold, ox
 coin -> "American" as well as "coin", C would usually have "old", C – D, D, P
 amplifier -> AMP
-one member -> AMP, IMP
+one member -> AMP, IMP, amp
 amount -> AMT
 anglo-norman -> AN
 angola -> AN
 articles - english -> AN, THE
 if -> AN
-tales -> ANA
-number -> C, D, L, M, N, NO, NUM, PIN, V, X, anaesthetic
+tales -> ANA, ana
+number -> C, D, L, M, N, NO, NUM, PIN, V, X, anaesthetic, n, no
 african organisation -> ANC
 ancient -> ANC
 anciently -> ANC
-troy -> T, ancient city, old city
+troy -> T, ancient city, old city, t
 in english -> ANG
 anti-nazi league -> ANL
-brief reply -> ANS
+brief reply -> ANS, ans
 collection -> ANS
-short answer -> ANS
+short answer -> ANS, ans
 if it -> ANT
-six-footer -> ANT, BEE
-social worker -> ANT, BEE
-soldier -> ANT, GI, MAN, NEY, OR, RE, RM, VET
-worker -> ANT, ARM, BEE, HAND, MAN
+six-footer -> ANT, BEE, ant, bee
+social worker -> ANT, BEE, ant, bee
+soldier -> ANT, GI, MAN, NEY, OR, RE, RM, VET, ant, man
+worker -> ANT, ARM, BEE, HAND, MAN, ant, man
 state -> any abbreviation of an American State
-many -> Any Roman numeral of considerable size, C
+many -> Any Roman numeral of considerable size, C, c
 all items satisfactory -> AOK
 fine -> AOK, F, OK
 adult-oriented rock -> AOR
@@ -363,8 +379,8 @@ associated press -> AP
 author's proof -> AP
 before a meal -> AP
 all-points bulletin -> APB
-copy -> APE
-primate -> APE
+copy -> APE, ape
+primate -> APE, ape
 appendix -> APP
 applied -> APP
 apprentice -> APP, L
@@ -376,7 +392,7 @@ apartment -> APT
 aqueous -> AQ
 liquid -> AQ, LIQ
 solution -> AQ, SOL
-water -> AQ, EA
+water -> AQ, EA, aq, ea
 annual return -> AR
 arab -> AR, horse
 arabia -> AR
@@ -385,21 +401,22 @@ arabic -> AR
 aramaic -> AR
 arkansas -> AR, ARK
 army regulation -> AR
-arrival -> AR, ARR
-arrive -> AR, ARR
+arrival -> AR, ARR, arr
+arrive -> AR, ARR, arr
+augmented reality -> AR
 autonomous region -> AR
 autonomous republic -> AR
 year of reign -> AR
 artist -> ARA, PRA, RA
 painter -> ARA, NEY, PRA, RA
-curve -> ARC, J
+curve -> ARC, J, arc
 cantuar -> archbishop
 ebor -> archbishop
 laud -> archbishop
 tell -> archer
-gun -> ARM, GAT
-limb -> ARM, LEG
-member -> ARM, LEG, M, MEM, MP, MP), TOE, words for male genitals
+gun -> ARM, GAT, arm, gat
+limb -> ARM, LEG, arm
+member -> ARM, LEG, M, MEM, MP, MP), TOE, arm, toe, words for male genitals
 air-raid precautions -> ARP
 arranged -> ARR
 arranged by -> ARR
@@ -409,10 +426,10 @@ arriving -> ARR
 artificial -> ART
 artillery -> ART, RA
 contrivance -> ART
-craft -> ART
+craft -> ART, art
 cunning -> ART
-painting -> ART
-skill -> ART
+painting -> ART, art
+skill -> ART, art
 etty -> artist
 lely -> artist
 air speed -> AS
@@ -422,20 +439,20 @@ anglo-saxon -> AS
 antisubmarine -> AS
 arsenic -> AS
 assistant secretary -> AS
-ayes -> AS, IS
-ays -> AS, IS
-like -> AS
+ayes -> AS, IS, as, is
+ays -> AS, IS, as, is
+like -> AS, as
 one's -> AS, IS
-specifically -> AS, SC
-when -> AS
-remains -> ASH
+specifically -> AS, SC, as
+when -> AS, as
+remains -> ASH, ash
 air-to-surface missile -> ASM
-snake -> ASP, BOA, S
+snake -> ASP, BOA, S, asp, boa
 air-sea rescue -> ASR
 associated -> ASS
 association -> ASS
-donkey -> ASS, NED
-fool -> ASS, dessert
+donkey -> ASS, NED, ass
+fool -> ASS, ass, dessert
 administrative trainee -> AT
 anti-tank -> AT
 appropriate technology -> AT
@@ -443,14 +460,15 @@ astatine -> AT
 atlantic time -> AT
 atmosphere -> AT, ATM
 ation -> at one on
-goddess -> ATE
+goddess -> ATE, Ate
 mischief -> ATE
 atmospheric -> ATM
 cash machine -> ATM
 attorney -> ATT, DA, PA
 african union -> AU
 astronomical unit -> AU
-gold -> AU, OR
+gold -> AU, Au, OR, or
+to the (french) -> au, aux
 old way of dating -> AUC
 august -> AUG
 alternative vote -> AV
@@ -460,24 +478,25 @@ avenue -> AV, AVE
 bible -> AV, BIB, RV
 book (or books) -> AV, B, GEN, MS, NT, OT
 french lawyer -> AV
-lived so long -> AV
+lived so long -> AV, av
 audiovisual aid -> AVA
-average -> AVE
-greeting -> AVE, HI
-hail -> AVE
-way -> AVE, RD, RLY, RY, ST, WY
+average -> AVE, ave
+greeting -> AVE, HI, ave, hi
+hail -> AVE, ave
+way -> AVE, RD, RLY, RY, Rd, ST, St, WY, ave
 aver -> average
-beard -> AWN
-always -> AY, AYE, EER, ERE
-ever -> AY, AYE, EER, ER
-yes -> AY, AYE, DA, I, JA, OUI, SI, Y
-i say -> AYE, EYE
-azed -> AZ
+beard -> AWN, awn
+always -> AY, AYE, EER, ERE, ay, aye, eer
+ever -> AY, AYE, EER, ER, ay, aye, eer
+yes -> AY, AYE, DA, I, JA, OUI, SI, Y, ay, aye
+i say -> AYE, EYE, eye
+arizona -> AZ, AZE
+azed -> AZ, az
+azerbaijan (ivr) -> AZ
 plenty of -> AZ
 scope -> AZ
-arizona -> AZE
 azerbaijan -> AZE
-a follower -> B
+a follower -> B, b
 bach -> B
 bachelor -> B, BA
 backstop -> B
@@ -487,12 +506,15 @@ baldhead -> B
 bandedhead -> B
 bankhead -> B
 barehead -> B
-baron -> B, BN
+baron -> B, BN, Bn
 barrel -> B, BL
+barrel(s) -> b
 barrelhead -> B
 barrels -> B, BBL
+baryon number -> B
 basehead -> B
 bass -> B
+bastard -> b
 battlefront -> B
 beachfront -> B
 beachhead -> B
@@ -504,35 +526,37 @@ beethoven -> B
 behead -> B
 bel -> B
 belgium -> B
+belgium (ivr) -> B
 benchtop -> B
 beta -> B, Greek letter
 beth -> B, Hebrew letter
 bighead -> B
 bikinitop -> B
-billion -> B, BN
+billion -> B, BN, b
 bishop -> B, BP, DD, ODO, RR
 black -> B, K
 blackhead -> B
 blacktop -> B
 blockhead -> B
-bloody -> B, RED
+bloody -> B, RED, red
 blubberhead -> B
 boarshead -> B
 bobblehead -> B
 bobtail -> B
+bold -> B
 bonehead -> B
 bonnethead -> B
-book -> B, BK, LIB, NT, OT, VOL
+book -> B, BK, LIB, NT, OT, VOL, b, bk, lib, vol
 book * -> B
-born -> B, N, NAT, NE, NEE
+born -> B, N, NAT, NE, NEE, b, nee
 boron -> B
 bottomhead -> B
 bowhead -> B
-bowled -> B
+bowled -> B, b
 boy -> B
 brahms -> B
 bravo -> B
-breadth -> B
+breadth -> B, b
 breakfront -> B
 brideshead -> B
 bridgehead -> B
@@ -550,20 +574,23 @@ butthead -> B
 byte -> B
 inferior -> B, INF
 magnetic flux -> B
-second -> B, MO, S, SEC
-second class -> B
-second letter -> B
+magnetic flux density -> B
+second -> B, MO, S, SEC, mo, sec
+second class -> B, b
+second letter -> B, b
 second rate -> B
+second-class -> B
+second-rate -> B
 soft -> B, P, PP
 three thousand -> B
 teacher -> B ED, DON
 airline -> BA, BAC, BEA
 bachelor of arts -> BA
-barium -> BA
+barium -> BA, Ba
 booksellers association -> BA
 british academy -> BA
 british airways -> BA
-degree -> BA, C, D, DEG, F, MA
+degree -> BA, C, D, DEG, F, MA, d
 graduate -> BA, BED, BSC, MA
 honours -> BA, MA
 scholar -> BA, MA
@@ -571,21 +598,21 @@ balance -> BAL
 curse -> BAN
 outlaw -> BAN
 prohibition -> BAN
-river -> CAM, DEE, EXE, FAL, MA, OB, PO, R, TAY, URE, banker, flower, runner
+river -> CAM, Cam, DEE, EXE, Exe, FAL, Fal, MA, OB, PO, R, TAY, Tay, URE, Ure, banker, dee, ea, flower, po, runner
 baptist -> BAP
 baptized -> BAP
 baritone -> BAR
 barrister -> BAR
 inn -> BAR
-lawyers -> BAR
+lawyers -> BAR, bar
 prevent -> BAR
 save -> BAR
 woof -> bark
 battalion -> BAT, BN
 battery -> BAT
 fly-by-night -> BAT
-bees -> BB, BS
-books -> BB, BKS, NT, OT
+bees -> BB, BS, bb, bs
+books -> BB, BKS, NT, OT, bb
 boys' brigade -> BB
 very black -> BB
 auntie -> BBC
@@ -597,14 +624,15 @@ british columbia -> BC
 british council -> BC
 bachelor of divinity -> BD
 bangladesh -> BD
+bangladesh (ivr) -> BD
 bank draft -> BD
-beady -> BD
+beady -> BD, bd
 bills discounted -> BD
 board -> BD, directors
 bond -> BD
-bound -> BD
+bound -> BD, bd
 cleric -> BD, DD
-theologian -> BD, DD
+theologian -> BD, DD, dd
 brigade -> BDE
 bombardier -> BDR
 barbados -> BDS
@@ -613,10 +641,11 @@ bachelor of engineering -> BE
 beryllium -> BE
 bill of exchange -> BE
 board of education -> BE
-exist -> BE
-live -> BE, L
+exist -> BE, be
+live -> BE, L, be
 in bed -> BED
-buzzer -> BEE
+buzzer -> BEE, bee
+drone -> bee
 group of workers -> BEE
 gort's men -> BEF
 old contemptibles -> BEF
@@ -631,21 +660,21 @@ bulgaria -> BG
 belize -> BH
 bohrium -> BH
 bismuth -> BI
-double -> BI, DBL, DI
-two -> BI, BIS, DI, II, PR
+double -> BI, DBL, DI, bi
+two -> BI, BIS, DI, II, PR, bi, bis, ii
 atoll -> bikini
-prison -> CAN, JUG, PEN, bird
-again -> BIS, RE
-twice -> BIS
-chewed -> BIT
-piece -> BIT, MAN, PCE
-bank -> BK
+prison -> CAN, JUG, PEN, bird, can, jug, pen
+again -> BIS, RE, bis, re
+twice -> BIS, bis
+chewed -> BIT, bit
+piece -> BIT, MAN, PCE, bit, man
+bank -> BK, bk
 berkelium -> BK
 banking -> BKG
 barracks -> BKS
 bachelor of law -> BL
 bachelor of letters -> BL
-bale -> BL
+bale -> BL, bl
 bill of lading -> BL
 british company -> BL
 british legion -> BL
@@ -654,29 +683,30 @@ british library -> BL
 lawman -> BL, DA
 lawyer -> BL, DA
 sculptor -> blockbuster
-flower -> LIS, bloomer
+flower -> LIS, bloomer, lis
 sandwich -> BLT
-conservative -> BLUE, C, CON, TORY, U
+conservative -> BLUE, C, CON, TORY, U, con
 bachelor of medicine -> BM, MB
 british museum -> BM
-doctor -> BM, DD, DOC, DR, GP, MB, MD, MO, NO, WHO
+doctor -> BM, DD, DOC, DR, Dr, GP, MB, MD, MO, NO, WHO, Who, bm
 medic -> BM, DOC, DR, GP, MB, MD, MO
-american man -> BO
+american man -> BO, Bo
 bad smell -> BO
 body odour -> BO
 box office -> BO
 branch office -> BO
 buyer's option -> BO
 man -> BO, G, GBM, IOM, M, VIR
+personal problem -> BO
 sweat -> BO
-old shilling -> BOB, S
+old shilling -> BOB, S, bob
 bolivia -> BOL
 tome -> TOM, book
 amos -> bookmaker
 botanical -> BOT
 botany -> BOT
 bottle -> BOT
-fly larva -> BOT
+fly larva -> BOT, bot
 drake -> bowler
 base pair -> BP
 before present -> BP
@@ -686,29 +716,30 @@ blood pressure -> BP
 boiling point -> BP
 oil company -> BP
 bank rate -> BR
-bedroom -> BR
-bills receivable -> BR
-branch -> BR
+bedroom -> BR, br
+bills receivable -> BR, br
+branch -> BR, br
 brazil -> BR
-bridge -> BR
+brazil (ivr) -> BR
+bridge -> BR, br
 brig -> BR
 british rail -> BR
-bromine -> BR
-bronze -> BR
-brother -> BR, BRO
-brown -> BR, TAN
+bromine -> BR, Br
+bronze -> BR, br
+brother -> BR, BRO, Br, bro
+brown -> BR, TAN, br, tan
 brown * -> BR
-landline -> BR, RLY, RY
-lines -> BR, LL, RLY, RY
+landline -> BR, RLY, RY, Ry
+lines -> BR, LL, RLY, RY, Ry
 old rail operator -> BR
-railway -> BR, EL, L, R, RLY, RWY, RY
+railway -> BR, EL, L, R, RLY, RWY, RY, Ry
 railways -> BR
 trains -> BR
-transport -> BR, BUS, CAB, CAR, RLY, RY
+transport -> BR, BUS, CAB, CAR, RLY, RY, bus
 female support -> BRA
-female supporter -> BRA
-support -> BRA, LEG
-undergarment -> BRA
+female supporter -> BRA, bra
+support -> BRA, LEG, bra, leg
+undergarment -> BRA, bra
 bahrain -> BRN
 brunei -> BRU
 bachelor of science -> BS, BSC, SCB
@@ -728,42 +759,49 @@ phone company -> BT, EE
 telecoms company -> BT
 bushel -> BU
 bushels -> BU
-firm -> CO, business, company
+firm -> CO, Co, business, company
 blessed virgin -> BV
 dutch company -> BV
 farewell -> BV
 black and white -> BW
 british waterways -> BW
 belarus -> BY
-times -> BY, TT, X, daily
+times -> BY, TT, X, by, daily, x
 $100 -> C
 100 -> C
-approx -> C, CA
-approximately -> C, CA
-around -> C, O
+about (circa) -> c
+approx -> C, CA, ca
+approximately -> C, CA, ca
+around -> C, O, o
 artichokeheart -> C
 calorie -> C, CAL
 canine -> C
+canine (dentistry) -> c
 capacitance -> C
 cape -> C
+captain -> C, CID
 caput -> C, CAP
-carat -> C, CAR, CT, K
+caput (chapter) -> c
+carat -> C, CAR, CT, K, c, ct
 carbon -> C
 carrottop -> C
 catholic -> C
 caught -> C, CT
+caught (by) -> c
 caught by -> C
 cedi -> C
+cee -> C
 celsius -> C
-cent -> C, CT, money
-centi- -> C
+cent -> C, CT, ct, money
+cent(s) -> c
+centi- -> C, c
 centigrade -> C
 centime -> C, CT
 centimes -> C
 cents -> C
-century -> C
-chapter -> C, CAP, CH
-charles -> C
+century -> C, c
+chapter -> C, CAP, CH, Ch
+charles -> C, c
 charlie -> C
 cheesehead -> C
 chicagoheart -> C
@@ -773,25 +811,26 @@ chucklehead -> C
 circa -> C, CA
 classifiedhead -> C
 clifftop -> C
-cloudy -> C
+cloudy -> C, c
 club -> C, Y
 clubhead -> C
 clubs -> C
 coachhead -> C
 cocaine -> C
-cold -> C
+cold -> C, c
 coldfront -> C
-college -> C
+college -> C, c
 coloured -> C
-colt -> C
+coloured (s afr) -> C
+colt -> C, c
 command paper -> C, CD, CM, CMD
 common time -> C
-complex number -> C
+complex number -> C, c
 compliance -> C
 concisehead -> C
 conehead -> C
-constant -> C, E, G, K, PI
-contralto -> C
+constant -> C, E, G, K, PI, c, k
+contralto -> C, c
 controltop -> C
 conventhead -> C
 cooktop -> C
@@ -808,36 +847,39 @@ croptop -> C
 crosshead -> C
 crownedhead -> C
 cuba -> C
-cubic -> C, CU, CUB
+cuba (ivr) -> C
+cubic -> C, CU, CUB, c
 daycarecenter -> C
 descend -> C
 drug -> C, E, H, X
-electrical capacity -> C
+electrical capacitance -> C
+electrical capacity -> C, c
 epcotcenter -> C
-hundred -> C
+hundred -> C, ton
 hundred thousand -> C, LAC
 kilocalorie -> C, CAL
 lacksheart -> C
 large number -> C, D, K, M
 lincolncenter -> C
-lot -> C, D, M
+lot -> C, D, M, c
 one hundred -> C
 one hundred dollars -> C
-party -> C, CON, DO, LAB, LD, LIB, TORY
+party -> C, CON, DO, LAB, LD, LIB, TORY, con, do, lab, lib
 programming language -> C, PL
 recyclingcenter -> C
-roughly -> C, CA
-sea -> C, MER
-see -> C, ELY, LO, V, VID
+roughly -> C, CA, ca
+sea -> C, MER, c
+see -> C, ELY, Ely, LO, V, VID, lo
 speed of light -> C
-spring -> C, SPA
+spring -> C, SPA, c, spa
 tap -> C, H
+the sum of $100 (n am sl) -> C
 ton -> C, T
 tragicend -> C
-calcium -> CA
-california -> CA, CAL
+calcium -> CA, Ca
+california -> CA, CAL, Cal
 capital account -> CA
-cases -> CA
+cases -> CA, ca
 central america -> CA
 chartered accountant -> CA
 chief accountant -> CA
@@ -856,18 +898,18 @@ canon -> CAN
 canto -> CAN
 canton -> CAN
 is able to + -> CAN
-vessel -> CAN, SS, TIN
+vessel -> CAN, SS, TIN, can, tin
 capacity -> CAP
 capital letter -> CAP
 capitalize -> CAP
-international -> CAP, I, INT, UN
+international -> CAP, I, INT, UN, cap
 let her take -> CAP
 let him take -> CAP
-old man -> DAD, PA, POP, captain
+old man -> DAD, PA, POP, captain, da, pa, pop
 mini -> car
 catalogue -> CAT
 catechism -> CAT
-jazz fan -> CAT
+jazz fan -> CAT, cat
 kine -> cattle, neat, ox
 neat -> COW, OX, cattle, ox
 centre of buoyancy -> CB
@@ -879,7 +921,7 @@ seabee -> CB
 cape colony -> CC
 capita -> CC
 carbon copies -> CC
-carbon copy -> CC
+carbon copy -> CC, cc
 chapters -> CC, CHS
 closed-circuit -> CC
 confined to camp -> CC
@@ -888,8 +930,8 @@ county councillor -> CC
 cricket club -> CC
 croquet club -> CC
 cubic centimetre -> CC
-seas -> CC, CS
-small measure -> CC, EL, EM, EN
+seas -> CC, CS, cc, cs
+small measure -> CC, EL, EM, EN, cc, em, en
 small quantity -> CC
 small volume -> CC, CL, ML
 two hundred -> CC
@@ -913,7 +955,7 @@ two hundred and five -> CCV
 two hundred and six -> CCVI
 two hundred and seven -> CCVII
 two hundred and eight -> CCVIII
-cadmium -> CD
+cadmium -> CD, Cd
 candela -> CD
 carried down -> CD
 cash discount -> CD
@@ -926,8 +968,8 @@ diplomat -> CD
 disc -> CD, EP, LP, O, circle, record, ring
 four hundred -> CD
 french diplomatic corps -> CD
-record -> CD, EP, LOG, LP, REC
-seedy -> CD
+record -> CD, EP, LOG, LP, REC, cd, log
+seedy -> CD, cd
 four hundred and one -> CDI
 four hundred and two -> CDII
 four hundred and three -> CDIII
@@ -935,7 +977,7 @@ four hundred and four -> CDIV
 four hundred and nine -> CDIX
 canada -> CDN
 canadian -> CDN
-commander -> CDR, CO, COM, OC
+commander -> CDR, CO, COM, Com, OC
 four hundred and five -> CDV
 four hundred and six -> CDVI
 four hundred and seven -> CDVII
@@ -945,15 +987,16 @@ cerium -> CE
 chancellor of the exchequer -> CE
 chemical engineer -> CE, CHE
 chief engineer -> CE
-church -> CE, CH, RC
+church -> CE, CH, Ch, RC
 church of england -> CE
 civil engineer -> CE
 common entrance -> CE
 common era -> CE
 council of europe -> CE
 engineer -> CE, ENG, ME, RE, REME
-engineers -> CE, RE
+engineers -> CE, RE, ce
 this -> CE, CET, HIC, example
+this (french) -> ce, cet
 cato -> censor, plotters' street
 edit -> censor
 physicists -> CERN
@@ -976,17 +1019,17 @@ consul general -> CG
 french decoration -> CG
 carriage -> CGE
 award -> CH, OBE, OM
-central heating -> CH
+central heating -> CH, ch
 centre-half -> CH
-chain -> CH
+chain -> CH, ch
 chaplain -> CH
 chart -> CH
 check -> CH
 chestnut -> CH
-chief -> CH, CID
-child -> CH
+chief -> CH, CID, Ch
+child -> CH, ch
 children -> CH
-china -> CH
+china -> CH, Ch
 chinese -> CH
 choir -> CH
 christ -> CH, CHR, X, XT
@@ -999,14 +1042,16 @@ courthouse -> CH
 customs house -> CH
 order -> CH, OBE, OM, ORD, PO
 switzerland -> CH
-tea -> CHA, T
-communist -> CHE, COM, RED
+switzerland (ivr) -> CH
+tea -> CHA, T, cha, t
+communist -> CHE, COM, RED, red
 guerrilla -> CHE
-revolutionary -> CHE, RED
+red -> Che
+revolutionary -> CHE, Che, RED, red
 nitre -> chemical, fertiliser
 pawn -> P, chess piece, piece
 charge -> CHG, Q
-greek letter -> CHI, ETA, MU, NU, PHI, PI
+greek letter -> CHI, ETA, MU, NU, PHI, PI, chi, eta, mu, nu, phi, pi
 brat -> child
 seed -> children
 ming -> Chinese dynasty, china
@@ -1016,7 +1061,8 @@ checkmate -> CHM
 master of surgery -> CHM, CM, MS
 christian -> CHR, XN
 channel islands -> CI
-curie -> CI
+curie -> CI, Ci
+côte d’ivoire (ivr) -> CI
 hundred and one -> CI
 ivory coast -> CI
 one hundred and one -> CI
@@ -1025,9 +1071,8 @@ secret service -> CIA, SS
 spanish company -> CIA
 spies -> CIA, MI
 commander-in-chief -> CIC, CINC
-captain -> CID
 detectives -> CID, YARD
-police -> CID, MET
+police -> CID, MET, Met
 policeman/men -> CID, DI, MET, PC
 spanish hero -> CID
 one hundred and two -> CII
@@ -1040,15 +1085,16 @@ civilian -> CIV
 one hundred and four -> CIV
 one hundred and nine -> CIX
 civil justice -> CJ
-centilitre -> CL
-chlorine -> CL
+centilitre -> CL, cl
+chlorine -> CL, Cl
 class -> CL
 clause -> CL
-councillor -> CL, CLLR, CLR, CR
-gas -> CL, CO, CS, F, H, HE, N, NE, O
+councillor -> CL, CLLR, CLR, CR, Cr
+gas -> CL, CO, CS, F, H, HE, N, NE, Ne, O
 hundred and fifty -> CL
 one hundred and fifty -> CL
 sri lanka -> CL
+sri lanka (ivr) -> CL
 orpheus -> classical musician
 close -> CLO, NIE
 hundred and sixty -> CLX
@@ -1071,29 +1117,30 @@ canadian national -> CN
 credit note -> CN
 news channel -> CNN
 carbon monoxide -> CO
-care of -> CO
-cobalt -> CO
+care of -> CO, co
+cobalt -> CO, Co
 colombia -> CO
+colombia (ivr) -> CO
 colorado -> CO, COL
 combined operations -> CO
 commanding officer -> CO
 commonwealth office -> CO
-company -> CO, TWO
+company -> CO, Co, TWO
 conscientious objector -> CO
-county -> CO, SOM
+county -> CO, Co, SOM
 crown office -> CO
-house -> CO, COT, H, HO, HSE
+house -> CO, COT, H, HO, HSE, ho
 objector -> CO
-officer -> CO, LT, OC, OFF
-horse -> COB, G, GEE, GG, H, NAG
-fish -> COD, EEL, GAR, ID, IDE, Ling
-swimmer -> COD, EEL
+officer -> CO, LT, Lt, OC, OFF
+horse -> COB, G, GEE, GG, H, NAG, cob, gg, nag
+fish -> COD, EEL, GAR, ID, IDE, Ling, cod, eel, id, ide
+swimmer -> COD, EEL, cod, eel
 colonel -> COL
 colossians -> COL
 colour -> COL
 column -> COL
-neck -> COL, V
-pass -> COL
+neck -> COL, V, col
+pass -> COL, col
 eton -> college, educational establishment, school
 poly -> college
 comedy -> COM
@@ -1111,14 +1158,15 @@ conformist -> CON
 conservation -> CON
 consul -> CON
 criminal -> CON
-politician -> CON, LAB, LIB, MP
+do -> con
+politician -> CON, LAB, LIB, MP, con, lab, lib
 prisoner -> CON
-study -> CON, DEN, READ
-swindle -> CON
+study -> CON, DEN, READ, con, den
+swindle -> CON, con
 tory -> CON, Conservative, party, politician
-trick -> CON
-with -> CON, W
-blue -> Conservative, SAD
+trick -> CON, con
+with -> CON, W, w
+blue -> Conservative, SAD, sad
 cade -> conspirator
 oates -> conspirator
 asia -> continent
@@ -1128,11 +1176,11 @@ cornet -> COR
 coroner -> COR
 my -> COR
 chief of staff -> COS
-lettuce -> COS
-bed -> COT
+lettuce -> COS, cos
+bed -> COT, cot
 geiger -> counter
 avon -> county
-down -> county
+down -> D, county
 covariance -> COV
 crossover value -> COV
 daisy -> COW
@@ -1145,16 +1193,17 @@ communist party -> CP
 compound -> CPD
 corporal -> CPL
 carriage return -> CR
-chromium -> CR
+chromium -> CR, Cr
 community of the resurrection -> CR
 costa rica -> CR
+costa rica (ivr) -> CR
 credit -> CR
 creditor -> CR
 credt -> CR
 crown -> CR
 king -> CR, ER, GR, HM, K, R, ROI, SM, or CR. Also BB, or GR
 king charles -> CR
-monarch -> CR, ER, GR, K, Q, R
+monarch -> CR, ER, GR, K, Q, R, k
 rajaji -> CR
 such as rajaji -> CR
 the king -> CR
@@ -1162,24 +1211,24 @@ ious -> credit notes, promises to pay
 caesium -> CS
 chartered surveyor -> CS
 christian science -> CS
-civil service -> CS
+civil service -> CS, cs
 court of session -> CS
-czechoslovakia -> CS
-hundreds -> CS, D
+czechoslovakia -> CS, cs
+hundreds -> CS, D, cs
 riot gas -> CS
 central time -> CT
 computerized tomography -> CT
 connecticut -> CT
-court -> CT
-small weight -> CT, GR, OZ, WT
-weight -> CT, G, GR, LB, OZ, ST, TON, W, WT
+court -> CT, ct
+small weight -> CT, GR, OZ, WT, gr, oz
+weight -> CT, G, GR, LB, OZ, ST, St, TON, W, WT, g, gr, oz, ton, w, wt
 christian union -> CU
-copper -> CU, D, P, PC
-penny -> CU, D, P
-see you -> CU
-queue -> CUE, Q
+copper -> CU, Cu, D, P, PC, p
+penny -> CU, D, P, p
+see you -> CU, cu
+queue -> CUE, Q, q
 hebe -> cup holder, goddess
-dog -> CUR
+dog -> CUR, cur
 autobiography -> CV
 course of life -> CV
 cross of valour -> CV
@@ -1193,44 +1242,49 @@ one hundred and eight -> CVIII
 chemical warfare -> CW
 hundredweight -> CWT
 cyprus -> CY
-see why -> CY
+see why -> CY, cy
 czech republic -> CZ
 500 -> D
 bouncedback -> D
 broadtail -> D
 creditscore -> D
 damn -> D
-date -> D
-daughter -> D
-day -> D, V
-dead -> D
+date -> D, d
+daughter -> D, d
+day -> D, V, d
+dead -> D, d
 dead or died -> D, DEC, EX, OB
 deadend -> D
 deadhead -> D
 deceased -> D, DEC, EX, JAN
 deci -> D
+deci- -> d
 dee -> D
-delete -> D
+delete -> D, d
 delta -> D
 democrat -> D, DEM
+democrat or democratic -> D
 democratic -> D, DEM
-density -> D
+density -> D, d
 department -> D, DEP, DPT
-departs -> D, DEP
-depth -> D
-deserted -> D
+departs -> D, DEP, d
+depth -> D, d
+deserted -> D, d
 desktop -> D
+deus (god) -> D
 deuterium -> D
 deutsch -> D
-diameter -> D
-diamond -> D, ICE
+deutsch (catalogue of schubert’s works) -> d
+diameter -> D, d
+diamond -> D, ICE, ice
 diamondback -> D
 diamondhead -> D
-diamonds -> D, ICE
+diamonds -> D, ICE, d, ice
 dickhead -> D
-died -> D, OB
+died -> D, OB, d
 differential operator -> D
 dimension -> D, DIM
+dimensional -> D
 dinar -> D, DA
 director -> D, DIR
 dittohead -> D
@@ -1242,9 +1296,10 @@ drag -> D
 dragonhead -> D
 drewahead -> D
 drumhead -> D
-duke -> D
+duke -> D, d
 dunderhead -> D
 dutch -> D, DU, wife
+electric flux (displacement) -> D
 electrical flux -> D
 feedback -> D
 five hundred -> D
@@ -1252,18 +1307,22 @@ foldback -> D
 forkedtail -> D
 four thousand -> D
 germany -> D, G, GER
-god -> D, LAR, PAN, RA
+germany (deutschland) (ivr) -> D
+god -> D, LAR, PAN, Pan, RA, Ra, lar
+god (deus) -> D
 handback -> D
 hardback -> D
 holdback -> D
 knockedback -> D
 laidback -> D
 lord -> D, LD
+lord (dominus) -> D
 many + -> D, L, M
 mark -> D, DM, M, MK
 mediacenter -> D
 old penny -> D
-pence -> D, P
+pence -> D, P, d, p
+penny (denarius) -> d
 radioheart -> D
 readback -> D
 redtail -> D
@@ -1274,17 +1333,19 @@ standback -> D
 steppedback -> D
 swordtail -> D
 turnedtail -> D
+agreement (russian) -> da
 american lawyer -> DA
 dagger * -> DA
 diploma in anaesthetics -> DA
 diploma of art -> DA
 district attorney -> DA
 duck's arse -> DA
-father -> DA, DAD, FR, PA, POP
+father -> DA, DAD, FR, Fr, PA, POP, pa, pop
 outdated hairdo -> DA
+yes (russian) -> da
 char -> daily
 barrier -> DAM
-mother -> DAM, MA, MAM, MUM
+mother -> DAM, MA, MAM, MUM, ma, mam, mum
 restrain -> DAM
 daniel -> DAN
 danish -> DAN
@@ -1292,11 +1353,12 @@ tribe -> DAN, GAD
 oxonian -> dark blue
 articles - german -> DAS, DER, DIE
 the -> DAS, DER, DIE, EL, IL, LA, LE, T, YE
+the (german) -> das, der, die
 dative -> DAT
 decibel -> DB
 decibels -> DB
 dubnium -> DB
-detective -> DC, DET, DI, DS, PI, TEC
+detective -> DC, DET, DI, DS, PI, TEC, det, tec
 direct current -> DC
 district commissioner -> DC
 district of columbia -> DC
@@ -1340,19 +1402,21 @@ designated driver -> DD
 direct debit -> DD
 divine -> DD, DIV
 doctor of divinity -> DD
-priest -> DD, ELI, ELI ), FR, P, PR, REV, RR
-reverend -> DD, REV, RR
+priest -> DD, ELI, ELI ), Eli, FR, P, PR, Pr, REV, RR
+reverend -> DD, REV, RR, Rev
 delaware -> DE, DEL
 department of employment -> DE
-from -> DE, EX
-of -> DE
+from -> DE, EX, ex
+from (french) -> de
+of -> DE, O
+of (french) -> de
 obit -> dead, died, final message, last word
 cher -> dear
 chere -> dear
 socialite -> DEB
-christmas period -> DEC
+christmas period -> DEC, Dec
 december -> DEC
-last month -> DEC, ULT
+last month -> DEC, Dec, ULT
 core -> decentralise
 intens -> decimally
 doctor of education -> DED, EDD
@@ -1363,9 +1427,10 @@ definition -> DEF
 delegate -> DEL
 he drew it -> DEL
 of the -> DEL, DES, DU
+of the (italian) -> del
 she drew it -> DEL
 office -> DEN, LOO
-retreat -> DEN
+retreat -> DEN, den
 depart -> DEP
 departure -> DEP
 deposed -> DEP
@@ -1374,8 +1439,9 @@ deputy -> DEP
 derivation -> DER
 derivative -> DER
 derived -> DER
+of the (french) -> des, du
 dior -> designer
-yard -> Y, YD, detectives
+yard -> Y, YD, detectives, y, yd
 defender of the faith -> DF, FD
 direction finder -> DF
 draft -> DFT
@@ -1392,7 +1458,8 @@ five hundred and one -> DI
 inspector -> DI
 policeman -> DI, MP, PC
 policewoman -> DI, PC, PW, WPC
-princess -> DI, IDA, INA
+princess -> DI, Di, IDA, INA
+two (double) -> di
 rock -> diamond
 five hundred and two -> DII
 five hundred and three -> DIII
@@ -1400,14 +1467,16 @@ dilute -> DIL
 diminuendo -> DIM
 diminutive -> DIM
 discontinued -> DIS
-hell -> DIS, PIT, TOR
-pluto -> DIS
-underworld -> DIS
+hell -> DIS, Dis, PIT, TOR
+pluto -> DIS, Dis
+underworld -> DIS, Dis
 ward -> disadvantage, drawback
-named -> DIT
-reported -> DIT
+named -> DIT, dit
+reported -> DIT, dit
 said -> DIT
+said (french) -> dit
 say -> DIT, EG
+say (french) -> dit
 haha -> ditch, laugh
 divide -> DIV
 division -> DIV
@@ -1416,32 +1485,34 @@ divorced -> DIV
 five hundred and four -> DIV
 five hundred and nine -> DIX
 amateur's department -> DIY
+amateurs department -> diy
 dinner jacket -> DJ
 disc jockey -> DJ
 presenter -> DJ, MC
 dark -> DK
 deck -> DK
 denmark -> DK
+denmark (ivr) -> DK
 dock -> DK
 demand loan -> DL
 deputy lieutenant -> DL
 dealer -> DLR
 deutschmark -> DM
 genetic code -> DNA, RNA
-act -> DO
-cheat -> DO
-cook -> DO
+act -> DO, do
+cheat -> DO, do
+cook -> DO, do
 ditto -> DO
 same -> DO, ID
 the same -> DO, ID
-work -> DO, GO, OP, OPUS, W, WK
+work -> DO, GO, OP, OPUS, W, WK, do, op
 mutt -> dog
 tail -> dog
 domestic -> DOM
-fellow -> DON, F, MAN
-nobleman -> DON
-put on -> DON
-university teacher -> DON
+fellow -> DON, F, MAN, don, man
+nobleman -> DON, don
+put on -> DON, don
+university teacher -> DON, don
 stet -> don't change it
 dodo -> double act
 dozen -> DOZ, DZ
@@ -1449,13 +1520,13 @@ data processing -> DP
 displaced person -> DP
 doctor of philosophy -> DPH, PHD
 dead reckoning -> DR
-debtor -> DR
+debtor -> DR, Dr
 drachma -> DR
-dram -> DR
-drawer -> DR
-drive -> DR, DV
-driver -> DR
-drummer -> DR
+dram -> DR, dr
+drawer -> DR, dr
+drive -> DR, DV, Dr
+driver -> DR, Dr
+drummer -> DR, Dr
 dry riser -> DR
 healer -> DR
 satin -> dressmaker
@@ -1468,6 +1539,7 @@ psychotic state -> DT
 doctor of theology -> DTH, THD
 depleted uranium -> DU
 from the -> DU
+from the (french) -> du
 fist -> duke
 duplicate -> DUP
 durham -> DUR
@@ -1510,24 +1582,27 @@ eccentricity -> E
 echo -> E
 ecstasy -> E, X
 edithhead -> E
-edward -> E, ED, TED
+edward -> E, ED, Ed, TED, Ted
 egghead -> E
 eight thousand -> E
+electric field strength -> E
 electromotive force -> E
-electron -> E
+electron -> E, e
 electronic -> E
-elizabeth -> E
+elizabeth -> E, e
 energy -> E, GO, J
 energy + -> E
-england -> E, ENG
-english -> E, EN, ENG
+england -> E, ENG, Eng
+english -> E, EN, ENG, Eng
 epsilon -> E
 eraserhead -> E
 eta -> E
 european -> E, EUR
+exa- -> E
 eyesfront -> E
 falsebottom -> E
 fleetcenter -> E
+force -> E, F, G, N, VIS, police, vis
 herheart -> E
 horseback -> E
 horsetail -> E
@@ -1535,32 +1610,39 @@ illbeback -> E
 indetail -> E
 intheend -> E
 irrational -> E, PI
+irrational number -> E
 keepscore -> E
 kitetail -> E
-layer -> E, HEN
+layer -> E, HEN, hen
 leaseback -> E
 log base -> E
-logarithm base -> E
+logarithm base -> E, e
 looseend -> E
 low grade -> E
 mousetail -> E
 moveback -> E
+online -> E
 orient -> E
 oriental -> E, INE
 pareback -> E
-point -> E, N, PT, S, TOR, W
-quarter -> E, N, NE, NW, Q, QR, QU, S, SE, SW, W
+pill -> E
+player -> E, N, S, W
+point -> E, N, PT, S, TOR, W, pt
+quarter -> E, N, NE, NW, Q, QR, QU, S, SE, SW, W, q, qt
 redheart -> E
 retail -> E
 ridgeback -> E
 saddleback -> E
 shavetail -> E
 spain -> E, ES
+spain (españa) (ivr) -> E
 stickleback -> E
 strikeback -> E
-sweetheart -> E, JO
+sweetheart -> E, JO, jo
+tablet -> E
 takeback -> E
 takestoheart -> E
+the eccentricity of a conic section (mathematics) -> e
 thetail -> E
 totheend -> E
 traceback -> E
@@ -1573,20 +1655,22 @@ vacant -> E
 violin strings -> E, G
 whitetail -> E
 writeback -> E
-each -> EA
+each -> EA, ea
 east africa -> EA
 environment agency -> EA
 river * -> EA
-running water -> EA
-listener -> EAR
-organ -> EAR
+running water -> EA, ea
+listener -> EAR, ear
+organ -> EAR, ear
 spike * -> EAR
 word processor -> EAR, WP
 tanzania -> EAT
+tanzania (ivr) -> EAT
 city -> EC, ELY, LA, NY, or EC
 east caribbean -> EC
 east central -> EC
 ecuador -> EC
+ecuador (ivr) -> EC
 established church -> EC
 europe -> EC, EU, EUR
 european commission -> EC
@@ -1598,37 +1682,42 @@ smith -> economist
 sent -> ecstatic
 edited -> ED
 edition -> ED
-editor -> ED
+editor -> ED, Ed
 educated -> ED
 education -> ED
-journalist -> ED
+journalist -> ED, Ed
 newspaperman -> ED
 newspaperwoman -> ED
 test -> MOT, educational journal, examination, match
 early english -> EE
-ease -> EE, ES
+ease -> EE, ES, ee, es
 errors excepted -> EE
 twelve -> XII, eec
-invariably -> EER
+invariably -> EER, eer
 equivalent grade -> EG
-for example -> EG, VG, ZB
-for instance -> EG
+for example -> EG, VG, ZB, eg
+for instance -> EG, eg
 cocktail -> EGG, K
-encourage -> EGG
+encourage -> EGG, egg
 east indian -> EI
 east indies -> EI
-number one -> EIN, I, ME, NOI, UN, UNA, UNE, UNO
+number one -> EIN, I, ME, NOI, UN, UNA, UNE, UNO, me, noi, wee
+one (german) -> ein
 american railway -> EL
-articles - spanish -> EL, LA, LOS
-measure -> EL, ELL, EM, EN, FT, M, Y, YD
+american train -> el
+articles - spanish -> EL, LA, LOS, la, los
+measure -> EL, ELL, EM, EN, FT, M, Y, YD, ell, em, en, ft
 printer's measure -> EL, EM, EN
+the (spanish) -> el, la
 old age -> ELD
-prophet -> ELI
+prophet -> ELI, Eli
 four feet -> ELL
-length -> ELL, L
+length -> ELL, L, ell, l
+printers measure -> em
 small square -> EM, M
+space -> S, em
 them -> EM
-uncle -> EME, SAM
+uncle -> EME, SAM, Sam
 tion -> empty container
 enrolled nurse -> EN
 nurse -> EN, RN, SEN, SRN, VAD, shark
@@ -1641,34 +1730,35 @@ ensign -> ENS
 entomology -> ENT
 otorhinolaryngology -> ENT
 every other day -> EOD
-age -> EON
+age -> EON, eon
 electroplated -> EP
 en passant -> EP
 episcopal -> EP
-epistle -> EP
+epistle -> EP, Ep
 european parliament -> EP
 extreme pressure -> EP
 letter -> EP
 equal -> EQ
 equation -> EQ
 equivalent -> EQ
-cockney girl -> ER
+cockney girl -> ER, er
 emergency room -> ER
-erbium -> ER
-hesitation -> ER, UM, UR
+erbium -> ER, Er
+hesitation -> ER, UM, UR, er, um
 king edward -> ER
 qe -> ER
-queen -> ER, HM, MAB, Q, QU, R
+queen -> ER, HM, MAB, Mab, Q, QU, Qu, R
 queen elizabeth -> ER
 royal badge -> ER
 the old queen -> ER
-generation -> ERA
+generation -> ERA, era
 edward king and emperor -> ERI
 blunder -> ERR
-sin -> ERR
+sin -> ERR, err
 wander -> ERR
-einsteinium -> ES
+einsteinium -> ES, Es
 el salvador -> ES
+el salvador (ivr) -> ES
 french art -> ES
 escape -> ESC
 escape key -> ESC
@@ -1683,13 +1773,16 @@ estimated -> EST
 estonia -> EST
 estuary -> EST
 is -> EST, S
+is (french) -> est
 alien -> ET
 and -> ET
+and (french) -> et
 eastern time -> ET
 egypt -> ET
+egypt (ivr) -> ET
 employment trainee -> ET
 employment training -> ET
-ethyl -> ET
+ethyl -> ET, Et
 exotic -> ET
 extra terrestrial -> ET
 extraterrestrial -> ET
@@ -1703,16 +1796,16 @@ ethiopia -> ETH
 european union -> EU
 europium -> EU
 evangelical union -> EU
-continent -> EUR
+continent -> EUR, Eur
 euro -> EUR
 english version -> EV
 extravehicular activity -> EVA
-first lady -> EVE
-first mate -> EVE
-lady -> EVE, SHE
-woman -> EVE, F, HER, SHE, W
+first lady -> EVE, Eve
+first mate -> EVE, Eve
+lady -> EVE, Eve, SHE, she
+woman -> EVE, Eve, F, HER, SHE, W, her, she
 bridge partners -> EW, NS
-partnership -> EW, NS, SN, WE
+partnership -> EW, NS, SN, WE, we
 examined -> EX
 example -> EX
 except -> EX
@@ -1727,11 +1820,11 @@ exodus -> EX
 export -> EX, EXP
 express -> EX, EXP
 extra -> EX, EXT, W
-former -> EX
-late -> EX
-one time -> EX
+former -> EX, ex
+late -> EX, ex
+one time -> EX, ex
 oral -> examination, test
-saint -> S, ST, example is ST, paragon
+saint -> S, ST, St, example is ST, paragon
 asis -> existing state
 experiment -> EXP
 experimental -> EXP
@@ -1745,28 +1838,33 @@ external -> EXT
 externally -> EXT
 extinct -> EXT
 extract -> EXT
-looker -> EYE
-seer -> EYE
-spectator -> EYE
+looker -> EYE, eye
+seer -> EYE, eye
+spectator -> EYE, eye
 stye -> eyesore
 ezra -> EZ, pound
-clef -> F, G
+clef -> F, G, f
+ef -> F
+eff -> F
 fahrenheit -> F
 fallshead -> F
 falsefront -> F
 falsestart -> F
 farad -> F
 faraday -> F
-farthing -> F, Q
+farthing -> F, Q, f
 faststart -> F
 fathead -> F
 fathom -> F, FM, FTH
+fathom(s) -> f
 fathoms -> F
-female -> F, HEN, HER, SHE
-feminine -> F
+female -> F, HEN, HER, SHE, f, hen, her, she
+feminine -> F, f
+femto- -> f
 fiddlehead -> F
 fighter plane -> F
 figurehead -> F
+filial generation -> F
 filly -> F
 firestop -> F
 fishhead -> F
@@ -1776,37 +1874,41 @@ flattop -> F
 fliptop -> F
 fluorine -> F
 flyingstart -> F
-folio -> F, FO, FOL
-following -> F, FOL, SQ
-foot -> F, FT, infantry
-force -> F, G, N, VIS, police
+folio -> F, FO, FOL, f, fo, fol
+following -> F, FOL, SQ, f
+foot -> F, FT, f, ft, infantry
 forefront -> F
 forehead -> F
-forte -> F
+forte -> F, f
 fountainhead -> F
 foxtrot -> F
-franc -> F, FR
+franc -> F, FR, fr
+franc(s) -> F
 france -> F, FR
+france (ivr) -> F
 francs -> F, FR
-frequency -> F
+frequency -> F, f
 freshstart -> F
 friday -> F, FR, FRI, MAN
 fromthetop -> F
 fuckhead -> F
 fullstop -> F
 furlong -> F, FUR
+furlong(s) -> f
 furlongs -> F
 halfback -> F
 hole -> F, O
 loud -> F, FF
+loud, loudly (forte) -> f
 noisy -> F
 rockefellercenter -> F
 strong -> F, STR
+strong, strongly (forte) -> f
 faculty of actuaries -> FA
 florida -> FA, FL, FLA
 football -> FA, RU
 football association -> FA
-nothing -> FA, NIL, O
+nothing -> FA, NIL, O, nil
 nothing at all -> FA, SFA
 loser -> fabulous hare
 familiar -> FAM
@@ -1825,28 +1927,28 @@ she made this -> FEC
 american detective -> FED
 international equestrian federation -> FEI
 gent -> fellow
-folios -> FF
+folios -> FF, ff
 following lines -> FF
 following pages -> FF
-followings -> FF
+followings -> FF, ff
 form feed -> FF
-fortissimo -> FF
+fortissimo -> FF, ff
 french franc -> FF
 french francs -> FF
 they did it -> FF
 they made it -> FF
-very loud -> FF
-very strong -> FF
+very loud -> FF, ff
+very strong -> FF, ff
 motor racing -> FI
 international automobile federation -> FIA
 figurative -> FIG
 figuratively -> FIG
 figure -> FIG
-small illustration -> FIG
+small illustration -> FIG, fig
 finland -> FIN
 omega -> Greek letter, Z, final letter, final word, last letter
 amen -> final word, last word
-scot -> IAN, MAC, MON, fine, tax
+scot -> IAN, Ian, MAC, MON, fine, mac, mon, tax
 fast -> firm
 adam -> first character, first person, number one
 loti -> first item in sale
@@ -1855,6 +1957,7 @@ abel -> first victim, murder victim, second child, third man
 international ski federation -> FIS
 ling -> fish, heather, swimmer
 fiji -> FJI
+flerovium -> Fl
 floor -> FL
 florin -> FL
 flourished -> FL
@@ -1872,20 +1975,20 @@ flying officer -> FO
 foreign office -> FO
 foreign officer -> FO
 full organ -> FO
-free on board -> FOB
-free -> FOC, RID
-free of charge -> FOC
+free on board -> FOB, fob
+free -> FOC, RID, rid
+free of charge -> FOC, foc
 followed -> FOL
-free on rail -> FOR
+free on rail -> FOR, for
 seth -> fourth man
 fireplug -> FP
 former pupil -> FP
 free presbyterian -> FP
 freezing point -> FP
-fragment -> FR, ORT
+fragment -> FR, ORT, fr, ort
 francium -> FR
-french -> FR
-frequently -> FR
+french -> FR, Fr
+frequently -> FR, fr
 friar -> FR
 ouija -> Franco-German agreement
 rene -> French man
@@ -1893,34 +1996,40 @@ reine -> French queen
 fri -> FRI
 tuck -> friar
 dela -> from the, of the
-feet -> FT
+feet -> FT, ft
 financial times -> FT
 fort -> FT
-newspaper -> FT, I, RAG, SUN
+newspaper -> FT, I, RAG, SUN, i
 future -> FUT
 effects -> FX
-forced -> FZ
+forced -> FZ, fz
+acceleration due to gravity -> g
 angelheart -> G
 bitingback -> G
 bouncingback -> G
 certificate -> G, PG, R, U, X
+conductance (physics) -> G
 dogtail -> G
 doublingback -> G
 fallingback -> G
 gabon -> G
+gabon (ivr) -> G
 gallon -> G
+gallon(s) -> g
 gallons -> G
 gamestop -> G
-gamma -> G
-gamut -> G
+gamma -> G, g
+gamut -> G, g
 gauss -> G, GS
 gearhead -> G
 gee -> G
-george -> G, GEO, GR, pilot
+general intelligence -> G
+george -> G, GEO, GR, g, pilot
 german -> G, GER, HUN
 getahead -> G
 getaheadstart -> G
-girl -> G, GAL
+giga- -> G
+girl -> G, GAL, gal
 givingback -> G
 goahead -> G
 godhead -> G
@@ -1930,9 +2039,13 @@ gourde -> G, GDE
 government -> G, GOV
 goyahead -> G
 gram -> G, GM, GR
-gramme -> G, GR
+gram(s) -> g
+gramme -> G, GR, gr
+gramme(s) -> g
 grams -> G, GM, GR
+grand (1000 dollars) -> G
 gravity -> G
+group of (as in g5 is group of five etc) -> G
 guinea -> G, GU, RG
 gulf -> G, O
 hangback -> G
@@ -1942,15 +2055,16 @@ hungback -> G
 knockingback -> G
 longbottom -> G
 longtail -> G
-midnight -> G
+midnight -> G, g
 pigtail -> G
 ringback -> G
 ringtail -> G
 runningback -> G
 sittingback -> G
 slingback -> G
-suit -> G
+suit -> G, H, S
 takingback -> G
+the constant of gravitation -> G
 turningback -> G
 turningtail -> G
 wagtail -> G
@@ -1960,16 +2074,17 @@ gallium -> GA
 general assembly -> GA
 general average -> GA
 georgia -> GA, GE
-gift -> GAB
+gift -> GAB, gab
 erse -> Gaelic
 gael -> Gaelic
 tate -> gallery
-whales -> GAM
+whales -> GAM, gam
 eden -> garden, old Prime Minister, paradise
 plot -> garden
 gigabyte -> GB
 gilbert -> GB
 great britain -> GB
+great britain (ivr) -> GB
 our islands -> GB
 alderney -> GBA
 guernsey -> GBG
@@ -1977,24 +2092,25 @@ jersey -> GBJ
 gibraltar -> GBZ
 decoration -> GC, MM, VC
 george cross -> GC
-medal -> GC, MC, MM, OBE, OM, TD, VC
+medal -> GC, MC, MM, OBE, OM, TD, VC, mm
 gadolinium -> GD
 east germany -> GDR
 general electric -> GE
+georgia (ivr) -> GE
 germanium -> GE
-little horse -> GEE, GG, NAG, NED
-jelly -> GEL
-general -> GEN, GOC, LEE
-genesis -> GEN
-information -> GEN, INF
-low down -> GEN
+little horse -> GEE, GG, NAG, NED, gg, nag, ned
+jelly -> GEL, gel
+general -> GEN, GOC, LEE, gen
+genesis -> GEN, Gen
+information -> GEN, INF, gen, i
+low down -> GEN, gen
 grant -> general
 gerund -> GER
 gerundive -> GER
-gee-gee -> GG
+gee-gee -> GG, gg
 ghana -> GH
 growth hormone -> GH
-american soldier -> GI, JOE
+american soldier -> GI, JOE, Joe
 doughboy -> GI
 fighter -> GI, MAN
 government issue -> GI
@@ -2003,7 +2119,7 @@ private -> GI, PTE, PVT
 serving man -> GI
 us soldier -> GI
 engagement -> GIG
-greek -> GK, GR
+greek -> GK, GR, Gr
 capital authority -> GLC
 counter -> GM
 general manager -> GM
@@ -2014,10 +2130,13 @@ grand master -> GM
 grant-maintained -> GM
 germanic -> GMC
 bargain -> GO
+game -> NIM, RL, RU, go, nim
 in good condition -> GO
-ready -> GO, SET
+ready -> GO, SET, set
 success -> GO
 traffic signal -> GO
+try -> go
+turn -> U, go
 athena -> goddess
 isis -> goddess, river
 dean -> good man
@@ -2030,13 +2149,14 @@ general practitioner -> GP
 glory to the father -> GP
 graduated pension -> GP
 grand prix -> GP
-group -> GP, SET
-grain -> GR
+group -> GP, SET, set
+grain -> GR, Gr, gr
 grains -> GR
 grammar -> GR
 greece -> GR
-grey -> GR
-gross -> GR
+greece (ivr) -> GR
+grey -> GR, Gr
+gross -> GR, gr
 grouse -> GR
 king george -> GR
 eric -> gradually
@@ -2051,10 +2171,10 @@ general staff -> GS
 grammar school -> GS
 guineas -> GS
 a drop -> GT
-fast car -> GT, ROD
+fast car -> GT, ROD, rod
 gran turismo -> GT
-great -> GT
-sports car -> GT, ROD
+great -> GT, Gt
+sports car -> GT, ROD, rod
 guaranteed -> GTD
 old fiddle -> GU, GUE
 bren -> gun
@@ -2064,6 +2184,7 @@ sten -> gun
 gray -> GY
 chal -> gypsy
 chai -> gypsy woman
+aitch -> H
 cashback -> H
 dirac's constant -> H
 edithtail -> H
@@ -2084,7 +2205,9 @@ headstonehead -> H
 headtohead -> H
 heart -> H
 hearts -> H
-height -> H, HT
+hecto- -> h
+height -> H, HT, ht
+helipad -> H
 henry -> H
 heroin -> H
 highend -> H
@@ -2097,20 +2220,23 @@ hophead -> H
 horsehead -> H
 horseshead -> H
 hospital -> H, SAN
-hot -> H
+hot -> H, h
 hotel -> H
 hothead -> H
-hour -> H, HR
+hour -> H, HR, h, hr
 housetop -> H
 hunchback -> H
 hungary -> H
-husband -> H, MAN
+hungary (ivr) -> H
+husband -> H, MAN, h
 hydrant -> H
 hydrogen -> H
-planck's constant -> H
+magnetic field strength (physics) -> H
+planck's constant -> H, h
 pushback -> H
 rehabcenter -> H
 rugby goal -> H
+rugby posts -> H
 switchback -> H
 theheart -> H
 touchback -> H
@@ -2118,14 +2244,14 @@ two hundred thousand -> H
 hahnium -> HA
 half ditch -> HA
 hectare -> HA
-laugh -> HA
+laugh -> HA, ha
 this year -> HA
 comb -> hairdresser
 demi -> half
 semi -> half, house
-actor -> HAM, tree
-poor actor -> HAM
-chinese dynasty -> HAN
+actor -> HAM, ham, tree
+poor actor -> HAM, ham
+chinese dynasty -> HAN, Han
 hearth -> hard ground
 bears -> HAS
 hedge -> HAW
@@ -2144,7 +2270,7 @@ high explosive -> HE
 his eminence -> HE
 his excellency -> HE
 legate -> HE, LEG
-male -> HE, HIM, M, PA
+male -> HE, HIM, M, PA, he, him, m
 our man -> HE
 the man -> HE
 ness -> head, loch, point
@@ -2156,13 +2282,13 @@ heir -> HER
 heraldry -> HER
 the woman's -> HER
 hafnium -> HF
-half -> HF
+half -> HF, hf
 high frequency -> HF
 dad's army -> HG
 her grace -> HG
 high german -> HG
 his grace -> HG
-mercury -> HG
+mercury -> HG, Hg
 hands -> HH
 her highness -> HH
 his highness -> HH
@@ -2171,17 +2297,18 @@ the pope -> HH
 very hard -> HH
 hawaii -> HI
 hawaiian islands -> HI
-hello -> HI
+hello -> HI, hi
 here in rome -> HIC
 hong kong -> HK
 house of keys -> HK
 house of lords -> HL
+hectometre -> hm
 her majesty -> HM
 his majesty -> HM
 honduras -> HN
 hohnium -> HO
 hostilities only -> HO
-short break -> HOL
+short break -> HOL, hol
 honorary -> HON
 honourable -> HON
 unpaid -> HON
@@ -2201,69 +2328,85 @@ never-never -> HP
 westminster -> HP, WI
 headquarters -> HQ
 croatia -> HR
+croatia (ivr) -> HR
 home rule -> HR
 house of representatives -> HR
 human resources -> HR
-hassium -> HS
+hassium -> HS, Hs
 here is -> HS
 high school -> HS
 home secretary -> HS
 in this sernse -> HS
 high-speed train -> HST, TGV
 high tension -> HT
-barbarian -> HUN
+barbarian -> HUN, Hun
 lakh -> hundred thousand
 orion -> hunter
 high voltage -> HV
 hertz -> HZ
+1 (roman numeral) -> i
 a -> I, PER
+author -> I, PEN, pen
 bigheart -> I
+bit -> I, O, ORT
 che -> I
+compiler -> I
+crossword setter -> I
 ego -> I
+electric current -> I
 electrical current -> I
 eye -> I
 faintheart -> I
-first -> I, IST
-first person -> I, ME
+first person -> I, ME, me
 grindcore -> I
 ilionheart -> I
-imaginary number -> I
+imaginary number -> I, i, j
+imaginary unit -> i, j
 imahead -> I
 indeed -> I
 independence -> I
 independent -> I, IND
 india -> I, IND
 indianhead -> I
-individual -> I
+individual -> I, i
+info -> i
 institute -> I
+interest -> I, INT
 iodine -> I
 ironhead -> I
 isahead -> I
 isle -> I, man
 italy -> I
+italy (ivr) -> I
 itsastart -> I
-line -> I, L, ROW, RY, shipping company
+line -> I, L, ROW, RY, Ry, l, row, shipping company
 lionheart -> I
-lunchtime -> I, ONE
+lunchtime -> I, ONE, one
+me -> I
 medicalcenter -> I
+myself -> I
 self -> I
 setter -> I, ME, ONE
 single -> I
-square root of -1 -> I, J
+square root of -1 -> I, J, i
 straight line -> I
-upright -> I, PI
+the imaginary square root of -1 -> i, j
+upright -> I, PI, i, pi
+upright character -> I
+vertical line -> I
+writer -> I, NIB, PEN, nib, pen
 yours truly -> I, ID
 iowa -> IA
 early morning -> IAM
-scotsman -> IAN, MAC, MON
-in the same place -> IB
+scotsman -> IAN, Ian, MAC, MON, mac
+in the same place -> IB, ib
 same place -> IB
-i see -> IC
-in charge -> IC
+i see -> IC, ic
+in charge -> IC, ic
 in command -> IC
 integrated circuit -> IC
 internal-combustion -> IC
-hard water -> ICE
+hard water -> ICE, ice
 genius -> ID
 i had -> ID
 i would -> ID
@@ -2276,53 +2419,56 @@ inner diameter -> ID
 instinct -> ID
 intelligence department -> ID
 intradermal -> ID
-papers -> ID, MSS
+papers -> ID, MSS, mss
 that -> ID, YT
 in the name of god -> IDN, IND
 indo-european -> IE
-that is -> IE, SC, SS
-that's -> IE
-thus -> IE, SIC, SO
-condition -> IF
+that is -> IE, SC, SS, ie
+that's -> IE, ie
+thus -> IE, SIC, SO, sic, so
+condition -> IF, if
 intermediate frequency -> IF
 poem -> IF
-provided -> IF
-providing -> IF
+provided -> IF, if
+providing -> IF, if
 indo-germanic -> IG
 gin cocktail -> IGN, ING
 sling -> IGN, ING
-unknown -> IGN, X, Y, Z
-eyes -> II, IS
+unknown -> IGN, X, Y, Z, x, y, z
+eleven -> XI, ii, or XI
+eyes -> II, IS, ii, is
 three -> III
-articles - italian -> IL, LA
+articles - italian -> IL, LA, il, la
 illinois -> IL, ILL
 israel -> IL
-badly -> ILL
+israel (ivr) -> IL
+the (italian) -> il, la
+badly -> ILL, ill
 i shall -> ILL
-unwell -> ILL
+unwell -> ILL, ill
 will -> ILL, TO
 institute of management -> IM
 intramuscular -> IM
 emperor -> IMP
 empress -> IMP
 imperial -> IMP
-little devil -> IMP
-mischevious child -> IMP
-at home -> IN
-batting -> IN
-elected -> IN
-fashionable -> IN
-favoured -> IN
+little devil -> IMP, imp
+mischevious child -> IMP, imp
+at home -> IN, in
+batting -> IN, in
+elected -> IN, in
+fashionable -> IN, in
+favoured -> IN, in
 home -> IN
 in fashion -> IN
 inch -> IN, island
 inches -> IN, INS
 indiana -> IN, IND
 indium -> IN
-not out -> IN, NO
-playing -> IN, ON
-trendy -> IN
-wearing -> IN
+not out -> IN, NO, in
+playing -> IN, ON, in, on, v
+trendy -> IN, in
+wearing -> IN, in
 deep -> SEA, in the main, main, sea
 ibid -> in the same place
 including -> INC
@@ -2337,10 +2483,9 @@ informal -> INF
 grass -> informer
 nose -> informer
 initials -> inits
-local -> INN, PH, PUB
+local -> INN, PH, PUB, inn, pub
 insurance -> INS
 this month -> INST
-interest -> INT
 interior -> INT
 internal -> INT
 ment -> intended, meant, on purpose, understood
@@ -2348,15 +2493,17 @@ designed it -> INV
 invented -> INV
 invoice -> INV
 edison -> inventor
-cry of triumph -> IO
-joyful cry -> IO
+bits -> io
+cry of triumph -> IO, io
+joyful cry -> IO, io
 maiden -> IO, M
 ten -> IO, X
-triumphant cry -> IO
+triumphant cry -> IO, io
 x -> IO
 isle of man -> IOM
 charged -> ION
 number one returning -> ION
+promise to pay -> IOU
 debts -> IOUS
 promises -> IOUS
 internet protocol -> IP
@@ -2367,19 +2514,23 @@ the same as -> IQ
 infrared -> IR
 inland revenue -> IR
 iran -> IR
-ireland -> IR, IRE, IRL
+iran (ivr) -> IR
+ireland -> IR, IRE, IRL, ROI
 iridium -> IR
 irish -> IR
 irish republican army -> IRA
 anger -> IRE
 dail -> Irish house
+ireland (ivr) -> IRL
 iceland -> IS
+iceland (ivr) -> IS
 income support -> IS
 independent suspension -> IS
 information science -> IS
 information systems -> IS
 internal security -> IS
 isaiah -> IS, ISA
+ones -> is
 eyot -> island
 doctrine -> ISM
 theory -> ISM
@@ -2387,16 +2538,16 @@ internet/internet provider -> ISP
 exists -> ISS
 appeal -> IT, SA, SOS
 information technology -> IT
-italian -> IT
-sex appeal -> IT, SA
-the thing -> IT
+italian -> IT, It
+sex appeal -> IT, SA, it
+the thing -> IT, it
 vermouth -> IT
 international unit -> IU
 drip -> IV
 four -> IV, rowing boat
 intravenous -> IV
 intravenously -> IV
-ivy -> IV
+ivy -> IV, iv
 quartet -> IV
 tea-time -> IV
 i have -> IVE
@@ -2405,6 +2556,8 @@ nine -> IX
 heat -> J
 hook -> J
 japan -> J, YEN
+japan (ivr) -> J
+japanese -> J, JAP
 jarhead -> J
 jay -> J
 joint -> J
@@ -2413,15 +2566,18 @@ journal -> J
 judge -> J, REF
 jughead -> J
 juliet -> J
+juliet(t) -> J
 juliett -> J
 jumpstart -> J
 justice -> J
 knave -> J
 pen -> J
+agreement (german) -> ja
 jamaica -> JA
+jamaica (ivr) -> JA
+yes (german) -> ja
 swiss roll -> jammed cylinder
 january -> JAN
-japanese -> JAP
 james -> JAS
 jesus christ -> JC
 julius caesar -> JC
@@ -2430,8 +2586,8 @@ in paris -> JE
 just-in-time -> JIT
 judges -> JJ, JUD
 justices -> JJ
-little woman -> JO
-bookmaker -> JOB
+little woman -> JO, Jo
+bookmaker -> JOB, Job
 justice of the peace -> JP
 junior -> JR, JUN
 doctor of both laws -> JUD
@@ -2439,43 +2595,62 @@ judith -> JUD
 july -> JUL, JY
 june -> JUN
 1000 -> K, M
+a thousand -> K
 backback -> K
 backend -> K
 blackbottom -> K
 blacktail -> K
+boltzmann constant -> k
 bookend -> K
 bucktail -> K
 cambodia -> K
+cambodia (ivr) -> K
 diamondbacktail -> K
 ducktail -> K
 forktail -> K
 harkback -> K
+kaon (physics) -> K
 kappa -> K
+karat or carat -> k
 kay -> K
 kelvin -> K
+kelvin (si unit) -> K
 khmer republic -> K
 kickback -> K
 kickstart -> K
-kilo -> K
+kilo -> K, k
+kilo- -> k
 kilobyte -> K, KB
+kilobyte(s) (computing) -> K
 kilobytes -> K, KB
-kilometre -> K, KM
+kilometre -> K, KM, km
+kilometre(s) -> K
 kilometres -> K
+kina (papua new guinea currency) -> K
+king (cards and chess) -> K
 kirkpatrick -> K
-knight -> K, KBE, KG, KT, N, SIR
+kirkpatrick (catalogue of scarlatti's works) -> K
+knight -> K, KBE, KG, KT, N, SIR, kt, sir
 knighthead -> K
 knockback -> K
 knucklehead -> K
-koechel -> K
+kochel (catalogue of mozart’s works) -> K
+koechel -> K, k
 krona -> K, KR
+krona (swedish currency) -> K
 krone -> K, KR
+krone (danish and norwegian currency) -> K
+króna (icelandic currency) -> K
 kwacha -> K
+kwacha (malawian and zambian currency) -> K
+köchel -> K
 lameducktail -> K
 lookback -> K
 mocktail -> K
 mozart's works -> K
 one thousand -> K, M
 potassium -> K
+potassium (kalium) -> K
 rockbottom -> K
 scarlatti's works -> K
 shrinkback -> K
@@ -2483,7 +2658,7 @@ shuttlecocktail -> K
 takesheart -> K
 talkback -> K
 twenty thousand -> K
-velocity constant -> K
+velocity constant -> K, k
 weekend -> K, SS
 double * -> KA
 genius * -> KA
@@ -2497,17 +2672,17 @@ knocked down -> KD
 kuwaiti dinar -> KD
 kinetic energy -> KE
 kentucky -> KEN, KY
-opener -> KEY
-cagey -> KG
+opener -> KEY, key
+cagey -> KG, kg
 keg -> KG
 kegs -> KG
 kilogram -> KG
 kilograms -> KG
 knight of the garter -> KG
 lear -> king
-kale -> KL
+kale -> KL, kl
 kuala lumpur -> KL
-cayenne -> KN
+cayenne -> KN, kn
 wist -> knew
 decisive blow -> KO
 feller -> KO
@@ -2517,7 +2692,7 @@ knock out -> KO
 knockout -> KO
 stunner -> KO
 kitchen police -> KP
-krypton -> KR
+krypton -> KR, kr
 kansas -> KS
 knight templar -> KT
 knot -> KT
@@ -2527,25 +2702,30 @@ cave -> KV, warning
 cavy -> KV
 kilowatts -> KW
 50 -> L
+50 (roman numeral) -> L
 allheart -> L
+an elevated railroad (us informal) -> L
 angle -> L
+angular momentum -> L
 beginner -> L
 bellbottom -> L
 callback -> L
 camelback -> L
 el -> L
 elevated railway -> L
-ell -> L
+ell -> L, l
 fallback -> L
 fifty -> L
 fifty thousand -> L
 filmscore -> L
 foultip -> L
 fullback -> L
+half a century -> L
 half century -> L
 inductance -> L
 inexperienced driver -> L
-labour -> L, LAB
+labour -> L, LAB, lab
+laevorotatory -> l
 lake -> L, LA
 lakefront -> L
 lambert -> L
@@ -2553,50 +2733,58 @@ large -> L, LG, LGE, OS
 laststop -> L
 latestart -> L
 latin -> L, LAT
-latitude -> L, LAT
-league -> L
+latitude -> L, LAT, l
+league -> L, l
 learner -> L
 learning -> L
 lecturer -> L
-left -> L
+left -> L, l
 letsstart -> L
 letterhead -> L
 levelhead -> L
-liberal -> L, LIB
+liberal -> L, LIB, Lib
 libra -> L, LB
 licentiate -> L
 liesahead -> L
 lima -> L
 lionshead -> L
 lira -> L, LR
+lira or lire -> l
 lire -> L
-litre -> L
+litre -> L, l
 loch -> L, lake
 loggerhead -> L
 long -> L
 lookahead -> L
+loss -> L
+lost -> L
 lough -> L
 lumen -> L, LM, LU
 luminance -> L
 lunkhead -> L
 luxembourg -> L
+luxembourg (ivr) -> L
 midfielder -> L
-money -> L, M, TIN
+molar latent heat -> L
+money -> L, M, TIN, tin
 nailtip -> L
 new driver -> L
 nickelback -> L
 novice -> L
 number plate -> L
 overhead railway -> L
-plate -> L, P, T
-port -> L, PT, RIO, left, wine
-pound -> L, LAM, LB
+plate -> L, P, T, t
+port -> L, PT, RIO, l, left, pt, rio, wine
+pound -> L, LAM, LB, lam, lb
+pound (libra) -> l
 pound sterling -> L
 pullback -> L
 pupil -> L
+right angle -> L
 rollback -> L
 side -> L, LEG, OFF, ON, R, S, XI, XV, team
 sovereign -> L
+specific latent heat per gramme -> l
 steeltip -> L
 student -> L, NUS
 tailback -> L
@@ -2604,25 +2792,27 @@ tailend -> L
 trainee -> L
 tyro -> L
 usefultip -> L
-articles - french -> LA, LE, LES
+articles - french -> LA, LE, LES, la, le, les
 lane -> LA
 lanthanum -> LA
 legislative assembly -> LA
 look * -> LA
 los angeles -> LA
 louisiana -> LA
+the (french) -> la, le
 laboratory -> LAB
 labrador -> LAB
-science centre -> LAB
+science centre -> LAB, lab
 leading aircraftsman -> LAC
 dame -> lady
 erie -> lake
-beat -> LAM, TAN
+beat -> LAM, TAN, lam, tan
 lamentations -> LAM
 local area network -> LAN
 laos -> LAO
 housekeeper -> LAR
 libya -> LAR
+libya (ivr) -> LAR
 lateral -> LAT
 hehe -> laugh
 moses -> lawgiver
@@ -2640,23 +2830,23 @@ licentiate in surgery -> LCH
 lady day -> LD
 lethal dosage -> LD
 low dutch -> LD
-leading -> LDG, NOI
+leading -> LDG, NOI, NoI
 lordship -> LDP, LP
-field -> LEA, LEY
-part -> PT, leave
+field -> LEA, LEY, lea
+part -> PT, leave, pt
 legal -> LEG
 legato -> LEG
 legislation -> LEG
 legislative -> LEG
 legislature -> LEG
-on -> LEG
-flowers -> LEI
+on -> LEG, leg
+flowers -> LEI, lei
 wreath * -> LEI
-the french -> LES
-allow -> LET
+the french -> LES, les
+allow -> LET, let
 allowed -> LET
 hindrance -> LET
-permit -> LET
+permit -> LET, let
 permitted -> LET
 with a tenant -> LET
 landlord -> LETTER
@@ -2664,7 +2854,7 @@ leviticus -> LEV
 line feed -> LF
 low frequency -> LF
 low german -> LG
-left hand -> LH, VO
+left hand -> LH, VO, lh
 left-hand drive -> LHD
 fifty one -> LI
 light infantry -> LI
@@ -2673,26 +2863,26 @@ long island -> LI
 librarian -> LIB
 library -> LIB
 ankh -> life symbol
-very -> V, light
+very -> V, light, v
 fifty two -> LII
 fifty three -> LIII
 lineal -> LIN
 linear -> LIN
 liquor -> LIQ
-drunk -> LIT
+drunk -> LIT, lit
 literal -> LIT
 literally -> LIT
 literary -> LIT
 literary/literature -> LIT
 literature -> LIT
-loaded -> LIT
+loaded -> LIT, lit
 settled -> LIT
 fifty four -> LIV
 fifty nine -> LIX
 lord justice -> LJ
 50/50 -> LL
-ells -> LL, LS
-els -> LL, LS
+ells -> LL, LS, ll, ls
+els -> LL, LS, ll, ls
 fifty pounds -> LL
 fifty-fifty -> LL
 late latin -> LL
@@ -2703,19 +2893,20 @@ long metre -> LM
 lord mayor -> LM
 lunar module -> LM
 logarithm -> LN
-look -> LO, SEE, V
+look -> LO, SEE, V, lo, see
 hair net -> lock keeper
-maths function -> LOG, TAN
+maths function -> LOG, TAN, log, tan
 indian crosswords -> LON
 london -> LON
 longitude -> LON
 vide -> V, look, see
 speaks -> LOQ
-large amount -> LOT, TON
+large amount -> LOT, TON, ton
 labour party -> LP
 lady provost -> LP
 long playing -> LP
 long playing record -> LP
+long-playing -> LP
 lord provost -> LP
 low pressure -> LP
 london philharmonic orchestra -> LPO
@@ -2723,16 +2914,17 @@ lawrencium -> LR
 lesotho -> LS
 economists -> LSE
 orchestra -> LSO
-lieutenant -> LT
+lieutenant -> LT, Lt
 lithuania -> LT
 low tension -> LT
-subaltern -> LT
+subaltern -> LT, lt
 limited -> LTD
 lutetium -> LU
 old king -> LUD
 chimney -> LUM
 fifty five -> LV
 latvia -> LV
+latvia (ivr) -> LV
 luncheon voucher -> LV
 meal ticket -> LV
 fifty six -> LVI
@@ -2772,7 +2964,9 @@ eighty five -> LXXXV
 eighty six -> LXXXVI
 eighty seven -> LXXXVII
 eighty eight -> LXXXVIII
+a thousand (mille) -> M
 bond's boss -> M
+bond's superior -> M
 commend -> M
 em -> M
 emma -> M
@@ -2782,45 +2976,59 @@ gateshead -> M
 grand -> M
 machinehead -> M
 maiden over -> M
+maiden over(s) (cricket) -> M
 maidenhead -> M
 mallethead -> M
 malta -> M
+malta (ivr) -> M
 maphead -> M
 marblehead -> M
 mare -> M
+mark(s) (former german currency) -> m
 marks -> M
-married -> M
+married -> M, m
 mascothead -> M
-masculine -> M, MAS
-mass -> M, Massachusetts, service
+masculine -> M, MAS, m
+mass -> M, Massachusetts, m, service
 master -> M, MA
 masthead -> M
 matchhead -> M
+mcdonald's -> M
 meathead -> M
-medium -> M, MED
+medium -> M, MED, m
 medusashead -> M
 meethead -> M
 mega -> M
+mega- -> M
 melonhead -> M
+member (of) -> M
 meso- -> M
 meta- -> M
 metalhead -> M
 meter -> M
 metre -> M
+metre(s) -> m
 metres -> M
 mike -> M
-mile -> M, MI, ML
+mile -> M, MI, ML, m
 mile . -> M
+mile(s) -> m
 miles -> M, ML
+mille- -> m
+milli- -> m
 million -> M
+million(s) -> m
 millions -> M
 minute -> M, MI
 minutes -> M
+mobile -> m
 modulus -> M
-monday -> M, MON
+monday -> M, MON, mon
 monsieur -> M
+monsieur (french), mr (pl mm) -> M
 month -> M, MO, MTH, R
-months -> M, MOS, MS
+month(s) -> m
+months -> M, MOS, MS, mos
 moon -> M
 moorehead -> M
 moorhead -> M
@@ -2834,26 +3042,30 @@ muffintop -> M
 musclehead -> M
 muttonhead -> M
 myhead -> M
-noon -> M, N
+noon -> M, N, n
+noon (meridiem) -> m
 roof -> M
+spy -> M
+spy chief -> M
 spymaster -> M
 thousand -> M, or K
+top spy -> M
 educated man -> MA
 massachusetts -> MA
 master of arts -> MA
 master's -> MA
 morocco -> MA, MOR
-old woman -> MA
-fairy queen -> MAB
-magnesium -> MAG, MG
+old woman -> MA, ma
+fairy queen -> MAB, Mab
+magnesium -> MAG, MG, Mg
 magnetic -> MAG
 magnetism -> MAG
 magnitude -> MAG
-over -> O, RE, maiden
+over -> O, RE, maiden, re
 major -> MAJ
-bad french -> MAL
+bad french -> MAL, mal
 malaysia -> MAL
-cove -> MAN
+cove -> MAN, man
 admin -> management, running
 declension -> MAR
 march -> MAR
@@ -2862,7 +3074,7 @@ matinee -> MAT
 matrix -> MAT
 sine -> maths function, without
 maximum -> MAX
-can -> MAY, TIN
+can -> MAY, TIN, may, tin
 may -> MAY
 666 -> MB
 manitoba -> MB
@@ -2900,12 +3112,13 @@ medicine -> MED
 medieval -> MED
 mediterranean sea -> MED
 middle -> MED
-honey -> MEL
+honey -> MEL, mel
 memorandum -> MEM
 memorial -> MEM
 remember -> MEM
 people -> MEN
-soldiers -> MEN, OR, RA, RE, SAS, TA
+soldiers -> MEN, OR, RA, RE, SAS, TA, men
+sea (french) -> mer
 polo -> Merchant of Venice
 london police -> MET
 metaphor -> MET
@@ -2913,7 +3126,7 @@ metaphorical -> MET
 metaphysics -> MET
 meteorological -> MET
 metropolitan -> MET
-new york opera -> MET
+new york opera -> MET, Met
 mexican -> MEX
 mexico -> MEX
 central european time -> MEZ
@@ -2933,13 +3146,13 @@ megahertz -> MHZ
 michigan -> MI
 military intelligence -> MI
 mica -> MIC
-aeroplane -> MIG
+aeroplane -> MIG, mig
 fighter (plane) -> MIG
 jet -> MIG
 plane -> MIG
 military -> MIL
 grist -> miller's corn
-half minute -> MIN, MO, UTE
+half minute -> MIN, MO, UTE, min
 minister -> MIN, MP, Rev
 thirty seconds -> MIN
 timon -> misanthrope
@@ -2949,7 +3162,7 @@ macedonia -> MK
 market -> MKT
 millilitre -> ML
 millilitres -> ML
-ems -> MM, MS
+ems -> MM, MS, mm, ms
 french men -> MM
 gentlemen -> MM
 messieurs -> MM
@@ -2966,23 +3179,23 @@ magneto-optical -> MO
 medical officer -> MO
 missouri -> MO
 modus operandi -> MO
-molybdenum -> MO
+molybdenum -> MO, Mo
 money order -> MO
-short time -> MO, SEC, T
+short time -> MO, SEC, T, mo, sec
 way of working -> MO
 mozambique -> MOC
 ministry of defence -> MOD
 moderate -> MOD
 moderato -> MOD
 modern -> MOD
-cat -> MOG, REX, TOM
-mole -> MOL, SPY
+cat -> MOG, REX, TOM, mog, tom
+mole -> MOL, SPY, spy
 pier -> mole
 mon -> MON
 monmouthshire -> MON
 brass -> money
 women -> W, monstrous regiment
-low -> MOO
+low -> MOO, moo
 neat sound -> MOO
 middle-of-the-road -> MOR
 car test -> MOT
@@ -2990,7 +3203,7 @@ carnation -> motor race
 sherpa -> mountaineer
 lips -> mouthpiece, speakers
 army cop -> MP
-fairly quiet -> MP
+fairly quiet -> MP, mp
 madhya pradesh -> MP
 melting-point -> MP
 member of parliament -> MP
@@ -3008,19 +3221,19 @@ chemist -> MPS
 multipurpose vehicle -> MPV
 master of the rolls -> MR
 mauritian rupee -> MR
-mister -> MR
+mister -> MR, Mr
 motivational research -> MR
 moral rearmament -> MRA
-handwriting -> MS
-manuscript -> MS
+handwriting -> MS, ms
+manuscript -> MS, ms
 mauritius -> MS
 millisecond -> MS
 mississippi -> MS
-text -> MS
-writing -> MS, R
+text -> MS, ms
+writing -> MS, R, ms
 master of science -> MSC
-manuscripts -> MSS
-hill -> MT, TOR
+manuscripts -> MSS, mss
+hill -> MT, Mt, TOR, tor
 mean time -> MT
 mechanical transport -> MT
 meitnerium -> MT
@@ -3030,10 +3243,11 @@ mountain time -> MT
 torpedo boat -> MTB, TB
 mountains -> MTS
 music television -> MTV
-greek character -> MU, NU, PI
-quiet -> MUM, P, QT, SH
-silence -> MUM, SH, ST
+greek character -> MU, NU, PI, mu, nu, pi
+quiet -> MUM, P, QT, SH, mum, sh
+silence -> MUM, SH, ST, mum, sh
 wall -> MUR
+wall (french) -> mur
 museum -> MUS, VA
 music -> MUS
 musical -> MUS
@@ -3047,7 +3261,7 @@ megawatt -> MW
 maxwell -> MX
 middlesex -> MX
 missile experimental -> MX
-gracious me -> MY
+gracious me -> MY, my
 motor yacht -> MY
 setter's -> MY
 myanmar -> MYA
@@ -3063,31 +3277,38 @@ fitnesscenter -> N
 greenback -> N
 half an em -> N
 horntail -> N
-indefinite number -> N, NO
+indefinite number -> N, NO, n, no
 inkheart -> N
+knight (chess) -> N
 linescore -> N
 nailhead -> N
 naira -> N
-name -> N
+naira (nigerian currency) -> N
+name -> N, n
+nano- -> n
 nationalist -> N, NAT
 nee -> N
 neper -> N
-neuter -> N
+neuter -> N, n
 neutral -> N
-neutron -> N
-new -> N
+neutron -> N, n
+new -> N, n
 newton -> N
+newton (si unit) -> N
+ngultrum (bhutanese currency) -> N
 ninety thousand -> N, Q
 nitrogen -> N
+nitrogen (chem) -> n
 no -> N, NA, NAE, NON, O, X
-nominative -> N, NOM
+nominative -> N, NOM, n
 nonstop -> N
 noodlehead -> N
 norse -> N
 north -> N, NOR, NTH
 northern -> N
 norway -> N, NOR
-noun -> N
+norway (ivr) -> N
+noun -> N, n
 november -> N, NOV
 nu -> N
 nuclear -> N, NUC
@@ -3110,11 +3331,13 @@ unknown number -> N
 unlimited number -> N
 up or upper -> N, U
 netherlands antilles -> NA
+no (scottish) -> na, nae
 north america -> NA
 not -> NA, NAE, NE
+not (scottish) -> na, nae
 not applicable -> NA
 not available -> NA
-sodium -> NA
+sodium -> NA, Na
 namibia -> NAM
 natural -> NAT
 naval -> NAV
@@ -3134,17 +3357,17 @@ network computer -> NC
 no charge -> NC
 north carolina -> NC
 numerical control -> NC
-non-commissioned officer -> NCO, RSM, SGT, SM
-sergeant -> NCO, SGT
+non-commissioned officer -> NCO, RSM, SGT, SM, sm
+sergeant -> NCO, SGT, Sgt
 neodymium -> ND
-no date -> ND
+no date -> ND, nd
 north dakota -> ND
-not dated -> ND
+not dated -> ND, nd
 bridge opponents -> NE, NW, SE, SW
 durham area -> NE
 humberside -> NE
 nebraska -> NE, NEB
-neon -> NE
+neon -> NE, Ne
 new england -> NE
 north-east -> NE
 north-eastern -> NE
@@ -3157,13 +3380,13 @@ negatively -> NEG
 negotiable -> NEG
 nepal -> NEP
 capture -> NET
-fabric -> NET
+fabric -> NET, net
 pure -> NET
 rete -> network
 nevada -> NEV, NV
 gotham -> NY, New York
 prox -> next month
-marshal -> NEY
+marshal -> NEY, ney
 national front -> NF
 newfoundland -> NF
 no funds -> NF
@@ -3171,22 +3394,20 @@ norman french -> NF, NOR
 northern french -> NF
 not for sale -> NFS
 national guard -> NG
-no good -> NG, US
+no good -> NG, US, ng, us
 nigeria -> NGR
 new hampshire -> NH
 national insurance -> NI
-nickel -> NI
+nickel -> NI, Ni
 north island -> NI
 northern ireland -> NI
 northern island -> NI
 province -> NI
 the province -> NI
 ulster -> NI
-writer -> NIB, PEN
 nicaragua -> NIC
 near -> NIE, NR
-love -> NIL, O
-game -> NIM, RL, RU
+love -> NIL, O, nil
 new jersey -> NJ
 natural killer -> NK
 it is not clear -> NL
@@ -3198,21 +3419,23 @@ not permitted -> NL
 nanometre -> NM
 nautical mile -> NM
 new mexico -> NM
-ens -> NN, NS
+ens -> NN, NS, nn, ns
 news -> NN
 natural order -> NO
 new orleans -> NO
 nobelium -> NO
+not one -> no
 play -> NO, NOH, the thing
-refusal -> NO
+refusal -> NO, no
 drama -> NOH
-no one -> NOI
+no one -> NOI, noi
 nominal -> NOM
+no (french) -> non
 norwegian -> NOR
 numbers -> NOS, NUM
 anon -> now
 nitrogen oxide -> NOX
-neptunium -> NP
+neptunium -> NP, Np
 new paragraph -> NP
 new providence -> NP
 no place -> NP
@@ -3225,7 +3448,7 @@ new style -> NS
 nielsbohrium -> NS
 non smoker -> NS
 not specific -> NS
-not specified -> NS
+not specified -> NS, ns
 nova scotia -> NS
 nuclear ship -> NS
 conservationists -> NT
@@ -3251,9 +3474,11 @@ ether -> number
 bluetit -> NUN
 dawn -> NUS
 students -> NUS
+students union -> NUS
 students' union -> NUS
 teachers -> NUT
-envy -> NV
+teachers union -> NUT
+envy -> NV, nv
 new version -> NV
 merseyside -> NW
 north-west -> NW
@@ -3266,7 +3491,7 @@ backtoback -> O
 bald patch -> O
 ball -> O
 blob -> O
-cavity -> O
+cavity -> O, o
 chocolatecenter -> O
 cipher -> O
 circle -> O
@@ -3288,12 +3513,14 @@ hoop -> O
 hug -> O
 loop -> O
 mooseheart -> O
+nada -> O
 naught -> O
 nil -> O
+nish -> O
 notail -> O
 nought -> O
 oceanfront -> O
-oh -> O, OY
+oh -> O, OY, o
 ohio -> O, OH
 old -> O, OL
 oldhead -> O
@@ -3303,28 +3530,32 @@ onthehead -> O
 opening -> O
 opentop -> O
 orb -> O
-ordinary -> O, ORD
+ordinary -> O, ORD, o
 organstop -> O
 ortho- -> O
 oscar -> O
-ought -> O
+ought -> O, o
 outahead -> O
 outinfront -> O
+oval -> O
 ovalhead -> O
+over(s) (cricket) -> o
 overhead -> O
 overthetop -> O
 overtop -> O
-owe -> O
+owe -> O, o
 oxygen -> O
 pellet -> O
 please -> O
 round -> O
+round letter -> O
 spangle -> O
 stormcenter -> O
 tonoend -> O
 unplaced -> O
 wheel -> O
-zero -> O, Z
+zero -> O, Z, z
+zilch -> O
 zip -> O
 on account of -> OA
 old person -> OAP
@@ -3364,8 +3595,9 @@ dictionary -> OED
 oddfellow -> OF
 old french -> OF
 official -> OFF
+football blunder -> og
 ogee -> OG
-own goal -> OG
+own goal -> OG, og
 soccer blunder -> OG
 acceptable -> OK, U
 all right -> OK
@@ -3387,38 +3619,39 @@ lner -> old railway
 erasmus -> old scholar
 argo -> old ship
 bridal -> old wedding
-cry of delight -> OLE
+cry of delight -> OLE, ole
 old measurement -> OM
 order of merit -> OM
 being broadcast -> ON
 drinking -> ON
-leg -> ON
+leg -> ON, on
 old norse -> ON
 on the menu -> ON
 ontario -> ON
-operating -> ON
-performing -> ON
-undivided -> ONE
+operating -> ON, on
+performing -> ON, on
+undivided -> ONE, one
 ians -> one answer
 aside -> one fifteen
 castle -> OO, R
 duck's eggs -> OO
 ducks -> OO
+ducks eggs -> oo
 glasses -> OO
 offers over -> OO
-ohs -> OO, OS
-owes -> OO, OS
-spectacles -> OO
-dutch uncle -> OOM
+ohs -> OO, OS, oo, os
+owes -> OO, OS, oo, os
+spectacles -> OO, oo
+dutch uncle -> OOM, oom
 observation point -> OP
 observation post -> OP
-operation -> OP
+operation -> OP, op
 operator -> OP
-opposite -> OP, OPP
+opposite -> OP, OPP, op
 opposite prompt -> OP
-opus -> OP, work
+opus -> OP, op, work
 organophosphate -> OP
-out of print -> OP
+out of print -> OP, op
 oppose -> OPP
 opposed -> OPP
 operations -> OPS
@@ -3430,7 +3663,7 @@ optimum -> OPT
 optional -> OPT
 very well indeed -> OPT
 alternative -> OR
-alternatively -> OR
+alternatively -> OR, or
 before * -> OR
 in heraldry -> OR
 men -> OR
@@ -3439,17 +3672,15 @@ operational research -> OR
 operations research -> OR
 oregon -> OR
 other ranks -> OR
-section -> OR, S
-yellow -> OR
+section -> OR, S, s
+yellow -> OR, or
 aboard -> SS, or a word inside the letters SS
-eleven -> XI, or XI
 no way -> ORD
 ordained -> ORD
 ordnance -> ORD
 ring road -> ORD
-bit -> ORT
 big -> OS
-bone -> OS, T
+bone -> OS, T, os
 extra large -> OS, XL
 large letters -> OS
 map-makers -> OS
@@ -3464,6 +3695,7 @@ outstanding -> OS
 oversize -> OS
 very large -> OS
 died without issue -> OSP
+east (german) -> ost
 for new/old testament -> OT
 occupational therapist -> OT
 occupational therapy -> OT
@@ -3474,37 +3706,41 @@ too much -> OTT
 open university -> OU
 oxford university -> OU
 university -> OU, U, UP
+agreement (french) -> oui
+yes (french) -> oui
 nothing to america -> OUS
-away -> OUT
-not at home -> OUT
-unfashionable -> OUT
+away -> OUT, out
+not at home -> OUT, out
+unfashionable -> OUT, out
 supra -> over
 spire -> Oxford dreamer
-why -> OY, Y
-ounce -> OZ
-wizard place -> OZ
+why -> OY, Y, y
+ounce -> OZ, oz
+wizard place -> OZ, Oz
 applecore -> P
-celt -> P, Q
+celt -> P, Q, p, q
 deepend -> P
 four hundred thousand -> P
 humpback -> P
 keepback -> P
-kelt -> P, Q
+kelt -> P, Q, p, q
 loopback -> P
 page -> P
+page (pl pp) -> p
 palmtop -> P
 panhead -> P
 papa -> P
 park -> P, PK
 parking -> P
 parrothead -> P
-participle -> P
+participle -> P, p
 partyhead -> P
 pastor -> P
-pea -> P
+pea -> P, p
 pedal -> P
+pedal (music) -> P
 pee -> P
-peg -> P, T, TEE
+peg -> P, T, TEE, tee
 pepsicenter -> P
 peseta -> P, PES, PTA
 peso -> P
@@ -3513,10 +3749,11 @@ phillipshead -> P
 phosphorous -> P
 phosphorus -> P
 pi -> P
-piano -> P
+piano -> P, p
+pico- -> p
 pinetop -> P
 pinhead -> P
-pint -> P, PT
+pint -> P, PT, pt
 pitstop -> P
 planahead -> P
 pleasestop -> P
@@ -3525,32 +3762,39 @@ poise -> P
 popularfront -> P
 portishead -> P
 portugal -> P, PG
+portugal (ivr) -> P
 positive -> P, POS
 potatohead -> P
 pothead -> P
-power -> P, VIS
+power -> P, VIS, vis
 prepend -> P
 president -> P, PR
 pressure -> P
-prince -> P, PR, RAS
+prince -> P, PR, RAS, pr, ras
+probationary -> P
+provisional -> P
 provisional driver -> P
 puddinghead -> P
 pula -> P
 pullahead -> P
 pumpkinhead -> P
 purl -> P
+purl (knitting) -> p
 pushstart -> P
+quiet, quietly (piano) -> p
 quiet/quietly -> P, SH
-small change -> P
+small change -> P, p
 snapback -> P
+soft, softly (piano) -> p
 softly -> P
 staplescenter -> P
 stepback -> P
 thedeepend -> P
 whiptail -> P
 panama -> PA
+panama (ivr) -> PA
 pascal -> PA
-past -> PA, PT
+past -> PA, PT, pt
 pennsylvania -> PA
 per annum -> PA
 personal appearance -> PA
@@ -3569,14 +3813,14 @@ past participle -> PAP, PP
 paragraph -> PAR
 parallel -> PAR
 parish -> PAR
-standard -> PAR, STD
+standard -> PAR, STD, par
 paratrooper -> PARA
-dance -> PAS
-step -> PAS
+dance -> PAS, pas
+step -> PAS, pas
 past tense -> PAT, PT
 patent -> PAT
 patented -> PAT
-lead -> PB
+lead -> PB, Pb
 plymouth brethren -> PB
 computer -> PC
 constable -> PC
@@ -3594,6 +3838,7 @@ exercise -> PE, PT, TRAIN
 exercises -> PE, PT
 gym -> PE, PT
 peru -> PE
+peru (ivr) -> PE
 physical education -> PE
 potential energy -> PE
 prince edward island -> PE
@@ -3601,17 +3846,16 @@ training -> PE, PT
 acas -> peacemakers
 photoelectric cell -> PEC
 tee -> PEG, T
-author -> PEN
-enclosure -> PEN
+enclosure -> PEN, pen
 peninsula -> PEN
 nation -> people, race
 race -> TT, people
-by -> PER, X
-for each -> PER
+by -> PER, X, per, x
+for each -> PER, per
 person -> PER
-through -> PER
-cherished -> PET
-favourite -> PET
+through -> PER, per
+cherished -> PET, pet
+favourite -> PET, pet
 peter -> PET
 patriotic front -> PF
 pfenning -> PF
@@ -3626,7 +3870,7 @@ plato -> philosopher
 confusion * -> PI
 private investigator -> PI
 relationship -> PI
-religious -> PI
+religious -> PI, pi
 image -> PIC
 pyjamas -> PJS
 peck -> PK
@@ -3635,12 +3879,13 @@ place -> PL, SET, SITE, SPOT
 plural -> PL
 poet laureate -> PL
 poland -> PL
+poland (ivr) -> PL
 public library -> PL
 mountain retreat -> PLA
 port authority -> PLA
 after death -> PM
 after noon -> PM
-in the afternoon -> PM
+in the afternoon -> PM, pm
 past master -> PM
 post mortem -> PM
 postmaster -> PM
@@ -3652,11 +3897,11 @@ stiff examination -> PM
 paymaster -> PMR
 promissory note -> PN
 papua new guinea -> PNG
-italian banker -> PO
-italian flower -> PO
+italian banker -> PO, po
+italian flower -> PO, po
 petty officer -> PO
 pilot officer -> PO
-polonium -> PO
+polonium -> PO, Po
 post office -> PO
 postal order -> PO
 ship's officer -> PO
@@ -3670,25 +3915,27 @@ position -> POS
 prisoner of war -> POW
 by proxy -> PP
 for and on behalf of -> PP
-pages -> PP
+pages -> PP, pp
 parish priest -> PP
 past president -> PP
-peas -> PP, PS
-pees -> PP, PS
-pianissimo -> PP
+peas -> PP, PS, pp, ps
+pees -> PP, PS, pp, ps
+pianissimo -> PP, pp
 present pupil -> PP
 sofly -> PP
-very quiet -> PP
+very quiet -> PP, pp
+very soft -> pp
+very softly -> pp
 picture postcard -> PPC
 to take leave -> PPC
 province of quebec -> PQ
 electoral system -> PR
 image building -> PR
-pair -> PR
-praseodymium -> PR
-present -> PR
+pair -> PR, pr
+praseodymium -> PR, Pr
+present -> PR, pr
 press release -> PR
-price -> PR
+price -> PR, pr
 prize ring -> PR
 proportional representation -> PR
 provencal -> PR
@@ -3698,20 +3945,20 @@ roman people -> PR
 romans -> PR, ROM
 chair -> president
 pres -> president
-cutie -> QT, pretty girl
+cutie -> QT, pretty girl, qt
 dish -> pretty girl
 abbe -> priest
 cure -> priest
 anne -> princess
 regan -> princess, wicked sister
-bird -> TIT, prison
+bird -> TIT, prison, tit
 cooler -> prison
 hock -> prison
 nick -> prison
 quad -> prison
 stir -> prison
 as the need arises -> PRN
-for -> PRO
+for -> PRO, pro
 public relations officer -> PRO
 footnote -> PS
 pharmaceutical society -> PS
@@ -3730,7 +3977,7 @@ personal training -> PT
 physical therapy -> PT
 physical training -> PT
 pints -> PT
-platinum -> PT
+platinum -> PT, Pt
 post town -> PT
 post-town -> PT
 postal telegraph -> PT
@@ -3742,27 +3989,32 @@ pick-up -> PU
 plutonium -> PU
 pulled up -> PU
 pudding -> PUD
-peavy -> PV
+peavy -> PV, pv
 per week -> PW
 pennyweight -> PWT
 painted -> PXT
 paraguay -> PY
+bond's colleague -> Q
 cue -> Q
 electric charge -> Q
 electrical charge -> Q
 five hundred thousand -> Q
+gadget man -> Q
+gadgeteer -> Q
 koppa -> Q
 qatar -> Q
+qatar (ivr) -> Q
 quality -> Q
-quart -> Q, QT, QU
+quart -> Q, QT, QU, q, qt, qu
+quartermaster -> Q, QM
 quarto -> Q
 quebec -> Q, QUE
 queensland -> Q, QLD
 query -> Q, QY
-question -> Q, QU
+question -> Q, QU, Qu
 quetzal -> Q
 quickstart -> Q
-quintal -> Q, QL
+quintal -> Q, QL, q
 rational numbers -> Q
 quality assurance -> QA
 queen's bench -> QB
@@ -3772,18 +4024,20 @@ queen's college -> QC
 queen's counsel -> QC
 as much as you please -> QL
 query language -> QL
-quartermaster -> QM
 doll -> QP
 kewpie -> QP
 a sufficient quantity -> QS
-quantity -> QT, QTY
-quarterly -> QU
+quantity -> QT, QTY, qt
+quarterly -> QU, qu
 as -> QUA, S
 what -> QUE
+what (french) -> que
 bess -> queen
 who -> QUI
+who (french) -> qui
 as much as you wish -> QV
 which see -> QV
+ar -> R
 arithmetic -> R
 beavertail -> R
 bitterend -> R
@@ -3793,8 +4047,10 @@ copperbottom -> R
 cornerback -> R
 curtail -> R
 eighty thousand -> R
+electrical resistance -> R
 fingertip -> R
 flickertail -> R
+king (rex) -> R
 ladderback -> R
 leatherback -> R
 lobstertail -> R
@@ -3804,9 +4060,10 @@ nervecenter -> R
 overtip -> R
 paperback -> R
 quarterback -> R
+queen (regina) -> R
 rabbi -> R
 radiohead -> R
-radius -> R, RAD
+radius -> R, RAD, r
 railhead -> R
 rain -> R, waterfall
 rainhead -> R
@@ -3818,6 +4075,7 @@ readahead -> R
 reading -> R
 real numbers -> R
 rearend -> R
+reau -> R
 reaumur -> R
 recipe -> R, REC
 rector -> R
@@ -3827,7 +4085,7 @@ resistance -> R
 reststop -> R
 rex -> R
 rho -> R
-right -> R, RT
+right -> R, RT, r, rt
 ripstop -> R
 riverfront -> R
 riverhead -> R
@@ -3838,20 +4096,26 @@ romeo -> R
 rontgen unit -> R
 rooftop -> R
 rook -> R
+rook (chess) -> R
 roostertail -> R
 rostertail -> R
 roundhead -> R
 roundtop -> R
 royal -> R
+ruble(s) -> R
 rubles -> R
 rule -> R
+rule (law) -> r
 run -> R
+run(s) (cricket) -> R
 runahead -> R
 runs -> R
+rupee(s) -> R
 rupees -> R, RE, RS
 silverback -> R
 silvertip -> R
 take -> R, REC
+take (recipe) -> r
 take * -> R
 wagnertail -> R
 yearend -> R
@@ -3867,7 +4131,7 @@ royal academician -> RA
 royal academy -> RA
 royal artillery -> RA
 sun -> RA, S, SUN
-sun god -> RA
+sun god -> RA, Ra
 butler -> RAB
 brer -> rabbit
 radiator -> RAD
@@ -3876,17 +4140,17 @@ root -> RAD
 airmen -> RAF
 fliers -> RAF
 tabloid -> RAG, SUN
-butter -> RAM
+butter -> RAM, ram
 memory -> RAM, ROM
 music school -> RAM
-sheep -> RAM
-managed -> RAN
-smuggled -> RAN
+sheep -> RAM, ram
+managed -> RAN, ran
+smuggled -> RAN, ran
 art nouveau -> RAT, TAR
 desert -> RAT
-desert fighter -> RAT
-deserter -> RAT
-scab -> RAT
+desert fighter -> RAT, rat
+deserter -> RAT, rat
+scab -> RAT, rat
 singer -> RAT
 strikebreaker -> RAT
 botswana -> RB
@@ -3901,7 +4165,7 @@ refer to drawer -> RD
 reserve decoration -> RD
 rural dean -> RD
 army corps -> RE, REME)
-concerning -> RE
+concerning -> RE, re
 reformed episcopal -> RE
 religious education -> RE
 rhenium -> RE
@@ -3909,28 +4173,28 @@ royal engineer -> RE
 royal engineers -> RE
 sapper -> RE, SPR
 sappers -> RE
-touching -> RE
+touching -> RE, re
 troops -> RE
 receipt -> REC
 entry -> record
-anarchist -> RED
+anarchist -> RED, red
 cent * -> RED
 former squadron -> RED
-leftist -> RED
-socialist -> RED, SOC
+leftist -> RED, red
+socialist -> RED, SOC, red
 arbiter -> REF
 reference -> REF
 whistle-blower -> REF
 related -> REL
 relating -> REL
-relation -> REL, SIB
-relative -> REL
-cloth -> REP, T
+relation -> REL, SIB, sib
+relative -> REL, rel
+cloth -> REP, T, rep
 drama company -> REP
 republic -> REP
-salesman -> REP
+salesman -> REP, rep
 theatre -> REP
-traveller -> REP, ROM
+traveller -> REP, ROM, rep, rom
 old thing -> RES
 research -> RES
 reserve -> RES
@@ -3939,40 +4203,41 @@ resolution -> RES
 retain -> RET
 retired -> RET, RTD
 return -> RET
-soak -> RET
+soak -> RET, ret
 revelations -> REV
 revise -> REV
 revised -> REV
 revision -> REV
-vicar -> REV
+vicar -> REV, Rev
 french republic -> RF
 radio frequency -> RF
 rutherfordium -> RF
-argy -> RG
+argy -> RG, rg
 argy-bargy -> RG
 regiment -> RGT
 haiti -> RH
 rhesus -> RH
 rhodium -> RH
-right hand -> RH, RO
+right hand -> RH, RO, rh
 right-hand -> RH
 royal highness -> RH
 indonesia -> RI
+indonesia (ivr) -> RI
 kind and emperor -> RI
 king emperor -> RI
 queen and empress -> RI
 religious instruction -> RI
 rhode island -> RI
 drowned valley -> RIA
-wife -> RIB, UX, W
-clear -> RID
+wife -> RIB, UX, W, ux, w
+clear -> RID, rid
 mauritania -> RIM
 final message -> RIP
 last word -> RIP
 aire -> river
 alph -> river
 ouse -> river
-tees -> TS, TT, river
+tees -> TS, TT, river, ts, tt
 lebanon -> RL
 reference library -> RL
 rugby league -> RL
@@ -3981,9 +4246,9 @@ madagascar -> RM
 marine -> RM
 marines -> RM
 old irish magistrate -> RM
-ream -> RM
+ream -> RM, rm
 resident magistrate -> RM
-room -> RM
+room -> RM, rm
 royal mail -> RM
 royal marine -> RM
 royal marines -> RM
@@ -3998,14 +4263,15 @@ royal navy -> RN
 sailors -> RN
 senior service -> RN
 recto -> RO
+romania (ivr) -> RO
 run out -> RO
-fabulous bird -> ROC
+fabulous bird -> ROC, roc
 french king -> ROI, SM
-gypsy -> ROM
+gypsy -> ROM, rom
 roman -> ROM, VIR
-corruption -> ROT
-decay -> ROT
-rubbish -> ROT, TAT
+corruption -> ROT, rot
+decay -> ROT, rot
+rubbish -> ROT, TAT, rot, tat
 uruguay -> ROU, U, URU
 tier -> row
 eight -> VIII, rowing boat
@@ -4015,16 +4281,18 @@ reformed presbyterian -> RP
 regius professor -> RP
 repeat -> RPT
 report -> RPT
-ars -> RR
+ars -> RR, rr
 car -> RR, T
+posh car -> RR
 right reverend -> RR
 roller -> RR
 rolls royce -> RR
 rolls-royce -> RR
 royal society -> RS
 san marino -> RSM
+san marino (ivr) -> RSM
 warrant officer -> RSM, WO
-arty -> RT
+arty -> RT, rt
 radio telegraphy -> RT
 radio telephony -> RT
 burundi -> RU
@@ -4033,21 +4301,24 @@ rugby (union) -> RU
 rugby union -> RU
 ruthenium -> RU
 irish police -> RUC
-street -> RUE, ST
-manage -> RUN
-smuggle -> RUN
+street -> RUE, ST, St
+street (french) -> rue
+manage -> RUN, run
+smuggle -> RUN, run
 capek's play -> RUR
 russia -> RUS
 recreational vehicle -> RV
 revised version -> RV
 right worshipful -> RW
 right worthy -> RW
-rail -> RY, T
+rail -> RY, Ry, T, t
+(in the form $) dollar -> S
 bach's works -> S
-bend -> S, U, Z
+bend -> S, U, Z, z
 bestscore -> S
 bitesback -> S
 bob -> S
+bob (shilling) -> s
 bouncesback -> S
 brokerstip -> S
 businessend -> S
@@ -4070,7 +4341,7 @@ givesback -> S
 god's -> S
 godsend -> S
 goesback -> S
-good man -> S, ST
+good man -> S, ST, St
 has -> S
 his -> S
 hitsbottom -> S
@@ -4101,10 +4372,11 @@ sabbath -> S
 saphead -> S
 satatop -> S
 satisfactory -> S
-saturday -> S, SAT
+saturday -> S, SAT, sat
 schilling -> S, SCH
 schmieder -> S
 screwtop -> S
+second(s) -> s
 seconds -> S
 sectionhead -> S
 seeahead -> S
@@ -4112,7 +4384,7 @@ setahead -> S
 seven thousand -> S, Z
 shape of console -> S
 sheepshead -> S
-shilling -> S
+shilling -> S, s
 shithead -> S
 shopfront -> S
 shortstop -> S
@@ -4122,8 +4394,8 @@ shrunkenhead -> S
 siemens -> S
 sierra -> S
 singlethead -> S
-singular -> S
-sister -> S, SIS, SR
+singular -> S, s
+sister -> S, SIS, SR, sis
 sitatop -> S
 sitsback -> S
 skinflinthead -> S
@@ -4134,7 +4406,7 @@ slaphead -> S
 sleepyhead -> S
 sleevelesstop -> S
 slowstart -> S
-small -> S, WEE
+small -> S, WEE, wee
 smartstart -> S
 snakehead -> S
 sneakerhead -> S
@@ -4142,17 +4414,16 @@ snow -> S
 society -> S, SOC
 softhead -> S
 softtop -> S
-son -> S
+son -> S, s
 sons -> S
 soprano -> S, SOP
 sorehead -> S
-south -> S, SO, STH
+south -> S, SO, STH, So
 southern -> S
-space -> S
 spade -> S
 spades -> S
 spearhead -> S
-special -> S, SP
+special -> S, SP, sp
 specialhead -> S
 spinningtop -> S
 springhead -> S
@@ -4168,10 +4439,12 @@ stovetop -> S
 strangeness -> S
 subhead -> S
 subwaystop -> S
-succeeded -> S
+succeeded -> S, s
 sulphur -> S
+sunday -> S, SUN
 superstart -> S
 sweden -> S
+sweden (ivr) -> S
 swelledhead -> S
 swellhead -> S
 swollenhead -> S
@@ -4183,7 +4456,7 @@ undosend -> S
 us -> S
 witsend -> S
 according to art -> SA
-essay -> SA, TRY
+essay -> SA, TRY, sa
 french company -> SA
 salvation army -> SA
 saudi arabia -> SA
@@ -4193,7 +4466,7 @@ south africa -> SA, ZA
 south america -> SA
 south australia -> SA
 storm section -> SA
-without date -> SA
+without date -> SA, sa
 idem -> said
 samuel -> SAM
 sat -> SAT
@@ -4207,7 +4480,7 @@ self-catering -> SC
 self-contained -> SC
 she sculpted -> SC
 signal corps -> SC
-small capitals -> SC
+small capitals -> SC, sc
 south carolina -> SC
 special constable -> SC
 viz -> SC
@@ -4239,7 +4512,7 @@ seminary -> SEM
 semitic -> SEM
 senate -> SEN
 senator -> SEN
-senior -> SEN, SR
+senior -> SEN, SR, Sr
 without -> SEN, SIN, WO, X
 separate -> SEP
 september -> SEP
@@ -4257,26 +4530,29 @@ solicitor general -> SG
 specific gravity -> SG
 signed -> SGD
 singapore -> SGP
-hush -> SH, ST
+hush -> SH, ST, sh, st
 second-hand -> SH
-shorthand -> SH
+shorthand -> SH, sh
 scrip -> shares
-novel -> SHE
-the woman -> SHE
+novel -> SHE, She
+the woman -> SHE, she
 manifesto -> show-ring
 share -> SHR
 shares -> SHR
-silicon -> SI
+agreement (spanish) -> si
+silicon -> SI, Si
 south island -> SI
+yes (italian) -> si
+yes (spanish) -> si
 signature -> SIG
 signor -> SIG
 signore -> SIG
 tace -> silence
 herb -> simple
-err -> SIN
-evil -> SIN
-wrong -> SIN
-gentleman -> SIR
+err -> SIN, sin
+evil -> SIN, sin
+wrong -> SIN, X, sin
+gentleman -> SIR, sir
 insect -> six-footer
 society of jesus -> SJ
 saskatchewan -> SK
@@ -4294,9 +4570,9 @@ sergeant major -> SM
 sergeant-major -> SM
 tiny -> small
 according to nature -> SN
-essen -> SN
+essen -> SN, sn
 senegal -> SN
-tin -> SN
+tin -> SN, Sn
 ergo -> SO, so
 seller's opinion -> SO
 shipping order -> SO
@@ -4306,15 +4582,16 @@ somalia -> SO
 special order -> SO
 staff officer -> SO
 standing order -> SO
-therefore -> SO
-well -> SO
+therefore -> SO, so
+well -> SO, so
 solicitor -> SOL
-sun-god -> SOL
+sun-god -> SOL, sol
 impi -> soldiers
 somerset -> SOM
-issue -> SON
+issue -> SON, son
 aria -> song
 apppeal for help -> SOS
+call for help -> SOS
 drunk/drunkard -> sot
 parent -> source
 ussr -> Soviet Union
@@ -4322,8 +4599,8 @@ pig -> SOW
 childless -> SP
 odds -> SP
 south pole -> SP
-species -> SP, SPP
-spelling -> SP
+species -> SP, SPP, sp
+spelling -> SP, sp
 starting price -> SP
 without children -> SP
 without issue -> SP
@@ -4338,7 +4615,7 @@ strontium -> SR
 german soldier -> SS
 liner -> SS
 nazis -> SS
-saints -> SS, STS
+saints -> SS, STS, Sts
 screw steamer -> SS
 ship -> SS
 steam ship -> SS
@@ -4348,31 +4625,30 @@ most holy lord -> SSD
 subspecies -> SSP
 holy man -> ST
 sao tome and principe -> ST
-stone -> ST
+stone -> ST, st
 strait -> ST
-stumped -> ST
-thoroughfare -> ST
+stumped -> ST, st
+thoroughfare -> ST, St
 station -> STA
 sterling -> STG
 colon -> stop
 professor of theology -> STP
 steamer -> STR
 straight -> STR
-filthy place -> STY
-soviet union -> SU
-stand-in -> SUB
+filthy place -> STY, sty
+soviet union -> SU, su
+stand-in -> SUB, sub
 subject -> SUB
 submarine -> SUB, U
-substitute -> SUB
-u-boat -> SUB
-warship -> SUB
+substitute -> SUB, sub
+u-boat -> SUB, sub
+warship -> SUB, sub
 nemo -> submariner
 range -> substitution. e.g. metal can stand for an
 sudan -> SUD
-sunday -> SUN
 above -> SUP
 superfine -> SUP
-superior -> SUP, U, UP
+superior -> SUP, U, UP, up
 superlative -> SUP
 supine -> SUP
 supplement -> SUP
@@ -4389,7 +4665,7 @@ small women -> SW
 south-west -> SW
 south-western -> SW
 southwest -> SW
-essex -> SX
+essex -> SX, sx
 seychelles -> SY
 symbol -> SYM
 symmetrical -> SYM
@@ -4412,7 +4688,7 @@ coattail -> T
 comettail -> T
 contend -> T
 controlcenter -> T
-cross -> T, TAU, X
+cross -> T, TAU, X, tau, zo
 crossed -> T
 diettip -> T
 distend -> T
@@ -4454,26 +4730,31 @@ talkinghead -> T
 tango -> T
 tanktop -> T
 taphead -> T
-tare -> T
+tare -> T, t
 tau -> T
 te -> T
-temperature -> T
+temperature -> T, t
 tenor -> T
-tense -> T
+tenor (music) -> T
+tense -> T, t
+tera- -> T
 tesla -> T
+tesla (si unit) -> T
 thailand -> T
+thailand (ivr) -> T
 theoryhead -> T
 thunderhead -> T
 tightend -> T
 tiltinghead -> T
 toahead -> T
+ton(s) -> t
 tonne -> T, weight
 tons -> T
 towhead -> T
 trailhead -> T
 trainstop -> T
 tramstop -> T
-transitive -> T, TR
+transitive -> T, TR, t
 treetop -> T
 tritium -> T
 trombonehead -> T
@@ -4484,17 +4765,18 @@ twisttop -> T
 westend -> T
 withoutend -> T
 army -> TA
-cheers -> TA
+cheers -> TA, ta
 reserves -> TA
 tantalum -> TA
 terriers -> TA
 territorial army -> TA
 territorials -> TA
-thank you -> TA, TT
-thanks -> TA
+thank you -> TA, TT, ta
+thanks -> TA, ta
 volunteers -> TA
-label -> TAB, TAG
-chess grandmaster -> TAL
+you shouldn’t have -> ta
+label -> TAB, TAG, tab, tag
+chess grandmaster -> TAL, Tal
 bark -> TAN
 decanter -> Tantalus' prisoner
 tasmania -> TAS
@@ -4507,18 +4789,19 @@ deputy to the dail -> TD
 technical drawing -> TD
 territorial decoration -> TD
 tellurium -> TE
-leaves -> TEA
+leaves -> TEA, tea
 busy -> TEC
-heath -> TED
-young sheep -> TEG
+heath -> TED, Ted
+young sheep -> TEG, teg
 telephone number -> TEL
 pm's address -> TEN, X
-terrace -> TER
-territory -> TER
+pms address -> ten
+terrace -> TER, ter
+territory -> TER, ter
 thrice -> TER, TRI
 triple -> TER, TRI
 provos -> terrorists
-offensive -> TET
+offensive -> TET, Tet
 togo -> TG
 thorium -> TH
 thursday -> TH, THU
@@ -4528,11 +4811,12 @@ thu -> THU
 thur -> THU
 thurs -> THU
 titanium -> TI
-spasm -> TIC
+jerk -> tic
+spasm -> TIC, tic
 twitching -> TIC
 three times a day -> TID
 timothy -> TIM
-cash -> TIN
+cash -> TIN, tin
 inferior horse -> TIT
 poor horse -> TIT
 titus -> TIT
@@ -4553,42 +4837,45 @@ telegraph office -> TO
 transport officer -> TO
 turn over -> TO
 fox -> TOD
-extremity -> TOE
+extremity -> TOE, toe
 big bell -> TOM
-volume -> TOM, V, VOL
+volume -> TOM, V, VOL, v, vol
 fashion -> TON
 fashionable people -> TON
 prominence -> TOR
-teepee -> TP
+teepee -> TP, tp
 township -> TP
 teleprinter -> TPR
 trooper -> TPR
 transaction -> TR
-transactions -> TR
+transactions -> TR, tr
 translation -> TR
-translator -> TR
+translator -> TR, tr
 transpose -> TR
 trustee -> TR
 turkey -> TR
+turkey (ivr) -> TR
 hobo -> tramp
 tram -> transport
 mayo -> tree ring
-attempt -> TRY
-teas -> TS, TT
+attempt -> TRY, try
+go -> try
+teas -> TS, TT, ts, tt
 abstainer -> TT
 abstaining -> TT
 on the wagon -> TT
 races -> TT
 rechabite -> TT
-teetotaller -> TT
+teetotaller -> TT, tt
 tourist trophy -> TT
 trinidad and tobago -> TT
+trinidad and tobago (ivr) -> TT
 trade union -> TU
 tradesmen -> TU
 workers -> TU
 tue -> TUE
 tues -> TUE
-corporation -> TUM
+corporation -> TUM, tum
 box -> TV
 televison -> TV
 transvestite -> TV
@@ -4600,21 +4887,24 @@ typography -> TYP
 [for] everyone -> U
 [suitable] for all [to see] -> U
 about turn -> U
+burmese title -> U
+children's film -> U
+classy -> U
 communitycenter -> U
 educational establishment -> U
-ewe -> U
+ewe -> U, u
 for all to see -> U
 fourscore -> U
 german submarine -> U
 horseshoe -> U
-on view to all -> U
+on view to all -> U, u
 posh -> U
 socially acceptable -> U
+suitable for all -> U
 suitable for children -> U
 suitable for everyone -> U
 trap -> U
 tube -> U
-turn -> U
 uniform -> U
 union -> U
 unionist -> U
@@ -4623,17 +4913,18 @@ unitedfront -> U
 universal -> U
 upahead -> U
 upper class -> U
-uppish -> U
-upsilon -> U
+upper-class -> U
+uppish -> U, u
+upsilon -> U, u
 uranium -> U
 utah -> U, UT
-yew -> U
+yew -> U, u
 you -> U, YE, u
 ukraine -> UA
 united arab emirates -> UAE
 university college -> UC
 upper-case -> UC
-you see -> UC
+you see -> UC, uc
 international cycling union -> UCI
 ulster defence association -> UDA
 united free church -> UF
@@ -4645,25 +4936,29 @@ united kingdom -> UK
 rubber -> ULE
 doubt -> UM
 ref -> UMP
+number one (french) -> un, une
+one (dialect) -> un
 peacekeepers -> UN
-united nations -> UN
+united nations -> UN, un
+number one (italian) -> una, uno
 pawnbroker -> uncle
-international organisation -> UNO
-at university -> UP
-excited -> UP
-in court -> UP
-mounted -> UP
-riding -> UP
+international organisation -> UNO, uno
+at university -> UP, up
+excited -> UP, up
+in court -> UP, up
+mounted -> UP, up
+riding -> UP, up
 united presbyterian -> UP
 united press -> UP
 uttar pradesh -> UP
-you queue -> UQ
-ancient city -> UR
-old city -> UR
+you queue -> UQ, uq
+ancient city -> UR, Ur
+old city -> UR, Ur
 primitive -> UR
-you are -> UR
-as above -> US
-ewes -> US, UU
+you are -> UR, ur
+as above -> US, us
+ewes -> US, UU, us, uu
+me (informal) -> us
 transatlantic -> US
 under-secretary -> US
 undersecretary -> US
@@ -4671,14 +4966,14 @@ united services -> US
 united states -> US
 unservicable -> US
 unserviceable -> US
-use -> US, UU
+use -> US, UU, uu
 useless -> US
-yews -> US, UU
-you and me -> US
-application -> USE
-custom -> USE
-employ -> USE
-employment -> USE
+yews -> US, UU, us, uu
+you and me -> US, us
+application -> USE, use
+custom -> USE, use
+employ -> USE, use
+employment -> USE, use
 practice -> USE
 practise -> USE
 american ship -> USS
@@ -4690,31 +4985,40 @@ check or checkmark -> V
 civiccenter -> V
 fifth -> V
 five -> V
+geese -> V
 haveaheart -> V
 neckline -> V
 notch -> V
-opposing -> V
-sign -> V
+opposing -> V, v
+prime -> V
+quintet -> V
+see (vide) -> v
+sign -> V, v
+two fingers -> V
 vanadium -> V
 vatican -> V
 vatican city -> V
+vatican city (ivr) -> V
+vatu -> V
 vee -> V
+vegetarian -> v
 veghead -> V
-velocity -> V
-verb -> V, VB
-verse -> V
+velocity -> V, v
+verb -> V, VB, v, vb
+verse -> V, v
 version -> V
-verso -> V
-versus -> V, VS
+verso -> V, v
+versus -> V, VS, v
 verytop -> V
 victor -> V
 victory -> V, VE, VJ
+viscount -> V, VIS, Vis
 volt -> V
-win -> V
+win -> V, W, v
 vice-admiral -> VA
 victoria and albert -> VA
 virginia -> VA
-variable -> VAR, X, Y, Z
+variable -> VAR, X, Y, Z, x, y, z
 variant -> VAR
 variety -> VAR
 tax -> VAT
@@ -4723,13 +5027,14 @@ hebrew letter -> VAU
 vice-chancellor -> VC
 victoria cross -> VC
 end of war -> VE
-archdeacon -> VEN
+archdeacon -> VEN, ven
 ecclesiastical title -> VEN
 venerable -> VEN
 rev up -> VER
 tres -> very
 unco -> very
 surgeon -> VET
+very good -> vg
 flying bomb -> VI
 half dozen -> VI
 six -> VI
@@ -4738,9 +5043,9 @@ sixpence -> VID, VIP
 tanner -> VID, VIP
 seven -> VII
 village -> VIL
-french wine -> VIN
+french wine -> VIN, vin
 big noise -> VIP
-viscount -> VIS
+important person -> VIP
 video jockey -> VJ
 variant reading -> VL
 vietnam -> VN
@@ -4771,8 +5076,9 @@ waterfront -> W
 watt -> W
 wavefront -> W
 weak -> W
+weak (physics) -> W
 wednesday -> W, WED
-week -> W, WK
+week -> W, WK, w
 wellhead -> W
 welsh -> W
 west -> W
@@ -4783,12 +5089,16 @@ whistlestop -> W
 whitehead -> W
 whole numbers -> W
 wicket -> W
-wide -> W
-width -> W
+wicket(s) -> W
+wide -> W, w
+width -> W, w
 william -> W, WM
 wirehead -> W
+wolfram -> W
+women or women's -> W
 women's -> W
 won -> W
+won (korean currency) -> W
 woodenhead -> W
 worktop -> W
 yellowtail -> W
@@ -4803,9 +5113,9 @@ west central -> WC
 dominca -> WD
 wheel drive -> WD
 works department -> WD
-you and i -> WE
+you and i -> WE, we
 wed -> WED
-little -> WEE
+little -> WEE, wee
 minor -> WEE
 rebecca -> Welsh riots
 grenada -> WG
@@ -4831,29 +5141,44 @@ western samoa -> WS
 west virginia -> WV, WVA
 wyoming -> WY
 10 -> X
-across -> X
+an error on examination paper -> X
+app -> X
 axis -> X, Y, Z
+bad sign -> X
 body -> X
 chi -> X
+choice on ballot paper -> X
 chromosome -> X, Y
 co-ordinate -> X, Y, Z
 draw -> X
+error -> X
 ex -> X
-exe -> X
+exe -> X, x
 factor -> X
 foxtail -> X
 illiterate's signature -> X
+incorrect answer -> X
 kiss -> X
+mistake -> X
+multiplied by -> x
 oxtail -> X
 particle -> X
 rated -> X
 ray -> X
-sign of love -> X
-sign of the times -> X
-spot marked -> X
+sign of affection -> x
+sign of love -> X, x
+sign of the times -> X, x
+signature of an illiterate person -> X
+social media site -> X
+social network -> X
+spot -> X
+spot marked -> X, x
 ten thousand -> X
 tenth -> X
+twitter -> X
 vote -> X
+website -> X
+where treasure is -> X
 wrong answer -> X
 wrong mark -> X
 wrong sign -> X
@@ -4925,7 +5250,11 @@ track -> Y
 tripod -> Y
 yankee -> Y
 yen -> Y, YN
+yen (japanese currency) -> Y
 ymca -> Y
+ymca or ywca -> Y
+yocto- -> y
+yotta- -> Y
 young -> Y
 yourhead -> Y
 yttrium -> Y
@@ -4934,36 +5263,43 @@ yemen -> YAR
 ytterbium -> YB
 young conservatives -> YC
 yards -> YDS
-solver -> YOU
-wise -> YS, YY, youth leaders
+the old -> ye
+solver -> YOU, you
+wise -> YS, YY, youth leaders, ys, yy
 younger -> YR
-your -> YR
+your -> YR, yr
 years -> YRS
 yours -> YRS
 youth leaders -> YS
+youtube -> YT
 yukon territory -> YT
 jade -> YU
 yugoslavia -> YU
 venezuela -> YV
 atomic number -> Z
+atomic number (chem) -> z
 cedilla -> Z
-final letter -> Z
+final letter -> Z, z
 impedance -> Z
+impedance (physics) -> z
 integers -> Z
 izzard -> Z
 last -> Z
-last character -> Z
-last letter -> Z
+last character -> Z, z
+last letter -> Z, z
 sleep, snooze or asleep -> Z, ZZ
-sound of sleep -> Z
+sound of sleep -> Z, z
 ultimate -> Z
 zambia -> Z
+zambia (ivr) -> Z
 zed -> Z
 zee -> Z
-zenith -> Z
+zenith -> Z, z
+zepto- -> z
 zeta -> Z
+zetta- -> Z
 zirconhead -> Z
-zone -> Z
+zone -> Z, z
 zulu -> Z
 zinc -> ZN
 cross * -> ZO
@@ -4971,5 +5307,5 @@ zaire -> ZR
 zirconium -> ZR
 democratic republic of congo -> ZRE
 zimbabwe -> ZW
-snoring -> ZZ
-sound of snoring -> ZZ
+snoring -> ZZ, zz
+sound of snoring -> ZZ, zz

@@ -1,8 +1,8 @@
 {
   "type": "hidden",
   "title": "Hidden word indicators",
-  "built": "2026-08-12",
-  "count": 1293,
+  "built": "2026-09-18",
+  "count": 1306,
   "sources": [
     "clue-clinic",
     "clue-clinic-lexicon",
@@ -11,6 +11,7 @@
     "cryptipedia",
     "curated-extras",
     "daily-cryptic",
+    "mycrossword",
     "solve-the-crossword",
     "unscramblerer",
     "wordsup"
@@ -32,6 +33,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [],
@@ -97,6 +99,7 @@
       "sources": [
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [],
@@ -197,6 +200,15 @@
       "indicator": "a spot of",
       "sources": [
         "cryptics-georgeho"
+      ],
+      "categories": [],
+      "notes": [],
+      "hiding": "Upcoming text hides preceding"
+    },
+    {
+      "indicator": "a stretch inside",
+      "sources": [
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -444,6 +456,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [
@@ -458,7 +471,8 @@
       "indicator": "amidst",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -475,6 +489,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [
@@ -491,7 +506,8 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -581,7 +597,8 @@
     {
       "indicator": "appearing",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -590,10 +607,13 @@
     {
       "indicator": "appearing in",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Upcoming text hides preceding"
     },
     {
@@ -1039,7 +1059,8 @@
     {
       "indicator": "boxes",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -1048,10 +1069,13 @@
     {
       "indicator": "boxing",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
@@ -1333,6 +1357,15 @@
       "hiding": "Otherwise"
     },
     {
+      "indicator": "cans",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [],
+      "hiding": "Otherwise"
+    },
+    {
       "indicator": "captivated (by)",
       "sources": [
         "cryptipedia"
@@ -1408,16 +1441,20 @@
     {
       "indicator": "carries",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
       "indicator": "carrying",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -1444,7 +1481,19 @@
     {
       "indicator": "cases",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ],
+      "hiding": "Otherwise"
+    },
+    {
+      "indicator": "casing",
+      "sources": [
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -1540,6 +1589,15 @@
       "categories": [],
       "notes": [],
       "hiding": "Otherwise"
+    },
+    {
+      "indicator": "central characters in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [],
+      "hiding": "Upcoming text hides preceding"
     },
     {
       "indicator": "central role",
@@ -1750,6 +1808,15 @@
       "hiding": "Preceding text hides upcoming"
     },
     {
+      "indicator": "claims",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [],
+      "hiding": "Otherwise"
+    },
+    {
       "indicator": "clinches",
       "sources": [
         "cryptics-georgeho"
@@ -1906,7 +1973,8 @@
     {
       "indicator": "coming from",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -1944,7 +2012,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -2060,6 +2129,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -2083,13 +2153,16 @@
       "sources": [
         "crossword-unclued",
         "cryptics-georgeho",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
         "list of hidden word indicators"
       ],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
@@ -2268,7 +2341,8 @@
       "indicator": "containing",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -2278,10 +2352,13 @@
       "indicator": "contains",
       "sources": [
         "cryptics-georgeho",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
@@ -2289,6 +2366,7 @@
       "sources": [
         "crossword-unclued",
         "cryptics-georgeho",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -2340,6 +2418,7 @@
       "sources": [
         "crossword-unclued",
         "cryptics-georgeho",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -2347,7 +2426,9 @@
         "list of hidden word indicators",
         "most common hidden word indicators"
       ],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Otherwise"
     },
     {
@@ -2597,7 +2678,8 @@
       "indicator": "covering",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -2616,12 +2698,15 @@
       "indicator": "covers",
       "sources": [
         "cryptics-georgeho",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of hidden word indicators"
       ],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
@@ -2768,7 +2853,8 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -3245,7 +3331,8 @@
       "indicator": "during",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -3341,7 +3428,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -3465,17 +3553,21 @@
       "indicator": "embraces",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
       "indicator": "embracing",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -3601,7 +3693,8 @@
     {
       "indicator": "encountered in",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -3837,6 +3930,7 @@
       "sources": [
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [],
@@ -3849,13 +3943,16 @@
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "unscramblerer"
       ],
       "categories": [
         "list of hidden word indicators",
         "most common hidden word indicators"
       ],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Otherwise"
     },
     {
@@ -4019,6 +4116,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "curated-extras",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [
@@ -4043,7 +4141,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -4093,7 +4192,8 @@
       "indicator": "factor in",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -4118,12 +4218,15 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
         "hidden"
       ],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Upcoming text hides preceding"
     },
     {
@@ -4166,19 +4269,25 @@
       "indicator": "featured in",
       "sources": [
         "cryptics-georgeho",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Upcoming text hides preceding"
     },
     {
       "indicator": "features",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
@@ -4187,6 +4296,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -4343,7 +4453,8 @@
     {
       "indicator": "found",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -4382,10 +4493,13 @@
         "cryptics-georgeho",
         "cryptipedia",
         "daily-cryptic",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Upcoming text hides preceding"
     },
     {
@@ -4434,7 +4548,8 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -4445,12 +4560,32 @@
       "hiding": "Upcoming text hides preceding"
     },
     {
+      "indicator": "framed by",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [],
+      "hiding": "Upcoming text hides preceding"
+    },
+    {
       "indicator": "frames",
       "sources": [
         "cryptics-georgeho"
       ],
       "categories": [],
       "notes": [],
+      "hiding": "Preceding text hides upcoming"
+    },
+    {
+      "indicator": "framing",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
@@ -4480,6 +4615,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "curated-extras",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -4914,7 +5050,8 @@
     {
       "indicator": "guards",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -5283,7 +5420,8 @@
       "indicator": "hides in",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -5306,10 +5444,13 @@
     {
       "indicator": "hiding in",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Upcoming text hides preceding"
     },
     {
@@ -5380,6 +5521,7 @@
       "sources": [
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [],
@@ -5400,13 +5542,16 @@
       "sources": [
         "crossword-unclued",
         "cryptics-georgeho",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
         "list of hidden word indicators"
       ],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
@@ -5495,7 +5640,8 @@
       "indicator": "houses",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -5712,6 +5858,15 @@
       "hiding": "Upcoming text hides preceding"
     },
     {
+      "indicator": "imprisoning",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [],
+      "hiding": "Preceding text hides upcoming"
+    },
+    {
       "indicator": "in",
       "sources": [
         "clue-clinic",
@@ -5720,6 +5875,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "daily-cryptic",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -5777,6 +5933,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
@@ -5827,7 +5984,8 @@
       "indicator": "in some measure",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -5966,17 +6124,21 @@
     {
       "indicator": "includes",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
       "indicator": "including",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -6261,6 +6423,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -6762,7 +6925,8 @@
     {
       "indicator": "keeping",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -6771,10 +6935,13 @@
     {
       "indicator": "keeps",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Preceding text hides upcoming"
     },
     {
@@ -6921,6 +7088,7 @@
       "indicator": "letters from",
       "sources": [
         "cryptics-georgeho",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [],
@@ -7329,7 +7497,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -7604,7 +7773,8 @@
     {
       "indicator": "not all",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -7668,7 +7838,8 @@
       "indicator": "not entirely",
       "sources": [
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -7695,7 +7866,8 @@
     {
       "indicator": "not totally",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -7792,9 +7964,21 @@
       "hiding": "Upcoming text hides preceding"
     },
     {
+      "indicator": "occupies",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ],
+      "hiding": "Otherwise"
+    },
+    {
       "indicator": "occupying",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -7814,6 +7998,7 @@
       "sources": [
         "crossword-unclued",
         "cryptics-georgeho",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -8092,6 +8277,7 @@
         "cryptics-georgeho",
         "cryptipedia",
         "daily-cryptic",
+        "mycrossword",
         "solve-the-crossword",
         "wordsup"
       ],
@@ -8162,6 +8348,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [
@@ -8222,6 +8409,7 @@
       "sources": [
         "crossword-unclued",
         "cryptics-georgeho",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -8230,7 +8418,9 @@
         "list of hidden word indicators",
         "most common hidden word indicators"
       ],
-      "notes": [],
+      "notes": [
+        "alternative"
+      ],
       "hiding": "Otherwise"
     },
     {
@@ -8435,7 +8625,8 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -8597,6 +8788,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [
@@ -8917,7 +9109,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -9195,6 +9388,7 @@
       "indicator": "reveals",
       "sources": [
         "cryptics-georgeho",
+        "mycrossword",
         "wordsup"
       ],
       "categories": [],
@@ -9238,6 +9432,15 @@
       "hiding": "Upcoming text hides preceding"
     },
     {
+      "indicator": "run from",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [],
+      "hiding": "Upcoming text hides preceding"
+    },
+    {
       "indicator": "run of",
       "sources": [
         "curated-extras"
@@ -9258,7 +9461,8 @@
     {
       "indicator": "running through",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -9291,12 +9495,14 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
       ],
       "notes": [
+        "alternative",
         "standard"
       ],
       "hiding": "Upcoming text hides preceding"
@@ -9305,6 +9511,7 @@
       "indicator": "sample of",
       "sources": [
         "cryptics-georgeho",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [],
@@ -9314,7 +9521,8 @@
     {
       "indicator": "sandwiches",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -9505,7 +9713,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -9555,6 +9764,7 @@
       "indicator": "seen in",
       "sources": [
         "cryptics-georgeho",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [],
@@ -9624,7 +9834,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -9639,7 +9850,8 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -9668,9 +9880,21 @@
       "hiding": "Upcoming text hides preceding"
     },
     {
+      "indicator": "series in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [
+        "alternative"
+      ],
+      "hiding": "Upcoming text hides preceding"
+    },
+    {
       "indicator": "series of",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -9984,6 +10208,7 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
+        "mycrossword",
         "solve-the-crossword"
       ],
       "categories": [
@@ -10088,6 +10313,7 @@
         "clue-clinic-lexicon",
         "crossword-unclued",
         "cryptics-georgeho",
+        "mycrossword",
         "solve-the-crossword",
         "unscramblerer",
         "wordsup"
@@ -10148,6 +10374,15 @@
       "hiding": "Upcoming text hides preceding"
     },
     {
+      "indicator": "some characters in",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
+      "notes": [],
+      "hiding": "Upcoming text hides preceding"
+    },
+    {
       "indicator": "some constituents",
       "sources": [
         "cryptics-georgeho"
@@ -10199,6 +10434,7 @@
         "clue-clinic-lexicon",
         "cryptics-georgeho",
         "daily-cryptic",
+        "mycrossword",
         "solve-the-crossword",
         "wordsup"
       ],
@@ -10279,6 +10515,7 @@
         "crossword-unclued",
         "cryptics-georgeho",
         "cryptipedia",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
@@ -10494,12 +10731,24 @@
       "sources": [
         "crossword-unclued",
         "cryptics-georgeho",
+        "mycrossword",
         "unscramblerer",
         "wordsup"
       ],
       "categories": [
         "list of hidden word indicators"
       ],
+      "notes": [
+        "alternative"
+      ],
+      "hiding": "Preceding text hides upcoming"
+    },
+    {
+      "indicator": "storing",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [],
       "notes": [],
       "hiding": "Preceding text hides upcoming"
     },
@@ -10553,7 +10802,8 @@
       "indicator": "string from",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -10567,7 +10817,8 @@
       "indicator": "string in",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "hidden"
@@ -10856,7 +11107,8 @@
     {
       "indicator": "taken from",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -10974,7 +11226,8 @@
     {
       "indicator": "taking part in",
       "sources": [
-        "cryptics-georgeho"
+        "cryptics-georgeho",
+        "mycrossword"
       ],
       "categories": [],
       "notes": [],
@@ -11517,7 +11770,8 @@
         "clue-clinic",
         "clue-clinic-lexicon",
         "cryptics-georgeho",
-        "cryptipedia"
+        "cryptipedia",
+        "mycrossword"
       ],
       "categories": [
         "hidden"

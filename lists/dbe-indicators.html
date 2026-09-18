@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Definition-by-example indicators (16) — Exet offline list</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #fafafa; --fg: #222; --muted: #666; --accent: #1a5fb4;
+    --chip: #eef3fb; --chip-hi: #ffe082; --border: #ddd;
+  }
+  body { font: 15px/1.45 system-ui, sans-serif; margin: 0; background: var(--bg); color: var(--fg); }
+  header { padding: 12px 16px; border-bottom: 1px solid var(--border); background: #fff; }
+  header h1 { margin: 0 0 4px; font-size: 1.2rem; }
+  header p { margin: 0; color: var(--muted); font-size: 0.85rem; }
+  #toolbar { padding: 10px 16px; background: #fff; border-bottom: 1px solid var(--border);
+              position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  #q { flex: 1 1 200px; padding: 6px 10px; font: inherit; border: 1px solid var(--border); border-radius: 4px; }
+  #stats { color: var(--muted); font-size: 0.85rem; }
+  #jump { padding: 8px 16px; background: #fff; border-bottom: 1px solid var(--border);
+           display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; }
+  #jump a { color: var(--accent); text-decoration: none; }
+  #jump a:hover { text-decoration: underline; }
+  #jump a.hide { display: none; }
+  #jump .n { color: var(--muted); }
+  main { padding: 12px 16px 32px; }
+  /* Clear the sticky toolbar when jumping to a section. */
+  .cat, #all { scroll-margin-top: 64px; }
+  .cat h2 { font-size: 1rem; margin: 20px 0 8px; color: var(--accent); }
+  .cat .n { color: var(--muted); font-weight: normal; }
+  .note { margin: 0 0 4px; color: var(--muted); font-size: 0.85rem; max-width: 68ch; }
+  .grid { display: flex; flex-wrap: wrap; gap: 6px; }
+  .ind { background: var(--chip); border: 1px solid #d0dcee; border-radius: 4px;
+          padding: 3px 8px; font-size: 0.92rem; cursor: default; }
+  .ind.hide { display: none; }
+  .ind.hi { background: var(--chip-hi); border-color: #f0c040; }
+  #all h2 { font-size: 1rem; margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Definition-by-example indicators</h1>
+  <p>16 entries · built 2026-09-18 · merged from: curated-extras, mycrossword</p>
+  <p>Signal that the definition is given by example rather than directly (for example, say, perhaps, such as, …).</p>
+</header>
+
+<div id="toolbar">
+  <input type="search" id="q" placeholder="Filter indicators…" autofocus>
+  <span id="stats">16 shown</span>
+</div>
+<main>
+<section id="all"><h2>All indicators <span class="n">(16)</span></h2><div class="grid" id="grid">
+<span class="ind" title="Sources: curated-extras, mycrossword">among others</span>
+<span class="ind" title="Sources: curated-extras, mycrossword">e.g.</span>
+<span class="ind" title="Sources: curated-extras">eg</span>
+<span class="ind" title="Sources: curated-extras, mycrossword">for example</span>
+<span class="ind" title="Sources: curated-extras">for instance</span>
+<span class="ind" title="Sources: curated-extras, mycrossword">for one</span>
+<span class="ind" title="Sources: curated-extras">including</span>
+<span class="ind" title="Sources: curated-extras, mycrossword">is one</span>
+<span class="ind" title="Sources: curated-extras">like</span>
+<span class="ind" title="Sources: curated-extras, mycrossword">maybe</span>
+<span class="ind" title="Sources: curated-extras">notably</span>
+<span class="ind" title="Sources: curated-extras, mycrossword">perhaps</span>
+<span class="ind" title="Sources: curated-extras, mycrossword">possibly</span>
+<span class="ind" title="Sources: curated-extras, mycrossword">potentially</span>
+<span class="ind" title="Sources: curated-extras, mycrossword">say</span>
+<span class="ind" title="Sources: curated-extras, mycrossword">such as</span>
+</div></section>
+</main>
+<script>
+(function() {
+  const q = document.getElementById('q');
+  const stats = document.getElementById('stats');
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    let shown = 0;
+    for (const el of document.querySelectorAll('.ind')) {
+      const ok = !term || el.textContent.toLowerCase().includes(term);
+      el.classList.toggle('hide', !ok);
+      el.classList.toggle('hi', ok && term.length > 0);
+      if (ok) shown++;
+    }
+    stats.textContent = shown + ' shown';
+    for (const sec of document.querySelectorAll('.cat')) {
+      sec.style.display = sec.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    const parity = document.getElementById('parity');
+    if (parity) {
+      parity.style.display =
+          parity.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    const hiding = document.getElementById('hiding');
+    if (hiding) {
+      hiding.style.display =
+          hiding.querySelectorAll('.ind:not(.hide)').length ? '' : 'none';
+    }
+    for (const link of document.querySelectorAll('#jump a')) {
+      const target = document.getElementById(link.hash.slice(1));
+      link.classList.toggle('hide', !!target && target.style.display === 'none');
+    }
+  }
+  q.addEventListener('input', apply);
+  apply();
+})();
+</script>
+</body>
+</html>

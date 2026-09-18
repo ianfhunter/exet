@@ -1,0 +1,139 @@
+{
+  "type": "palindrome",
+  "title": "Palindrome indicators",
+  "built": "2026-09-18",
+  "count": 11,
+  "sources": [
+    "curated-extras",
+    "mycrossword"
+  ],
+  "entries": [
+    {
+      "indicator": "back and forth",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "across"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "backwards and forwards",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "across"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "comes and goes",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "either"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "coming and going",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "either"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "either way",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "either"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "either way one looks",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "either"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "left or right",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "across"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "the same both ways",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "either"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "up or down",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "down"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "whichever way",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "either"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "whichever way one looks",
+      "sources": [
+        "curated-extras",
+        "mycrossword"
+      ],
+      "categories": [
+        "either"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    }
+  ]
+}

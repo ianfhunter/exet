@@ -75,6 +75,28 @@ LETTER_POSITION_LABELS: dict[str, str | None] = {
     "alternate letters": "Alternate Letters",
     "select: regular letters": "Alternate Letters",
     "most common selection indicators": None,
+    # MyCrossword toolkit letter-selector Type labels.
+    "first": "First Letter",
+    "first (multiple)": "First Letter",
+    "last": "Last Letter",
+    "last (multiple)": "Last Letter",
+    "middle": "Middle Letter",
+    "middle (multiple)": "Middle Letter",
+    "outer": "First and Last Letters",
+    "half only": "First or Second Half",
+    "intermittent": "Alternate Letters",
+}
+
+# MyCrossword anagram "Part of Speech" -> ClueClinic-style function labels.
+MYCROSSWORD_ANAGRAM_FUNCTION: dict[str, str] = {
+    "adjective": "Adjective",
+    "adverb": "Adverb",
+    "adverbial phrase": "Adverb",
+    "nounal phrase": "Noun expression",
+    "verb (past participle)": "Past participle",
+    "verb (present participle)": "Present participle",
+    "verb": "Verb indicative",
+    "verb phrase": "Verb indicative",
 }
 
 REVERSAL_ACROSS = "Across"
@@ -92,11 +114,18 @@ REVERSAL_DIRECTION_LABELS: dict[str, str | None] = {
     "most common word reversals": None,
 }
 
+PALINDROME_DIRECTION_LABELS: dict[str, str | None] = {
+    "across": REVERSAL_ACROSS,
+    "down": REVERSAL_DOWN,
+    "either": REVERSAL_EITHER,
+}
+
 # Alternation is deliberately left out: it already groups by parity, so an
 # "Odd Letters" category heading would collide with the parity section.
 CATEGORY_LABEL_MAPS: dict[str, dict[str, str | None]] = {
     "letter-selection": LETTER_POSITION_LABELS,
     "reversal": REVERSAL_DIRECTION_LABELS,
+    "palindrome": PALINDROME_DIRECTION_LABELS,
 }
 
 
@@ -469,6 +498,7 @@ class IndicatorType:
     unscramblerer_path: str | None = None
     solve_the_crossword_slug: str | None = None
     daily_cryptic_anchor: str | None = None
+    mycrossword_code: str | None = None
     allow_digits: bool = False
     curated_extras: list[str] = field(default_factory=list)
     clue_clinic_alt_index: int | None = 1
@@ -488,6 +518,7 @@ INDICATOR_TYPES: list[IndicatorType] = [
         unscramblerer_path="anagram-indicators/",
         solve_the_crossword_slug="anagram-indicators",
         daily_cryptic_anchor="Anagram Indicators",
+        mycrossword_code="anagram-indicators",
         curated_extras=[
             "kerfuffled", "discombobulated", "after a makeover", "given a makeover",
             "squiffy", "trolleyed", "doctored", "fiddled with", "tampered with",
@@ -513,6 +544,7 @@ INDICATOR_TYPES: list[IndicatorType] = [
         unscramblerer_path="hidden-word-indicators/",
         solve_the_crossword_slug="hidden-word-clues",
         daily_cryptic_anchor="Hidden Word Indicators",
+        mycrossword_code="hidden-indicators",
         curated_extras=[
             "from", "out of", "segment of", "fragment of", "piece of", "bit of",
             "passage from", "stretch of", "run of", "string of", "snatch of",
@@ -537,6 +569,7 @@ INDICATOR_TYPES: list[IndicatorType] = [
         unscramblerer_path="reversal-indicators/",
         solve_the_crossword_slug="reversal-clues",
         daily_cryptic_anchor="Reversal Indicators",
+        mycrossword_code="reversal-indicators",
         curated_extras=[
             "going west", "heading west", "westbound", "from the east", "leftwards",
             "going north", "northbound", "southbound", "eastbound", "going east",
@@ -559,6 +592,7 @@ INDICATOR_TYPES: list[IndicatorType] = [
         unscramblerer_path="homophone-indicators/",
         solve_the_crossword_slug="homophone-clues",
         daily_cryptic_anchor="Homophone Indicators",
+        mycrossword_code="homophone-indicators",
         curated_extras=[
             "audibly", "when spoken", "in speech", "pronounced", "in pronunciation",
             "to the ear", "on the phone", "on television", "on stage", "on air",
@@ -579,6 +613,7 @@ INDICATOR_TYPES: list[IndicatorType] = [
         unscramblerer_path="deletion-indicators/",
         solve_the_crossword_slug="deletion-clues",
         daily_cryptic_anchor="Deletion Indicators",
+        mycrossword_code="deletion-indicators",
         curated_extras=[
             "beheaded", "decapitated", "head removed", "losing its head", "losing head",
             "curtailed", "tail removed", "docked", "clipped", "trimmed", "shortened",
@@ -602,6 +637,7 @@ INDICATOR_TYPES: list[IndicatorType] = [
         unscramblerer_path="container-contents-indicators/",
         solve_the_crossword_slug="container-clues",
         daily_cryptic_anchor="Container Indicators",
+        mycrossword_code="container-indicators",
         curated_extras=[
             "wrapping", "wrapped around", "enclosing", "enclosed by", "encasing",
             "packing", "packed into", "stuffed into", "pushed into", "slotted into",
@@ -625,6 +661,7 @@ INDICATOR_TYPES: list[IndicatorType] = [
         clue_clinic_ids=[370],
         crossword_unclued_path="2009/04/letter-sequence-indicators.html",
         unscramblerer_path="selection-indicators/",
+        mycrossword_code="letter-selectors",
         allow_digits=True,
         curated_extras=[
             "initially", "at first", "to begin with", "from the start", "from the outset",
@@ -667,6 +704,7 @@ INDICATOR_TYPES: list[IndicatorType] = [
             "(after, beside, next to, following, …)."
         ),
         clue_clinic_ids=[1563],
+        mycrossword_code="juxtaposition-indicators",
         curated_extras=[
             "and", "with", "plus", "beside", "besides", "next to", "next door",
             "alongside", "adjacent", "adjacent to", "adjoining", "against",
@@ -706,6 +744,35 @@ INDICATOR_TYPES: list[IndicatorType] = [
             "head to tail", "first to last", "cycled", "cycling",
             "with parts swapped", "swapping tips", "tail first",
             "x becoming leader", "x taking lead",
+        ],
+    ),
+    IndicatorType(
+        slug="dbe",
+        title="Definition-by-example indicators",
+        blurb=(
+            "Signal that the definition is given by example rather than "
+            "directly (for example, say, perhaps, such as, …)."
+        ),
+        mycrossword_code="dbe-indicators",
+        curated_extras=[
+            "for example", "for instance", "e.g.", "eg", "say", "perhaps",
+            "maybe", "possibly", "potentially", "such as", "like", "among others",
+            "for one", "is one", "notably", "including",
+        ],
+    ),
+    IndicatorType(
+        slug="palindrome",
+        title="Palindrome indicators",
+        blurb=(
+            "Signal that the answer (or fodder) reads the same forwards and "
+            "backwards (either way, back and forth, …)."
+        ),
+        mycrossword_code="palindrome-indicators",
+        curated_extras=[
+            "either way", "either way one looks", "whichever way",
+            "whichever way one looks", "back and forth",
+            "backwards and forwards", "coming and going", "comes and goes",
+            "the same both ways", "left or right", "up or down",
         ],
     ),
 ]
@@ -1239,6 +1306,67 @@ def scrape_wordsup(
     return count
 
 
+def _mycrossword_remix_payload(code: str) -> dict:
+    """Load MyCrossword toolkit page and return the indicator-type loader payload."""
+    url = f"https://www.mycrossword.co.uk/toolkit/{code}"
+    html = fetch(url)
+    cache = SOURCES_DIR / f"mycrossword-{code}.html"
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    cache.write_text(html, encoding="utf-8")
+    m = re.search(
+        r"window\.__remixContext\s*=\s*(\{.*?\});\s*</script>", html, re.S
+    )
+    if not m:
+        m = re.search(
+            r"window\.__remixContext\s*=\s*(\{.*?\})\s*</script>", html, re.S
+        )
+    if not m:
+        raise RuntimeError(f"no remix context on {url}")
+    ctx = json.loads(m.group(1))
+    loader = ctx.get("state", {}).get("loaderData", {})
+    key = "routes/toolkit_.$indicatorType"
+    if key not in loader:
+        raise RuntimeError(f"indicator loader missing for {code}: {list(loader)}")
+    return loader[key]["indicatorType"]
+
+
+def scrape_mycrossword(
+    store: dict[str, dict],
+    code: str,
+    *,
+    allow_digits: bool = False,
+    anagram: bool = False,
+) -> int:
+    """Pull indicators (and alternatives) from a MyCrossword toolkit list."""
+    payload = _mycrossword_remix_payload(code)
+    count = 0
+    for row in payload.get("indicators") or []:
+        names = [row.get("name") or ""]
+        names.extend(split_alternatives(row.get("alternatives") or ""))
+        category = (row.get("s001") or "").strip().lower() or None
+        # Skip fodder templates like "what gets ### started".
+        names = [n for n in names if n.strip() and "#" not in n]
+        function = None
+        if anagram and category:
+            function = MYCROSSWORD_ANAGRAM_FUNCTION.get(category)
+        for i, raw in enumerate(names):
+            note = "alternative" if i else None
+            if add_entry(
+                store,
+                raw,
+                "mycrossword",
+                category=None if anagram else category,
+                note=note,
+                allow_digits=allow_digits,
+            ):
+                count += 1
+            key = norm(raw)
+            if key in store and function and not store[key].get("function"):
+                store[key]["function"] = function
+                store[key]["function_inferred"] = False
+    return count
+
+
 def _lexicon_kind_hits(kind: str, prefixes: tuple[str, ...]) -> bool:
     k = re.sub(r"\s+", " ", kind.strip().lower())
     for p in prefixes:
@@ -1381,6 +1509,18 @@ def build_type(cfg: IndicatorType) -> dict[str, dict]:
                 ),
             )
         )
+    if cfg.mycrossword_code:
+        steps.append(
+            (
+                "mycrossword",
+                lambda s, code=cfg.mycrossword_code: scrape_mycrossword(
+                    s,
+                    code,
+                    allow_digits=cfg.allow_digits,
+                    anagram=cfg.slug == "anagram",
+                ),
+            )
+        )
     if cfg.curated_extras:
         steps.append(
             (
@@ -1417,7 +1557,7 @@ def build_type(cfg: IndicatorType) -> dict[str, dict]:
             restored = 0
             # Fandom regularly blocks automated requests. Keep its committed
             # entries rather than silently shrinking the list on every build.
-            if name == "cryptipedia":
+            if name in {"cryptipedia", "mycrossword"}:
                 for old in previous_entries:
                     if name not in (old.get("sources") or []):
                         continue

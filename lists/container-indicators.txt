@@ -445,6 +445,8 @@ c
 caged
 caged by
 caging
+cakes
+caking
 called in by
 came in
 came to swamp
@@ -778,6 +780,7 @@ cracking
 cracking open
 cracks
 cracks open
+cradled by
 cradles
 cradling
 crammed into
@@ -2017,6 +2020,7 @@ italics
 its
 j
 jackal
+jackets
 jails
 jammed by
 jammed in
@@ -2745,6 +2749,7 @@ sarong
 sartre
 saved
 saved by
+saves
 saving
 scabbards
 scoffing

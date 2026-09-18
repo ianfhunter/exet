@@ -38,12 +38,16 @@ caps
 carried by
 carries
 carrying
+chases
+chasing
 close by
 close on
 close to
 confronted by
+confronted with
 confronting
 confronts
+connected to
 covered by
 covered with
 covering
@@ -51,6 +55,7 @@ covers
 crowned by
 crowning
 crowns
+east of
 faced by
 faced with
 faces
@@ -76,6 +81,7 @@ introduces
 introducing
 joined by
 joining
+joins
 leading
 leads
 led by
@@ -127,4 +133,5 @@ upon
 ushered in by
 ushering in
 ushers in
+west of
 with

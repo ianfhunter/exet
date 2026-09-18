@@ -1,12 +1,13 @@
 {
   "type": "juxtaposition",
   "title": "Juxtaposition indicators",
-  "built": "2026-09-14",
-  "count": 130,
+  "built": "2026-09-18",
+  "count": 137,
   "sources": [
     "clue-clinic",
     "clue-clinic-lexicon",
-    "curated-extras"
+    "curated-extras",
+    "mycrossword"
   ],
   "entries": [
     {
@@ -14,10 +15,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -29,9 +32,11 @@
     {
       "indicator": "accompanies",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -43,9 +48,11 @@
     {
       "indicator": "accompanying",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -56,9 +63,11 @@
     {
       "indicator": "added to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -92,9 +101,11 @@
       "indicator": "adjoining",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -105,9 +116,11 @@
     {
       "indicator": "adjoins",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -121,10 +134,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -137,9 +152,11 @@
       "indicator": "against",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -152,10 +169,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -168,9 +187,11 @@
       "indicator": "alongside",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "juxtaposition"
       ],
       "notes": [
@@ -184,10 +205,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -200,10 +223,12 @@
       "indicator": "at end of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -224,9 +249,11 @@
       "indicator": "backing",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "after (d)",
         "juxtaposition"
       ],
@@ -240,9 +267,11 @@
       "indicator": "backs",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "after (d)",
         "juxtaposition"
       ],
@@ -257,10 +286,12 @@
       "indicator": "bearing",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -273,10 +304,12 @@
       "indicator": "bears",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -291,10 +324,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -308,10 +343,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -325,10 +362,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -342,10 +381,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -358,9 +399,11 @@
       "indicator": "beside",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "juxtaposition"
       ],
       "notes": [
@@ -389,10 +432,12 @@
       "indicator": "beyond",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -405,10 +450,12 @@
       "indicator": "bolstered by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -421,10 +468,12 @@
       "indicator": "bolstering",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -437,10 +486,12 @@
       "indicator": "bolsters",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -453,9 +504,11 @@
     {
       "indicator": "bordering",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -466,9 +519,11 @@
     {
       "indicator": "borders",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -497,9 +552,11 @@
       "indicator": "by",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "juxtaposition"
       ],
       "notes": [
@@ -512,10 +569,12 @@
       "indicator": "capped by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -528,10 +587,12 @@
       "indicator": "capping",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -544,10 +605,12 @@
       "indicator": "caps",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -601,11 +664,35 @@
       ]
     },
     {
-      "indicator": "close by",
+      "indicator": "chases",
       "sources": [
-        "clue-clinic"
+        "mycrossword"
       ],
       "categories": [
+        "across"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "chasing",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "across"
+      ],
+      "notes": []
+    },
+    {
+      "indicator": "close by",
+      "sources": [
+        "clue-clinic",
+        "mycrossword"
+      ],
+      "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -631,9 +718,11 @@
     {
       "indicator": "close to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -644,12 +733,26 @@
     {
       "indicator": "confronted by",
       "sources": [
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "after (a)"
       ],
       "notes": []
+    },
+    {
+      "indicator": "confronted with",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "across"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "confronting",
@@ -685,13 +788,25 @@
       ]
     },
     {
+      "indicator": "connected to",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "either"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "covered by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -705,10 +820,12 @@
       "indicator": "covered with",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -720,9 +837,11 @@
     {
       "indicator": "covering",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -735,10 +854,12 @@
       "indicator": "covers",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -752,10 +873,12 @@
       "indicator": "crowned by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -768,10 +891,12 @@
       "indicator": "crowning",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -784,10 +909,12 @@
       "indicator": "crowns",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -796,6 +923,16 @@
         "down",
         "standard"
       ]
+    },
+    {
+      "indicator": "east of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "across"
+      ],
+      "notes": []
     },
     {
       "indicator": "faced by",
@@ -825,9 +962,11 @@
       "indicator": "faces",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "before (a)",
         "juxtaposition"
       ],
@@ -843,9 +982,11 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "before (a)",
         "juxtaposition"
       ],
@@ -860,10 +1001,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -877,10 +1020,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -893,10 +1038,12 @@
       "indicator": "follows",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -910,9 +1057,11 @@
       "indicator": "fronting",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "before (a)",
         "juxtaposition"
       ],
@@ -926,9 +1075,11 @@
       "indicator": "fronts",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "before (a)",
         "juxtaposition"
       ],
@@ -943,10 +1094,12 @@
       "indicator": "given",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -959,10 +1112,12 @@
       "indicator": "headed by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -975,10 +1130,12 @@
       "indicator": "heading",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -991,10 +1148,12 @@
       "indicator": "heads",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1008,10 +1167,12 @@
       "indicator": "held up by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1073,10 +1234,12 @@
       "indicator": "holding up",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1089,10 +1252,12 @@
       "indicator": "holds up",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1107,9 +1272,11 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "before (a)",
         "juxtaposition"
       ],
@@ -1140,10 +1307,12 @@
       "indicator": "introduces",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1157,10 +1326,12 @@
       "indicator": "introducing",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1173,9 +1344,11 @@
       "indicator": "joined by",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "juxtaposition"
       ],
       "notes": [
@@ -1188,19 +1361,36 @@
     {
       "indicator": "joining",
       "sources": [
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "either"
+      ],
+      "notes": [
+        "alternative"
+      ]
+    },
+    {
+      "indicator": "joins",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "either"
+      ],
       "notes": []
     },
     {
       "indicator": "leading",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1213,10 +1403,12 @@
       "indicator": "leads",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1230,10 +1422,12 @@
       "indicator": "led by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1245,25 +1439,35 @@
     {
       "indicator": "meeting",
       "sources": [
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
-      "notes": []
+      "categories": [
+        "either"
+      ],
+      "notes": [
+        "alternative"
+      ]
     },
     {
       "indicator": "meets",
       "sources": [
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
-      "categories": [],
+      "categories": [
+        "either"
+      ],
       "notes": []
     },
     {
       "indicator": "near",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1274,9 +1478,11 @@
     {
       "indicator": "neighbouring",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "across",
         "juxtaposition"
       ],
       "notes": [
@@ -1297,9 +1503,11 @@
       "indicator": "next to",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1311,9 +1519,12 @@
       "indicator": "on",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "across",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1325,10 +1536,12 @@
       "indicator": "on top of",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1342,9 +1555,11 @@
       "indicator": "over",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1357,10 +1572,12 @@
       "indicator": "past",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1374,10 +1591,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1398,10 +1617,12 @@
       "indicator": "precedes",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1416,10 +1637,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1432,10 +1655,12 @@
       "indicator": "prior to",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1550,10 +1775,12 @@
       "indicator": "supported by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1566,10 +1793,12 @@
       "indicator": "supporting",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1582,10 +1811,12 @@
       "indicator": "supports",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1599,10 +1830,12 @@
       "indicator": "tailing",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1615,10 +1848,12 @@
       "indicator": "tails",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1648,10 +1883,12 @@
       "indicator": "tipped by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1665,10 +1902,12 @@
       "indicator": "tipped with",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1681,10 +1920,12 @@
       "indicator": "tipping",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1697,10 +1938,12 @@
       "indicator": "tips",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (a/d)",
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1713,9 +1956,11 @@
     {
       "indicator": "to",
       "sources": [
-        "clue-clinic"
+        "clue-clinic",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1727,9 +1972,11 @@
       "indicator": "together with",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [
@@ -1742,10 +1989,12 @@
       "indicator": "topped by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1759,10 +2008,12 @@
       "indicator": "topped with",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1775,10 +2026,12 @@
       "indicator": "topping",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1791,10 +2044,12 @@
       "indicator": "tops",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1809,10 +2064,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1825,10 +2082,12 @@
       "indicator": "underneath",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1842,10 +2101,12 @@
       "indicator": "underpinned by",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1858,10 +2119,12 @@
       "indicator": "underpinning",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1874,10 +2137,12 @@
       "indicator": "underpins",
       "sources": [
         "clue-clinic",
-        "clue-clinic-lexicon"
+        "clue-clinic-lexicon",
+        "mycrossword"
       ],
       "categories": [
         "after (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1892,10 +2157,12 @@
       "sources": [
         "clue-clinic",
         "clue-clinic-lexicon",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
         "before (d)",
+        "down",
         "juxtaposition"
       ],
       "notes": [
@@ -1954,12 +2221,24 @@
       ]
     },
     {
+      "indicator": "west of",
+      "sources": [
+        "mycrossword"
+      ],
+      "categories": [
+        "across"
+      ],
+      "notes": []
+    },
+    {
       "indicator": "with",
       "sources": [
         "clue-clinic",
-        "curated-extras"
+        "curated-extras",
+        "mycrossword"
       ],
       "categories": [
+        "either",
         "juxtaposition"
       ],
       "notes": [

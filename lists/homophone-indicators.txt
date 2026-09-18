@@ -150,6 +150,7 @@ coming across as
 communicated orally
 conversation
 conversational
+conversationalist's
 conveyed
 conveyed in conversation
 conveyed orally
@@ -274,6 +275,7 @@ gossiping
 hailed
 having picked up
 having reported
+having said that
 hear
 hear of
 hear* (we)
@@ -630,6 +632,7 @@ talk of a
 talked (of)
 talked about
 talked of
+talker's
 talking
 tell(s)
 telling
@@ -723,6 +726,7 @@ vociferously
 voice
 voiced
 voiced by
+voiced out
 voicing
 volubly
 vulgarly mentioned

@@ -244,22 +244,104 @@ def scrape_cryptipedia_spoonerism() -> list[str]:
     return [norm_phrase(x) for x in items if norm_phrase(x)]
 
 
+def scrape_mycrossword_link_words() -> list[tuple[str, str]]:
+    """Return (phrase, note) pairs from MyCrossword toolkit link-words."""
+    import ssl
+    from urllib.request import Request, urlopen
+
+    cache = SOURCES_DIR / "mycrossword-link-words.html"
+    html = ""
+    try:
+        ua = "exet-clue-lists-builder/1.0"
+        ctx = ssl.create_default_context()
+        url = "https://www.mycrossword.co.uk/toolkit/link-words"
+        req = Request(url, headers={"User-Agent": ua})
+        with urlopen(req, context=ctx, timeout=120) as resp:
+            html = resp.read().decode("utf-8", "replace")
+        SOURCES_DIR.mkdir(parents=True, exist_ok=True)
+        cache.write_text(html, encoding="utf-8")
+    except Exception:
+        if cache.is_file():
+            html = cache.read_text(encoding="utf-8")
+        else:
+            return []
+
+    m = re.search(
+        r"window\.__remixContext\s*=\s*(\{.*?\});\s*</script>", html, re.S
+    )
+    if not m:
+        return []
+    try:
+        ctx = json.loads(m.group(1))
+        rows = (
+            ctx["state"]["loaderData"]["routes/toolkit_.$indicatorType"][
+                "indicatorType"
+            ].get("indicators")
+            or []
+        )
+    except (KeyError, TypeError, ValueError):
+        return []
+
+    out: list[tuple[str, str]] = []
+    for row in rows:
+        names = [row.get("name") or ""]
+        alts = row.get("alternatives") or ""
+        if alts.strip():
+            names.extend(re.split(r"\s*[,;/]\s*|\s+or\s+", alts, flags=re.I))
+        direction = (row.get("s001") or "").strip()
+        note = f"MyCrossword link direction: {direction}" if direction else ""
+        for raw in names:
+            phrase = norm_phrase(raw)
+            if phrase:
+                out.append((phrase, note))
+    return out
+
+
 def build_glue_entries() -> list[dict]:
-    entries: list[dict] = []
+    store: dict[str, dict] = {}
+
+    def add(phrase: str, category: str, source: str, note: str = "") -> None:
+        key = norm_phrase(phrase)
+        if not key:
+            return
+        entry = store.setdefault(
+            key,
+            {
+                "phrase": key,
+                "category": category,
+                "sources": set(),
+                "notes": set(),
+            },
+        )
+        # Prefer curated category assignment when an entry is shared.
+        if source == "curated" or entry["category"] == category:
+            entry["category"] = category
+        entry["sources"].add(source)
+        if note:
+            entry["notes"].add(note)
+
     for cat in GLUE_CATEGORIES:
+        note = (
+            "May also weakly indicate wordplay in some contexts."
+            if cat.slug == "ambiguous"
+            else ""
+        )
         for phrase in dedupe_phrases(GLUE_ENTRIES[cat.slug]):
-            note = ""
-            if cat.slug == "ambiguous":
-                note = "May also weakly indicate wordplay in some contexts."
-            entries.append(
-                {
-                    "phrase": phrase,
-                    "category": cat.slug,
-                    "sources": ["curated"],
-                    "notes": [note] if note else [],
-                }
-            )
-    return entries
+            add(phrase, cat.slug, "curated", note)
+
+    for phrase, note in scrape_mycrossword_link_words():
+        # Link words join definition and wordplay; treat as definition-linkers.
+        add(phrase, "definition-linkers", "mycrossword", note)
+
+    return [
+        {
+            "phrase": e["phrase"],
+            "category": e["category"],
+            "sources": sorted(e["sources"]),
+            "notes": sorted(e["notes"]),
+        }
+        for e in sorted(store.values(), key=lambda x: (x["category"], x["phrase"]))
+    ]
 
 
 def build_spoonerism_entries() -> list[dict]:
@@ -555,7 +637,7 @@ def write_glue() -> int:
         ),
         "built": built_date("clue-glue", entries),
         "count": len(entries),
-        "sources": ["curated"],
+        "sources": sorted({s for e in entries for s in e["sources"]}),
         "categories": [
             {
                 "slug": c.slug,
