@@ -120,23 +120,78 @@ PALINDROME_DIRECTION_LABELS: dict[str, str | None] = {
     "either": REVERSAL_EITHER,
 }
 
+DELETION_FIRST = "First Letter"
+DELETION_LAST = "Last Letter"
+DELETION_BOTH = "Both Ends"
+DELETION_MIDDLE = "Middle"
+DELETION_GENERAL = "General"
+
+DELETION_POSITION_LABELS: dict[str, str | None] = {
+    "21 first letter deletion indicators": DELETION_FIRST,
+    "reduction - first letter": DELETION_FIRST,
+    "reduction (first letter)": DELETION_FIRST,
+    "remove: first letter": DELETION_FIRST,
+    "remove first letter": DELETION_FIRST,
+    "remove: first letter(s)": DELETION_FIRST,
+    "remove: first letters": DELETION_FIRST,
+    "reduction - first letters": DELETION_FIRST,
+    "52 last letter deletion indicators": DELETION_LAST,
+    "reduction - last letter": DELETION_LAST,
+    "reduction (last letter)": DELETION_LAST,
+    "remove: last letter": DELETION_LAST,
+    "24 first and last letter deletion indicators": DELETION_BOTH,
+    "reduction - both ends": DELETION_BOTH,
+    "reduction (outer letters)": DELETION_BOTH,
+    "remove: both ends": DELETION_BOTH,
+    "38 middle letters deletion indicators": DELETION_MIDDLE,
+    "reduction - middle": DELETION_MIDDLE,
+    "reduction (middle letter)": DELETION_MIDDLE,
+    "reduction - one of central pair": DELETION_MIDDLE,
+    "reduction: middle letter(s)": DELETION_MIDDLE,
+    "remove: middle letter(s)": DELETION_MIDDLE,
+    "remove: middle letters": DELETION_MIDDLE,
+    "145 general deletion indicators": DELETION_GENERAL,
+    # ClueClinic manner labels (departure / ejection / …) do not name a
+    # position, so they sit with the other unspecific deletion indicators.
+    "departure": DELETION_GENERAL,
+    "ejection": DELETION_GENERAL,
+    "expulsion": DELETION_GENERAL,
+    "subtraction": DELETION_GENERAL,
+    "most common deletion indicators": None,
+    # Cryptipedia example templates: "curtailed X" is last-letter deletion;
+    # the hidden-by/from rows do not name a position.
+    "curtailed x": None,
+    "y hidden from x": DELETION_GENERAL,
+    "x hidden by y": DELETION_GENERAL,
+}
+
 # Alternation is deliberately left out: it already groups by parity, so an
 # "Odd Letters" category heading would collide with the parity section.
 CATEGORY_LABEL_MAPS: dict[str, dict[str, str | None]] = {
     "letter-selection": LETTER_POSITION_LABELS,
     "reversal": REVERSAL_DIRECTION_LABELS,
     "palindrome": PALINDROME_DIRECTION_LABELS,
+    "deletion": DELETION_POSITION_LABELS,
 }
+
+
+def category_key(category: str) -> str:
+    """Compare scraped headings after unescaping and normalising dashes."""
+    text = html_lib.unescape(category)
+    text = text.replace("\u2013", "-").replace("\u2014", "-")
+    text = re.sub(r"\s+", " ", text.strip().lower())
+    return re.sub(r"\s*-\s*", " - ", text)
 
 
 def category_label(slug: str, category: str) -> str | None:
     """Section heading for a scraped category name, or None to omit it."""
     mapping = CATEGORY_LABEL_MAPS.get(slug)
     if mapping is not None:
-        key = re.sub(r"\s+", " ", category.strip().lower())
+        key = category_key(category)
         if key in mapping:
             return mapping[key]
-    return category.title()
+    text = re.sub(r"\s+", " ", html_lib.unescape(category).strip())
+    return text.title()
 
 
 def ordered_labels(slug: str, by_cat: dict[str, list[dict]]) -> list[str]:
@@ -1656,6 +1711,24 @@ def write_outputs(
                 by_cat[REVERSAL_EITHER] = either
             else:
                 by_cat.pop(REVERSAL_EITHER, None)
+        if cfg.slug == "deletion":
+            # A position (first letter, both ends, …) is more precise than
+            # "deletes something, somewhere".
+            specific = {
+                e["indicator"]
+                for label in (
+                    DELETION_FIRST, DELETION_LAST, DELETION_BOTH, DELETION_MIDDLE,
+                )
+                for e in by_cat.get(label, [])
+            }
+            general = [
+                e for e in by_cat.get(DELETION_GENERAL, [])
+                if e["indicator"] not in specific
+            ]
+            if general:
+                by_cat[DELETION_GENERAL] = general
+            else:
+                by_cat.pop(DELETION_GENERAL, None)
 
     by_parity: dict[str, list[dict]] = defaultdict(list)
     for e in serializable:
