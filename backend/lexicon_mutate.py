@@ -107,9 +107,9 @@ def delete_lexicon_entry(db: sqlite3.Connection, lexicon_id: str, form: str) -> 
         (lexicon_id, key),
     ).fetchall()
     if not rows:
-        # Still record removal + scrub txt so a later rebuild stays clean.
-        append_removal(form)
         txt_removed = remove_from_combolist_txt(form)
+        if txt_removed:
+            append_removal(form)
         return {
             "deleted": 0,
             "forms": [],

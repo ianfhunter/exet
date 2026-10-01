@@ -226,6 +226,7 @@ def lexicon_delete_entry(
     except ValueError as exc:
         raise HTTPException(400, str(exc)) from exc
     db.commit()
+    lex = _resolve_lexicon(db, lexicon_ref)
     return {"ok": True, "lexicon": dict(lex), **result}
 
 
