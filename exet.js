@@ -339,7 +339,7 @@ function Exet() {
   /**
    * Max fodder length for anagramming/charades/containments listing.
    */
-  this.MAX_FODDER_LENGTH = 13;
+  this.MAX_FODDER_LENGTH = 22;
 
   // Start in the Exet tab
   this.currTab = "exet"
@@ -2009,6 +2009,9 @@ Exet.prototype.makeExetTab = function() {
 
   this.lChoices = document.getElementById("xet-light-choices");
   this.lRejects = document.getElementById("xet-light-rejects");
+  this.pendingLexiconDeleteForm = null;
+  this.lChoices.addEventListener('click', (e) => this.handleChoiceDeleteClick(e));
+  this.lRejects.addEventListener('click', (e) => this.handleChoiceDeleteClick(e));
   this.fillsSpinner = document.getElementById("xet-fills-spinner");
   this.webFillsPanel = document.getElementById("xet-web-fills-panel");
   this.showWebFillsButton = document.getElementById("xet-show-web-fills");
@@ -10087,6 +10090,7 @@ Exet.prototype.enumMatchSorter = function(p, k1, k2) {
 
 Exet.prototype.choiceDisplayHTML = function(choice) {
   const absC = Math.abs(choice);
+  const form = exetLexicon.getLex(choice);
   const cls = this.preflexSet[absC] ? ' class="xet-preflex-entry"' : '';
   let hover = ' title="';
   if (absC >= exetLexicon.startLen) {
@@ -10102,8 +10106,106 @@ Exet.prototype.choiceDisplayHTML = function(choice) {
     hover += '"';
   }
   const rev = (choice < 0) ? '&lArr; ' : '';
+  let deleteCell = '';
+  if (exetLexicon && exetLexicon.serverSlug === 'combolist') {
+    if (this.canDeleteComboListEntry(choice)) {
+      const pending = this.pendingLexiconDeleteForm &&
+          this.pendingLexiconDeleteForm === form;
+      const btnCls = pending ?
+          'xet-choice-delete xet-choice-delete-confirm' : 'xet-choice-delete';
+      const label = pending ? 'CONFIRM?' : '&times;';
+      const title = pending ?
+          'Click again to remove from ComboList' :
+          'Remove from ComboList';
+      deleteCell = `
+        <td class="xet-choice-delete-cell">
+          <button type="button" class="${btnCls}"
+              data-form="${this.escapeAttr(form)}"
+              title="${title}">${label}</button>
+        </td>`;
+    } else {
+      deleteCell = '<td class="xet-choice-delete-cell"></td>';
+    }
+  }
   return `
-    <tr><td${cls}${hover}>${rev}${exetLexicon.getLex(choice)}</td></tr>`;
+    <tr>
+      <td${cls}${hover}>${rev}${this.escapeHtml(form)}</td>
+      ${deleteCell}
+    </tr>`;
+}
+
+Exet.prototype.canDeleteComboListEntry = function(choice) {
+  if (!choice || !exetLexicon || !exetLexicon.serverSlug) return false;
+  if (exetLexicon.serverSlug !== 'combolist') return false;
+  const absC = Math.abs(choice);
+  // Preferred fills that are not in the word list have no ComboList row.
+  if (absC >= exetLexicon.startLen) return false;
+  const form = exetLexicon.getLex(choice);
+  return !!(form && String(form).replace(/[^A-Za-z]+/g, ''));
+}
+
+Exet.prototype.handleChoiceDeleteClick = function(ev) {
+  const btn = ev.target.closest('.xet-choice-delete');
+  if (!btn) return;
+  ev.preventDefault();
+  ev.stopPropagation();
+  const form = btn.getAttribute('data-form');
+  if (!form) return;
+  if (this.pendingLexiconDeleteForm !== form) {
+    this.pendingLexiconDeleteForm = form;
+    this.shownChoicesHash = null;
+    this.updateFillChoices();
+    return;
+  }
+  this.confirmDeleteComboListEntry(form, btn);
+}
+
+Exet.prototype.confirmDeleteComboListEntry = function(form, btn) {
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = '…';
+  }
+  const slug = (exetLexicon && exetLexicon.serverSlug) || 'combolist';
+  const url = '/api/lexicons/' + encodeURIComponent(slug) +
+      '/entries?form=' + encodeURIComponent(form);
+  fetch(url, {method: 'DELETE', credentials: 'same-origin'})
+      .then((resp) => resp.json().then((data) => ({ok: resp.ok, status: resp.status, data})))
+      .then(({ok, status, data}) => {
+        if (!ok) {
+          const detail = (data && (data.detail || data.message)) ||
+              ('HTTP ' + status);
+          throw new Error(typeof detail === 'string' ? detail : JSON.stringify(detail));
+        }
+        this.pendingLexiconDeleteForm = null;
+        this.removeChoiceFromFillState(form);
+        this.shownChoicesHash = null;
+        this.updateFillChoices();
+        this.resetViability();
+      })
+      .catch((err) => {
+        console.warn('ComboList delete failed:', err);
+        alert('Could not remove "' + form + '" from ComboList: ' +
+              (err && err.message ? err.message : err));
+        this.pendingLexiconDeleteForm = null;
+        this.shownChoicesHash = null;
+        this.updateFillChoices();
+      });
+}
+
+Exet.prototype.removeChoiceFromFillState = function(form) {
+  if (!this.fillState || !this.fillState.clues || !form) return;
+  const norm = String(form).toUpperCase().replace(/[^A-Z]+/g, '');
+  const matches = (choice) => {
+    const w = exetLexicon.getLex(choice);
+    if (!w) return false;
+    return String(w).toUpperCase().replace(/[^A-Z]+/g, '') === norm;
+  };
+  for (const ci in this.fillState.clues) {
+    const clue = this.fillState.clues[ci];
+    if (!clue) continue;
+    if (clue.lChoices) clue.lChoices = clue.lChoices.filter((c) => !matches(c));
+    if (clue.lRejects) clue.lRejects = clue.lRejects.filter((c) => !matches(c));
+  }
 }
 
 Exet.prototype.updateFillChoices = function() {
@@ -10155,7 +10257,8 @@ Exet.prototype.updateFillChoices = function() {
     if (numRejects >= this.shownLightChoices) break;
   }
 
-  const htmlHash = exetLexicon.javaHash(html + htmlRej + ci);
+  const pendingKey = this.pendingLexiconDeleteForm || '';
+  const htmlHash = exetLexicon.javaHash(html + htmlRej + ci + '|' + pendingKey);
   if (this.shownChoicesHash && this.shownChoicesHash == htmlHash) {
     return;
   }
@@ -10165,16 +10268,20 @@ Exet.prototype.updateFillChoices = function() {
   let trs = this.lChoices.getElementsByTagName('tr');
   let lim = Math.min(lChoices.length, trs.length);
   for (let i = 0; i < lim; i++) {
-    trs[i].addEventListener(
-    'click', this.fillLight.bind(this, lChoices[i], '',
-                                 exetRevManager.REV_GRIDFILL_CHANGE));
+    const choice = lChoices[i];
+    trs[i].addEventListener('click', (e) => {
+      if (e.target.closest('.xet-choice-delete')) return;
+      this.fillLight(choice, '', exetRevManager.REV_GRIDFILL_CHANGE);
+    });
   }
   trs = this.lRejects.getElementsByTagName('tr');
   lim = Math.min(lRejects.length, trs.length);
   for (let i = 0; i < lim; i++) {
-    trs[i].addEventListener(
-    'click', this.fillLight.bind(this, lRejects[i], '',
-                                 exetRevManager.REV_GRIDFILL_CHANGE));
+    const choice = lRejects[i];
+    trs[i].addEventListener('click', (e) => {
+      if (e.target.closest('.xet-choice-delete')) return;
+      this.fillLight(choice, '', exetRevManager.REV_GRIDFILL_CHANGE);
+    });
   }
 }
 

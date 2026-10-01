@@ -24,6 +24,7 @@ from backend.lexicon_lookup import (
     get_score_quantiles,
     score_quantiles_key,
 )
+from backend.lexicon_mutate import delete_lexicon_entry
 from backend.superset_anagrams import get_superset_anagrams
 from backend.multiword_anagrams import get_multiword_anagrams
 from backend.lexicon_ext import (
@@ -54,7 +55,7 @@ app.add_middleware(GZipMiddleware, minimum_size=1000)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=["GET", "HEAD", "OPTIONS", "POST"],
+    allow_methods=["GET", "HEAD", "OPTIONS", "POST", "DELETE"],
     allow_headers=["*"],
 )
 app.include_router(words_ninja_router)
@@ -208,6 +209,24 @@ def lexicon_fill(
         "count": len(choices),
         "choices": choices,
     }
+
+
+@app.delete("/api/lexicons/{lexicon_ref}/entries")
+def lexicon_delete_entry(
+    lexicon_ref: str,
+    db: DbDep,
+    form: str = Query(..., min_length=1, description="Surface form to remove from the lexicon"),
+):
+    """Remove a word from ComboList (SQLite + combolist.txt + durable removals)."""
+    lex = _resolve_lexicon(db, lexicon_ref)
+    if lex["slug"] != "combolist" and lex["display_name"] != "ComboList":
+        raise HTTPException(400, "Only ComboList entries can be deleted from the UI")
+    try:
+        result = delete_lexicon_entry(db, lex["id"], form)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    db.commit()
+    return {"ok": True, "lexicon": dict(lex), **result}
 
 
 @app.post("/api/lexicons/{lexicon_ref}/fill-batch")

@@ -804,6 +804,43 @@ body {
 .xet-choices tr.xet-chosen:hover td {
   background: var(--xet-choices-chosen-hover);
 }
+.xet-choice-delete-cell {
+  width: 1%;
+  white-space: nowrap;
+  text-align: right !important;
+  padding: 2px 4px !important;
+  cursor: default !important;
+  border-left: 1px solid var(--xet-border) !important;
+}
+.xet-choice-delete {
+  display: inline-block;
+  min-width: 1.6em;
+  margin: 0;
+  padding: 1px 6px;
+  border: 1px solid var(--xet-border);
+  background: transparent;
+  color: #a94442;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.2;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.xet-choice-delete:hover {
+  background: #f8e8e8;
+}
+.xet-choice-delete-confirm {
+  min-width: 5.5em;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: #a94442;
+  border-color: #843534;
+}
+.xet-choice-delete-confirm:hover {
+  background: #843534;
+}
 #xet-light-rejects tr:nth-child(odd) td { background: #f3eef8; }
 #xet-light-rejects tr:nth-child(even) td { background: #ebe4f4; }
 #xet-light-rejects tr:hover td {
