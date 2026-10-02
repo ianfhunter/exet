@@ -1844,9 +1844,29 @@ Exet.prototype.makeExetTab = function() {
           `and use in the grid-fill" class="xet-long-button">
         <button class="xlv-small-button" style="padding:5px 4px"
           id="xet-edit-preflex">Set preferred fills</button>
+        <button class="xlv-small-button" style="padding:5px 4px;margin-left:4px"
+          id="xet-add-combolist"
+          title="Permanently add a word or phrase to ComboList">Add word</button>
         <span class="xet-smaller-text">
           <span id="xet-preflex-used">0</span>/<span id="xet-preflex-size">${this.preflex.length}</span> used
         </span>
+      </div>
+      <div class="xet-text-editor"
+          title="Click anywhere outside this box to dismiss it"
+          id="xet-add-combolist-editor" style="display:none">
+        <div>
+          Add a word/phrase permanently to ComboList:
+        </div>
+        <div style="margin-top:8px;display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+          <input id="xet-add-combolist-input" type="text"
+              placeholder="word or phrase"
+              style="flex:1;min-width:12ch;padding:4px 6px"
+              autocomplete="off" spellcheck="true" />
+          <button type="button" class="xlv-small-button" style="padding:5px 8px"
+              id="xet-add-combolist-go">Add</button>
+        </div>
+        <div id="xet-add-combolist-status" class="xet-smaller-text"
+            style="margin-top:6px;min-height:1.2em"></div>
       </div>
       <div title="You can provide words/phrases to exclude from the ` +
         `grid-fill, set a minimum popularity, and include/exclude proper nouns"
@@ -2091,6 +2111,46 @@ Exet.prototype.makeExetTab = function() {
     exetModals.showModal(exet.preflexEditor);
     e.stopPropagation();
   });
+  this.addCombolistEditor = document.getElementById("xet-add-combolist-editor");
+  this.addCombolistInput = document.getElementById("xet-add-combolist-input");
+  this.addCombolistStatus = document.getElementById("xet-add-combolist-status");
+  this.addCombolistBtn = document.getElementById("xet-add-combolist");
+  this.addCombolistGo = document.getElementById("xet-add-combolist-go");
+  const updateAddCombolistVisibility = () => {
+    const on = !!(exetLexicon && exetLexicon.serverSlug === 'combolist');
+    if (this.addCombolistBtn) {
+      this.addCombolistBtn.style.display = on ? '' : 'none';
+    }
+  };
+  updateAddCombolistVisibility();
+  this.updateAddCombolistVisibility = updateAddCombolistVisibility;
+  if (this.addCombolistBtn) {
+    this.addCombolistBtn.addEventListener('click', e => {
+      if (this.addCombolistStatus) this.addCombolistStatus.textContent = '';
+      if (this.addCombolistInput) this.addCombolistInput.value = '';
+      exetModals.showModal(this.addCombolistEditor);
+      if (this.addCombolistInput) {
+        setTimeout(() => this.addCombolistInput.focus(), 0);
+      }
+      e.stopPropagation();
+    });
+  }
+  if (this.addCombolistGo) {
+    this.addCombolistGo.addEventListener('click', e => {
+      e.stopPropagation();
+      this.addWordToComboList();
+    });
+  }
+  if (this.addCombolistInput) {
+    this.addCombolistInput.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        e.stopPropagation();
+        this.addWordToComboList();
+      }
+    });
+    this.addCombolistInput.addEventListener('click', e => e.stopPropagation());
+  }
   this.unpreflexSize = document.getElementById("xet-unpreflex-size");
   this.unpreflexEditor = document.getElementById("xet-unpreflex-editor");
   this.unpreflexInput = document.getElementById("xet-unpreflex-input");
@@ -10138,6 +10198,62 @@ Exet.prototype.choiceDisplayHTML = function(choice) {
     </tr>`;
 }
 
+Exet.prototype.addWordToComboList = function() {
+  if (!exetLexicon || exetLexicon.serverSlug !== 'combolist') {
+    alert('ComboList must be the active lexicon to add words permanently.');
+    return;
+  }
+  const input = this.addCombolistInput;
+  const status = this.addCombolistStatus;
+  const go = this.addCombolistGo;
+  const form = input ? String(input.value || '').trim() : '';
+  if (!form) {
+    if (status) status.textContent = 'Enter a word or phrase.';
+    if (input) input.focus();
+    return;
+  }
+  if (go) go.disabled = true;
+  if (status) status.textContent = 'Adding…';
+  const slug = exetLexicon.serverSlug || 'combolist';
+  const url = '/api/lexicons/' + encodeURIComponent(slug) + '/entries';
+  fetch(url, {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({form: form, score: 100}),
+  }).then((resp) => resp.json().then((data) => ({ok: resp.ok, httpStatus: resp.status, data})))
+    .then(({ok, httpStatus, data}) => {
+      if (!ok) {
+        const detail = (data && (data.detail || data.message)) ||
+            ('HTTP ' + httpStatus);
+        throw new Error(typeof detail === 'string' ? detail : JSON.stringify(detail));
+      }
+      let msg;
+      if (data.already_present) {
+        msg = data.bumped ?
+            ('Updated score for "' + (data.form || form) + '".') :
+            ('"' + (data.form || form) + '" is already in ComboList.');
+      } else {
+        msg = 'Added "' + (data.form || form) + '" to ComboList.';
+      }
+      if (status) status.textContent = msg;
+      if (input) input.value = '';
+      this.shownChoicesHash = null;
+      this.resetViability();
+    })
+    .catch((err) => {
+      console.warn('ComboList add failed:', err);
+      const msg = 'Could not add "' + form + '": ' +
+          (err && err.message ? err.message : err);
+      if (status) status.textContent = msg;
+      else alert(msg);
+    })
+    .finally(() => {
+      if (go) go.disabled = false;
+      if (input) input.focus();
+    });
+}
+
 Exet.prototype.canDeleteComboListEntry = function(choice) {
   if (!choice || !exetLexicon || !exetLexicon.serverSlug) return false;
   if (exetLexicon.serverSlug !== 'combolist') return false;
@@ -10927,6 +11043,9 @@ function exetLoadedLexicon() {
     exet.resetViability();
     exet.renderMinLex();
     exet.lexiconId.innerHTML = exetLexicon.id;
+    if (exet.updateAddCombolistVisibility) {
+      exet.updateAddCombolistVisibility();
+    }
     exetRevManager.throttledSaveRev(exetRevManager.REV_OPTIONS_CHANGE);
   } else {
     exetInit();

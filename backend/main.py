@@ -24,7 +24,7 @@ from backend.lexicon_lookup import (
     get_score_quantiles,
     score_quantiles_key,
 )
-from backend.lexicon_mutate import delete_lexicon_entry
+from backend.lexicon_mutate import add_lexicon_entry, delete_lexicon_entry
 from backend.backup_store import KEEP_BACKUPS, list_backups, save_backup
 from backend.superset_anagrams import get_superset_anagrams
 from backend.multiword_anagrams import get_multiword_anagrams
@@ -224,6 +224,30 @@ def lexicon_delete_entry(
         raise HTTPException(400, "Only ComboList entries can be deleted from the UI")
     try:
         result = delete_lexicon_entry(db, lex["id"], form)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    db.commit()
+    lex = _resolve_lexicon(db, lexicon_ref)
+    return {"ok": True, "lexicon": dict(lex), **result}
+
+
+class LexiconEntryBody(BaseModel):
+    form: str = Field(..., min_length=1, description="Word or phrase to add")
+    score: float = Field(100.0, ge=0, description="ComboList score (higher = preferred)")
+
+
+@app.post("/api/lexicons/{lexicon_ref}/entries")
+def lexicon_add_entry(
+    lexicon_ref: str,
+    db: DbDep,
+    body: LexiconEntryBody,
+):
+    """Add a word permanently to ComboList (SQLite + combolist.txt + durable additions)."""
+    lex = _resolve_lexicon(db, lexicon_ref)
+    if lex["slug"] != "combolist" and lex["display_name"] != "ComboList":
+        raise HTTPException(400, "Only ComboList entries can be added from the UI")
+    try:
+        result = add_lexicon_entry(db, lex["id"], body.form, score=body.score)
     except ValueError as exc:
         raise HTTPException(400, str(exc)) from exc
     db.commit()
