@@ -373,6 +373,19 @@ body {
   align-items: center;
   gap: 6px;
 }
+.xet-clue-enum {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--xet-accent);
+  user-select: none;
+  cursor: help;
+  margin-left: auto;
+  padding: 2px 6px;
+  border: 1px solid var(--xet-border);
+  border-radius: 3px;
+  background: var(--xet-surface);
+}
 .xet-clue-input {
   display: block;
   width: 100%;

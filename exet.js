@@ -1573,12 +1573,12 @@ Exet.prototype.makeExetTab = function() {
             Add/remove Enums:
             <div class="xet-dropdown-submenu">
               <div class="xet-dropdown-subitem"
-                  title="Add length enumerations such as (4,3) to all clues"
+                  title="Sync length enumerations on all clues from their fills (spaces/hyphens in the word)"
                   onclick="exet.addAllEnums()">
-                Add enums to all clues
+                Sync enums from fills
               </div>
               <div class="xet-dropdown-subitem"
-                  title="Remove length enumerations from all clue texts"
+                  title="Remove length enumerations from all clue texts (US-style). The editor still shows the derived enum from the fill."
                   onclick="exet.removeAllEnums()">
                 Remove enums from all clues
               </div>
@@ -7288,6 +7288,8 @@ Exet.prototype.makeClueEditable = function() {
       <div class="xet-clue-editor-header" id="xet-clue-editor-header">
         <span class="xet-action">Edit clue:</span>
         <span id="xet-clue-stat" class="xet-clue-stat"></span>
+        <span id="xet-clue-enum" class="xet-clue-enum"
+          title="Enumeration comes from the fill word (spaces and hyphens in the wordlist). Edit the wordlist entry — or pick a different fill — to change it."></span>
       </div>
       <textarea id="xet-clue" class="xet-editable xet-clue-input" rows="2"
         spellcheck="${spellAttr}"
@@ -7304,14 +7306,16 @@ Exet.prototype.makeClueEditable = function() {
   }
   this.currClueIsDraft = this.isDraftClue(theClue.clue);
   // We make the raw clue text editable here, including any tags or
-  // in-clue-anno markers (~{...}~).
+  // in-clue-anno markers (~{...}~). Enumerations are shown separately.
   const xetClue = document.getElementById("xet-clue");
   xetClue.spellcheck = !!exetState.spellcheck;
-  xetClue.value = this.currClueIsDraft ?
+  const clueBody = this.currClueIsDraft ?
     theClue.clue.substr(this.DRAFT.length).trim() : theClue.clue;
+  xetClue.value = this.clueSansEnum(clueBody);
   const handler = this.throttledClueChange.bind(this);
   xetClue.addEventListener('input', handler);
   this.setDraftToggler();
+  this.refreshClueEnumDisplay(theClue.index);
   const xetClueStat = document.getElementById("xet-clue-stat");
   xetClueStat.addEventListener('click', e => {
     e.stopPropagation();
@@ -7458,49 +7462,30 @@ Exet.prototype.handleClueChange = function() {
   const expEnumLen = this.puz.getAllCells(ci).length;
   console.assert(expEnumLen > 0, ci);
   this.stripInputLF(currClueText);
-  let clue = this.getEditableText(currClueText);
-  const savedClue = clue;
-  clue = clue.trim();
-  const oldEnumParse = this.puz.parseEnum(theClue.clue);
-  let enumParse = this.puz.parseEnum(clue);
-
-  /**
-   * If !requireEnums, we allow any enum-like thing in the
-   * clue, even with mismatched length. Otherwise, we enforce
-   * the required length, unless ignoreEnumMismatch is set.
-   */
-  if (this.requireEnums) {
-    const clueSansEnum = clue.substr(0, enumParse.afterClue).trim();
-    /**
-     * Revert to the old enum if the new one isn't an
-     * enum or if the new one says a length that is different
-     * from what the light says.
-     */
-    if (enumParse.enumLen == 0 ||
-        (enumParse.enumLen != expEnumLen && !this.puz.ignoreEnumMismatch)) {
-      if (enumParse.enumLen > 0) {
-        this.showTip(this.TIP_ENUM_MISMATCH);
-      }
-      clue = clueSansEnum + ' ' +
-             (oldEnumParse.enumStr || ('(' + expEnumLen + ')'));
-    } else {
-      clue = clueSansEnum + ' ' + enumParse.enumStr;
-    }
-    enumParse = this.puz.parseEnum(clue);
-  }
-  if (clue != savedClue) {
-    let delta = clue.length - savedClue.length;
+  const savedClue = this.getEditableText(currClueText);
+  // Enumerations are not edited here — strip any pasted enum from the box.
+  let clue = this.clueSansEnum(savedClue).trim();
+  if (clue != savedClue.trim()) {
+    const delta = clue.length - savedClue.length;
     if (delta < 0) {
       this.adjustSavedCursor(delta, delta);
     }
     this.setEditableText(currClueText, clue);
   }
+  const oldEnumParse = this.puz.parseEnum(theClue.clue);
+  const enumParse = this.enumFromFill(ci);
+  this.refreshClueEnumDisplay(ci);
+
+  let storedClue = clue;
   if (this.currClueIsDraft) {
-    clue = this.DRAFT + ' ' + clue;
+    storedClue = this.DRAFT + ' ' + clue;
+  }
+  if (this.requireEnums && enumParse.enumStr) {
+    storedClue = storedClue + ' ' + enumParse.enumStr;
   }
   this.setDraftToggler();
 
-  theClue.clue = clue;
+  theClue.clue = storedClue;
   theClue.enumLen = enumParse.enumLen;
   theClue.enumStr = enumParse.enumStr;
   theClue.placeholder = enumParse.placeholder;
@@ -8151,23 +8136,102 @@ Exet.prototype.unlinkCurrClue = function() {
   this.updatePuzzle(exetRevManager.REV_GRIDFILL_CHANGE);
 }
 
-Exet.prototype.maybeAdjustEnum = function(ci) {
-  const theClue = this.puz.clues[ci]
-  if (!theClue) {
-    return
+Exet.prototype.clueSansEnum = function(clueText) {
+  if (!clueText) return '';
+  const parsed = this.puz.parseEnum(clueText);
+  return clueText.substr(0, parsed.afterClue).trim();
+}
+
+/**
+ * Enumeration is derived from the fill word (spaces → commas, hyphens stay).
+ * Until a complete fill is present, an existing matching enum on the clue is
+ * kept; otherwise we fall back to the light's cell count.
+ */
+Exet.prototype.enumFromFill = function(ci) {
+  const empty = this.puz.parseEnum('');
+  const theClue = this.puz.clues[ci];
+  if (!theClue || theClue.parentClueIndex) {
+    return empty;
   }
-  const expEnumLen = this.puz.getAllCells(ci).length
-  const enumPos = theClue.clue.lastIndexOf('(')
-  if (enumPos >= 0) {
-    const oldEnum = theClue.clue.substr(enumPos).trim()
-    const enumParse = this.puz.parseEnum(oldEnum)
-    if (enumParse.enumLen == expEnumLen) {
-      return;
+  const cells = this.puz.getAllCells(ci);
+  const expLen = cells.length;
+  if (expLen <= 0) {
+    return empty;
+  }
+  const solution = (theClue.solution || '').toUpperCase();
+  // Strip HTML that setClueSolution may add for alts.
+  const plainSol = solution.replace(/<[^>]*>/g, '').split(',')[0].trim();
+  if (plainSol && plainSol.indexOf('?') < 0 &&
+      exetLexicon.lexkey(plainSol).length == expLen) {
+    let enumStr = '';
+    let enumPart = 0;
+    const solParts = exetLexicon.partsOf(plainSol);
+    for (let i = 0; i < solParts.length; i++) {
+      const c = solParts[i];
+      // Apostrophes are never enumerated: "wine o'clock" is (4,6), not (4,1'5).
+      if (enumPart > 0 && (c == ' ' || c == '-')) {
+        enumStr += ('' + enumPart + (c == ' ' ? ',' : c));
+        enumPart = 0;
+      }
+      if (exetLexicon.letterSet[c]) {
+        enumPart++;
+      }
     }
-    theClue.clue = theClue.clue.substr(0, enumPos).trim();
+    if (enumPart > 0) {
+      enumStr += enumPart;
+    }
+    if (enumStr) {
+      return this.puz.parseEnum('(' + enumStr + ')');
+    }
   }
-  theClue.clue = theClue.clue +
-                 ((expEnumLen > 0) ? ' (' + expEnumLen + ')' : '');
+  const existing = this.puz.parseEnum(theClue.clue);
+  if (existing.enumStr && existing.enumLen == expLen) {
+    return existing;
+  }
+  return this.puz.parseEnum('(' + expLen + ')');
+}
+
+Exet.prototype.applyEnumToClue = function(ci, enumParse) {
+  const theClue = this.puz.clues[ci];
+  if (!theClue || !enumParse) {
+    return;
+  }
+  const body = this.clueSansEnum(theClue.clue);
+  if (this.requireEnums && enumParse.enumStr) {
+    theClue.clue = body + ' ' + enumParse.enumStr;
+  } else {
+    theClue.clue = body;
+  }
+  theClue.enumLen = enumParse.enumLen;
+  theClue.enumStr = enumParse.enumStr;
+  theClue.placeholder = enumParse.placeholder;
+  theClue.hyphenAfter = enumParse.hyphenAfter;
+  theClue.wordEndAfter = enumParse.wordEndAfter;
+}
+
+Exet.prototype.refreshClueEnumDisplay = function(ci) {
+  const elt = document.getElementById('xet-clue-enum');
+  if (!elt) {
+    return;
+  }
+  const index = ci || this.currClueIndex();
+  if (!index) {
+    elt.textContent = '';
+    return;
+  }
+  if (ci && ci != this.currClueIndex()) {
+    return;
+  }
+  const enumParse = this.enumFromFill(index);
+  elt.textContent = enumParse.enumStr || '';
+}
+
+Exet.prototype.maybeAdjustEnum = function(ci) {
+  const theClue = this.puz.clues[ci];
+  if (!theClue) {
+    return;
+  }
+  this.applyEnumToClue(ci, this.enumFromFill(ci));
 }
 
 Exet.prototype.addLinkedClue = function() {
@@ -9995,19 +10059,11 @@ Exet.prototype.fillLight = function(idx, ci='', revType=null) {
     theClue.solution = solution;
     changed = true;
   }
-  let enumStr = '';
-  let enumPart = 0;
   let solIndex = 0;
   const solParts = exetLexicon.partsOf(solution);
   for (let i = 0; i < solParts.length; i++) {
-    let c = solParts[i];
-    // Apostrophes are never enumerated: "wine o'clock" is (4,6), not (4,1'5).
-    if (enumPart > 0 && (c == ' ' || c == '-')) {
-      enumStr += ('' + enumPart + (c == ' ' ? ',' : c));
-      enumPart = 0;
-    }
+    const c = solParts[i];
     if (exetLexicon.letterSet[c]) {
-      enumPart++;
       let cell = cells[solIndex++];
       let gridCell = this.puz.grid[cell[0]][cell[1]];
       if (gridCell.currLetter != c || gridCell.solution != c) {
@@ -10016,22 +10072,26 @@ Exet.prototype.fillLight = function(idx, ci='', revType=null) {
       }
     }
   }
-  if (enumPart > 0) {
-    enumStr = enumStr + enumPart;
-  }
-  if (enumStr) {
-    enumStr = '(' + enumStr + ')';
-  }
+  const enumParse = this.enumFromFill(ci);
+  // enumFromFill reads theClue.solution which we just set.
+  const oldEnumStr = this.puz.parseEnum(theClue.clue).enumStr;
   if (this.requireEnums) {
-    const parsedEnum = this.puz.parseEnum(theClue.clue);
-    if (parsedEnum.enumStr != enumStr) {
-      theClue.clue = theClue.clue.substr(0, parsedEnum.afterClue).trim() +
-        ' ' + enumStr;
+    if (oldEnumStr != enumParse.enumStr) {
+      this.applyEnumToClue(ci, enumParse);
       changed = true;
     }
+  } else {
+    // Still keep hyphen/placeholder metadata in sync with the fill word.
+    theClue.enumLen = enumParse.enumLen;
+    theClue.enumStr = enumParse.enumStr;
+    theClue.placeholder = enumParse.placeholder;
+    theClue.hyphenAfter = enumParse.hyphenAfter;
+    theClue.wordEndAfter = enumParse.wordEndAfter;
   }
+  this.refreshClueEnumDisplay(ci);
   if (changed && updateIfChanged) {
     this.handleGridInput(revType);
+    this.refreshClueEnumDisplay(ci);
   }
 }
 
