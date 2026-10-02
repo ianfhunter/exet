@@ -6419,6 +6419,53 @@ Exet.prototype.replaceHandlers = function() {
 Exet.prototype.isDraftClue = function(clueText) {
   return clueText.trim().startsWith(this.DRAFT)
 }
+
+/**
+ * Jump to the previous/next light whose clue still has the [DRAFT] marker.
+ * direction is 'prev' or 'next'.
+ */
+Exet.prototype.cnavDraft = function(direction) {
+  if (!this.puz) {
+    return;
+  }
+  let ci = this.currClueIndex();
+  if (!ci) {
+    ci = this.puz.lastClueIndex ||
+      (this.puz.allClueIndices.length > 0 ? this.puz.allClueIndices[0] : null);
+  }
+  if (!ci || !this.puz.clues[ci]) {
+    return;
+  }
+  const start = this.puz.clueOrParentIndex(ci);
+  let cur = start;
+  const n = this.puz.allClueIndices.length;
+  for (let step = 0; step < n; step++) {
+    const node = this.puz.clues[cur];
+    if (!node) {
+      return;
+    }
+    cur = node[direction];
+    if (!cur) {
+      return;
+    }
+    const parent = this.puz.clueOrParentIndex(cur);
+    if (!parent || parent == start) {
+      return;
+    }
+    const theClue = this.puz.clues[parent];
+    if (!theClue || theClue.parentClueIndex) {
+      cur = parent;
+      continue;
+    }
+    if (this.isDraftClue(theClue.clue)) {
+      this.puz.cnavTo(parent, false);
+      this.puz.refocus();
+      return;
+    }
+    cur = parent;
+  }
+}
+
 Exet.prototype.renderClue = function(theClue=null) {
   if (!theClue) {
     theClue = exet.currClue();
@@ -7285,9 +7332,15 @@ Exet.prototype.makeClueEditable = function() {
         title="${this.puz.textLabels['curr-clue-prev.hover']}"
           >&#8249;</button>
       <button id="xet-next"
-        class="xlv-small-button xlv-nextprev"
+        class="xlv-small-button xet-nextprev"
         title="${this.puz.textLabels['curr-clue-next.hover']}"
-          >${this.puz.textLabels['curr-clue-next']}</button>
+          >&#8250;</button>
+      <button id="xet-prev-draft"
+        class="xlv-small-button xet-nextprev xet-draft-nav"
+        title="Previous draft/unclued light">&#8249;<sub>u</sub></button>
+      <button id="xet-next-draft"
+        class="xlv-small-button xet-nextprev xet-draft-nav"
+        title="Next draft/unclued light">&#8250;<sub>u</sub></button>
       <button id="xet-jump-constrained"
         class="xlv-small-button xet-nextprev"
         title="Jump to the most constrained unfilled light (!). Press again within ${Math.round(this.longInputLagMS/1000)}s to cycle to the next most constrained light."
@@ -7310,6 +7363,16 @@ Exet.prototype.makeClueEditable = function() {
   this.nextButton = document.getElementById('xet-next');
   this.nextButton.addEventListener('click', e => {
     exet.puz.cnavNext();
+  });
+  this.prevDraftButton = document.getElementById('xet-prev-draft');
+  this.prevDraftButton.addEventListener('click', e => {
+    this.cnavDraft('prev');
+    e.stopPropagation();
+  });
+  this.nextDraftButton = document.getElementById('xet-next-draft');
+  this.nextDraftButton.addEventListener('click', e => {
+    this.cnavDraft('next');
+    e.stopPropagation();
   });
   this.jumpConstrainedButton = document.getElementById('xet-jump-constrained');
   this.jumpConstrainedButton.addEventListener('click', e => {

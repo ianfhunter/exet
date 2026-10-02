@@ -558,11 +558,11 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 24px;
-  height: 24px;
+  min-width: 28px;
+  height: 26px;
   margin: 0;
   padding: 0 6px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
   line-height: 1;
   vertical-align: text-top;
@@ -582,9 +582,19 @@ body {
   border-right: none !important;
 }
 #xet-prev,
-#xet-next {
+#xet-next,
+#xet-prev-draft,
+#xet-next-draft {
   font-size: 16px;
   padding: 0 7px !important;
+}
+#xet-nextprev-span .xet-draft-nav sub {
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 0;
+  position: relative;
+  bottom: -0.15em;
+  margin-left: 1px;
 }
 #xet-unlink {
   padding: 4px;
