@@ -7327,6 +7327,9 @@ Exet.prototype.makeClueEditable = function() {
           </div>
         </div>
       </span>
+      <button id="xet-prev-draft"
+        class="xlv-small-button xet-nextprev xet-draft-nav"
+        title="Previous draft/unclued light">&#8249;<sub>u</sub></button>
       <button id="xet-prev"
         class="xlv-small-button xet-nextprev"
         title="${this.puz.textLabels['curr-clue-prev.hover']}"
@@ -7335,9 +7338,6 @@ Exet.prototype.makeClueEditable = function() {
         class="xlv-small-button xet-nextprev"
         title="${this.puz.textLabels['curr-clue-next.hover']}"
           >&#8250;</button>
-      <button id="xet-prev-draft"
-        class="xlv-small-button xet-nextprev xet-draft-nav"
-        title="Previous draft/unclued light">&#8249;<sub>u</sub></button>
       <button id="xet-next-draft"
         class="xlv-small-button xet-nextprev xet-draft-nav"
         title="Next draft/unclued light">&#8250;<sub>u</sub></button>
