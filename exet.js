@@ -2248,6 +2248,7 @@ Exet.prototype.makeExetTab = function() {
   spellcheck.addEventListener('change', e => {
     this.puz.deactivator();
     exetState.spellcheck = spellcheck.checked ? true : false;
+    exetState.spellcheckV = 2;
     if (this.puz.currCellIsValid()) {
       const row = this.puz.currRow;
       const col = this.puz.currCol;
@@ -7166,7 +7167,8 @@ Exet.prototype.makeClueEditable = function() {
   // We make the raw clue text editable here, including any tags or
   // in-clue-anno markers (~{...}~).
   const xetClue = document.getElementById("xet-clue");
-  xetClue.spellcheck = exetState.spellcheck;
+  xetClue.spellcheck = !!exetState.spellcheck;
+  xetClue.setAttribute('spellcheck', exetState.spellcheck ? 'true' : 'false');
   xetClue.innerText = this.currClueIsDraft ?
     theClue.clue.substr(this.DRAFT.length).trim() : theClue.clue;
   const handler = this.throttledClueChange.bind(this);
@@ -7204,7 +7206,8 @@ Exet.prototype.makeClueEditable = function() {
   xetAnno.className = 'xet-anno xet-editable';
   xetAnno.id = 'xet-anno';
   xetAnno.contentEditable = true;
-  xetAnno.spellcheck = exetState.spellcheck;
+  xetAnno.spellcheck = !!exetState.spellcheck;
+  xetAnno.setAttribute('spellcheck', exetState.spellcheck ? 'true' : 'false');
   xetAnno.innerText = theClue.anno;
 
   annoRow.appendChild(annoLock);
@@ -10810,8 +10813,16 @@ function exetLoadState() {
   if (!exetState.hasOwnProperty('exolveUrl')) {
     exetState.exolveUrl = 'https://viresh-ratnakar.github.io/';
   }
-  if (!exetState.hasOwnProperty('spellcheck')) {
-    exetState.spellcheck = false;
+  let stateDirty = false;
+  if (!exetState.hasOwnProperty('spellcheckV') || exetState.spellcheckV < 2) {
+    // Older builds defaulted spellcheck off; turn it on once so clue
+    // editing gets normal browser spelling unless the user opts out later.
+    exetState.spellcheck = true;
+    exetState.spellcheckV = 2;
+    stateDirty = true;
+  } else if (!exetState.hasOwnProperty('spellcheck')) {
+    exetState.spellcheck = true;
+    stateDirty = true;
   }
   if (!exetState.hasOwnProperty('magpieAutoPopulate')) {
     exetState.magpieAutoPopulate = false;
@@ -10821,6 +10832,9 @@ function exetLoadState() {
   }
   // Removed in v1.09: fill now runs in a worker and never blocks grid input.
   delete exetState.disableAutofill;
+  if (stateDirty && exetRevManager) {
+    exetRevManager.saveLocal(exetRevManager.SPECIAL_KEY, JSON.stringify(exetState));
+  }
 }
 
 function exetLoadLexicon(lexiconName=null) {
