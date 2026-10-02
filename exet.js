@@ -6684,45 +6684,12 @@ Exet.prototype.throttledReposition = function() {
   }, this.inputLagMS);
 }
 
-Exet.prototype.widenCurrClueEditor = function() {
-  if (!this.puz || !this.puz.currClue || !this.puz.clearArea) {
-    return;
-  }
-  const currClue = this.puz.currClue;
-  if (currClue.style.display == 'none') {
-    return;
-  }
-  const clearBox = this.puz.clearArea.getBoundingClientRect();
-  const clueBox = currClue.getBoundingClientRect();
-  if (clearBox.width <= 0 || clueBox.width <= 0) {
-    return;
-  }
-  // Stretch from the clue's left edge to the clear-area's right so the
-  // editor uses the full horizontal space above the grid/controls.
-  const targetW = Math.max(
-      this.puz.gridPanelWidth || 0,
-      Math.floor(clearBox.right - clueBox.left - 4));
-  if (targetW > clueBox.width + 2) {
-    currClue.style.width = targetW + 'px';
-  }
-  if (this.xetCurrClue) {
-    this.xetCurrClue.style.width = '100%';
-    this.xetCurrClue.style.maxHeight = currClue.style.maxHeight;
-  }
-  // Height can shrink when text wraps less at the wider width.
-  const newBox = currClue.getBoundingClientRect();
-  if (newBox.height > 0) {
-    currClue.style.marginTop = '-' + newBox.height + 'px';
-  }
-}
-
 Exet.prototype.reposition = function() {
   const elts = [this.xetTitle, this.xetTitleCTA,
                 this.xetSetter, this.xetSetterCTA, this.preamble];
   for (const elt of elts) {
     elt.classList.remove('xet-blur');
   }
-  this.widenCurrClueEditor();
   const clueBox = this.puz.currClue.getBoundingClientRect();
   if (this.puz.currClueIndex && clueBox.top > 0) {
     const top = clueBox.top;
@@ -6738,21 +6705,18 @@ Exet.prototype.reposition = function() {
     }
   }
   if (this.xetCurrClue) {
+    this.xetCurrClue.style.width = '100%';
     this.xetCurrClue.style.maxHeight = this.puz.currClue.style.maxHeight;
   }
 
   const clearAreaBox = this.puz.clearArea.getBoundingClientRect();
-  const gridBox = this.puz.gridParent ?
-      this.puz.gridParent.getBoundingClientRect() : clueBox;
 
-  const colourNinaWidth = Math.min(300,
-      Math.max(0, (clearAreaBox.width - gridBox.width) / 2));
+  const colourNinaWidth = Math.min(300, (clearAreaBox.width - clueBox.width) / 2);
   this.tweakColourNina.style.width = colourNinaWidth + 'px';
 
   const xetFormat = document.getElementById('xet-format');
   if (xetFormat) {
-    const previewWidth = Math.min(480,
-        Math.max(120, (clearAreaBox.width - gridBox.width) / 2));
+    const previewWidth = Math.min(480, (clearAreaBox.width - clueBox.width) / 2);
     for (let tag of Object.keys(this.formatTags)) {
       const preview = document.getElementById('xet-format-' + tag + '-preview');
       preview.style.width = previewWidth + 'px';
