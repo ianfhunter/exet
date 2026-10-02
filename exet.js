@@ -3166,9 +3166,36 @@ Exet.prototype.loadIframe = function(iframe, url, urlElt) {
   } else {
     iframe.classList.remove('xet-nutrimatic-iframe');
   }
+  /**
+   * Reloading research/web iframes on light navigation can steal focus from
+   * the grid or clue editor. Keep the prior focus and restore it if the
+   * iframe grabs it during load.
+   */
+  const active = document.activeElement;
+  const shouldRestore = !!(active && active !== iframe &&
+      active !== document.body && typeof active.focus === 'function' &&
+      !(iframe.contains && iframe.contains(active)));
+  const restoreFocus = () => {
+    if (!shouldRestore) return;
+    const focused = document.activeElement;
+    if (focused === iframe || focused === document.body ||
+        focused === document.documentElement ||
+        (iframe.contentWindow && focused === iframe.contentWindow)) {
+      try {
+        active.focus({preventScroll: true});
+      } catch (err) {
+        try { active.focus(); } catch (err2) {}
+      }
+    }
+  };
+  iframe.setAttribute('tabindex', '-1');
   iframe.src = url;
+  restoreFocus();
   iframe.onload = () => {
     urlElt.innerText = trimmedUrl;
+    restoreFocus();
+    setTimeout(restoreFocus, 0);
+    setTimeout(restoreFocus, 50);
   };
 }
 
@@ -3732,9 +3759,16 @@ Exet.prototype.makeResearchTab = function() {
   researchTab.choices = exetConfig.researchTools;
   researchTab.currChoice = -1;  /** set by researchTabNav() */
   researchTab.savedWords = null;
+  let defaultIdx = 0;
+  for (let rc = 0; rc < researchTab.choices.length; rc++) {
+    if (researchTab.choices[rc].name === 'Onelook') {
+      defaultIdx = rc;
+      break;
+    }
+  }
   let html = `
   <div>
-  <select name="xet-research-select" id="xet-research-select" value="0"
+  <select name="xet-research-select" id="xet-research-select"
     onchange="exet.researchTabNav()">`
   for (let rc = 0; rc < researchTab.choices.length; rc++) {
     const choice = researchTab.choices[rc];
@@ -3742,20 +3776,22 @@ Exet.prototype.makeResearchTab = function() {
       html = html + this.MENU_SEPARATOR
       continue;
     }
+    const selected = (rc === defaultIdx) ? ' selected' : '';
     html = html + `
-    <option value="${rc}">${choice.name + (choice.newTab ? ' (opens in new tab)' : '')}</option>`
+    <option value="${rc}"${selected}>${choice.name + (choice.newTab ? ' (opens in new tab)' : '')}</option>`
   }
   html = html + '</select></div><br>'
   html = html + `
   <a href="" target="_blank" id="xet-research-choice-url"
       class="xet-blue xet-small"></a><br>
-  <iframe id="xet-research-iframe" class="xet-iframe xet-section" src="">
+  <iframe id="xet-research-iframe" class="xet-iframe xet-section" tabindex="-1" src="">
   </iframe>
   `;
   researchTab.content.innerHTML = html;
   this.researchIframe = document.getElementById('xet-research-iframe')
   this.researchSelect = document.getElementById('xet-research-select')
   this.researchUrl = document.getElementById('xet-research-choice-url')
+  this.researchSelect.value = String(defaultIdx);
 }
 
 Exet.prototype.makeWebFillsPanel = function() {
