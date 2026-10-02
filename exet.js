@@ -6574,6 +6574,16 @@ Exet.prototype.resizeRHS = function() {
   const nutriQuarterSectionH = Math.floor(quarterSectionH / nutriZoom);
   const cluesW = frameW - 320;
   this.fillSettings.style.width = '' + cluesW + 'px';
+  // Raise the toolbox so its top lines up with the current-clue strip
+  // (which sits above the grid via negative margin), and grow heights so
+  // the bottom edge stays put.
+  const clueLift = this.clueStripLiftPx();
+  if (this.frame) {
+    this.frame.style.marginTop = clueLift ? ('-' + clueLift + 'px') : '';
+  }
+  const tallH = 450 + extraH + clueLift;
+  const tabContentH = 500 + extraH + clueLift;
+  const lightChoicesH = 330 + extraH + clueLift;
   let style = `
     .xet-about,
     .xet-analysis {
@@ -6583,7 +6593,7 @@ Exet.prototype.resizeRHS = function() {
       max-height: ${435 + extraH}px;
     }
     .xet-high-tall-box {
-      height: ${450 + extraH}px;
+      height: ${tallH}px;
     }
     .xet-half-section,
     .xet-quarter-section,
@@ -6596,7 +6606,7 @@ Exet.prototype.resizeRHS = function() {
     #xet-light-choices-box,
     .xet-clues-panel,
     .xet-mid-tall-box {
-      height: ${330 + extraH}px;
+      height: ${lightChoicesH}px;
     }
     .xet-section {
       width: ${sectionW}px;
@@ -6646,7 +6656,7 @@ Exet.prototype.resizeRHS = function() {
       width: ${frameW}px;
     }
     .xet-tab-content {
-      height: ${500 + extraH}px;
+      height: ${tabContentH}px;
       width: ${frameW}px;
       overflow-y: auto;
     }
@@ -6682,6 +6692,21 @@ Exet.prototype.throttledReposition = function() {
     this.reposition();
     this.throttledRepositionTimer = null;
   }, this.inputLagMS);
+}
+
+Exet.prototype.clueStripLiftPx = function() {
+  if (!this.puz || !this.puz.currClue || !this.puz.gridParent) {
+    return 0;
+  }
+  if (this.puz.currClue.style.display == 'none') {
+    return 0;
+  }
+  const clueBox = this.puz.currClue.getBoundingClientRect();
+  const gridBox = this.puz.gridParent.getBoundingClientRect();
+  if (clueBox.height <= 0 || gridBox.height <= 0) {
+    return 0;
+  }
+  return Math.max(0, Math.round(gridBox.top - clueBox.top));
 }
 
 Exet.prototype.reposition = function() {
