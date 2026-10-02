@@ -469,6 +469,12 @@ body {
   min-height: 80px;
   overflow-y: auto;
   padding-top: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.xet-curr-clue [id$="-curr-clue-text"] {
+  display: block;
+  width: 100%;
 }
 .xet-clue-menu {
   border: 1px solid var(--xet-border);
