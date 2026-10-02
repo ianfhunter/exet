@@ -2031,8 +2031,8 @@ Exet.prototype.makeExetTab = function() {
   this.lChoices = document.getElementById("xet-light-choices");
   this.lRejects = document.getElementById("xet-light-rejects");
   this.pendingLexiconDeleteForm = null;
-  this.lChoices.addEventListener('click', (e) => this.handleChoiceDeleteClick(e));
-  this.lRejects.addEventListener('click', (e) => this.handleChoiceDeleteClick(e));
+  this.lChoices.addEventListener('click', (e) => this.handleChoiceActionClick(e));
+  this.lRejects.addEventListener('click', (e) => this.handleChoiceActionClick(e));
   this.fillsSpinner = document.getElementById("xet-fills-spinner");
   this.webFillsPanel = document.getElementById("xet-web-fills-panel");
   this.showWebFillsButton = document.getElementById("xet-show-web-fills");
@@ -10170,7 +10170,7 @@ Exet.prototype.choiceDisplayHTML = function(choice) {
     hover += '"';
   }
   const rev = (choice < 0) ? '&lArr; ' : '';
-  let deleteCell = '';
+  let actionCell = '';
   if (exetLexicon && exetLexicon.serverSlug === 'combolist') {
     if (this.canDeleteComboListEntry(choice)) {
       const pending = this.pendingLexiconDeleteForm &&
@@ -10181,20 +10181,23 @@ Exet.prototype.choiceDisplayHTML = function(choice) {
       const title = pending ?
           'Click again to remove from ComboList' :
           'Remove from ComboList';
-      deleteCell = `
+      actionCell = `
         <td class="xet-choice-delete-cell">
+          <button type="button" class="xet-choice-edit"
+              data-form="${this.escapeAttr(form)}"
+              title="Edit ComboList word">📝</button>
           <button type="button" class="${btnCls}"
               data-form="${this.escapeAttr(form)}"
               title="${title}">${label}</button>
         </td>`;
     } else {
-      deleteCell = '<td class="xet-choice-delete-cell"></td>';
+      actionCell = '<td class="xet-choice-delete-cell"></td>';
     }
   }
   return `
     <tr>
       <td${cls}${hover}>${rev}${this.escapeHtml(form)}</td>
-      ${deleteCell}
+      ${actionCell}
     </tr>`;
 }
 
@@ -10262,6 +10265,62 @@ Exet.prototype.canDeleteComboListEntry = function(choice) {
   if (absC >= exetLexicon.startLen) return false;
   const form = exetLexicon.getLex(choice);
   return !!(form && String(form).replace(/[^A-Za-z]+/g, ''));
+}
+
+Exet.prototype.handleChoiceActionClick = function(ev) {
+  const editBtn = ev.target.closest('.xet-choice-edit');
+  if (editBtn) {
+    ev.preventDefault();
+    ev.stopPropagation();
+    const form = editBtn.getAttribute('data-form');
+    if (form) this.editComboListEntry(form, editBtn);
+    return;
+  }
+  this.handleChoiceDeleteClick(ev);
+}
+
+Exet.prototype.editComboListEntry = function(oldForm, btn) {
+  if (!exetLexicon || exetLexicon.serverSlug !== 'combolist') {
+    alert('ComboList must be the active lexicon to edit words.');
+    return;
+  }
+  const next = window.prompt('Edit ComboList word:', oldForm);
+  if (next == null) return;
+  const newForm = String(next).trim();
+  if (!newForm) {
+    alert('New word cannot be empty.');
+    return;
+  }
+  if (newForm === oldForm) return;
+  if (btn) btn.disabled = true;
+  const slug = exetLexicon.serverSlug || 'combolist';
+  const url = '/api/lexicons/' + encodeURIComponent(slug) + '/entries';
+  fetch(url, {
+    method: 'PUT',
+    credentials: 'same-origin',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({old_form: oldForm, new_form: newForm}),
+  }).then((resp) => resp.json().then((data) => ({ok: resp.ok, httpStatus: resp.status, data})))
+    .then(({ok, httpStatus, data}) => {
+      if (!ok) {
+        const detail = (data && (data.detail || data.message)) ||
+            ('HTTP ' + httpStatus);
+        throw new Error(typeof detail === 'string' ? detail : JSON.stringify(detail));
+      }
+      this.pendingLexiconDeleteForm = null;
+      this.removeChoiceFromFillState(oldForm);
+      this.shownChoicesHash = null;
+      this.updateFillChoices();
+      this.resetViability();
+    })
+    .catch((err) => {
+      console.warn('ComboList edit failed:', err);
+      alert('Could not edit "' + oldForm + '": ' +
+            (err && err.message ? err.message : err));
+    })
+    .finally(() => {
+      if (btn) btn.disabled = false;
+    });
 }
 
 Exet.prototype.handleChoiceDeleteClick = function(ev) {
@@ -10390,7 +10449,7 @@ Exet.prototype.updateFillChoices = function() {
   for (let i = 0; i < lim; i++) {
     const choice = lChoices[i];
     trs[i].addEventListener('click', (e) => {
-      if (e.target.closest('.xet-choice-delete')) return;
+      if (e.target.closest('.xet-choice-delete, .xet-choice-edit')) return;
       this.fillLight(choice, '', exetRevManager.REV_GRIDFILL_CHANGE);
     });
   }
@@ -10399,7 +10458,7 @@ Exet.prototype.updateFillChoices = function() {
   for (let i = 0; i < lim; i++) {
     const choice = lRejects[i];
     trs[i].addEventListener('click', (e) => {
-      if (e.target.closest('.xet-choice-delete')) return;
+      if (e.target.closest('.xet-choice-delete, .xet-choice-edit')) return;
       this.fillLight(choice, '', exetRevManager.REV_GRIDFILL_CHANGE);
     });
   }

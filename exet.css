@@ -812,19 +812,30 @@ body {
   cursor: default !important;
   border-left: 1px solid var(--xet-border) !important;
 }
+.xet-choice-edit,
 .xet-choice-delete {
   display: inline-block;
   min-width: 1.6em;
-  margin: 0;
+  margin: 0 0 0 2px;
   padding: 1px 6px;
   border: 1px solid var(--xet-border);
   background: transparent;
-  color: #a94442;
   font: inherit;
   font-size: 14px;
   line-height: 1.2;
   cursor: pointer;
   border-radius: 2px;
+  vertical-align: middle;
+}
+.xet-choice-edit {
+  color: inherit;
+  padding: 1px 4px;
+}
+.xet-choice-edit:hover {
+  background: #eef3f8;
+}
+.xet-choice-delete {
+  color: #a94442;
 }
 .xet-choice-delete:hover {
   background: #f8e8e8;

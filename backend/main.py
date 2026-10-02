@@ -24,7 +24,11 @@ from backend.lexicon_lookup import (
     get_score_quantiles,
     score_quantiles_key,
 )
-from backend.lexicon_mutate import add_lexicon_entry, delete_lexicon_entry
+from backend.lexicon_mutate import (
+    add_lexicon_entry,
+    delete_lexicon_entry,
+    rename_lexicon_entry,
+)
 from backend.backup_store import KEEP_BACKUPS, list_backups, save_backup
 from backend.superset_anagrams import get_superset_anagrams
 from backend.multiword_anagrams import get_multiword_anagrams
@@ -56,7 +60,7 @@ app.add_middleware(GZipMiddleware, minimum_size=1000)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=["GET", "HEAD", "OPTIONS", "POST", "DELETE"],
+    allow_methods=["GET", "HEAD", "OPTIONS", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
 )
 app.include_router(words_ninja_router)
@@ -236,6 +240,14 @@ class LexiconEntryBody(BaseModel):
     score: float = Field(100.0, ge=0, description="ComboList score (higher = preferred)")
 
 
+class LexiconRenameBody(BaseModel):
+    old_form: str = Field(..., min_length=1, description="Existing ComboList form")
+    new_form: str = Field(..., min_length=1, description="Replacement word or phrase")
+    score: float | None = Field(
+        None, ge=0, description="Optional new score; defaults to the old entry's score"
+    )
+
+
 @app.post("/api/lexicons/{lexicon_ref}/entries")
 def lexicon_add_entry(
     lexicon_ref: str,
@@ -248,6 +260,27 @@ def lexicon_add_entry(
         raise HTTPException(400, "Only ComboList entries can be added from the UI")
     try:
         result = add_lexicon_entry(db, lex["id"], body.form, score=body.score)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    db.commit()
+    lex = _resolve_lexicon(db, lexicon_ref)
+    return {"ok": True, "lexicon": dict(lex), **result}
+
+
+@app.put("/api/lexicons/{lexicon_ref}/entries")
+def lexicon_rename_entry(
+    lexicon_ref: str,
+    db: DbDep,
+    body: LexiconRenameBody,
+):
+    """Rename a ComboList word permanently (remove old, add new)."""
+    lex = _resolve_lexicon(db, lexicon_ref)
+    if lex["slug"] != "combolist" and lex["display_name"] != "ComboList":
+        raise HTTPException(400, "Only ComboList entries can be edited from the UI")
+    try:
+        result = rename_lexicon_entry(
+            db, lex["id"], body.old_form, body.new_form, score=body.score
+        )
     except ValueError as exc:
         raise HTTPException(400, str(exc)) from exc
     db.commit()

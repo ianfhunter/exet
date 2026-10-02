@@ -355,3 +355,66 @@ def add_lexicon_entry(
         "combolist_line_added": txt_added,
         "entry_count": int(count_row["entry_count"]) if count_row else None,
     }
+
+
+def rename_lexicon_entry(
+    db: sqlite3.Connection,
+    lexicon_id: str,
+    old_form: str,
+    new_form: str,
+    score: float | None = None,
+) -> dict:
+    """
+    Replace old_form with new_form in ComboList.
+
+    Preserves score from the old entry when score is omitted. Caller must commit.
+    """
+    old_key = normalize_form(old_form)
+    new_surface = clean_surface(new_form)
+    new_key = normalize_form(new_surface)
+    if not old_key:
+        raise ValueError("empty old form")
+    if not new_key:
+        raise ValueError("empty new form")
+
+    if old_key == new_key:
+        # Same letters: still allow surface-form / score refresh via add path.
+        old_rows = db.execute(
+            "SELECT score FROM lexicon_entries "
+            "WHERE lexicon_id = ? AND normalized = ?",
+            (lexicon_id, old_key),
+        ).fetchall()
+        use_score = float(score) if score is not None else (
+            float(old_rows[0]["score"]) if old_rows else DEFAULT_ADD_SCORE
+        )
+        # Delete then re-add so surface form and patterns stay consistent.
+        deleted = delete_lexicon_entry(db, lexicon_id, old_form)
+        added = add_lexicon_entry(db, lexicon_id, new_surface, score=use_score)
+        return {
+            "renamed": True,
+            "same_normalized": True,
+            "old_form": old_form,
+            "old_normalized": old_key,
+            "deleted": deleted,
+            "added": added,
+        }
+
+    old_rows = db.execute(
+        "SELECT score FROM lexicon_entries "
+        "WHERE lexicon_id = ? AND normalized = ?",
+        (lexicon_id, old_key),
+    ).fetchall()
+    use_score = float(score) if score is not None else (
+        float(old_rows[0]["score"]) if old_rows else DEFAULT_ADD_SCORE
+    )
+
+    deleted = delete_lexicon_entry(db, lexicon_id, old_form)
+    added = add_lexicon_entry(db, lexicon_id, new_surface, score=use_score)
+    return {
+        "renamed": True,
+        "same_normalized": False,
+        "old_form": old_form,
+        "old_normalized": old_key,
+        "deleted": deleted,
+        "added": added,
+    }
