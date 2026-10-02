@@ -25,6 +25,7 @@ from backend.lexicon_lookup import (
     score_quantiles_key,
 )
 from backend.lexicon_mutate import delete_lexicon_entry
+from backend.backup_store import KEEP_BACKUPS, list_backups, save_backup
 from backend.superset_anagrams import get_superset_anagrams
 from backend.multiword_anagrams import get_multiword_anagrams
 from backend.lexicon_ext import (
@@ -441,6 +442,28 @@ def puzzles_save(body: PuzzleSaveBody):
         return puzzle_git.save_file(body.kind, body.name, body.content_base64)
     except PuzzleGitError as exc:
         raise _puzzle_git_error(exc) from exc
+
+
+class BackupSaveBody(BaseModel):
+    content: str = Field(..., description="Full Exet localStorage backup JSON text")
+    name: str | None = Field(
+        None, description="Optional exet-backup-*.json filename"
+    )
+
+
+@app.get("/api/backups")
+def backups_list():
+    return {"ok": True, "keep": KEEP_BACKUPS, "backups": list_backups()}
+
+
+@app.post("/api/backups/save")
+def backups_save(body: BackupSaveBody):
+    try:
+        return save_backup(body.content, name=body.name, keep=KEEP_BACKUPS)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    except OSError as exc:
+        raise HTTPException(500, f"Could not write backup: {exc}") from exc
 
 
 # Static assets (exet.js, wordlists/, lists/, …). Registered last; /api routes win.

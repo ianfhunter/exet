@@ -700,7 +700,7 @@ ExetRevManager.prototype.throttledSaveRev = function(revType, details="") {
   }, this.saveLagMS);
 }
 
-ExetRevManager.prototype.saveAllRevisions = function() {
+ExetRevManager.prototype.collectAllRevisions = function() {
   const storage = {};
   for (let idx = 0; idx < window.localStorage.length; idx++) {
     const id = window.localStorage.key(idx);
@@ -721,23 +721,95 @@ ExetRevManager.prototype.saveAllRevisions = function() {
     }
     storage[id] = storedRevs;
     this.savePrefUnpref(id, storedRevs.revs, true);
-    for (isPref of [true, false]) {
+    for (const isPref of [true, false]) {
       const key = this.keyPrefUnpref(id, isPref);
       const data = window.localStorage.getItem(key);
       if (data) {
-        storage[key] = JSON.parse(data);
+        try {
+          storage[key] = JSON.parse(data);
+        } catch (err) {
+          console.log('Unparseable pref/unpref for key [' + key + ']');
+        }
       }
     }
   }
-  const json = JSON.stringify(storage, null, 2);
-  const filename = `exet-backup-${(new Date()).toISOString()}.json`;
-  Exolve.prototype.fileDownload(json, "text/json", filename);
+  return storage;
+}
 
-  exetState.lastBackup = Date.now();
-  exetRevManager.saveLocal(exetRevManager.SPECIAL_KEY,
-                           JSON.stringify(exetState));
-  exet.checkStorage();
-  exetModals.hide();
+ExetRevManager.prototype.backupDataServerUrl = function() {
+  if (typeof exetConfig !== 'undefined' && exetConfig.dataServerUrl) {
+    return String(exetConfig.dataServerUrl).replace(/\/$/, '');
+  }
+  return '';
+}
+
+/**
+ * @param {Object=} options
+ * @param {boolean=} options.toServer  Upload JSON to /api/backups/save (default true)
+ * @param {boolean=} options.download  Also trigger a browser download (default false)
+ * @param {boolean=} options.silent    Suppress modal hide / alerts (default false)
+ * @return {Promise}
+ */
+ExetRevManager.prototype.saveAllRevisions = function(options) {
+  options = options || {};
+  const toServer = options.toServer !== false;
+  const download = !!options.download;
+  const silent = !!options.silent;
+
+  const storage = this.collectAllRevisions();
+  const json = JSON.stringify(storage, null, 2);
+  const filename = 'exet-backup-' + (new Date()).toISOString().replace(/:/g, '-') + '.json';
+
+  if (download) {
+    Exolve.prototype.fileDownload(json, 'text/json', filename);
+  }
+
+  const markBackedUp = (fromServer) => {
+    exetState.lastBackup = Date.now();
+    if (fromServer) {
+      exetState.lastServerBackup = Date.now();
+    }
+    this.saveLocal(this.SPECIAL_KEY, JSON.stringify(exetState));
+    if (exet && exet.checkStorage) {
+      exet.checkStorage({skipAutofree: true});
+    }
+    if (!silent && typeof exetModals !== 'undefined') {
+      exetModals.hide();
+    }
+  };
+
+  if (!toServer) {
+    markBackedUp(false);
+    return Promise.resolve({ok: true, downloaded: download});
+  }
+
+  const url = this.backupDataServerUrl() + '/api/backups/save';
+  return fetch(url, {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({content: json, name: filename}),
+  }).then((resp) => resp.json().then((data) => ({ok: resp.ok, status: resp.status, data})))
+    .then(({ok, status, data}) => {
+      if (!ok) {
+        const detail = (data && (data.detail || data.message)) || ('HTTP ' + status);
+        throw new Error(typeof detail === 'string' ? detail : JSON.stringify(detail));
+      }
+      markBackedUp(true);
+      return data;
+    })
+    .catch((err) => {
+      console.warn('Exet backup upload failed:', err);
+      if (!silent) {
+        alert('Could not save backup to server: ' +
+              (err && err.message ? err.message : err));
+      }
+      // Still stamp lastBackup when a local download was taken.
+      if (download) {
+        markBackedUp(false);
+      }
+      throw err;
+    });
 }
 
 ExetRevManager.prototype.mergeRevisionsFile = function() {
@@ -879,69 +951,86 @@ ExetRevManager.prototype.mergeRevisionsFile = function() {
   fr.readAsText(f);
 }
 
-ExetRevManager.prototype.autofree = function() {
-  this.saveAllRevisions();
+ExetRevManager.prototype.autofree = function(options) {
+  options = options || {};
+  const silent = !!options.silent;
 
-  const SAVE_LAST_THESE_MANY = 25;
-  const SAVE_LAST_THESE_MANY_HOURS = 1;
+  const runPurge = () => {
+    const SAVE_LAST_THESE_MANY = 25;
+    const SAVE_LAST_THESE_MANY_HOURS = 1;
 
-  const tsCutoffMillis =
-    Date.now() - (SAVE_LAST_THESE_MANY_HOURS * 60 * 60 * 1000);
+    const tsCutoffMillis =
+      Date.now() - (SAVE_LAST_THESE_MANY_HOURS * 60 * 60 * 1000);
 
-  let bytesUsed = 0;
-  let itemsPurged = 0;
-  for (let idx = 0; idx < window.localStorage.length; idx++) {
-    const id = window.localStorage.key(idx);
-    const storedJson = window.localStorage.getItem(id);
-    bytesUsed += storedJson.length;
-    if (this.skippableKey(id)) {
-      continue;
-    }
-    let stored = '';
-    try {
-      stored = JSON.parse(storedJson);
-    } catch (err) {
-      console.log('Unparseable stored item for id [' + id + ']:' + storedJson);
-      continue;
-    }
-    if (!stored || !stored["id"] || !stored["revs"] || !stored["maxRevNum"]) {
-      console.log('Weird stored item for id [' + id + ']:' + storedJson);
-      continue;
-    }
-    const revs = stored.revs;
-    if (revs.length <= 0) {
-      console.log('No revisions in crossword with id ' + id + ': should be deleted');
-      continue;
-    }
-    const limit = revs.length - SAVE_LAST_THESE_MANY;
-    const revsToKeep = [];
-    for (let r = 0; r < revs.length; r++) {
-      const rev = revs[r];
-      revsToKeep.push(rev);
-      if ((r < limit) &&
-          ((r % 2) == 1) &&
-          (rev.timestamp < tsCutoffMillis)) {
-        revsToKeep.pop();
-        itemsPurged++;
+    let itemsPurged = 0;
+    for (let idx = 0; idx < window.localStorage.length; idx++) {
+      const id = window.localStorage.key(idx);
+      const storedJson = window.localStorage.getItem(id);
+      if (this.skippableKey(id)) {
+        continue;
+      }
+      let stored = '';
+      try {
+        stored = JSON.parse(storedJson);
+      } catch (err) {
+        console.log('Unparseable stored item for id [' + id + ']:' + storedJson);
+        continue;
+      }
+      if (!stored || !stored["id"] || !stored["revs"] || !stored["maxRevNum"]) {
+        console.log('Weird stored item for id [' + id + ']:' + storedJson);
+        continue;
+      }
+      const revs = stored.revs;
+      if (revs.length <= 0) {
+        console.log('No revisions in crossword with id ' + id + ': should be deleted');
+        continue;
+      }
+      const limit = revs.length - SAVE_LAST_THESE_MANY;
+      const revsToKeep = [];
+      for (let r = 0; r < revs.length; r++) {
+        const rev = revs[r];
+        revsToKeep.push(rev);
+        if ((r < limit) &&
+            ((r % 2) == 1) &&
+            (rev.timestamp < tsCutoffMillis)) {
+          revsToKeep.pop();
+          itemsPurged++;
+        }
+      }
+      if (revsToKeep.length < revs.length) {
+        stored.revs = revsToKeep;
+        this.saveLocal(id, JSON.stringify(stored));
+        this.savePrefUnpref(id, stored.revs, true);
       }
     }
-    if (revsToKeep.length < revs.length) {
-      stored.revs = revsToKeep;
-      this.saveLocal(id, JSON.stringify(stored));
-      this.savePrefUnpref(id, stored.revs, true);
+    /**
+     * Call checkStorage() to update displayed numbers/warnings, and to
+     * get the return value from checkLocalStorage().
+     */
+    const ampleLeft = exet.checkStorage({skipAutofree: true});
+    if (itemsPurged == 0 && !ampleLeft) {
+      const msg = 'Auto-Free could not find any old revisions to purge, and you ' +
+            'are running very low on available storage. This probably means ' +
+            'that you have excessively many active crosswords. Use the ' +
+            '"Manage local storage" menu option to manually delete some old ' +
+            'crosswords, perhaps.';
+      if (silent) {
+        console.warn(msg);
+      } else {
+        alert(msg);
+      }
     }
-  }
-  /**
-   * Call checkStorage() to update displayed numbers/warnings, and to
-   * get the return value from checkLocalStorage().
-   */
-  const ampleLeft = exet.checkStorage();
-  if (itemsPurged == 0 && !ampleLeft) {
-    alert('Auto-Free could not find any old revisions to purge, and you ' +
-          'are running very low on available storage. This probably means ' +
-          'that you have excessively many active crosswords. Use the ' +
-          '"Manage local storage" menu option to manually delete some old ' +
-          'crosswords, perhaps.');
-  }
+    return {itemsPurged: itemsPurged, ampleLeft: ampleLeft};
+  };
+
+  return this.saveAllRevisions({
+    toServer: true,
+    download: false,
+    silent: silent,
+  }).then(runPurge, (err) => {
+    // Still try to free space even if the server backup failed.
+    console.warn('Auto-Free backup failed; purging anyway:', err);
+    return runPurge();
+  });
 }
 

@@ -1737,9 +1737,9 @@ Exet.prototype.makeExetTab = function() {
         <div class="xet-dropbtn" id="xet-storage-heading">Storage</div>
         <div class="xet-dropdown-content" id="xet-storage">
           <div class="xet-dropdown-item" onclick="exetRevManager.autofree()"
-              title="Back up all current crosswords to exet-backup-[timestamp].json and then purge every other old revision (keeping latest 25 and latest hour's revisions untouched). A convenient combination of the next two menu choices."
+              title="Back up all current crosswords to the server (keeps the latest 5 backup JSON files), then purge every other old revision (keeping latest 25 and latest hour's revisions untouched). Also runs automatically when storage is low or the last backup is stale."
               id="xet-auto-free-space">
-            <span class="xet-green">Auto-Free!</span>: Save back-up file, then purge some old revisions
+            <span class="xet-green">Auto-Free!</span>: Save server back-up, then purge some old revisions
           </div>
           <div class="xet-dropdown-item" id="xet-manage-storage">
             Manage local storage (Used =
@@ -1749,7 +1749,8 @@ Exet.prototype.makeExetTab = function() {
           </div>
           <div class="xet-dropdown-item"
              onclick="exetRevManager.saveAllRevisions()">
-            Back up all current crosswords to exet-backup-<i>timestamp</i>.json
+            Back up all current crosswords to the server
+            (keeps latest 5 JSON files)
             <br></br>
             <span id="xet-last-backup">Last backed up at:
               <span id="xet-last-backup-time"></span></span>
@@ -10389,25 +10390,68 @@ Exet.prototype.checkBackup = function() {
 
 /**
  * Returns the status from checkLocalStorage()
+ * @param {Object=} options
+ * @param {boolean=} options.skipAutofree  Do not auto-trigger Auto-Free
  */
-Exet.prototype.checkStorage = function() {
+Exet.prototype.checkStorage = function(options) {
+  options = options || {};
   const warnings = [];
   const backupOK = this.checkBackup();
   if (!backupOK) {
-    warnings.push('Last back-up is quite stale, please save a new one.');
+    warnings.push('Last back-up is quite stale; Auto-Free will save a new one.');
   }
   const lsOK = this.checkLocalStorage();
   if (!lsOK) {
-    warnings.push('Local Storage is running low, please delete some older puzzle revisions.');
+    warnings.push('Local Storage is running low; Auto-Free will purge old revisions.');
   }
   if (warnings.length > 0) {
     this.storageHeading.style.color = 'red';
     this.storageHeading.title = warnings.join(' ');
   } else {
     this.storageHeading.style.color = 'inherit';
-    this.storageHeading.title = 'Manage local storage, back up crosswords to file.';
+    this.storageHeading.title = 'Manage local storage, back up crosswords to the server.';
+  }
+  if (!options.skipAutofree &&
+      (!backupOK || !lsOK || !exetState.lastServerBackup)) {
+    const reason = !exetState.lastServerBackup ? 'initial-server-backup' :
+        (!lsOK ? 'low-storage' : 'stale-backup');
+    this.maybeAutoFree(reason);
   }
   return lsOK;
+}
+
+/**
+ * Run Auto-Free in the background when storage is low or backups are stale.
+ * Cooldown avoids repeated uploads on every 10-minute check.
+ */
+Exet.prototype.maybeAutoFree = function(reason) {
+  if (this._autofreeInFlight) {
+    return;
+  }
+  if (window.location.protocol === 'file:') {
+    return;
+  }
+  const now = Date.now();
+  const cooldownMS = 60 * 60 * 1000;  // once per hour
+  if (this._lastAutofreeAt && (now - this._lastAutofreeAt) < cooldownMS) {
+    return;
+  }
+  if (!exetRevManager || typeof exetRevManager.autofree !== 'function') {
+    return;
+  }
+  this._autofreeInFlight = true;
+  this._lastAutofreeAt = now;
+  console.log('Auto-Free starting (' + reason + ')');
+  Promise.resolve(exetRevManager.autofree({silent: true}))
+      .then((result) => {
+        console.log('Auto-Free finished', result || '');
+      })
+      .catch((err) => {
+        console.warn('Auto-Free failed:', err);
+      })
+      .finally(() => {
+        this._autofreeInFlight = false;
+      });
 }
 
 Exet.prototype.periodicChecks = function() {
