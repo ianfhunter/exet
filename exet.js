@@ -7321,16 +7321,19 @@ Exet.prototype.makeClueEditable = function() {
       `${exet.puz.prefix}-curr-clue-text`);
   const spellAttr = exetState.spellcheck ? 'true' : 'false';
   currClueText.innerHTML = `
-    <div class="xet-clue-editor">
-      <div class="xet-clue-editor-header" id="xet-clue-editor-header">
-        <span class="xet-action">Edit clue:</span>
-        <span id="xet-clue-stat" class="xet-clue-stat"></span>
-        <span id="xet-clue-enum" class="xet-clue-enum"
-          title="Enumeration comes from the fill word (spaces and hyphens in the wordlist). Edit the wordlist entry — or pick a different fill — to change it."></span>
+    <div class="xet-clue-anno-row">
+      <div class="xet-clue-editor">
+        <div class="xet-clue-editor-header" id="xet-clue-editor-header">
+          <span class="xet-action">Edit clue:</span>
+          <span id="xet-clue-stat" class="xet-clue-stat"></span>
+          <span id="xet-clue-enum" class="xet-clue-enum"
+            title="Enumeration comes from the fill word (spaces and hyphens in the wordlist). Edit the wordlist entry — or pick a different fill — to change it."></span>
+        </div>
+        <textarea id="xet-clue" class="xet-editable xet-clue-input" rows="2"
+          spellcheck="${spellAttr}"
+          placeholder="Clue text"></textarea>
       </div>
-      <textarea id="xet-clue" class="xet-editable xet-clue-input" rows="2"
-        spellcheck="${spellAttr}"
-        placeholder="Clue text"></textarea>
+      <div class="xet-clue-editor xet-anno-editor" id="xet-anno-editor"></div>
     </div>`;
   const editorHeader = document.getElementById('xet-clue-editor-header');
   const ccLabel = document.getElementById(`${this.puz.prefix}-curr-clue-label`);
@@ -7361,8 +7364,7 @@ Exet.prototype.makeClueEditable = function() {
     exet.handleClueChange();
   });
 
-  const annoEditor = document.createElement('div');
-  annoEditor.className = 'xet-clue-editor xet-anno-editor';
+  const annoEditor = document.getElementById('xet-anno-editor');
 
   const annoHeader = document.createElement('div');
   annoHeader.className = 'xet-clue-editor-header';
@@ -7397,7 +7399,6 @@ Exet.prototype.makeClueEditable = function() {
 
   annoEditor.appendChild(annoHeader);
   annoEditor.appendChild(xetAnno);
-  this.xetCurrClue.appendChild(annoEditor);
   this.annoLocked = !!theClue.annoLocked;
   this.setAnnoLock(this.annoLocked, false);
   xetAnno.addEventListener('input', handler);

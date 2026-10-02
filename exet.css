@@ -365,7 +365,21 @@ body {
   flex-direction: column;
   gap: 4px;
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  min-width: 0;
+}
+.xet-clue-anno-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+}
+.xet-clue-anno-row > .xet-clue-editor {
+  flex: 1.35 1 0;
+}
+.xet-clue-anno-row > .xet-anno-editor {
+  flex: 1 1 0;
 }
 .xet-clue-editor-header {
   display: flex;
@@ -391,7 +405,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   resize: vertical;
-  min-height: 2.8em;
+  min-height: 2.6em;
   font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 14px;
   line-height: 1.5;
@@ -466,9 +480,9 @@ body {
   overflow: visible;
 }
 .xet-curr-clue {
-  min-height: 80px;
-  overflow-y: auto;
-  padding-top: 8px;
+  min-height: 0;
+  overflow: visible;
+  padding-top: 4px;
   width: 100%;
   box-sizing: border-box;
 }
