@@ -1088,8 +1088,129 @@ function exetLexiconInit() {
     return this.dedupe(phones);
   }
 
+  exetLexicon.lookupByPhone = function(phone) {
+    if (!phone || !phone.length || !this.phindex || !this.phindex.length) {
+      return [];
+    }
+    const phone_str = phone.join('');
+    const NUM_SHARDS = this.phindex.length;
+    let shard = this.javaHash(phone_str) % NUM_SHARDS;
+    if (shard < 0) shard += NUM_SHARDS;
+    const out = [];
+    for (const q of this.phindex[shard]) {
+      if (!this.containsPhone(q, phone_str)) continue;
+      out.push(q);
+    }
+    return out;
+  }
+
+  /**
+   * Leading consonant-cluster length (0 if the phone sequence is
+   * vowel-initial).
+   */
+  exetLexicon.onsetLength = function(phone) {
+    if (!phone || !phone.length) return 0;
+    let i = 0;
+    while (i < phone.length && !this.vowelPhonemes[phone[i]]) {
+      i++;
+    }
+    return i;
+  }
+
+  /**
+   * Spoonerisms that swap full onsets between words of a multi-word
+   * phrase. Keeps word boundaries intact (unlike concatenating phones),
+   * so e.g. "dear old queen" → "queer old dean".
+   */
+  exetLexicon.getSpoonerismsWordAware = function(phrase) {
+    const parts = phrase.trim().split(/[\s-]+/).filter(Boolean);
+    if (parts.length < 2) {
+      return [];
+    }
+    const partPhones = [];
+    for (const w of parts) {
+      const phs = this.getPhones(w);
+      if (!phs.length) {
+        return [];
+      }
+      // Limit pronunciation variants per word for speed.
+      partPhones.push(phs.slice(0, 3));
+    }
+    const n = parts.length;
+    const nphrase = this.letterString(phrase);
+    const results = [];
+    const seen = {};
+
+    const maxVariant = Math.max(...partPhones.map(p => p.length));
+    for (let vi = 0; vi < maxVariant; vi++) {
+      const phones = [];
+      let ok = true;
+      for (let p = 0; p < n; p++) {
+        if (vi >= partPhones[p].length) {
+          ok = false;
+          break;
+        }
+        phones.push(partPhones[p][vi]);
+      }
+      if (!ok) continue;
+
+      for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+          const pi = phones[i];
+          const pj = phones[j];
+          const oi = this.onsetLength(pi);
+          const oj = this.onsetLength(pj);
+          if (oi == 0 && oj == 0) continue;
+          const onsetI = pi.slice(0, oi).join(' ');
+          const onsetJ = pj.slice(0, oj).join(' ');
+          if (onsetI == onsetJ) continue;
+
+          const newI = pj.slice(0, oj).concat(pi.slice(oi));
+          const newJ = pi.slice(0, oi).concat(pj.slice(oj));
+          if (!newI.length || !newJ.length) continue;
+
+          const listI = this.lookupByPhone(newI);
+          const listJ = this.lookupByPhone(newJ);
+          if (!listI.length || !listJ.length) continue;
+
+          for (const qi of listI) {
+            for (const qj of listJ) {
+              const wi = this.lexicon[qi];
+              const wj = this.lexicon[qj];
+              if (this.letterString(wi) == this.letterString(parts[i]) &&
+                  this.letterString(wj) == this.letterString(parts[j])) {
+                continue;
+              }
+              const outWords = parts.slice();
+              outWords[i] = wi;
+              outWords[j] = wj;
+              const outPhrase = outWords.join(' ');
+              const key = this.letterString(outPhrase);
+              if (!key || key == nphrase || seen[key]) continue;
+              seen[key] = true;
+              results.push({
+                pair: [wi, wj],
+                phrase: outPhrase,
+                // Prefer common words; prefer swapping the first word;
+                // prefer fuller onsets.
+                score: qi + qj + i * 50 - (oi + oj) * 3,
+                kind: 'word',
+              });
+            }
+          }
+        }
+      }
+    }
+    return results;
+  }
+
   exetLexicon.getSpoonerismsInner = function(phrase, phones) {
-    const spoons = [];
+    const scored = this.getSpoonerismsWordAware(phrase);
+    const seen = {};
+    for (const r of scored) {
+      seen[this.letterString(r.phrase)] = true;
+      seen[this.letterString(r.pair[0] + ' ' + r.pair[1])] = true;
+    }
     const nphrase = this.letterString(phrase);
     const NUM_SHARDS = this.phindex.length;
 
@@ -1117,16 +1238,20 @@ function exetLexiconInit() {
         continue;
       }
       if (nonVowelSpans[0][0] > 0) {
-        // We do not deal with phrases that start with vowels.
+        // Span-based path still skips vowel-initial fodder; the
+        // word-aware path above handles vowel-initial *later* words.
         continue;
       }
       for (let last1 = nonVowelSpans[0][0]; last1 < nonVowelSpans[0][1]; last1++) {
+        const full1 = (last1 == nonVowelSpans[0][1] - 1);
         for (let second_span = 1; second_span < nonVowelSpans.length;
              second_span++) {
           for (let last2 = nonVowelSpans[second_span][0];
                last2 < nonVowelSpans[second_span][1]; last2++) {
             for (let start2 = nonVowelSpans[second_span][0];
                  start2 <= last2; start2++) {
+              const full2 = (start2 == nonVowelSpans[second_span][0] &&
+                             last2 == nonVowelSpans[second_span][1] - 1);
               const phone1 = phone.slice(start2, last2 + 1).concat(
                   phone.slice(last1 + 1, start2));
               if (phone1.length == 0) continue;
@@ -1134,31 +1259,33 @@ function exetLexiconInit() {
                   phone.slice(last2 + 1));
               if (phone2.length == 0) continue;
 
-              const phone1_str = phone1.join('');
-              let shard = this.javaHash(phone1_str) % NUM_SHARDS;
-              if (shard < 0) shard += NUM_SHARDS;
-              const q1list = [];
-              for (let q1 of this.phindex[shard]) {
-                if (!this.containsPhone(q1, phone1_str)) continue;
-                q1list.push(this.lexicon[q1]);
-              }
+              const q1idxs = this.lookupByPhone(phone1);
+              if (q1idxs.length == 0) continue;
+              const q2idxs = this.lookupByPhone(phone2);
+              if (q2idxs.length == 0) continue;
 
-              if (q1list.length == 0) continue;
+              // Prefer full onset-cluster swaps over partial ones.
+              const partialPenalty = (full1 && full2) ? 0 : 500000;
+              // Prefer the earliest second span (usually the next word).
+              const spanPenalty = (second_span - 1) * 2000;
 
-              const phone2_str = phone2.join('');
-              shard = this.javaHash(phone2_str) % NUM_SHARDS;
-              if (shard < 0) shard += NUM_SHARDS;
-              const q2list = [];
-              for (let q2 of this.phindex[shard]) {
-                if (!this.containsPhone(q2, phone2_str)) continue;
-                q2list.push(this.lexicon[q2]);
-              }
-
-              if (q2list.length == 0) continue;
-
-              for (let q1 of q1list) {
-                for (let q2 of q2list) {
-                  spoons.push([q1, q2]);
+              for (const q1 of q1idxs) {
+                for (const q2 of q2idxs) {
+                  const w1 = this.lexicon[q1];
+                  const w2 = this.lexicon[q2];
+                  const phraseKey = this.letterString(w1 + ' ' + w2);
+                  const concatKey = this.letterString(w1 + w2);
+                  if (!phraseKey || phraseKey == nphrase ||
+                      seen[phraseKey] || seen[concatKey]) {
+                    continue;
+                  }
+                  seen[phraseKey] = true;
+                  scored.push({
+                    pair: [w1, w2],
+                    phrase: w1 + ' ' + w2,
+                    score: partialPenalty + spanPenalty + q1 + q2,
+                    kind: 'span',
+                  });
                 }
               }
             }
@@ -1166,7 +1293,21 @@ function exetLexiconInit() {
         }
       }
     }
-    return this.dedupe(spoons);
+
+    scored.sort((a, b) => a.score - b.score);
+    // Cap noisy partial-span results once we already have solid hits.
+    const MAX = 80;
+    const out = [];
+    let partialCount = 0;
+    for (const r of scored) {
+      if (r.kind == 'span' && r.score >= 500000) {
+        if (partialCount >= 20 && out.length >= 10) continue;
+        partialCount++;
+      }
+      out.push(r);
+      if (out.length >= MAX) break;
+    }
+    return out;
   }
 
   exetLexicon.getSpoonerisms = function(phrase) {

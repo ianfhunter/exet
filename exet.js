@@ -4647,14 +4647,29 @@ Exet.prototype.updateSounds = function(fodder) {
   const spoonerisms = exetLexicon.getSpoonerismsInner(fodder, phones);
   hpSet[this.makeCharadeParam(fodder)] = true;
   for (let sp of spoonerisms) {
-    if (hpSet[this.makeCharadeParam(sp[0] + sp[1])]) {
+    // New scored objects {pair, phrase, ...}; legacy [w1, w2] also OK.
+    const pair = Array.isArray(sp) ? sp : (sp.pair || []);
+    const phrase = Array.isArray(sp) ? pair.join(' ') : (sp.phrase || pair.join(' '));
+    if (!pair.length) continue;
+    if (hpSet[this.makeCharadeParam(phrase)] ||
+        hpSet[this.makeCharadeParam(pair[0] + pair[1])]) {
       // Not really a Spoonerism.
       continue;
     }
+    const isTwoWord = pair.length == 2 &&
+        this.makeCharadeParam(phrase) ==
+            this.makeCharadeParam(pair[0] + ' ' + pair[1]) &&
+        phrase.trim().split(/\s+/).length == 2;
+    const label = isTwoWord ?
+        `${pair[0]} <span class="xet-blue">&lrhar;</span> ${pair[1]}` :
+        phrase;
+    const title = isTwoWord ?
+        `Spoonerism of ${pair[0]} + ${pair[1]}` :
+        `Spoonerism: ${phrase}` +
+            (pair.length == 2 ? ` (${pair[0]} ↔ ${pair[1]})` : '');
     html = html + `
-      <tr title="Spoonerism of ${sp[0]} + ${sp[1]}">
-        <td>&#x1F50A; ${sp[0]} <span class="xet-blue">&lrhar;</span>
-            ${sp[1]}</td></tr>`
+      <tr title="${title}">
+        <td>&#x1F50A; ${label}</td></tr>`
   }
   html = html + '</table>'
   this.sounds.innerHTML = html;
