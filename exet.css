@@ -360,6 +360,44 @@ body {
   border: 1px solid var(--xet-accent);
   background: var(--xet-accent-muted);
 }
+.xet-clue-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.xet-clue-editor-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.xet-clue-input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 2.8em;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid var(--xet-success);
+  background: var(--xet-surface);
+  color: inherit;
+  padding: 6px 8px;
+  outline: none;
+}
+.xet-clue-input:focus {
+  border-color: var(--xet-accent);
+}
+.xet-clue-input[readonly],
+.xet-anno-locked {
+  outline: none;
+  border-color: var(--xet-border);
+  opacity: 0.88;
+  cursor: default;
+}
 .xet-anno {
   font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 14px;
@@ -380,7 +418,6 @@ body {
   line-height: 1;
   font-size: 18px;
   border-radius: 3px;
-  margin-top: 4px;
 }
 .xet-anno-lock:hover {
   border-color: var(--xet-accent);
@@ -444,7 +481,18 @@ body {
 }
 .xet-curr-clue .xlv-curr-clue-label {
   display: inline-block;
-  margin: 0 3px 0 0;
+  margin: 0;
+}
+.xet-curr-clue .xlv-clues-table {
+  width: 100%;
+}
+.xet-curr-clue .xlv-clues-table > tbody > tr > td:first-child:empty {
+  display: none;
+  padding: 0;
+  border: none;
+}
+.xet-curr-clue .xlv-clues-table > tbody > tr > td:last-child {
+  width: 100%;
 }
 #xet-nextprev-span {
   position: absolute;
@@ -1083,6 +1131,10 @@ body {
 }
 .xet-editable[contenteditable] {
   outline: 1px solid var(--xet-success);
+}
+textarea.xet-editable {
+  outline: none;
+  line-height: 1.5;
 }
 .xet-action {
   color: var(--xet-accent);

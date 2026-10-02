@@ -2329,10 +2329,32 @@ Exet.prototype.makeExetTab = function() {
   }
 }
 
+Exet.prototype.isTextControl = function(elt) {
+  if (!elt) return false;
+  const tag = (elt.tagName || '').toUpperCase();
+  return tag == 'TEXTAREA' || tag == 'INPUT';
+}
+
+Exet.prototype.getEditableText = function(elt) {
+  if (!elt) return '';
+  if (this.isTextControl(elt)) return elt.value || '';
+  return elt.innerText || '';
+}
+
+Exet.prototype.setEditableText = function(elt, text) {
+  if (!elt) return;
+  if (this.isTextControl(elt)) {
+    elt.value = text;
+  } else {
+    elt.innerText = text;
+  }
+}
+
 Exet.prototype.stripInputLF = function(inp) {
-  if (!inp) return
-  if (inp.innerText.indexOf('\n') < 0) return
-  inp.innerText = inp.innerText.replace(/\n/g, ' ')
+  if (!inp) return;
+  const text = this.getEditableText(inp);
+  if (text.indexOf('\n') < 0 && text.indexOf('\r') < 0) return;
+  this.setEditableText(inp, text.replace(/[\r\n]+/g, ' '));
 }
 
 Exet.prototype.addStat = function(dict, stat, details) {
@@ -6437,7 +6459,11 @@ Exet.prototype.setAnnoLock = function(locked, wiggle) {
   if (!xetAnno || !lockBtn) {
     return;
   }
-  xetAnno.contentEditable = !this.annoLocked;
+  if (this.isTextControl(xetAnno)) {
+    xetAnno.readOnly = this.annoLocked;
+  } else {
+    xetAnno.contentEditable = !this.annoLocked;
+  }
   xetAnno.classList.toggle('xet-anno-locked', this.annoLocked);
   lockBtn.classList.toggle('xet-anno-lock-locked', this.annoLocked);
   lockBtn.title = this.annoLocked ?
@@ -6512,7 +6538,7 @@ Exet.prototype.updateFormat = function(inClue, text, modText,
   const elt = this.savedCursorElt;
   if (!elt) return;
   elt.focus();
-  elt.innerText = modText;
+  this.setEditableText(elt, modText);
   this.adjustSavedCursor(deltaStart, deltaEnd);
   this.restoreCursor();
   this.handleClueChange();
@@ -6737,7 +6763,7 @@ Exet.prototype.maybeShowFormat = function() {
     return;
   }
   const inClue = (this.savedCursorId == 'xet-clue')
-  let text = this.savedCursorElt.innerText;
+  let text = this.getEditableText(this.savedCursorElt);
   let start = this.savedCursorStart;
   let end = this.savedCursorEnd;
   let reversed = false;
@@ -7194,7 +7220,7 @@ Exet.prototype.makeClueEditable = function() {
             class="xlv-small-button xlv-nextprev">&#9776;</button>
         <div id="xet-clue-menu" class="xet-clue-menu">
           <div class="xet-clue-menu-item" id="xet-clue-menu-linking"
-              title="Click to create or break a linked group of clues. Also accessible by clicking the clue number to the left of 'Edit clue: ...'.">
+              title="Click to create or break a linked group of clues. Also accessible by clicking the clue number above the clue textbox.">
           Link/Unlink
           </div>
           <div class="xet-clue-menu-item" id="xet-clue-menu-regexp"
@@ -7256,16 +7282,32 @@ Exet.prototype.makeClueEditable = function() {
 
   const currClueText = document.getElementById(
       `${exet.puz.prefix}-curr-clue-text`);
-  currClueText.innerHTML = `<span class="xet-action">Edit clue: </span><span
-    id="xet-clue-stat" class="xet-clue-stat"></span><span
-    contenteditable="true" class="xet-editable" id="xet-clue"></span>`;
+  const spellAttr = exetState.spellcheck ? 'true' : 'false';
+  currClueText.innerHTML = `
+    <div class="xet-clue-editor">
+      <div class="xet-clue-editor-header" id="xet-clue-editor-header">
+        <span class="xet-action">Edit clue:</span>
+        <span id="xet-clue-stat" class="xet-clue-stat"></span>
+      </div>
+      <textarea id="xet-clue" class="xet-editable xet-clue-input" rows="2"
+        spellcheck="${spellAttr}"
+        placeholder="Clue text"></textarea>
+    </div>`;
+  const editorHeader = document.getElementById('xet-clue-editor-header');
+  const ccLabel = document.getElementById(`${this.puz.prefix}-curr-clue-label`);
+  if (ccLabel && editorHeader) {
+    const labelParent = ccLabel.parentElement;
+    editorHeader.insertBefore(ccLabel, editorHeader.firstChild);
+    if (labelParent && labelParent.tagName == 'TD') {
+      labelParent.textContent = '';
+    }
+  }
   this.currClueIsDraft = this.isDraftClue(theClue.clue);
   // We make the raw clue text editable here, including any tags or
   // in-clue-anno markers (~{...}~).
   const xetClue = document.getElementById("xet-clue");
   xetClue.spellcheck = !!exetState.spellcheck;
-  xetClue.setAttribute('spellcheck', exetState.spellcheck ? 'true' : 'false');
-  xetClue.innerText = this.currClueIsDraft ?
+  xetClue.value = this.currClueIsDraft ?
     theClue.clue.substr(this.DRAFT.length).trim() : theClue.clue;
   const handler = this.throttledClueChange.bind(this);
   xetClue.addEventListener('input', handler);
@@ -7278,13 +7320,15 @@ Exet.prototype.makeClueEditable = function() {
     exet.handleClueChange();
   });
 
-  const spacer = document.createElement('span');
-  spacer.innerHTML = `<br><span class="xet-action">Edit
-      optional anno:&nbsp;</span>`;
-  this.xetCurrClue.appendChild(spacer);
+  const annoEditor = document.createElement('div');
+  annoEditor.className = 'xet-clue-editor xet-anno-editor';
 
-  const annoRow = document.createElement('span');
-  annoRow.className = 'xet-anno-row';
+  const annoHeader = document.createElement('div');
+  annoHeader.className = 'xet-clue-editor-header';
+
+  const annoLabel = document.createElement('span');
+  annoLabel.className = 'xet-action';
+  annoLabel.textContent = 'Edit optional anno:';
 
   const annoLock = document.createElement('button');
   annoLock.type = 'button';
@@ -7298,17 +7342,21 @@ Exet.prototype.makeClueEditable = function() {
     annoLock.classList.remove('xet-anno-lock-wiggle');
   });
 
-  const xetAnno = document.createElement('span');
-  xetAnno.className = 'xet-anno xet-editable';
+  annoHeader.appendChild(annoLabel);
+  annoHeader.appendChild(annoLock);
+
+  const xetAnno = document.createElement('textarea');
+  xetAnno.className = 'xet-anno xet-editable xet-clue-input';
   xetAnno.id = 'xet-anno';
-  xetAnno.contentEditable = true;
+  xetAnno.rows = 2;
   xetAnno.spellcheck = !!exetState.spellcheck;
   xetAnno.setAttribute('spellcheck', exetState.spellcheck ? 'true' : 'false');
-  xetAnno.innerText = theClue.anno;
+  xetAnno.placeholder = 'Optional annotation';
+  xetAnno.value = theClue.anno || '';
 
-  annoRow.appendChild(annoLock);
-  annoRow.appendChild(xetAnno);
-  this.xetCurrClue.appendChild(annoRow);
+  annoEditor.appendChild(annoHeader);
+  annoEditor.appendChild(xetAnno);
+  this.xetCurrClue.appendChild(annoEditor);
   this.annoLocked = !!theClue.annoLocked;
   this.setAnnoLock(this.annoLocked, false);
   xetAnno.addEventListener('input', handler);
@@ -7320,17 +7368,26 @@ Exet.prototype.makeClueEditable = function() {
     this.unlink.style.display = 'none';
   }
 
-  const ccLabel = document.getElementById(`${this.puz.prefix}-curr-clue-label`);
-  ccLabel.title = 'Click to add or break up linked clues';
+  if (ccLabel) {
+    ccLabel.title = 'Click to add or break up linked clues';
+  }
   const linkingShower = e => {
     exetModals.showModal(this.linking);
     e.stopPropagation();
   };
-  ccLabel.addEventListener('click', linkingShower);
+  if (ccLabel) {
+    ccLabel.addEventListener('click', linkingShower);
+  }
   clueMenuLinking.addEventListener('click', linkingShower);
 
   this.makeFormatPanel();
   const formatShortcut = (e) => {
+    if (e.key == 'Enter') {
+      // Soft-wrap only: Exolve clue/anno text is stored as a single line.
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
     if (!e.ctrlKey && !e.metaKey) return true;
     const tag = (e.key == 'd') ? 'def' : e.key.toLowerCase();
     if (tag != 'b' && tag != 'i' && tag != 'u' && tag != 's' && tag != 'def') {
@@ -7401,7 +7458,7 @@ Exet.prototype.handleClueChange = function() {
   const expEnumLen = this.puz.getAllCells(ci).length;
   console.assert(expEnumLen > 0, ci);
   this.stripInputLF(currClueText);
-  let clue = currClueText.innerText;
+  let clue = this.getEditableText(currClueText);
   const savedClue = clue;
   clue = clue.trim();
   const oldEnumParse = this.puz.parseEnum(theClue.clue);
@@ -7436,7 +7493,7 @@ Exet.prototype.handleClueChange = function() {
     if (delta < 0) {
       this.adjustSavedCursor(delta, delta);
     }
-    currClueText.innerText = clue;
+    this.setEditableText(currClueText, clue);
   }
   if (this.currClueIsDraft) {
     clue = this.DRAFT + ' ' + clue;
@@ -7452,7 +7509,7 @@ Exet.prototype.handleClueChange = function() {
   this.puz.parseInClueAnnos(theClue);
 
   this.stripInputLF(currClueAnno);
-  theClue.anno = currClueAnno.innerText;
+  theClue.anno = this.getEditableText(currClueAnno);
   if (theClue.annoSpan.lastElementChild) {
     theClue.annoSpan.lastElementChild.innerHTML = theClue.anno;
   }
@@ -8691,6 +8748,21 @@ Exet.prototype.saveCursor = function() {
   this.savedCursorId = '';
   this.savedCursorAtEnd = false;
   this.savedCursorElt = null;
+
+  const active = document.activeElement;
+  if (active && this.isTextControl(active) &&
+      (active.id == 'xet-clue' || active.id == 'xet-anno') &&
+      typeof active.selectionStart == 'number') {
+    this.savedCursorId = active.id;
+    this.savedCursorElt = active;
+    this.savedCursorStart = active.selectionStart;
+    this.savedCursorEnd = active.selectionEnd;
+    const len = (active.value || '').length;
+    this.savedCursorAtEnd =
+        this.savedCursorStart == len && this.savedCursorEnd == len;
+    return;
+  }
+
   let sel = window.getSelection();
   if (!sel || !sel.focusNode || !sel.rangeCount) {
     return;
@@ -8757,19 +8829,31 @@ Exet.prototype.getTextNodeAtPosition = function(elt, index) {
 Exet.prototype.restoreCursor = function() {
   if (this.savedCursorId) {
     const elt = document.getElementById(this.savedCursorId);
-    if (elt && elt.firstChild) {
+    if (elt) {
       try {
-        if (this.savedCursorAtEnd) {
-          this.savedCursorStart = this.savedCursorEnd = elt.innerText.length;
+        if (this.isTextControl(elt)) {
+          const len = (elt.value || '').length;
+          const start = this.savedCursorAtEnd ?
+              len : Math.min(this.savedCursorStart, len);
+          const end = this.savedCursorAtEnd ?
+              len : Math.min(this.savedCursorEnd, len);
+          if (document.activeElement !== elt) {
+            elt.focus();
+          }
+          elt.setSelectionRange(start, end);
+        } else if (elt.firstChild) {
+          if (this.savedCursorAtEnd) {
+            this.savedCursorStart = this.savedCursorEnd = elt.innerText.length;
+          }
+          const sel = window.getSelection();
+          const posStart = this.getTextNodeAtPosition(elt, this.savedCursorStart);
+          const posEnd = this.getTextNodeAtPosition(elt, this.savedCursorEnd);
+          sel.removeAllRanges();
+          const range = new Range();
+          range.setStart(posStart.node, posStart.position);
+          range.setEnd(posEnd.node, posEnd.position);
+          sel.addRange(range);
         }
-        const sel = window.getSelection();
-        const posStart = this.getTextNodeAtPosition(elt, this.savedCursorStart);
-        const posEnd = this.getTextNodeAtPosition(elt, this.savedCursorEnd);
-        sel.removeAllRanges();
-        const range = new Range();
-        range.setStart(posStart.node, posStart.position);
-        range.setEnd(posEnd.node, posEnd.position);
-        sel.addRange(range);
       } catch (err) {
       }
     }
