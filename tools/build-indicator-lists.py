@@ -1680,6 +1680,226 @@ def write_outputs(
     (OUT_DIR / f"{base}.txt").write_text(
         "\n".join(e["indicator"] for e in serializable) + "\n", encoding="utf-8"
     )
+    if cfg.slug == "anagram":
+        # Compact sidebar payload: [indicator] or [indicator, function].
+        compact = [
+            [e["indicator"], e["function"]] if e.get("function") else [e["indicator"]]
+            for e in serializable
+        ]
+        (OUT_DIR / "anagram-indicators-list.js").write_text(
+            "var exetAnagramIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "reversal":
+        # Compact sidebar payload: [indicator] or [indicator, direction].
+        compact = []
+        for e in serializable:
+            labels = []
+            for cat in e.get("categories") or []:
+                label = category_label("reversal", cat)
+                if label:
+                    labels.append(label)
+            detail = ""
+            for preferred in (REVERSAL_ACROSS, REVERSAL_DOWN, REVERSAL_EITHER):
+                if preferred in labels:
+                    detail = preferred
+                    break
+            compact.append(
+                [e["indicator"], detail] if detail else [e["indicator"]]
+            )
+        (OUT_DIR / "reversal-indicators-list.js").write_text(
+            "var exetReversalIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "homophone":
+        compact = [[e["indicator"]] for e in serializable]
+        (OUT_DIR / "homophone-indicators-list.js").write_text(
+            "var exetHomophoneIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "deletion":
+        compact = []
+        for e in serializable:
+            labels = []
+            for cat in e.get("categories") or []:
+                label = category_label("deletion", cat)
+                if label:
+                    labels.append(label)
+            detail = ""
+            for preferred in (
+                DELETION_FIRST,
+                DELETION_LAST,
+                DELETION_BOTH,
+                DELETION_MIDDLE,
+                DELETION_GENERAL,
+            ):
+                if preferred in labels:
+                    detail = preferred
+                    break
+            compact.append(
+                [e["indicator"], detail] if detail else [e["indicator"]]
+            )
+        (OUT_DIR / "deletion-indicators-list.js").write_text(
+            "var exetDeletionIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "alternation":
+        compact = [
+            [e["indicator"], e["parity"]] if e.get("parity") else [e["indicator"]]
+            for e in serializable
+        ]
+        (OUT_DIR / "alternation-indicators-list.js").write_text(
+            "var exetAlternationIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "hidden":
+        compact = [
+            [e["indicator"], e["hiding"]] if e.get("hiding") else [e["indicator"]]
+            for e in serializable
+        ]
+        (OUT_DIR / "hidden-indicators-list.js").write_text(
+            "var exetHiddenIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "juxtaposition":
+        juxt_map = {
+            "across": REVERSAL_ACROSS,
+            "down": REVERSAL_DOWN,
+            "either": REVERSAL_EITHER,
+            "before (a)": REVERSAL_ACROSS,
+            "after (a)": REVERSAL_ACROSS,
+            "before (d)": REVERSAL_DOWN,
+            "after (d)": REVERSAL_DOWN,
+            "before (a/d)": REVERSAL_EITHER,
+            "after (a/d)": REVERSAL_EITHER,
+        }
+        compact = []
+        for e in serializable:
+            labels = []
+            for cat in e.get("categories") or []:
+                mapped = juxt_map.get(category_key(cat))
+                if mapped:
+                    labels.append(mapped)
+            detail = ""
+            for preferred in (REVERSAL_ACROSS, REVERSAL_DOWN, REVERSAL_EITHER):
+                if preferred in labels:
+                    detail = preferred
+                    break
+            compact.append(
+                [e["indicator"], detail] if detail else [e["indicator"]]
+            )
+        (OUT_DIR / "juxtaposition-indicators-list.js").write_text(
+            "var exetJuxtapositionIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "replacement":
+        compact = [[e["indicator"]] for e in serializable]
+        (OUT_DIR / "replacement-indicators-list.js").write_text(
+            "var exetReplacementIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "letter-selection":
+        letter_pref = [
+            "First Letter",
+            "Second Letter",
+            "First Two Letters",
+            "Last Letter",
+            "First and Last Letters",
+            "Middle Letter",
+            "Central Pair",
+            "First or Second Half",
+            "Odd Letters",
+            "Even Letters",
+            "Alternate Letters",
+        ]
+        compact = []
+        for e in serializable:
+            labels = []
+            for cat in e.get("categories") or []:
+                label = category_label("letter-selection", cat)
+                if label:
+                    labels.append(label)
+            detail = ""
+            for preferred in letter_pref:
+                if preferred in labels:
+                    detail = preferred
+                    break
+            if not detail and labels:
+                detail = labels[0]
+            compact.append(
+                [e["indicator"], detail] if detail else [e["indicator"]]
+            )
+        (OUT_DIR / "letter-selection-indicators-list.js").write_text(
+            "var exetLetterSelectionIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "movement":
+        compact = []
+        for e in serializable:
+            cats = e.get("categories") or []
+            detail = ""
+            if cats:
+                detail = re.sub(r"^shift:\s*", "", cats[0], flags=re.I)
+                detail = re.sub(r"\s*\((a/d|a|d)\)\s*", "", detail).strip()
+                if detail:
+                    detail = detail[0].upper() + detail[1:]
+            compact.append(
+                [e["indicator"], detail] if detail else [e["indicator"]]
+            )
+        (OUT_DIR / "movement-indicators-list.js").write_text(
+            "var exetMovementIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "dbe":
+        compact = [[e["indicator"]] for e in serializable]
+        (OUT_DIR / "dbe-indicators-list.js").write_text(
+            "var exetDbeIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
+    elif cfg.slug == "palindrome":
+        compact = []
+        for e in serializable:
+            labels = []
+            for cat in e.get("categories") or []:
+                label = category_label("palindrome", cat)
+                if label:
+                    labels.append(label)
+            detail = ""
+            for preferred in (REVERSAL_ACROSS, REVERSAL_DOWN, REVERSAL_EITHER):
+                if preferred in labels:
+                    detail = preferred
+                    break
+            compact.append(
+                [e["indicator"], detail] if detail else [e["indicator"]]
+            )
+        (OUT_DIR / "palindrome-indicators-list.js").write_text(
+            "var exetPalindromeIndicators="
+            + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+            + ";\n",
+            encoding="utf-8",
+        )
 
     by_cat: dict[str, list[dict]] = defaultdict(list)
     if cfg.slug == "anagram":
@@ -1804,6 +2024,27 @@ def write_container_list(
     )
     (OUT_DIR / f"{base}.html").write_text(
         render_html(container_cfg, meta, by_cat, {}, {}), encoding="utf-8"
+    )
+    # Compact sidebar payload with outer/inner role.
+    compact = []
+    for e in serializable:
+        buckets = containment_buckets(e)
+        if buckets == {"outer"}:
+            detail = "Outer contains inner"
+        elif buckets == {"inner"}:
+            detail = "Inner enters outer"
+        elif buckets == {"outer", "inner"}:
+            detail = "Outer or inner"
+        else:
+            detail = ""
+        compact.append(
+            [e["indicator"], detail] if detail else [e["indicator"]]
+        )
+    (OUT_DIR / "container-indicators-list.js").write_text(
+        "var exetContainerIndicators="
+        + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+        + ";\n",
+        encoding="utf-8",
     )
 
     for old_slug in ("outer-contains-inner", "inner-enters-outer"):

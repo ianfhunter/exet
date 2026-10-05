@@ -1490,6 +1490,13 @@ def write_indicator_outputs(store: dict[str, dict]) -> int:
         "\n".join(e["indicator"] for e in serializable) + "\n", encoding="utf-8"
     )
     (OUT_DIR / f"{base}.html").write_text(render_indicator_html(meta), encoding="utf-8")
+    (OUT_DIR / "abbreviation-indicators-list.js").write_text(
+        "var exetAbbreviationIndicators="
+        + json.dumps([[e["indicator"]] for e in serializable],
+                     ensure_ascii=False, separators=(",", ":"))
+        + ";\n",
+        encoding="utf-8",
+    )
     return len(serializable)
 
 

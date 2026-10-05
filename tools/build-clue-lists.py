@@ -658,6 +658,19 @@ def write_glue() -> int:
         encoding="utf-8",
     )
     (OUT_DIR / f"{base}.html").write_text(render_glue_html(meta), encoding="utf-8")
+    # Compact sidebar payload: [phrase, category].
+    compact = [
+        [e["phrase"], e["category"].replace("-", " ").title()]
+        if e.get("category")
+        else [e["phrase"]]
+        for e in entries
+    ]
+    (OUT_DIR / "clue-glue-list.js").write_text(
+        "var exetClueGlue="
+        + json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
+        + ";\n",
+        encoding="utf-8",
+    )
     return len(entries)
 
 
@@ -683,6 +696,13 @@ def write_spoonerism() -> int:
         "\n".join(e["indicator"] for e in entries) + "\n", encoding="utf-8"
     )
     (OUT_DIR / f"{base}.html").write_text(render_spoonerism_html(meta), encoding="utf-8")
+    (OUT_DIR / "spoonerism-indicators-list.js").write_text(
+        "var exetSpoonerismIndicators="
+        + json.dumps([[e["indicator"]] for e in entries],
+                     ensure_ascii=False, separators=(",", ":"))
+        + ";\n",
+        encoding="utf-8",
+    )
     return len(entries)
 
 

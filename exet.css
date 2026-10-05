@@ -1179,6 +1179,55 @@ textarea.xet-editable {
   outline: none;
   line-height: 1.5;
 }
+/* Title and setter on one centered line: "Title by Setter" */
+#xet-xlv-frame .xlv-title-setter {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 0.4em;
+  text-align: center;
+}
+#xet-xlv-frame .xlv-title,
+#xet-xlv-frame .xlv-setter {
+  display: inline;
+  text-align: inherit;
+  padding: 2px 0 8px;
+}
+#xet-xlv-frame .xlv-setter {
+  font-size: 1em;
+  font-weight: normal;
+}
+#xet-xlv-frame .xet-title-by {
+  margin-right: 0.2em;
+  color: var(--xet-muted, #666);
+  user-select: none;
+}
+#xet-xlv-frame .xlv-title .xet-editable,
+#xet-xlv-frame .xlv-setter .xet-editable {
+  line-height: 1.3;
+  padding: 2px 6px;
+}
+#xet-xlv-frame .xlv-preamble.xet-preamble-editable {
+  display: block !important;
+  min-height: 1.6em;
+  margin: 0.35em auto 0.55em;
+  max-width: 40em;
+  text-align: center;
+  cursor: text;
+}
+#xet-xlv-frame .xlv-preamble.xet-preamble-editable:empty::before {
+  content: attr(data-placeholder);
+  color: #888;
+  font-style: italic;
+  pointer-events: none;
+}
+#xet-xlv-frame .xlv-preamble.xet-preamble-editable.xet-preamble-empty::before {
+  content: attr(data-placeholder);
+  color: #888;
+  font-style: italic;
+  pointer-events: none;
+}
 .xet-action {
   color: var(--xet-accent);
   display: inline-block;
@@ -1253,8 +1302,35 @@ textarea.xet-editable {
   pointer-events: none;
 }
 #xet-abbrev-sidebar .xet-abbrev-tabs,
-#xet-abbrev-sidebar .xet-abbrev-panel {
+#xet-abbrev-sidebar .xet-abbrev-panel,
+#xet-abbrev-sidebar .xet-abbrev-grabber {
   pointer-events: auto;
+}
+#xet-abbrev-sidebar .xet-abbrev-grabber {
+  flex-shrink: 0;
+  align-self: center;
+  width: 12px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: #b8c8de;
+  cursor: pointer;
+  /* Left-pointing tab: suggests the sidebar can pull out */
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  box-shadow: none;
+  transition: background 0.12s ease, clip-path 0.15s ease;
+}
+#xet-abbrev-sidebar .xet-abbrev-grabber:hover {
+  background: var(--xet-accent, #1a5fb4);
+}
+#xet-abbrev-sidebar.wide-tabs .xet-abbrev-grabber {
+  background: #9eb0c8;
+  /* Right-pointing tab: suggests it can tuck back in */
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+#xet-abbrev-sidebar.wide-tabs .xet-abbrev-grabber:hover {
+  background: var(--xet-accent, #1a5fb4);
 }
 #xet-abbrev-sidebar .xet-abbrev-tabs {
   display: flex;
@@ -1266,6 +1342,10 @@ textarea.xet-editable {
   overflow-y: auto;
   overflow-x: hidden;
   box-shadow: -2px 0 6px rgba(0, 0, 0, 0.06);
+  transition: width 0.15s ease;
+}
+#xet-abbrev-sidebar.wide-tabs .xet-abbrev-tabs {
+  width: 40px;
 }
 #xet-abbrev-sidebar .xet-abbrev-tab {
   font: inherit;
@@ -1281,6 +1361,10 @@ textarea.xet-editable {
   color: #445;
   cursor: pointer;
   line-height: 1;
+  transition: width 0.15s ease;
+}
+#xet-abbrev-sidebar.wide-tabs .xet-abbrev-tab {
+  width: 40px;
 }
 #xet-abbrev-sidebar .xet-abbrev-tab:hover {
   background: #dce8f8;
@@ -1290,6 +1374,42 @@ textarea.xet-editable {
   background: var(--xet-accent, #1a5fb4);
   color: #fff;
   box-shadow: inset 2px 0 0 #0d3d7a;
+}
+#xet-abbrev-sidebar .xet-abbrev-tab.xet-indicator-tab {
+  font-size: 0.68rem;
+  letter-spacing: -0.04em;
+  min-height: 22px;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #3a5f8c 0%, #4a719e 100%);
+  color: #eef4fb;
+  border-bottom-color: #2f4f75;
+}
+#xet-abbrev-sidebar .xet-abbrev-tab.xet-indicator-tab:hover {
+  background: #2f5480;
+  color: #fff;
+}
+#xet-abbrev-sidebar .xet-abbrev-tab.xet-indicator-tab.active {
+  background: var(--xet-accent, #1a5fb4);
+  color: #fff;
+  box-shadow: inset 2px 0 0 #0a2a52;
+}
+#xet-abbrev-sidebar .xet-abbrev-tab.xet-indicator-tab-big {
+  font-size: 0.92rem;
+  min-height: 24px;
+  letter-spacing: 0;
+}
+#xet-abbrev-sidebar .xet-abbrev-tab.xet-indicator-tab-start {
+  border-top: 2px solid #c8d4e8;
+}
+#xet-abbrev-sidebar .xet-indicator-row {
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+#xet-abbrev-sidebar .xet-indicator-detail {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: #778;
+  white-space: nowrap;
 }
 #xet-abbrev-sidebar .xet-abbrev-panel {
   width: 0;
@@ -1328,6 +1448,17 @@ textarea.xet-editable {
   font-size: 0.85rem;
   border: 1px solid var(--xet-border, #ddd);
   border-radius: 3px;
+}
+#xet-abbrev-sidebar .xet-abbrev-category {
+  max-width: 42%;
+  min-width: 0;
+  padding: 3px 4px;
+  font: inherit;
+  font-size: 0.78rem;
+  border: 1px solid var(--xet-border, #ddd);
+  border-radius: 3px;
+  background: #fff;
+  color: inherit;
 }
 #xet-abbrev-sidebar .xet-abbrev-list {
   overflow-y: auto;

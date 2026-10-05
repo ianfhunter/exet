@@ -397,10 +397,9 @@ function Exet() {
     `In a cryptic clue, you can specify a part of the clue to be the definition
      part using Ctrl-d after selecting it. This part gets underlined when
      the solution is revealed.`,
-    `When looking at any list of indicators through the "Lists" tab, you
-     can type a topic word that describes the clue surface that you're
-     trying to craft (in the blank provided near the top-right corner), and
-     hit Enter, to highlight all words that might be related to that topic.`,
+    `Indicator lists sit in the right-edge sidebar (A–Z abbreviations and
+     symbol tabs for anagrams, reversals, containers, and so on). Use the
+     filter box to narrow a list once a tab is open.`,
     `The "Analysis" tab shows useful information about the grid, the
      grid-fill, and the clues. You can use it to check for issues such
      as: grids that are not fully connected, consecutive unchecked cells,
@@ -884,13 +883,6 @@ Exet.prototype.setPuzzle = function(puz) {
       hover: "Analyses of the crossword (grid, grid-fill, clues)",
       sections: [],
     },
-    {
-      id: "inds",
-      display: "Lists",
-      tone: "gold",
-      hover: "Offline cryptic indicator lists",
-      sections: [],
-    },
   ];
 
   this.tabs = {};
@@ -915,7 +907,7 @@ Exet.prototype.setPuzzle = function(puz) {
     "exet", "theme", "research", "synonyms",
     "anagrams", "containers", "charades", "edits-and-sounds",
     "hiddens", "alternations", "acrostics",
-    "prior-clues", "magpie", "analysis", "inds",
+    "prior-clues", "magpie", "analysis",
   ];
 
   this.replaceHandlers()
@@ -941,29 +933,32 @@ Exet.prototype.setPuzzle = function(puz) {
   this.xetCopyright.title = 'Click to edit copyright';
 
   this.title = document.getElementById(`${this.puz.prefix}-title`);
-  this.title.innerHTML = `<span class="xet-action" id="xet-title-cta">Edit optional
-      title:</span><span
+  const titleText = (this.puz.title || '').trim() || 'Title';
+  this.title.innerHTML = `<span
       class="xet-editable"
       id="xet-title" contenteditable=true spellcheck=false
-      oninput="exet.updateMetadata()">${this.puz.title}</span>`;
+      oninput="exet.updateMetadata()">${titleText}</span>`;
   this.title.style.display = '';
   this.xetTitle = document.getElementById('xet-title');
   this.xetTitle.title = 'Click to edit title';
-  this.xetTitleCTA = document.getElementById('xet-title-cta');
+  this.xetTitleCTA = null;
+  this.puz.title = titleText;
 
   this.setter = document.getElementById(`${this.puz.prefix}-setter`);
-  this.setter.innerHTML = `<span class="xet-action" id="xet-setter-cta">Edit optional
-      setter(s):</span><span
+  const setterText = (this.puz.setter || '').trim() || 'Setter';
+  this.setter.innerHTML = `<span class="xet-title-by">by</span> <span
       class="xet-editable"
       id="xet-setter" contenteditable=true spellcheck=false
-      oninput="exet.updateMetadata()">${this.puz.setter}</span>`;
+      oninput="exet.updateMetadata()">${setterText}</span>`;
   this.setter.style.display = '';
   this.xetSetter = document.getElementById('xet-setter');
   this.xetSetter.title = 'Click to edit setter';
-  this.xetSetterCTA = document.getElementById('xet-setter-cta');
+  this.xetSetterCTA = null;
+  this.puz.setter = setterText;
 
   this.preamble = document.getElementById(`${this.puz.prefix}-preamble`);
   this.explanations = document.getElementById(`${this.puz.prefix}-explanations`);
+  this.setupEditablePreamble();
 
   // Make clues-box divs wider
   const cbs = document.getElementsByClassName('xlv-clues-box');
@@ -1589,7 +1584,7 @@ Exet.prototype.makeExetTab = function() {
             Add/edit special sections:
             <div class="xet-dropdown-submenu">
               <div class="xet-dropdown-subitem" id="xet-edit-preamble"
-                   title="Add or edit the 'preamble' section">
+                   title="Edit the preamble shown above the grid">
                Preamble
               </div>
               <div class="xet-dropdown-subitem" id="xet-edit-explanations"
@@ -2235,12 +2230,11 @@ Exet.prototype.makeExetTab = function() {
   this.preambleText.addEventListener('input', e => {
     const text = exet.preambleText.value.trim();
     this.preamble.innerHTML = text;
-    this.preamble.style.display = text ? '' : 'none';
+    this.preamble.style.display = '';
     exetRevManager.throttledSaveRev(exetRevManager.REV_METADATA_CHANGE);
   });
   document.getElementById("xet-edit-preamble").addEventListener('click', e => {
-    this.puz.deactivator();
-    exetModals.showModal(preamble)
+    this.focusEditablePreamble();
     e.stopPropagation();
   })
   document.getElementById("xet-toggle-nina").addEventListener('click', e => {
@@ -2594,6 +2588,27 @@ Exet.prototype.getLightInfos = function() {
   return infos;
 }
 
+/**
+ * Open Analysis immediately with a spinner, then compute after paint so the
+ * tab switch is visible and other tabs stay clickable until work starts.
+ */
+Exet.prototype.scheduleAnalysisUpdate = function() {
+  if (!this.analysisPanel) {
+    return;
+  }
+  if (!this.analysisRenderGen_) {
+    this.analysisRenderGen_ = 0;
+  }
+  const gen = ++this.analysisRenderGen_;
+  this.analysisPanel.innerHTML = xetSpinnerHtml('Analysing…');
+  xetAfterPaint(() => {
+    if (gen != this.analysisRenderGen_ || this.currTab != 'analysis') {
+      return;
+    }
+    this.updateAnalysis(this.analysisPanel);
+  });
+};
+
 Exet.prototype.updateAnalysis = function(elt) {
   this.updateEnumMismatchMarks();
   const grid = this.puz.grid;
@@ -2841,6 +2856,54 @@ Exet.prototype.selectAnalysis = function() {
   }
 }
 
+Exet.prototype.setupEditablePreamble = function() {
+  if (!this.preamble) {
+    return;
+  }
+  this.preamble.contentEditable = 'true';
+  this.preamble.spellcheck = false;
+  this.preamble.classList.add('xet-editable', 'xet-preamble-editable');
+  this.preamble.title = 'Click to edit preamble';
+  this.preamble.setAttribute('data-placeholder', 'Add preamble…');
+  this.preamble.style.display = '';
+  this.syncPreambleEmptyClass();
+  if (!this.preamble.dataset.xetPreambleWired) {
+    this.preamble.dataset.xetPreambleWired = '1';
+    this.preamble.addEventListener('input', () => {
+      this.syncPreambleEmptyClass();
+      if (this.preambleText) {
+        this.preambleText.value = this.preamble.innerHTML;
+      }
+      this.updateMetadata();
+    });
+    this.preamble.addEventListener('blur', () => {
+      // Keep the editable surface visible even when emptied.
+      this.preamble.style.display = '';
+      this.syncPreambleEmptyClass();
+    });
+  }
+};
+
+Exet.prototype.syncPreambleEmptyClass = function() {
+  if (!this.preamble) {
+    return;
+  }
+  const text = (this.preamble.innerText || '').replace(/\u00a0/g, ' ').trim();
+  this.preamble.classList.toggle('xet-preamble-empty', !text);
+};
+
+Exet.prototype.focusEditablePreamble = function() {
+  if (!this.preamble) {
+    return;
+  }
+  this.setupEditablePreamble();
+  if (this.puz && this.puz.deactivator) {
+    this.puz.deactivator();
+  }
+  this.preamble.scrollIntoView({block: 'nearest', behavior: 'smooth'});
+  this.preamble.focus();
+};
+
 Exet.prototype.updateMetadata = function() {
   if (!this.puz) {
     return
@@ -2861,6 +2924,11 @@ Exet.prototype.updateMetadata = function() {
     if (this.xetCopyright) {
       this.stripInputLF(this.xetCopyright);
       this.puz.copyright = this.xetCopyright.innerText;
+    }
+    if (this.preamble) {
+      // Keep Exolve's preamble string in sync for exports that read it.
+      this.puz.preamble = this.preamble.innerHTML.trim();
+      this.preamble.style.display = '';
     }
     this.restoreCursor();
     this.throttledMetadataTimer = null;
@@ -4061,13 +4129,168 @@ Exet.prototype.ABBREV_CAT_LABELS = {
   general: "General",
 };
 
+Exet.prototype.INDICATOR_SIDEBAR_TABS = [
+  {
+    key: '()',
+    title: 'Anagram indicators',
+    filterPlaceholder: 'Filter anagram indicators…',
+    missing: 'Anagram indicators not loaded',
+    dataName: 'exetAnagramIndicators',
+    detailTitle: 'Wordplay function',
+    big: true,
+  },
+  {
+    key: '<<',
+    title: 'Reversal indicators',
+    filterPlaceholder: 'Filter reversal indicators…',
+    missing: 'Reversal indicators not loaded',
+    dataName: 'exetReversalIndicators',
+    detailTitle: 'Direction',
+    big: true,
+  },
+  {
+    key: '"',
+    title: 'Homophone indicators',
+    filterPlaceholder: 'Filter homophone indicators…',
+    missing: 'Homophone indicators not loaded',
+    dataName: 'exetHomophoneIndicators',
+    detailTitle: '',
+    big: true,
+  },
+  {
+    key: '-',
+    title: 'Deletion indicators',
+    filterPlaceholder: 'Filter deletion indicators…',
+    missing: 'Deletion indicators not loaded',
+    dataName: 'exetDeletionIndicators',
+    detailTitle: 'Position',
+    big: true,
+  },
+  {
+    key: '½',
+    title: 'Alternation indicators',
+    filterPlaceholder: 'Filter alternation indicators…',
+    missing: 'Alternation indicators not loaded',
+    dataName: 'exetAlternationIndicators',
+    detailTitle: 'Parity',
+    big: true,
+  },
+  {
+    key: '…',
+    title: 'Clue glue words',
+    filterPlaceholder: 'Filter clue glue…',
+    missing: 'Clue glue not loaded',
+    dataName: 'exetClueGlue',
+    detailTitle: 'Category',
+    big: true,
+  },
+  {
+    key: '?',
+    title: 'Hidden word indicators',
+    filterPlaceholder: 'Filter hidden word indicators…',
+    missing: 'Hidden word indicators not loaded',
+    dataName: 'exetHiddenIndicators',
+    detailTitle: 'Hiding direction',
+    big: true,
+  },
+  {
+    key: '[]',
+    title: 'Container indicators',
+    filterPlaceholder: 'Filter container indicators…',
+    missing: 'Container indicators not loaded',
+    dataName: 'exetContainerIndicators',
+    detailTitle: 'Role',
+    big: true,
+  },
+  {
+    key: '☯',
+    title: 'Juxtaposition indicators',
+    filterPlaceholder: 'Filter juxtaposition indicators…',
+    missing: 'Juxtaposition indicators not loaded',
+    dataName: 'exetJuxtapositionIndicators',
+    detailTitle: 'Direction',
+    big: true,
+  },
+  {
+    key: '⇄',
+    title: 'Replacement indicators',
+    filterPlaceholder: 'Filter replacement indicators…',
+    missing: 'Replacement indicators not loaded',
+    dataName: 'exetReplacementIndicators',
+    detailTitle: '',
+    big: true,
+  },
+  {
+    key: '↓',
+    title: 'Letter-selection indicators',
+    filterPlaceholder: 'Filter letter-selection indicators…',
+    missing: 'Letter-selection indicators not loaded',
+    dataName: 'exetLetterSelectionIndicators',
+    detailTitle: 'Position',
+    big: true,
+  },
+  {
+    key: '↻',
+    title: 'Letter-movement indicators',
+    filterPlaceholder: 'Filter letter-movement indicators…',
+    missing: 'Letter-movement indicators not loaded',
+    dataName: 'exetMovementIndicators',
+    detailTitle: 'Shift',
+    big: true,
+  },
+  {
+    key: 'eg',
+    title: 'Definition-by-example indicators',
+    filterPlaceholder: 'Filter DbE indicators…',
+    missing: 'DbE indicators not loaded',
+    dataName: 'exetDbeIndicators',
+    detailTitle: '',
+  },
+  {
+    key: '↔',
+    title: 'Palindrome indicators',
+    filterPlaceholder: 'Filter palindrome indicators…',
+    missing: 'Palindrome indicators not loaded',
+    dataName: 'exetPalindromeIndicators',
+    detailTitle: 'Direction',
+    big: true,
+  },
+  {
+    key: 'ab',
+    title: 'Abbreviation indicators',
+    filterPlaceholder: 'Filter abbreviation indicators…',
+    missing: 'Abbreviation indicators not loaded',
+    dataName: 'exetAbbreviationIndicators',
+    detailTitle: '',
+  },
+  {
+    key: '🕪',
+    title: 'Spoonerism indicators',
+    filterPlaceholder: 'Filter spoonerism indicators…',
+    missing: 'Spoonerism indicators not loaded',
+    dataName: 'exetSpoonerismIndicators',
+    detailTitle: '',
+    big: true,
+  },
+];
+
+Exet.prototype.indicatorSidebarTab = function(key) {
+  for (const tab of this.INDICATOR_SIDEBAR_TABS) {
+    if (tab.key === key) {
+      return tab;
+    }
+  }
+  return null;
+};
+
 Exet.prototype.makeAbbrevSidebar = function() {
   if (document.getElementById('xet-abbrev-sidebar')) {
     return;
   }
   const sidebar = document.createElement('aside');
   sidebar.id = 'xet-abbrev-sidebar';
-  sidebar.title = 'Cryptic abbreviations — click a letter tab';
+  sidebar.title =
+      'Cryptic abbreviations and indicators — click a tab';
 
   const tabs = document.createElement('div');
   tabs.className = 'xet-abbrev-tabs';
@@ -4080,25 +4303,62 @@ Exet.prototype.makeAbbrevSidebar = function() {
     btn.title = 'Abbreviations starting with ' + ch;
     tabs.appendChild(btn);
   }
+  for (let i = 0; i < this.INDICATOR_SIDEBAR_TABS.length; i++) {
+    const tab = this.INDICATOR_SIDEBAR_TABS[i];
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'xet-abbrev-tab xet-indicator-tab' +
+        (i === 0 ? ' xet-indicator-tab-start' : '') +
+        (tab.big ? ' xet-indicator-tab-big' : '');
+    btn.dataset.letter = tab.key;
+    btn.textContent = tab.key;
+    btn.title = tab.title;
+    tabs.appendChild(btn);
+  }
 
   const panel = document.createElement('div');
   panel.className = 'xet-abbrev-panel';
   panel.innerHTML = `
     <div class="xet-abbrev-panel-head">
       <span class="xet-abbrev-panel-letter"></span>
+      <select class="xet-abbrev-category" title="Filter by category"
+          style="display:none" aria-label="Category filter">
+        <option value="">All</option>
+      </select>
       <input type="search" class="xet-abbrev-filter" placeholder="Filter…"
-          title="Filter abbreviations or clue words">
+          title="Filter abbreviations, clue words, or indicators">
     </div>
     <div class="xet-abbrev-list"></div>
   `;
 
   sidebar.appendChild(panel);
   sidebar.appendChild(tabs);
+
+  const grabber = document.createElement('button');
+  grabber.type = 'button';
+  grabber.className = 'xet-abbrev-grabber';
+  grabber.title = 'Widen sidebar (helps when the scrollbar covers the tabs)';
+  grabber.setAttribute('aria-label', 'Widen sidebar tabs');
+  grabber.setAttribute('aria-pressed', 'false');
+  grabber.addEventListener('click', (ev) => {
+    ev.stopPropagation();
+    const wide = sidebar.classList.toggle('wide-tabs');
+    grabber.setAttribute('aria-pressed', wide ? 'true' : 'false');
+    grabber.title = wide ?
+        'Narrow sidebar tabs' :
+        'Widen sidebar (helps when the scrollbar covers the tabs)';
+    if (this.puz) {
+      this.reposition();
+    }
+  });
+  sidebar.appendChild(grabber);
+
   document.body.appendChild(sidebar);
 
   this.abbrevSidebar = sidebar;
   this.abbrevSidebarLetter = null;
   this.abbrevSidebarFilter = panel.querySelector('.xet-abbrev-filter');
+  this.abbrevSidebarCategory = panel.querySelector('.xet-abbrev-category');
   this.abbrevSidebarList = panel.querySelector('.xet-abbrev-list');
   this.abbrevSidebarLetterSpan = panel.querySelector('.xet-abbrev-panel-letter');
 
@@ -4114,7 +4374,13 @@ Exet.prototype.makeAbbrevSidebar = function() {
       this.renderAbbrevSidebarContent(this.abbrevSidebarLetter);
     }
   });
-  document.addEventListener('click', (ev) => {
+  this.abbrevSidebarCategory.addEventListener('change', () => {
+    if (this.abbrevSidebarLetter) {
+      this.renderAbbrevSidebarContent(this.abbrevSidebarLetter);
+    }
+  });
+  // Use mousedown so native <select> option picks don't count as outside clicks.
+  document.addEventListener('mousedown', (ev) => {
     const sidebar = this.abbrevSidebar;
     if (!sidebar || !sidebar.classList.contains('expanded')) {
       return;
@@ -4155,13 +4421,70 @@ Exet.prototype.toggleAbbrevSidebar = function(letter) {
   }
   this.abbrevSidebarLetterSpan.textContent = letter;
   this.abbrevSidebarFilter.value = '';
+  const indTab = this.indicatorSidebarTab(letter);
+  this.abbrevSidebarFilter.placeholder =
+      indTab ? indTab.filterPlaceholder : 'Filter…';
+  this.populateIndicatorCategoryFilter(indTab);
   this.renderAbbrevSidebarContent(letter);
   this.abbrevSidebarFilter.focus();
 };
 
+/**
+ * Fill the category dropdown for indicator tabs (Noun expression, Across, …).
+ * Hidden for A–Z abbreviation letters and for lists with no categories.
+ */
+Exet.prototype.populateIndicatorCategoryFilter = function(indTab) {
+  const sel = this.abbrevSidebarCategory;
+  if (!sel) {
+    return;
+  }
+  sel.innerHTML = '<option value="">All</option>';
+  sel.value = '';
+  if (!indTab) {
+    sel.style.display = 'none';
+    sel.title = 'Filter by category';
+    return;
+  }
+  const list = (typeof window[indTab.dataName] !== 'undefined') ?
+      window[indTab.dataName] : null;
+  if (!list || !list.length) {
+    sel.style.display = 'none';
+    return;
+  }
+  const cats = new Set();
+  for (const row of list) {
+    if (row[1]) {
+      cats.add(row[1]);
+    }
+  }
+  if (cats.size == 0) {
+    sel.style.display = 'none';
+    return;
+  }
+  const labels = Array.from(cats).sort((a, b) => a.localeCompare(b));
+  for (const label of labels) {
+    const opt = document.createElement('option');
+    opt.value = label;
+    opt.textContent = label;
+    sel.appendChild(opt);
+  }
+  sel.style.display = '';
+  sel.title = indTab.detailTitle ?
+      ('Filter by ' + indTab.detailTitle.toLowerCase()) :
+      'Filter by category';
+};
+
 Exet.prototype.renderAbbrevSidebarContent = function(letter) {
+  if (!this.abbrevSidebarList) {
+    return;
+  }
+  const indTab = this.indicatorSidebarTab(letter);
+  if (indTab) {
+    this.renderIndicatorSidebarContent(indTab);
+    return;
+  }
   const data = (typeof exetAbbrevByAlpha === 'object') ? exetAbbrevByAlpha : null;
-  if (!data || !this.abbrevSidebarList) {
+  if (!data) {
     return;
   }
   const term = this.abbrevSidebarFilter.value.trim().toLowerCase();
@@ -4184,6 +4507,70 @@ Exet.prototype.renderAbbrevSidebarContent = function(letter) {
   }
   this.abbrevSidebarList.innerHTML = html ||
       '<div class="xet-abbrev-empty">No matches</div>';
+};
+
+Exet.prototype.renderIndicatorSidebarContent = function(tab) {
+  const list = (typeof window[tab.dataName] !== 'undefined') ?
+      window[tab.dataName] : null;
+  if (!list || !this.abbrevSidebarList) {
+    this.abbrevSidebarList.innerHTML =
+        '<div class="xet-abbrev-empty">' + tab.missing + '</div>';
+    return;
+  }
+  if (!this.indicatorSidebarRenderGen_) {
+    this.indicatorSidebarRenderGen_ = 0;
+  }
+  const gen = ++this.indicatorSidebarRenderGen_;
+  const term = this.abbrevSidebarFilter.value.trim().toLowerCase();
+  const category = (this.abbrevSidebarCategory &&
+      this.abbrevSidebarCategory.style.display != 'none') ?
+      this.abbrevSidebarCategory.value : '';
+  const paint = () => {
+    if (gen != this.indicatorSidebarRenderGen_ ||
+        this.abbrevSidebarLetter != tab.key) {
+      return;
+    }
+    let html = '';
+    let shown = 0;
+    for (const row of list) {
+      const indicator = row[0] || '';
+      const detail = row[1] || '';
+      if (category && detail != category) {
+        continue;
+      }
+      const text = detail ? indicator + ' ' + detail : indicator;
+      if (term && !text.toLowerCase().includes(term)) {
+        continue;
+      }
+      shown++;
+      html += '<div class="xet-abbrev-row xet-indicator-row">' +
+              '<span class="xet-abbrev-clues">' + this.escapeHtml(indicator) +
+              '</span>';
+      if (detail) {
+        html += '<span class="xet-indicator-detail" title="' +
+                this.escapeAttr(tab.detailTitle) + '">' +
+                this.escapeHtml(detail) + '</span>';
+      }
+      html += '</div>';
+    }
+    if (!html) {
+      this.abbrevSidebarList.innerHTML =
+          '<div class="xet-abbrev-empty">No matches</div>';
+      return;
+    }
+    const filtered = !!(term || category);
+    const countNote = filtered ?
+        `<div class="xet-abbrev-empty">${shown} match${shown == 1 ? '' : 'es'}</div>` :
+        '';
+    this.abbrevSidebarList.innerHTML = countNote + html;
+  };
+  /* Full unfiltered list can be large — show a spinner and paint after. */
+  if (!term && !category) {
+    this.abbrevSidebarList.innerHTML = xetSpinnerHtml('Loading indicators…');
+    xetAfterPaint(paint);
+    return;
+  }
+  paint();
 };
 
 Exet.prototype.escapeAttr = function(s) {
@@ -5005,41 +5392,90 @@ Exet.prototype.updateCA = function() {
   this.caUnusedAnags.innerHTML = html;
 }
 
+/**
+ * Show a spinner immediately, then search containments in time-sliced chunks
+ * so other tabs remain clickable while results are computed.
+ */
 Exet.prototype.updateContainments = function(fodder) {
+  if (this.throttledContainmentsTimer) {
+    clearTimeout(this.throttledContainmentsTimer);
+    this.throttledContainmentsTimer = null;
+  }
+  if (!this.containmentsRenderGen_) {
+    this.containmentsRenderGen_ = 0;
+  }
+  const gen = ++this.containmentsRenderGen_;
+  this.containments.innerHTML = xetSpinnerHtml('Finding containments…');
+
   const fodderLetters = exetLexicon.lettersOf(fodder);
   this.maybeTrimLongFodder(fodderLetters, 'xet-containments');
-  const splits = this.getAllSplits(fodderLetters, 3);
-  /* Sort the splits to bring more even balance up top */
-  splits.sort((a, b) =>
-      Math.abs(a[0].length + a[2].length - a[1].length) -
-      Math.abs(b[0].length + b[2].length - b[1].length));
 
-  const results = [];
-  let html = `
-    <table class="xet-wordplay-choices xet-table-midline">
-  `;
-  let num = 0;
-  for (const split of splits) {
+  xetAfterPaint(() => {
+    if (gen != this.containmentsRenderGen_) {
+      return;
+    }
+    const splits = this.getAllSplits(fodderLetters, 3);
+    /* Sort the splits to bring more even balance up top */
+    splits.sort((a, b) =>
+        Math.abs(a[0].length + a[2].length - a[1].length) -
+        Math.abs(b[0].length + b[2].length - b[1].length));
+    this.containmentsState_ = {
+      gen: gen,
+      splits: splits,
+      index: 0,
+      rows: [],
+    };
+    this.updateContainmentsPartial();
+  });
+};
+
+Exet.prototype.updateContainmentsPartial = function(work=100, sleep=50) {
+  const state = this.containmentsState_;
+  if (!state || state.gen != this.containmentsRenderGen_) {
+    return;
+  }
+  const startTS = Date.now();
+  while (state.index < state.splits.length) {
+    const split = state.splits[state.index++];
     const outer = split[0] + split[2];
     const outerAnagrams = exetLexicon.displayAnagrams(
         outer, exetLexicon.getAnagrams(outer, 10 + outer.length, true));
-    if (outerAnagrams.length == 0) continue;
+    if (outerAnagrams.length == 0) {
+      continue;
+    }
     const inner = split[1];
     const innerAnagrams = exetLexicon.displayAnagrams(
         inner, exetLexicon.getAnagrams(inner, 10 + inner.length, true));
-    if (innerAnagrams.length == 0) continue;
-
-    if (num > 0) {
-      html += '\n<tr><td colspan="3"><hr></td></tr>';
+    if (innerAnagrams.length == 0) {
+      continue;
     }
-    num++;
-    html += `
+    state.rows.push(`
       <tr><td>${outerAnagrams.join(', ')}</td>
       <td><span class="xet-blue">around</span></td>
-      <td>${innerAnagrams.join(', ')}</td></tr>`;
+      <td>${innerAnagrams.join(', ')}</td></tr>`);
+    if (Date.now() - startTS >= work) {
+      break;
+    }
+  }
+  if (state.index < state.splits.length) {
+    this.throttledContainmentsTimer = setTimeout(() => {
+      this.updateContainmentsPartial(work, sleep);
+    }, sleep);
+    return;
+  }
+  let html = `
+    <table class="xet-wordplay-choices xet-table-midline">
+  `;
+  for (let i = 0; i < state.rows.length; i++) {
+    if (i > 0) {
+      html += '\n<tr><td colspan="3"><hr></td></tr>';
+    }
+    html += state.rows[i];
   }
   html += '</table>';
   this.containments.innerHTML = html;
+  this.containmentsState_ = null;
+  this.throttledContainmentsTimer = null;
 }
 
 Exet.prototype.populateCompanag = function() {
@@ -5314,7 +5750,6 @@ Exet.prototype.populateFrame = function() {
   this.makeExetTab();
   this.makeThemeTab();
   this.makeAnalysisTab();
-  this.makeIndsTab();
   this.makeResearchTab();
   this.makeMagpieTab();
   this.makeWebFillsPanel();
@@ -6015,10 +6450,6 @@ Exet.prototype.handleTabClick = function(id) {
     this.updateEnumMismatchMarks();
     return;
   }
-  if (id == "inds") {
-    this.indsTabNav();
-    return;
-  }
 
   let theClue = this.currClue();
   let words = theClue ? theClue.solution : '';
@@ -6032,7 +6463,7 @@ Exet.prototype.handleTabClick = function(id) {
     return;
   }
   if (id == "analysis") {
-    this.updateAnalysis(this.analysisPanel);
+    this.scheduleAnalysisUpdate();
     return;
   }
   if (tab.wordInput) {
@@ -6619,8 +7050,13 @@ Exet.prototype.resizeRHS = function() {
   const extraH = Math.max(0, windowH - 720);
   const windowW = this.puz.getViewportWidth();
   const gridPanelBox = this.puz.gridPanel.getBoundingClientRect();
+  /* Sidebar letter tabs are normally 20px; wide-tabs doubles them to 40px. */
+  const sidebar = document.getElementById('xet-abbrev-sidebar');
+  const sidebarTabsExtra =
+      (sidebar && sidebar.classList.contains('wide-tabs')) ? 20 : 0;
   const frameW =
-    Math.max(580, windowW - 52 - Math.floor(gridPanelBox.width));
+    Math.max(580, windowW - 52 - sidebarTabsExtra -
+             Math.floor(gridPanelBox.width));
   const sectionW = frameW - 16;
   const halfSectionW = Math.floor(sectionW / 2) - 16;
   const sectionH = 410 + extraH;
@@ -6772,9 +7208,11 @@ Exet.prototype.clueStripLiftPx = function() {
 }
 
 Exet.prototype.reposition = function() {
-  const elts = [this.xetTitle, this.xetTitleCTA,
-                this.xetSetter, this.xetSetterCTA, this.preamble];
+  const elts = [this.xetTitle, this.xetSetter, this.preamble];
   for (const elt of elts) {
+    if (!elt) {
+      continue;
+    }
     elt.classList.remove('xet-blur');
   }
   const clueBox = this.puz.currClue.getBoundingClientRect();
@@ -6782,6 +7220,9 @@ Exet.prototype.reposition = function() {
     const top = clueBox.top;
     const right = clueBox.right;
     for (const elt of elts) {
+      if (!elt) {
+        continue;
+      }
       const box = elt.firstElementChild ?
         elt.firstElementChild.getBoundingClientRect() :
         elt.getBoundingClientRect();
@@ -8066,7 +8507,28 @@ Exet.prototype.handleGridInput = function(revType=null) {
       theClue.placeholder = this.puz.parseEnum(
           theClue.clue.substr(enumPos)).placeholder;
     }
+    // When enums are not stored in clue text, keep word breaks from metadata
+    // so multi-word fills (e.g. "feel me") rebuild as "FEEL ME" not "FEELME".
+    if (!theClue.placeholder && theClue.enumStr) {
+      theClue.placeholder = this.puz.parseEnum(theClue.enumStr).placeholder;
+    }
     this.puz.setClueSolution(ci);
+    // If placeholder still had no breaks, recover spaced form from the
+    // wordlist entry that was used to fill this light.
+    if (theClue.solution && theClue.lexFillIdx &&
+        theClue.solution.indexOf('?') < 0 &&
+        theClue.solution.indexOf(' ') < 0 &&
+        theClue.solution.indexOf('-') < 0) {
+      const form = exetLexicon.getLex(theClue.lexFillIdx);
+      if (form && exetLexicon.letterString(form) ==
+          exetLexicon.letterString(theClue.solution) &&
+          (form.indexOf(' ') >= 0 || form.indexOf('-') >= 0)) {
+        theClue.solution = form.toUpperCase();
+      }
+    }
+    if (theClue.solution && theClue.solution.indexOf('?') >= 0) {
+      delete theClue.lexFillIdx;
+    }
     if (theClue.placeholder != oldPH || theClue.solution != oldSol) {
       needsUpdate = true;
     }
@@ -8248,6 +8710,71 @@ Exet.prototype.clueSansEnum = function(clueText) {
 }
 
 /**
+ * Build an enum parse from a surface form (spaces → commas, hyphens stay).
+ * Apostrophes are never enumerated: "wine o'clock" is (4,6), not (4,1'5).
+ */
+Exet.prototype.enumParseFromForm = function(form) {
+  let enumStr = '';
+  let enumPart = 0;
+  const solParts = exetLexicon.partsOf(form.toUpperCase());
+  for (let i = 0; i < solParts.length; i++) {
+    const c = solParts[i];
+    if (enumPart > 0 && (c == ' ' || c == '-')) {
+      enumStr += ('' + enumPart + (c == ' ' ? ',' : c));
+      enumPart = 0;
+    }
+    if (exetLexicon.letterSet[c]) {
+      enumPart++;
+    }
+  }
+  if (enumPart > 0) {
+    enumStr += enumPart;
+  }
+  if (!enumStr) {
+    return this.puz.parseEnum('');
+  }
+  return this.puz.parseEnum('(' + enumStr + ')');
+}
+
+/**
+ * Prefer a wordlist surface form (with spaces/hyphens) matching these letters.
+ * Uses the fill that was clicked when available; otherwise the best lexicon match.
+ */
+Exet.prototype.surfaceFormForEnum = function(ci, plainSol) {
+  const theClue = this.puz.clues[ci];
+  const letters = exetLexicon.letterString(plainSol);
+  if (!letters) {
+    return plainSol;
+  }
+  const formMatches = (form) =>
+      form && exetLexicon.letterString(form) == letters;
+  const hasBreaks = (form) =>
+      form.indexOf(' ') >= 0 || form.indexOf('-') >= 0;
+
+  // Explicit fill chosen from the word list.
+  if (theClue && theClue.lexFillIdx) {
+    const fromFill = exetLexicon.getLex(theClue.lexFillIdx);
+    if (formMatches(fromFill)) {
+      return fromFill;
+    }
+  }
+  // Solution already carries word/hyphen breaks (e.g. freshly filled).
+  if (hasBreaks(plainSol)) {
+    return plainSol;
+  }
+  // Recover breaks from the lexicon when the grid-only solution lost them.
+  const choices = exetLexicon.getLexChoices(
+      plainSol, 30, null, false, 0, false);
+  for (const idx of choices) {
+    const form = exetLexicon.getLex(idx);
+    if (formMatches(form) && hasBreaks(form)) {
+      return form;
+    }
+  }
+  return plainSol;
+}
+
+/**
  * Enumeration is derived from the fill word (spaces → commas, hyphens stay).
  * Until a complete fill is present, an existing matching enum on the clue is
  * kept; otherwise we fall back to the light's cell count.
@@ -8268,30 +8795,21 @@ Exet.prototype.enumFromFill = function(ci) {
   const plainSol = solution.replace(/<[^>]*>/g, '').split(',')[0].trim();
   if (plainSol && plainSol.indexOf('?') < 0 &&
       exetLexicon.lexkey(plainSol).length == expLen) {
-    let enumStr = '';
-    let enumPart = 0;
-    const solParts = exetLexicon.partsOf(plainSol);
-    for (let i = 0; i < solParts.length; i++) {
-      const c = solParts[i];
-      // Apostrophes are never enumerated: "wine o'clock" is (4,6), not (4,1'5).
-      if (enumPart > 0 && (c == ' ' || c == '-')) {
-        enumStr += ('' + enumPart + (c == ' ' ? ',' : c));
-        enumPart = 0;
-      }
-      if (exetLexicon.letterSet[c]) {
-        enumPart++;
-      }
-    }
-    if (enumPart > 0) {
-      enumStr += enumPart;
-    }
-    if (enumStr) {
-      return this.puz.parseEnum('(' + enumStr + ')');
+    const form = this.surfaceFormForEnum(ci, plainSol);
+    const parsed = this.enumParseFromForm(form);
+    if (parsed.enumStr && parsed.enumLen == expLen) {
+      return parsed;
     }
   }
   const existing = this.puz.parseEnum(theClue.clue);
   if (existing.enumStr && existing.enumLen == expLen) {
     return existing;
+  }
+  if (theClue.enumStr) {
+    const fromMeta = this.puz.parseEnum(theClue.enumStr);
+    if (fromMeta.enumStr && fromMeta.enumLen == expLen) {
+      return fromMeta;
+    }
   }
   return this.puz.parseEnum('(' + expLen + ')');
 }
@@ -10159,6 +10677,9 @@ Exet.prototype.fillLight = function(idx, ci='', revType=null) {
     console.assert(theClue, ci);
     cells = this.puz.getAllCells(ci);
   }
+  // Remember which wordlist form was chosen so enums keep spaces/hyphens
+  // even after grid sync strips them from theClue.solution.
+  theClue.lexFillIdx = Math.abs(idx);
   solution = solution.toUpperCase();
   if (theClue.solution != solution) {
     theClue.solution = solution;
@@ -10178,25 +10699,24 @@ Exet.prototype.fillLight = function(idx, ci='', revType=null) {
     }
   }
   const enumParse = this.enumFromFill(ci);
-  // enumFromFill reads theClue.solution which we just set.
+  // enumFromFill reads theClue.solution / lexFillIdx which we just set.
   const oldEnumStr = this.puz.parseEnum(theClue.clue).enumStr;
-  if (this.requireEnums) {
-    if (oldEnumStr != enumParse.enumStr) {
-      this.applyEnumToClue(ci, enumParse);
-      changed = true;
-    }
-  } else {
-    // Still keep hyphen/placeholder metadata in sync with the fill word.
-    theClue.enumLen = enumParse.enumLen;
-    theClue.enumStr = enumParse.enumStr;
-    theClue.placeholder = enumParse.placeholder;
-    theClue.hyphenAfter = enumParse.hyphenAfter;
-    theClue.wordEndAfter = enumParse.wordEndAfter;
+  if (oldEnumStr != enumParse.enumStr ||
+      theClue.enumStr != enumParse.enumStr) {
+    this.applyEnumToClue(ci, enumParse);
+    changed = true;
   }
   this.refreshClueEnumDisplay(ci);
+  this.renderClue(theClue);
   if (changed && updateIfChanged) {
     this.handleGridInput(revType);
+    // Grid sync can drop spaces from the solution; put the wordlist form back
+    // and keep the multi-word enum (e.g. feel me → (4,2)).
+    theClue.solution = solution;
+    theClue.lexFillIdx = Math.abs(idx);
+    this.applyEnumToClue(ci, enumParse);
     this.refreshClueEnumDisplay(ci);
+    this.renderClue(theClue);
   }
 }
 
@@ -11081,8 +11601,8 @@ function exetBlank(w, h, layers3d=1, id='', automagic=false,
 
   let specs = `exolve-begin
     exolve-id: ${id}
-    exolve-title: Crossword
-    exolve-setter: Exetter
+    exolve-title: Title
+    exolve-setter: Setter
     exolve-language: ${exetLexicon.language} ${exetLexicon.script} ${exetLexicon.maxCharCodes}
     exolve-width: ${w}
     exolve-height: ${h}
