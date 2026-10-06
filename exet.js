@@ -11005,17 +11005,93 @@ Exet.prototype.isPalindromeForm = function(form) {
   return true;
 }
 
-Exet.prototype.choiceDisplayHTML = function(choice) {
+/**
+ * Letter-string reverse of form, or null if too short / a palindrome
+ * (palindromes are not "another" word).
+ */
+Exet.prototype.letterReversalKey = function(form) {
+  if (!form || !exetLexicon || !exetLexicon.lettersOf) return null;
+  const letters = exetLexicon.lettersOf(form);
+  if (letters.length < 2) return null;
+  const fwd = letters.join('');
+  const rev = letters.slice().reverse().join('');
+  if (rev === fwd) return null;
+  return rev;
+}
+
+/**
+ * For each surface form among choices, if its letter-reverse is also in the
+ * lexicon, map form -> a display form of that reverse.
+ */
+Exet.prototype.buildLetterReversalMap = function(choices) {
+  const out = new Map();
+  if (!choices || !choices.length || !exetLexicon) return out;
+
+  const pending = [];  // {form, revKey}
+  const seenForm = {};
+  for (const choice of choices) {
+    const form = exetLexicon.getLex(choice);
+    if (!form || seenForm[form]) continue;
+    seenForm[form] = true;
+    const revKey = this.letterReversalKey(form);
+    if (!revKey) continue;
+    pending.push({form, revKey});
+  }
+  if (!pending.length) return out;
+
+  const uniqueKeys = [];
+  const keyIndex = {};
+  for (const p of pending) {
+    if (keyIndex[p.revKey] == null) {
+      keyIndex[p.revKey] = uniqueKeys.length;
+      uniqueKeys.push(p.revKey);
+    }
+  }
+
+  const hitFormByKey = {};
+  const acceptHit = (k, hitForm) => {
+    if (!hitForm || !exetLexicon.letterString) return false;
+    return exetLexicon.letterString(hitForm) === k;
+  };
+  if (exetLexicon.getLexChoicesBatch && exetLexicon.serverSlug) {
+    const reqs = uniqueKeys.map((k) => ({pattern: k, limit: 1}));
+    const outs = exetLexicon.getLexChoicesBatch(reqs, {minScore: 0});
+    for (let i = 0; i < uniqueKeys.length; i++) {
+      const hits = outs[i] || [];
+      if (!hits.length) continue;
+      const hitForm = exetLexicon.getLex(hits[0]);
+      if (acceptHit(uniqueKeys[i], hitForm)) {
+        hitFormByKey[uniqueKeys[i]] = hitForm;
+      }
+    }
+  } else {
+    for (const k of uniqueKeys) {
+      const hits = exetLexicon.getLexChoices(k, 1);
+      if (!hits || !hits.length) continue;
+      const hitForm = exetLexicon.getLex(hits[0]);
+      if (acceptHit(k, hitForm)) hitFormByKey[k] = hitForm;
+    }
+  }
+
+  for (const p of pending) {
+    const hit = hitFormByKey[p.revKey];
+    if (hit) out.set(p.form, hit);
+  }
+  return out;
+}
+
+Exet.prototype.choiceDisplayHTML = function(choice, letterReversalMap) {
   const absC = Math.abs(choice);
   const form = exetLexicon.getLex(choice);
+  const letterRev = letterReversalMap && letterReversalMap.get(form);
   const classes = [];
   if (this.preflexSet[absC]) classes.push('xet-preflex-entry');
-  if (choice < 0) classes.push('xet-reversal');
+  if (letterRev) classes.push('xet-reversal');
   const cls = classes.length ? ` class="${classes.join(' ')}"` : '';
   const palindrome = this.isPalindromeForm(form);
   let hover = ' title="';
-  if (choice < 0) {
-    hover += 'Reversal. ';
+  if (letterRev) {
+    hover += 'Reversal of ' + letterRev + '. ';
   }
   if (palindrome) {
     hover += 'Palindrome. ';
@@ -11287,9 +11363,14 @@ Exet.prototype.updateFillChoices = function() {
     lRejects.sort(this.enumMatchSorter.bind(this, gridClue.placeholder));
   }
 
+  const shownChoices = lChoices.slice(0, this.shownLightChoices);
+  const shownRejects = lRejects.slice(0, this.shownLightChoices);
+  const letterReversalMap = this.buildLetterReversalMap(
+      shownChoices.concat(shownRejects));
+
   let numShown = 0;
   for (const choice of lChoices) {
-    html += this.choiceDisplayHTML(choice);
+    html += this.choiceDisplayHTML(choice, letterReversalMap);
     numShown++;
     if (numShown >= this.shownLightChoices) break;
   }
@@ -11297,7 +11378,7 @@ Exet.prototype.updateFillChoices = function() {
   let htmlRej = '';
   let numRejects = 0;
   for (const choice of lRejects) {
-    htmlRej += this.choiceDisplayHTML(choice);
+    htmlRej += this.choiceDisplayHTML(choice, letterReversalMap);
     numRejects++;
     if (numRejects >= this.shownLightChoices) break;
   }
