@@ -10996,11 +10996,24 @@ Exet.prototype.enumMatchSorter = function(p, k1, k2) {
          this.numEnumPunctMatches(p, entry1);
 }
 
+Exet.prototype.isPalindromeForm = function(form) {
+  const letters = String(form || '').toUpperCase().replace(/[^A-Z]/g, '');
+  if (letters.length < 2) return false;
+  for (let i = 0, j = letters.length - 1; i < j; i++, j--) {
+    if (letters[i] !== letters[j]) return false;
+  }
+  return true;
+}
+
 Exet.prototype.choiceDisplayHTML = function(choice) {
   const absC = Math.abs(choice);
   const form = exetLexicon.getLex(choice);
   const cls = this.preflexSet[absC] ? ' class="xet-preflex-entry"' : '';
+  const palindrome = this.isPalindromeForm(form);
   let hover = ' title="';
+  if (palindrome) {
+    hover += 'Palindrome. ';
+  }
   if (absC >= exetLexicon.startLen) {
     hover += 'From preferred fills, not present in word list"';
   } else {
@@ -11014,6 +11027,9 @@ Exet.prototype.choiceDisplayHTML = function(choice) {
     hover += '"';
   }
   const rev = (choice < 0) ? '&lArr; ' : '';
+  const wordHtml = palindrome ?
+      `<span class="xet-palindrome">${rev}${this.escapeHtml(form)}</span>` :
+      `${rev}${this.escapeHtml(form)}`;
   let actionCell = '';
   if (exetLexicon && exetLexicon.serverSlug === 'combolist') {
     if (this.canDeleteComboListEntry(choice)) {
@@ -11040,7 +11056,7 @@ Exet.prototype.choiceDisplayHTML = function(choice) {
   }
   return `
     <tr>
-      <td${cls}${hover}>${rev}${this.escapeHtml(form)}</td>
+      <td${cls}${hover}>${wordHtml}</td>
       ${actionCell}
     </tr>`;
 }
