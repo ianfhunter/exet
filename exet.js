@@ -11008,9 +11008,15 @@ Exet.prototype.isPalindromeForm = function(form) {
 Exet.prototype.choiceDisplayHTML = function(choice) {
   const absC = Math.abs(choice);
   const form = exetLexicon.getLex(choice);
-  const cls = this.preflexSet[absC] ? ' class="xet-preflex-entry"' : '';
+  const classes = [];
+  if (this.preflexSet[absC]) classes.push('xet-preflex-entry');
+  if (choice < 0) classes.push('xet-reversal');
+  const cls = classes.length ? ` class="${classes.join(' ')}"` : '';
   const palindrome = this.isPalindromeForm(form);
   let hover = ' title="';
+  if (choice < 0) {
+    hover += 'Reversal. ';
+  }
   if (palindrome) {
     hover += 'Palindrome. ';
   }
