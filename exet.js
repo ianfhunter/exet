@@ -6941,6 +6941,33 @@ Exet.prototype.toggleAnnoLock = function() {
   this.setAnnoLock(!this.annoLocked, true);
 }
 
+Exet.prototype.toggleAnnoPanel = function() {
+  this.annoPanelCollapsed = !this.annoPanelCollapsed;
+  this.applyAnnoPanelCollapsed();
+  if (this.puz) {
+    this.puz.resizeCurrClueAndControls();
+    this.reposition();
+  }
+}
+
+Exet.prototype.applyAnnoPanelCollapsed = function() {
+  const row = document.getElementById('xet-clue-anno-row');
+  const btn = document.getElementById('xet-anno-collapse');
+  const collapsed = !!this.annoPanelCollapsed;
+  if (row) {
+    row.classList.toggle('xet-anno-collapsed', collapsed);
+  }
+  if (btn) {
+    btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    btn.setAttribute('aria-label', collapsed ?
+        'Show optional annotation' : 'Hide optional annotation');
+    btn.title = collapsed ?
+        'Show optional annotation' : 'Hide optional annotation';
+    // Point toward the action: › hides the right panel, ‹ brings it back.
+    btn.textContent = collapsed ? '‹' : '›';
+  }
+}
+
 Exet.prototype.setAnnoLock = function(locked, wiggle) {
   this.annoLocked = !!locked;
   const theClue = this.currClue();
@@ -7829,7 +7856,7 @@ Exet.prototype.makeClueEditable = function() {
       `${exet.puz.prefix}-curr-clue-text`);
   const spellAttr = exetState.spellcheck ? 'true' : 'false';
   currClueText.innerHTML = `
-    <div class="xet-clue-anno-row">
+    <div class="xet-clue-anno-row" id="xet-clue-anno-row">
       <div class="xet-clue-editor">
         <div class="xet-clue-editor-header" id="xet-clue-editor-header">
           <span class="xet-action">Edit clue:</span>
@@ -7841,6 +7868,8 @@ Exet.prototype.makeClueEditable = function() {
           spellcheck="${spellAttr}"
           placeholder="Clue text"></textarea>
       </div>
+      <button type="button" id="xet-anno-collapse" class="xet-anno-collapse"
+          aria-controls="xet-anno-editor"></button>
       <div class="xet-clue-editor xet-anno-editor" id="xet-anno-editor"></div>
     </div>`;
   const editorHeader = document.getElementById('xet-clue-editor-header');
@@ -7852,6 +7881,14 @@ Exet.prototype.makeClueEditable = function() {
       labelParent.textContent = '';
     }
   }
+  const annoCollapseBtn = document.getElementById('xet-anno-collapse');
+  if (annoCollapseBtn) {
+    annoCollapseBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      this.toggleAnnoPanel();
+    });
+  }
+  this.applyAnnoPanelCollapsed();
   this.currClueIsDraft = this.isDraftClue(theClue.clue);
   // We make the raw clue text editable here, including any tags or
   // in-clue-anno markers (~{...}~). Enumerations are shown separately.

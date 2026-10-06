@@ -372,14 +372,45 @@ body {
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
-  gap: 12px;
+  gap: 8px;
   width: 100%;
 }
 .xet-clue-anno-row > .xet-clue-editor {
   flex: 1.35 1 0;
+  min-width: 0;
 }
 .xet-clue-anno-row > .xet-anno-editor {
   flex: 1 1 0;
+  min-width: 0;
+}
+.xet-clue-anno-row.xet-anno-collapsed > .xet-clue-editor {
+  flex: 1 1 auto;
+}
+.xet-clue-anno-row.xet-anno-collapsed > .xet-anno-editor {
+  display: none;
+}
+.xet-clue-anno-row.xet-anno-collapsed .xet-clue-input {
+  min-height: 4.8em;
+}
+.xet-anno-collapse {
+  flex: 0 0 auto;
+  align-self: center;
+  width: 1.5em;
+  min-height: 2.6em;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--xet-border, #ddd);
+  border-radius: 3px;
+  background: var(--xet-surface, #fff);
+  color: var(--xet-accent, #1a5fb4);
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.xet-anno-collapse:hover {
+  border-color: var(--xet-accent, #1a5fb4);
+  background: var(--xet-accent-muted, #eaf0fa);
 }
 .xet-clue-editor-header {
   display: flex;
