@@ -7864,12 +7864,14 @@ Exet.prototype.makeClueEditable = function() {
           <span id="xet-clue-enum" class="xet-clue-enum"
             title="Enumeration comes from the fill word (spaces and hyphens in the wordlist). Edit the wordlist entry — or pick a different fill — to change it."></span>
         </div>
-        <textarea id="xet-clue" class="xet-editable xet-clue-input" rows="2"
-          spellcheck="${spellAttr}"
-          placeholder="Clue text"></textarea>
+        <div class="xet-clue-input-row">
+          <textarea id="xet-clue" class="xet-editable xet-clue-input" rows="2"
+            spellcheck="${spellAttr}"
+            placeholder="Clue text"></textarea>
+          <button type="button" id="xet-anno-collapse" class="xet-anno-collapse"
+              aria-controls="xet-anno-editor"></button>
+        </div>
       </div>
-      <button type="button" id="xet-anno-collapse" class="xet-anno-collapse"
-          aria-controls="xet-anno-editor"></button>
       <div class="xet-clue-editor xet-anno-editor" id="xet-anno-editor"></div>
     </div>`;
   const editorHeader = document.getElementById('xet-clue-editor-header');

@@ -392,25 +392,34 @@ body {
 .xet-clue-anno-row.xet-anno-collapsed .xet-clue-input {
   min-height: 4.8em;
 }
+.xet-clue-input-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  gap: 2px;
+  width: 100%;
+}
+.xet-clue-input-row > .xet-clue-input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
 .xet-anno-collapse {
   flex: 0 0 auto;
   align-self: center;
-  width: 1.5em;
-  min-height: 2.6em;
+  width: 1.1em;
   padding: 0;
   margin: 0;
-  border: 1px solid var(--xet-border, #ddd);
-  border-radius: 3px;
-  background: var(--xet-surface, #fff);
+  border: none;
+  background: transparent;
+  box-shadow: none;
   color: var(--xet-accent, #1a5fb4);
   cursor: pointer;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1;
 }
 .xet-anno-collapse:hover {
-  border-color: var(--xet-accent, #1a5fb4);
-  background: var(--xet-accent-muted, #eaf0fa);
+  color: #0b3d82;
 }
 .xet-clue-editor-header {
   display: flex;
