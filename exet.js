@@ -8798,7 +8798,10 @@ Exet.prototype.enumParseFromForm = function(form) {
 
 /**
  * Prefer a wordlist surface form (with spaces/hyphens) matching these letters.
- * Uses the fill that was clicked when available; otherwise the best lexicon match.
+ * Uses the fill that was clicked when available; otherwise the solution text.
+ * Does not invent breaks from other same-letter phrases (e.g. must not turn
+ * "rabbit" into (3,3) via a different entry). Drops inherited placeholder
+ * breaks when the unbroken word itself is in the lexicon.
  */
 Exet.prototype.surfaceFormForEnum = function(ci, plainSol) {
   const theClue = this.puz.clues[ci];
@@ -8811,25 +8814,25 @@ Exet.prototype.surfaceFormForEnum = function(ci, plainSol) {
   const hasBreaks = (form) =>
       form.indexOf(' ') >= 0 || form.indexOf('-') >= 0;
 
-  // Explicit fill chosen from the word list.
+  // Explicit fill chosen from the word list (keeps "feel me" → (4,2)).
   if (theClue && theClue.lexFillIdx) {
     const fromFill = exetLexicon.getLex(theClue.lexFillIdx);
     if (formMatches(fromFill)) {
       return fromFill;
     }
   }
-  // Solution already carries word/hyphen breaks (e.g. freshly filled).
   if (hasBreaks(plainSol)) {
-    return plainSol;
-  }
-  // Recover breaks from the lexicon when the grid-only solution lost them.
-  const choices = exetLexicon.getLexChoices(
-      plainSol, 30, null, false, 0, false);
-  for (const idx of choices) {
-    const form = exetLexicon.getLex(idx);
-    if (formMatches(form) && hasBreaks(form)) {
-      return form;
+    // Old enum placeholder may have forced "RAB BIT"; if unbroken RABBIT is
+    // in the wordlist, treat it as a single word.
+    const choices = exetLexicon.getLexChoices(
+        letters, 8, null, false, 0, false);
+    for (const idx of choices) {
+      const form = exetLexicon.getLex(idx);
+      if (formMatches(form) && !hasBreaks(form)) {
+        return letters;
+      }
     }
+    return plainSol;
   }
   return plainSol;
 }
