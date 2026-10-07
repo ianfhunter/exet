@@ -478,6 +478,7 @@ Exet.prototype.setMinPop = function(m) {
   } else if (exetLexicon.scoresSummary) {
     this.minscore = exetLexicon.scores[this.indexMinPop - 1];
   }
+  this.invalidateLetterReversalMemo_();
 }
 
 Exet.prototype.setMinScore = function(s) {
@@ -490,6 +491,14 @@ Exet.prototype.setMinScore = function(s) {
   this.minscore = s;
   this.indexMinPop = 1 + exetLexicon.scoreToIndex(s);
   this.minpop = 100 * (1 - (this.indexMinPop / exetLexicon.startLen));
+  this.invalidateLetterReversalMemo_();
+}
+
+Exet.prototype.invalidateLetterReversalMemo_ = function() {
+  if (this.letterReversalMemo_) this.letterReversalMemo_.clear();
+  this.letterReversalGen_ = (this.letterReversalGen_ || 0) + 1;
+  if (this.cancelLetterReversalEnrichment) this.cancelLetterReversalEnrichment();
+  if (this.setLetterReversalBusy) this.setLetterReversalBusy(false);
 }
 
 /**
@@ -11165,7 +11174,12 @@ Exet.prototype.scheduleLetterReversalEnrichment = function(
         method: 'POST',
         credentials: 'same-origin',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({keys: unknownKeys, min_score: 0}),
+        body: JSON.stringify({
+          keys: unknownKeys,
+          // Match the active fill cutoff so junk like score-20 "worctae"
+          // does not mark EATCROW as a reversal pair.
+          min_score: (this.minscore != null) ? this.minscore : 0,
+        }),
         signal: abort.signal,
       }).then((resp) => {
         if (!resp.ok) throw new Error('HTTP ' + resp.status);
