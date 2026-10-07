@@ -298,6 +298,9 @@ function Exet() {
   this.preflexUsed = new Set;
   this.themeWords = [];
   this.themeGenerateAbort = false;
+  /** revKey → surface form | null (null = confirmed not in lexicon). */
+  this.letterReversalMemo_ = new Map();
+  this.letterReversalGen_ = 0;
   this.unpreflex = [];
   this.unpreflexSet = {};
   this.unpreflexHash = null;
@@ -11020,102 +11023,159 @@ Exet.prototype.letterReversalKey = function(form) {
 }
 
 /**
- * Index known lexicon surface forms by their letter-string (e.g. TRAP → "trap").
- * Seeds from the current choice list and any already-cached server forms.
+ * Sync-only reversal map: peers in the current choice list + memoized
+ * lexicon lookups. Never hits the network (keeps light/tab switches snappy).
+ * Returns {map, unknownKeys} where unknownKeys still need async resolution.
  */
-Exet.prototype.letterFormIndex_ = function(choices) {
+Exet.prototype.buildLetterReversalMapSync = function(choices) {
+  const map = new Map();
+  const unknownKeys = [];
+  if (!choices || !choices.length || !exetLexicon) {
+    return {map, unknownKeys};
+  }
+  if (!this.letterReversalMemo_) this.letterReversalMemo_ = new Map();
+
   const byLetter = new Map();
-  const add = (form) => {
-    if (!form || !exetLexicon.letterString) return;
-    const key = exetLexicon.letterString(form);
-    if (key && !byLetter.has(key)) byLetter.set(key, form);
-  };
-  if (choices) {
-    for (const choice of choices) add(exetLexicon.getLex(choice));
-  }
-  const cache = exetLexicon.serverCache;
-  if (cache && cache.forms) {
-    for (let i = 1; i < cache.forms.length; i++) add(cache.forms[i]);
-  }
-  if (cache && cache.formToIndex) {
-    for (const form of cache.formToIndex.keys()) add(form);
-  }
-  return byLetter;
-}
-
-/**
- * For each surface form among choices, if its letter-reverse is also in the
- * lexicon, map form -> a display form of that reverse.
- */
-Exet.prototype.buildLetterReversalMap = function(choices) {
-  const out = new Map();
-  if (!choices || !choices.length || !exetLexicon) return out;
-
-  const pending = [];  // {form, revKey}
+  const pending = [];
   const seenForm = {};
   for (const choice of choices) {
     const form = exetLexicon.getLex(choice);
     if (!form || seenForm[form]) continue;
     seenForm[form] = true;
+    if (exetLexicon.letterString) {
+      const key = exetLexicon.letterString(form);
+      if (key && !byLetter.has(key)) byLetter.set(key, form);
+    }
     const revKey = this.letterReversalKey(form);
-    if (!revKey) continue;
-    pending.push({form, revKey});
+    if (revKey) pending.push({form, revKey});
   }
-  if (!pending.length) return out;
 
-  const byLetter = this.letterFormIndex_(choices);
-  const hitFormByKey = {};
-  const missing = [];
+  const seenUnknown = {};
   for (const p of pending) {
-    const local = byLetter.get(p.revKey);
-    if (local) hitFormByKey[p.revKey] = local;
-    else if (!hitFormByKey[p.revKey]) missing.push(p.revKey);
-  }
-
-  const uniqueMissing = [];
-  const seenMissing = {};
-  for (const k of missing) {
-    if (seenMissing[k]) continue;
-    seenMissing[k] = true;
-    uniqueMissing.push(k);
-  }
-
-  const acceptHit = (k, hitForm) => {
-    if (!hitForm || !exetLexicon.letterString) return false;
-    return exetLexicon.letterString(hitForm) === k;
-  };
-
-  if (uniqueMissing.length) {
-    if (exetLexicon.getLexChoicesBatch && exetLexicon.serverSlug) {
-      try {
-        const reqs = uniqueMissing.map((k) => ({pattern: k, limit: 1}));
-        const outs = exetLexicon.getLexChoicesBatch(reqs, {minScore: 0});
-        for (let i = 0; i < uniqueMissing.length; i++) {
-          const hits = outs[i] || [];
-          if (!hits.length) continue;
-          const hitForm = exetLexicon.getLex(hits[0]);
-          if (acceptHit(uniqueMissing[i], hitForm)) {
-            hitFormByKey[uniqueMissing[i]] = hitForm;
-          }
-        }
-      } catch (e) {
-        console.warn('Letter-reversal batch lookup failed:', e);
-      }
-    } else if (exetLexicon.getLexChoices) {
-      for (const k of uniqueMissing) {
-        const hits = exetLexicon.getLexChoices(k, 1);
-        if (!hits || !hits.length) continue;
-        const hitForm = exetLexicon.getLex(hits[0]);
-        if (acceptHit(k, hitForm)) hitFormByKey[k] = hitForm;
-      }
+    const peer = byLetter.get(p.revKey);
+    if (peer) {
+      map.set(p.form, peer);
+      this.letterReversalMemo_.set(p.revKey, peer);
+      continue;
+    }
+    if (this.letterReversalMemo_.has(p.revKey)) {
+      const memo = this.letterReversalMemo_.get(p.revKey);
+      if (memo) map.set(p.form, memo);
+      continue;
+    }
+    if (!seenUnknown[p.revKey]) {
+      seenUnknown[p.revKey] = true;
+      unknownKeys.push(p.revKey);
     }
   }
+  return {map, unknownKeys, pending};
+}
 
-  for (const p of pending) {
-    const hit = hitFormByKey[p.revKey];
-    if (hit) out.set(p.form, hit);
+/**
+ * Patch already-rendered choice rows with reversal highlights (no re-render).
+ */
+Exet.prototype.applyLetterReversalHighlights = function(letterReversalMap) {
+  if (!letterReversalMap || !letterReversalMap.size) return;
+  const patch = (table) => {
+    if (!table) return;
+    const tds = table.querySelectorAll('td[data-choice-form]');
+    for (const td of tds) {
+      const form = td.getAttribute('data-choice-form');
+      const hit = letterReversalMap.get(form);
+      if (!hit || td.classList.contains('xet-reversal')) continue;
+      td.classList.add('xet-reversal');
+      const title = td.getAttribute('title') || '';
+      if (title.indexOf('Reversal of ') < 0) {
+        td.setAttribute('title', 'Reversal of ' + hit + '. ' + title);
+      }
+    }
+  };
+  patch(this.lChoices);
+  patch(this.lRejects);
+}
+
+/**
+ * Resolve unknown reverse keys off the UI thread, then patch the current list.
+ */
+Exet.prototype.scheduleLetterReversalEnrichment = function(
+    ci, pending, unknownKeys, gen) {
+  if (!unknownKeys || !unknownKeys.length || !pending || !pending.length) {
+    return;
   }
-  return out;
+  const acceptHit = (k, hitForm) => {
+    if (!hitForm || !exetLexicon || !exetLexicon.letterString) return false;
+    return exetLexicon.letterString(hitForm) === k;
+  };
+  const applyHits = (hitFormByKey) => {
+    if (gen !== this.letterReversalGen_) return;
+    if (this.currClueIndex() !== ci) return;
+    const map = new Map();
+    for (const p of pending) {
+      const hit = hitFormByKey[p.revKey];
+      if (hit) map.set(p.form, hit);
+    }
+    this.applyLetterReversalHighlights(map);
+  };
+
+  const slug = exetLexicon && exetLexicon.serverSlug;
+  if (slug) {
+    const url = '/api/lexicons/' + encodeURIComponent(slug) + '/fill-batch';
+    fetch(url, {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        patterns: unknownKeys,
+        limit_per: 1,
+        min_score: 0,
+      }),
+    }).then((resp) => {
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      return resp.json();
+    }).then((data) => {
+      if (gen !== this.letterReversalGen_) return;
+      const results = (data && data.results) || {};
+      const hitFormByKey = {};
+      for (const k of unknownKeys) {
+        const rows = results[k] || [];
+        const form = rows.length ? rows[0].form : null;
+        if (form && acceptHit(k, form)) {
+          hitFormByKey[k] = form;
+          this.letterReversalMemo_.set(k, form);
+        } else {
+          this.letterReversalMemo_.set(k, null);
+        }
+      }
+      applyHits(hitFormByKey);
+    }).catch((e) => {
+      console.warn('Letter-reversal async lookup failed:', e);
+    });
+    return;
+  }
+
+  // In-browser lexicon: resolve in idle time so tab/light changes stay smooth.
+  const resolveLocal = () => {
+    if (gen !== this.letterReversalGen_) return;
+    const hitFormByKey = {};
+    for (const k of unknownKeys) {
+      let hitForm = null;
+      try {
+        const hits = exetLexicon.getLexChoices(k, 1);
+        if (hits && hits.length) {
+          const cand = exetLexicon.getLex(hits[0]);
+          if (acceptHit(k, cand)) hitForm = cand;
+        }
+      } catch (e) { /* ignore */ }
+      this.letterReversalMemo_.set(k, hitForm);
+      if (hitForm) hitFormByKey[k] = hitForm;
+    }
+    applyHits(hitFormByKey);
+  };
+  if (typeof requestIdleCallback === 'function') {
+    requestIdleCallback(resolveLocal, {timeout: 500});
+  } else {
+    setTimeout(resolveLocal, 0);
+  }
 }
 
 Exet.prototype.choiceDisplayHTML = function(choice, letterReversalMap) {
@@ -11176,7 +11236,7 @@ Exet.prototype.choiceDisplayHTML = function(choice, letterReversalMap) {
   }
   return `
     <tr>
-      <td${cls}${hover}>${wordHtml}</td>
+      <td${cls}${hover} data-choice-form="${this.escapeAttr(form)}">${wordHtml}</td>
       ${actionCell}
     </tr>`;
 }
@@ -11403,8 +11463,12 @@ Exet.prototype.updateFillChoices = function() {
 
   const shownChoices = lChoices.slice(0, this.shownLightChoices);
   const shownRejects = lRejects.slice(0, this.shownLightChoices);
-  const letterReversalMap = this.buildLetterReversalMap(
-      shownChoices.concat(shownRejects));
+  const shownAll = shownChoices.concat(shownRejects);
+  // Sync path only (peers + memo). Network / idle enrichment is scheduled below.
+  const reversal = this.buildLetterReversalMapSync(shownAll);
+  const letterReversalMap = reversal.map;
+  this.letterReversalGen_ = (this.letterReversalGen_ || 0) + 1;
+  const reversalGen = this.letterReversalGen_;
 
   let numShown = 0;
   for (const choice of lChoices) {
@@ -11424,6 +11488,9 @@ Exet.prototype.updateFillChoices = function() {
   const pendingKey = this.pendingLexiconDeleteForm || '';
   const htmlHash = exetLexicon.javaHash(html + htmlRej + ci + '|' + pendingKey);
   if (this.shownChoicesHash && this.shownChoicesHash == htmlHash) {
+    // Still enrich unknowns so a prior skip doesn't leave highlights missing.
+    this.scheduleLetterReversalEnrichment(
+        ci, reversal.pending, reversal.unknownKeys, reversalGen);
     return;
   }
   this.shownChoicesHash = htmlHash;
@@ -11447,6 +11514,8 @@ Exet.prototype.updateFillChoices = function() {
       this.fillLight(choice, '', exetRevManager.REV_GRIDFILL_CHANGE);
     });
   }
+  this.scheduleLetterReversalEnrichment(
+      ci, reversal.pending, reversal.unknownKeys, reversalGen);
 }
 
 Exet.prototype.warnVersion = function(ver) {
@@ -12075,6 +12144,8 @@ function exetLoadedLexicon() {
   exetLexiconNewName = null;
   exetModals.unfreezeUI();
   if (exet) {
+    if (exet.letterReversalMemo_) exet.letterReversalMemo_.clear();
+    exet.letterReversalGen_ = (exet.letterReversalGen_ || 0) + 1;
     exet.setMinPop(exet.minpop);  /** Map to the new lexicon */
     exet.setPreflex(exet.preflex);
     exet.setUnpreflex(exet.unpreflex);
