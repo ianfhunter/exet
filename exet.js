@@ -301,6 +301,8 @@ function Exet() {
   /** revKey → surface form | null (null = confirmed not in lexicon). */
   this.letterReversalMemo_ = new Map();
   this.letterReversalGen_ = 0;
+  this.letterReversalAbort_ = null;
+  this.letterReversalIdleTimer_ = null;
   this.unpreflex = [];
   this.unpreflexSet = {};
   this.unpreflexHash = null;
@@ -11106,11 +11108,25 @@ Exet.prototype.setLetterReversalBusy = function(busy) {
   this.reversalSpinner.style.display = busy ? '' : 'none';
 }
 
+Exet.prototype.cancelLetterReversalEnrichment = function() {
+  if (this.letterReversalAbort_) {
+    try { this.letterReversalAbort_.abort(); } catch (e) { /* ignore */ }
+    this.letterReversalAbort_ = null;
+  }
+  if (this.letterReversalIdleTimer_ != null) {
+    clearTimeout(this.letterReversalIdleTimer_);
+    this.letterReversalIdleTimer_ = null;
+  }
+}
+
 /**
- * Resolve unknown reverse keys off the UI thread, then patch the current list.
+ * Resolve unknown reverse keys without competing with grid-fill loading.
+ * Uses a cheap exact-batch SQL lookup (not fill-batch), deferred until the
+ * fills spinner is idle.
  */
 Exet.prototype.scheduleLetterReversalEnrichment = function(
     ci, pending, unknownKeys, gen) {
+  this.cancelLetterReversalEnrichment();
   if (!unknownKeys || !unknownKeys.length || !pending || !pending.length) {
     if (gen === this.letterReversalGen_) this.setLetterReversalBusy(false);
     return;
@@ -11133,66 +11149,76 @@ Exet.prototype.scheduleLetterReversalEnrichment = function(
     this.setLetterReversalBusy(false);
   };
 
-  const slug = exetLexicon && exetLexicon.serverSlug;
-  if (slug) {
-    const url = '/api/lexicons/' + encodeURIComponent(slug) + '/fill-batch';
-    fetch(url, {
-      method: 'POST',
-      credentials: 'same-origin',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        patterns: unknownKeys,
-        limit_per: 1,
-        min_score: 0,
-      }),
-    }).then((resp) => {
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      return resp.json();
-    }).then((data) => {
+  const runLookup = () => {
+    if (gen !== this.letterReversalGen_) return;
+    // Wait until grid-fill rebuild is done so we don't starve it.
+    if (this.fillsSpinner && this.fillsSpinner.style.display !== 'none') {
+      this.letterReversalIdleTimer_ = setTimeout(runLookup, 120);
+      return;
+    }
+    const slug = exetLexicon && exetLexicon.serverSlug;
+    if (slug) {
+      const url = '/api/lexicons/' + encodeURIComponent(slug) + '/exact-batch';
+      const abort = new AbortController();
+      this.letterReversalAbort_ = abort;
+      fetch(url, {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({keys: unknownKeys, min_score: 0}),
+        signal: abort.signal,
+      }).then((resp) => {
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        return resp.json();
+      }).then((data) => {
+        if (gen !== this.letterReversalGen_) return;
+        const found = (data && data.found) || {};
+        const hitFormByKey = {};
+        for (const k of unknownKeys) {
+          const form = found[k] || null;
+          if (form && acceptHit(k, form)) {
+            hitFormByKey[k] = form;
+            this.letterReversalMemo_.set(k, form);
+          } else {
+            this.letterReversalMemo_.set(k, null);
+          }
+        }
+        finish(hitFormByKey);
+      }).catch((e) => {
+        if (e && e.name === 'AbortError') return;
+        console.warn('Letter-reversal async lookup failed:', e);
+        if (gen === this.letterReversalGen_) this.setLetterReversalBusy(false);
+      });
+      return;
+    }
+
+    // In-browser lexicon: resolve in idle time.
+    const resolveLocal = () => {
       if (gen !== this.letterReversalGen_) return;
-      const results = (data && data.results) || {};
       const hitFormByKey = {};
       for (const k of unknownKeys) {
-        const rows = results[k] || [];
-        const form = rows.length ? rows[0].form : null;
-        if (form && acceptHit(k, form)) {
-          hitFormByKey[k] = form;
-          this.letterReversalMemo_.set(k, form);
-        } else {
-          this.letterReversalMemo_.set(k, null);
-        }
+        let hitForm = null;
+        try {
+          const hits = exetLexicon.getLexChoices(k, 1);
+          if (hits && hits.length) {
+            const cand = exetLexicon.getLex(hits[0]);
+            if (acceptHit(k, cand)) hitForm = cand;
+          }
+        } catch (e) { /* ignore */ }
+        this.letterReversalMemo_.set(k, hitForm);
+        if (hitForm) hitFormByKey[k] = hitForm;
       }
       finish(hitFormByKey);
-    }).catch((e) => {
-      console.warn('Letter-reversal async lookup failed:', e);
-      if (gen === this.letterReversalGen_) this.setLetterReversalBusy(false);
-    });
-    return;
-  }
-
-  // In-browser lexicon: resolve in idle time so tab/light changes stay smooth.
-  const resolveLocal = () => {
-    if (gen !== this.letterReversalGen_) return;
-    const hitFormByKey = {};
-    for (const k of unknownKeys) {
-      let hitForm = null;
-      try {
-        const hits = exetLexicon.getLexChoices(k, 1);
-        if (hits && hits.length) {
-          const cand = exetLexicon.getLex(hits[0]);
-          if (acceptHit(k, cand)) hitForm = cand;
-        }
-      } catch (e) { /* ignore */ }
-      this.letterReversalMemo_.set(k, hitForm);
-      if (hitForm) hitFormByKey[k] = hitForm;
+    };
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(resolveLocal, {timeout: 500});
+    } else {
+      setTimeout(resolveLocal, 0);
     }
-    finish(hitFormByKey);
   };
-  if (typeof requestIdleCallback === 'function') {
-    requestIdleCallback(resolveLocal, {timeout: 500});
-  } else {
-    setTimeout(resolveLocal, 0);
-  }
+
+  // Let the choice list paint first; never share the fill-batch hot path.
+  this.letterReversalIdleTimer_ = setTimeout(runLookup, 0);
 }
 
 Exet.prototype.choiceDisplayHTML = function(choice, letterReversalMap) {
@@ -11448,11 +11474,13 @@ Exet.prototype.updateFillChoices = function() {
   let ci = this.currClueIndex();
   if (!ci) {
     this.letterReversalGen_ = (this.letterReversalGen_ || 0) + 1;
+    this.cancelLetterReversalEnrichment();
     this.setLetterReversalBusy(false);
     return;
   }
   if (this.lightHasRebusContent(ci)) {
     this.letterReversalGen_ = (this.letterReversalGen_ || 0) + 1;
+    this.cancelLetterReversalEnrichment();
     this.setLetterReversalBusy(false);
     this.lChoices.innerHTML =
         '<tr><td><i>Grid-fill disabled for this entry (contains a rebus cell)</i></td></tr>';

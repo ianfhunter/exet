@@ -129,6 +129,52 @@ def get_fill_choices_batch(
     return {(raw or ""): cache[raw or ""] for raw in patterns}
 
 
+def lookup_exact_normalized(
+    conn: sqlite3.Connection,
+    lexicon_id: str,
+    keys: list[str],
+    *,
+    min_score: float = 0.0,
+) -> dict[str, str]:
+    """One-shot exact normalized-form existence check.
+
+    Returns mapping normalized_key -> surface form for keys that exist.
+    Intended for lightweight UI features (e.g. letter-reversal highlights)
+    that must not compete with pattern fill-batch work.
+    """
+    cleaned: list[str] = []
+    seen: set[str] = set()
+    for raw in keys:
+        key = _normalize_query(raw or "")
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        cleaned.append(key)
+    if not cleaned:
+        return {}
+
+    # Chunk to stay under SQLite variable limits.
+    found: dict[str, str] = {}
+    chunk_size = 400
+    for i in range(0, len(cleaned), chunk_size):
+        chunk = cleaned[i : i + chunk_size]
+        placeholders = ",".join("?" for _ in chunk)
+        sql = f"""
+            SELECT normalized, form
+            FROM lexicon_entries
+            WHERE lexicon_id = ?
+              AND score >= ?
+              AND normalized IN ({placeholders})
+            ORDER BY score DESC, id ASC
+        """
+        params: list[object] = [lexicon_id, min_score, *chunk]
+        for normalized, form in conn.execute(sql, params):
+            # Keep the highest-scoring form if duplicates somehow appear.
+            if normalized not in found:
+                found[normalized] = form
+    return found
+
+
 def get_subset_anagrams(
     conn: sqlite3.Connection,
     lexicon_id: str,

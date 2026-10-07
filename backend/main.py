@@ -35,6 +35,7 @@ from backend.multiword_anagrams import get_multiword_anagrams
 from backend.lexicon_ext import (
     get_fill_choices_batch,
     get_subset_anagrams,
+    lookup_exact_normalized,
     search_entries,
 )
 from backend.prior_clues_lookup import answer_key, parse_meta
@@ -320,6 +321,26 @@ def lexicon_fill_batch(
         for pattern in dict.fromkeys(patterns)
     }
     return {"lexicon": dict(lex), "results": results}
+
+
+@app.post("/api/lexicons/{lexicon_ref}/exact-batch")
+def lexicon_exact_batch(
+    lexicon_ref: str,
+    db: DbDep,
+    body: dict,
+):
+    """Cheap exact normalized-form lookups (one SQL IN), for UI adornments."""
+    lex = _resolve_lexicon(db, lexicon_ref)
+    keys = body.get("keys") or []
+    if not isinstance(keys, list) or any(not isinstance(key, str) for key in keys):
+        raise HTTPException(400, "keys must be a list of strings")
+    if len(keys) > 500:
+        raise HTTPException(400, "at most 500 keys per batch")
+    min_score = float(body.get("min_score") or 0)
+    found = lookup_exact_normalized(
+        db, lex["id"], keys, min_score=min_score
+    )
+    return {"lexicon": dict(lex), "found": found, "count": len(found)}
 
 
 @app.get("/api/lexicons/{lexicon_ref}/anagrams")
