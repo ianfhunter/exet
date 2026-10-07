@@ -19,7 +19,7 @@ const exetDataServer = (function() {
   // Grid-fill and autofill never call this: they use exet-fill-worker.js.
   function syncPost(path, body) {
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', path, false);
+    xhr.open('POST', baseUrl() + path, false);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify(body || {}));
     if (xhr.status < 200 || xhr.status >= 300) {

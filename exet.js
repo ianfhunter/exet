@@ -11020,6 +11020,30 @@ Exet.prototype.letterReversalKey = function(form) {
 }
 
 /**
+ * Index known lexicon surface forms by their letter-string (e.g. TRAP → "trap").
+ * Seeds from the current choice list and any already-cached server forms.
+ */
+Exet.prototype.letterFormIndex_ = function(choices) {
+  const byLetter = new Map();
+  const add = (form) => {
+    if (!form || !exetLexicon.letterString) return;
+    const key = exetLexicon.letterString(form);
+    if (key && !byLetter.has(key)) byLetter.set(key, form);
+  };
+  if (choices) {
+    for (const choice of choices) add(exetLexicon.getLex(choice));
+  }
+  const cache = exetLexicon.serverCache;
+  if (cache && cache.forms) {
+    for (let i = 1; i < cache.forms.length; i++) add(cache.forms[i]);
+  }
+  if (cache && cache.formToIndex) {
+    for (const form of cache.formToIndex.keys()) add(form);
+  }
+  return byLetter;
+}
+
+/**
  * For each surface form among choices, if its letter-reverse is also in the
  * lexicon, map form -> a display form of that reverse.
  */
@@ -11039,37 +11063,51 @@ Exet.prototype.buildLetterReversalMap = function(choices) {
   }
   if (!pending.length) return out;
 
-  const uniqueKeys = [];
-  const keyIndex = {};
+  const byLetter = this.letterFormIndex_(choices);
+  const hitFormByKey = {};
+  const missing = [];
   for (const p of pending) {
-    if (keyIndex[p.revKey] == null) {
-      keyIndex[p.revKey] = uniqueKeys.length;
-      uniqueKeys.push(p.revKey);
-    }
+    const local = byLetter.get(p.revKey);
+    if (local) hitFormByKey[p.revKey] = local;
+    else if (!hitFormByKey[p.revKey]) missing.push(p.revKey);
   }
 
-  const hitFormByKey = {};
+  const uniqueMissing = [];
+  const seenMissing = {};
+  for (const k of missing) {
+    if (seenMissing[k]) continue;
+    seenMissing[k] = true;
+    uniqueMissing.push(k);
+  }
+
   const acceptHit = (k, hitForm) => {
     if (!hitForm || !exetLexicon.letterString) return false;
     return exetLexicon.letterString(hitForm) === k;
   };
-  if (exetLexicon.getLexChoicesBatch && exetLexicon.serverSlug) {
-    const reqs = uniqueKeys.map((k) => ({pattern: k, limit: 1}));
-    const outs = exetLexicon.getLexChoicesBatch(reqs, {minScore: 0});
-    for (let i = 0; i < uniqueKeys.length; i++) {
-      const hits = outs[i] || [];
-      if (!hits.length) continue;
-      const hitForm = exetLexicon.getLex(hits[0]);
-      if (acceptHit(uniqueKeys[i], hitForm)) {
-        hitFormByKey[uniqueKeys[i]] = hitForm;
+
+  if (uniqueMissing.length) {
+    if (exetLexicon.getLexChoicesBatch && exetLexicon.serverSlug) {
+      try {
+        const reqs = uniqueMissing.map((k) => ({pattern: k, limit: 1}));
+        const outs = exetLexicon.getLexChoicesBatch(reqs, {minScore: 0});
+        for (let i = 0; i < uniqueMissing.length; i++) {
+          const hits = outs[i] || [];
+          if (!hits.length) continue;
+          const hitForm = exetLexicon.getLex(hits[0]);
+          if (acceptHit(uniqueMissing[i], hitForm)) {
+            hitFormByKey[uniqueMissing[i]] = hitForm;
+          }
+        }
+      } catch (e) {
+        console.warn('Letter-reversal batch lookup failed:', e);
       }
-    }
-  } else {
-    for (const k of uniqueKeys) {
-      const hits = exetLexicon.getLexChoices(k, 1);
-      if (!hits || !hits.length) continue;
-      const hitForm = exetLexicon.getLex(hits[0]);
-      if (acceptHit(k, hitForm)) hitFormByKey[k] = hitForm;
+    } else if (exetLexicon.getLexChoices) {
+      for (const k of uniqueMissing) {
+        const hits = exetLexicon.getLexChoices(k, 1);
+        if (!hits || !hits.length) continue;
+        const hitForm = exetLexicon.getLex(hits[0]);
+        if (acceptHit(k, hitForm)) hitFormByKey[k] = hitForm;
+      }
     }
   }
 
