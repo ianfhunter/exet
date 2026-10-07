@@ -1350,12 +1350,21 @@ textarea.xet-editable {
 }
 #xet-abbrev-sidebar .xet-abbrev-tabs,
 #xet-abbrev-sidebar .xet-abbrev-panel,
-#xet-abbrev-sidebar .xet-abbrev-grabber {
+#xet-abbrev-sidebar .xet-abbrev-edge,
+#xet-abbrev-sidebar .xet-abbrev-grabber,
+#xet-abbrev-sidebar .xet-abbrev-pin {
   pointer-events: auto;
+}
+#xet-abbrev-sidebar .xet-abbrev-edge {
+  flex-shrink: 0;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 #xet-abbrev-sidebar .xet-abbrev-grabber {
   flex-shrink: 0;
-  align-self: center;
   width: 12px;
   height: 44px;
   margin: 0;
@@ -1378,6 +1387,26 @@ textarea.xet-editable {
 }
 #xet-abbrev-sidebar.wide-tabs .xet-abbrev-grabber:hover {
   background: var(--xet-accent, #1a5fb4);
+}
+#xet-abbrev-sidebar .xet-abbrev-pin {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  opacity: 0.75;
+}
+#xet-abbrev-sidebar .xet-abbrev-pin:hover {
+  opacity: 1;
+}
+#xet-abbrev-sidebar.pinned .xet-abbrev-pin {
+  opacity: 1;
 }
 #xet-abbrev-sidebar .xet-abbrev-tabs {
   display: flex;

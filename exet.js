@@ -4355,6 +4355,9 @@ Exet.prototype.makeAbbrevSidebar = function() {
   sidebar.appendChild(panel);
   sidebar.appendChild(tabs);
 
+  const edge = document.createElement('div');
+  edge.className = 'xet-abbrev-edge';
+
   const grabber = document.createElement('button');
   grabber.type = 'button';
   grabber.className = 'xet-abbrev-grabber';
@@ -4372,16 +4375,31 @@ Exet.prototype.makeAbbrevSidebar = function() {
       this.reposition();
     }
   });
-  sidebar.appendChild(grabber);
+
+  const pin = document.createElement('button');
+  pin.type = 'button';
+  pin.className = 'xet-abbrev-pin';
+  pin.id = 'xet-abbrev-pin';
+  pin.addEventListener('click', (ev) => {
+    ev.stopPropagation();
+    this.toggleAbbrevSidebarPin();
+  });
+
+  edge.appendChild(grabber);
+  edge.appendChild(pin);
+  sidebar.appendChild(edge);
 
   document.body.appendChild(sidebar);
 
   this.abbrevSidebar = sidebar;
+  this.abbrevSidebarPinned = false;
   this.abbrevSidebarLetter = null;
   this.abbrevSidebarFilter = panel.querySelector('.xet-abbrev-filter');
   this.abbrevSidebarCategory = panel.querySelector('.xet-abbrev-category');
   this.abbrevSidebarList = panel.querySelector('.xet-abbrev-list');
   this.abbrevSidebarLetterSpan = panel.querySelector('.xet-abbrev-panel-letter');
+  this.abbrevSidebarPinBtn = pin;
+  this.applyAbbrevSidebarPin();
 
   tabs.addEventListener('click', (ev) => {
     const btn = ev.target.closest('.xet-abbrev-tab');
@@ -4406,11 +4424,38 @@ Exet.prototype.makeAbbrevSidebar = function() {
     if (!sidebar || !sidebar.classList.contains('expanded')) {
       return;
     }
+    if (this.abbrevSidebarPinned) {
+      return;
+    }
     if (sidebar.contains(ev.target)) {
       return;
     }
     this.collapseAbbrevSidebar();
   });
+};
+
+Exet.prototype.toggleAbbrevSidebarPin = function() {
+  this.abbrevSidebarPinned = !this.abbrevSidebarPinned;
+  this.applyAbbrevSidebarPin();
+};
+
+Exet.prototype.applyAbbrevSidebarPin = function() {
+  const sidebar = this.abbrevSidebar;
+  const pin = this.abbrevSidebarPinBtn;
+  const pinned = !!this.abbrevSidebarPinned;
+  if (sidebar) {
+    sidebar.classList.toggle('pinned', pinned);
+  }
+  if (pin) {
+    pin.textContent = pinned ? '🔒' : '🔓';
+    pin.setAttribute('aria-pressed', pinned ? 'true' : 'false');
+    pin.setAttribute('aria-label', pinned ?
+        'Unpin sidebar (click outside will close it)' :
+        'Pin sidebar open (click outside will not close it)');
+    pin.title = pinned ?
+        'Pinned open — click to unpin' :
+        'Pin open — stays open when clicking outside';
+  }
 };
 
 Exet.prototype.collapseAbbrevSidebar = function() {
