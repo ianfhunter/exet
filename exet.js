@@ -1819,6 +1819,12 @@ Exet.prototype.makeExetTab = function() {
             title="Exet is rebuilding the list of possible entries">
           <span class="loader loader-inline"></span>
         </span>
+        <span class="xet-fills-spinner xet-reversal-spinner"
+            id="xet-reversal-spinner" style="display:none"
+            title="Checking which fills are letter-reversals of other words">
+          <span class="loader loader-inline"></span>
+          <span class="xet-reversal-spinner-label">reversals…</span>
+        </span>
         <button class="xlv-small-button" style="padding:5px 4px;color:black"
             title="Click to see grid-fill possibilities from web sources of words and phrases"
             id="xet-show-web-fills">Web sources
@@ -2032,6 +2038,7 @@ Exet.prototype.makeExetTab = function() {
   this.lChoices.addEventListener('click', (e) => this.handleChoiceActionClick(e));
   this.lRejects.addEventListener('click', (e) => this.handleChoiceActionClick(e));
   this.fillsSpinner = document.getElementById("xet-fills-spinner");
+  this.reversalSpinner = document.getElementById("xet-reversal-spinner");
   this.webFillsPanel = document.getElementById("xet-web-fills-panel");
   this.showWebFillsButton = document.getElementById("xet-show-web-fills");
   if (!exetConfig.webFills || exetConfig.webFills.length == 0) {
@@ -11094,27 +11101,36 @@ Exet.prototype.applyLetterReversalHighlights = function(letterReversalMap) {
   patch(this.lRejects);
 }
 
+Exet.prototype.setLetterReversalBusy = function(busy) {
+  if (!this.reversalSpinner) return;
+  this.reversalSpinner.style.display = busy ? '' : 'none';
+}
+
 /**
  * Resolve unknown reverse keys off the UI thread, then patch the current list.
  */
 Exet.prototype.scheduleLetterReversalEnrichment = function(
     ci, pending, unknownKeys, gen) {
   if (!unknownKeys || !unknownKeys.length || !pending || !pending.length) {
+    if (gen === this.letterReversalGen_) this.setLetterReversalBusy(false);
     return;
   }
+  this.setLetterReversalBusy(true);
   const acceptHit = (k, hitForm) => {
     if (!hitForm || !exetLexicon || !exetLexicon.letterString) return false;
     return exetLexicon.letterString(hitForm) === k;
   };
-  const applyHits = (hitFormByKey) => {
+  const finish = (hitFormByKey) => {
     if (gen !== this.letterReversalGen_) return;
-    if (this.currClueIndex() !== ci) return;
-    const map = new Map();
-    for (const p of pending) {
-      const hit = hitFormByKey[p.revKey];
-      if (hit) map.set(p.form, hit);
+    if (this.currClueIndex() === ci) {
+      const map = new Map();
+      for (const p of pending) {
+        const hit = hitFormByKey[p.revKey];
+        if (hit) map.set(p.form, hit);
+      }
+      this.applyLetterReversalHighlights(map);
     }
-    this.applyLetterReversalHighlights(map);
+    this.setLetterReversalBusy(false);
   };
 
   const slug = exetLexicon && exetLexicon.serverSlug;
@@ -11146,9 +11162,10 @@ Exet.prototype.scheduleLetterReversalEnrichment = function(
           this.letterReversalMemo_.set(k, null);
         }
       }
-      applyHits(hitFormByKey);
+      finish(hitFormByKey);
     }).catch((e) => {
       console.warn('Letter-reversal async lookup failed:', e);
+      if (gen === this.letterReversalGen_) this.setLetterReversalBusy(false);
     });
     return;
   }
@@ -11169,7 +11186,7 @@ Exet.prototype.scheduleLetterReversalEnrichment = function(
       this.letterReversalMemo_.set(k, hitForm);
       if (hitForm) hitFormByKey[k] = hitForm;
     }
-    applyHits(hitFormByKey);
+    finish(hitFormByKey);
   };
   if (typeof requestIdleCallback === 'function') {
     requestIdleCallback(resolveLocal, {timeout: 500});
@@ -11430,9 +11447,13 @@ Exet.prototype.removeChoiceFromFillState = function(form) {
 Exet.prototype.updateFillChoices = function() {
   let ci = this.currClueIndex();
   if (!ci) {
+    this.letterReversalGen_ = (this.letterReversalGen_ || 0) + 1;
+    this.setLetterReversalBusy(false);
     return;
   }
   if (this.lightHasRebusContent(ci)) {
+    this.letterReversalGen_ = (this.letterReversalGen_ || 0) + 1;
+    this.setLetterReversalBusy(false);
     this.lChoices.innerHTML =
         '<tr><td><i>Grid-fill disabled for this entry (contains a rebus cell)</i></td></tr>';
     this.lRejects.innerHTML = '';
